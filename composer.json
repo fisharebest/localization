@@ -1,0 +1,39 @@
+{
+	"name": "fisharebest/localization",
+	"description": "A lightweight implementation of the Unicode Common Locale Data Repository (CLDR).",
+	"type": "library",
+	"keywords": [
+		"unicode", "localization", "locale", "i18n", "l10n"
+	],
+	"homepage": "https://github.com/fisharebest/localization",
+	"license": "GPL-3.0+",
+	"authors": [{
+			"name": "Greg Roach",
+			"email": "fisharebest@gmail.com",
+			"role": "Developer"
+	}],
+	"support": {
+			"issues": "https://github.com/fisharebest/localization/issues"
+	},
+	"require": {
+		"php": ">=5.3.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "*",
+		"satooshi/php-coveralls": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Fisharebest\\Localization\\": "src/"
+		}
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"composer dump-autoload --optimize"
+		],
+		"post-update-cmd": [
+			"composer dump-autoload --optimize"
+		]
+	}
+}
+
