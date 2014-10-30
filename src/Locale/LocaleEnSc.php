@@ -1,0 +1,25 @@
+<?php namespace Fisharebest\Localization;
+
+/**
+ * Class LocaleEnSc
+ *
+ * @author        Greg Roach <fisharebest@gmail.com>
+ * @copyright (c) 2015 Greg Roach
+ * @license       GPLv3+
+ */
+class LocaleEnSc extends LocaleEn {
+	/** {@inheritdoc} */
+	public function territory() {
+		return new TerritorySc;
+	}
+
+	/** {@inheritdoc} */
+	public function decimalMark() {
+		return '.';
+	}
+
+	/** {@inheritdoc} */
+	public function digitsGroupSeparator() {
+		return ',';
+	}
+}
