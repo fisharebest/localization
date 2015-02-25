@@ -14,7 +14,7 @@ class ScriptLepc extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '᱀',
 			'1' => '᱁',

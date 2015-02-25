@@ -14,7 +14,7 @@ class ScriptLimb extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '᥆',
 			'1' => '᥇',

@@ -22,4 +22,12 @@ class LocaleKea extends Locale {
 	public function language() {
 		return new LanguageKea;
 	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::NBSP,
+			self::DECIMAL => self::COMMA,
+		);
+	}
 }

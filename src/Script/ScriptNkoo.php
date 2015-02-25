@@ -14,7 +14,7 @@ class ScriptNkoo extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '߀',
 			'1' => '߁',

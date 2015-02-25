@@ -12,14 +12,4 @@ class TerritoryCv extends Territory {
 	public function code() {
 		return 'CV';
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
 }

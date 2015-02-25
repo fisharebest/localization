@@ -27,4 +27,17 @@ class LocaleDa extends Locale {
 	public function language() {
 		return new LanguageDa;
 	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
+	}
+
+	/** {@inheritdoc} */
+	protected function percentFormat() {
+		return '%s' . self::NBSP . self::PERCENT;
+	}
 }

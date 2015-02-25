@@ -9,16 +9,6 @@
  */
 class LocaleWae extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '’';
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'Walser';
 	}
@@ -31,5 +21,13 @@ class LocaleWae extends Locale {
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageWae;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::APOSTROPHE,
+			self::DECIMAL => self::COMMA,
+		);
 	}
 }

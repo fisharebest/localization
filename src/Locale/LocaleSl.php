@@ -20,11 +20,19 @@ class LocaleSl extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'SLOVENŠČINA';
+		return 'SLOVENSCINA';
 	}
 
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageSl;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
 	}
 }

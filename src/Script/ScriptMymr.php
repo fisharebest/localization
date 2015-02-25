@@ -14,7 +14,7 @@ class ScriptMymr extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '၀',
 			'1' => '၁',

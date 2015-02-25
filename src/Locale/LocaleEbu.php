@@ -15,7 +15,7 @@ class LocaleEbu extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'KĨEMBU';
+		return 'KIEMBU';
 	}
 
 	/** {@inheritdoc} */

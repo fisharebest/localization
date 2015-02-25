@@ -25,6 +25,9 @@ class LocaleEnCcTest extends TestCase {
 		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('en_CC', $locale->code());
 		$this->assertSame('en-CC', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertSame('lang="en-CC"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

@@ -25,6 +25,9 @@ class LocaleEnPkTest extends TestCase {
 		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('en_PK', $locale->code());
 		$this->assertSame('en-PK', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('1,23,45,678.09', $locale->number(12345678.09));
+		$this->assertSame('lang="en-PK"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

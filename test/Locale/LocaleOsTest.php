@@ -26,6 +26,9 @@ class LocaleOsTest extends TestCase {
 		$this->assertSame('ирон', $locale->endonym());
 		$this->assertSame('os_RU', $locale->code());
 		$this->assertSame('os', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
+		$this->assertSame('lang="os"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

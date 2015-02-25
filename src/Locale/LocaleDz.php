@@ -9,6 +9,11 @@
  */
 class LocaleDz extends Locale {
 	/** {@inheritdoc} */
+	protected function digitsGroup() {
+		return 2;
+	}
+
+	/** {@inheritdoc} */
 	public function endonym() {
 		return 'རྫོང་ཁ';
 	}
@@ -16,5 +21,10 @@ class LocaleDz extends Locale {
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageDz;
+	}
+
+	/** {@inheritdoc} */
+	protected function percentFormat() {
+		return '%s' . self::NBSP . self::PERCENT;
 	}
 }

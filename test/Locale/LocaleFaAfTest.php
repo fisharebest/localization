@@ -25,6 +25,9 @@ class LocaleFaAfTest extends TestCase {
 		$this->assertsame('persian_ci', $locale->collation());
 		$this->assertSame('fa_AF', $locale->code());
 		$this->assertSame('fa-AF', $locale->languageTag());
-		$this->assertSame('۰۱۲۳۴۵۶۷۸۹', $locale->convertDigits('0123456789'));
+		$this->assertSame('۰۱۲۳۴۵۶۷۸۹', $locale->digits('0123456789'));
+		$this->assertSame('۱۲٬۳۴۵٬۶۷۸٫۰۹', $locale->number(12345678.09));
+		$this->assertSame('lang="fa-AF" dir="rtl"', $locale->htmlAttributes());
+		$this->assertSame('‎−۱۲۳', $locale->number(-123));
 	}
 }

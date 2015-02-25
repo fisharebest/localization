@@ -25,6 +25,9 @@ class LocaleOrInTest extends TestCase {
 		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('or_IN', $locale->code());
 		$this->assertSame('or', $locale->languageTag());
-		$this->assertSame('୦୧୨୩୪୫୬୭୮୯', $locale->convertDigits('0123456789'));
+		$this->assertSame('୦୧୨୩୪୫୬୭୮୯', $locale->digits('0123456789'));
+		$this->assertSame('୧,୨୩,୪୫,୬୭୮.୦୯', $locale->number(12345678.09));
+		$this->assertSame('lang="or"', $locale->htmlAttributes());
+		$this->assertSame('-୧୨୩', $locale->number(-123));
 	}
 }

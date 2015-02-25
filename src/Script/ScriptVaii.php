@@ -14,7 +14,7 @@ class ScriptVaii extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '꘠',
 			'1' => '꘡',

@@ -9,27 +9,25 @@
  */
 class LocaleLn extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'lingála';
 	}
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'LINGÁLA';
+		return 'LINGALA';
 	}
 
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageLn;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
 	}
 }

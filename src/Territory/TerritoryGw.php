@@ -12,14 +12,4 @@ class TerritoryGw extends Territory {
 	public function code() {
 		return 'GW';
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
 }

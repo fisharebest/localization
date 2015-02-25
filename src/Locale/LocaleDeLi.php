@@ -14,12 +14,10 @@ class LocaleDeLi extends LocaleDe {
 	}
 
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '\'';
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::PRIME,
+			self::DECIMAL => self::DOT,
+		);
 	}
 }

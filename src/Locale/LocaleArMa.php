@@ -9,13 +9,17 @@
  */
 class LocaleArMa extends LocaleAr {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
+	public function numberSymbols() {
+		return array(
+			self::GROUP    => self::DOT,
+			self::DECIMAL  => self::COMMA,
+			self::NEGATIVE => self::LTR_MARK . self::HYPHEN,
+		);
 	}
 
 	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
+	protected function percentFormat() {
+		return '%s%%';
 	}
 
 	/** {@inheritdoc} */

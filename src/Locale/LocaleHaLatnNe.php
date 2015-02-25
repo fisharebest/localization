@@ -12,14 +12,4 @@ class LocaleHaLatnNe extends LocaleHaLatn {
 	public function territory() {
 		return new TerritoryNe;
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return ',';
-	}
 }

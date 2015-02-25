@@ -14,7 +14,7 @@ class ScriptLaoo extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '໐',
 			'1' => '໑',

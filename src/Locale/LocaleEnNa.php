@@ -12,14 +12,4 @@ class LocaleEnNa extends LocaleEn {
 	public function territory() {
 		return new TerritoryNa;
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return ',';
-	}
 }

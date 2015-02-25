@@ -12,14 +12,4 @@ class LocaleEnRw extends LocaleEn {
 	public function territory() {
 		return new TerritoryRw;
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return ',';
-	}
 }

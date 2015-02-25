@@ -9,23 +9,13 @@
  */
 class LocaleMgo extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'metaʼ';
 	}
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'METAʼ';
+		return 'META';
 	}
 
 	/** {@inheritdoc} */

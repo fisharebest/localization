@@ -15,11 +15,19 @@ class LocaleUz extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'OʻZBEKCHA';
+		return 'OZBEKCHA';
 	}
 
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageUz;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::NBSP,
+			self::DECIMAL => self::COMMA,
+		);
 	}
 }

@@ -14,7 +14,7 @@ class ScriptKali extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '꤀',
 			'1' => '꤁',

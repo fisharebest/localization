@@ -26,6 +26,9 @@ class LocaleHrTest extends TestCase {
 		$this->assertSame('hrvatski', $locale->endonym());
 		$this->assertSame('hr_HR', $locale->code());
 		$this->assertSame('hr', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertSame('lang="hr"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

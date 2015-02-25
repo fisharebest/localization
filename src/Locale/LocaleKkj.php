@@ -9,27 +9,25 @@
  */
 class LocaleKkj extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'kakɔ';
 	}
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'KAKƆ';
+		return 'KAKO';
 	}
 
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageKkj;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
 	}
 }

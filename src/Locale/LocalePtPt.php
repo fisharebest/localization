@@ -9,12 +9,10 @@
  */
 class LocalePtPt extends LocalePt {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::NBSP,
+			self::DECIMAL => self::COMMA,
+		);
 	}
 }

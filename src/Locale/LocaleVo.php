@@ -15,7 +15,7 @@ class LocaleVo extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'VOLAPÜK';
+		return 'VOLAPUK';
 	}
 
 	/** {@inheritdoc} */

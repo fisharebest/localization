@@ -14,7 +14,7 @@ class ScriptTalu extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '᧐',
 			'1' => '᧑',

@@ -14,16 +14,6 @@ class TerritoryKh extends Territory {
 	}
 
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
 	public function firstDay() {
 		return 0;
 	}

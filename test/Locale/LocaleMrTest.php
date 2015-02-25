@@ -26,6 +26,9 @@ class LocaleMrTest extends TestCase {
 		$this->assertSame('मराठी', $locale->endonym());
 		$this->assertSame('mr_IN', $locale->code());
 		$this->assertSame('mr', $locale->languageTag());
-		$this->assertSame('०१२३४५६७८९', $locale->convertDigits('0123456789'));
+		$this->assertSame('०१२३४५६७८९', $locale->digits('0123456789'));
+		$this->assertSame('१,२३,४५,६७८.०९', $locale->number(12345678.09));
+		$this->assertSame('lang="mr"', $locale->htmlAttributes());
+		$this->assertSame('-१२३', $locale->number(-123));
 	}
 }

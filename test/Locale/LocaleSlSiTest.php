@@ -25,6 +25,9 @@ class LocaleSlSiTest extends TestCase {
 		$this->assertsame('slovenian_ci', $locale->collation());
 		$this->assertSame('sl_SI', $locale->code());
 		$this->assertSame('sl', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertSame('lang="sl"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

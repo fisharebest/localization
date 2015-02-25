@@ -9,15 +9,9 @@
  */
 class LocaleEnPk extends LocaleEn {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
+	protected function digitsGroup() {
+		return 2;
 	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return ',';
-	}
-
 
 	/** {@inheritdoc} */
 	public function territory() {

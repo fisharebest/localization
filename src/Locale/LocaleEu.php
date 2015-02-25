@@ -22,4 +22,17 @@ class LocaleEu extends Locale {
 	public function language() {
 		return new LanguageEu;
 	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
+	}
+
+	/** {@inheritdoc} */
+	protected function percentFormat() {
+		return self::PERCENT . self::NBSP . '%s';
+	}
 }

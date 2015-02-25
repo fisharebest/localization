@@ -12,14 +12,4 @@ class TerritoryGq extends Territory {
 	public function code() {
 		return 'GQ';
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
 }

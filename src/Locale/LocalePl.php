@@ -27,4 +27,17 @@ class LocalePl extends Locale {
 	public function language() {
 		return new LanguagePl;
 	}
+
+	/** {@inheritdoc} */
+	protected function minimumGroupingDigits() {
+		return 2;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::NBSP,
+			self::DECIMAL => self::COMMA,
+		);
+	}
 }

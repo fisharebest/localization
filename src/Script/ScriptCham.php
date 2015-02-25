@@ -14,7 +14,7 @@ class ScriptCham extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '꩐',
 			'1' => '꩑',

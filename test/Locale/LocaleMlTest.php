@@ -26,6 +26,9 @@ class LocaleMlTest extends TestCase {
 		$this->assertSame('മലയാളം', $locale->endonym());
 		$this->assertSame('ml_IN', $locale->code());
 		$this->assertSame('ml', $locale->languageTag());
-		$this->assertSame('൦൧൨൩൪൫൬൭൮൯', $locale->convertDigits('0123456789'));
+		$this->assertSame('൦൧൨൩൪൫൬൭൮൯', $locale->digits('0123456789'));
+		$this->assertSame('൧,൨൩,൪൫,൬൭൮.൦൯', $locale->number(12345678.09));
+		$this->assertSame('lang="ml"', $locale->htmlAttributes());
+		$this->assertSame('-൧൨൩', $locale->number(-123));
 	}
 }

@@ -15,11 +15,19 @@ class LocaleTzm extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'TAMAZIƔT';
+		return 'TAMAZIGHT';
 	}
 
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageTzm;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::NBSP,
+			self::DECIMAL => self::COMMA,
+		);
 	}
 }

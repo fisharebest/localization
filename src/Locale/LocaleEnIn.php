@@ -9,6 +9,11 @@
  */
 class LocaleEnIn extends LocaleEn {
 	/** {@inheritdoc} */
+	protected function digitsGroup() {
+		return 2;
+	}
+
+	/** {@inheritdoc} */
 	public function territory() {
 		return new TerritoryIn;
 	}

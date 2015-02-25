@@ -26,7 +26,7 @@ abstract class Script {
 	 *
 	 * @return string[]
 	 */
-	public function digits() {
+	public function numerals() {
 		return array();
 	}
 

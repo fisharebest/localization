@@ -9,17 +9,15 @@
  */
 class LocalePtGw extends LocalePt {
 	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::NBSP,
+			self::DECIMAL => self::COMMA,
+		);
+	}
+
+	/** {@inheritdoc} */
 	public function territory() {
 		return new TerritoryGw;
-	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
 	}
 }

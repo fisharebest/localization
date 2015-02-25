@@ -12,14 +12,4 @@ class TerritorySi extends Territory {
 	public function code() {
 		return 'SI';
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
 }

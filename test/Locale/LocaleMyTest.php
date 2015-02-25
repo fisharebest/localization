@@ -26,6 +26,9 @@ class LocaleMyTest extends TestCase {
 		$this->assertSame('ဗမာ', $locale->endonym());
 		$this->assertSame('my_MM', $locale->code());
 		$this->assertSame('my', $locale->languageTag());
-		$this->assertSame('၀၁၂၃၄၅၆၇၈၉', $locale->convertDigits('0123456789'));
+		$this->assertSame('၀၁၂၃၄၅၆၇၈၉', $locale->digits('0123456789'));
+		$this->assertSame('၁၂၃၄၅,၆၇၈.၀၉', $locale->number(12345678.09));
+		$this->assertSame('lang="my"', $locale->htmlAttributes());
+		$this->assertSame('-၁၂၃', $locale->number(-123));
 	}
 }

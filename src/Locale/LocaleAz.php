@@ -9,27 +9,25 @@
  */
 class LocaleAz extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'azərbaycan';
 	}
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'AZƏRBAYCAN';
+		return 'AZERBAYCAN';
 	}
 
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageAz;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
 	}
 }

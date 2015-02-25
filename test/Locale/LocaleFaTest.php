@@ -26,6 +26,9 @@ class LocaleFaTest extends TestCase {
 		$this->assertSame('فارسی', $locale->endonym());
 		$this->assertSame('fa_IR', $locale->code());
 		$this->assertSame('fa', $locale->languageTag());
-		$this->assertSame('۰۱۲۳۴۵۶۷۸۹', $locale->convertDigits('0123456789'));
+		$this->assertSame('۰۱۲۳۴۵۶۷۸۹', $locale->digits('0123456789'));
+		$this->assertSame('۱۲٬۳۴۵٬۶۷۸٫۰۹', $locale->number(12345678.09));
+		$this->assertSame('lang="fa" dir="rtl"', $locale->htmlAttributes());
+		$this->assertSame('‎−۱۲۳', $locale->number(-123));
 	}
 }

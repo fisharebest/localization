@@ -22,4 +22,12 @@ class LocaleSeh extends Locale {
 	public function language() {
 		return new LanguageSeh;
 	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
+	}
 }

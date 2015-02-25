@@ -14,7 +14,7 @@ class LocaleZhHant extends LocaleZh {
 	}
 
 	/** {@inheritdoc} */
-	public function minimumGroupingDigits() {
+	protected function minimumGroupingDigits() {
 		return 3;
 	}
 

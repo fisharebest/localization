@@ -26,6 +26,9 @@ class LocaleLoTest extends TestCase {
 		$this->assertSame('ລາວ', $locale->endonym());
 		$this->assertSame('lo_LA', $locale->code());
 		$this->assertSame('lo', $locale->languageTag());
-		$this->assertSame('໐໑໒໓໔໕໖໗໘໙', $locale->convertDigits('0123456789'));
+		$this->assertSame('໐໑໒໓໔໕໖໗໘໙', $locale->digits('0123456789'));
+		$this->assertSame('໑໒.໓໔໕.໖໗໘,໐໙', $locale->number(12345678.09));
+		$this->assertSame('lang="lo"', $locale->htmlAttributes());
+		$this->assertSame('-໑໒໓', $locale->number(-123));
 	}
 }

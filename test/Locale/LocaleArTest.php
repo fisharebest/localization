@@ -26,6 +26,9 @@ class LocaleArTest extends TestCase {
 		$this->assertSame('العربية', $locale->endonym());
 		$this->assertSame('ar_001', $locale->code());
 		$this->assertSame('ar', $locale->languageTag());
-		$this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->convertDigits('0123456789'));
+		$this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+		$this->assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
+		$this->assertSame('lang="ar" dir="rtl"', $locale->htmlAttributes());
+		$this->assertSame('‏-١٢٣', $locale->number(-123));
 	}
 }

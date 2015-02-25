@@ -23,6 +23,9 @@ class LocaleThThTest extends TestCase {
 		$this->assertEquals(new TerritoryTh, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('๐๑๒๓๔๕๖๗๘๙', $locale->convertDigits('0123456789'));
+		$this->assertSame('๐๑๒๓๔๕๖๗๘๙', $locale->digits('0123456789'));
+		$this->assertSame('๑๒,๓๔๕,๖๗๘.๐๙', $locale->number(12345678.09));
+		$this->assertSame('lang="th"', $locale->htmlAttributes());
+		$this->assertSame('-๑๒๓', $locale->number(-123));
 	}
 }

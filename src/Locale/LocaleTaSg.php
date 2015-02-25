@@ -9,6 +9,11 @@
  */
 class LocaleTaSg extends LocaleTa {
 	/** {@inheritdoc} */
+	protected function digitsGroup() {
+		return 3;
+	}
+
+	/** {@inheritdoc} */
 	public function territory() {
 		return new TerritorySg;
 	}

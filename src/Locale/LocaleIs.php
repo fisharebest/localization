@@ -20,11 +20,19 @@ class LocaleIs extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'ÍSLENSKA';
+		return 'ISLENSKA';
 	}
 
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageIs;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
 	}
 }

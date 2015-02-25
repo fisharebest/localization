@@ -26,6 +26,9 @@ class LocaleFurTest extends TestCase {
 		$this->assertSame('furlan', $locale->endonym());
 		$this->assertSame('fur_IT', $locale->code());
 		$this->assertSame('fur', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertSame('lang="fur"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

@@ -12,19 +12,4 @@ class TerritoryLv extends Territory {
 	public function code() {
 		return 'LV';
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
-
-	/** {@inheritdoc} */
-	public function minimumGroupingDigits() {
-		return 3;
-	}
 }

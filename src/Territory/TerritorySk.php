@@ -12,14 +12,4 @@ class TerritorySk extends Territory {
 	public function code() {
 		return 'SK';
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
 }

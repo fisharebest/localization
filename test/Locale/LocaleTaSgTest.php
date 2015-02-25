@@ -25,6 +25,9 @@ class LocaleTaSgTest extends TestCase {
 		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('ta_SG', $locale->code());
 		$this->assertSame('ta-SG', $locale->languageTag());
-		$this->assertSame('௦௧௨௩௪௫௬௭௮௯', $locale->convertDigits('0123456789'));
+		$this->assertSame('௦௧௨௩௪௫௬௭௮௯', $locale->digits('0123456789'));
+		$this->assertSame('௧௨,௩௪௫,௬௭௮.௦௯', $locale->number(12345678.09));
+		$this->assertSame('lang="ta-SG"', $locale->htmlAttributes());
+		$this->assertSame('-௧௨௩', $locale->number(-123));
 	}
 }

@@ -15,7 +15,7 @@ class LocaleYo extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'ÈDÈ YORÙBÁ';
+		return 'EDE YORUBA';
 	}
 
 	/** {@inheritdoc} */

@@ -20,11 +20,24 @@ class LocaleTr extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'TÜRKÇE';
+		return 'TURKCE';
 	}
 
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageTr;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
+	}
+
+	/** {@inheritdoc} */
+	protected function percentFormat() {
+		return self::PERCENT . '%s';
 	}
 }

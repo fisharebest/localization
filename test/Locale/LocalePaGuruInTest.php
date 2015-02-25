@@ -25,6 +25,9 @@ class LocalePaGuruInTest extends TestCase {
 		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('pa_IN', $locale->code());
 		$this->assertSame('pa', $locale->languageTag());
-		$this->assertSame('੦੧੨੩੪੫੬੭੮੯', $locale->convertDigits('0123456789'));
+		$this->assertSame('੦੧੨੩੪੫੬੭੮੯', $locale->digits('0123456789'));
+		$this->assertSame('੧,੨੩,੪੫,੬੭੮.੦੯', $locale->number(12345678.09));
+		$this->assertSame('lang="pa"', $locale->htmlAttributes());
+		$this->assertSame('-੧੨੩', $locale->number(-123));
 	}
 }

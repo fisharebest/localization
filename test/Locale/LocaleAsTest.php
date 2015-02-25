@@ -26,6 +26,9 @@ class LocaleAsTest extends TestCase {
 		$this->assertSame('অসমীয়া', $locale->endonym());
 		$this->assertSame('as_IN', $locale->code());
 		$this->assertSame('as', $locale->languageTag());
-		$this->assertSame('০১২৩৪৫৬৭৮৯', $locale->convertDigits('0123456789'));
+		$this->assertSame('০১২৩৪৫৬৭৮৯', $locale->digits('0123456789'));
+		$this->assertSame('১,২৩,৪৫,৬৭৮.০৯', $locale->number(12345678.09));
+		$this->assertSame('lang="as"', $locale->htmlAttributes());
+		$this->assertSame('-১২৩', $locale->number(-123));
 	}
 }

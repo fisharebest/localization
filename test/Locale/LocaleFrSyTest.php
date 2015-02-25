@@ -25,6 +25,9 @@ class LocaleFrSyTest extends TestCase {
 		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('fr_SY', $locale->code());
 		$this->assertSame('fr-SY', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
+		$this->assertSame('lang="fr-SY"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

@@ -23,6 +23,9 @@ class LocaleUrPkTest extends TestCase {
 		$this->assertEquals(new TerritoryPk, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->convertDigits('0123456789'));
+		$this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+		$this->assertSame('١,٢٣,٤٥,٦٧٨.٠٩', $locale->number(12345678.09));
+		$this->assertSame('lang="ur" dir="rtl"', $locale->htmlAttributes());
+		$this->assertSame('‎-‎١٢٣', $locale->number(-123));
 	}
 }

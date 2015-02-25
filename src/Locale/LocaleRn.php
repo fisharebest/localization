@@ -9,16 +9,6 @@
  */
 class LocaleRn extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'Ikirundi';
 	}
@@ -31,5 +21,18 @@ class LocaleRn extends Locale {
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageRn;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
+	}
+
+	/** {@inheritdoc} */
+	protected function percentFormat() {
+		return '%s' . self::NBSP . self::PERCENT;
 	}
 }

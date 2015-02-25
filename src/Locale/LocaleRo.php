@@ -20,11 +20,24 @@ class LocaleRo extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'ROMÂNĂ';
+		return 'ROMANA';
 	}
 
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageRo;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
+	}
+
+	/** {@inheritdoc} */
+	protected function percentFormat() {
+		return '%s' . self::NBSP . self::PERCENT;
 	}
 }

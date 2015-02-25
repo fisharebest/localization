@@ -14,7 +14,7 @@ class ScriptBrah extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '𑁦',
 			'1' => '𑁧',

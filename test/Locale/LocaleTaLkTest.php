@@ -25,6 +25,9 @@ class LocaleTaLkTest extends TestCase {
 		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('ta_LK', $locale->code());
 		$this->assertSame('ta-LK', $locale->languageTag());
-		$this->assertSame('௦௧௨௩௪௫௬௭௮௯', $locale->convertDigits('0123456789'));
+		$this->assertSame('௦௧௨௩௪௫௬௭௮௯', $locale->digits('0123456789'));
+		$this->assertSame('௧,௨௩,௪௫,௬௭௮.௦௯', $locale->number(12345678.09));
+		$this->assertSame('lang="ta-LK"', $locale->htmlAttributes());
+		$this->assertSame('-௧௨௩', $locale->number(-123));
 	}
 }

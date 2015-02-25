@@ -14,16 +14,6 @@ class LocaleEo extends Locale {
 	}
 
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'esperanto';
 	}
@@ -36,5 +26,14 @@ class LocaleEo extends Locale {
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageEo;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP    => self::NBSP,
+			self::DECIMAL  => self::COMMA,
+			self::NEGATIVE => self::MINUS_SIGN,
+		);
 	}
 }

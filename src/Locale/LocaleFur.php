@@ -22,4 +22,12 @@ class LocaleFur extends Locale {
 	public function language() {
 		return new LanguageFur;
 	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
+	}
 }

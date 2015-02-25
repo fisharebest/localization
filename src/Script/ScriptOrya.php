@@ -14,7 +14,7 @@ class ScriptOrya extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '୦',
 			'1' => '୧',

@@ -26,6 +26,9 @@ class LocaleMfeTest extends TestCase {
 		$this->assertSame('kreol morisien', $locale->endonym());
 		$this->assertSame('mfe_MU', $locale->code());
 		$this->assertSame('mfe', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12 345 678.09', $locale->number(12345678.09));
+		$this->assertSame('lang="mfe"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

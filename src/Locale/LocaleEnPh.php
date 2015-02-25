@@ -12,14 +12,4 @@ class LocaleEnPh extends LocaleEn {
 	public function territory() {
 		return new TerritoryPh;
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return ',';
-	}
 }

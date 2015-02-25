@@ -26,6 +26,9 @@ class LocaleLuoTest extends TestCase {
 		$this->assertSame('Dholuo', $locale->endonym());
 		$this->assertSame('luo_KE', $locale->code());
 		$this->assertSame('luo', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertSame('lang="luo"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

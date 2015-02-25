@@ -14,7 +14,7 @@ class ScriptTibt extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '༠',
 			'1' => '༡',

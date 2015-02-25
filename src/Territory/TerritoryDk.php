@@ -12,14 +12,4 @@ class TerritoryDk extends Territory {
 	public function code() {
 		return 'DK';
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
 }

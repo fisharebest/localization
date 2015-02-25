@@ -9,16 +9,6 @@
  */
 class LocaleKhq extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'Koyra ciini';
 	}
@@ -31,5 +21,12 @@ class LocaleKhq extends Locale {
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageKhq;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP => self::NBSP,
+		);
 	}
 }

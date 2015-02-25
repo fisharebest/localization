@@ -15,11 +15,24 @@ class LocaleBas extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'ƁÀSÀA';
+		return 'BASAA';
 	}
 
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageBas;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::NBSP,
+			self::DECIMAL => self::COMMA,
+		);
+	}
+
+	/** {@inheritdoc} */
+	protected function percentFormat() {
+		return '%s' . self::NBSP . self::PERCENT;
 	}
 }

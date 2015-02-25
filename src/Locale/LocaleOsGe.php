@@ -14,7 +14,7 @@ class LocaleOsGe extends LocaleOs {
 	}
 
 	/** {@inheritdoc} */
-	public function minimumGroupingDigits() {
+	protected function minimumGroupingDigits() {
 		return 1; // Georgia/Georgian uses 2
 	}
 }

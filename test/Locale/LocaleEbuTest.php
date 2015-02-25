@@ -26,6 +26,9 @@ class LocaleEbuTest extends TestCase {
 		$this->assertSame('Kĩembu', $locale->endonym());
 		$this->assertSame('ebu_KE', $locale->code());
 		$this->assertSame('ebu', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertSame('lang="ebu"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

@@ -20,11 +20,19 @@ class LocaleVi extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'TIẾNG VIỆT';
+		return 'TIENG VIET';
 	}
 
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageVi;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
 	}
 }

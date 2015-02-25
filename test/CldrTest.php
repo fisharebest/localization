@@ -108,12 +108,7 @@ class CldrTest extends TestCase {
 				$json   = $this->cldrJson($cldr);
 				$dir    = $direction[$json->layout->orientation->characterOrder];
 
-				if ($locale instanceof LocaleShi && !$locale instanceof LocaleShiLatn) {
-					// CLDR 26.0.1 says that Tifinagh is LTR, when it is really RTL.
-					$dir = 'rtl';
-				}
-
-				$this->assertSame($dir, $locale->script()->direction());
+				$this->assertSame($dir, $locale->direction());
 			}
 		}
 	}
@@ -121,27 +116,53 @@ class CldrTest extends TestCase {
 	/**
 	 * Test numbers
 	 *
-	 * @medium
+	 * @large
 	 *
 	 * @return void
 	 */
 	public function testNumbers() {
 		foreach (glob(__DIR__ . '/data/cldr-26.0.1/main/*/numbers.json') as $cldr) {
 			if (strpos($cldr, '/root/numbers.json') === false) {
-				$locale = $this->cldrLocale($cldr);
-				$json   = $this->cldrJson($cldr);
-
+				$locale                   = $this->cldrLocale($cldr);
+				$json                     = $this->cldrJson($cldr);
 				$default_numbering_system = $json->numbers->defaultNumberingSystem;
 				$symbols_key              = 'symbols-numberSystem-' . $default_numbering_system;
 				$decimal_formats_key      = 'decimalFormats-numberSystem-' . $default_numbering_system;
-				$minimum_grouping_digits  = (int)$json->numbers->minimumGroupingDigits;
+				$percent_formats_key      = 'percentFormats-numberSystem-' . $default_numbering_system;
 				$decimal                  = $json->numbers->$symbols_key->decimal;
 				$group                    = $json->numbers->$symbols_key->group;
-				$standard_format          = $json->numbers->$decimal_formats_key->standard;
+				$minus_sign               = $json->numbers->$symbols_key->minusSign;
+				$percent_sign             = $json->numbers->$symbols_key->percentSign;
+				$standard                 = $json->numbers->$decimal_formats_key->standard;
+				$percent                  = $json->numbers->$percent_formats_key->standard;
 
-				$this->assertSame($minimum_grouping_digits, $locale->minimumGroupingDigits());
-				$this->assertSame($decimal, $locale->decimalMark());
-				$this->assertSame($group, $locale->digitsGroupSeparator());
+				if ($locale->languageTag() !== 'en-US-posix') {
+					$number = $locale->number(12345678.089);
+					$regex  = '/' . strtr($standard, array(
+						',' => preg_quote($group, '/'),
+						'.' => preg_quote($decimal, '/'),
+						'0' => '.',
+						'#' => '.',
+					)) . '$/u';
+
+					// Check the number matches the pattern
+					$this->assertTrue(preg_match($regex, $number) === 1);
+
+					$number = $locale->percent(12345.67);
+					$regex  = '/' . strtr($percent, array(
+						',' => preg_quote($group, '/'),
+						'.' => preg_quote($decimal, '/'),
+						'0' => '.',
+						'#' => '.',
+						'%' => $percent_sign,
+					)) . '/u';
+
+					// Check the percentage matches the pattern
+					$this->assertTrue(preg_match($regex, $number) === 1);
+				}
+
+				// Check the minus sign is correct
+				$this->assertTrue(strpos($locale->number(-1), $minus_sign) === 0);
 			}
 		}
 	}

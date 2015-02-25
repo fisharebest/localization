@@ -25,6 +25,9 @@ class LocaleArSsTest extends TestCase {
 		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('ar_SS', $locale->code());
 		$this->assertSame('ar-SS', $locale->languageTag());
-		$this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->convertDigits('0123456789'));
+		$this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+		$this->assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
+		$this->assertSame('lang="ar-SS" dir="rtl"', $locale->htmlAttributes());
+		$this->assertSame('‏-١٢٣', $locale->number(-123));
 	}
 }

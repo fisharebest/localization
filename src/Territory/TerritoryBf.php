@@ -12,14 +12,4 @@ class TerritoryBf extends Territory {
 	public function code() {
 		return 'BF';
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
 }
