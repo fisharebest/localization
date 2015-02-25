@@ -12,19 +12,4 @@ class TerritoryPl extends Territory {
 	public function code() {
 		return 'PL';
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
-
-	/** {@inheritdoc} */
-	public function minimumGroupingDigits() {
-		return 2;
-	}
 }

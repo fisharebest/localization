@@ -9,6 +9,14 @@
  */
 class LocaleEsSv extends LocaleEs {
 	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::COMMA,
+			self::DECIMAL => self::DOT,
+		);
+	}
+
+	/** {@inheritdoc} */
 	public function territory() {
 		return new TerritorySv;
 	}

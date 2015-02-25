@@ -14,7 +14,7 @@ class ScriptBali extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '᭐',
 			'1' => '᭑',

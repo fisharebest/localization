@@ -8,11 +8,32 @@
  * @license   GPLv3+
  */
 abstract class Locale {
-	const NBSP = ' '; // A non-breaking space;
+	// "Source" strings, when translating numbers
+	const DECIMAL  = '.'; // The default decimal mark
+	const GROUP    = ','; // The digit group separator
+	const NEGATIVE = '-'; // Negative numbers
+
+	// "Target" strings, when translating numbers
+	const APOSTROPHE   = '’';
+	const ARAB_DECIMAL = "\xD9\xAB";
+	const ARAB_GROUP   = "\xD9\xAC";
+	const ARAB_MINUS   = "\xE2\x88\x92";
+	const ARAB_PERCENT = "\xD9\xAA";
+	const COMMA        = ',';
+	const DOT          = '.';
+	const HYPHEN       = '-';
+	const LTR_MARK     = "\xE2\x80\x8E"; // Left-to-right marker
+	const MINUS_SIGN   = "\xE2\x88\x92";
+	const NBSP         = "\xC2\xA0"; // A non-breaking space
+	const PRIME        = '\'';
+	const RTL_MARK     = "\xE2\x80\x8F"; // Right-to-left marker
+
+	// For formatting percentages
+	const PERCENT      = '%%';
 
 	/**
 	 * Generate a linux locale code for this locale.  Examples include
-	 * “POSIX, “en_GB”, “ca_ES@valencia” and “sr_RS@latin”.
+	 * "fr", “en_GB”, “ca_ES@valencia” and “sr@latin”.
 	 *
 	 * @return string
 	 */
@@ -48,6 +69,7 @@ abstract class Locale {
 
 	/**
 	 * Callback for PHP sort functions - allows lists of locales to be sorted.
+	 * Diacritics are removed and text is capitalized to allow fast/simple sorting.
 	 *
 	 * @param Locale $x
 	 * @param Locale $y
@@ -65,84 +87,37 @@ abstract class Locale {
 	 *
 	 * @return string
 	 */
-	public function convertDigits($string) {
-		return strtr($string, $this->digits());
-	}
-
-	/**
-	 * A format-string for use with the date() function.
-	 *
-	 * @return string
-	 */
-	public function dateFormatLong() {
-		return 'c';
-	}
-
-	/**
-	 * A format-string for use with the date() function.
-	 *
-	 * @return string
-	 */
-	public function dateFormatMedium() {
-		return 'c';
-	}
-
-	/**
-	 * A format-string for use with the date() function.
-	 *
-	 * @return string
-	 */
-	public function dateFormatShort() {
-		return 'c';
-	}
-
-	/**
-	 * When writing floating point numbers, this symbol separates the fraction part.
-	 * Most countries have a national standard.
-	 *
-	 * @return string
-	 */
-	public function decimalMark() {
-		return $this->territory()->decimalMark();
+	public function digits($string) {
+		return strtr($string, $this->numberSymbols() + $this->numerals());
 	}
 
 	/**
 	 * When writing large numbers place a separator after this number of digits.
-	 * Most countries have a national standard.
 	 *
 	 * @return integer
 	 */
-	public function digitsFirstGroup() {
-		return $this->territory()->digitsFirstGroup();
+	protected function digitsFirstGroup() {
+		return 3;
 	}
 
 	/**
 	 * When writing large numbers place a separator after this number of digits.
-	 * Most countries have a national standard.
 	 *
 	 * @return integer
 	 */
-	public function digitsGroup() {
-		return $this->territory()->digitsGroup();
+	protected function digitsGroup() {
+		return 3;
 	}
 
 	/**
-	 * When writing large numbers place a separator after this number of digits.
-	 * Most countries have a national standard.
+	 * Is text written left-to-right “ltr” or right-to-left “rtl”.
+	 * Most scripts are only written in one direction, but there are a few that
+	 * can be written in either direction.
 	 *
-	 * @return string
+	 * @return string “ltr” or “rtl”
 	 */
-	public function digitsGroupSeparator() {
-		return $this->territory()->digitsGroupSeparator();
-	}
-
-	/**
-	 * The digits (0123456789) used by this locale.
-	 *
-	 * @return string[]
-	 */
-	public function digits() {
-		return $this->script()->digits();
+	public function direction() {
+		return $this->script()->direction();
 	}
 
 	/**
@@ -166,31 +141,16 @@ abstract class Locale {
 	}
 
 	/**
-	 * Convert (Hindu-Arabic) digits into a localized form
+	 * Markup for an HTML element
 	 *
-	 * @param float $number The number to be localized
-	 *
-	 * @return string
+	 * @return string e.g. lang="ar" dir="rtl"
 	 */
-	public function formatNumber($number) {
-		$parts    = explode('.', $number);
-		$integers = $parts[0];
-		if (strlen($integers) > $this->digitsFirstGroup()) {
-			$todo     = substr($integers, 0, -$this->digitsFirstGroup());
-			$integers = $this->digitsGroupSeparator() . substr($integers, -$this->digitsFirstGroup());
-			while (strlen($todo) > $this->digitsGroup()) {
-				$integers = $this->digitsGroupSeparator() . substr($todo, -$this->digitsGroup()) . $integers;
-				$todo     = substr($todo, 0, -$this->digitsGroup());
-			}
-			$integers = $todo . $integers;
-		}
-		if (count($parts) > 1) {
-			$decimals = $this->decimalMark() . $parts[1];
+	public function htmlAttributes() {
+		if ($this->direction() === 'rtl' || $this->direction() !== $this->script()->direction()) {
+			return 'lang="' . $this->languageTag() . '" dir="' . $this->direction() . '"';
 		} else {
-			$decimals = '';
+			return 'lang="' . $this->languageTag() . '"';
 		}
-
-		return $this->convertDigits($integers . $decimals);
 	}
 
 	/**
@@ -202,7 +162,7 @@ abstract class Locale {
 
 	/**
 	 * The IETF language tag for the locale.  Examples include
-	 * “en-US-posix, “en-GB”, “ca-ES-valencia” and “sr-Latn-RS”.
+	 * “fr, “en-GB”, “ca-ES-valencia” and “sr-Latn”.
 	 *
 	 * @return string
 	 */
@@ -222,21 +182,86 @@ abstract class Locale {
 	}
 
 	/**
-	 * When using grouping separators in numbers, keep this number of digits together.
+	 * When using grouping digits in numbers, keep this many of digits together.
 	 *
 	 * @return integer
 	 */
-	public function minimumGroupingDigits() {
-		return $this->territory()->minimumGroupingDigits();
+	protected function minimumGroupingDigits() {
+		return 1;
 	}
 
 	/**
-	 * The territory used by this locale.
+	 * Convert (Hindu-Arabic) digits into a localized form
 	 *
-	 * @return Territory
+	 * @param string|float|integer $number The number to be localized
+	 *
+	 * @return string
 	 */
-	public function territory() {
-		return $this->language()->defaultTerritory();
+	public function number($number) {
+		if ($number < 0) {
+			$number   = -$number;
+			$negative = self::NEGATIVE;
+		} else {
+			$negative = '';
+		}
+		$parts    = explode(self::DECIMAL, $number, 2);
+		$integers = $parts[0];
+		if (strlen($integers) >= $this->digitsFirstGroup() + $this->minimumGroupingDigits()) {
+			$todo     = substr($integers, 0, -$this->digitsFirstGroup());
+			$integers = self::GROUP . substr($integers, -$this->digitsFirstGroup());
+			while (strlen($todo) >= $this->digitsGroup() + $this->minimumGroupingDigits()) {
+				$integers = self::GROUP . substr($todo, -$this->digitsGroup()) . $integers;
+				$todo     = substr($todo, 0, -$this->digitsGroup());
+			}
+			$integers = $todo . $integers;
+		}
+		if (count($parts) > 1) {
+			$decimals = self::DECIMAL . $parts[1];
+		} else {
+			$decimals = '';
+		}
+
+		return $this->digits($negative . $integers . $decimals);
+	}
+
+	/**
+	 * The symbols used to format numbers.
+	 *
+	 * @return string[]
+	 */
+	protected function numberSymbols() {
+		return array();
+	}
+
+	/**
+	 * The numerals (0123456789) used by this locale.
+	 *
+	 * @return string[]
+	 */
+	protected function numerals() {
+		return $this->script()->numerals();
+	}
+
+	/**
+	 * Convert (Hindu-Arabic) digits into a localized form
+	 *
+	 * @param string|float|integer $number The number to be localized
+	 *
+	 * @return string
+	 */
+	public function percent($number, $precision = 0) {
+		$number = round($number * 100, $precision);
+
+		return sprintf($this->percentFormat(), $this->number($number));
+	}
+
+	/**
+	 * How to format a floating point number (%s) as a percentage.
+	 *
+	 * @return string
+	 */
+	protected function percentFormat() {
+		return '%s%%';
 	}
 
 	/**
@@ -249,9 +274,18 @@ abstract class Locale {
 	}
 
 	/**
+	 * The territory used by this locale.
+	 *
+	 * @return Territory
+	 */
+	public function territory() {
+		return $this->language()->defaultTerritory();
+	}
+
+	/**
 	 * The variant, if any of this locale.
 	 *
-	 * @return Variant
+	 * @return Variant|null
 	 */
 	public function variant() {
 		return null;

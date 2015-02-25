@@ -14,7 +14,7 @@ class ScriptOlck extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '᱐',
 			'1' => '᱑',

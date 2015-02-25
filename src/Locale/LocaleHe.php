@@ -17,4 +17,11 @@ class LocaleHe extends Locale {
 	public function language() {
 		return new LanguageHe;
 	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::NEGATIVE => self::LTR_MARK . self::HYPHEN,
+		);
+	}
 }

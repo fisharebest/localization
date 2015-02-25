@@ -11,6 +11,22 @@ use PHPUnit_Framework_TestCase as TestCase;
  */
 class LocaleTest extends TestCase {
 	/**
+	 * All known locales
+	 *
+	 * @return Locale[]
+	 */
+	private function allLocales() {
+		$locales = glob(__DIR__ . '/../../src/Locale/Locale??*.php');
+
+		array_walk($locales, function (&$x) {
+			$class = __NAMESPACE__ . '\\' . basename($x, '.php');
+			$x = new $class;
+		});
+
+		return $locales;
+	}
+
+	/**
 	 * Test the comparator
 	 *
 	 * @return void
@@ -33,14 +49,12 @@ class LocaleTest extends TestCase {
 	/**
 	 * Test the comparator
 	 *
+	 * @medium
+	 *
 	 * @return void
 	 */
 	public function testCompareAll() {
-		$array = glob(__DIR__ . '/../src/Locale/Locale??*.php');
-		array_walk($array, function (&$x) {
-			$class = __NAMESPACE__ . basename($x, '.php');
-			$x = new $class;
-		});
+		$array = $this->allLocales();
 
 		usort($array, __NAMESPACE__ . '\Locale::compare');
 		$this->assertTrue(is_array($array));

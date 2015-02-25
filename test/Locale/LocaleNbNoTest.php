@@ -25,6 +25,9 @@ class LocaleNbNoTest extends TestCase {
 		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('nb_NO', $locale->code());
 		$this->assertSame('nb', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
+		$this->assertSame('lang="nb"', $locale->htmlAttributes());
+		$this->assertSame('−123', $locale->number(-123));
 	}
 }

@@ -9,6 +9,11 @@
  */
 class LocaleBrx extends Locale {
 	/** {@inheritdoc} */
+	protected function digitsGroup() {
+		return 2;
+	}
+
+	/** {@inheritdoc} */
 	public function endonym() {
 		return 'बड़ो';
 	}

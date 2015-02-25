@@ -12,13 +12,4 @@ class TerritoryAz extends Territory {
 	public function code() {
 		return 'AZ';
 	}
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
 }

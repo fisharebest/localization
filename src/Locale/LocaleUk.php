@@ -22,4 +22,12 @@ class LocaleUk extends Locale {
 	public function language() {
 		return new LanguageUk;
 	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::NBSP,
+			self::DECIMAL => self::COMMA,
+		);
+	}
 }

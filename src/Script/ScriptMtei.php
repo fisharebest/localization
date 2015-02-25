@@ -14,7 +14,7 @@ class ScriptMtei extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '꯰',
 			'1' => '꯱',

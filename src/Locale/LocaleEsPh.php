@@ -9,16 +9,6 @@
  */
 class LocaleEsPh extends LocaleEs {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
 	public function territory() {
 		return new TerritoryPh;
 	}

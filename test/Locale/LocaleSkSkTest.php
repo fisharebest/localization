@@ -25,6 +25,9 @@ class LocaleSkSkTest extends TestCase {
 		$this->assertsame('slovak_ci', $locale->collation());
 		$this->assertSame('sk_SK', $locale->code());
 		$this->assertSame('sk', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
+		$this->assertSame('lang="sk"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

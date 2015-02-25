@@ -9,17 +9,6 @@
  */
 class LocaleTwq extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
-
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'Tasawaq senni';
 	}
@@ -32,5 +21,12 @@ class LocaleTwq extends Locale {
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageTwq;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP => self::NBSP,
+		);
 	}
 }

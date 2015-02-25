@@ -27,4 +27,12 @@ class LocaleHr extends Locale {
 	public function language() {
 		return new LanguageHr;
 	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
+	}
 }

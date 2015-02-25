@@ -9,17 +9,6 @@
  */
 class LocaleSwc extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
-
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'Kiswahili ya Kongo';
 	}
@@ -32,5 +21,13 @@ class LocaleSwc extends Locale {
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageSwc;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
 	}
 }

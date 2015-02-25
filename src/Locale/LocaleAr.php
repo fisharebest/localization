@@ -9,16 +9,6 @@
  */
 class LocaleAr extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '٫';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '٬';
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'العربية';
 	}
@@ -26,5 +16,19 @@ class LocaleAr extends Locale {
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageAr;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP    => self::ARAB_GROUP,
+			self::DECIMAL  => self::ARAB_DECIMAL,
+			self::NEGATIVE => self::RTL_MARK . self::HYPHEN,
+		);
+	}
+
+	/** {@inheritdoc} */
+	protected function percentFormat() {
+		return '%s' . self::ARAB_PERCENT;
 	}
 }

@@ -25,6 +25,9 @@ class LocalePaArabTest extends TestCase {
 		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('pa_IN@arabic', $locale->code());
 		$this->assertSame('pa-Arab', $locale->languageTag());
-		$this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->convertDigits('0123456789'));
+		$this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+		$this->assertSame('١٬٢٣٬٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
+		$this->assertSame('lang="pa-Arab" dir="rtl"', $locale->htmlAttributes());
+		$this->assertSame('‎-‎١٢٣', $locale->number(-123));
 	}
 }

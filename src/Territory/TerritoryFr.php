@@ -9,16 +9,6 @@
  */
 class TerritoryFr extends Territory {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
-
-	/** {@inheritdoc} */
 	public function code() {
 		return 'FR';
 	}

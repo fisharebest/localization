@@ -12,14 +12,4 @@ class TerritoryMq extends Territory {
 	public function code() {
 		return 'MQ';
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
 }

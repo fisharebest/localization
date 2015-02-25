@@ -9,17 +9,6 @@
  */
 class LocaleRuMd extends LocaleRu {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
-
-
-	/** {@inheritdoc} */
 	public function territory() {
 		return new TerritoryMd;
 	}

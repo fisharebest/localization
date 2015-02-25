@@ -26,6 +26,9 @@ class LocaleDzTest extends TestCase {
 		$this->assertSame('རྫོང་ཁ', $locale->endonym());
 		$this->assertSame('dz_BT', $locale->code());
 		$this->assertSame('dz', $locale->languageTag());
-		$this->assertSame('༠༡༢༣༤༥༦༧༨༩', $locale->convertDigits('0123456789'));
+		$this->assertSame('༠༡༢༣༤༥༦༧༨༩', $locale->digits('0123456789'));
+		$this->assertSame('༡,༢༣,༤༥,༦༧༨.༠༩', $locale->number(12345678.09));
+		$this->assertSame('lang="dz"', $locale->htmlAttributes());
+		$this->assertSame('-༡༢༣', $locale->number(-123));
 	}
 }

@@ -15,7 +15,7 @@ class LocaleLkt extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'LAKȞÓLʼIYAPI';
+		return 'LAKHOLIYAPI';
 	}
 
 	/** {@inheritdoc} */

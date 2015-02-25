@@ -22,4 +22,12 @@ class LocaleTs extends Locale {
 	public function language() {
 		return new LanguageTs;
 	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::NBSP,
+			self::DECIMAL => self::COMMA,
+		);
+	}
 }

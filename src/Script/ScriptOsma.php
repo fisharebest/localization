@@ -14,7 +14,7 @@ class ScriptOsma extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '𐒠',
 			'1' => '𐒡',

@@ -14,7 +14,7 @@ class ScriptHani extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '〇',
 			'1' => '一',

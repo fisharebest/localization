@@ -8,50 +8,12 @@
  * @license   GPLv3+
  */
 abstract class Territory {
-	const NBSP = ' '; // A non-breaking space;
-
 	/**
 	 * The ISO639 or M.49 code for this territory.
 	 *
 	 * @return string
 	 */
 	abstract public function code();
-
-	/**
-	 * When writing floating point numbers, this symbol separates the fraction part.
-	 *
-	 * @return string
-	 */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/**
-	 * When writing large numbers place a separator after this number of digits.
-	 *
-	 * @return integer
-	 */
-	public function digitsFirstGroup() {
-		return 3;
-	}
-
-	/**
-	 * When writing large numbers place a separator after this number of digits.
-	 *
-	 * @return integer
-	 */
-	public function digitsGroup() {
-		return 3;
-	}
-
-	/**
-	 * When writing large numbers place a separator after this number of digits.
-	 *
-	 * @return string
-	 */
-	public function digitsGroupSeparator() {
-		return ',';
-	}
 
 	/**
 	 * What is the first day of the week?
@@ -72,15 +34,6 @@ abstract class Territory {
 	 */
 	public function measurementSystem() {
 		return 'metric';
-	}
-
-	/**
-	 * When using grouping separators in numbers, keep this number of digits together.
-	 *
-	 * @return integer
-	 */
-	public function minimumGroupingDigits() {
-		return 1;
 	}
 
 	/**

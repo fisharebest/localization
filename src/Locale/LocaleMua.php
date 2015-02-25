@@ -9,27 +9,25 @@
  */
 class LocaleMua extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'MUNDAŊ';
 	}
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'MUNDAŊ';
+		return 'MUNDAN';
 	}
 
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageMua;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
 	}
 }

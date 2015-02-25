@@ -25,6 +25,9 @@ class LocaleKsArabTest extends TestCase {
 		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('ks_IN', $locale->code());
 		$this->assertSame('ks', $locale->languageTag());
-		$this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->convertDigits('0123456789'));
+		$this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+		$this->assertSame('١٬٢٣٬٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
+		$this->assertSame('lang="ks" dir="rtl"', $locale->htmlAttributes());
+		$this->assertSame('‎-‎١٢٣', $locale->number(-123));
 	}
 }

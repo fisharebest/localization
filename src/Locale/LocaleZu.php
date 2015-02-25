@@ -9,16 +9,6 @@
  */
 class LocaleZu extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'isiZulu';
 	}

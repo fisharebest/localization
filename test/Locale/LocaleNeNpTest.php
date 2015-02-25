@@ -25,6 +25,9 @@ class LocaleNeNpTest extends TestCase {
 		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('ne_NP', $locale->code());
 		$this->assertSame('ne', $locale->languageTag());
-		$this->assertSame('०१२३४५६७८९', $locale->convertDigits('0123456789'));
+		$this->assertSame('०१२३४५६७८९', $locale->digits('0123456789'));
+		$this->assertSame('१२,३४५,६७८.०९', $locale->number(12345678.09));
+		$this->assertSame('lang="ne"', $locale->htmlAttributes());
+		$this->assertSame('-१२३', $locale->number(-123));
 	}
 }

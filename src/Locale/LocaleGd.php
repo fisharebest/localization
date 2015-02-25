@@ -15,7 +15,7 @@ class LocaleGd extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'GÀIDHLIG';
+		return 'GAIDHLIG';
 	}
 
 	/** {@inheritdoc} */

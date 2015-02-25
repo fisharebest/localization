@@ -22,9 +22,4 @@ class TerritoryMm extends Territory {
 	public function measurementSystem() {
 		return 'US';
 	}
-
-	/** {@inheritdoc} */
-	public function minimumGroupingDigits() {
-		return 3;
-	}
 }

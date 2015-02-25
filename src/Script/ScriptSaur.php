@@ -14,7 +14,7 @@ class ScriptSaur extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '꣐',
 			'1' => '꣑',

@@ -17,4 +17,9 @@ class LocaleMy extends Locale {
 	public function language() {
 		return new LanguageMy;
 	}
+
+	/** {@inheritdoc} */
+	protected function minimumGroupingDigits() {
+		return 3;
+	}
 }

@@ -12,14 +12,4 @@ class Territory150 extends Territory {
 	public function code() {
 		return '150';
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
 }

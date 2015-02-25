@@ -26,6 +26,9 @@ class LocaleRoMdTest extends TestCase {
 		$this->assertSame('moldovenească', $locale->endonym());
 		$this->assertSame('ro_MD', $locale->code());
 		$this->assertSame('ro-MD', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertSame('lang="ro-MD"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

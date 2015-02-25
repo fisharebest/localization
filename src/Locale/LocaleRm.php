@@ -9,16 +9,6 @@
  */
 class LocaleRm extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '’';
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'rumantsch';
 	}
@@ -31,5 +21,18 @@ class LocaleRm extends Locale {
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageRm;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP    => self::APOSTROPHE,
+			self::NEGATIVE => self::MINUS_SIGN,
+		);
+	}
+
+	/** {@inheritdoc} */
+	protected function percentFormat() {
+		return '%s' . self::NBSP . self::PERCENT;
 	}
 }

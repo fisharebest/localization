@@ -25,6 +25,9 @@ class LocalePtStTest extends TestCase {
 		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('pt_ST', $locale->code());
 		$this->assertSame('pt-ST', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
+		$this->assertSame('lang="pt-ST"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

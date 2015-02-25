@@ -26,6 +26,9 @@ class LocaleSbpTest extends TestCase {
 		$this->assertSame('Ishisangu', $locale->endonym());
 		$this->assertSame('sbp_TZ', $locale->code());
 		$this->assertSame('sbp', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertSame('lang="sbp"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

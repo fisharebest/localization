@@ -26,6 +26,9 @@ class LocaleIgTest extends TestCase {
 		$this->assertSame('Igbo', $locale->endonym());
 		$this->assertSame('ig_NG', $locale->code());
 		$this->assertSame('ig', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertSame('lang="ig"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

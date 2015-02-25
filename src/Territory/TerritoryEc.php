@@ -12,14 +12,4 @@ class TerritoryEc extends Territory {
 	public function code() {
 		return 'EC';
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
 }

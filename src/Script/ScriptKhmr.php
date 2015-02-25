@@ -14,7 +14,7 @@ class ScriptKhmr extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '០',
 			'1' => '១',

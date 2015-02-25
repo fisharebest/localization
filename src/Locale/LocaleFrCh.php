@@ -9,16 +9,6 @@
  */
 class LocaleFrCh extends LocaleFr {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'français suisse';
 	}
@@ -26,6 +16,14 @@ class LocaleFrCh extends LocaleFr {
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
 		return 'FRANCAIS SUISSE';
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::NBSP,
+			self::DECIMAL => self::DOT,
+		);
 	}
 
 	/** {@inheritdoc} */

@@ -26,6 +26,9 @@ class LocaleSrTest extends TestCase {
 		$this->assertSame('српски', $locale->endonym());
 		$this->assertSame('sr_RS', $locale->code());
 		$this->assertSame('sr', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertSame('lang="sr"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

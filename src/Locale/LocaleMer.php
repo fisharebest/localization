@@ -15,7 +15,7 @@ class LocaleMer extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'KĨMĨRŨ';
+		return 'KIMIRU';
 	}
 
 	/** {@inheritdoc} */

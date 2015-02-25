@@ -9,16 +9,6 @@
  */
 class LocaleQu extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'Runasimi';
 	}
@@ -31,5 +21,10 @@ class LocaleQu extends Locale {
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageQu;
+	}
+
+	/** {@inheritdoc} */
+	protected function percentFormat() {
+		return '%s' . self::NBSP . self::PERCENT;
 	}
 }

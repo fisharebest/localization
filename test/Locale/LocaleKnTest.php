@@ -26,6 +26,9 @@ class LocaleKnTest extends TestCase {
 		$this->assertSame('ಕನ್ನಡ', $locale->endonym());
 		$this->assertSame('kn_IN', $locale->code());
 		$this->assertSame('kn', $locale->languageTag());
-		$this->assertSame('೦೧೨೩೪೫೬೭೮೯', $locale->convertDigits('0123456789'));
+		$this->assertSame('೦೧೨೩೪೫೬೭೮೯', $locale->digits('0123456789'));
+		$this->assertSame('೧೨,೩೪೫,೬೭೮.೦೯', $locale->number(12345678.09));
+		$this->assertSame('lang="kn"', $locale->htmlAttributes());
+		$this->assertSame('-೧೨೩', $locale->number(-123));
 	}
 }

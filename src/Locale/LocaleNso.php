@@ -9,16 +9,6 @@
  */
 class LocaleNso extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'Sesotho sa Leboa';
 	}
@@ -31,5 +21,12 @@ class LocaleNso extends Locale {
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageNso;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP => self::NBSP,
+		);
 	}
 }

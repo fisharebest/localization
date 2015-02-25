@@ -27,4 +27,12 @@ class LocaleOs extends Locale {
 	public function territory() {
 		return new TerritoryRu;
 	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::NBSP,
+			self::DECIMAL => self::COMMA,
+		);
+	}
 }

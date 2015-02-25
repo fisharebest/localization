@@ -9,6 +9,14 @@
  */
 class LocaleEn150 extends LocaleEn {
 	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
+	}
+
+	/** {@inheritdoc} */
 	public function territory() {
 		return new Territory150;
 	}

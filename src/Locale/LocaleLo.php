@@ -17,4 +17,12 @@ class LocaleLo extends Locale {
 	public function language() {
 		return new LanguageLo;
 	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
+	}
 }

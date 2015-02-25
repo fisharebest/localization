@@ -9,16 +9,6 @@
  */
 class LocaleMfe extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
-
-	/** {@inheritdoc} */
 	public function endonym() {
 		return 'kreol morisien';
 	}
@@ -31,5 +21,12 @@ class LocaleMfe extends Locale {
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageMfe;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP => self::NBSP,
+		);
 	}
 }

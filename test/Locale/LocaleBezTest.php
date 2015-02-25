@@ -26,6 +26,9 @@ class LocaleBezTest extends TestCase {
 		$this->assertSame('Hibena', $locale->endonym());
 		$this->assertSame('bez_TZ', $locale->code());
 		$this->assertSame('bez', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertSame('lang="bez"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

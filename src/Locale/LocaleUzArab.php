@@ -9,17 +9,21 @@
  */
 class LocaleUzArab extends LocaleUz {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '٫';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '٬';
-	}
-
-	/** {@inheritdoc} */
 	public function script() {
 		return new ScriptArab;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP    => self::ARAB_GROUP,
+			self::DECIMAL  => self::ARAB_DECIMAL,
+			self::NEGATIVE => self::LTR_MARK . self::HYPHEN . self::LTR_MARK,
+		);
+	}
+
+	/** {@inheritdoc} */
+	protected function percentFormat() {
+		return '%s' . self::ARAB_PERCENT;
 	}
 }

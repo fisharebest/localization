@@ -60,6 +60,12 @@ Create a locale and use it to localize data in your application.
 // See http://dev.mysql.com/doc/refman/5.7/en/charset-unicode-sets.html
 $locale->collation();           // "unicode_ci", "swedish_ci", etc.
 
+// Markup for HTML elements containing this locale
+$locale->htmlAttributes();      // lang="ar" dir="rtl"
+
+// Is text written left-to-right or right-to-left
+$locale->direction();           // "ltr" or "rtl"
+
 // Days of the week.
 $locale->firstDay();            // 0=Sunday, 1=Monday, etc.
 $locale->weekendStart();        // 0=Sunday, 1=Monday, etc.
@@ -71,16 +77,17 @@ $locale->paperSize();           // "A4" or "US-Letter"
 
 // Formatting numbers
 $locale = new LocaleGr;         // Gujarati
-$locale->convertDigits('2014'); // "૨૦૧૪"
+$locale->digits('2014');        // "૨૦૧૪"
+$locale = new LocaleItCh;       // Swiss Italian
+$locale->number('12345678.9');  // "12'345'678.9"
+$locale->percent(0.1234, 1);    // "12.3%"
 ```
 
 Updates welcome
 ===============
 
-Please provide references to reputable sources, such as:
+Please provide references to sources, such as:
 
 * [CLDR](http://localization.unicode.org)
 * [Ethnologue](https://www.ethnologue.com)
-
-See CLDR bugs [#8018](http://unicode.org/cldr/trac/ticket/8018) and [#8211](http://unicode.org/cldr/trac/ticket/8211),
-found by this project.
+* [ScriptSource](https://www.scriptsource.org)

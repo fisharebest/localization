@@ -19,6 +19,14 @@ class LocaleDeCh extends LocaleDe {
 	}
 
 	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::PRIME,
+			self::DECIMAL => self::DOT,
+		);
+	}
+
+	/** {@inheritdoc} */
 	public function territory() {
 		return new TerritoryCh;
 	}

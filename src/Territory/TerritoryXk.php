@@ -14,14 +14,4 @@ class TerritoryXk extends Territory {
 	public function code() {
 		return 'XK';
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
 }

@@ -15,7 +15,7 @@ class LocaleEe extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'EƲEGBE';
+		return 'EWEGBE';
 	}
 
 	/** {@inheritdoc} */

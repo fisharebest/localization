@@ -22,4 +22,12 @@ class LocaleBe extends Locale {
 	public function language() {
 		return new LanguageBe;
 	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::NBSP,
+			self::DECIMAL => self::COMMA,
+		);
+	}
 }

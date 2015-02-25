@@ -25,6 +25,9 @@ class LocaleHuHuTest extends TestCase {
 		$this->assertsame('hungarian_ci', $locale->collation());
 		$this->assertSame('hu_HU', $locale->code());
 		$this->assertSame('hu', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
+		$this->assertSame('lang="hu"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

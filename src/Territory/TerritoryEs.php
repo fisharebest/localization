@@ -9,16 +9,6 @@
  */
 class TerritoryEs extends Territory {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
 	public function code() {
 		return 'ES';
 	}

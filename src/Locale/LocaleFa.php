@@ -14,7 +14,7 @@ class LocaleFa extends Locale {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '۰',
 			'1' => '۱',
@@ -37,5 +37,19 @@ class LocaleFa extends Locale {
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageFa;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP    => self::ARAB_GROUP,
+			self::DECIMAL  => self::ARAB_DECIMAL,
+			self::NEGATIVE => self::LTR_MARK . self::MINUS_SIGN,
+		);
+	}
+
+	/** {@inheritdoc} */
+	protected function percentFormat() {
+		return '%s' . self::ARAB_PERCENT;
 	}
 }

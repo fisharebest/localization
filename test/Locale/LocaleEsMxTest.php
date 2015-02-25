@@ -26,6 +26,9 @@ class LocaleEsMxTest extends TestCase {
 		$this->assertSame('español de México', $locale->endonym());
 		$this->assertSame('es_MX', $locale->code());
 		$this->assertSame('es-MX', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertSame('lang="es-MX"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

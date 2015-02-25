@@ -9,6 +9,11 @@
  */
 class LocaleShi extends Locale {
 	/** {@inheritdoc} */
+	public function direction() {
+		return 'ltr';
+	}
+
+	/** {@inheritdoc} */
 	public function endonym() {
 		return 'ⵜⴰⵎⴰⵣⵉⵖⵜ';
 	}
@@ -16,5 +21,13 @@ class LocaleShi extends Locale {
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageShi;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::NBSP,
+			self::DECIMAL => self::COMMA,
+		);
 	}
 }

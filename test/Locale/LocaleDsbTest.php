@@ -26,6 +26,9 @@ class LocaleDsbTest extends TestCase {
 		$this->assertSame('dolnoserbšćina', $locale->endonym());
 		$this->assertSame('dsb_DE', $locale->code());
 		$this->assertSame('dsb', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertSame('lang="dsb"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

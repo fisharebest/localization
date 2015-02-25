@@ -25,6 +25,9 @@ class LocaleKmKhTest extends TestCase {
 		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('km_KH', $locale->code());
 		$this->assertSame('km', $locale->languageTag());
-		$this->assertSame('០១២៣៤៥៦៧៨៩', $locale->convertDigits('0123456789'));
+		$this->assertSame('០១២៣៤៥៦៧៨៩', $locale->digits('0123456789'));
+		$this->assertSame('១២.៣៤៥.៦៧៨,០៩', $locale->number(12345678.09));
+		$this->assertSame('lang="km"', $locale->htmlAttributes());
+		$this->assertSame('-១២៣', $locale->number(-123));
 	}
 }

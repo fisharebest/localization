@@ -26,6 +26,9 @@ class LocaleGvTest extends TestCase {
 		$this->assertSame('Gaelg', $locale->endonym());
 		$this->assertSame('gv_IM', $locale->code());
 		$this->assertSame('gv', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertSame('lang="gv"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

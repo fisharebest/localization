@@ -12,14 +12,4 @@ class LocaleDeLu extends LocaleDe {
 	public function territory() {
 		return new TerritoryLu;
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
 }

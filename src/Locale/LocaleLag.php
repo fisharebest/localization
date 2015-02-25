@@ -15,7 +15,7 @@ class LocaleLag extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'KƗLAANGI';
+		return 'KILAANGI';
 	}
 
 	/** {@inheritdoc} */

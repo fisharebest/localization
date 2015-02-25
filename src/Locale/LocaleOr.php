@@ -9,6 +9,11 @@
  */
 class LocaleOr extends Locale {
 	/** {@inheritdoc} */
+	protected function digitsGroup() {
+		return 2;
+	}
+
+	/** {@inheritdoc} */
 	public function endonym() {
 		return 'ଓଡ଼ିଆ';
 	}

@@ -12,4 +12,12 @@ class LocaleFrLu extends LocaleFr {
 	public function territory() {
 		return new TerritoryLu;
 	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::DECIMAL => self::COMMA,
+			self::GROUP   => self::DOT,
+		);
+	}
 }

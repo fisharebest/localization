@@ -22,4 +22,12 @@ class LocaleHy extends Locale {
 	public function language() {
 		return new LanguageHy;
 	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
+	}
 }

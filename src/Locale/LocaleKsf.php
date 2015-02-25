@@ -22,4 +22,12 @@ class LocaleKsf extends Locale {
 	public function language() {
 		return new LanguageKsf;
 	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::NBSP,
+			self::DECIMAL => self::COMMA,
+		);
+	}
 }

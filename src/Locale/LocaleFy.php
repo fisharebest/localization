@@ -15,11 +15,19 @@ class LocaleFy extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'WEST-FRYSK';
+		return 'WEST FRYSK';
 	}
 
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageFy;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::DOT,
+			self::DECIMAL => self::COMMA,
+		);
 	}
 }

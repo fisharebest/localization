@@ -12,14 +12,4 @@ class LocaleYoBj extends LocaleYo {
 	public function territory() {
 		return new TerritoryBj;
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return ',';
-	}
 }

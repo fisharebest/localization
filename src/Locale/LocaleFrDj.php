@@ -12,14 +12,4 @@ class LocaleFrDj extends LocaleFr {
 	public function territory() {
 		return new TerritoryDj;
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
 }

@@ -26,6 +26,9 @@ class LocaleRwkTest extends TestCase {
 		$this->assertSame('Kiruwa', $locale->endonym());
 		$this->assertSame('rwk_TZ', $locale->code());
 		$this->assertSame('rwk', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertSame('lang="rwk"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

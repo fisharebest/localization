@@ -14,7 +14,7 @@ class ScriptShrd extends Script {
 	}
 
 	/** {@inheritdoc} */
-	public function digits() {
+	public function numerals() {
 		return array(
 			'0' => '𑇐',
 			'1' => '𑇑',

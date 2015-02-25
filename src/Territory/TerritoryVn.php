@@ -12,14 +12,4 @@ class TerritoryVn extends Territory {
 	public function code() {
 		return 'VN';
 	}
-
-	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return '.';
-	}
 }

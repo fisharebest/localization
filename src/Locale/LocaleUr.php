@@ -9,15 +9,9 @@
  */
 class LocaleUr extends Locale {
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return '.';
+	protected function digitsGroup() {
+		return 2;
 	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return ',';
-	}
-
 
 	/** {@inheritdoc} */
 	public function endonym() {
@@ -27,5 +21,12 @@ class LocaleUr extends Locale {
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageUr;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::NEGATIVE => self::LTR_MARK . self::HYPHEN . self::LTR_MARK,
+		);
 	}
 }

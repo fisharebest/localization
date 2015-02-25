@@ -14,16 +14,6 @@ class TerritorySy extends Territory {
 	}
 
 	/** {@inheritdoc} */
-	public function decimalMark() {
-		return ',';
-	}
-
-	/** {@inheritdoc} */
-	public function digitsGroupSeparator() {
-		return self::NBSP;
-	}
-
-	/** {@inheritdoc} */
 	public function firstDay() {
 		return 6;
 	}

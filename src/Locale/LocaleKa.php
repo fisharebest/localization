@@ -17,4 +17,22 @@ class LocaleKa extends Locale {
 	public function language() {
 		return new LanguageKa;
 	}
+
+	/** {@inheritdoc} */
+	protected function minimumGroupingDigits() {
+		return 2;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP   => self::NBSP,
+			self::DECIMAL => self::COMMA,
+		);
+	}
+
+	/** {@inheritdoc} */
+	protected function percentFormat() {
+		return '%s' . self::NBSP . self::PERCENT;
+	}
 }

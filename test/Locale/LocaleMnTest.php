@@ -26,6 +26,9 @@ class LocaleMnTest extends TestCase {
 		$this->assertSame('монгол', $locale->endonym());
 		$this->assertSame('mn_MN', $locale->code());
 		$this->assertSame('mn', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertSame('lang="mn"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

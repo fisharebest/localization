@@ -15,11 +15,25 @@ class LocaleFo extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'FØROYSKT';
+		return 'FOROYSKT';
 	}
 
 	/** {@inheritdoc} */
 	public function language() {
 		return new LanguageFo;
+	}
+
+	/** {@inheritdoc} */
+	public function numberSymbols() {
+		return array(
+			self::GROUP    => self::DOT,
+			self::DECIMAL  => self::COMMA,
+			self::NEGATIVE => self::MINUS_SIGN,
+		);
+	}
+
+	/** {@inheritdoc} */
+	protected function percentFormat() {
+		return '%s' . self::NBSP . self::PERCENT;
 	}
 }

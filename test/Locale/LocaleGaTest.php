@@ -26,6 +26,9 @@ class LocaleGaTest extends TestCase {
 		$this->assertSame('Gaeilge', $locale->endonym());
 		$this->assertSame('ga_IE', $locale->code());
 		$this->assertSame('ga', $locale->languageTag());
-		$this->assertSame('0123456789', $locale->convertDigits('0123456789'));
+		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertSame('lang="ga"', $locale->htmlAttributes());
+		$this->assertSame('-123', $locale->number(-123));
 	}
 }

@@ -15,7 +15,7 @@ class LocaleHaw extends Locale {
 
 	/** {@inheritdoc} */
 	protected function endonymSortable() {
-		return 'ʻŌLELO HAWAIʻI';
+		return 'OLELO HAWAII';
 	}
 
 	/** {@inheritdoc} */
