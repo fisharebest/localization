@@ -90,16 +90,15 @@ abstract class Locale {
 	 */
 	public static function create($language) {
 		$parts = preg_split('/[^a-zA-Z0-9]+/', $language);
-		// PHP object names are case insensitive, but it helps the autoloader to get it right.
 		array_walk($parts, function (&$x) {
-			return ucfirst(strtolower($x));
+			$x = ucfirst(strtolower($x));
 		});
 		$class = __NAMESPACE__ . '\Locale' . implode($parts);
 
 		if (class_exists($class)) {
 			return new $class;
 		} else {
-			throw new \DomainException;
+			throw new \DomainException($class);
 		}
 	}
 
