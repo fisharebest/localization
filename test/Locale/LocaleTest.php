@@ -59,4 +59,29 @@ class LocaleTest extends TestCase {
 		usort($array, __NAMESPACE__ . '\Locale::compare');
 		$this->assertTrue(is_array($array));
 	}
+
+	/**
+	 * Test creating valid locales
+	 *
+	 * @return void
+	 */
+	public function testCreateValidLocale() {
+		$locale1 = Locale::create('en-GB');
+		$locale2 = Locale::create('en_GB');
+		$locale3 = Locale::create('En-gB');
+
+		$this->assertinstanceof(get_class(new LocaleEnGb), $locale1);
+		$this->assertinstanceof(get_class(new LocaleEnGb), $locale2);
+		$this->assertinstanceof(get_class(new LocaleEnGb), $locale3);
+	}
+
+	/**
+	 * Test creating locales
+	 *
+	 * @expectedException \DomainException
+	 * @return void
+	 */
+	public function testCreateInvalidLocale() {
+		Locale::create('xxx');
+	}
 }
