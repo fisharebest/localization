@@ -13,7 +13,7 @@ class IanaSubtagRegistryTest extends TestCase {
 	/**
 	 * Test the language tags against the IANA subtag registry
 	 *
-	 * @medium
+	 * @large
 	 *
 	 * @return void
 	 */
@@ -39,7 +39,7 @@ class IanaSubtagRegistryTest extends TestCase {
 	/**
 	 * Test the script tags against the IANA subtag registry
 	 *
-	 * @medium
+	 * @large
 	 *
 	 * @return void
 	 */
@@ -62,7 +62,7 @@ class IanaSubtagRegistryTest extends TestCase {
 	/**
 	 * Test the territory (region) tags against the IANA subtag registry
 	 *
-	 * @medium
+	 * @large
 	 *
 	 * @return void
 	 */

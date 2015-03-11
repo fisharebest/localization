@@ -1,6 +1,9 @@
 CHANGE LOG
 ==========
 
+## 1.0.3
+ - Tests timed out on Travis-CS
+
 ## 1.0.2 (2015-03-11)
  - Add Locale::create() to create Locale objects from language tags and locale codes.
 
