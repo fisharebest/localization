@@ -1,6 +1,9 @@
 CHANGE LOG
 ==========
 
+## 1.0.2 (2015-03-11)
+ - Add Locale::create() to create Locale objects from language tags and locale codes.
+
 ## 1.0.1 (2015-02-27)
  - Add Locale::number() to format numbers.
  - Add Locale::percent() to format percentages.

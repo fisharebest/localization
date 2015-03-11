@@ -81,6 +81,29 @@ abstract class Locale {
 	}
 
 	/**
+	 * Create a locale from a language tag (or locale code).
+	 *
+	 * @param string $language
+	 *
+	 * @return Locale
+	 * @throws \DomainException
+	 */
+	public static function create($language) {
+		$parts = preg_split('/[^a-zA-Z0-9]+/', $language);
+		// PHP object names are case insensitive, but it helps the autoloader to get it right.
+		array_walk($parts, function (&$x) {
+			return ucfirst(strtolower($x));
+		});
+		$class = __NAMESPACE__ . '\Locale' . implode($parts);
+
+		if (class_exists($class)) {
+			return new $class;
+		} else {
+			throw new \DomainException;
+		}
+	}
+
+	/**
 	 * Convert (Hindu-Arabic) digits into a localized form
 	 *
 	 * @param string $string  e.g. "123.45"

@@ -22,11 +22,14 @@ Locales, languages, scripts and territories
 A locale consists of three things: a language, a script and a territory.
 Scripts and territories are often implicit from the language.
 
+Normally you would just need to work with locales, and can ignore the
+other entities.
+
 ``` php
-$locale = new LocaleJa;         // Create a locale for Japanese.
-$locale->code();                // "ja_JP" (territories are always included in locale codes)
-$locale->languageTag();         // "ja" (redundant territories are omitted in tags)
-$locale->endonym();             // "日本語" (Japanese name for Japanese)
+$locale = new LocaleJa;   // Create a locale for Japanese.
+$locale->code();          // "ja_JP" (territories are always included in locale codes)
+$locale->languageTag();   // "ja" (redundant territories are omitted in tags)
+$locale->endonym();       // "日本語" (Japanese name for Japanese)
 
 // Languages - extract from the locale, or create with "new LanguageXx"
 $locale->language();            // LanguageJa
@@ -47,18 +50,15 @@ $locale->variant();             // VariantValencia
 $locale->variant()->code();     // "valencia"
 ```
 
-Normally you would just need to work with locales, and can ignore the
-other entities.
-
 Localization
 ============
 
 Create a locale and use it to localize data in your application.
 
 ``` php
-// To sort data properly in MySQL, you will need to specify the correct collation sequence.
-// See http://dev.mysql.com/doc/refman/5.7/en/charset-unicode-sets.html
-$locale->collation();           // "unicode_ci", "swedish_ci", etc.
+// Two ways to create locales
+$locale = new LocaleEnGb;
+$locale = Locale::create('en-GB');
 
 // Markup for HTML elements containing this locale
 $locale->htmlAttributes();      // lang="ar" dir="rtl"
@@ -81,6 +81,10 @@ $locale->digits('2014');        // "૨૦૧૪"
 $locale = new LocaleItCh;       // Swiss Italian
 $locale->number('12345678.9');  // "12'345'678.9"
 $locale->percent(0.1234, 1);    // "12.3%"
+
+// To sort data properly in MySQL, you need to specify a collation sequence.
+// See http://dev.mysql.com/doc/refman/5.7/en/charset-unicode-sets.html
+$locale->collation();           // "unicode_ci", "swedish_ci", etc.
 ```
 
 Updates welcome
