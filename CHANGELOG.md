@@ -2,6 +2,7 @@ CHANGE LOG
 ==========
 
  - Add Divehi (dv)
+ - Add Maori (mi)
 
 ## 1.0.3 (2015-03-11)
  - Tests timed out on Travis-CS
