@@ -1,7 +1,9 @@
 CHANGE LOG
 ==========
 
-## 1.0.3 (2015-03-11
+ - Add Divehi (dv)
+
+## 1.0.3 (2015-03-11)
  - Tests timed out on Travis-CS
  - Add failure information to exception
 
