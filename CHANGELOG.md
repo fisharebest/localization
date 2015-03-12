@@ -3,6 +3,7 @@ CHANGE LOG
 
  - Add Divehi (dv)
  - Add Maori (mi)
+ - Add Occitan (oc)
 
 ## 1.0.3 (2015-03-11)
  - Tests timed out on Travis-CS
