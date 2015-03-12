@@ -1,6 +1,7 @@
 CHANGE LOG
 ==========
 
+## 1.1.0 (2015-03-12)
  - Add Divehi (dv)
  - Add Maori (mi)
  - Add Occitan (oc)
