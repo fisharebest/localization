@@ -23,6 +23,7 @@ class LocaleSrLatnTest extends TestCase {
 		$this->assertEquals(new TerritoryRs, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertsame('unicode_ci', $locale->collation());
+		$this->assertSame('srpski', $locale->endonym());
 		$this->assertSame('sr_RS@latin', $locale->code());
 		$this->assertSame('sr-Latn', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
