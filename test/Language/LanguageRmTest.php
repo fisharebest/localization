@@ -18,7 +18,8 @@ class LanguageRmTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageRm;
 
-		$this->assertSame('rm', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule1, $language->pluralRule());
+		$this->assertSame('rm', $language->code());
 	}
 }

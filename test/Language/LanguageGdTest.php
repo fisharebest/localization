@@ -18,7 +18,8 @@ class LanguageGdTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageGd;
 
-		$this->assertSame('gd', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule4, $language->pluralRule());
+		$this->assertSame('gd', $language->code());
 	}
 }

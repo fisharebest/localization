@@ -18,7 +18,8 @@ class LanguageEoTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageEo;
 
-		$this->assertSame('eo', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule1, $language->pluralRule());
+		$this->assertSame('eo', $language->code());
 	}
 }

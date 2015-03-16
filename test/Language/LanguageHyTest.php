@@ -18,7 +18,8 @@ class LanguageHyTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageHy;
 
-		$this->assertSame('hy', $language->code());
 		$this->assertEquals(new ScriptArmn, $language->defaultScript());
+		$this->assertEquals(new PluralRule2, $language->pluralRule());
+		$this->assertSame('hy', $language->code());
 	}
 }

@@ -18,7 +18,8 @@ class LanguageOcTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageOc;
 
-		$this->assertSame('oc', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule2, $language->pluralRule());
+		$this->assertSame('oc', $language->code());
 	}
 }

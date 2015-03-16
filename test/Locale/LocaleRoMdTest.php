@@ -19,16 +19,17 @@ class LocaleRoMdTest extends TestCase {
 		$locale = new LocaleRoMd;
 
 		$this->assertEquals(new LanguageRo, $locale->language());
+		$this->assertEquals(new PluralRule5, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryMd, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('romanian_ci', $locale->collation());
-		$this->assertSame('moldovenească', $locale->endonym());
 		$this->assertSame('ro_MD', $locale->code());
-		$this->assertSame('ro-MD', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertSame('moldovenească', $locale->endonym());
 		$this->assertSame('lang="ro-MD"', $locale->htmlAttributes());
+		$this->assertSame('ro-MD', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertsame('romanian_ci', $locale->collation());
 	}
 }

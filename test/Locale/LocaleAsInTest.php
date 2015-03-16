@@ -19,15 +19,16 @@ class LocaleAsInTest extends TestCase {
 		$locale = new LocaleAsIn;
 
 		$this->assertEquals(new LanguageAs, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptBeng, $locale->script());
 		$this->assertEquals(new TerritoryIn, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('as_IN', $locale->code());
-		$this->assertSame('as', $locale->languageTag());
 		$this->assertSame('০১২৩৪৫৬৭৮৯', $locale->digits('0123456789'));
-		$this->assertSame('১,২৩,৪৫,৬৭৮.০৯', $locale->number(12345678.09));
 		$this->assertSame('lang="as"', $locale->htmlAttributes());
+		$this->assertSame('as', $locale->languageTag());
 		$this->assertSame('-১২৩', $locale->number(-123));
+		$this->assertSame('১,২৩,৪৫,৬৭৮.০৯', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

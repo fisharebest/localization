@@ -18,7 +18,7 @@ class LanguageRwkTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageRwk;
 
-		$this->assertSame('rwk', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('rwk', $language->code());
 	}
 }

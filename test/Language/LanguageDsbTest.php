@@ -18,7 +18,8 @@ class LanguageDsbTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageDsb;
 
-		$this->assertSame('dsb', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule10, $language->pluralRule());
+		$this->assertSame('dsb', $language->code());
 	}
 }

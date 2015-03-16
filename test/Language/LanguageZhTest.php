@@ -18,7 +18,8 @@ class LanguageZhTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageZh;
 
-		$this->assertSame('zh', $language->code());
 		$this->assertEquals(new ScriptHans, $language->defaultScript());
+		$this->assertEquals(new PluralRule0, $language->pluralRule());
+		$this->assertSame('zh', $language->code());
 	}
 }

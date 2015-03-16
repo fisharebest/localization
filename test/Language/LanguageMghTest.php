@@ -18,7 +18,7 @@ class LanguageMghTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageMgh;
 
-		$this->assertSame('mgh', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('mgh', $language->code());
 	}
 }

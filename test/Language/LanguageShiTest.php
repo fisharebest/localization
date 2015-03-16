@@ -18,7 +18,7 @@ class LanguageShiTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageShi;
 
-		$this->assertSame('shi', $language->code());
 		$this->assertEquals(new ScriptTfng, $language->defaultScript());
+		$this->assertSame('shi', $language->code());
 	}
 }

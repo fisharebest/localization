@@ -18,7 +18,7 @@ class LanguageBmTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageBm;
 
-		$this->assertSame('bm', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('bm', $language->code());
 	}
 }

@@ -19,15 +19,16 @@ class LocaleBsCyrlBaTest extends TestCase {
 		$locale = new LocaleBsCyrlBa;
 
 		$this->assertEquals(new LanguageBs, $locale->language());
+		$this->assertEquals(new PluralRule7, $locale->pluralRule());
 		$this->assertEquals(new ScriptCyrl, $locale->script());
 		$this->assertEquals(new TerritoryBa, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('bs_BA@cyrillic', $locale->code());
-		$this->assertSame('bs-Cyrl', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
 		$this->assertSame('lang="bs-Cyrl"', $locale->htmlAttributes());
+		$this->assertSame('bs-Cyrl', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

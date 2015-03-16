@@ -18,7 +18,8 @@ class LanguageBemTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageBem;
 
-		$this->assertSame('bem', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule1, $language->pluralRule());
+		$this->assertSame('bem', $language->code());
 	}
 }

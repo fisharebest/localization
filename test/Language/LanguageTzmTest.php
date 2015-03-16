@@ -18,7 +18,7 @@ class LanguageTzmTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageTzm;
 
-		$this->assertSame('tzm', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('tzm', $language->code());
 	}
 }

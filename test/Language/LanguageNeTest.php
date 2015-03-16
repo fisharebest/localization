@@ -18,7 +18,8 @@ class LanguageNeTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageNe;
 
-		$this->assertSame('ne', $language->code());
 		$this->assertEquals(new ScriptDeva, $language->defaultScript());
+		$this->assertEquals(new PluralRule1, $language->pluralRule());
+		$this->assertSame('ne', $language->code());
 	}
 }

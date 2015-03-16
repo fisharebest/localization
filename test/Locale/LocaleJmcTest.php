@@ -22,13 +22,13 @@ class LocaleJmcTest extends TestCase {
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryTz, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('Kimachame', $locale->endonym());
 		$this->assertSame('jmc_TZ', $locale->code());
-		$this->assertSame('jmc', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertSame('Kimachame', $locale->endonym());
 		$this->assertSame('lang="jmc"', $locale->htmlAttributes());
+		$this->assertSame('jmc', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

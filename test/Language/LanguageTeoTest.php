@@ -18,7 +18,7 @@ class LanguageTeoTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageTeo;
 
-		$this->assertSame('teo', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('teo', $language->code());
 	}
 }

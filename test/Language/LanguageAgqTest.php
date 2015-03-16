@@ -18,7 +18,7 @@ class LanguageAgqTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageAgq;
 
-		$this->assertSame('agq', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('agq', $language->code());
 	}
 }

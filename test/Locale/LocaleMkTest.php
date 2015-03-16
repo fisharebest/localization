@@ -19,16 +19,17 @@ class LocaleMkTest extends TestCase {
 		$locale = new LocaleMk;
 
 		$this->assertEquals(new LanguageMk, $locale->language());
+		$this->assertEquals(new PluralRule15, $locale->pluralRule());
 		$this->assertEquals(new ScriptCyrl, $locale->script());
 		$this->assertEquals(new TerritoryMk, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('македонски', $locale->endonym());
 		$this->assertSame('mk_MK', $locale->code());
-		$this->assertSame('mk', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertSame('македонски', $locale->endonym());
 		$this->assertSame('lang="mk"', $locale->htmlAttributes());
+		$this->assertSame('mk', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

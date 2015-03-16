@@ -19,15 +19,16 @@ class LocaleSvAxTest extends TestCase {
 		$locale = new LocaleSvAx;
 
 		$this->assertEquals(new LanguageSv, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryAx, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('swedish_ci', $locale->collation());
 		$this->assertSame('sv_AX', $locale->code());
-		$this->assertSame('sv-AX', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
 		$this->assertSame('lang="sv-AX"', $locale->htmlAttributes());
+		$this->assertSame('sv-AX', $locale->languageTag());
 		$this->assertSame('−123', $locale->number(-123));
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
+		$this->assertsame('swedish_ci', $locale->collation());
 	}
 }

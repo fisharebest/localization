@@ -19,15 +19,16 @@ class LocaleEnMgTest extends TestCase {
 		$locale = new LocaleEnMg;
 
 		$this->assertEquals(new LanguageEn, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryMg, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('en_MG', $locale->code());
-		$this->assertSame('en-MG', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
 		$this->assertSame('lang="en-MG"', $locale->htmlAttributes());
+		$this->assertSame('en-MG', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

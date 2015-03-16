@@ -18,7 +18,7 @@ class LanguageDyoTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageDyo;
 
-		$this->assertSame('dyo', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('dyo', $language->code());
 	}
 }

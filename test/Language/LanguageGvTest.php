@@ -18,7 +18,7 @@ class LanguageGvTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageGv;
 
-		$this->assertSame('gv', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('gv', $language->code());
 	}
 }

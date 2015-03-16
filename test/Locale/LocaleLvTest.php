@@ -19,16 +19,16 @@ class LocaleLvTest extends TestCase {
 		$locale = new LocaleLv;
 
 		$this->assertEquals(new LanguageLv, $locale->language());
+		$this->assertEquals(new PluralRule3, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryLv, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('latvian_ci', $locale->collation());
-		$this->assertSame('latviešu', $locale->endonym());
 		$this->assertSame('lv_LV', $locale->code());
-		$this->assertSame('lv', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12345 678,09', $locale->number(12345678.09));
+		$this->assertSame('latviešu', $locale->endonym());
 		$this->assertSame('lang="lv"', $locale->htmlAttributes());
-		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('lv', $locale->languageTag());
+		$this->assertSame('12345 678,09', $locale->number(12345678.09));
+		$this->assertsame('latvian_ci', $locale->collation());
 	}
 }

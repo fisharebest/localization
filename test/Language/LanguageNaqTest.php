@@ -18,7 +18,7 @@ class LanguageNaqTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageNaq;
 
-		$this->assertSame('naq', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('naq', $language->code());
 	}
 }

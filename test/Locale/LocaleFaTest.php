@@ -19,16 +19,17 @@ class LocaleFaTest extends TestCase {
 		$locale = new LocaleFa;
 
 		$this->assertEquals(new LanguageFa, $locale->language());
+		$this->assertEquals(new PluralRule0, $locale->pluralRule());
 		$this->assertEquals(new ScriptArab, $locale->script());
 		$this->assertEquals(new TerritoryIr, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('persian_ci', $locale->collation());
-		$this->assertSame('فارسی', $locale->endonym());
 		$this->assertSame('fa_IR', $locale->code());
-		$this->assertSame('fa', $locale->languageTag());
 		$this->assertSame('۰۱۲۳۴۵۶۷۸۹', $locale->digits('0123456789'));
-		$this->assertSame('۱۲٬۳۴۵٬۶۷۸٫۰۹', $locale->number(12345678.09));
+		$this->assertSame('فارسی', $locale->endonym());
 		$this->assertSame('lang="fa" dir="rtl"', $locale->htmlAttributes());
+		$this->assertSame('fa', $locale->languageTag());
 		$this->assertSame('‎−۱۲۳', $locale->number(-123));
+		$this->assertSame('۱۲٬۳۴۵٬۶۷۸٫۰۹', $locale->number(12345678.09));
+		$this->assertsame('persian_ci', $locale->collation());
 	}
 }

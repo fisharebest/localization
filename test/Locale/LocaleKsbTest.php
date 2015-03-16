@@ -22,13 +22,13 @@ class LocaleKsbTest extends TestCase {
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryTz, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('Kishambaa', $locale->endonym());
 		$this->assertSame('ksb_TZ', $locale->code());
-		$this->assertSame('ksb', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertSame('Kishambaa', $locale->endonym());
 		$this->assertSame('lang="ksb"', $locale->htmlAttributes());
+		$this->assertSame('ksb', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

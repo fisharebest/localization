@@ -196,6 +196,65 @@ class CldrTest extends TestCase {
 	}
 
 	/**
+	 * Test plural rules
+	 *
+	 * @large
+	 *
+	 * @return void
+	 */
+	public function testPluralRules() {
+		$cldr = file_get_contents(__DIR__ . '/data/cldr-26.0.1/supplemental/plurals.json');
+		$cldr = json_decode($cldr, true);
+
+		foreach ($cldr['supplemental']['plurals-type-cardinal'] as $code => $data) {
+			// The following CLDR definitions/examples are incompatible with the accepted gettext ones.
+			switch ($code) {
+			case 'br':  // CLDR has 5 rules, whereas gettext has (0,1) (other)
+			case 'cy':  // CLDR has 5 rules, whereas gettext has (1), (2), (other), (8,11)
+			case 'fa':  // CLDR has (0,1) (other), whereas gettext has (other)
+			case 'fil': // CLDR has a different rule from gettext
+			case 'he':  // CLDR has (1) (2) (many) (other), whereas gettext has (1) (other)
+			case 'kw':  // CLDR has 3 rules, whereas gettext has (1), (2), (3), (other)
+			case 'lv':  // CLDR has (0) (1) (other), whereas gettext has (1) (other) (0)
+			case 'mk':  // There are lots of conflicting definitions.
+			case 'pt':  // CLDR has the plural rule for pt-BR, whereas gettext has the plural rule for pt-PT
+			case 'tr':  // CLDR has (1) (other), whereas gettext has (other)
+			case 'se':  // CLDR has (1) (2) (other), whereas gettext has (0,1) (other)
+				continue 2;
+			}
+			try {
+				$locale = Locale::create($code);
+				$rules = array();
+				foreach ($data as $datum) {
+					if (preg_match('/@integer ([^@]+)/', $datum, $example)) {
+						$rules[] = preg_split('/[^0-9~]+/', $example[1], -1, PREG_SPLIT_NO_EMPTY);
+					};
+				}
+				if (count($rules) != $locale->pluralRule()->plurals()) var_dump($locale->languageTag());
+				$this->assertSame(count($rules), $locale->pluralRule()->plurals());
+
+				foreach ($rules as $rule => $examples) {
+					foreach ($examples as $example) {
+						if (strpos($example, '~')) {
+							list($low, $high) = explode('~', $example);
+							for ($number = $low; $number <= $high; ++$number) {
+if ($rule !== $locale->pluralRule()->plural($number)) {var_dump("!$code!$number!");}
+								$this->assertSame($rule, $locale->pluralRule()->plural($number));
+							}
+						} else {
+if ($rule !== $locale->pluralRule()->plural($example)) {var_dump("!$code!$example!");}
+							$this->assertSame($rule, $locale->pluralRule()->plural($example));
+						}
+					}
+				}
+			} catch (\DomainException $ex) {
+				// CLDR has plural rules for languages that have no other information
+				//var_dump($code);
+			}
+		}
+	}
+
+	/**
 	 * Extract the JSON data from a JSON file
 	 *
 	 * @return \stdClass

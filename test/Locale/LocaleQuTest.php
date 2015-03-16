@@ -22,13 +22,13 @@ class LocaleQuTest extends TestCase {
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryPe, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('Runasimi', $locale->endonym());
 		$this->assertSame('qu_PE', $locale->code());
-		$this->assertSame('qu', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertSame('Runasimi', $locale->endonym());
 		$this->assertSame('lang="qu"', $locale->htmlAttributes());
+		$this->assertSame('qu', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

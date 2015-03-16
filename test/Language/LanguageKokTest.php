@@ -18,7 +18,7 @@ class LanguageKokTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageKok;
 
-		$this->assertSame('kok', $language->code());
 		$this->assertEquals(new ScriptDeva, $language->defaultScript());
+		$this->assertSame('kok', $language->code());
 	}
 }

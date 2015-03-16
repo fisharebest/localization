@@ -22,13 +22,13 @@ class LocaleNmgTest extends TestCase {
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryCm, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('Kwasio', $locale->endonym());
 		$this->assertSame('nmg_CM', $locale->code());
-		$this->assertSame('nmg', $locale->languageTag());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
+		$this->assertSame('Kwasio', $locale->endonym());
 		$this->assertSame('lang="nmg"', $locale->htmlAttributes());
+		$this->assertSame('nmg', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
 	}
 }

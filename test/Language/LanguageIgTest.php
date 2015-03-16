@@ -18,7 +18,7 @@ class LanguageIgTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageIg;
 
-		$this->assertSame('ig', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('ig', $language->code());
 	}
 }

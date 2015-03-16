@@ -18,7 +18,7 @@ class LanguageRofTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageRof;
 
-		$this->assertSame('rof', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('rof', $language->code());
 	}
 }

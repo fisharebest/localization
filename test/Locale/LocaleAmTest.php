@@ -19,16 +19,17 @@ class LocaleAmTest extends TestCase {
 		$locale = new LocaleAm;
 
 		$this->assertEquals(new LanguageAm, $locale->language());
+		$this->assertEquals(new PluralRule2, $locale->pluralRule());
 		$this->assertEquals(new ScriptEthi, $locale->script());
 		$this->assertEquals(new TerritoryEt, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('አማርኛ', $locale->endonym());
 		$this->assertSame('am_ET', $locale->code());
-		$this->assertSame('am', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertSame('አማርኛ', $locale->endonym());
 		$this->assertSame('lang="am"', $locale->htmlAttributes());
+		$this->assertSame('am', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

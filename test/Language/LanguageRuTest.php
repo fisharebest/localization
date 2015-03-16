@@ -18,7 +18,8 @@ class LanguageRuTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageRu;
 
-		$this->assertSame('ru', $language->code());
 		$this->assertEquals(new ScriptCyrl, $language->defaultScript());
+		$this->assertEquals(new PluralRule7, $language->pluralRule());
+		$this->assertSame('ru', $language->code());
 	}
 }

@@ -19,16 +19,17 @@ class LocalePtTest extends TestCase {
 		$locale = new LocalePt;
 
 		$this->assertEquals(new LanguagePt, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryPt, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('português', $locale->endonym());
 		$this->assertSame('pt_PT', $locale->code());
-		$this->assertSame('pt', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertSame('português', $locale->endonym());
 		$this->assertSame('lang="pt"', $locale->htmlAttributes());
+		$this->assertSame('pt', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

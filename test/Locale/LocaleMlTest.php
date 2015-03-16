@@ -19,16 +19,17 @@ class LocaleMlTest extends TestCase {
 		$locale = new LocaleMl;
 
 		$this->assertEquals(new LanguageMl, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptMlym, $locale->script());
 		$this->assertEquals(new TerritoryIn, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('മലയാളം', $locale->endonym());
 		$this->assertSame('ml_IN', $locale->code());
-		$this->assertSame('ml', $locale->languageTag());
 		$this->assertSame('൦൧൨൩൪൫൬൭൮൯', $locale->digits('0123456789'));
-		$this->assertSame('൧,൨൩,൪൫,൬൭൮.൦൯', $locale->number(12345678.09));
+		$this->assertSame('മലയാളം', $locale->endonym());
 		$this->assertSame('lang="ml"', $locale->htmlAttributes());
+		$this->assertSame('ml', $locale->languageTag());
 		$this->assertSame('-൧൨൩', $locale->number(-123));
+		$this->assertSame('൧,൨൩,൪൫,൬൭൮.൦൯', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

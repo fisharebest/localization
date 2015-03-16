@@ -19,15 +19,16 @@ class LocalePaGuruInTest extends TestCase {
 		$locale = new LocalePaGuruIn;
 
 		$this->assertEquals(new LanguagePa, $locale->language());
+		$this->assertEquals(new PluralRule2, $locale->pluralRule());
 		$this->assertEquals(new ScriptGuru, $locale->script());
 		$this->assertEquals(new TerritoryIn, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('pa_IN', $locale->code());
-		$this->assertSame('pa', $locale->languageTag());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('੦੧੨੩੪੫੬੭੮੯', $locale->digits('0123456789'));
-		$this->assertSame('੧,੨੩,੪੫,੬੭੮.੦੯', $locale->number(12345678.09));
 		$this->assertSame('lang="pa"', $locale->htmlAttributes());
+		$this->assertSame('pa', $locale->languageTag());
+		$this->assertSame('੧,੨੩,੪੫,੬੭੮.੦੯', $locale->number(12345678.09));
 		$this->assertSame('-੧੨੩', $locale->number(-123));
 	}
 }

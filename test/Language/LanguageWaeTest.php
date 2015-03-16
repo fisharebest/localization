@@ -18,7 +18,7 @@ class LanguageWaeTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageWae;
 
-		$this->assertSame('wae', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('wae', $language->code());
 	}
 }

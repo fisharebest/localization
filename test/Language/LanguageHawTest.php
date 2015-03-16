@@ -18,7 +18,7 @@ class LanguageHawTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageHaw;
 
-		$this->assertSame('haw', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('haw', $language->code());
 	}
 }

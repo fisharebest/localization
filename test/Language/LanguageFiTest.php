@@ -18,7 +18,8 @@ class LanguageFiTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageFi;
 
-		$this->assertSame('fi', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule1, $language->pluralRule());
+		$this->assertSame('fi', $language->code());
 	}
 }

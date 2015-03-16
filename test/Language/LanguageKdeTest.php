@@ -18,7 +18,7 @@ class LanguageKdeTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageKde;
 
-		$this->assertSame('kde', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('kde', $language->code());
 	}
 }

@@ -18,7 +18,8 @@ class LanguageDzTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageDz;
 
-		$this->assertSame('dz', $language->code());
 		$this->assertEquals(new ScriptTibt, $language->defaultScript());
+		$this->assertEquals(new PluralRule0, $language->pluralRule());
+		$this->assertSame('dz', $language->code());
 	}
 }

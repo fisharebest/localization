@@ -18,7 +18,7 @@ class LanguageXogTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageXog;
 
-		$this->assertSame('xog', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('xog', $language->code());
 	}
 }

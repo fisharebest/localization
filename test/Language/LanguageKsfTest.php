@@ -18,7 +18,7 @@ class LanguageKsfTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageKsf;
 
-		$this->assertSame('ksf', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('ksf', $language->code());
 	}
 }

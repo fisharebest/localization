@@ -18,7 +18,7 @@ class LanguageJmcTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageJmc;
 
-		$this->assertSame('jmc', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('jmc', $language->code());
 	}
 }

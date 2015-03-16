@@ -18,7 +18,7 @@ class LanguageNdTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageNd;
 
-		$this->assertSame('nd', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('nd', $language->code());
 	}
 }

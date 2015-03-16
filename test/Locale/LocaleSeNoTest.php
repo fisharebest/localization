@@ -19,15 +19,16 @@ class LocaleSeNoTest extends TestCase {
 		$locale = new LocaleSeNo;
 
 		$this->assertEquals(new LanguageSe, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryNo, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('se_NO', $locale->code());
-		$this->assertSame('se', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
 		$this->assertSame('lang="se"', $locale->htmlAttributes());
+		$this->assertSame('se', $locale->languageTag());
 		$this->assertSame('−123', $locale->number(-123));
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

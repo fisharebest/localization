@@ -18,7 +18,8 @@ class LanguageGaTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageGa;
 
-		$this->assertSame('ga', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule11, $language->pluralRule());
+		$this->assertSame('ga', $language->code());
 	}
 }

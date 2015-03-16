@@ -18,7 +18,7 @@ class LanguageVunTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageVun;
 
-		$this->assertSame('vun', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('vun', $language->code());
 	}
 }

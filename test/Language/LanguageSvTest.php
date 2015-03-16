@@ -18,7 +18,8 @@ class LanguageSvTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageSv;
 
-		$this->assertSame('sv', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule1, $language->pluralRule());
+		$this->assertSame('sv', $language->code());
 	}
 }

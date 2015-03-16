@@ -19,14 +19,15 @@ class LocaleZhHantTest extends TestCase {
 		$locale = new LocaleZhHant;
 
 		$this->assertEquals(new LanguageZh, $locale->language());
+		$this->assertEquals(new PluralRule0, $locale->pluralRule());
 		$this->assertEquals(new ScriptHant, $locale->script());
 		$this->assertEquals(new TerritoryCn, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('繁體中文', $locale->endonym());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12345,678.09', $locale->number(12345678.09));
+		$this->assertSame('繁體中文', $locale->endonym());
 		$this->assertSame('lang="zh-Hant"', $locale->htmlAttributes());
+		$this->assertSame('12345,678.09', $locale->number(12345678.09));
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

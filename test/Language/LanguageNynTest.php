@@ -18,7 +18,7 @@ class LanguageNynTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageNyn;
 
-		$this->assertSame('nyn', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('nyn', $language->code());
 	}
 }

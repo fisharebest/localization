@@ -18,7 +18,7 @@ class LanguageKshTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageKsh;
 
-		$this->assertSame('ksh', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('ksh', $language->code());
 	}
 }

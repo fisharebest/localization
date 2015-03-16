@@ -18,7 +18,7 @@ class LanguageKeaTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageKea;
 
-		$this->assertSame('kea', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('kea', $language->code());
 	}
 }

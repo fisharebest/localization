@@ -19,15 +19,16 @@ class LocalePtStTest extends TestCase {
 		$locale = new LocalePtSt;
 
 		$this->assertEquals(new LanguagePt, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritorySt, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('pt_ST', $locale->code());
-		$this->assertSame('pt-ST', $locale->languageTag());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
 		$this->assertSame('lang="pt-ST"', $locale->htmlAttributes());
+		$this->assertSame('pt-ST', $locale->languageTag());
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
 		$this->assertSame('-123', $locale->number(-123));
 	}
 }

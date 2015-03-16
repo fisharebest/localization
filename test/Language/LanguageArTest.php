@@ -18,7 +18,8 @@ class LanguageArTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageAr;
 
-		$this->assertSame('ar', $language->code());
 		$this->assertEquals(new ScriptArab, $language->defaultScript());
+		$this->assertEquals(new PluralRule12, $language->pluralRule());
+		$this->assertSame('ar', $language->code());
 	}
 }

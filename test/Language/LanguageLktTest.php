@@ -18,7 +18,7 @@ class LanguageLktTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageLkt;
 
-		$this->assertSame('lkt', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('lkt', $language->code());
 	}
 }

@@ -19,15 +19,16 @@ class LocaleFiFiTest extends TestCase {
 		$locale = new LocaleFiFi;
 
 		$this->assertEquals(new LanguageFi, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryFi, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('fi_FI', $locale->code());
-		$this->assertSame('fi', $locale->languageTag());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
 		$this->assertSame('lang="fi"', $locale->htmlAttributes());
+		$this->assertSame('fi', $locale->languageTag());
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
 		$this->assertSame('−123', $locale->number(-123));
 	}
 }

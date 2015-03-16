@@ -18,7 +18,8 @@ class LanguageIdTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageId;
 
-		$this->assertSame('id', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule0, $language->pluralRule());
+		$this->assertSame('id', $language->code());
 	}
 }

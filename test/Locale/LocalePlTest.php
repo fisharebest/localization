@@ -19,16 +19,17 @@ class LocalePlTest extends TestCase {
 		$locale = new LocalePl;
 
 		$this->assertEquals(new LanguagePl, $locale->language());
+		$this->assertEquals(new PluralRule9, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryPl, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('polish_ci', $locale->collation());
-		$this->assertSame('polski', $locale->endonym());
 		$this->assertSame('pl_PL', $locale->code());
-		$this->assertSame('pl', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
+		$this->assertSame('polski', $locale->endonym());
 		$this->assertSame('lang="pl"', $locale->htmlAttributes());
+		$this->assertSame('pl', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
+		$this->assertsame('polish_ci', $locale->collation());
 	}
 }

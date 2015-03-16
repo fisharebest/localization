@@ -19,15 +19,16 @@ class LocaleFrNeTest extends TestCase {
 		$locale = new LocaleFrNe;
 
 		$this->assertEquals(new LanguageFr, $locale->language());
+		$this->assertEquals(new PluralRule2, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryNe, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('fr_NE', $locale->code());
-		$this->assertSame('fr-NE', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
 		$this->assertSame('lang="fr-NE"', $locale->htmlAttributes());
+		$this->assertSame('fr-NE', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }
