@@ -18,7 +18,7 @@ class LanguageJgoTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageJgo;
 
-		$this->assertSame('jgo', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('jgo', $language->code());
 	}
 }

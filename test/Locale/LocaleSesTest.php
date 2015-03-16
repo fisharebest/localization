@@ -22,13 +22,13 @@ class LocaleSesTest extends TestCase {
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryMl, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('Koyraboro senni', $locale->endonym());
 		$this->assertSame('ses_ML', $locale->code());
-		$this->assertSame('ses', $locale->languageTag());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12 345 678.09', $locale->number(12345678.09));
+		$this->assertSame('Koyraboro senni', $locale->endonym());
 		$this->assertSame('lang="ses"', $locale->htmlAttributes());
+		$this->assertSame('ses', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12 345 678.09', $locale->number(12345678.09));
 	}
 }

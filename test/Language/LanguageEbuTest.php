@@ -18,7 +18,7 @@ class LanguageEbuTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageEbu;
 
-		$this->assertSame('ebu', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('ebu', $language->code());
 	}
 }

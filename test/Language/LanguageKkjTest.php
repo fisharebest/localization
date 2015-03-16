@@ -18,7 +18,7 @@ class LanguageKkjTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageKkj;
 
-		$this->assertSame('kkj', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('kkj', $language->code());
 	}
 }

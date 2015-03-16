@@ -18,7 +18,8 @@ class LanguageBrxTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageBrx;
 
-		$this->assertSame('brx', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule1, $language->pluralRule());
+		$this->assertSame('brx', $language->code());
 	}
 }

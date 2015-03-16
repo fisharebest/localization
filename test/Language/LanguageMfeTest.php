@@ -18,7 +18,8 @@ class LanguageMfeTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageMfe;
 
-		$this->assertSame('mfe', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule2, $language->pluralRule());
+		$this->assertSame('mfe', $language->code());
 	}
 }

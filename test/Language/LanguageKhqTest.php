@@ -18,7 +18,7 @@ class LanguageKhqTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageKhq;
 
-		$this->assertSame('khq', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('khq', $language->code());
 	}
 }

@@ -19,15 +19,16 @@ class LocaleNeInTest extends TestCase {
 		$locale = new LocaleNeIn;
 
 		$this->assertEquals(new LanguageNe, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptDeva, $locale->script());
 		$this->assertEquals(new TerritoryIn, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('ne_IN', $locale->code());
-		$this->assertSame('ne-IN', $locale->languageTag());
 		$this->assertSame('०१२३४५६७८९', $locale->digits('0123456789'));
-		$this->assertSame('१२,३४५,६७८.०९', $locale->number(12345678.09));
 		$this->assertSame('lang="ne-IN"', $locale->htmlAttributes());
+		$this->assertSame('ne-IN', $locale->languageTag());
 		$this->assertSame('-१२३', $locale->number(-123));
+		$this->assertSame('१२,३४५,६७८.०९', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

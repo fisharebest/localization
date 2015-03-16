@@ -18,7 +18,7 @@ class LanguageLagTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageLag;
 
-		$this->assertSame('lag', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('lag', $language->code());
 	}
 }

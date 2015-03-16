@@ -22,13 +22,13 @@ class LocaleKshTest extends TestCase {
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryDe, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('Kölsch', $locale->endonym());
 		$this->assertSame('ksh_DE', $locale->code());
-		$this->assertSame('ksh', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
+		$this->assertSame('Kölsch', $locale->endonym());
 		$this->assertSame('lang="ksh"', $locale->htmlAttributes());
+		$this->assertSame('ksh', $locale->languageTag());
 		$this->assertSame('−123', $locale->number(-123));
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

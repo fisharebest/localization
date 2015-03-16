@@ -18,7 +18,7 @@ class LanguageDavTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageDav;
 
-		$this->assertSame('dav', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('dav', $language->code());
 	}
 }

@@ -18,7 +18,8 @@ class LanguageKmTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageKm;
 
-		$this->assertSame('km', $language->code());
 		$this->assertEquals(new ScriptKhmr, $language->defaultScript());
+		$this->assertEquals(new PluralRule0, $language->pluralRule());
+		$this->assertSame('km', $language->code());
 	}
 }

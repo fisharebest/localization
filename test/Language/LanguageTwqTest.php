@@ -18,7 +18,7 @@ class LanguageTwqTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageTwq;
 
-		$this->assertSame('twq', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('twq', $language->code());
 	}
 }

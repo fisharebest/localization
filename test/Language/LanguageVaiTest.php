@@ -18,7 +18,7 @@ class LanguageVaiTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageVai;
 
-		$this->assertSame('vai', $language->code());
 		$this->assertEquals(new ScriptVaii, $language->defaultScript());
+		$this->assertSame('vai', $language->code());
 	}
 }

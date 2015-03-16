@@ -19,16 +19,17 @@ class LocaleDzTest extends TestCase {
 		$locale = new LocaleDz;
 
 		$this->assertEquals(new LanguageDz, $locale->language());
+		$this->assertEquals(new PluralRule0, $locale->pluralRule());
 		$this->assertEquals(new ScriptTibt, $locale->script());
 		$this->assertEquals(new TerritoryBt, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('རྫོང་ཁ', $locale->endonym());
 		$this->assertSame('dz_BT', $locale->code());
-		$this->assertSame('dz', $locale->languageTag());
 		$this->assertSame('༠༡༢༣༤༥༦༧༨༩', $locale->digits('0123456789'));
-		$this->assertSame('༡,༢༣,༤༥,༦༧༨.༠༩', $locale->number(12345678.09));
+		$this->assertSame('རྫོང་ཁ', $locale->endonym());
 		$this->assertSame('lang="dz"', $locale->htmlAttributes());
+		$this->assertSame('dz', $locale->languageTag());
 		$this->assertSame('-༡༢༣', $locale->number(-123));
+		$this->assertSame('༡,༢༣,༤༥,༦༧༨.༠༩', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

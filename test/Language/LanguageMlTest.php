@@ -18,7 +18,8 @@ class LanguageMlTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageMl;
 
-		$this->assertSame('ml', $language->code());
 		$this->assertEquals(new ScriptMlym, $language->defaultScript());
+		$this->assertEquals(new PluralRule1, $language->pluralRule());
+		$this->assertSame('ml', $language->code());
 	}
 }

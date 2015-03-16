@@ -19,15 +19,16 @@ class LocaleTaLkTest extends TestCase {
 		$locale = new LocaleTaLk;
 
 		$this->assertEquals(new LanguageTa, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptTaml, $locale->script());
 		$this->assertEquals(new TerritoryLk, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('ta_LK', $locale->code());
-		$this->assertSame('ta-LK', $locale->languageTag());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('௦௧௨௩௪௫௬௭௮௯', $locale->digits('0123456789'));
-		$this->assertSame('௧,௨௩,௪௫,௬௭௮.௦௯', $locale->number(12345678.09));
 		$this->assertSame('lang="ta-LK"', $locale->htmlAttributes());
+		$this->assertSame('ta-LK', $locale->languageTag());
+		$this->assertSame('௧,௨௩,௪௫,௬௭௮.௦௯', $locale->number(12345678.09));
 		$this->assertSame('-௧௨௩', $locale->number(-123));
 	}
 }

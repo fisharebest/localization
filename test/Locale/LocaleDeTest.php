@@ -19,16 +19,17 @@ class LocaleDeTest extends TestCase {
 		$locale = new LocaleDe;
 
 		$this->assertEquals(new LanguageDe, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryDe, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('german2_ci', $locale->collation());
-		$this->assertSame('Deutsch', $locale->endonym());
 		$this->assertSame('de_DE', $locale->code());
-		$this->assertSame('de', $locale->languageTag());
+		$this->assertSame('german2_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertSame('Deutsch', $locale->endonym());
 		$this->assertSame('lang="de"', $locale->htmlAttributes());
+		$this->assertSame('de', $locale->languageTag());
+		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
 		$this->assertSame('-123', $locale->number(-123));
 	}
 }

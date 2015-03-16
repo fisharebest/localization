@@ -19,15 +19,16 @@ class LocaleBgBgTest extends TestCase {
 		$locale = new LocaleBgBg;
 
 		$this->assertEquals(new LanguageBg, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptCyrl, $locale->script());
 		$this->assertEquals(new TerritoryBg, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('bg_BG', $locale->code());
-		$this->assertSame('bg', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
 		$this->assertSame('lang="bg"', $locale->htmlAttributes());
+		$this->assertSame('bg', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

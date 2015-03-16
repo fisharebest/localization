@@ -19,15 +19,16 @@ class LocaleKmKhTest extends TestCase {
 		$locale = new LocaleKmKh;
 
 		$this->assertEquals(new LanguageKm, $locale->language());
+		$this->assertEquals(new PluralRule0, $locale->pluralRule());
 		$this->assertEquals(new ScriptKhmr, $locale->script());
 		$this->assertEquals(new TerritoryKh, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('km_KH', $locale->code());
-		$this->assertSame('km', $locale->languageTag());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('០១២៣៤៥៦៧៨៩', $locale->digits('0123456789'));
-		$this->assertSame('១២.៣៤៥.៦៧៨,០៩', $locale->number(12345678.09));
 		$this->assertSame('lang="km"', $locale->htmlAttributes());
+		$this->assertSame('km', $locale->languageTag());
 		$this->assertSame('-១២៣', $locale->number(-123));
+		$this->assertSame('១២.៣៤៥.៦៧៨,០៩', $locale->number(12345678.09));
 	}
 }

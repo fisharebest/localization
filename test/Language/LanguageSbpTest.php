@@ -18,7 +18,7 @@ class LanguageSbpTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageSbp;
 
-		$this->assertSame('sbp', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('sbp', $language->code());
 	}
 }

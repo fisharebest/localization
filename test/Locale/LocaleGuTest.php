@@ -19,16 +19,17 @@ class LocaleGuTest extends TestCase {
 		$locale = new LocaleGu;
 
 		$this->assertEquals(new LanguageGu, $locale->language());
+		$this->assertEquals(new PluralRule2, $locale->pluralRule());
 		$this->assertEquals(new ScriptGujr, $locale->script());
 		$this->assertEquals(new TerritoryIn, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('ગુજરાતી', $locale->endonym());
 		$this->assertSame('gu_IN', $locale->code());
-		$this->assertSame('gu', $locale->languageTag());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('૦૧૨૩૪૫૬૭૮૯', $locale->digits('0123456789'));
-		$this->assertSame('૧,૨૩,૪૫,૬૭૮.૦૯', $locale->number(12345678.09));
+		$this->assertSame('ગુજરાતી', $locale->endonym());
 		$this->assertSame('lang="gu"', $locale->htmlAttributes());
+		$this->assertSame('gu', $locale->languageTag());
+		$this->assertSame('૧,૨૩,૪૫,૬૭૮.૦૯', $locale->number(12345678.09));
 		$this->assertSame('-૧૨૩', $locale->number(-123));
 	}
 }

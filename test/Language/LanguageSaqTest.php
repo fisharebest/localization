@@ -18,7 +18,7 @@ class LanguageSaqTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageSaq;
 
-		$this->assertSame('saq', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('saq', $language->code());
 	}
 }

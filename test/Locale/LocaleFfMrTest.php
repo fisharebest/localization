@@ -19,15 +19,16 @@ class LocaleFfMrTest extends TestCase {
 		$locale = new LocaleFfMr;
 
 		$this->assertEquals(new LanguageFf, $locale->language());
+		$this->assertEquals(new PluralRule2, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryMr, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('ff_MR', $locale->code());
-		$this->assertSame('ff-MR', $locale->languageTag());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
 		$this->assertSame('lang="ff-MR"', $locale->htmlAttributes());
+		$this->assertSame('ff-MR', $locale->languageTag());
+		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
 		$this->assertSame('-123', $locale->number(-123));
 	}
 }

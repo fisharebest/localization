@@ -19,16 +19,17 @@ class LocaleEtTest extends TestCase {
 		$locale = new LocaleEt;
 
 		$this->assertEquals(new LanguageEt, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryEe, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('estonian_ci', $locale->collation());
-		$this->assertSame('eesti', $locale->endonym());
 		$this->assertSame('et_EE', $locale->code());
-		$this->assertSame('et', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12345 678,09', $locale->number(12345678.09));
+		$this->assertSame('eesti', $locale->endonym());
 		$this->assertSame('lang="et"', $locale->htmlAttributes());
+		$this->assertSame('et', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12345 678,09', $locale->number(12345678.09));
+		$this->assertsame('estonian_ci', $locale->collation());
 	}
 }

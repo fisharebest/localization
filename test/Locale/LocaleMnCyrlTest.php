@@ -19,15 +19,16 @@ class LocaleMnCyrlTest extends TestCase {
 		$locale = new LocaleMnCyrl;
 
 		$this->assertEquals(new LanguageMn, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryMn, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('mn_MN', $locale->code());
-		$this->assertSame('mn', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
 		$this->assertSame('lang="mn"', $locale->htmlAttributes());
+		$this->assertSame('mn', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

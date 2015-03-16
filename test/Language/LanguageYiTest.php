@@ -18,7 +18,7 @@ class LanguageYiTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageYi;
 
-		$this->assertSame('yi', $language->code());
 		$this->assertEquals(new ScriptHebr, $language->defaultScript());
+		$this->assertSame('yi', $language->code());
 	}
 }

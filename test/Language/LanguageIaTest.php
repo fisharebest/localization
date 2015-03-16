@@ -18,7 +18,8 @@ class LanguageIaTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageIa;
 
-		$this->assertSame('ia', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule1, $language->pluralRule());
+		$this->assertSame('ia', $language->code());
 	}
 }

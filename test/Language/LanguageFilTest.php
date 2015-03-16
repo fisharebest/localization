@@ -18,7 +18,8 @@ class LanguageFilTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageFil;
 
-		$this->assertSame('fil', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule2, $language->pluralRule());
+		$this->assertSame('fil', $language->code());
 	}
 }

@@ -18,7 +18,7 @@ class LanguageOmTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageOm;
 
-		$this->assertSame('om', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('om', $language->code());
 	}
 }

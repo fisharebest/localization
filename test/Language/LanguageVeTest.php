@@ -18,7 +18,7 @@ class LanguageVeTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageVe;
 
-		$this->assertSame('ve', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('ve', $language->code());
 	}
 }

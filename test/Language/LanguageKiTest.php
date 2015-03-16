@@ -18,7 +18,7 @@ class LanguageKiTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageKi;
 
-		$this->assertSame('ki', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('ki', $language->code());
 	}
 }

@@ -18,7 +18,7 @@ class LanguageGuzTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageGuz;
 
-		$this->assertSame('guz', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('guz', $language->code());
 	}
 }

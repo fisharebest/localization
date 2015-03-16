@@ -33,9 +33,9 @@ class LocaleTest extends TestCase {
 	 */
 	public function testCompare() {
 		// American English, Australian English, British English
+		$this->assertLessThan(0, Locale::compare(new LocaleEnAU, new LocaleEnGb));
 		$this->assertLessThan(0, Locale::compare(new LocaleEnUs, new LocaleEnAu));
 		$this->assertLessThan(0, Locale::compare(new LocaleEnUs, new LocaleEnGb));
-		$this->assertLessThan(0, Locale::compare(new LocaleEnAU, new LocaleEnGb));
 
 		$this->assertEquals(0, Locale::compare(new LocaleEnAu, new LocaleEnAu));
 		$this->assertEquals(0, Locale::compare(new LocaleEnGb, new LocaleEnGb));

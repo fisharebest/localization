@@ -18,7 +18,8 @@ class LanguageMyTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageMy;
 
-		$this->assertSame('my', $language->code());
 		$this->assertEquals(new ScriptMymr, $language->defaultScript());
+		$this->assertEquals(new PluralRule0, $language->pluralRule());
+		$this->assertSame('my', $language->code());
 	}
 }

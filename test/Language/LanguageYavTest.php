@@ -18,7 +18,7 @@ class LanguageYavTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageYav;
 
-		$this->assertSame('yav', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('yav', $language->code());
 	}
 }

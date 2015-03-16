@@ -18,7 +18,8 @@ class LanguageFurTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageFur;
 
-		$this->assertSame('fur', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule1, $language->pluralRule());
+		$this->assertSame('fur', $language->code());
 	}
 }

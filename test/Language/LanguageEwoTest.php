@@ -18,7 +18,7 @@ class LanguageEwoTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageEwo;
 
-		$this->assertSame('ewo', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('ewo', $language->code());
 	}
 }

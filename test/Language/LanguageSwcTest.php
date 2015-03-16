@@ -18,7 +18,7 @@ class LanguageSwcTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageSwc;
 
-		$this->assertSame('swc', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('swc', $language->code());
 	}
 }

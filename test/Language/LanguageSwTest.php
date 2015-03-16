@@ -18,7 +18,8 @@ class LanguageSwTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageSw;
 
-		$this->assertSame('sw', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule1, $language->pluralRule());
+		$this->assertSame('sw', $language->code());
 	}
 }

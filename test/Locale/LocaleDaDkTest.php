@@ -19,15 +19,16 @@ class LocaleDaDkTest extends TestCase {
 		$locale = new LocaleDaDk;
 
 		$this->assertEquals(new LanguageDa, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryDk, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('danish_ci', $locale->collation());
 		$this->assertSame('da_DK', $locale->code());
-		$this->assertSame('da', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
 		$this->assertSame('lang="da"', $locale->htmlAttributes());
+		$this->assertSame('da', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertsame('danish_ci', $locale->collation());
 	}
 }

@@ -18,7 +18,7 @@ class LanguageChrTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageChr;
 
-		$this->assertSame('chr', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('chr', $language->code());
 	}
 }

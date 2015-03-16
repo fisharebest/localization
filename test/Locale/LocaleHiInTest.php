@@ -19,15 +19,16 @@ class LocaleHiInTest extends TestCase {
 		$locale = new LocaleHiIn;
 
 		$this->assertEquals(new LanguageHi, $locale->language());
+		$this->assertEquals(new PluralRule2, $locale->pluralRule());
 		$this->assertEquals(new ScriptDeva, $locale->script());
 		$this->assertEquals(new TerritoryIn, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('hi_IN', $locale->code());
-		$this->assertSame('hi', $locale->languageTag());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('०१२३४५६७८९', $locale->digits('0123456789'));
-		$this->assertSame('१,२३,४५,६७८.०९', $locale->number(12345678.09));
 		$this->assertSame('lang="hi"', $locale->htmlAttributes());
+		$this->assertSame('hi', $locale->languageTag());
+		$this->assertSame('१,२३,४५,६७८.०९', $locale->number(12345678.09));
 		$this->assertSame('-१२३', $locale->number(-123));
 	}
 }

@@ -18,7 +18,7 @@ class LanguageOsTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageOs;
 
-		$this->assertSame('os', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('os', $language->code());
 	}
 }

@@ -18,7 +18,8 @@ class LanguageGuTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageGu;
 
-		$this->assertSame('gu', $language->code());
 		$this->assertEquals(new ScriptGujr, $language->defaultScript());
+		$this->assertEquals(new PluralRule2, $language->pluralRule());
+		$this->assertSame('gu', $language->code());
 	}
 }

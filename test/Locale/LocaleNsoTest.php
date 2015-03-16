@@ -19,16 +19,17 @@ class LocaleNsoTest extends TestCase {
 		$locale = new LocaleNso;
 
 		$this->assertEquals(new LanguageNso, $locale->language());
+		$this->assertEquals(new PluralRule2, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryZa, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('Sesotho sa Leboa', $locale->endonym());
 		$this->assertSame('nso_ZA', $locale->code());
-		$this->assertSame('nso', $locale->languageTag());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12 345 678.09', $locale->number(12345678.09));
+		$this->assertSame('Sesotho sa Leboa', $locale->endonym());
 		$this->assertSame('lang="nso"', $locale->htmlAttributes());
+		$this->assertSame('nso', $locale->languageTag());
+		$this->assertSame('12 345 678.09', $locale->number(12345678.09));
 		$this->assertSame('-123', $locale->number(-123));
 	}
 }

@@ -18,7 +18,8 @@ class LanguageViTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageVi;
 
-		$this->assertSame('vi', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule0, $language->pluralRule());
+		$this->assertSame('vi', $language->code());
 	}
 }

@@ -1,6 +1,9 @@
 CHANGE LOG
 ==========
 
+## 1.2.0 (2015-03-19)
+ - Add plural rules for working with translations
+
 ## 1.1.2 (2015-03-15)
  - Do not suppress the script in the language tag for zh-Hans
 

@@ -19,16 +19,17 @@ class LocaleDsbTest extends TestCase {
 		$locale = new LocaleDsb;
 
 		$this->assertEquals(new LanguageDsb, $locale->language());
+		$this->assertEquals(new PluralRule10, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryDe, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
-		$this->assertSame('dolnoserbšćina', $locale->endonym());
 		$this->assertSame('dsb_DE', $locale->code());
-		$this->assertSame('dsb', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertSame('dolnoserbšćina', $locale->endonym());
 		$this->assertSame('lang="dsb"', $locale->htmlAttributes());
+		$this->assertSame('dsb', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

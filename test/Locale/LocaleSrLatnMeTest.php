@@ -19,15 +19,16 @@ class LocaleSrLatnMeTest extends TestCase {
 		$locale = new LocaleSrLatnMe;
 
 		$this->assertEquals(new LanguageSr, $locale->language());
+		$this->assertEquals(new PluralRule7, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryMe, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertsame('unicode_ci', $locale->collation());
 		$this->assertSame('sr_ME@latin', $locale->code());
-		$this->assertSame('sr-Latn-ME', $locale->languageTag());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
 		$this->assertSame('lang="sr-Latn-ME"', $locale->htmlAttributes());
+		$this->assertSame('sr-Latn-ME', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
+		$this->assertsame('unicode_ci', $locale->collation());
 	}
 }

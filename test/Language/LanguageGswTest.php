@@ -18,7 +18,7 @@ class LanguageGswTest extends TestCase {
 	public function testProperties() {
 		$language = new LanguageGsw;
 
-		$this->assertSame('gsw', $language->code());
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertSame('gsw', $language->code());
 	}
 }
