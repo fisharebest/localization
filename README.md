@@ -101,8 +101,20 @@ $locale->pluralRule()->plurals(); // 2 (French also has two plural forms)
 $locale->pluralRule()->plural(0); // 0 (zero is singular in French)
 ```
 
-Some of the plural definitions in CLDR differ to those traditionally used by gettext.
+Some of the plural definitions in CLDR differ to those traditionally used by `gettext`.
 We use the gettext versions for br, fa, fil, he, lv, mk, pt, tr and se.
+
+Translation functions work the same as `gettext`.
+
+``` php
+$locale = new LocaleFr;
+$translation = new Translation('/path/to/fr.mo');  // Can use .CSV, .PHP and .MO files
+$translator = new Translator($translation->asArray(), $locale->pluralRule());
+$translator->translate('the fish');                // "le poisson" 
+$translator->translateContext('noun', 'fish');     // "poisson" 
+$translator->translateContext('verb', 'fish');     // "pêcher" 
+$translator->plural('%d fish', '%d fishes', 4);    // "%d poissons" 
+```
 
 
 Updates welcome
