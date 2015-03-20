@@ -24,11 +24,12 @@ class LocaleOrInTest extends TestCase {
 		$this->assertEquals(new TerritoryIn, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('or_IN', $locale->code());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('୦୧୨୩୪୫୬୭୮୯', $locale->digits('0123456789'));
 		$this->assertSame('lang="or"', $locale->htmlAttributes());
 		$this->assertSame('or', $locale->languageTag());
 		$this->assertSame('-୧୨୩', $locale->number(-123));
 		$this->assertSame('୧,୨୩,୪୫,୬୭୮.୦୯', $locale->number(12345678.09));
-		$this->assertsame('unicode_ci', $locale->collation());
+		$this->assertSame('୧,୨୩୪.୫୬%', $locale->percent(12.3456, 2));
 	}
 }

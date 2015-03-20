@@ -29,7 +29,8 @@ class LocaleGuTest extends TestCase {
 		$this->assertSame('ગુજરાતી', $locale->endonym());
 		$this->assertSame('lang="gu"', $locale->htmlAttributes());
 		$this->assertSame('gu', $locale->languageTag());
-		$this->assertSame('૧,૨૩,૪૫,૬૭૮.૦૯', $locale->number(12345678.09));
 		$this->assertSame('-૧૨૩', $locale->number(-123));
+		$this->assertSame('૧,૨૩,૪૫,૬૭૮.૦૯', $locale->number(12345678.09));
+		$this->assertSame('૧,૨૩૪.૫૬%', $locale->percent(12.3456, 2));
 	}
 }

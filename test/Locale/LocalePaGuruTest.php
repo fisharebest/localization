@@ -24,11 +24,12 @@ class LocalePaGuruTest extends TestCase {
 		$this->assertEquals(new TerritoryIn, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('pa_IN', $locale->code());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('੦੧੨੩੪੫੬੭੮੯', $locale->digits('0123456789'));
 		$this->assertSame('lang="pa"', $locale->htmlAttributes());
 		$this->assertSame('pa', $locale->languageTag());
 		$this->assertSame('-੧੨੩', $locale->number(-123));
 		$this->assertSame('੧,੨੩,੪੫,੬੭੮.੦੯', $locale->number(12345678.09));
-		$this->assertsame('unicode_ci', $locale->collation());
+		$this->assertSame('੧,੨੩੪.੫੬%', $locale->percent(12.3456, 2));
 	}
 }

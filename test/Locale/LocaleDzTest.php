@@ -24,12 +24,13 @@ class LocaleDzTest extends TestCase {
 		$this->assertEquals(new TerritoryBt, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('dz_BT', $locale->code());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('༠༡༢༣༤༥༦༧༨༩', $locale->digits('0123456789'));
 		$this->assertSame('རྫོང་ཁ', $locale->endonym());
 		$this->assertSame('lang="dz"', $locale->htmlAttributes());
 		$this->assertSame('dz', $locale->languageTag());
 		$this->assertSame('-༡༢༣', $locale->number(-123));
 		$this->assertSame('༡,༢༣,༤༥,༦༧༨.༠༩', $locale->number(12345678.09));
-		$this->assertsame('unicode_ci', $locale->collation());
+		$this->assertSame('༡,༢༣༤.༥༦ %', $locale->percent(12.3456, 2));
 	}
 }

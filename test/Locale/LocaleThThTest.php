@@ -26,7 +26,8 @@ class LocaleThThTest extends TestCase {
 		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('๐๑๒๓๔๕๖๗๘๙', $locale->digits('0123456789'));
 		$this->assertSame('lang="th"', $locale->htmlAttributes());
-		$this->assertSame('๑๒,๓๔๕,๖๗๘.๐๙', $locale->number(12345678.09));
 		$this->assertSame('-๑๒๓', $locale->number(-123));
+		$this->assertSame('๑๒,๓๔๕,๖๗๘.๐๙', $locale->number(12345678.09));
+		$this->assertSame('๑,๒๓๔.๕๖%', $locale->percent(12.3456, 2));
 	}
 }

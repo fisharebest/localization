@@ -23,11 +23,12 @@ class LocaleEeTgTest extends TestCase {
 		$this->assertEquals(new TerritoryTg, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('ee_TG', $locale->code());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
 		$this->assertSame('lang="ee-TG"', $locale->htmlAttributes());
 		$this->assertSame('ee-TG', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
 		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
-		$this->assertsame('unicode_ci', $locale->collation());
+		$this->assertSame('1,234.56%', $locale->percent(12.3456, 2));
 	}
 }

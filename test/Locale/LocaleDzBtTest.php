@@ -30,5 +30,6 @@ class LocaleDzBtTest extends TestCase {
 		$this->assertSame('dz', $locale->languageTag());
 		$this->assertSame('-༡༢༣', $locale->number(-123));
 		$this->assertSame('༡,༢༣,༤༥,༦༧༨.༠༩', $locale->number(12345678.09));
+		$this->assertSame('༡,༢༣༤.༥༦ %', $locale->percent(12.3456, 2));
 	}
 }
