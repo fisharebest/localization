@@ -1,9 +1,9 @@
 {
 	"name": "fisharebest/localization",
-	"description": "A lightweight implementation of the Unicode Common Locale Data Repository (CLDR).",
+	"description": "A lightweight localization database and translation tools, with data from the CLDR, IANA, ISO, etc.",
 	"type": "library",
 	"keywords": [
-		"unicode", "localization", "locale", "i18n", "l10n"
+		"localization", "locale", "language", "script", "translate", "translation", "i18n", "l10n", "cldr", "gettext"
 	],
 	"homepage": "https://github.com/fisharebest/localization",
 	"license": "GPL-3.0+",

@@ -1,0 +1,18 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8\n"
+
+msgid "the fish"
+msgstr "le poisson"
+
+msgctxt "noun"
+msgid "fish"
+msgstr "poisson"
+
+msgctxt "verb"
+msgid "fish"
+msgstr "pêcher"
+
+msgid "%d fish"
+msgid_plural "%d fishes"
+msgstr[0] "%d poisson"
+msgstr[1] "%d poissons"
