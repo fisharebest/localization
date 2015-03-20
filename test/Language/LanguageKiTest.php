@@ -19,6 +19,7 @@ class LanguageKiTest extends TestCase {
 		$language = new LanguageKi;
 
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRule1, $language->pluralRule());
 		$this->assertSame('ki', $language->code());
 	}
 }
