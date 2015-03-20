@@ -24,11 +24,12 @@ class LocaleTaSgTest extends TestCase {
 		$this->assertEquals(new TerritorySg, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('ta_SG', $locale->code());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('௦௧௨௩௪௫௬௭௮௯', $locale->digits('0123456789'));
 		$this->assertSame('lang="ta-SG"', $locale->htmlAttributes());
 		$this->assertSame('ta-SG', $locale->languageTag());
 		$this->assertSame('-௧௨௩', $locale->number(-123));
 		$this->assertSame('௧௨,௩௪௫,௬௭௮.௦௯', $locale->number(12345678.09));
-		$this->assertsame('unicode_ci', $locale->collation());
+		$this->assertSame('௧,௨௩௪.௫௬%', $locale->percent(12.3456, 2));
 	}
 }

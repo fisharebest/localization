@@ -23,11 +23,12 @@ class LocaleKokInTest extends TestCase {
 		$this->assertEquals(new TerritoryIn, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('kok_IN', $locale->code());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('०१२३४५६७८९', $locale->digits('0123456789'));
 		$this->assertSame('lang="kok"', $locale->htmlAttributes());
 		$this->assertSame('kok', $locale->languageTag());
 		$this->assertSame('-१२३', $locale->number(-123));
 		$this->assertSame('१,२३,४५,६७८.०९', $locale->number(12345678.09));
-		$this->assertsame('unicode_ci', $locale->collation());
+		$this->assertSame('१,२३४.५६%', $locale->percent(12.3456, 2));
 	}
 }

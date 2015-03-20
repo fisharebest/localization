@@ -24,11 +24,12 @@ class LocaleLvTest extends TestCase {
 		$this->assertEquals(new TerritoryLv, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('lv_LV', $locale->code());
+		$this->assertSame('latvian_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
 		$this->assertSame('latviešu', $locale->endonym());
 		$this->assertSame('lang="lv"', $locale->htmlAttributes());
 		$this->assertSame('lv', $locale->languageTag());
 		$this->assertSame('12345 678,09', $locale->number(12345678.09));
-		$this->assertsame('latvian_ci', $locale->collation());
+		$this->assertSame('1234,56%', $locale->percent(12.3456, 2));
 	}
 }

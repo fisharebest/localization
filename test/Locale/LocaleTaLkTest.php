@@ -28,7 +28,8 @@ class LocaleTaLkTest extends TestCase {
 		$this->assertSame('௦௧௨௩௪௫௬௭௮௯', $locale->digits('0123456789'));
 		$this->assertSame('lang="ta-LK"', $locale->htmlAttributes());
 		$this->assertSame('ta-LK', $locale->languageTag());
-		$this->assertSame('௧,௨௩,௪௫,௬௭௮.௦௯', $locale->number(12345678.09));
 		$this->assertSame('-௧௨௩', $locale->number(-123));
+		$this->assertSame('௧,௨௩,௪௫,௬௭௮.௦௯', $locale->number(12345678.09));
+		$this->assertSame('௧,௨௩௪.௫௬%', $locale->percent(12.3456, 2));
 	}
 }

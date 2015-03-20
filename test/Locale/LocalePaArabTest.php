@@ -24,11 +24,12 @@ class LocalePaArabTest extends TestCase {
 		$this->assertEquals(new TerritoryIn, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('pa_IN@arabic', $locale->code());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
 		$this->assertSame('lang="pa-Arab" dir="rtl"', $locale->htmlAttributes());
 		$this->assertSame('pa-Arab', $locale->languageTag());
-		$this->assertSame('‎-‎١٢٣', $locale->number(-123));
 		$this->assertSame('١٬٢٣٬٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
-		$this->assertsame('unicode_ci', $locale->collation());
+		$this->assertSame('‎-‎١٢٣', $locale->number(-123));
+		$this->assertSame('١٬٢٣٤٫٥٦٪', $locale->percent(12.3456, 2));
 	}
 }

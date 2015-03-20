@@ -24,12 +24,13 @@ class LocaleTeTest extends TestCase {
 		$this->assertEquals(new TerritoryIn, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('te_IN', $locale->code());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('౦౧౨౩౪౫౬౭౮౯', $locale->digits('0123456789'));
 		$this->assertSame('తెలుగు', $locale->endonym());
 		$this->assertSame('lang="te"', $locale->htmlAttributes());
 		$this->assertSame('te', $locale->languageTag());
 		$this->assertSame('-౧౨౩', $locale->number(-123));
 		$this->assertSame('౧,౨౩,౪౫,౬౭౮.౦౯', $locale->number(12345678.09));
-		$this->assertsame('unicode_ci', $locale->collation());
+		$this->assertSame('౧,౨౩౪.౫౬%', $locale->percent(12.3456, 2));
 	}
 }

@@ -24,11 +24,12 @@ class LocaleFrMrTest extends TestCase {
 		$this->assertEquals(new TerritoryMr, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('fr_MR', $locale->code());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
 		$this->assertSame('lang="fr-MR"', $locale->htmlAttributes());
 		$this->assertSame('fr-MR', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
 		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
-		$this->assertsame('unicode_ci', $locale->collation());
+		$this->assertSame('1 234,56 %', $locale->percent(12.3456, 2));
 	}
 }

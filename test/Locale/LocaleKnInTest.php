@@ -24,11 +24,12 @@ class LocaleKnInTest extends TestCase {
 		$this->assertEquals(new TerritoryIn, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('kn_IN', $locale->code());
+		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('೦೧೨೩೪೫೬೭೮೯', $locale->digits('0123456789'));
 		$this->assertSame('lang="kn"', $locale->htmlAttributes());
 		$this->assertSame('kn', $locale->languageTag());
 		$this->assertSame('-೧೨೩', $locale->number(-123));
 		$this->assertSame('೧೨,೩೪೫,೬೭೮.೦೯', $locale->number(12345678.09));
-		$this->assertsame('unicode_ci', $locale->collation());
+		$this->assertSame('೧,೨೩೪.೫೬%', $locale->percent(12.3456, 2));
 	}
 }

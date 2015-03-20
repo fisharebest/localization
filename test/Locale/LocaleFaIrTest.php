@@ -24,11 +24,12 @@ class LocaleFaIrTest extends TestCase {
 		$this->assertEquals(new TerritoryIr, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('fa_IR', $locale->code());
+		$this->assertSame('persian_ci', $locale->collation());
 		$this->assertSame('۰۱۲۳۴۵۶۷۸۹', $locale->digits('0123456789'));
 		$this->assertSame('lang="fa" dir="rtl"', $locale->htmlAttributes());
 		$this->assertSame('fa', $locale->languageTag());
-		$this->assertSame('‎−۱۲۳', $locale->number(-123));
 		$this->assertSame('۱۲٬۳۴۵٬۶۷۸٫۰۹', $locale->number(12345678.09));
-		$this->assertsame('persian_ci', $locale->collation());
+		$this->assertSame('‎−۱۲۳', $locale->number(-123));
+		$this->assertSame('۱٬۲۳۴٫۵۶٪', $locale->percent(12.3456, 2));
 	}
 }

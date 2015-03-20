@@ -24,12 +24,13 @@ class LocaleEsMxTest extends TestCase {
 		$this->assertEquals(new TerritoryMx, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('es_MX', $locale->code());
+		$this->assertSame('spanish_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
 		$this->assertSame('español de México', $locale->endonym());
 		$this->assertSame('lang="es-MX"', $locale->htmlAttributes());
 		$this->assertSame('es-MX', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
 		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
-		$this->assertsame('spanish_ci', $locale->collation());
+		$this->assertSame('1,234.56%', $locale->percent(12.3456, 2));
 	}
 }

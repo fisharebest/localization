@@ -30,5 +30,6 @@ class LocaleFaAfTest extends TestCase {
 		$this->assertSame('fa-AF', $locale->languageTag());
 		$this->assertSame('۱۲٬۳۴۵٬۶۷۸٫۰۹', $locale->number(12345678.09));
 		$this->assertSame('‎−۱۲۳', $locale->number(-123));
+		$this->assertSame('۱٬۲۳۴٫۵۶٪', $locale->percent(12.3456, 2));
 	}
 }

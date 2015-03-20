@@ -24,12 +24,13 @@ class LocaleDaTest extends TestCase {
 		$this->assertEquals(new TerritoryDk, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('da_DK', $locale->code());
+		$this->assertSame('danish_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
 		$this->assertSame('dansk', $locale->endonym());
 		$this->assertSame('lang="da"', $locale->htmlAttributes());
 		$this->assertSame('da', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
 		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
-		$this->assertsame('danish_ci', $locale->collation());
+		$this->assertSame('1.234,56 %', $locale->percent(12.3456, 2));
 	}
 }

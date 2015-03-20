@@ -24,12 +24,13 @@ class LocalePlTest extends TestCase {
 		$this->assertEquals(new TerritoryPl, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('pl_PL', $locale->code());
+		$this->assertSame('polish_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
 		$this->assertSame('polski', $locale->endonym());
 		$this->assertSame('lang="pl"', $locale->htmlAttributes());
 		$this->assertSame('pl', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
 		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
-		$this->assertsame('polish_ci', $locale->collation());
+		$this->assertSame('1234,56%', $locale->percent(12.3456, 2));
 	}
 }
