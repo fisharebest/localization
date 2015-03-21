@@ -19,6 +19,7 @@ class LocaleYi001Test extends TestCase {
 		$locale = new LocaleYi001;
 
 		$this->assertEquals(new LanguageYi, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptHebr, $locale->script());
 		$this->assertEquals(new Territory001, $locale->territory());
 		$this->assertNull($locale->variant());

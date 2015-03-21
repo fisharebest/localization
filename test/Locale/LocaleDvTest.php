@@ -19,6 +19,7 @@ class LocaleDvTest extends TestCase {
 		$locale = new LocaleDv;
 
 		$this->assertEquals(new LanguageDv, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptThaa, $locale->script());
 		$this->assertEquals(new TerritoryMv, $locale->territory());
 		$this->assertNull($locale->variant());
