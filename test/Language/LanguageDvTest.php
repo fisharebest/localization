@@ -19,6 +19,7 @@ class LanguageDvTest extends TestCase {
 		$language = new LanguageDv;
 
 		$this->assertEquals(new ScriptThaa, $language->defaultScript());
+		$this->assertEquals(new PluralRule1, $language->pluralRule());
 		$this->assertSame('dv', $language->code());
 	}
 }
