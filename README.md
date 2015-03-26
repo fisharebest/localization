@@ -59,6 +59,8 @@ Create a locale and use it to localize data in your application.
 // Two ways to create locales
 $locale = new LocaleEnGb;
 $locale = Locale::create('en-GB');
+$locale = Locale::create('en-gb');
+$locale = Locale::create('en_GB');
 
 // Markup for HTML elements containing this locale
 $locale->htmlAttributes();      // lang="ar" dir="rtl"
@@ -80,7 +82,7 @@ $locale = new LocaleGr;         // Gujarati
 $locale->digits('2014');        // "૨૦૧૪"
 $locale = new LocaleItCh;       // Swiss Italian
 $locale->number('12345678.9');  // "12'345'678.9"
-$locale->percent(0.1234, 1);    // "12.3%"
+$locale->percent(0.123);        // "12.3%"
 
 // To sort data properly in MySQL, you need to specify a collation sequence.
 // See http://dev.mysql.com/doc/refman/5.7/en/charset-unicode-sets.html

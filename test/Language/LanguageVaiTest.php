@@ -1,5 +1,6 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Language;
 
+use Fisharebest\Localization\Script\ScriptVaii;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**

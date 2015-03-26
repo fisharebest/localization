@@ -1,5 +1,7 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Language;
 
+use Fisharebest\Localization\PluralRule\PluralRuleZeroOneOther;
+use Fisharebest\Localization\Script\ScriptLatn;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -19,6 +21,7 @@ class LanguageLagTest extends TestCase {
 		$language = new LanguageLag;
 
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRuleZeroOneOther, $language->pluralRule());
 		$this->assertSame('lag', $language->code());
 	}
 }

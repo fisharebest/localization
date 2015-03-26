@@ -1,31 +1,19 @@
 <?php namespace Fisharebest\Localization;
 
+use Fisharebest\Localization\Locale\LocaleEnAu;
+use Fisharebest\Localization\Locale\LocaleEnGb;
+use Fisharebest\Localization\Locale\LocaleEnUs;
+use Fisharebest\Localization\Locale\LocaleInterface;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the Locale class
+ * Unit tests for the AbstractLocale class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
  * @copyright (c) 2015 Greg Roach
  * @license   GPLv3+
  */
 class LocaleTest extends TestCase {
-	/**
-	 * All known locales
-	 *
-	 * @return Locale[]
-	 */
-	private function allLocales() {
-		$locales = glob(__DIR__ . '/../../src/Locale/Locale??*.php');
-
-		array_walk($locales, function (&$x) {
-			$class = __NAMESPACE__ . '\\' . basename($x, '.php');
-			$x = new $class;
-		});
-
-		return $locales;
-	}
-
 	/**
 	 * Test the comparator
 	 *
@@ -54,9 +42,13 @@ class LocaleTest extends TestCase {
 	 * @return void
 	 */
 	public function testCompareAll() {
-		$array = $this->allLocales();
+		$array = array_map(function($x) {
+			$class = __NAMESPACE__ . '\Locale\\' . basename($x, '.php');
+			return new $class;
+		}, preg_grep('/Abstract|Interface/', glob(__DIR__ . '/../src/Locale/Locale??*.php'), PREG_GREP_INVERT));
 
 		usort($array, __NAMESPACE__ . '\Locale::compare');
+		$this->assertNotEmpty($array);
 		$this->assertTrue(is_array($array));
 	}
 

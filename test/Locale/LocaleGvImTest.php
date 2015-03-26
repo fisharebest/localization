@@ -1,5 +1,9 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageGv;
+use Fisharebest\Localization\PluralRule\PluralRuleManx;
+use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryIm;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -19,6 +23,7 @@ class LocaleGvImTest extends TestCase {
 		$locale = new LocaleGvIm;
 
 		$this->assertEquals(new LanguageGv, $locale->language());
+		$this->assertEquals(new PluralRuleManx, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryIm, $locale->territory());
 		$this->assertNull($locale->variant());

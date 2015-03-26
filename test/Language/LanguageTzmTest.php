@@ -1,5 +1,7 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Language;
 
+use Fisharebest\Localization\PluralRule\PluralRuleCentralAtlasTamazight;
+use Fisharebest\Localization\Script\ScriptLatn;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -19,6 +21,7 @@ class LanguageTzmTest extends TestCase {
 		$language = new LanguageTzm;
 
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRuleCentralAtlasTamazight(), $language->pluralRule());
 		$this->assertSame('tzm', $language->code());
 	}
 }

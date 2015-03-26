@@ -1,5 +1,7 @@
 <?php namespace Fisharebest\Localization;
 
+use Fisharebest\Localization\Language\LanguageInterface;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -25,10 +27,10 @@ class IanaSubtagRegistryTest extends TestCase {
 
 		foreach ($iana as $data) {
 			preg_match('/Subtag: (.+)/', $data, $match);
-			$class  = __NAMESPACE__ . '\Language' . ucfirst(strtolower($match[1]));
+			$class  = __NAMESPACE__ . '\Language\Language' . ucfirst(strtolower($match[1]));
 			// The registry contains 8000 languages, and we aren't interested in most of them.
 			if (class_exists($class)) {
-				/** @var Language $language */
+				/** @var LanguageInterface $language */
 				$language = new $class;
 
 				$this->assertSame($match[1], $language->code());
@@ -51,8 +53,8 @@ class IanaSubtagRegistryTest extends TestCase {
 
 		foreach ($iana as $data) {
 			preg_match('/Subtag: (.+)/', $data, $match);
-			$class  = __NAMESPACE__ . '\Script' . ucfirst(strtolower($match[1]));
-			/** @var Script $script */
+			$class  = __NAMESPACE__ . '\Script\Script' . ucfirst(strtolower($match[1]));
+			/** @var ScriptInterface $script */
 			$script = new $class;
 
 			$this->assertSame($match[1], $script->code());
@@ -74,8 +76,8 @@ class IanaSubtagRegistryTest extends TestCase {
 
 		foreach ($iana as $data) {
 			preg_match('/Subtag: (.+)/', $data, $match);
-			$class  = __NAMESPACE__ . '\Territory' . ucfirst(strtolower($match[1]));
-			/** @var Territory $territory */
+			$class  = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($match[1]));
+			/** @var TerritoryInterface $territory */
 			$territory = new $class;
 
 			$this->assertSame($match[1], $territory->code());

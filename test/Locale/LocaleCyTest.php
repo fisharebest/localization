@@ -1,5 +1,9 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageCy;
+use Fisharebest\Localization\PluralRule\PluralRuleWelsh;
+use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryGb;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -19,6 +23,7 @@ class LocaleCyTest extends TestCase {
 		$locale = new LocaleCy;
 
 		$this->assertEquals(new LanguageCy, $locale->language());
+		$this->assertEquals(new PluralRuleWelsh, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryGb, $locale->territory());
 		$this->assertNull($locale->variant());

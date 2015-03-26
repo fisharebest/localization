@@ -1,5 +1,9 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageShi;
+use Fisharebest\Localization\PluralRule\PluralRuleTachelhit;
+use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryMa;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -19,6 +23,7 @@ class LocaleShiLatnTest extends TestCase {
 		$locale = new LocaleShiLatn;
 
 		$this->assertEquals(new LanguageShi, $locale->language());
+		$this->assertEquals(new PluralRuleTachelhit, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryMa, $locale->territory());
 		$this->assertNull($locale->variant());

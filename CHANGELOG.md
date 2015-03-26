@@ -1,6 +1,11 @@
 CHANGE LOG
 ==========
 
+## 1.4.0 (2015-03-27)
+ - Fix PSR4 autoloading
+ - Add PHP interfaces for scripts, languages, locales, etc
+ - Add several missing plural rules
+
 ## 1.3.2 (2015-03-23)
  - Gettext detection fails on 32 bit builds
 

@@ -1,5 +1,9 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageTzm;
+use Fisharebest\Localization\PluralRule\PluralRuleCentralAtlasTamazight;
+use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryMa;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -19,6 +23,7 @@ class LocaleTzmLatnMaTest extends TestCase {
 		$locale = new LocaleTzmLatnMa;
 
 		$this->assertEquals(new LanguageTzm, $locale->language());
+		$this->assertEquals(new PluralRuleCentralAtlasTamazight(), $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryMa, $locale->territory());
 		$this->assertNull($locale->variant());
