@@ -1,5 +1,9 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageKsh;
+use Fisharebest\Localization\PluralRule\PluralRuleZeroOneOther;
+use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryDe;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -19,6 +23,7 @@ class LocaleKshTest extends TestCase {
 		$locale = new LocaleKsh;
 
 		$this->assertEquals(new LanguageKsh, $locale->language());
+		$this->assertEquals(new PluralRuleZeroOneOther, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryDe, $locale->territory());
 		$this->assertNull($locale->variant());

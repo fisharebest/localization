@@ -1,5 +1,9 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageLag;
+use Fisharebest\Localization\PluralRule\PluralRuleZeroOneOther;
+use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryTz;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -19,6 +23,7 @@ class LocaleLagTzTest extends TestCase {
 		$locale = new LocaleLagTz;
 
 		$this->assertEquals(new LanguageLag, $locale->language());
+		$this->assertEquals(new PluralRuleZeroOneOther, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryTz, $locale->territory());
 		$this->assertNull($locale->variant());

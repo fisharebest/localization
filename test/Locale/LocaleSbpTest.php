@@ -1,5 +1,8 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageSbp;
+use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryTz;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**

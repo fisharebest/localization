@@ -1,5 +1,7 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Language;
 
+use Fisharebest\Localization\PluralRule\PluralRuleOneTwoOther;
+use Fisharebest\Localization\Script\ScriptLatn;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -19,6 +21,7 @@ class LanguageNaqTest extends TestCase {
 		$language = new LanguageNaq;
 
 		$this->assertEquals(new ScriptLatn, $language->defaultScript());
+		$this->assertEquals(new PluralRuleOneTwoOther, $language->pluralRule());
 		$this->assertSame('naq', $language->code());
 	}
 }

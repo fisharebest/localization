@@ -26,14 +26,6 @@
 		"psr-4": {
 			"Fisharebest\\Localization\\": "src/"
 		}
-	},
-	"scripts": {
-		"post-install-cmd": [
-			"composer dump-autoload --optimize"
-		],
-		"post-update-cmd": [
-			"composer dump-autoload --optimize"
-		]
 	}
 }
 

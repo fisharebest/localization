@@ -1,5 +1,9 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageOs;
+use Fisharebest\Localization\PluralRule\PluralRule1;
+use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryGe;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -19,6 +23,7 @@ class LocaleOsGeTest extends TestCase {
 		$locale = new LocaleOsGe;
 
 		$this->assertEquals(new LanguageOs, $locale->language());
+		$this->assertEquals(new PluralRule1, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryGe, $locale->territory());
 		$this->assertNull($locale->variant());

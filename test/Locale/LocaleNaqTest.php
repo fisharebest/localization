@@ -1,5 +1,9 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageNaq;
+use Fisharebest\Localization\PluralRule\PluralRuleOneTwoOther;
+use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryNa;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -19,6 +23,7 @@ class LocaleNaqTest extends TestCase {
 		$locale = new LocaleNaq;
 
 		$this->assertEquals(new LanguageNaq, $locale->language());
+		$this->assertEquals(new PluralRuleOneTwoOther, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryNa, $locale->territory());
 		$this->assertNull($locale->variant());

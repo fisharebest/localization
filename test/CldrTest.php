@@ -1,5 +1,8 @@
 <?php namespace Fisharebest\Localization;
 
+use Fisharebest\Localization\Locale\LocaleInterface;
+use Fisharebest\Localization\Locale\LocaleSsy;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -32,27 +35,27 @@ class CldrTest extends TestCase {
 		$cldr = json_decode($cldr);
 
 		foreach ($cldr->supplemental->weekData->firstDay as $code => $day) {
-			$class = __NAMESPACE__ . '\Territory' . ucfirst(strtolower($code));
+			$class = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
 
-			/** @var Territory $territory */
+			/** @var TerritoryInterface $territory */
 			$territory = new $class;
 
 			$this->assertSame($days[$day], $territory->firstDay());
 		}
 
 		foreach ($cldr->supplemental->weekData->weekendStart as $code => $day) {
-			$class = __NAMESPACE__ . '\Territory' . ucfirst(strtolower($code));
+			$class = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
 
-			/** @var Territory $territory */
+			/** @var TerritoryInterface $territory */
 			$territory = new $class;
 
 			$this->assertSame($days[$day], $territory->weekendStart());
 		}
 
 		foreach ($cldr->supplemental->weekData->weekendEnd as $code => $day) {
-			$class = __NAMESPACE__ . '\Territory' . ucfirst(strtolower($code));
+			$class = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
 
-			/** @var Territory $territory */
+			/** @var TerritoryInterface $territory */
 			$territory = new $class;
 
 			$this->assertSame($days[$day], $territory->weekendEnd());
@@ -71,18 +74,18 @@ class CldrTest extends TestCase {
 		$cldr = json_decode($cldr);
 
 		foreach ($cldr->supplemental->measurementData->measurementSystem as $code => $data) {
-			$class = __NAMESPACE__ . '\Territory' . ucfirst(strtolower($code));
+			$class = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
 
-			/** @var Territory $territory */
+			/** @var TerritoryInterface $territory */
 			$territory = new $class;
 
 			$this->assertSame($data, $territory->measurementSystem());
 		}
 
 		foreach ($cldr->supplemental->measurementData->paperSize as $code => $data) {
-			$class = __NAMESPACE__ . '\Territory' . ucfirst(strtolower($code));
+			$class = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
 
-			/** @var Territory $territory */
+			/** @var TerritoryInterface $territory */
 			$territory = new $class;
 
 			$this->assertSame($data, $territory->paperSize());
@@ -257,6 +260,8 @@ if ($rule !== $locale->pluralRule()->plural($example)) {var_dump("!$code!$exampl
 	/**
 	 * Extract the JSON data from a JSON file
 	 *
+	 * @param string $file
+	 *
 	 * @return \stdClass
 	 */
 	private function cldrJson($file) {
@@ -270,13 +275,9 @@ if ($rule !== $locale->pluralRule()->plural($example)) {var_dump("!$code!$exampl
 	 *
 	 * @param string $file
 	 *
-	 * @return Locale
+	 * @return LocaleInterface
 	 */
 	private function cldrLocale($file) {
-		$parts = explode('-', basename(dirname($file)));
-		array_walk($parts, function(&$x) { $x = ucfirst(strtolower($x)); });
-		$class = __NAMESPACE__ . '\Locale' . implode('', $parts);
-
-		return new $class;
+		return Locale::create(basename(dirname($file)));
 	}
 }

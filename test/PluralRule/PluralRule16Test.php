@@ -1,4 +1,4 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\PluralRule;
 
 use PHPUnit_Framework_TestCase as TestCase;
 

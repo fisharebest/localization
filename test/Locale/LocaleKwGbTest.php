@@ -1,5 +1,9 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageKw;
+use Fisharebest\Localization\PluralRule\PluralRuleCornish;
+use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryGb;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**

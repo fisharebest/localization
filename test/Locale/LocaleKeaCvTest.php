@@ -1,5 +1,9 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageKea;
+use Fisharebest\Localization\PluralRule\PluralRule0;
+use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryCv;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -19,6 +23,7 @@ class LocaleKeaCvTest extends TestCase {
 		$locale = new LocaleKeaCv;
 
 		$this->assertEquals(new LanguageKea, $locale->language());
+		$this->assertEquals(new PluralRule0, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryCv, $locale->territory());
 		$this->assertNull($locale->variant());

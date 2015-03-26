@@ -1,5 +1,7 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Language;
 
+use Fisharebest\Localization\PluralRule\PluralRule12;
+use Fisharebest\Localization\Script\ScriptArab;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**

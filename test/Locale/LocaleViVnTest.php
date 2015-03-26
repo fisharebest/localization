@@ -1,5 +1,9 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageVi;
+use Fisharebest\Localization\PluralRule\PluralRule0;
+use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryVn;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**

@@ -1,5 +1,9 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageSmn;
+use Fisharebest\Localization\PluralRule\PluralRuleOneTwoOther;
+use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryFi;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -19,6 +23,7 @@ class LocaleSmnFiTest extends TestCase {
 		$locale = new LocaleSmnFi;
 
 		$this->assertEquals(new LanguageSmn, $locale->language());
+		$this->assertEquals(new PluralRuleOneTwoOther, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
 		$this->assertEquals(new TerritoryFi, $locale->territory());
 		$this->assertNull($locale->variant());

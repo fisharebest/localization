@@ -1,5 +1,7 @@
-<?php namespace Fisharebest\Localization;
+<?php namespace Fisharebest\Localization\Language;
 
+use Fisharebest\Localization\PluralRule\PluralRuleTachelhit;
+use Fisharebest\Localization\Script\ScriptTfng;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -19,6 +21,7 @@ class LanguageShiTest extends TestCase {
 		$language = new LanguageShi;
 
 		$this->assertEquals(new ScriptTfng, $language->defaultScript());
+		$this->assertEquals(new PluralRuleTachelhit, $language->pluralRule());
 		$this->assertSame('shi', $language->code());
 	}
 }
