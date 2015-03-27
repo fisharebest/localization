@@ -76,4 +76,75 @@ class LocaleTest extends TestCase {
 	public function testCreateInvalidLocale() {
 		Locale::create('xxx');
 	}
+
+	/**
+	 * Test language negotiation
+	 *
+	 * @return void
+	 */
+	public function testHttpAcceptLanguage() {
+		$available = array(
+			Locale::create('de'),
+			Locale::create('en'),
+			Locale::create('fr'),
+			Locale::create('it'),
+		);
+		$server = array('HTTP_ACCEPT_LANGUAGE' => 'it;q=0.8,de,fr,ar');
+		$default = Locale::create('en-US');
+		$locale = Locale::httpAcceptLanguage($server, $available, $default);
+
+		$this->assertEquals(Locale::create('de'), $locale);
+	}
+
+	/**
+	 * Test language negotiation
+	 *
+	 * @return void
+	 */
+	public function testHttpAcceptLanguageNoneMatching() {
+		$available = array(
+			Locale::create('de'),
+			Locale::create('en'),
+			Locale::create('fr'),
+			Locale::create('it'),
+		);
+		$server = array('HTTP_ACCEPT_LANGUAGE' => 'he;q=0.8,pl,ru,ar');
+		$default = Locale::create('en-US');
+		$locale = Locale::httpAcceptLanguage($server, $available, $default);
+
+		$this->assertEquals($default, $locale);
+	}
+
+	/**
+	 * Test language negotiation
+	 *
+	 * @return void
+	 */
+	public function testHttpAcceptLanguageDowngrade() {
+		$available = array(
+			Locale::create('de'),
+			Locale::create('en'),
+			Locale::create('fr'),
+			Locale::create('it'),
+		);
+		$server = array('HTTP_ACCEPT_LANGUAGE' => 'de-DE');
+		$default = Locale::create('en-US');
+		$locale = Locale::httpAcceptLanguage($server, $available, $default);
+
+		$this->assertEquals(Locale::create('de'), $locale);
+	}
+
+	/**
+	 * Test language negotiation
+	 *
+	 * @return void
+	 */
+	public function testHttpAcceptLanguageNoneSelected() {
+		$available = array();
+		$server = array('HTTP_ACCEPT_LANGUAGE' => 'he;q=0.8,pl,ru,ar');
+		$default = Locale::create('en-US');
+		$locale = Locale::httpAcceptLanguage($server, $available, $default);
+
+		$this->assertEquals($default, $locale);
+	}
 }
