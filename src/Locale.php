@@ -42,4 +42,45 @@ class Locale {
 			throw new \DomainException($code);
 		}
 	}
+
+	/**
+	 * Create a locale from a language tag (or locale code).
+	 *
+	 * @param string[]          $server    The $_SERVER array
+	 * @param LocaleInterface[] $available All locales supported by the application
+	 * @param LocaleInterface   $default   Locale to show in no matching locales
+	 *
+	 * @return LocaleInterface
+	 */
+	public static function httpAcceptLanguage(array $server, array $available, LocaleInterface $default) {
+		if (!empty($server['HTTP_ACCEPT_LANGUAGE'])) {
+			$http_accept_language = strtolower(str_replace(' ', '', $server['HTTP_ACCEPT_LANGUAGE']));
+			preg_match_all('/(?:([a-z][a-z0-9_-]+)(?:;q=([0-9.]+))?)/', $http_accept_language, $match);
+			$preferences = array_map(function($x) { return $x === '' ? 1.0 : (float) $x; }, array_combine($match[1], $match[2]));
+
+			// Need a stable sort, as the original order is significant
+			$preferences = array_map(function($x) { static $n = 0; return array($x, --$n); }, $preferences);
+			arsort($preferences);
+			$preferences = array_map(function($x) { return $x[0]; }, $preferences);
+
+			// If "de-DE" requested, but not "de", then add it at a lower priority
+			foreach ($preferences as $code => $priority) {
+				if (preg_match('/^([a-z]+)[^a-z]/', $code, $match) && !isset($preferences[$match[1]])) {
+					$preferences[$match[1]] = $priority * 0.5;
+				}
+			}
+
+			foreach (array_keys($preferences) as $code) {
+				try {
+					$locale = Locale::create($code);
+					if (in_array($locale, $available)) {
+						return $locale;
+					}
+				} catch (\DomainException $ex) {
+				}
+			}
+		}
+
+		return $default;
+	}
 }
