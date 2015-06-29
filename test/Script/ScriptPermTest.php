@@ -21,6 +21,6 @@ class ScriptPermTest extends TestCase {
 		$this->assertSame('Perm', $script->code());
 		$this->assertSame('227', $script->number());
 		$this->assertSame('ltr', $script->direction());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Old_Permic', $script->unicodeName());
 	}
 }

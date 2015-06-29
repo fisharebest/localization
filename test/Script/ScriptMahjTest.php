@@ -21,6 +21,6 @@ class ScriptMahjTest extends TestCase {
 		$this->assertSame('Mahj', $script->code());
 		$this->assertSame('314', $script->number());
 		$this->assertSame('ltr', $script->direction());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Mahajani', $script->unicodeName());
 	}
 }

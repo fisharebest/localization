@@ -1,6 +1,6 @@
 <?php namespace Fisharebest\Localization\Language;
 
-use Fisharebest\Localization\PluralRule\PluralRule1;
+use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Script\ScriptBeng;
 use PHPUnit_Framework_TestCase as TestCase;
 
@@ -21,7 +21,7 @@ class LanguageAsTest extends TestCase {
 		$language = new LanguageAs;
 
 		$this->assertEquals(new ScriptBeng, $language->defaultScript());
-		$this->assertEquals(new PluralRule1, $language->pluralRule());
+		$this->assertEquals(new PluralRule2, $language->pluralRule());
 		$this->assertSame('as', $language->code());
 	}
 }

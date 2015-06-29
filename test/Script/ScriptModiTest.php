@@ -19,8 +19,8 @@ class ScriptModiTest extends TestCase {
 		$script = new ScriptModi;
 
 		$this->assertSame('Modi', $script->code());
-		$this->assertSame('323', $script->number());
+		$this->assertSame('324', $script->number());
 		$this->assertSame('ltr', $script->direction());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Modi', $script->unicodeName());
 	}
 }

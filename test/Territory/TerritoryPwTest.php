@@ -22,7 +22,7 @@ class TerritoryPwTest extends TestCase {
 		$this->assertSame(1, $territory->firstDay());
 		$this->assertSame(6, $territory->weekendStart());
 		$this->assertSame(0, $territory->weekendEnd());
-		$this->assertSame('metric', $territory->measurementSystem());
+		$this->assertSame('US', $territory->measurementSystem());
 		$this->assertSame('A4', $territory->paperSize());
 	}
 }

@@ -21,6 +21,6 @@ class ScriptSindTest extends TestCase {
 		$this->assertSame('Sind', $script->code());
 		$this->assertSame('318', $script->number());
 		$this->assertSame('ltr', $script->direction());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Khudawadi', $script->unicodeName());
 	}
 }

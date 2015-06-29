@@ -21,6 +21,6 @@ class ScriptPalmTest extends TestCase {
 		$this->assertSame('Palm', $script->code());
 		$this->assertSame('126', $script->number());
 		$this->assertSame('rtl', $script->direction());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Palmyrene', $script->unicodeName());
 	}
 }

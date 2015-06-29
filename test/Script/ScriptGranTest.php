@@ -21,6 +21,6 @@ class ScriptGranTest extends TestCase {
 		$this->assertSame('Gran', $script->code());
 		$this->assertSame('343', $script->number());
 		$this->assertSame('ltr', $script->direction());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Grantha', $script->unicodeName());
 	}
 }

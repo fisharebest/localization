@@ -21,6 +21,6 @@ class ScriptBassTest extends TestCase {
 		$this->assertSame('Bass', $script->code());
 		$this->assertSame('259', $script->number());
 		$this->assertSame('ltr', $script->direction());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Bassa_Vah', $script->unicodeName());
 	}
 }

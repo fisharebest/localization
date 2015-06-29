@@ -21,6 +21,6 @@ class ScriptAghbTest extends TestCase {
 		$this->assertSame('Aghb', $script->code());
 		$this->assertSame('239', $script->number());
 		$this->assertSame('ltr', $script->direction());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Caucasian_Albanian', $script->unicodeName());
 	}
 }

@@ -1,0 +1,13 @@
+{
+  "name": "cldr-core",
+  "version": "27.0.3",
+  "main": [
+    "availableLocales.json",
+    "defaultContent.json",
+    "supplemental/*.json"
+  ],
+  "ignore": [
+    ".gitattributes",
+    "README.md"
+  ]
+}

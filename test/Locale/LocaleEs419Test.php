@@ -30,7 +30,7 @@ class LocaleEs419Test extends TestCase {
 		$this->assertSame('es_419', $locale->code());
 		$this->assertSame('spanish_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('español de América', $locale->endonym());
+		$this->assertSame('español latinoamericano', $locale->endonym());
 		$this->assertSame('lang="es-419"', $locale->htmlAttributes());
 		$this->assertSame('es-419', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));

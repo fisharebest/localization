@@ -19,7 +19,7 @@ class Iso15924Test extends TestCase {
 	 * @return void
 	 */
 	public function testIso15924() {
-		$iso15924 = file(__DIR__ . '/data/iso15924-utf8-20131012.txt', FILE_IGNORE_NEW_LINES);
+		$iso15924 = file(__DIR__ . '/data/iso15924-utf8-20141115.txt', FILE_IGNORE_NEW_LINES);
 		$iso15924 = preg_grep('/^[A-Z][a-z]{3};/', $iso15924);
 		$iso15924 = preg_grep('/Reserved for private use/', $iso15924, PREG_GREP_INVERT);
 

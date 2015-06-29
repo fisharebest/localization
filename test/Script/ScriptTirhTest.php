@@ -21,6 +21,6 @@ class ScriptTirhTest extends TestCase {
 		$this->assertSame('Tirh', $script->code());
 		$this->assertSame('326', $script->number());
 		$this->assertSame('ltr', $script->direction());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Tirhuta', $script->unicodeName());
 	}
 }
