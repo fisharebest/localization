@@ -21,6 +21,6 @@ class ScriptLinaTest extends TestCase {
 		$this->assertSame('Lina', $script->code());
 		$this->assertSame('400', $script->number());
 		$this->assertSame('ltr', $script->direction());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Linear_A', $script->unicodeName());
 	}
 }

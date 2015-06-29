@@ -21,6 +21,6 @@ class ScriptDuplTest extends TestCase {
 		$this->assertSame('Dupl', $script->code());
 		$this->assertSame('755', $script->number());
 		$this->assertSame('ltr', $script->direction());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Duployan', $script->unicodeName());
 	}
 }

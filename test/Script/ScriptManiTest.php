@@ -21,6 +21,6 @@ class ScriptManiTest extends TestCase {
 		$this->assertSame('Mani', $script->code());
 		$this->assertSame('139', $script->number());
 		$this->assertSame('rtl', $script->direction());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Manichaean', $script->unicodeName());
 	}
 }

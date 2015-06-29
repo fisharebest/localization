@@ -21,6 +21,6 @@ class ScriptNarbTest extends TestCase {
 		$this->assertSame('Narb', $script->code());
 		$this->assertSame('106', $script->number());
 		$this->assertSame('rtl', $script->direction());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Old_North_Arabian', $script->unicodeName());
 	}
 }

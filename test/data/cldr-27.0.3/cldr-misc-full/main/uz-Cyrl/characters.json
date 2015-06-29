@@ -1,0 +1,31 @@
+{
+  "main": {
+    "uz-Cyrl": {
+      "identity": {
+        "version": {
+          "_cldrVersion": "27.0.1",
+          "_number": "$Revision: 11042 $"
+        },
+        "generation": {
+          "_date": "$Date: 2014-10-31 12:11:19 -0500 (Fri, 31 Oct 2014) $"
+        },
+        "language": "uz",
+        "script": "Cyrl"
+      },
+      "characters": {
+        "exemplarCharacters": "[а б в г ғ д е ё ж з и й к қ л м н о п р с т у ў ф х ҳ ч ш ъ э ю я]",
+        "auxiliary": "[ц щ ы ь]",
+        "punctuation": "[\\- , ; \\: ! ? . ( ) \\[ \\] \\{ \\}]",
+        "ellipsis": {
+          "initial": "…{0}",
+          "medial": "{0}…{1}",
+          "final": "{0}…",
+          "word-initial": "… {0}",
+          "word-medial": "{0} … {1}",
+          "word-final": "{0} …"
+        },
+        "moreInformation": "?"
+      }
+    }
+  }
+}

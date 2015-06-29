@@ -30,7 +30,7 @@ class LocaleHiTest extends TestCase {
 		$this->assertSame('hi_IN', $locale->code());
 		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('०१२३४५६७८९', $locale->digits('0123456789'));
-		$this->assertSame('हिंदी', $locale->endonym());
+		$this->assertSame('हिन्दी', $locale->endonym());
 		$this->assertSame('lang="hi"', $locale->htmlAttributes());
 		$this->assertSame('hi', $locale->languageTag());
 		$this->assertSame('-१२३', $locale->number(-123));

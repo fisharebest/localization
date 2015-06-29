@@ -21,6 +21,6 @@ class ScriptMrooTest extends TestCase {
 		$this->assertSame('Mroo', $script->code());
 		$this->assertSame('199', $script->number());
 		$this->assertSame('rtl', $script->direction());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Mro', $script->unicodeName());
 	}
 }

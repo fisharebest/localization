@@ -1,7 +1,7 @@
 <?php namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageAs;
-use Fisharebest\Localization\PluralRule\PluralRule1;
+use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Script\ScriptBeng;
 use Fisharebest\Localization\Territory\TerritoryIn;
 use PHPUnit_Framework_TestCase as TestCase;
@@ -23,7 +23,7 @@ class LocaleAsInTest extends TestCase {
 		$locale = new LocaleAsIn;
 
 		$this->assertEquals(new LanguageAs, $locale->language());
-		$this->assertEquals(new PluralRule1, $locale->pluralRule());
+		$this->assertEquals(new PluralRule2, $locale->pluralRule());
 		$this->assertEquals(new ScriptBeng, $locale->script());
 		$this->assertEquals(new TerritoryIn, $locale->territory());
 		$this->assertNull($locale->variant());
