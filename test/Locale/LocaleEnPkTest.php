@@ -34,6 +34,6 @@ class LocaleEnPkTest extends TestCase {
 		$this->assertSame('en-PK', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
 		$this->assertSame('1,23,45,678.09', $locale->number(12345678.09));
-		$this->assertSame('1,234.56%', $locale->percent(12.3456, 2));
+		$this->assertSame('1,234.56%', $locale->percent(12.3456));
 	}
 }

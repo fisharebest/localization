@@ -35,6 +35,6 @@ class LocaleOrTest extends TestCase {
 		$this->assertSame('or', $locale->languageTag());
 		$this->assertSame('-୧୨୩', $locale->number(-123));
 		$this->assertSame('୧,୨୩,୪୫,୬୭୮.୦୯', $locale->number(12345678.09));
-		$this->assertSame('୧,୨୩୪.୫୬%', $locale->percent(12.3456, 2));
+		$this->assertSame('୧,୨୩୪.୫୬%', $locale->percent(12.3456));
 	}
 }

@@ -21,6 +21,6 @@ class ScriptHluwTest extends TestCase {
 		$this->assertSame('Hluw', $script->code());
 		$this->assertSame('ltr', $script->direction());
 		$this->assertSame(array(), $script->numerals());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Anatolian_Hieroglyphs', $script->unicodeName());
 	}
 }

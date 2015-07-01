@@ -35,6 +35,6 @@ class LocaleKmTest extends TestCase {
 		$this->assertSame('km', $locale->languageTag());
 		$this->assertSame('-១២៣', $locale->number(-123));
 		$this->assertSame('១២.៣៤៥.៦៧៨,០៩', $locale->number(12345678.09));
-		$this->assertSame('១.២៣៤,៥៦%', $locale->percent(12.3456, 2));
+		$this->assertSame('១.២៣៤,៥៦%', $locale->percent(12.3456));
 	}
 }

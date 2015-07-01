@@ -22,6 +22,6 @@ class ScriptSgnwTest extends TestCase {
 		$this->assertSame('ltr', $script->direction());
 		$this->assertSame('095', $script->number());
 		$this->assertSame(array(), $script->numerals());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('SignWriting', $script->unicodeName());
 	}
 }

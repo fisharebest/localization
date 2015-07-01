@@ -33,6 +33,6 @@ class LocaleUgTest extends TestCase {
 		$this->assertSame('lang="ug" dir="rtl"', $locale->htmlAttributes());
 		$this->assertSame('-١٢٣', $locale->number(-123));
 		$this->assertSame('١٢,٣٤٥,٦٧٨.٠٩', $locale->number(12345678.09));
-		$this->assertSame('١,٢٣٤.٥٦%', $locale->percent(12.3456, 2));
+		$this->assertSame('١,٢٣٤.٥٦%', $locale->percent(12.3456));
 	}
 }

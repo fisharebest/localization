@@ -34,6 +34,6 @@ class LocaleArSdTest extends TestCase {
 		$this->assertSame('ar-SD', $locale->languageTag());
 		$this->assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
 		$this->assertSame('‏-١٢٣', $locale->number(-123));
-		$this->assertSame('١٬٢٣٤٫٥٦٪', $locale->percent(12.3456, 2));
+		$this->assertSame('١٬٢٣٤٫٥٦٪', $locale->percent(12.3456));
 	}
 }

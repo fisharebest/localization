@@ -32,6 +32,6 @@ class LocaleUrPkTest extends TestCase {
 		$this->assertSame('lang="ur" dir="rtl"', $locale->htmlAttributes());
 		$this->assertSame('١,٢٣,٤٥,٦٧٨.٠٩', $locale->number(12345678.09));
 		$this->assertSame('‎-‎١٢٣', $locale->number(-123));
-		$this->assertSame('١,٢٣٤.٥٦%', $locale->percent(12.3456, 2));
+		$this->assertSame('١,٢٣٤.٥٦%', $locale->percent(12.3456));
 	}
 }

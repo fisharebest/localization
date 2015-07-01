@@ -31,6 +31,6 @@ class LocaleVaiTest extends TestCase {
 		$this->assertSame('lang="vai"', $locale->htmlAttributes());
 		$this->assertSame('-꘡꘢꘣', $locale->number(-123));
 		$this->assertSame('꘡꘢,꘣꘤꘥,꘦꘧꘨.꘠꘩', $locale->number(12345678.09));
-		$this->assertSame('꘡,꘢꘣꘤.꘥꘦%', $locale->percent(12.3456, 2));
+		$this->assertSame('꘡,꘢꘣꘤.꘥꘦%', $locale->percent(12.3456));
 	}
 }

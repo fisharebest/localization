@@ -35,6 +35,6 @@ class LocaleKnTest extends TestCase {
 		$this->assertSame('kn', $locale->languageTag());
 		$this->assertSame('-೧೨೩', $locale->number(-123));
 		$this->assertSame('೧೨,೩೪೫,೬೭೮.೦೯', $locale->number(12345678.09));
-		$this->assertSame('೧,೨೩೪.೫೬%', $locale->percent(12.3456, 2));
+		$this->assertSame('೧,೨೩೪.೫೬%', $locale->percent(12.3456));
 	}
 }

@@ -8,7 +8,7 @@
 Adlm;166;Adlam;adlam;;2014-11-15
 Afak;439;Afaka;afaka;;2010-12-21
 Aghb;239;Caucasian Albanian;aghbanien;Caucasian_Albanian;2014-11-15
-Ahom;338;Ahom, Tai Ahom;âhom;;2012-11-01
+Ahom;338;Ahom, Tai Ahom;âhom;Ahom;2015-07-07
 Arab;160;Arabic;arabe;Arabic;2004-05-01
 Aran;161;Arabic (Nastaliq variant);arabe (variante nastalique);;2014-11-15
 Armi;124;Imperial Aramaic;araméen impérial;Imperial_Aramaic;2009-06-01
@@ -19,6 +19,7 @@ Bamu;435;Bamum;bamoum;Bamum;2009-06-01
 Bass;259;Bassa Vah;bassa;Bassa_Vah;2014-11-15
 Batk;365;Batak;batik;Batak;2010-07-23
 Beng;325;Bengali;bengalî;Bengali;2004-05-01
+Bhks;334;Bhaiksuki;bhaïksukî;;2015-07-15
 Blis;550;Blissymbols;symboles Bliss;;2004-05-01
 Bopo;285;Bopomofo;bopomofo;Bopomofo;2004-05-01
 Brah;300;Brahmi;brahma;Brahmi;2010-07-23
@@ -56,13 +57,13 @@ Hani;500;Han (Hanzi, Kanji, Hanja);idéogrammes han (sinogrammes);Han;2009-02-23
 Hano;371;Hanunoo (Hanunóo);hanounóo;Hanunoo;2004-05-29
 Hans;501;Han (Simplified variant);idéogrammes han (variante simplifiée);;2004-05-29
 Hant;502;Han (Traditional variant);idéogrammes han (variante traditionnelle);;2004-05-29
-Hatr;127;Hatran;hatrénien;;2012-11-01
+Hatr;127;Hatran;hatrénien;Hatran;2015-07-07
 Hebr;125;Hebrew;hébreu;Hebrew;2004-05-01
 Hira;410;Hiragana;hiragana;Hiragana;2004-05-01
-Hluw;080;Anatolian Hieroglyphs (Luwian Hieroglyphs, Hittite Hieroglyphs);hiéroglyphes anatoliens (hiéroglyphes louvites, hiéroglyphes hittites);;2011-12-09
+Hluw;080;Anatolian Hieroglyphs (Luwian Hieroglyphs, Hittite Hieroglyphs);hiéroglyphes anatoliens (hiéroglyphes louvites, hiéroglyphes hittites);Anatolian_Hieroglyphs;2015-07-07
 Hmng;450;Pahawh Hmong;pahawh hmong;Pahawh_Hmong;2014-11-15
 Hrkt;412;Japanese syllabaries (alias for Hiragana + Katakana);syllabaires japonais (alias pour hiragana + katakana);Katakana_Or_Hiragana;2011-06-21
-Hung;176;Old Hungarian (Hungarian Runic);runes hongroises (ancien hongrois);;2012-10-16
+Hung;176;Old Hungarian (Hungarian Runic);runes hongroises (ancien hongrois);Old_Hungarian;2015-07-07
 Inds;610;Indus (Harappan);indus;;2004-05-01
 Ital;210;Old Italic (Etruscan, Oscan, etc.);ancien italique (étrusque, osque, etc.);Old_Italic;2004-05-29
 Java;361;Javanese;javanais;Javanese;2009-06-01
@@ -73,8 +74,8 @@ Kana;411;Katakana;katakana;Katakana;2004-05-01
 Khar;305;Kharoshthi;kharochthî;Kharoshthi;2006-06-21
 Khmr;355;Khmer;khmer;Khmer;2004-05-29
 Khoj;322;Khojki;khojkî;Khojki;2014-11-15
-Kitl;505;Khitan large script;la grande écriture khitan;;2014-11-15
-Kits;288;Khitan small script;la petite écriture khitan;;2014-11-15
+Kitl;505;Khitan large script;grande écriture khitan;;2015-07-15
+Kits;288;Khitan small script;petite écriture khitan;;2015-07-15
 Knda;345;Kannada;kannara (canara);Kannada;2004-05-29
 Kore;287;Korean (alias for Hangul + Han);coréen (alias pour hangûl + han);;2007-06-13
 Kpel;436;Kpelle;kpèllé;;2010-03-26
@@ -84,6 +85,7 @@ Laoo;356;Lao;laotien;Lao;2004-05-01
 Latf;217;Latin (Fraktur variant);latin (variante brisée);;2004-05-01
 Latg;216;Latin (Gaelic variant);latin (variante gaélique);;2004-05-01
 Latn;215;Latin;latin;Latin;2004-05-01
+Leke;364;Leke;léké;;2015-07-07
 Lepc;335;Lepcha (Róng);lepcha (róng);Lepcha;2007-07-02
 Limb;336;Limbu;limbou;Limbu;2004-05-29
 Lina;400;Linear A;linéaire A;Linear_A;2014-11-15
@@ -106,7 +108,7 @@ Mong;145;Mongolian;mongol;Mongolian;2004-05-01
 Moon;218;Moon (Moon code, Moon script, Moon type);écriture Moon;;2006-12-11
 Mroo;199;Mro, Mru;mro;Mro;2014-11-15
 Mtei;337;Meitei Mayek (Meithei, Meetei);meitei mayek;Meetei_Mayek;2009-06-01
-Mult;323;Multani;multanî;;2012-11-01
+Mult;323;Multani;multanî;Multani;2015-07-07
 Mymr;350;Myanmar (Burmese);birman;Myanmar;2004-05-01
 Narb;106;Old North Arabian (Ancient North Arabian);nord-arabique;Old_North_Arabian;2014-11-15
 Nbat;159;Nabataean;nabatéen;Nabataean;2014-11-15
@@ -138,7 +140,7 @@ Samr;123;Samaritan;samaritain;Samaritan;2009-06-01
 Sara;292;Sarati;sarati;;2004-05-29
 Sarb;105;Old South Arabian;sud-arabique, himyarite;Old_South_Arabian;2009-06-01
 Saur;344;Saurashtra;saurachtra;Saurashtra;2007-07-02
-Sgnw;095;SignWriting;SignÉcriture, SignWriting;;2006-10-10
+Sgnw;095;SignWriting;SignÉcriture, SignWriting;SignWriting;2015-07-07
 Shaw;281;Shavian (Shaw);shavien (Shaw);Shavian;2004-05-01
 Shrd;319;Sharada, Śāradā;charada, shard;Sharada;2012-02-06
 Sidd;302;Siddham, Siddhaṃ, Siddhamātṛkā;siddham;Siddham;2014-11-15

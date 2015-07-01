@@ -35,6 +35,6 @@ class LocaleBnTest extends TestCase {
 		$this->assertSame('bn', $locale->languageTag());
 		$this->assertSame('-১২৩', $locale->number(-123));
 		$this->assertSame('১,২৩,৪৫,৬৭৮.০৯', $locale->number(12345678.09));
-		$this->assertSame('১,২৩৪.৫৬%', $locale->percent(12.3456, 2));
+		$this->assertSame('১,২৩৪.৫৬%', $locale->percent(12.3456));
 	}
 }

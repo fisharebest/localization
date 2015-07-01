@@ -211,17 +211,25 @@ class CldrTest extends TestCase {
 		foreach ($cldr['supplemental']['plurals-type-cardinal'] as $code => $data) {
 			// The following CLDR definitions/examples are incompatible with the accepted gettext ones.
 			switch ($code) {
-			case 'br':  // CLDR has 5 rules, whereas gettext has (0,1) (other)
-			case 'cy':  // CLDR has 5 rules, whereas gettext has (1), (2), (other), (8,11)
-			case 'fa':  // CLDR has (0,1) (other), whereas gettext has (other)
-			case 'fil': // CLDR has a different rule from gettext
-			case 'he':  // CLDR has (1) (2) (many) (other), whereas gettext has (1) (other)
-			case 'kw':  // CLDR has 3 rules, whereas gettext has (1), (2), (3), (other)
-			case 'lv':  // CLDR has (0) (1) (other), whereas gettext has (1) (other) (0)
-			case 'mk':  // There are lots of conflicting definitions.
-			case 'pt':  // CLDR has the plural rule for pt-BR, whereas gettext has the plural rule for pt-PT
-			case 'se':  // CLDR has (1) (2) (other), whereas gettext has (0,1) (other)
-			case 'tr':  // CLDR has (1) (other), whereas gettext has (other)
+			case 'root': // This isn't a locale
+			case 'in':   // This code (Indonesian) is deprecated. Use id.
+			case 'iw':   // This code (Hebrew) is deprecated. Use he.
+			case 'ji':   // This code (Javanese) is deprecated,  Use yi.
+			case 'jw':   // This code (Javanese) is deprecated.  Use jv.
+			case 'no':   // This code (Norwegian) is deprecated. Use nb or nn.
+			case 'sh':   // This code (Serbo-croat) is deprecated
+			case 'br':   // CLDR has 5 rules, whereas gettext has (0,1) (other)
+			case 'cy':   // CLDR has 5 rules, whereas gettext has (1), (2), (other), (8,11)
+			case 'fa':   // CLDR has (0,1) (other), whereas gettext has (other)
+			case 'fil':  // CLDR has a different rule from gettext
+			case 'he':   // CLDR has (1) (2) (many) (other), whereas gettext has (1) (other)
+			case 'kw':   // CLDR has 3 rules, whereas gettext has (1), (2), (3), (other)
+			case 'lv':   // CLDR has (0) (1) (other), whereas gettext has (1) (other) (0)
+			case 'mk':   // There are lots of conflicting definitions.
+			case 'prg':  // Same as lv
+			case 'pt':   // CLDR has the plural rule for pt-BR, whereas gettext has the plural rule for pt-PT
+			case 'se':   // CLDR has (1) (2) (other), whereas gettext has (0,1) (other)
+			case 'tr':   // CLDR has (1) (other), whereas gettext has (other)
 				continue 2;
 			}
 			try {
@@ -239,15 +247,16 @@ class CldrTest extends TestCase {
 						if (strpos($example, '~')) {
 							list($low, $high) = explode('~', $example);
 							for ($number = $low; $number <= $high; ++$number) {
+								$this->assertSame($rule, $locale->pluralRule()->plural($number));
 							}
 						} else {
+							if ($rule !== $locale->pluralRule()->plural($example)) { var_dump($code);}
 							$this->assertSame($rule, $locale->pluralRule()->plural($example));
 						}
 					}
 				}
 			} catch (\DomainException $ex) {
-				// CLDR has plural rules for languages that have no other information
-				//var_dump($code);
+				var_dump("Found CLDR plural rule for non-existant language $code");
 			}
 		}
 	}

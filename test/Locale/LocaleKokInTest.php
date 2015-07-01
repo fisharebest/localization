@@ -32,6 +32,6 @@ class LocaleKokInTest extends TestCase {
 		$this->assertSame('kok', $locale->languageTag());
 		$this->assertSame('-१२३', $locale->number(-123));
 		$this->assertSame('१,२३,४५,६७८.०९', $locale->number(12345678.09));
-		$this->assertSame('१,२३४.५६%', $locale->percent(12.3456, 2));
+		$this->assertSame('१,२३४.५६%', $locale->percent(12.3456));
 	}
 }

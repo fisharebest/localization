@@ -22,6 +22,6 @@ class ScriptMultTest extends TestCase {
 		$this->assertSame('ltr', $script->direction());
 		$this->assertSame('323', $script->number());
 		$this->assertSame(array(), $script->numerals());
-		$this->assertNull($script->unicodeName());
+		$this->assertSame('Multani', $script->unicodeName());
 	}
 }

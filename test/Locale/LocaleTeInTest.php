@@ -34,6 +34,6 @@ class LocaleTeInTest extends TestCase {
 		$this->assertSame('te', $locale->languageTag());
 		$this->assertSame('-౧౨౩', $locale->number(-123));
 		$this->assertSame('౧,౨౩,౪౫,౬౭౮.౦౯', $locale->number(12345678.09));
-		$this->assertSame('౧,౨౩౪.౫౬%', $locale->percent(12.3456, 2));
+		$this->assertSame('౧,౨౩౪.౫౬%', $locale->percent(12.3456));
 	}
 }

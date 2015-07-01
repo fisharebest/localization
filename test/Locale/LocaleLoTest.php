@@ -35,6 +35,6 @@ class LocaleLoTest extends TestCase {
 		$this->assertSame('lo', $locale->languageTag());
 		$this->assertSame('-໑໒໓', $locale->number(-123));
 		$this->assertSame('໑໒.໓໔໕.໖໗໘,໐໙', $locale->number(12345678.09));
-		$this->assertSame('໑.໒໓໔,໕໖%', $locale->percent(12.3456, 2));
+		$this->assertSame('໑.໒໓໔,໕໖%', $locale->percent(12.3456));
 	}
 }

@@ -35,6 +35,6 @@ class LocaleTaTest extends TestCase {
 		$this->assertSame('ta', $locale->languageTag());
 		$this->assertSame('-௧௨௩', $locale->number(-123));
 		$this->assertSame('௧,௨௩,௪௫,௬௭௮.௦௯', $locale->number(12345678.09));
-		$this->assertSame('௧,௨௩௪.௫௬%', $locale->percent(12.3456, 2));
+		$this->assertSame('௧,௨௩௪.௫௬%', $locale->percent(12.3456));
 	}
 }
