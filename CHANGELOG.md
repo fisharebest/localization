@@ -1,6 +1,9 @@
 CHANGE LOG
 ==========
 
+## Development
+ - Add PHP 7.0 and HHVM to Travis tests
+
 ## 1.5.0 (2015-06-29)
  - Updated versions of ISO-15924, iana-subtag-registry and CLDR
 
