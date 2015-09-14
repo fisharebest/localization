@@ -28,7 +28,7 @@ class LocaleNbNoTest extends TestCase {
 		$this->assertEquals(new TerritoryNo, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('nb_NO', $locale->code());
-		$this->assertSame('unicode_ci', $locale->collation());
+		$this->assertSame('danish_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
 		$this->assertSame('lang="nb"', $locale->htmlAttributes());
 		$this->assertSame('nb', $locale->languageTag());
