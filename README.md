@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/fisharebest/localization.svg?branch=master)](https://travis-ci.org/fisharebest/localization)
-[![Coverage Status](https://img.shields.io/coveralls/fisharebest/localization.svg)](https://coveralls.io/r/fisharebest/localization?branch=master)
+[![Coverage Status](https://coveralls.io/repos/fisharebest/localization/badge.svg?branch=master&service=github)](https://coveralls.io/github/fisharebest/localization?branch=master)
 [![SensioLabsInsight](https://insight.sensiolabs.com/projects/a252b4b3-62c1-40bd-be44-43a7dc6e4a9b/mini.png)](https://insight.sensiolabs.com/projects/a252b4b3-62c1-40bd-be44-43a7dc6e4a9b)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/fisharebest/localization/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/fisharebest/localization/?branch=master)
 [![Code Climate](https://codeclimate.com/github/fisharebest/localization/badges/gpa.svg)](https://codeclimate.com/github/fisharebest/localization)
@@ -22,8 +22,8 @@ Locales, languages, scripts and territories
 A locale consists of three things: a language, a script and a territory.
 Scripts and territories are often implicit from the language.
 
-Normally you would just need to work with locales, and can ignore these
-entities.
+Normally you would just need to work with locales, and can ignore
+languages and scripts.
 
 ``` php
 $locale = new LocaleJa;         // Create a locale for Japanese.
