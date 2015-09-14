@@ -2,6 +2,7 @@ CHANGE LOG
 ==========
 
 ## Development
+ - Norwegian collation rules
  - Add PHP 7.0 and HHVM to Travis tests
 
 ## 1.5.0 (2015-06-29)

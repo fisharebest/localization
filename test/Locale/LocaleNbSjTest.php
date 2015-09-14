@@ -28,7 +28,7 @@ class LocaleNbSjTest extends TestCase {
 		$this->assertEquals(new TerritorySj, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('nb_SJ', $locale->code());
-		$this->assertSame('unicode_ci', $locale->collation());
+		$this->assertSame('danish_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
 		$this->assertSame('lang="nb-SJ"', $locale->htmlAttributes());
 		$this->assertSame('nb-SJ', $locale->languageTag());
