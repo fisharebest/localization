@@ -19,8 +19,9 @@ class ScriptJurcTest extends TestCase {
 		$script = new ScriptJurc;
 
 		$this->assertSame('Jurc', $script->code());
-		$this->assertSame('510', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('510', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

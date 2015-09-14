@@ -19,8 +19,9 @@ class ScriptNkooTest extends TestCase {
 		$script = new ScriptNkoo;
 
 		$this->assertSame('Nkoo', $script->code());
-		$this->assertSame('165', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('165', $script->number());
+		$this->assertSame(array('߀', '߁', '߂', '߃', '߄', '߅', '߆', '߇', '߈', '߉'), $script->numerals());
 		$this->assertSame('Nko', $script->unicodeName());
 	}
 }

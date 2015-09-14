@@ -19,8 +19,9 @@ class ScriptMoonTest extends TestCase {
 		$script = new ScriptMoon;
 
 		$this->assertSame('Moon', $script->code());
-		$this->assertSame('218', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('218', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

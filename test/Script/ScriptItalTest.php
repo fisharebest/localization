@@ -19,8 +19,9 @@ class ScriptItalTest extends TestCase {
 		$script = new ScriptItal;
 
 		$this->assertSame('Ital', $script->code());
-		$this->assertSame('210', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('210', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Old_Italic', $script->unicodeName());
 	}
 }

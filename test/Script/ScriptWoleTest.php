@@ -19,8 +19,9 @@ class ScriptWoleTest extends TestCase {
 		$script = new ScriptWole;
 
 		$this->assertSame('Wole', $script->code());
-		$this->assertSame('480', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('480', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

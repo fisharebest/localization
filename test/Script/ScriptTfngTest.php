@@ -19,8 +19,9 @@ class ScriptTfngTest extends TestCase {
 		$script = new ScriptTfng;
 
 		$this->assertSame('Tfng', $script->code());
-		$this->assertSame('120', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('120', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Tifinagh', $script->unicodeName());
 	}
 }

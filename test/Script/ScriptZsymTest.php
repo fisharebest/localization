@@ -19,8 +19,9 @@ class ScriptZsymTest extends TestCase {
 		$script = new ScriptZsym;
 
 		$this->assertSame('Zsym', $script->code());
-		$this->assertSame('996', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('996', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

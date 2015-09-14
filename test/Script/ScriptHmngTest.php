@@ -19,8 +19,9 @@ class ScriptHmngTest extends TestCase {
 		$script = new ScriptHmng;
 
 		$this->assertSame('Hmng', $script->code());
-		$this->assertSame('450', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('450', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Pahawh_Hmong', $script->unicodeName());
 	}
 }

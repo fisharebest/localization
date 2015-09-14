@@ -19,8 +19,9 @@ class ScriptOsmaTest extends TestCase {
 		$script = new ScriptOsma;
 
 		$this->assertSame('Osma', $script->code());
-		$this->assertSame('260', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('260', $script->number());
+		$this->assertSame(array('𐒠', '𐒡', '𐒢', '𐒣', '𐒤', '𐒥', '𐒦', '𐒧', '𐒨', '𐒩'), $script->numerals());
 		$this->assertSame('Osmanya', $script->unicodeName());
 	}
 }

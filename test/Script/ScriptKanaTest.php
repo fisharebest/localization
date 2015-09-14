@@ -19,8 +19,9 @@ class ScriptKanaTest extends TestCase {
 		$script = new ScriptKana;
 
 		$this->assertSame('Kana', $script->code());
-		$this->assertSame('411', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('411', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Katakana', $script->unicodeName());
 	}
 }

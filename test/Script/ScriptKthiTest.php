@@ -19,8 +19,9 @@ class ScriptKthiTest extends TestCase {
 		$script = new ScriptKthi;
 
 		$this->assertSame('Kthi', $script->code());
-		$this->assertSame('317', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('317', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Kaithi', $script->unicodeName());
 	}
 }

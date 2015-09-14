@@ -19,8 +19,9 @@ class ScriptHrktTest extends TestCase {
 		$script = new ScriptHrkt;
 
 		$this->assertSame('Hrkt', $script->code());
-		$this->assertSame('412', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('412', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Katakana_Or_Hiragana', $script->unicodeName());
 	}
 }

@@ -19,8 +19,9 @@ class ScriptBlisTest extends TestCase {
 		$script = new ScriptBlis;
 
 		$this->assertSame('Blis', $script->code());
-		$this->assertSame('550', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('550', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

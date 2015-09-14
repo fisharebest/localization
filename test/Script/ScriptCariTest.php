@@ -19,8 +19,9 @@ class ScriptCariTest extends TestCase {
 		$script = new ScriptCari;
 
 		$this->assertSame('Cari', $script->code());
-		$this->assertSame('201', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('201', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Carian', $script->unicodeName());
 	}
 }

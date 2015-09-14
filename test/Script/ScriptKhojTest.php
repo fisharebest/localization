@@ -19,8 +19,9 @@ class ScriptKhojTest extends TestCase {
 		$script = new ScriptKhoj;
 
 		$this->assertSame('Khoj', $script->code());
-		$this->assertSame('322', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('322', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Khojki', $script->unicodeName());
 	}
 }

@@ -19,8 +19,9 @@ class ScriptPlrdTest extends TestCase {
 		$script = new ScriptPlrd;
 
 		$this->assertSame('Plrd', $script->code());
-		$this->assertSame('282', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('282', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Miao', $script->unicodeName());
 	}
 }

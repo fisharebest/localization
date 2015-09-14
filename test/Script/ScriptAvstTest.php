@@ -19,8 +19,9 @@ class ScriptAvstTest extends TestCase {
 		$script = new ScriptAvst;
 
 		$this->assertSame('Avst', $script->code());
-		$this->assertSame('134', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('134', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Avestan', $script->unicodeName());
 	}
 }

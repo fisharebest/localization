@@ -19,8 +19,9 @@ class ScriptVaiiTest extends TestCase {
 		$script = new ScriptVaii;
 
 		$this->assertSame('Vaii', $script->code());
-		$this->assertSame('470', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('470', $script->number());
+		$this->assertSame(array('꘠', '꘡', '꘢', '꘣', '꘤', '꘥', '꘦', '꘧', '꘨', '꘩'), $script->numerals());
 		$this->assertSame('Vai', $script->unicodeName());
 	}
 }

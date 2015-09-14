@@ -19,8 +19,9 @@ class ScriptNbatTest extends TestCase {
 		$script = new ScriptNbat;
 
 		$this->assertSame('Nbat', $script->code());
-		$this->assertSame('159', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('159', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Nabataean', $script->unicodeName());
 	}
 }

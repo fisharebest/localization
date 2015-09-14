@@ -19,8 +19,9 @@ class ScriptElbaTest extends TestCase {
 		$script = new ScriptElba;
 
 		$this->assertSame('Elba', $script->code());
-		$this->assertSame('226', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('226', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Elbasan', $script->unicodeName());
 	}
 }

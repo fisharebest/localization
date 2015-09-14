@@ -19,8 +19,9 @@ class ScriptSarbTest extends TestCase {
 		$script = new ScriptSarb;
 
 		$this->assertSame('Sarb', $script->code());
-		$this->assertSame('105', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('105', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Old_South_Arabian', $script->unicodeName());
 	}
 }

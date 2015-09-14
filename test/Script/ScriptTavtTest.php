@@ -19,8 +19,9 @@ class ScriptTavtTest extends TestCase {
 		$script = new ScriptTavt;
 
 		$this->assertSame('Tavt', $script->code());
-		$this->assertSame('359', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('359', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Tai_Viet', $script->unicodeName());
 	}
 }

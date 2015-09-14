@@ -19,8 +19,9 @@ class ScriptSyreTest extends TestCase {
 		$script = new ScriptSyre;
 
 		$this->assertSame('Syre', $script->code());
-		$this->assertSame('138', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('138', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

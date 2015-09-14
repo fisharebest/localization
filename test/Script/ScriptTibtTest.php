@@ -19,8 +19,9 @@ class ScriptTibtTest extends TestCase {
 		$script = new ScriptTibt;
 
 		$this->assertSame('Tibt', $script->code());
-		$this->assertSame('330', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('330', $script->number());
+		$this->assertSame(array('༠', '༡', '༢', '༣', '༤', '༥', '༦', '༧', '༨', '༩'), $script->numerals());
 		$this->assertSame('Tibetan', $script->unicodeName());
 	}
 }

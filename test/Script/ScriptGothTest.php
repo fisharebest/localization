@@ -19,8 +19,9 @@ class ScriptGothTest extends TestCase {
 		$script = new ScriptGoth;
 
 		$this->assertSame('Goth', $script->code());
-		$this->assertSame('206', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('206', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Gothic', $script->unicodeName());
 	}
 }

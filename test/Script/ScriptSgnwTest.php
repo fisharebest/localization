@@ -19,8 +19,9 @@ class ScriptSgnwTest extends TestCase {
 		$script = new ScriptSgnw;
 
 		$this->assertSame('Sgnw', $script->code());
-		$this->assertSame('095', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('095', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

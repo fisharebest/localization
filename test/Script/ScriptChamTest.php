@@ -19,8 +19,9 @@ class ScriptChamTest extends TestCase {
 		$script = new ScriptCham;
 
 		$this->assertSame('Cham', $script->code());
-		$this->assertSame('358', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('358', $script->number());
+		$this->assertSame(array('꩐', '꩑', '꩒', '꩓', '꩔', '꩕', '꩖', '꩗', '꩘', '꩙'), $script->numerals());
 		$this->assertSame('Cham', $script->unicodeName());
 	}
 }

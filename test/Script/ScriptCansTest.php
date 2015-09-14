@@ -19,8 +19,9 @@ class ScriptCansTest extends TestCase {
 		$script = new ScriptCans;
 
 		$this->assertSame('Cans', $script->code());
-		$this->assertSame('440', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('440', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Canadian_Aboriginal', $script->unicodeName());
 	}
 }

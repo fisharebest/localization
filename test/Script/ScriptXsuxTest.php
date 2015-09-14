@@ -19,8 +19,9 @@ class ScriptXsuxTest extends TestCase {
 		$script = new ScriptXsux;
 
 		$this->assertSame('Xsux', $script->code());
-		$this->assertSame('020', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('020', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Cuneiform', $script->unicodeName());
 	}
 }

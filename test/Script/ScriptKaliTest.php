@@ -19,8 +19,9 @@ class ScriptKaliTest extends TestCase {
 		$script = new ScriptKali;
 
 		$this->assertSame('Kali', $script->code());
-		$this->assertSame('357', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('357', $script->number());
+		$this->assertSame(array('꤀', '꤁', '꤂', '꤃', '꤄', '꤅', '꤆', '꤇', '꤈', '꤉'), $script->numerals());
 		$this->assertSame('Kayah_Li', $script->unicodeName());
 	}
 }

@@ -19,8 +19,9 @@ class ScriptBopoTest extends TestCase {
 		$script = new ScriptBopo;
 
 		$this->assertSame('Bopo', $script->code());
-		$this->assertSame('285', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('285', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Bopomofo', $script->unicodeName());
 	}
 }

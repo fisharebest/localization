@@ -19,8 +19,9 @@ class ScriptHebrTest extends TestCase {
 		$script = new ScriptHebr;
 
 		$this->assertSame('Hebr', $script->code());
-		$this->assertSame('125', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('125', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Hebrew', $script->unicodeName());
 	}
 }

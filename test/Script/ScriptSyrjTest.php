@@ -19,8 +19,9 @@ class ScriptSyrjTest extends TestCase {
 		$script = new ScriptSyrj;
 
 		$this->assertSame('Syrj', $script->code());
-		$this->assertSame('137', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('137', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

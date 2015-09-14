@@ -19,8 +19,9 @@ class ScriptHaniTest extends TestCase {
 		$script = new ScriptHani;
 
 		$this->assertSame('Hani', $script->code());
-		$this->assertSame('500', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('500', $script->number());
+		$this->assertSame(array('〇', '一', '二', '三', '四', '五', '六', '七', '八', '九'), $script->numerals());
 		$this->assertSame('Han', $script->unicodeName());
 	}
 }

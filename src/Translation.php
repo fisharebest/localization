@@ -97,7 +97,7 @@ class Translation {
 			break;
 		default:
 			// Not a valid .MO file.
-			return;
+			throw new \InvalidArgumentException('Invalid .MO file');
 		}
 
 		// Read the lookup tables

@@ -19,8 +19,9 @@ class ScriptMendTest extends TestCase {
 		$script = new ScriptMend;
 
 		$this->assertSame('Mend', $script->code());
-		$this->assertSame('438', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('438', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Mende_Kikakui', $script->unicodeName());
 	}
 }

@@ -19,8 +19,9 @@ class ScriptCherTest extends TestCase {
 		$script = new ScriptCher;
 
 		$this->assertSame('Cher', $script->code());
-		$this->assertSame('445', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('445', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Cherokee', $script->unicodeName());
 	}
 }

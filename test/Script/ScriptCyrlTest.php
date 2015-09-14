@@ -19,8 +19,9 @@ class ScriptCyrlTest extends TestCase {
 		$script = new ScriptCyrl;
 
 		$this->assertSame('Cyrl', $script->code());
-		$this->assertSame('220', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('220', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Cyrillic', $script->unicodeName());
 	}
 }

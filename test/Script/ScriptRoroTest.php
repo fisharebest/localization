@@ -19,8 +19,9 @@ class ScriptRoroTest extends TestCase {
 		$script = new ScriptRoro;
 
 		$this->assertSame('Roro', $script->code());
-		$this->assertSame('620', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('620', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

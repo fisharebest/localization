@@ -19,8 +19,9 @@ class ScriptKoreTest extends TestCase {
 		$script = new ScriptKore;
 
 		$this->assertSame('Kore', $script->code());
-		$this->assertSame('287', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('287', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

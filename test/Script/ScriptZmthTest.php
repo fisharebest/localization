@@ -19,8 +19,9 @@ class ScriptZmthTest extends TestCase {
 		$script = new ScriptZmth;
 
 		$this->assertSame('Zmth', $script->code());
-		$this->assertSame('995', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('995', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

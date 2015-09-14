@@ -19,8 +19,9 @@ class ScriptLyciTest extends TestCase {
 		$script = new ScriptLyci;
 
 		$this->assertSame('Lyci', $script->code());
-		$this->assertSame('202', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('202', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Lycian', $script->unicodeName());
 	}
 }

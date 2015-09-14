@@ -19,8 +19,9 @@ class ScriptEgypTest extends TestCase {
 		$script = new ScriptEgyp;
 
 		$this->assertSame('Egyp', $script->code());
-		$this->assertSame('050', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('050', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Egyptian_Hieroglyphs', $script->unicodeName());
 	}
 }

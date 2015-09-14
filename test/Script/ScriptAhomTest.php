@@ -19,8 +19,9 @@ class ScriptAhomTest extends TestCase {
 		$script = new ScriptAhom;
 
 		$this->assertSame('Ahom', $script->code());
-		$this->assertSame('338', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('338', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

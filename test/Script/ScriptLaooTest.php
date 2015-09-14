@@ -19,8 +19,8 @@ class ScriptLaooTest extends TestCase {
 		$script = new ScriptLaoo;
 
 		$this->assertSame('Laoo', $script->code());
-		$this->assertSame('356', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame(array('໐', '໑', '໒', '໓', '໔', '໕', '໖', '໗', '໘', '໙'), $script->numerals());
 		$this->assertSame('Lao', $script->unicodeName());
 	}
 }

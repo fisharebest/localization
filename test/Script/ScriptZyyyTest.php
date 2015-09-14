@@ -19,8 +19,9 @@ class ScriptZyyyTest extends TestCase {
 		$script = new ScriptZyyy;
 
 		$this->assertSame('Zyyy', $script->code());
-		$this->assertSame('998', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('998', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Common', $script->unicodeName());
 	}
 }

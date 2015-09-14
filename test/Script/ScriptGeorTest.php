@@ -19,8 +19,9 @@ class ScriptGeorTest extends TestCase {
 		$script = new ScriptGeor;
 
 		$this->assertSame('Geor', $script->code());
-		$this->assertSame('240', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('240', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Georgian', $script->unicodeName());
 	}
 }

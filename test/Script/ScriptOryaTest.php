@@ -19,8 +19,9 @@ class ScriptOryaTest extends TestCase {
 		$script = new ScriptOrya;
 
 		$this->assertSame('Orya', $script->code());
-		$this->assertSame('327', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('327', $script->number());
+		$this->assertSame(array('୦', '୧', '୨', '୩', '୪', '୫', '୬', '୭', '୮', '୯'), $script->numerals());
 		$this->assertSame('Oriya', $script->unicodeName());
 	}
 }

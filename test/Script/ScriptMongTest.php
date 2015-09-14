@@ -19,8 +19,9 @@ class ScriptMongTest extends TestCase {
 		$script = new ScriptMong;
 
 		$this->assertSame('Mong', $script->code());
-		$this->assertSame('145', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('145', $script->number());
+		$this->assertSame(array('᠐', '᠑', '᠒', '᠓', '᠔', '᠕', '᠖', '᠗', '᠘', '᠙'), $script->numerals());
 		$this->assertSame('Mongolian', $script->unicodeName());
 	}
 }

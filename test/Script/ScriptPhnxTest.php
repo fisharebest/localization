@@ -19,8 +19,9 @@ class ScriptPhnxTest extends TestCase {
 		$script = new ScriptPhnx;
 
 		$this->assertSame('Phnx', $script->code());
-		$this->assertSame('115', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('115', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Phoenician', $script->unicodeName());
 	}
 }

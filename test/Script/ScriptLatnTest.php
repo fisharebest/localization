@@ -19,8 +19,9 @@ class ScriptLatnTest extends TestCase {
 		$script = new ScriptLatn;
 
 		$this->assertSame('Latn', $script->code());
-		$this->assertSame('215', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('215', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Latin', $script->unicodeName());
 	}
 }

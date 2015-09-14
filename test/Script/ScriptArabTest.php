@@ -19,8 +19,9 @@ class ScriptArabTest extends TestCase {
 		$script = new ScriptArab;
 
 		$this->assertSame('Arab', $script->code());
-		$this->assertSame('160', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('160', $script->number());
+		$this->assertSame(array('٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'), $script->numerals());
 		$this->assertSame('Arabic', $script->unicodeName());
 	}
 }

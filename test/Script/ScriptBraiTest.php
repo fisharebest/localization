@@ -19,8 +19,9 @@ class ScriptBraiTest extends TestCase {
 		$script = new ScriptBrai;
 
 		$this->assertSame('Brai', $script->code());
-		$this->assertSame('570', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('570', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Braille', $script->unicodeName());
 	}
 }

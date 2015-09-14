@@ -19,8 +19,9 @@ class ScriptBengTest extends TestCase {
 		$script = new ScriptBeng;
 
 		$this->assertSame('Beng', $script->code());
-		$this->assertSame('325', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('325', $script->number());
+		$this->assertSame(array('০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'), $script->numerals());
 		$this->assertSame('Bengali', $script->unicodeName());
 	}
 }

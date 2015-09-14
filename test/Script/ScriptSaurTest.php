@@ -19,8 +19,9 @@ class ScriptSaurTest extends TestCase {
 		$script = new ScriptSaur;
 
 		$this->assertSame('Saur', $script->code());
-		$this->assertSame('344', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('344', $script->number());
+		$this->assertSame(array('꣐', '꣑', '꣒', '꣓', '꣔', '꣕', '꣖', '꣗', '꣘', '꣙'), $script->numerals());
 		$this->assertSame('Saurashtra', $script->unicodeName());
 	}
 }

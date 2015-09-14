@@ -19,8 +19,9 @@ class ScriptPaucTest extends TestCase {
 		$script = new ScriptPauc;
 
 		$this->assertSame('Pauc', $script->code());
-		$this->assertSame('263', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('263', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Pau_Cin_Hau', $script->unicodeName());
 	}
 }

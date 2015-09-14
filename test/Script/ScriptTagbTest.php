@@ -19,8 +19,9 @@ class ScriptTagbTest extends TestCase {
 		$script = new ScriptTagb;
 
 		$this->assertSame('Tagb', $script->code());
-		$this->assertSame('373', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('373', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Tagbanwa', $script->unicodeName());
 	}
 }

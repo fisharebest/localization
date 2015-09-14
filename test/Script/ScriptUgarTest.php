@@ -19,8 +19,9 @@ class ScriptUgarTest extends TestCase {
 		$script = new ScriptUgar;
 
 		$this->assertSame('Ugar', $script->code());
-		$this->assertSame('040', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('040', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Ugaritic', $script->unicodeName());
 	}
 }

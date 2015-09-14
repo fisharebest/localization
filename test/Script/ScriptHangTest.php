@@ -19,8 +19,9 @@ class ScriptHangTest extends TestCase {
 		$script = new ScriptHang;
 
 		$this->assertSame('Hang', $script->code());
-		$this->assertSame('286', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('286', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Hangul', $script->unicodeName());
 	}
 }

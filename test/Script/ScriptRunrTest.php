@@ -19,8 +19,9 @@ class ScriptRunrTest extends TestCase {
 		$script = new ScriptRunr;
 
 		$this->assertSame('Runr', $script->code());
-		$this->assertSame('211', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('211', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Runic', $script->unicodeName());
 	}
 }

@@ -19,8 +19,9 @@ class ScriptDevaTest extends TestCase {
 		$script = new ScriptDeva;
 
 		$this->assertSame('Deva', $script->code());
-		$this->assertSame('315', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('315', $script->number());
+		$this->assertSame(array('०', '१', '२', '३', '४', '५', '६', '७', '८', '९'), $script->numerals());
 		$this->assertSame('Devanagari', $script->unicodeName());
 	}
 }

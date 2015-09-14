@@ -19,8 +19,9 @@ class ScriptBugiTest extends TestCase {
 		$script = new ScriptBugi;
 
 		$this->assertSame('Bugi', $script->code());
-		$this->assertSame('367', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('367', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Buginese', $script->unicodeName());
 	}
 }

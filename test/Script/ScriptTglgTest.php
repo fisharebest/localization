@@ -19,8 +19,9 @@ class ScriptTglgTest extends TestCase {
 		$script = new ScriptTglg;
 
 		$this->assertSame('Tglg', $script->code());
-		$this->assertSame('370', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('370', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Tagalog', $script->unicodeName());
 	}
 }

@@ -19,8 +19,9 @@ class ScriptAranTest extends TestCase {
 		$script = new ScriptAran;
 
 		$this->assertSame('Aran', $script->code());
-		$this->assertSame('161', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('161', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

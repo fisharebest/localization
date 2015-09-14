@@ -19,8 +19,9 @@ class ScriptKitlTest extends TestCase {
 		$script = new ScriptKitl;
 
 		$this->assertSame('Kitl', $script->code());
-		$this->assertSame('505', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('505', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

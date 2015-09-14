@@ -19,8 +19,9 @@ class ScriptEthiTest extends TestCase {
 		$script = new ScriptEthi;
 
 		$this->assertSame('Ethi', $script->code());
-		$this->assertSame('430', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('430', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Ethiopic', $script->unicodeName());
 	}
 }

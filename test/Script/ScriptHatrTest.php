@@ -19,8 +19,9 @@ class ScriptHatrTest extends TestCase {
 		$script = new ScriptHatr;
 
 		$this->assertSame('Hatr', $script->code());
-		$this->assertSame('127', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('127', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

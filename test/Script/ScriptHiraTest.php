@@ -19,8 +19,9 @@ class ScriptHiraTest extends TestCase {
 		$script = new ScriptHira;
 
 		$this->assertSame('Hira', $script->code());
-		$this->assertSame('410', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('410', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Hiragana', $script->unicodeName());
 	}
 }

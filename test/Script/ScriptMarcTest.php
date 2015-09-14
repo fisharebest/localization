@@ -19,8 +19,9 @@ class ScriptMarcTest extends TestCase {
 		$script = new ScriptMarc;
 
 		$this->assertSame('Marc', $script->code());
-		$this->assertSame('332', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('332', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

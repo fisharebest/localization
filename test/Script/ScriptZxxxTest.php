@@ -19,8 +19,9 @@ class ScriptZxxxTest extends TestCase {
 		$script = new ScriptZxxx;
 
 		$this->assertSame('Zxxx', $script->code());
-		$this->assertSame('997', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('997', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

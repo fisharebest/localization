@@ -19,8 +19,9 @@ class ScriptBrahTest extends TestCase {
 		$script = new ScriptBrah;
 
 		$this->assertSame('Brah', $script->code());
-		$this->assertSame('300', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('300', $script->number());
+		$this->assertSame(array('𑁦', '𑁧', '𑁨', '𑁩', '𑁪', '𑁫', '𑁬', '𑁭', '𑁮', '𑁯'), $script->numerals());
 		$this->assertSame('Brahmi', $script->unicodeName());
 	}
 }

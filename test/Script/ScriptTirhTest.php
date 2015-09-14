@@ -19,8 +19,9 @@ class ScriptTirhTest extends TestCase {
 		$script = new ScriptTirh;
 
 		$this->assertSame('Tirh', $script->code());
-		$this->assertSame('326', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('326', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Tirhuta', $script->unicodeName());
 	}
 }

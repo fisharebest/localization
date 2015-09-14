@@ -19,8 +19,9 @@ class ScriptJpanTest extends TestCase {
 		$script = new ScriptJpan;
 
 		$this->assertSame('Jpan', $script->code());
-		$this->assertSame('413', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('413', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

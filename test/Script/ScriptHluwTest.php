@@ -19,8 +19,8 @@ class ScriptHluwTest extends TestCase {
 		$script = new ScriptHluw;
 
 		$this->assertSame('Hluw', $script->code());
-		$this->assertSame('080', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

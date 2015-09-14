@@ -19,8 +19,9 @@ class ScriptOlckTest extends TestCase {
 		$script = new ScriptOlck;
 
 		$this->assertSame('Olck', $script->code());
-		$this->assertSame('261', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('261', $script->number());
+		$this->assertSame(array('᱐', '᱑', '᱒', '᱓', '᱔', '᱕', '᱖', '᱗', '᱘', '᱙'), $script->numerals());
 		$this->assertSame('Ol_Chiki', $script->unicodeName());
 	}
 }

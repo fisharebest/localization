@@ -19,8 +19,9 @@ class ScriptHansTest extends TestCase {
 		$script = new ScriptHans;
 
 		$this->assertSame('Hans', $script->code());
-		$this->assertSame('501', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('501', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

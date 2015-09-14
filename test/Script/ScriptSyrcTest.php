@@ -19,8 +19,9 @@ class ScriptSyrcTest extends TestCase {
 		$script = new ScriptSyrc;
 
 		$this->assertSame('Syrc', $script->code());
-		$this->assertSame('135', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('135', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Syriac', $script->unicodeName());
 	}
 }

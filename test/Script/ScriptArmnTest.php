@@ -19,8 +19,9 @@ class ScriptArmnTest extends TestCase {
 		$script = new ScriptArmn;
 
 		$this->assertSame('Armn', $script->code());
-		$this->assertSame('230', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('230', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Armenian', $script->unicodeName());
 	}
 }

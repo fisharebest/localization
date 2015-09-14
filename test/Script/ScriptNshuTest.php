@@ -19,8 +19,9 @@ class ScriptNshuTest extends TestCase {
 		$script = new ScriptNshu;
 
 		$this->assertSame('Nshu', $script->code());
-		$this->assertSame('499', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('499', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

@@ -19,8 +19,9 @@ class ScriptLanaTest extends TestCase {
 		$script = new ScriptLana;
 
 		$this->assertSame('Lana', $script->code());
-		$this->assertSame('351', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('351', $script->number());
+		$this->assertSame(array('᪀', '᪁', '᪂', '᪃', '᪄', '᪅', '᪆', '᪇', '᪈', '᪉'), $script->numerals());
 		$this->assertSame('Tai_Tham', $script->unicodeName());
 	}
 }

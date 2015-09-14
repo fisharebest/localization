@@ -19,8 +19,9 @@ class ScriptPhagTest extends TestCase {
 		$script = new ScriptPhag;
 
 		$this->assertSame('Phag', $script->code());
-		$this->assertSame('331', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('331', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Phags_Pa', $script->unicodeName());
 	}
 }

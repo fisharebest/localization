@@ -19,8 +19,9 @@ class ScriptKhmrTest extends TestCase {
 		$script = new ScriptKhmr;
 
 		$this->assertSame('Khmr', $script->code());
-		$this->assertSame('355', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('355', $script->number());
+		$this->assertSame(array('០', '១', '២', '៣', '៤', '៥', '៦', '៧', '៨', '៩'), $script->numerals());
 		$this->assertSame('Khmer', $script->unicodeName());
 	}
 }

@@ -19,8 +19,9 @@ class ScriptAfakTest extends TestCase {
 		$script = new ScriptAfak;
 
 		$this->assertSame('Afak', $script->code());
-		$this->assertSame('439', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('439', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

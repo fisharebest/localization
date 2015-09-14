@@ -19,8 +19,9 @@ class ScriptGujrTest extends TestCase {
 		$script = new ScriptGujr;
 
 		$this->assertSame('Gujr', $script->code());
-		$this->assertSame('320', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('320', $script->number());
+		$this->assertSame(array('૦', '૧', '૨', '૩', '૪', '૫', '૬', '૭', '૮', '૯'), $script->numerals());
 		$this->assertSame('Gujarati', $script->unicodeName());
 	}
 }

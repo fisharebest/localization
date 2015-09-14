@@ -19,8 +19,9 @@ class ScriptMeroTest extends TestCase {
 		$script = new ScriptMero;
 
 		$this->assertSame('Mero', $script->code());
-		$this->assertSame('100', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('100', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Meroitic_Hieroglyphs', $script->unicodeName());
 	}
 }

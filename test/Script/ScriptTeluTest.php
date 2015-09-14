@@ -19,8 +19,9 @@ class ScriptTeluTest extends TestCase {
 		$script = new ScriptTelu;
 
 		$this->assertSame('Telu', $script->code());
-		$this->assertSame('340', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('340', $script->number());
+		$this->assertSame(array('౦', '౧', '౨', '౩', '౪', '౫', '౬', '౭', '౮', '౯'), $script->numerals());
 		$this->assertSame('Telugu', $script->unicodeName());
 	}
 }

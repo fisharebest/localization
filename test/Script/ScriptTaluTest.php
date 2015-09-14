@@ -19,8 +19,9 @@ class ScriptTaluTest extends TestCase {
 		$script = new ScriptTalu;
 
 		$this->assertSame('Talu', $script->code());
-		$this->assertSame('354', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('354', $script->number());
+		$this->assertSame(array('᧐', '᧑', '᧒', '᧓', '᧔', '᧕', '᧖', '᧗', '᧘', '᧙'), $script->numerals());
 		$this->assertSame('New_Tai_Lue', $script->unicodeName());
 	}
 }

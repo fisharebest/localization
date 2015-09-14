@@ -19,8 +19,9 @@ class ScriptRjngTest extends TestCase {
 		$script = new ScriptRjng;
 
 		$this->assertSame('Rjng', $script->code());
-		$this->assertSame('363', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('363', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Rejang', $script->unicodeName());
 	}
 }

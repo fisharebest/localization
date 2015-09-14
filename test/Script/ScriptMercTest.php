@@ -19,8 +19,9 @@ class ScriptMercTest extends TestCase {
 		$script = new ScriptMerc;
 
 		$this->assertSame('Merc', $script->code());
-		$this->assertSame('101', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('101', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Meroitic_Cursive', $script->unicodeName());
 	}
 }

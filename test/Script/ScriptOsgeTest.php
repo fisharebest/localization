@@ -19,8 +19,9 @@ class ScriptOsgeTest extends TestCase {
 		$script = new ScriptOsge;
 
 		$this->assertSame('Osge', $script->code());
-		$this->assertSame('219', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('219', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }

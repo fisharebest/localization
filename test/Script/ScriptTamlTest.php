@@ -19,8 +19,9 @@ class ScriptTamlTest extends TestCase {
 		$script = new ScriptTaml;
 
 		$this->assertSame('Taml', $script->code());
-		$this->assertSame('346', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('346', $script->number());
+		$this->assertSame(array('௦', '௧', '௨', '௩', '௪', '௫', '௬', '௭', '௮', '௯'), $script->numerals());
 		$this->assertSame('Tamil', $script->unicodeName());
 	}
 }

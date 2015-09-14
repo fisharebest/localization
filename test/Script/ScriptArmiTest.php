@@ -19,8 +19,9 @@ class ScriptArmiTest extends TestCase {
 		$script = new ScriptArmi;
 
 		$this->assertSame('Armi', $script->code());
-		$this->assertSame('124', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('124', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Imperial_Aramaic', $script->unicodeName());
 	}
 }

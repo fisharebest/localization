@@ -19,8 +19,9 @@ class ScriptBatkTest extends TestCase {
 		$script = new ScriptBatk;
 
 		$this->assertSame('Batk', $script->code());
-		$this->assertSame('365', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('365', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Batak', $script->unicodeName());
 	}
 }

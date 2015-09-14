@@ -19,8 +19,9 @@ class ScriptBamuTest extends TestCase {
 		$script = new ScriptBamu;
 
 		$this->assertSame('Bamu', $script->code());
-		$this->assertSame('435', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('435', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Bamum', $script->unicodeName());
 	}
 }

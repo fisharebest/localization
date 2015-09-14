@@ -19,8 +19,9 @@ class ScriptPhlpTest extends TestCase {
 		$script = new ScriptPhlp;
 
 		$this->assertSame('Phlp', $script->code());
-		$this->assertSame('132', $script->number());
 		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('132', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Psalter_Pahlavi', $script->unicodeName());
 	}
 }

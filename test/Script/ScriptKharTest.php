@@ -19,8 +19,9 @@ class ScriptKharTest extends TestCase {
 		$script = new ScriptKhar;
 
 		$this->assertSame('Khar', $script->code());
-		$this->assertSame('305', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('305', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertSame('Kharoshthi', $script->unicodeName());
 	}
 }

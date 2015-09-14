@@ -19,8 +19,9 @@ class ScriptKitsTest extends TestCase {
 		$script = new ScriptKits;
 
 		$this->assertSame('Kits', $script->code());
-		$this->assertSame('288', $script->number());
 		$this->assertSame('ltr', $script->direction());
+		$this->assertSame('288', $script->number());
+		$this->assertSame(array(), $script->numerals());
 		$this->assertNull($script->unicodeName());
 	}
 }
