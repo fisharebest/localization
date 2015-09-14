@@ -108,7 +108,7 @@ class CldrTest extends TestCase {
 			if (strpos($cldr, '/root/layout.json') === false) {
 				$locale = $this->cldrLocale($cldr);
 				$json   = $this->cldrJson($cldr);
-				$dir    = $direction[$json->layout->orientation->characterOrder];
+				$dir    = $direction[$json['layout']['orientation']['characterOrder']];
 
 				$this->assertSame($dir, $locale->direction());
 			}
@@ -127,16 +127,16 @@ class CldrTest extends TestCase {
 			if (strpos($cldr, '/root/numbers.json') === false) {
 				$locale                   = $this->cldrLocale($cldr);
 				$json                     = $this->cldrJson($cldr);
-				$default_numbering_system = $json->numbers->defaultNumberingSystem;
+				$default_numbering_system = $json['numbers']['defaultNumberingSystem'];
 				$symbols_key              = 'symbols-numberSystem-' . $default_numbering_system;
 				$decimal_formats_key      = 'decimalFormats-numberSystem-' . $default_numbering_system;
 				$percent_formats_key      = 'percentFormats-numberSystem-' . $default_numbering_system;
-				$decimal                  = $json->numbers->$symbols_key->decimal;
-				$group                    = $json->numbers->$symbols_key->group;
-				$minus_sign               = $json->numbers->$symbols_key->minusSign;
-				$percent_sign             = $json->numbers->$symbols_key->percentSign;
-				$standard                 = $json->numbers->$decimal_formats_key->standard;
-				$percent                  = $json->numbers->$percent_formats_key->standard;
+				$decimal                  = $json['numbers'][$symbols_key]['decimal'];
+				$group                    = $json['numbers'][$symbols_key]['group'];
+				$minus_sign               = $json['numbers'][$symbols_key]['minusSign'];
+				$percent_sign             = $json['numbers'][$symbols_key]['percentSign'];
+				$standard                 = $json['numbers'][$decimal_formats_key]['standard'];
+				$percent                  = $json['numbers'][$percent_formats_key]['standard'];
 
 				if ($locale->languageTag() !== 'en-US-posix') {
 					$number = $locale->number(12345678.089);
@@ -183,8 +183,8 @@ class CldrTest extends TestCase {
 				$json   = $this->cldrJson($cldr);
 
 				$language_tag = $locale->languageTag();
-				if (isset($json->localeDisplayNames->languages->$language_tag)) {
-					$endonym = $json->localeDisplayNames->languages->$language_tag;
+				if (isset($json['localeDisplayNames']['languages'][$language_tag])) {
+					$endonym = $json['localeDisplayNames']['languages'][$language_tag];
 
 					if ($locale instanceof LocaleNmg) {
 						// CLDR 27.0.3 gives the language code as the language name.
@@ -260,9 +260,9 @@ class CldrTest extends TestCase {
 	 * @return \stdClass
 	 */
 	private function cldrJson($file) {
-		$data = json_decode(file_get_contents($file));
+		$data = json_decode(file_get_contents($file), true);
 
-		return reset($data->main);
+		return reset($data['main']);
 	}
 
 	/**
