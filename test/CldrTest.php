@@ -123,6 +123,23 @@ class CldrTest extends TestCase {
 	 * @return void
 	 */
 	public function testNumbers() {
+		foreach (glob(__DIR__ . '/data/cldr-28/main/*.xml') as $cldr) {
+			if (strpos($cldr, '/root/layout.json') === false) {
+				$locale = Locale::create(basename($cldr, '.xml'));
+				$xml    = simplexml_load_file($cldr);
+				while (!isset($xml->numbers->defaultNumberingSystem)) {
+					$cldr = $this->parentCldr($cldr);
+					$xml  = simplexml_load_file($cldr);
+				}
+
+				$dir = (string) $xml->layout->orientation->characterOrder;
+
+				$this->assertSame($direction[$dir], $locale->direction());
+			}
+		}
+
+
+
 		foreach (glob(__DIR__ . '/data/cldr-27.0.3/cldr-numbers-full/main/*/numbers.json') as $cldr) {
 			if (strpos($cldr, '/root/numbers.json') === false) {
 				$locale                   = $this->cldrLocale($cldr);
