@@ -16,8 +16,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class LocaleTest extends TestCase {
 	/**
 	 * Test the comparator
-	 *
-	 * @return void
 	 */
 	public function testCompare() {
 		// American English, Australian English, British English
@@ -38,8 +36,6 @@ class LocaleTest extends TestCase {
 	 * Test the comparator
 	 *
 	 * @medium
-	 *
-	 * @return void
 	 */
 	public function testCompareAll() {
 		$array = array_map(function($x) {
@@ -54,8 +50,6 @@ class LocaleTest extends TestCase {
 
 	/**
 	 * Test creating valid locales
-	 *
-	 * @return void
 	 */
 	public function testCreateValidLocale() {
 		$locale1 = Locale::create('en-GB');
@@ -79,8 +73,6 @@ class LocaleTest extends TestCase {
 
 	/**
 	 * Test language negotiation
-	 *
-	 * @return void
 	 */
 	public function testHttpAcceptLanguage() {
 		$available = array(
@@ -98,8 +90,6 @@ class LocaleTest extends TestCase {
 
 	/**
 	 * Test language negotiation
-	 *
-	 * @return void
 	 */
 	public function testHttpAcceptLanguageNoneMatching() {
 		$available = array(
@@ -117,8 +107,6 @@ class LocaleTest extends TestCase {
 
 	/**
 	 * Test language negotiation
-	 *
-	 * @return void
 	 */
 	public function testHttpAcceptLanguageDowngrade() {
 		$available = array(
@@ -136,8 +124,6 @@ class LocaleTest extends TestCase {
 
 	/**
 	 * Test language negotiation
-	 *
-	 * @return void
 	 */
 	public function testHttpAcceptLanguageNoneSelected() {
 		$available = array();

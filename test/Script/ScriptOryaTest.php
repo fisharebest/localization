@@ -12,8 +12,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class ScriptOryaTest extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
 		$script = new ScriptOrya;

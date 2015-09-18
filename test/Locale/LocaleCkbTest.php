@@ -16,8 +16,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class LocaleCkbTest extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
 		$locale = new LocaleCkb;
@@ -30,7 +28,7 @@ class LocaleCkbTest extends TestCase {
 		$this->assertSame('ckb_IQ', $locale->code());
 		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
-		$this->assertSame('سۆرانی', $locale->endonym());
+		$this->assertSame('کوردیی ناوەندی', $locale->endonym());
 		$this->assertSame('lang="ckb" dir="rtl"', $locale->htmlAttributes());
 		$this->assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
 		$this->assertSame('‏-١٢٣', $locale->number(-123));

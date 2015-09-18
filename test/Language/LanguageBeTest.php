@@ -14,8 +14,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class LanguageBeTest extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
 		$language = new LanguageBe;

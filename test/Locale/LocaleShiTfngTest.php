@@ -16,8 +16,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class LocaleShiTfngTest extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
 		$locale = new LocaleShiTfng;
@@ -30,7 +28,7 @@ class LocaleShiTfngTest extends TestCase {
 		$this->assertSame('shi_MA', $locale->code());
 		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('ⵜⴰⵎⴰⵣⵉⵖⵜ', $locale->endonym());
+		$this->assertSame('ⵜⴰⵛⵍⵃⵉⵜ', $locale->endonym());
 		$this->assertSame('lang="shi" dir="ltr"', $locale->htmlAttributes());
 		$this->assertSame('shi', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));

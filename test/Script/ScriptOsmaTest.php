@@ -12,8 +12,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class ScriptOsmaTest extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
 		$script = new ScriptOsma;

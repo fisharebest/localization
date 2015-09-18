@@ -12,8 +12,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class ScriptYiiiTest extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
 		$script = new ScriptYiii;

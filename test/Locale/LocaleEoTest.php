@@ -16,8 +16,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class LocaleEoTest extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
 		$locale = new LocaleEo;
@@ -34,7 +32,7 @@ class LocaleEoTest extends TestCase {
 		$this->assertSame('lang="eo"', $locale->htmlAttributes());
 		$this->assertSame('eo', $locale->languageTag());
 		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
-		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('−123', $locale->number(-123));
 		$this->assertSame('1 234,56%', $locale->percent(12.3456));
 	}
 }

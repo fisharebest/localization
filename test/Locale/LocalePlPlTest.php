@@ -16,8 +16,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class LocalePlPlTest extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
 		$locale = new LocalePlPl;

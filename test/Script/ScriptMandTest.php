@@ -12,8 +12,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class ScriptMandTest extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
 		$script = new ScriptMand;

@@ -12,8 +12,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class TerritorySnTest extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
 		$territory = new TerritorySn;

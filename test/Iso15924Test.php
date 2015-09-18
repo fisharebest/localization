@@ -15,8 +15,6 @@ class Iso15924Test extends TestCase {
 	 * Test the scripts against their definitions in ISO15924
 	 *
 	 * @medium
-	 *
-	 * @return void
 	 */
 	public function testIso15924() {
 		$iso15924 = file(__DIR__ . '/data/iso15924-utf8-20150715.txt', FILE_IGNORE_NEW_LINES);

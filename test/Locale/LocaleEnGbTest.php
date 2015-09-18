@@ -16,8 +16,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class LocaleEnGbTest extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
 		$locale = new LocaleEnGb;
@@ -30,6 +28,7 @@ class LocaleEnGbTest extends TestCase {
 		$this->assertSame('en_GB', $locale->code());
 		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
+		$this->assertSame('British English', $locale->endonym());
 		$this->assertSame('lang="en-GB"', $locale->htmlAttributes());
 		$this->assertSame('en-GB', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));

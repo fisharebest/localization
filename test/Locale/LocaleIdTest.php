@@ -16,8 +16,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class LocaleIdTest extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
 		$locale = new LocaleId;
@@ -30,7 +28,7 @@ class LocaleIdTest extends TestCase {
 		$this->assertSame('id_ID', $locale->code());
 		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('Bahasa Indonesia', $locale->endonym());
+		$this->assertSame('Indonesia', $locale->endonym());
 		$this->assertSame('lang="id"', $locale->htmlAttributes());
 		$this->assertSame('id', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));

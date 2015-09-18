@@ -3,7 +3,7 @@
 use Fisharebest\Localization\Language\LanguagePrg;
 use Fisharebest\Localization\PluralRule\PluralRule3;
 use Fisharebest\Localization\Script\ScriptLatn;
-use Fisharebest\Localization\Territory\TerritoryLv;
+use Fisharebest\Localization\Territory\Territory001;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
@@ -13,24 +13,22 @@ use PHPUnit_Framework_TestCase as TestCase;
  * @copyright (c) 2015 Greg Roach
  * @license   GPLv3+
  */
-class LocalePrgTest extends TestCase {
+class LocalePrg001Test extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
-		$locale = new LocalePrg;
+		$locale = new LocalePrg001;
 
 		$this->assertEquals(new LanguagePrg, $locale->language());
 		$this->assertEquals(new PluralRule3, $locale->pluralRule());
 		$this->assertEquals(new ScriptLatn, $locale->script());
-		$this->assertEquals(new TerritoryLv, $locale->territory());
+		$this->assertEquals(new Territory001, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertSame('prg_LV', $locale->code());
+		$this->assertSame('prg_001', $locale->code());
 		$this->assertSame('latvian_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('Old Prussian', $locale->endonym());
+		$this->assertSame('prūsiskan', $locale->endonym());
 		$this->assertSame('lang="prg"', $locale->htmlAttributes());
 		$this->assertSame('prg', $locale->languageTag());
 		$this->assertSame('12345 678,09', $locale->number(12345678.09));

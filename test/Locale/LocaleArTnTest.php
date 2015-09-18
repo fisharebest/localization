@@ -16,8 +16,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class LocaleArTnTest extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
 		$locale = new LocaleArTn;
@@ -34,6 +32,6 @@ class LocaleArTnTest extends TestCase {
 		$this->assertSame('ar-TN', $locale->languageTag());
 		$this->assertSame('١٢.٣٤٥.٦٧٨,٠٩', $locale->number(12345678.09));
 		$this->assertSame('‎-١٢٣', $locale->number(-123));
-		$this->assertSame('١.٢٣٤,٥٦%', $locale->percent(12.3456));
+		$this->assertSame('١.٢٣٤,٥٦٪', $locale->percent(12.3456));
 	}
 }

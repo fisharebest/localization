@@ -1,5 +1,6 @@
 <?php namespace Fisharebest\Localization;
 
+use Exception;
 use Fisharebest\Localization\Locale\LocaleInterface;
 use Fisharebest\Localization\Locale\LocaleNmg;
 use Fisharebest\Localization\Territory\TerritoryInterface;
@@ -14,89 +15,9 @@ use PHPUnit_Framework_TestCase as TestCase;
  */
 class CldrTest extends TestCase {
 	/**
-	 * Test weekData
-	 *
-	 * @medium
-	 *
-	 * @return void
-	 */
-	public function testWeekData() {
-		$days = array(
-			'sun' => 0,
-			'mon' => 1,
-			'tue' => 2,
-			'wed' => 3,
-			'thu' => 4,
-			'fri' => 5,
-			'sat' => 6,
-		);
-
-		$cldr = file_get_contents(__DIR__ . '/data/cldr-27.0.3/cldr-core/supplemental/weekData.json');
-		$cldr = json_decode($cldr);
-
-		foreach ($cldr->supplemental->weekData->firstDay as $code => $day) {
-			$class = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
-
-			/** @var TerritoryInterface $territory */
-			$territory = new $class;
-
-			$this->assertSame($days[$day], $territory->firstDay());
-		}
-
-		foreach ($cldr->supplemental->weekData->weekendStart as $code => $day) {
-			$class = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
-
-			/** @var TerritoryInterface $territory */
-			$territory = new $class;
-
-			$this->assertSame($days[$day], $territory->weekendStart());
-		}
-
-		foreach ($cldr->supplemental->weekData->weekendEnd as $code => $day) {
-			$class = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
-
-			/** @var TerritoryInterface $territory */
-			$territory = new $class;
-
-			$this->assertSame($days[$day], $territory->weekendEnd());
-		}
-	}
-
-	/**
-	 * Test measurementData
-	 *
-	 * @medium
-	 *
-	 * @return void
-	 */
-	public function testMeasurementData() {
-		$cldr = file_get_contents(__DIR__ . '/data/cldr-27.0.3/cldr-core/supplemental/measurementData.json');
-		$cldr = json_decode($cldr);
-
-		foreach ($cldr->supplemental->measurementData->measurementSystem as $code => $data) {
-			$class = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
-
-			/** @var TerritoryInterface $territory */
-			$territory = new $class;
-			$this->assertSame($data, $territory->measurementSystem());
-		}
-
-		foreach ($cldr->supplemental->measurementData->paperSize as $code => $data) {
-			$class = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
-
-			/** @var TerritoryInterface $territory */
-			$territory = new $class;
-
-			$this->assertSame($data, $territory->paperSize());
-		}
-	}
-
-	/**
 	 * Test layout
 	 *
 	 * @medium
-	 *
-	 * @return void
 	 */
 	public function testCharacterOrder() {
 		$direction = array(
@@ -104,13 +25,12 @@ class CldrTest extends TestCase {
 			'right-to-left' => 'rtl',
 		);
 
-		foreach (glob(__DIR__ . '/data/cldr-27.0.3/cldr-misc-full/main/*/layout.json') as $cldr) {
-			if (strpos($cldr, '/root/layout.json') === false) {
-				$locale = $this->cldrLocale($cldr);
-				$json   = $this->cldrJson($cldr);
-				$dir    = $direction[$json['layout']['orientation']['characterOrder']];
+		foreach (glob(__DIR__ . '/data/cldr-28/main/*.xml') as $cldr) {
+			if (strpos($cldr, '/root.xml') === false) {
+				$locale = Locale::create(basename($cldr, '.xml'));
+				$dir    = $this->cldrValue($cldr, '/ldml/layout/orientation/characterOrder');
 
-				$this->assertSame($dir, $locale->direction());
+				$this->assertSame($direction[$dir], $locale->direction());
 			}
 		}
 	}
@@ -119,66 +39,62 @@ class CldrTest extends TestCase {
 	 * Test numbers
 	 *
 	 * @large
-	 *
-	 * @return void
 	 */
 	public function testNumbers() {
 		foreach (glob(__DIR__ . '/data/cldr-28/main/*.xml') as $cldr) {
-			if (strpos($cldr, '/root/layout.json') === false) {
+			if (strpos($cldr, '/root.xml') === false) {
 				$locale = Locale::create(basename($cldr, '.xml'));
-				$xml    = simplexml_load_file($cldr);
-				while (!isset($xml->numbers->defaultNumberingSystem)) {
-					$cldr = $this->parentCldr($cldr);
-					$xml  = simplexml_load_file($cldr);
+				//if ($locale->language()->code() !== 'es') continue;
+
+				$def_num_system = $this->cldrValue($cldr, "/ldml/numbers/defaultNumberingSystem");
+				try {
+					$alias = $this->cldrValue($cldr, "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/alias/@path");
+					if ($alias === "../symbols[@numberSystem='latn']") {
+						$def_num_system = 'latn';
+					}
+				} catch (Exception $ex) {
+				}
+				$decimal        = $this->cldrValue($cldr, "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/decimal");
+				$group          = $this->cldrValue($cldr, "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/group");
+				$percent_sign   = $this->cldrValue($cldr, "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/percentSign");
+				$minus_sign     = $this->cldrValue($cldr, "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/minusSign");
+
+				$def_num_system = $this->cldrValue($cldr, "/ldml/numbers/defaultNumberingSystem");
+				try {
+					$alias = $this->cldrValue($cldr, "/ldml/numbers/decimalFormats[@numberSystem='" . $def_num_system . "']/alias/@path");
+					if ($alias === "../decimalFormats[@numberSystem='latn']") {
+						$def_num_system = 'latn';
+					}
+				} catch (Exception $ex) {
+				}
+				$standard       = $this->cldrValue($cldr, "/ldml/numbers/decimalFormats[@numberSystem='" . $def_num_system . "']/decimalFormatLength[not(@type)]/decimalFormat/pattern");
+				$percent        = $this->cldrValue($cldr, "/ldml/numbers/percentFormats[@numberSystem='" . $def_num_system . "']/percentFormatLength[not(@type)]/percentFormat/pattern");
+
+				// The CLDR example doesn't demonstrate the lack of group separators.
+				if ($standard === '#0.######' && $locale->languageTag() === 'en-US-posix') {
+					$standard = '########.###';
 				}
 
-				$dir = (string) $xml->layout->orientation->characterOrder;
+				// Check the (end of the) number matches the pattern.  Extra leading digits are OK.
+				$number = $locale->number(12345678.089);
+				$regex  = '/' . strtr($standard, array(
+					',' => preg_quote($group, '/'),
+					'.' => preg_quote($decimal, '/'),
+					'0' => '.',
+					'#' => '.',
+				)) . '$/u';
+				$this->assertTrue(preg_match($regex, $number) === 1);
 
-				$this->assertSame($direction[$dir], $locale->direction());
-			}
-		}
-
-
-
-		foreach (glob(__DIR__ . '/data/cldr-27.0.3/cldr-numbers-full/main/*/numbers.json') as $cldr) {
-			if (strpos($cldr, '/root/numbers.json') === false) {
-				$locale                   = $this->cldrLocale($cldr);
-				$json                     = $this->cldrJson($cldr);
-				$default_numbering_system = $json['numbers']['defaultNumberingSystem'];
-				$symbols_key              = 'symbols-numberSystem-' . $default_numbering_system;
-				$decimal_formats_key      = 'decimalFormats-numberSystem-' . $default_numbering_system;
-				$percent_formats_key      = 'percentFormats-numberSystem-' . $default_numbering_system;
-				$decimal                  = $json['numbers'][$symbols_key]['decimal'];
-				$group                    = $json['numbers'][$symbols_key]['group'];
-				$minus_sign               = $json['numbers'][$symbols_key]['minusSign'];
-				$percent_sign             = $json['numbers'][$symbols_key]['percentSign'];
-				$standard                 = $json['numbers'][$decimal_formats_key]['standard'];
-				$percent                  = $json['numbers'][$percent_formats_key]['standard'];
-
-				if ($locale->languageTag() !== 'en-US-posix') {
-					$number = $locale->number(12345678.089);
-					$regex  = '/' . strtr($standard, array(
-						',' => preg_quote($group, '/'),
-						'.' => preg_quote($decimal, '/'),
-						'0' => '.',
-						'#' => '.',
-					)) . '$/u';
-
-					// Check the number matches the pattern
-					$this->assertTrue(preg_match($regex, $number) === 1);
-
-					$number = $locale->percent(12345.67);
-					$regex  = '/' . strtr($percent, array(
-						',' => preg_quote($group, '/'),
-						'.' => preg_quote($decimal, '/'),
-						'0' => '.',
-						'#' => '.',
-						'%' => $percent_sign,
-					)) . '/u';
-
-					// Check the percentage matches the pattern
-					$this->assertTrue(preg_match($regex, $number) === 1);
-				}
+				// Check the percentage matches the pattern.
+				$number = $locale->percent(12345.67);
+				$regex  = '/' . strtr($percent, array(
+					',' => preg_quote($group, '/'),
+					'.' => preg_quote($decimal, '/'),
+					'0' => '.',
+					'#' => '.',
+					'%' => preg_quote($percent_sign, '/'),
+				)) . '/u';
+				$this->assertTrue(preg_match($regex, $number) === 1);
 
 				// Check the minus sign is correct
 				$this->assertTrue(strpos($locale->number(-1), $minus_sign) === 0);
@@ -187,118 +103,45 @@ class CldrTest extends TestCase {
 	}
 
 	/**
-	 * Test languages
+	 * Find the parent to a CLDR locale file.
 	 *
-	 * @medium
-	 *
-	 * @return void
-	 */
-	public function testLanguages() {
-		foreach (glob(__DIR__ . '/data/cldr-27.0.3/cldr-localenames-full/main/*/languages.json') as $cldr) {
-			if (strpos($cldr, '/root/languages.json') === false) {
-				$locale = $this->cldrLocale($cldr);
-				$json   = $this->cldrJson($cldr);
-
-				$language_tag = $locale->languageTag();
-				if (isset($json['localeDisplayNames']['languages'][$language_tag])) {
-					$endonym = $json['localeDisplayNames']['languages'][$language_tag];
-
-					if ($locale instanceof LocaleNmg) {
-						// CLDR 27.0.3 gives the language code as the language name.
-						$endonym = 'Kwasio';
-					}
-
-					$this->assertSame($endonym, $locale->endonym());
-				}
-			}
-		}
-	}
-
-	/**
-	 * Test plural rules
-	 *
-	 * @large
-	 *
-	 * @return void
-	 */
-	public function testPluralRules() {
-		$cldr = file_get_contents(__DIR__ . '/data/cldr-27.0.3/cldr-core/supplemental/plurals.json');
-		$cldr = json_decode($cldr, true);
-
-		foreach ($cldr['supplemental']['plurals-type-cardinal'] as $code => $data) {
-			// The following CLDR definitions/examples are incompatible with the accepted gettext ones.
-			switch ($code) {
-			case 'root': // This isn't a locale
-			case 'in':   // This code (Indonesian) is deprecated. Use id.
-			case 'iw':   // This code (Hebrew) is deprecated. Use he.
-			case 'ji':   // This code (Javanese) is deprecated,  Use yi.
-			case 'jw':   // This code (Javanese) is deprecated.  Use jv.
-			case 'no':   // This code (Norwegian) is deprecated. Use nb or nn.
-			case 'sh':   // This code (Serbo-croat) is deprecated
-			case 'br':   // CLDR has 5 rules, whereas gettext has (0,1) (other)
-			case 'cy':   // CLDR has 5 rules, whereas gettext has (1), (2), (other), (8,11)
-			case 'fa':   // CLDR has (0,1) (other), whereas gettext has (other)
-			case 'fil':  // CLDR has a different rule from gettext
-			case 'he':   // CLDR has (1) (2) (many) (other), whereas gettext has (1) (other)
-			case 'kw':   // CLDR has 3 rules, whereas gettext has (1), (2), (3), (other)
-			case 'lv':   // CLDR has (0) (1) (other), whereas gettext has (1) (other) (0)
-			case 'mk':   // There are lots of conflicting definitions.
-			case 'prg':  // Same as lv
-			case 'pt':   // CLDR has the plural rule for pt-BR, whereas gettext has the plural rule for pt-PT
-			case 'se':   // CLDR has (1) (2) (other), whereas gettext has (0,1) (other)
-			case 'tr':   // CLDR has (1) (other), whereas gettext has (other)
-				continue 2;
-			}
-			try {
-				$locale = Locale::create($code);
-				$rules = array();
-				foreach ($data as $datum) {
-					if (preg_match('/@integer ([^@]+)/', $datum, $example)) {
-						$rules[] = preg_split('/[^0-9~]+/', $example[1], -1, PREG_SPLIT_NO_EMPTY);
-					};
-				}
-				$this->assertSame(count($rules), $locale->pluralRule()->plurals());
-
-				foreach ($rules as $rule => $examples) {
-					foreach ($examples as $example) {
-						if (strpos($example, '~')) {
-							list($low, $high) = explode('~', $example);
-							for ($number = $low; $number <= $high; ++$number) {
-								$this->assertSame($rule, $locale->pluralRule()->plural($number));
-							}
-						} else {
-							if ($rule !== $locale->pluralRule()->plural($example)) { var_dump($code);}
-							$this->assertSame($rule, $locale->pluralRule()->plural($example));
-						}
-					}
-				}
-			} catch (\DomainException $ex) {
-				var_dump("Found CLDR plural rule for non-existant language $code");
-			}
-		}
-	}
-
-	/**
-	 * Extract the JSON data from a JSON file
-	 *
-	 * @param string $file
-	 *
-	 * @return \stdClass
-	 */
-	private function cldrJson($file) {
-		$data = json_decode(file_get_contents($file), true);
-
-		return reset($data['main']);
-	}
-
-	/**
-	 * Create a locale object corresponding to a CLDR JSON file
+	 * en_GB.xml -> en.xml -> root.xml
 	 *
 	 * @param string $file
 	 *
 	 * @return LocaleInterface
 	 */
-	private function cldrLocale($file) {
-		return Locale::create(basename(dirname($file)));
+	private function parentCldr($file) {
+		$dirname  = dirname($file);
+		$basename = basename($file, '.xml');
+		$parts    = explode('_', $basename);
+
+		if (count($parts) == 1) {
+			return $dirname . '/root.xml';
+		} else {
+			return $dirname . '/' . implode('_', array_slice($parts, 0, -1)) . '.xml';
+		}
+	}
+
+	/**
+	 * @param string $file
+	 * @param string $xpath
+	 *
+	 * @return string
+	 */
+	private function cldrValue($file, $xpath) {
+		$xml = simplexml_load_file($file);
+		$tmp = $file;
+
+		while ($xml->xpath($xpath) == false) {
+			if (strpos($file, 'root.xml') !== false) {
+				throw new \Exception('Cannot find ' . $xpath . ' in ' . $tmp);
+			}
+			$file = $this->parentCldr($file);
+			$xml  = simplexml_load_file($file);
+		}
+		$data = $xml->xpath($xpath);
+
+		return (string) $data[0];
 	}
 }

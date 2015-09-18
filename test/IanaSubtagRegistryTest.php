@@ -16,8 +16,6 @@ class IanaSubtagRegistryTest extends TestCase {
 	 * Test the language tags against the IANA subtag registry
 	 *
 	 * @large
-	 *
-	 * @return void
 	 */
 	public function testLanguageTags() {
 		$iana = file_get_contents(__DIR__ . '/data/language-subtag-registry');
@@ -42,8 +40,6 @@ class IanaSubtagRegistryTest extends TestCase {
 	 * Test the script tags against the IANA subtag registry
 	 *
 	 * @large
-	 *
-	 * @return void
 	 */
 	public function testScriptTags() {
 		$iana = file_get_contents(__DIR__ . '/data/language-subtag-registry');
@@ -65,8 +61,6 @@ class IanaSubtagRegistryTest extends TestCase {
 	 * Test the territory (region) tags against the IANA subtag registry
 	 *
 	 * @large
-	 *
-	 * @return void
 	 */
 	public function testTerritoryTags() {
 		$iana = file_get_contents(__DIR__ . '/data/language-subtag-registry');

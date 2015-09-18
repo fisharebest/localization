@@ -16,8 +16,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class LocaleEtTest extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
 		$locale = new LocaleEt;
@@ -33,7 +31,7 @@ class LocaleEtTest extends TestCase {
 		$this->assertSame('eesti', $locale->endonym());
 		$this->assertSame('lang="et"', $locale->htmlAttributes());
 		$this->assertSame('et', $locale->languageTag());
-		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('−123', $locale->number(-123));
 		$this->assertSame('12345 678,09', $locale->number(12345678.09));
 		$this->assertSame('1234,56%', $locale->percent(12.3456));
 	}

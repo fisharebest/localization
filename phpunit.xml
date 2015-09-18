@@ -6,6 +6,9 @@
 	bootstrap="vendor/autoload.php"
 	checkForUnintentionallyCoveredCode="false"
 	colors="true"
+	timeoutForSmallTests="10"
+	timeoutForMediumTests="60"
+	timeoutForLargeTests="300"
 	xmlns=""
 >
 	<testsuites>

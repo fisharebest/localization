@@ -16,8 +16,6 @@ use PHPUnit_Framework_TestCase as TestCase;
 class LocaleUzArabTest extends TestCase {
 	/**
 	 * Test the properties
-	 *
-	 * @return void
 	 */
 	public function testProperties() {
 		$locale = new LocaleUzArab;
@@ -31,7 +29,7 @@ class LocaleUzArabTest extends TestCase {
 		$this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
 		$this->assertSame('lang="uz-Arab" dir="rtl"', $locale->htmlAttributes());
 		$this->assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
-		$this->assertSame('‎-‎١٢٣', $locale->number(-123));
+		$this->assertSame('-١٢٣', $locale->number(-123));
 		$this->assertSame('١٬٢٣٤٫٥٦٪', $locale->percent(12.3456));
 	}
 }
