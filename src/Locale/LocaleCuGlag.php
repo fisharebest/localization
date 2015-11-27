@@ -11,6 +11,14 @@ use Fisharebest\Localization\Script\ScriptGlag;
  */
 
 class LocaleCuGlag extends LocaleCu {
+	public function endonym() {
+		return 'ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ';
+	}
+
+	public function endonymSortable() {
+		return 'ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ';
+	}
+
 	public function script() {
 		return new ScriptGlag;
 	}

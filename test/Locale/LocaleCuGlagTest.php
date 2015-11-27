@@ -25,12 +25,12 @@ class LocaleCuGlagTest extends TestCase {
 		$this->assertEquals(new ScriptGlag, $locale->script());
 		$this->assertEquals(new TerritoryRu, $locale->territory());
 		$this->assertNull($locale->variant());
-		$this->assertSame('cu_RU@glagolithic', $locale->code());
+		$this->assertSame('cu_RU@glagolitic', $locale->code());
 		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
 		$this->assertSame('ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ', $locale->endonym());
 		$this->assertSame('lang="cu-Glag"', $locale->htmlAttributes());
-		$this->assertSame('cu', $locale->languageTag());
+		$this->assertSame('cu-Glag', $locale->languageTag());
 		$this->assertSame('-123', $locale->number(-123));
 		$this->assertSame('12 345 678,09', $locale->number(12345678.09));
 		$this->assertSame('1 234,56 %', $locale->percent(12.3456));
