@@ -16,6 +16,8 @@ the [Unicode CLDR](http://cldr.unicode.org),
 etc., to help you produce applications that behave nicely for visitors from
 around the world.
 
+Includes definitions for over 750 locales.
+
 Locales, languages, scripts and territories
 ===========================================
 
@@ -60,7 +62,7 @@ Create a locale and use it to localize data in your application.
 ``` php
 // Many ways to create locales
 $locale = new LocaleEnGb;
-$locale = Locale::create('en-GB'); // Upper/lower case, hyphen/underscore
+$locale = Locale::create('en-GB'); // Use upper/lower case, hyphens/underscores/@
 $locale = Locale::httpAcceptLanguage($_SERVER, $available_locales, $default_locale);
 
 // Markup for HTML elements containing this locale
