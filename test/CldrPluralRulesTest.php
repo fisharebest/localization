@@ -19,7 +19,7 @@ class CldrPluralRulesTest extends TestCase {
 	 * @large
 	 */
 	public function testPluralRules() {
-		$cldr = simplexml_load_file(__DIR__ . '/data/cldr-28/supplemental/plurals.xml');
+		$cldr = simplexml_load_file(__DIR__ . '/data/cldr-29/supplemental/plurals.xml');
 
 		foreach ($cldr->xpath("/supplementalData/plurals[@type='cardinal']/pluralRules") as $plural_rule) {
 			$tmp = $plural_rule->attributes(); // For PHP5.3

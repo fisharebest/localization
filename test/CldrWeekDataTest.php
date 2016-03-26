@@ -29,7 +29,7 @@ class CldrWeekDataTest extends TestCase {
 			'sat' => 6,
 		);
 
-		$cldr = simplexml_load_file(__DIR__ . '/data/cldr-28/supplemental/supplementalData.xml');
+		$cldr = simplexml_load_file(__DIR__ . '/data/cldr-29/supplemental/supplementalData.xml');
 
 		foreach ($cldr->weekData->firstDay as $xml) {
 			if ($xml->attributes()->alt != 'variant') {
