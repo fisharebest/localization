@@ -52,6 +52,7 @@ Gran;343;Grantha;grantha;Grantha;2014-11-15
 Grek;200;Greek;grec;Greek;2004-05-01
 Gujr;320;Gujarati;goudjarâtî (gujrâtî);Gujarati;2004-05-01
 Guru;310;Gurmukhi;gourmoukhî;Gurmukhi;2004-05-01
+Hanb;503;Han with Bopomofo (alias for Han + Bopomofo);han avec bopomofo (alias pour han + bopomofo);;2016-01-19
 Hang;286;Hangul (Hangŭl, Hangeul);hangûl (hangŭl, hangeul);Hangul;2004-05-29
 Hani;500;Han (Hanzi, Kanji, Hanja);idéogrammes han (sinogrammes);Han;2009-02-23
 Hano;371;Hanunoo (Hanunóo);hanounóo;Hanunoo;2004-05-29
@@ -66,6 +67,7 @@ Hrkt;412;Japanese syllabaries (alias for Hiragana + Katakana);syllabaires japona
 Hung;176;Old Hungarian (Hungarian Runic);runes hongroises (ancien hongrois);Old_Hungarian;2015-07-07
 Inds;610;Indus (Harappan);indus;;2004-05-01
 Ital;210;Old Italic (Etruscan, Oscan, etc.);ancien italique (étrusque, osque, etc.);Old_Italic;2004-05-29
+Jamo;284;Jamo (alias for Jamo subset of Hangul);jamo (alias pour le sous-ensemble jamo du hangûl);;2016-01-19
 Java;361;Javanese;javanais;Javanese;2009-06-01
 Jpan;413;Japanese (alias for Han + Hiragana + Katakana);japonais (alias pour han + hiragana + katakana);;2006-06-21
 Jurc;510;Jurchen;jurchen;;2010-12-21
@@ -112,6 +114,7 @@ Mult;323;Multani;multanî;Multani;2015-07-07
 Mymr;350;Myanmar (Burmese);birman;Myanmar;2004-05-01
 Narb;106;Old North Arabian (Ancient North Arabian);nord-arabique;Old_North_Arabian;2014-11-15
 Nbat;159;Nabataean;nabatéen;Nabataean;2014-11-15
+Newa;333;Newa, Newar, Newari, Nepāla lipi;néwa, néwar, néwari, nepāla lipi;;2015-12-16
 Nkgb;420;Nakhi Geba ('Na-'Khi ²Ggŏ-¹baw, Naxi Geba);nakhi géba;;2009-02-23
 Nkoo;165;N’Ko;n’ko;Nko;2006-10-10
 Nshu;499;Nüshu;nüshu;;2010-12-21
@@ -130,6 +133,7 @@ Phlp;132;Psalter Pahlavi;pehlevi des psautiers;Psalter_Pahlavi;2014-11-15
 Phlv;133;Book Pahlavi;pehlevi des livres;;2007-07-15
 Phnx;115;Phoenician;phénicien;Phoenician;2006-10-10
 Plrd;282;Miao (Pollard);miao (Pollard);Miao;2012-02-06
+Piqd;293;Klingon (KLI pIqaD);klingon (pIqaD du KLI);;2015-12-16
 Prti;130;Inscriptional Parthian;parthe des inscriptions;Inscriptional_Parthian;2009-06-01
 Qaaa;900;Reserved for private use (start);réservé à l’usage privé (début);;2004-05-29
 Qabx;949;Reserved for private use (end);réservé à l’usage privé (fin);;2004-05-29
@@ -178,6 +182,7 @@ Xsux;020;Cuneiform, Sumero-Akkadian;cunéiforme suméro-akkadien;Cuneiform;2006-
 Yiii;460;Yi;yi;Yi;2004-05-01
 Zinh;994;Code for inherited script;codet pour écriture héritée;Inherited;2009-02-23
 Zmth;995;Mathematical notation;notation mathématique;;2007-11-26
+Zsye;993;Symbols (Emoji variant);symboles (variante émoji);;2015-12-16
 Zsym;996;Symbols;symboles;;2007-11-26
 Zxxx;997;Code for unwritten documents;codet pour les documents non écrits;;2011-06-21
 Zyyy;998;Code for undetermined script;codet pour écriture indéterminée;Common;2004-05-29

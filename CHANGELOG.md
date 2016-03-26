@@ -1,6 +1,9 @@
 CHANGE LOG
 ==========
 
+## 1.8.0 (2016-03-26)
+ - Updated version of ISO15924 and iana-subtag-registry.
+
 ## 1.7.0 (2015-11-27)
  - Updated version of CLDR
 

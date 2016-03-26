@@ -4,7 +4,6 @@
 	beStrictAboutTestsThatDoNotTestAnything="true"
 	beStrictAboutTestSize="true"
 	bootstrap="vendor/autoload.php"
-	checkForUnintentionallyCoveredCode="false"
 	colors="true"
 	timeoutForSmallTests="10"
 	timeoutForMediumTests="60"
@@ -16,4 +15,9 @@
 			<directory>test</directory>
 		</testsuite>
 	</testsuites>
+	<filter>
+		<whitelist>
+			<directory suffix=".php">src</directory>
+		</whitelist>
+	</filter>
 </phpunit>
