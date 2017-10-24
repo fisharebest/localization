@@ -45,7 +45,10 @@ class Translation {
 			break;
 
 		case 'php':
-			$this->translations = include $filename;
+			$translations = include $filename;
+			if (is_array($translations)) {
+			    $this->translations = $translations;
+            }
 			break;
 		}
 	}

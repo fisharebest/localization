@@ -12,6 +12,17 @@ use PHPUnit_Framework_TestCase as TestCase;
  */
 class TranslateTest extends TestCase {
 	/**
+	 * Test invalid translation file
+	 */
+	public function testInvalidPhpFile() {
+		$translation = new Translation(__DIR__ . '/data/invalid.php');
+		$translator = new Translator($translation->asArray(), new PluralRule2);
+
+        // Not translated
+        $this->assertSame('the fish', $translator->translate('the fish'));
+	}
+
+	/**
 	 * Test translation using a .CSV data source
 	 */
 	public function testCsv() {
