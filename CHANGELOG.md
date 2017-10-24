@@ -1,6 +1,9 @@
 CHANGE LOG
 ==========
 
+## 
+ - Add PHP7.1 and PHP7.2 to the test matrix.
+
 ## 1.10.0 (2016-06-02)
  - Add Anglo-Saxon (ang).
 
