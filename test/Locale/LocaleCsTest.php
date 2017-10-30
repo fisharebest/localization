@@ -26,7 +26,7 @@ class LocaleCsTest extends TestCase {
 		$this->assertEquals(new TerritoryCz, $locale->territory());
 		$this->assertNull($locale->variant());
 		$this->assertSame('cs_CZ', $locale->code());
-		$this->assertSame('croatian_ci', $locale->collation());
+		$this->assertSame('czech_ci', $locale->collation());
 		$this->assertSame('0123456789', $locale->digits('0123456789'));
 		$this->assertSame('čeština', $locale->endonym());
 		$this->assertSame('lang="cs"', $locale->htmlAttributes());
