@@ -26,7 +26,7 @@ class LocaleKl extends AbstractLocale implements LocaleInterface {
 		return array(
 			self::GROUP    => self::DOT,
 			self::DECIMAL  => self::COMMA,
-			self::NEGATIVE => self::HYPHEN,
+            self::NEGATIVE => self::MINUS_SIGN,
 		);
 	}
 

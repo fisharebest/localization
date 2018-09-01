@@ -4,7 +4,7 @@
  * Class ScriptAdlm - Representation of the Adlam script.
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
 class ScriptAdlm extends AbstractScript implements ScriptInterface {
@@ -15,4 +15,8 @@ class ScriptAdlm extends AbstractScript implements ScriptInterface {
 	public function number() {
 		return '166';
 	}
+
+    public function unicodeName() {
+        return 'Adlam';
+    }
 }

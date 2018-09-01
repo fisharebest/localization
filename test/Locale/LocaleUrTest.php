@@ -29,8 +29,8 @@ class LocaleUrTest extends TestCase {
 		$this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
 		$this->assertSame('اردو', $locale->endonym());
 		$this->assertSame('lang="ur" dir="rtl"', $locale->htmlAttributes());
-		$this->assertSame('١,٢٣,٤٥,٦٧٨.٠٩', $locale->number(12345678.09));
-		$this->assertSame('‎-‎١٢٣', $locale->number(-123));
-		$this->assertSame('١,٢٣٤.٥٦%', $locale->percent(12.3456));
+        $this->assertSame('١,٢٣,٤٥,٦٧٨.٠٩', $locale->number(12345678.09));
+        $this->assertSame('‎-١٢٣', $locale->number(-123));
+        $this->assertSame('١,٢٣٤.٥٦%', $locale->percent(12.3456));
 	}
 }

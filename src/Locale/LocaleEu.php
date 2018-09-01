@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageEu;
  * Class LocaleEu - Basque
  *
  * @author        Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license       GPLv3+
  */
 class LocaleEu extends AbstractLocale implements LocaleInterface {
@@ -24,8 +24,9 @@ class LocaleEu extends AbstractLocale implements LocaleInterface {
 
 	public function numberSymbols() {
 		return array(
-			self::GROUP   => self::DOT,
-			self::DECIMAL => self::COMMA,
+			self::GROUP    => self::DOT,
+			self::DECIMAL  => self::COMMA,
+			self::NEGATIVE => self::MINUS_SIGN,
 		);
 	}
 

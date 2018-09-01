@@ -21,4 +21,16 @@ class LocaleSmn extends AbstractLocale implements LocaleInterface {
 	public function language() {
 		return new LanguageSmn;
 	}
+
+    public function numberSymbols() {
+        return array(
+            self::GROUP   => self::NBSP,
+            self::DECIMAL => self::COMMA,
+        );
+    }
+
+    public function percentFormat()
+    {
+        return '%s' . self:: NBSP . self::PERCENT;
+    }
 }

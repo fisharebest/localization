@@ -9,7 +9,7 @@ use PHPUnit_Framework_TestCase as TestCase;
  * Unit tests for the CLDR
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
 class CldrWeekDataTest extends TestCase {
@@ -29,7 +29,7 @@ class CldrWeekDataTest extends TestCase {
 			'sat' => 6,
 		);
 
-		$cldr = simplexml_load_file(__DIR__ . '/data/cldr-29/supplemental/supplementalData.xml');
+		$cldr = simplexml_load_file(__DIR__ . '/data/cldr-33.1/supplemental/supplementalData.xml');
 
 		foreach ($cldr->weekData->firstDay as $xml) {
 			if ($xml->attributes()->alt != 'variant') {

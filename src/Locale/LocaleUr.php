@@ -22,9 +22,9 @@ class LocaleUr extends AbstractLocale implements LocaleInterface {
 		return new LanguageUr;
 	}
 
-	public function numberSymbols() {
-		return array(
-			self::NEGATIVE => self::LTR_MARK . self::HYPHEN . self::LTR_MARK,
-		);
-	}
+    public function numberSymbols() {
+        return array(
+            self::NEGATIVE => self::LTR_MARK . self::HYPHEN,
+        );
+    }
 }

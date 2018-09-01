@@ -1,5 +1,6 @@
 <?php namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Territory\TerritoryInterface;
@@ -9,7 +10,7 @@ use Fisharebest\Localization\Variant\VariantInterface;
  * Class AbstractLocale - The “root” locale, from which all others are derived.
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
 abstract class AbstractLocale {
@@ -19,6 +20,7 @@ abstract class AbstractLocale {
 	const NEGATIVE = '-'; // Negative numbers
 
 	// "Target" strings, when translating numbers
+    const ALM          = "\xD8\x9C"; // Arabic Letter Mark
 	const APOSTROPHE   = '’';
 	const ARAB_DECIMAL = "\xD9\xAB";
 	const ARAB_GROUP   = "\xD9\xAC";
@@ -112,7 +114,7 @@ abstract class AbstractLocale {
 		return $this->script()->direction();
 	}
 
-	/**
+    /**
 	 * A sortable version of the locale name.  For example, “British English”
 	 * might sort as “ENGLISH, BRITISH” to keep all the variants of English together.
 	 *
@@ -236,7 +238,7 @@ abstract class AbstractLocale {
 	 * @return string
 	 */
 	protected function percentFormat() {
-		return '%s%%';
+		return '%s' . self::PERCENT;
 	}
 
 	/**

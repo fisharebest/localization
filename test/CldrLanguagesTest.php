@@ -9,7 +9,7 @@ use PHPUnit_Framework_TestCase as TestCase;
  * Unit tests for the CLDR
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
 class CldrLanguagesTest extends TestCase {
@@ -19,7 +19,7 @@ class CldrLanguagesTest extends TestCase {
 	 * @medium
 	 */
 	public function testLanguages() {
-		foreach (glob(__DIR__ . '/data/cldr-29/main/*.xml') as $xml) {
+		foreach (glob(__DIR__ . '/data/cldr-33.1/main/*.xml') as $xml) {
 			if (strpos($xml, '/root.xml') === false) {
 				$cldr         = simplexml_load_file($xml);
 				$locale       = Locale::create(basename($xml, '.xml'));
@@ -27,7 +27,12 @@ class CldrLanguagesTest extends TestCase {
 
 				$endonyms = $cldr->xpath("/ldml/localeDisplayNames/languages/language[@type='". $language_tag . "'][not(@alt)]");
 				foreach ($endonyms as $endonym) {
-					$this->assertSame((string) $endonym, $locale->endonym());
+				    $debug = implode('|', array(
+				        basename($xml),
+                        $endonym
+                    ));
+
+					$this->assertSame((string) $endonym, $locale->endonym(), $debug);
 				}
 			}
 		}

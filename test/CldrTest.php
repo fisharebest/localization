@@ -1,16 +1,13 @@
 <?php namespace Fisharebest\Localization;
 
 use Exception;
-use Fisharebest\Localization\Locale\LocaleInterface;
-use Fisharebest\Localization\Locale\LocaleNmg;
-use Fisharebest\Localization\Territory\TerritoryInterface;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
  * Unit tests for the CLDR
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
 class CldrTest extends TestCase {
@@ -25,7 +22,7 @@ class CldrTest extends TestCase {
 			'right-to-left' => 'rtl',
 		);
 
-		foreach (glob(__DIR__ . '/data/cldr-29/main/*.xml') as $cldr) {
+		foreach (glob(__DIR__ . '/data/cldr-33.1/main/*.xml') as $cldr) {
 			if (strpos($cldr, '/root.xml') === false) {
 				$locale = Locale::create(basename($cldr, '.xml'));
 				$dir    = $this->cldrValue($cldr, '/ldml/layout/orientation/characterOrder');
@@ -41,10 +38,9 @@ class CldrTest extends TestCase {
 	 * @large
 	 */
 	public function testNumbers() {
-		foreach (glob(__DIR__ . '/data/cldr-29/main/*.xml') as $cldr) {
+		foreach (glob(__DIR__ . '/data/cldr-33.1/main/*.xml') as $cldr) {
 			if (strpos($cldr, '/root.xml') === false) {
 				$locale = Locale::create(basename($cldr, '.xml'));
-				//if ($locale->language()->code() !== 'es') continue;
 
 				$def_num_system = $this->cldrValue($cldr, "/ldml/numbers/defaultNumberingSystem");
 				try {
@@ -71,33 +67,60 @@ class CldrTest extends TestCase {
 				$percent        = $this->cldrValue($cldr, "/ldml/numbers/percentFormats[@numberSystem='" . $def_num_system . "']/percentFormatLength[not(@type)]/percentFormat/pattern");
 
 				// The CLDR example doesn't demonstrate the lack of group separators.
-				if ($standard === '#0.######' && $locale->languageTag() === 'en-US-posix') {
+				if ($standard === '0.######' && $locale->languageTag() === 'en-US-posix') {
 					$standard = '########.###';
 				}
 
 				// Check the (end of the) number matches the pattern.  Extra leading digits are OK.
 				$number = $locale->number(12345678.089);
-				$regex  = '/' . strtr($standard, array(
+
+				$regex = '/' . strtr($standard, array(
 					',' => preg_quote($group, '/'),
 					'.' => preg_quote($decimal, '/'),
 					'0' => '.',
 					'#' => '.',
 				)) . '$/u';
-				$this->assertTrue(preg_match($regex, $number) === 1);
+
+                $debug = implode('|', array(
+                    basename($cldr),
+                    'regex=' . $regex . '=' . bin2hex($regex),
+                    'number=' . $number . '=' . bin2hex($number),
+                    'standard=' . $standard,
+                ));
+
+				$this->assertTrue(preg_match($regex, $number) === 1, $debug);
 
 				// Check the percentage matches the pattern.
 				$number = $locale->percent(12345.67);
-				$regex  = '/' . strtr($percent, array(
+
+				$regex = '/' . strtr($percent, array(
 					',' => preg_quote($group, '/'),
 					'.' => preg_quote($decimal, '/'),
 					'0' => '.',
 					'#' => '.',
 					'%' => preg_quote($percent_sign, '/'),
 				)) . '/u';
-				$this->assertTrue(preg_match($regex, $number) === 1);
+
+                $debug = implode('|', array(
+                    basename($cldr),
+                    'percentSign=' . $percent_sign . '='. bin2hex($percent_sign),
+                    'regex=' . $regex . '=' . bin2hex($regex),
+                    'number=' . $number . '=' . bin2hex($number),
+                    'percent=' . $percent,
+                ));
+
+				$this->assertTrue(preg_match($regex, $number) === 1, $debug);
 
 				// Check the minus sign is correct
-				$this->assertTrue(strpos($locale->number(-1), $minus_sign) === 0);
+                $number = $locale->number(-1);
+
+                $debug = implode('|', array(
+                    basename($cldr),
+                    'minusSign=' . $minus_sign . '=' . bin2hex($minus_sign),
+                    'number=' . $number . '=' . bin2hex($number),
+                ));
+
+				$this->assertTrue(strpos($number, $minus_sign) === 0, $debug);
 			}
 		}
 	}
@@ -109,7 +132,7 @@ class CldrTest extends TestCase {
 	 *
 	 * @param string $file
 	 *
-	 * @return LocaleInterface
+	 * @return string
 	 */
 	private function parentCldr($file) {
 		$dirname  = dirname($file);
@@ -123,19 +146,20 @@ class CldrTest extends TestCase {
 		}
 	}
 
-	/**
-	 * @param string $file
-	 * @param string $xpath
-	 *
-	 * @return string
-	 */
+    /**
+     * @param string $file
+     * @param string $xpath
+     *
+     * @return string
+     * @throws Exception
+     */
 	private function cldrValue($file, $xpath) {
 		$xml = simplexml_load_file($file);
 		$tmp = $file;
 
 		while ($xml->xpath($xpath) == false) {
 			if (strpos($file, 'root.xml') !== false) {
-				throw new \Exception('Cannot find ' . $xpath . ' in ' . $tmp);
+				throw new Exception('Cannot find ' . $xpath . ' in ' . $tmp);
 			}
 			$file = $this->parentCldr($file);
 			$xml  = simplexml_load_file($file);

@@ -6,7 +6,7 @@ use Fisharebest\Localization\Territory\TerritoryCh;
  * Class LocaleItCh
  *
  * @author        Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license       GPLv3+
  */
 class LocaleItCh extends LocaleIt {
@@ -16,7 +16,7 @@ class LocaleItCh extends LocaleIt {
 
 	public function numberSymbols() {
 		return array(
-			self::GROUP => self::PRIME,
+			self::GROUP => self::APOSTROPHE,
 		);
 	}
 }

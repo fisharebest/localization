@@ -9,7 +9,7 @@ use PHPUnit_Framework_TestCase as TestCase;
  * Unit tests for the CLDR
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
 class CldrPluralRulesTest extends TestCase {
@@ -19,7 +19,7 @@ class CldrPluralRulesTest extends TestCase {
 	 * @large
 	 */
 	public function testPluralRules() {
-		$cldr = simplexml_load_file(__DIR__ . '/data/cldr-29/supplemental/plurals.xml');
+		$cldr = simplexml_load_file(__DIR__ . '/data/cldr-33.1/supplemental/plurals.xml');
 
 		foreach ($cldr->xpath("/supplementalData/plurals[@type='cardinal']/pluralRules") as $plural_rule) {
 			$tmp = $plural_rule->attributes(); // For PHP5.3

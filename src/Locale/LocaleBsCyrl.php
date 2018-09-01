@@ -13,4 +13,8 @@ class LocaleBsCyrl extends LocaleBs {
 	public function script() {
 		return new ScriptCyrl;
 	}
+
+    protected function percentFormat() {
+        return '%s' . self::PERCENT;
+    }
 }

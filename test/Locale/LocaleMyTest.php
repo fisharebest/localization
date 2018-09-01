@@ -10,7 +10,7 @@ use PHPUnit_Framework_TestCase as TestCase;
  * Unit tests for the LocaleMy class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
 class LocaleMyTest extends TestCase {
@@ -28,7 +28,7 @@ class LocaleMyTest extends TestCase {
 		$this->assertSame('my_MM', $locale->code());
 		$this->assertSame('unicode_ci', $locale->collation());
 		$this->assertSame('၀၁၂၃၄၅၆၇၈၉', $locale->digits('0123456789'));
-		$this->assertSame('ဗမာ', $locale->endonym());
+		$this->assertSame('မြန်မာ', $locale->endonym());
 		$this->assertSame('lang="my"', $locale->htmlAttributes());
 		$this->assertSame('my', $locale->languageTag());
 		$this->assertSame('-၁၂၃', $locale->number(-123));

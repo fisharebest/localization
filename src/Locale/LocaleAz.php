@@ -6,16 +6,16 @@ use Fisharebest\Localization\Language\LanguageAz;
  * Class LocaleAz - Azerbaijani
  *
  * @author        Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license       GPLv3+
  */
 class LocaleAz extends AbstractLocale implements LocaleInterface {
 	public function endonym() {
-		return 'azərbaycan dili';
+		return 'azərbaycan';
 	}
 
 	public function endonymSortable() {
-		return 'AZERBAYCAN DILI';
+		return 'AZERBAYCAN';
 	}
 
 	public function language() {

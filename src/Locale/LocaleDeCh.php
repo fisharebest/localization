@@ -6,7 +6,7 @@ use Fisharebest\Localization\Territory\TerritoryCh;
  * Class LocaleDeCh - Swiss High German
  *
  * @author        Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license       GPLv3+
  */
 class LocaleDeCh extends LocaleDe {
@@ -20,13 +20,13 @@ class LocaleDeCh extends LocaleDe {
 
 	public function numberSymbols() {
 		return array(
-			self::GROUP   => self::PRIME,
+			self::GROUP   => self::APOSTROPHE,
 			self::DECIMAL => self::DOT,
 		);
 	}
 
 	protected function percentFormat() {
-		return '%s%%';
+		return '%s' . self::PERCENT;
 	}
 
 	public function territory() {

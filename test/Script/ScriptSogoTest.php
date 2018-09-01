@@ -1,0 +1,25 @@
+<?php namespace Fisharebest\Localization\Script;
+
+use PHPUnit_Framework_TestCase as TestCase;
+
+/**
+ * Unit tests for the ScriptSogo class
+ *
+ * @author    Greg Roach <fisharebest@gmail.com>
+ * @copyright (c) 2018 Greg Roach
+ * @license   GPLv3+
+ */
+class ScriptSogoTest extends TestCase {
+	/**
+	 * Test the properties
+	 */
+	public function testProperties() {
+		$script = new ScriptSogo;
+
+		$this->assertSame('Sogo', $script->code());
+		$this->assertSame('rtl', $script->direction());
+		$this->assertSame('142', $script->number());
+		$this->assertSame(array(), $script->numerals());
+		$this->assertSame('Old_Sogdian', $script->unicodeName());
+	}
+}

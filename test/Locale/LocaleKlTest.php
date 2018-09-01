@@ -10,7 +10,7 @@ use PHPUnit_Framework_TestCase as TestCase;
  * Unit tests for the LocaleKl class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
 class LocaleKlTest extends TestCase {
@@ -32,7 +32,7 @@ class LocaleKlTest extends TestCase {
 		$this->assertSame('lang="kl"', $locale->htmlAttributes());
 		$this->assertSame('kl', $locale->languageTag());
 		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
-		$this->assertSame('-123', $locale->number(-123));
+		$this->assertSame('−123', $locale->number(-123));
 		$this->assertSame('1.234,56 %', $locale->percent(12.3456));
 	}
 }

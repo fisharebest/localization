@@ -6,7 +6,7 @@ use Fisharebest\Localization\Territory\TerritoryMx;
  * Class LocaleEsMx - Mexican Spanish
  *
  * @author        Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license       GPLv3+
  */
 class LocaleEsMx extends LocaleEs {
@@ -16,10 +16,6 @@ class LocaleEsMx extends LocaleEs {
 
 	public function endonymSortable() {
 		return 'ESPANOL DE MEXICO';
-	}
-
-	protected function percentFormat() {
-		return '%s' . self::PERCENT;
 	}
 
 	public function territory() {

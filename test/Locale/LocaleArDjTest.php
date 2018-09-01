@@ -10,7 +10,7 @@ use PHPUnit_Framework_TestCase as TestCase;
  * Unit tests for the LocaleArDj class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
 class LocaleArDjTest extends TestCase {
@@ -31,7 +31,7 @@ class LocaleArDjTest extends TestCase {
 		$this->assertSame('lang="ar-DJ" dir="rtl"', $locale->htmlAttributes());
 		$this->assertSame('ar-DJ', $locale->languageTag());
 		$this->assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
-		$this->assertSame('‏-١٢٣', $locale->number(-123));
-		$this->assertSame('١٬٢٣٤٫٥٦٪', $locale->percent(12.3456));
+        $this->assertSame('؜-١٢٣', $locale->number(-123));
+        $this->assertSame('١٬٢٣٤٫٥٦٪؜', $locale->percent(12.3456));
 	}
 }
