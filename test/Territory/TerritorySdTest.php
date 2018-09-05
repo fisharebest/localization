@@ -3,24 +3,26 @@
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the TerritorySd class
+ * Tests for the TerritorySd class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class TerritorySdTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$territory = new TerritorySd;
+class TerritorySdTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $territory = new TerritorySd();
 
-		$this->assertSame('SD', $territory->code());
-		$this->assertSame(6, $territory->firstDay());
-		$this->assertSame(5, $territory->weekendStart());
-		$this->assertSame(6, $territory->weekendEnd());
-		$this->assertSame('metric', $territory->measurementSystem());
-		$this->assertSame('A4', $territory->paperSize());
-	}
+        $this->assertSame('SD', $territory->code());
+        $this->assertSame(6, $territory->firstDay());
+        $this->assertSame(5, $territory->weekendStart());
+        $this->assertSame(6, $territory->weekendEnd());
+        $this->assertSame('metric', $territory->measurementSystem());
+        $this->assertSame('A4', $territory->paperSize());
+    }
 }

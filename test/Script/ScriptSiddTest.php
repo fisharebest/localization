@@ -3,23 +3,25 @@
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the ScriptSidd class
+ * Tests for the ScriptSidd class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptSiddTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$script = new ScriptSidd;
+class ScriptSiddTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $script = new ScriptSidd();
 
-		$this->assertSame('Sidd', $script->code());
-		$this->assertSame('ltr', $script->direction());
-		$this->assertSame('302', $script->number());
-		$this->assertSame(array(), $script->numerals());
-		$this->assertSame('Siddham', $script->unicodeName());
-	}
+        $this->assertSame('Sidd', $script->code());
+        $this->assertSame('ltr', $script->direction());
+        $this->assertSame('302', $script->number());
+        $this->assertSame(array(), $script->numerals());
+        $this->assertSame('Siddham', $script->unicodeName());
+    }
 }

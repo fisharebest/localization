@@ -7,8 +7,10 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class TerritoryNz extends AbstractTerritory implements TerritoryInterface {
-	public function code() {
-		return 'NZ';
-	}
+class TerritoryNz extends AbstractTerritory implements TerritoryInterface
+{
+    public function code()
+    {
+        return 'NZ';
+    }
 }

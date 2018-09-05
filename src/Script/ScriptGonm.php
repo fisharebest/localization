@@ -7,16 +7,20 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptGonm extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Gonm';
-	}
+class ScriptGonm extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Gonm';
+    }
 
-	public function number() {
-		return '313';
-	}
+    public function number()
+    {
+        return '313';
+    }
 
-    public function unicodeName() {
+    public function unicodeName()
+    {
         return 'Masaram_Gondi';
     }
 }

@@ -10,16 +10,20 @@ use Fisharebest\Localization\Territory\Territory001;
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LanguageIo extends AbstractLanguage implements LanguageInterface {
-	public function code() {
-		return 'io';
-	}
+class LanguageIo extends AbstractLanguage implements LanguageInterface
+{
+    public function code()
+    {
+        return 'io';
+    }
 
-	public function defaultTerritory() {
-		return new Territory001;
-	}
+    public function defaultTerritory()
+    {
+        return new Territory001();
+    }
 
-	public function pluralRule() {
-		return new PluralRule1;
-	}
+    public function pluralRule()
+    {
+        return new PluralRule1();
+    }
 }

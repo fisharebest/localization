@@ -7,32 +7,34 @@ use Fisharebest\Localization\Territory\TerritoryFo;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the LocaleFo class
+ * Tests for the LocaleFo class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LocaleFoTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$locale = new LocaleFo;
+class LocaleFoTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $locale = new LocaleFo();
 
-		$this->assertEquals(new LanguageFo, $locale->language());
-		$this->assertEquals(new PluralRule1, $locale->pluralRule());
-		$this->assertEquals(new ScriptLatn, $locale->script());
-		$this->assertEquals(new TerritoryFo, $locale->territory());
-		$this->assertNull($locale->variant());
-		$this->assertSame('fo_FO', $locale->code());
-		$this->assertSame('unicode_ci', $locale->collation());
-		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('føroyskt', $locale->endonym());
-		$this->assertSame('lang="fo"', $locale->htmlAttributes());
-		$this->assertSame('fo', $locale->languageTag());
-		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
-		$this->assertSame('−123', $locale->number(-123));
-		$this->assertSame('1.234,56 %', $locale->percent(12.3456));
-	}
+        $this->assertEquals(new LanguageFo(), $locale->language());
+        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
+        $this->assertEquals(new ScriptLatn(), $locale->script());
+        $this->assertEquals(new TerritoryFo(), $locale->territory());
+        $this->assertNull($locale->variant());
+        $this->assertSame('fo_FO', $locale->code());
+        $this->assertSame('unicode_ci', $locale->collation());
+        $this->assertSame('0123456789', $locale->digits('0123456789'));
+        $this->assertSame('føroyskt', $locale->endonym());
+        $this->assertSame('lang="fo"', $locale->htmlAttributes());
+        $this->assertSame('fo', $locale->languageTag());
+        $this->assertSame('12.345.678,09', $locale->number(12345678.09));
+        $this->assertSame('−123', $locale->number(-123));
+        $this->assertSame('1.234,56 %', $locale->percent(12.3456));
+    }
 }

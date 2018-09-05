@@ -5,12 +5,14 @@ use Fisharebest\Localization\Territory\TerritoryVa;
 /**
  * Class LocaleItVa
  *
- * @author        Greg Roach <fisharebest@gmail.com>
+ * @author    Greg Roach <fisharebest@gmail.com>
  * @copyright (c) 2018 Greg Roach
- * @license       GPLv3+
+ * @license   GPLv3+
  */
-class LocaleItVa extends LocaleIt {
-	public function territory() {
-		return new TerritoryVa;
-	}
+class LocaleItVa extends LocaleIt
+{
+    public function territory()
+    {
+        return new TerritoryVa();
+    }
 }

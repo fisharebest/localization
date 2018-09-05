@@ -5,32 +5,37 @@ use Fisharebest\Localization\Language\LanguageGl;
 /**
  * Class LocaleGl - Galician
  *
- * @author        Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
- * @license       GPLv3+
+ * @author    Greg Roach <fisharebest@gmail.com>
+ * @copyright (c) 2018 Greg Roach
+ * @license   GPLv3+
  */
-class LocaleGl extends AbstractLocale implements LocaleInterface {
-	public function endonym() {
-		return 'galego';
-	}
-
-	public function endonymSortable() {
-		return 'GALEGO';
-	}
-
-	public function language() {
-		return new LanguageGl;
-	}
-
-	public function numberSymbols() {
-		return array(
-			self::GROUP   => self::DOT,
-			self::DECIMAL => self::COMMA,
-		);
-	}
-
-	public function percentFormat()
+class LocaleGl extends AbstractLocale implements LocaleInterface
+{
+    public function endonym()
     {
-        return '%s' . self::NBSP . self::PERCENT;
+        return 'galego';
+    }
+
+    public function endonymSortable()
+    {
+        return 'GALEGO';
+    }
+
+    public function language()
+    {
+        return new LanguageGl();
+    }
+
+    public function numberSymbols()
+    {
+        return array(
+            self::GROUP   => self::DOT,
+            self::DECIMAL => self::COMMA,
+        );
+    }
+
+    public function percentFormat()
+    {
+        return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }
 }

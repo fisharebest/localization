@@ -3,23 +3,25 @@
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the ScriptAvst class
+ * Tests for the ScriptAvst class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptAvstTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$script = new ScriptAvst;
+class ScriptAvstTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $script = new ScriptAvst();
 
-		$this->assertSame('Avst', $script->code());
-		$this->assertSame('rtl', $script->direction());
-		$this->assertSame('134', $script->number());
-		$this->assertSame(array(), $script->numerals());
-		$this->assertSame('Avestan', $script->unicodeName());
-	}
+        $this->assertSame('Avst', $script->code());
+        $this->assertSame('rtl', $script->direction());
+        $this->assertSame('134', $script->number());
+        $this->assertSame(array(), $script->numerals());
+        $this->assertSame('Avestan', $script->unicodeName());
+    }
 }

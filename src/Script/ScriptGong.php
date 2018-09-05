@@ -7,16 +7,20 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptGong extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Gong';
-	}
+class ScriptGong extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Gong';
+    }
 
-	public function number() {
-		return '312';
-	}
+    public function number()
+    {
+        return '312';
+    }
 
-    public function unicodeName() {
+    public function unicodeName()
+    {
         return 'Gunjala_Gondi';
     }
 }

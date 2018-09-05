@@ -3,23 +3,25 @@
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the ScriptNarb class
+ * Tests for the ScriptNarb class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptNarbTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$script = new ScriptNarb;
+class ScriptNarbTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $script = new ScriptNarb();
 
-		$this->assertSame('Narb', $script->code());
-		$this->assertSame('rtl', $script->direction());
-		$this->assertSame('106', $script->number());
-		$this->assertSame(array(), $script->numerals());
-		$this->assertSame('Old_North_Arabian', $script->unicodeName());
-	}
+        $this->assertSame('Narb', $script->code());
+        $this->assertSame('rtl', $script->direction());
+        $this->assertSame('106', $script->number());
+        $this->assertSame(array(), $script->numerals());
+        $this->assertSame('Old_North_Arabian', $script->unicodeName());
+    }
 }

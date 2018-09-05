@@ -7,16 +7,20 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptRohg extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Rohg';
-	}
+class ScriptRohg extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Rohg';
+    }
 
-	public function number() {
-		return '167';
-	}
+    public function number()
+    {
+        return '167';
+    }
 
-	public function unicodeName() {
-		return 'Hanifi_Rohingya';
-	}
+    public function unicodeName()
+    {
+        return 'Hanifi_Rohingya';
+    }
 }

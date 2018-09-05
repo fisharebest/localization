@@ -3,23 +3,25 @@
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the ScriptCprt class
+ * Tests for the ScriptCprt class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptCprtTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$script = new ScriptCprt;
+class ScriptCprtTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $script = new ScriptCprt();
 
-		$this->assertSame('Cprt', $script->code());
-		$this->assertSame('ltr', $script->direction());
-		$this->assertSame('403', $script->number());
-		$this->assertSame(array(), $script->numerals());
-		$this->assertSame('Cypriot', $script->unicodeName());
-	}
+        $this->assertSame('Cprt', $script->code());
+        $this->assertSame('ltr', $script->direction());
+        $this->assertSame('403', $script->number());
+        $this->assertSame(array(), $script->numerals());
+        $this->assertSame('Cypriot', $script->unicodeName());
+    }
 }

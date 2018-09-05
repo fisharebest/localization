@@ -5,21 +5,23 @@ use Fisharebest\Localization\Script\ScriptLatn;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the LanguageHaw class
+ * Tests for the LanguageHaw class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LanguageHawTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$language = new LanguageHaw;
+class LanguageHawTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $language = new LanguageHaw();
 
-		$this->assertEquals(new ScriptLatn, $language->defaultScript());
-		$this->assertEquals(new PluralRule1, $language->pluralRule());
-		$this->assertSame('haw', $language->code());
-	}
+        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
+        $this->assertEquals(new PluralRule1(), $language->pluralRule());
+        $this->assertSame('haw', $language->code());
+    }
 }

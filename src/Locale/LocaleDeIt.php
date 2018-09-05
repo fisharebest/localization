@@ -5,12 +5,14 @@ use Fisharebest\Localization\Territory\TerritoryIt;
 /**
  * Class LocaleDeCh - Swiss High German
  *
- * @author        Greg Roach <fisharebest@gmail.com>
+ * @author    Greg Roach <fisharebest@gmail.com>
  * @copyright (c) 2018 Greg Roach
- * @license       GPLv3+
+ * @license   GPLv3+
  */
-class LocaleDeIt extends LocaleDe {
-	public function territory() {
-		return new TerritoryIt;
-	}
+class LocaleDeIt extends LocaleDe
+{
+    public function territory()
+    {
+        return new TerritoryIt();
+    }
 }

@@ -7,12 +7,15 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class TerritoryBd extends AbstractTerritory implements TerritoryInterface {
-	public function code() {
-		return 'BD';
-	}
+class TerritoryBd extends AbstractTerritory implements TerritoryInterface
+{
+    public function code()
+    {
+        return 'BD';
+    }
 
-	public function firstDay() {
-		return 0;
-	}
+    public function firstDay()
+    {
+        return 0;
+    }
 }

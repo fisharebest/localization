@@ -7,32 +7,34 @@ use Fisharebest\Localization\Territory\TerritorySe;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the LocaleEnSe class
+ * Tests for the LocaleEnSe class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LocaleEnSeTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$locale = new LocaleEnSe;
+class LocaleEnSeTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $locale = new LocaleEnSe();
 
-		$this->assertEquals(new LanguageEn, $locale->language());
-		$this->assertEquals(new PluralRule1, $locale->pluralRule());
-		$this->assertEquals(new ScriptLatn, $locale->script());
-		$this->assertEquals(new TerritorySe, $locale->territory());
-		$this->assertNull($locale->variant());
-		$this->assertSame('en_SE', $locale->code());
-		$this->assertSame('unicode_ci', $locale->collation());
-		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('English', $locale->endonym());
-		$this->assertSame('lang="en-SE"', $locale->htmlAttributes());
-		$this->assertSame('en-SE', $locale->languageTag());
-		$this->assertSame('-123', $locale->number(-123));
-		$this->assertSame('12 345 678.09', $locale->number(12345678.09));
-		$this->assertSame('1 234.56 %', $locale->percent(12.3456));
-	}
+        $this->assertEquals(new LanguageEn(), $locale->language());
+        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
+        $this->assertEquals(new ScriptLatn(), $locale->script());
+        $this->assertEquals(new TerritorySe(), $locale->territory());
+        $this->assertNull($locale->variant());
+        $this->assertSame('en_SE', $locale->code());
+        $this->assertSame('unicode_ci', $locale->collation());
+        $this->assertSame('0123456789', $locale->digits('0123456789'));
+        $this->assertSame('English', $locale->endonym());
+        $this->assertSame('lang="en-SE"', $locale->htmlAttributes());
+        $this->assertSame('en-SE', $locale->languageTag());
+        $this->assertSame('-123', $locale->number(-123));
+        $this->assertSame('12 345 678.09', $locale->number(12345678.09));
+        $this->assertSame('1 234.56 %', $locale->percent(12.3456));
+    }
 }

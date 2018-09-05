@@ -7,12 +7,15 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptCpmn extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Cpmn';
-	}
+class ScriptCpmn extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Cpmn';
+    }
 
-	public function number() {
-		return '402';
-	}
+    public function number()
+    {
+        return '402';
+    }
 }

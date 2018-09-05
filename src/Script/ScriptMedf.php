@@ -7,16 +7,20 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptMedf extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Medf';
-	}
+class ScriptMedf extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Medf';
+    }
 
-	public function number() {
-		return '265';
-	}
+    public function number()
+    {
+        return '265';
+    }
 
-    public function unicodeName() {
+    public function unicodeName()
+    {
         return 'Medefaidrin';
     }
 }

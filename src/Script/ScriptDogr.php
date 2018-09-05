@@ -7,16 +7,20 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptDogr extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Dogr';
-	}
+class ScriptDogr extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Dogr';
+    }
 
-	public function number() {
-		return '328';
-	}
+    public function number()
+    {
+        return '328';
+    }
 
-    public function unicodeName() {
+    public function unicodeName()
+    {
         return 'Dogra';
     }
 }

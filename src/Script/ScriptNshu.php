@@ -7,16 +7,20 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptNshu extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Nshu';
-	}
+class ScriptNshu extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Nshu';
+    }
 
-	public function number() {
-		return '499';
-	}
+    public function number()
+    {
+        return '499';
+    }
 
-    public function unicodeName() {
+    public function unicodeName()
+    {
         return 'Nushu';
     }
 }

@@ -7,16 +7,20 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptMaka extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Maka';
-	}
+class ScriptMaka extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Maka';
+    }
 
-	public function number() {
-		return '366';
-	}
+    public function number()
+    {
+        return '366';
+    }
 
-    public function unicodeName() {
+    public function unicodeName()
+    {
         return 'Makasar';
     }
 }

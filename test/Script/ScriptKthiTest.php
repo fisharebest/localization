@@ -3,23 +3,25 @@
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the ScriptKthi class
+ * Tests for the ScriptKthi class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptKthiTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$script = new ScriptKthi;
+class ScriptKthiTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $script = new ScriptKthi();
 
-		$this->assertSame('Kthi', $script->code());
-		$this->assertSame('ltr', $script->direction());
-		$this->assertSame('317', $script->number());
-		$this->assertSame(array(), $script->numerals());
-		$this->assertSame('Kaithi', $script->unicodeName());
-	}
+        $this->assertSame('Kthi', $script->code());
+        $this->assertSame('ltr', $script->direction());
+        $this->assertSame('317', $script->number());
+        $this->assertSame(array(), $script->numerals());
+        $this->assertSame('Kaithi', $script->unicodeName());
+    }
 }

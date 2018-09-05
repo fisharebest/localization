@@ -5,12 +5,14 @@ use Fisharebest\Localization\Territory\TerritoryNl;
 /**
  * Class LocaleNdsNl - Low German
  *
- * @author        Greg Roach <fisharebest@gmail.com>
+ * @author    Greg Roach <fisharebest@gmail.com>
  * @copyright (c) 2018 Greg Roach
- * @license       GPLv3+
+ * @license   GPLv3+
  */
-class LocaleNdsNl extends LocaleNds implements LocaleInterface {
-    public function territory() {
-        return new TerritoryNl;
+class LocaleNdsNl extends LocaleNds
+{
+    public function territory()
+    {
+        return new TerritoryNl();
     }
 }

@@ -7,16 +7,20 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptNewa extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Newa';
-	}
+class ScriptNewa extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Newa';
+    }
 
-	public function number() {
-		return '333';
-	}
+    public function number()
+    {
+        return '333';
+    }
 
-    public function unicodeName() {
+    public function unicodeName()
+    {
         return 'Newa';
     }
 }

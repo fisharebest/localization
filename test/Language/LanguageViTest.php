@@ -5,21 +5,23 @@ use Fisharebest\Localization\Script\ScriptLatn;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the LanguageVi class
+ * Tests for the LanguageVi class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LanguageViTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$language = new LanguageVi;
+class LanguageViTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $language = new LanguageVi();
 
-		$this->assertEquals(new ScriptLatn, $language->defaultScript());
-		$this->assertEquals(new PluralRule0, $language->pluralRule());
-		$this->assertSame('vi', $language->code());
-	}
+        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
+        $this->assertEquals(new PluralRule0(), $language->pluralRule());
+        $this->assertSame('vi', $language->code());
+    }
 }

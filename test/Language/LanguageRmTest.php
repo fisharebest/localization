@@ -5,21 +5,23 @@ use Fisharebest\Localization\Script\ScriptLatn;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the LanguageRm class
+ * Tests for the LanguageRm class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LanguageRmTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$language = new LanguageRm;
+class LanguageRmTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $language = new LanguageRm();
 
-		$this->assertEquals(new ScriptLatn, $language->defaultScript());
-		$this->assertEquals(new PluralRule1, $language->pluralRule());
-		$this->assertSame('rm', $language->code());
-	}
+        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
+        $this->assertEquals(new PluralRule1(), $language->pluralRule());
+        $this->assertSame('rm', $language->code());
+    }
 }

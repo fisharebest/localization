@@ -3,19 +3,21 @@
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the VariantPosix class
+ * Tests for the VariantPosix class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class VariantPosixTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$variant = new VariantPosix;
+class VariantPosixTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $variant = new VariantPosix();
 
-		$this->assertSame('posix', $variant->code());
-	}
+        $this->assertSame('posix', $variant->code());
+    }
 }

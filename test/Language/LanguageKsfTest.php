@@ -4,20 +4,22 @@ use Fisharebest\Localization\Script\ScriptLatn;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the LanguageKsf class
+ * Tests for the LanguageKsf class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LanguageKsfTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$language = new LanguageKsf;
+class LanguageKsfTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $language = new LanguageKsf();
 
-		$this->assertEquals(new ScriptLatn, $language->defaultScript());
-		$this->assertSame('ksf', $language->code());
-	}
+        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
+        $this->assertSame('ksf', $language->code());
+    }
 }

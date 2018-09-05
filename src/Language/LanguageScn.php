@@ -10,16 +10,20 @@ use Fisharebest\Localization\Territory\TerritoryIt;
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LanguageScn extends AbstractLanguage implements LanguageInterface {
-	public function code() {
-		return 'scn';
-	}
+class LanguageScn extends AbstractLanguage implements LanguageInterface
+{
+    public function code()
+    {
+        return 'scn';
+    }
 
-	public function defaultTerritory() {
-		return new TerritoryIt;
-	}
+    public function defaultTerritory()
+    {
+        return new TerritoryIt();
+    }
 
-	public function pluralRule() {
-		return new PluralRule1;
-	}
+    public function pluralRule()
+    {
+        return new PluralRule1();
+    }
 }

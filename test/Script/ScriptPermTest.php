@@ -3,22 +3,24 @@
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the ScriptPerm class
+ * Tests for the ScriptPerm class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptPermTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$script = new ScriptPerm;
+class ScriptPermTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $script = new ScriptPerm();
 
-		$this->assertSame('Perm', $script->code());
-		$this->assertSame('ltr', $script->direction());
-		$this->assertSame('227', $script->number());
-		$this->assertSame(array(), $script->numerals());
-	}
+        $this->assertSame('Perm', $script->code());
+        $this->assertSame('ltr', $script->direction());
+        $this->assertSame('227', $script->number());
+        $this->assertSame(array(), $script->numerals());
+    }
 }

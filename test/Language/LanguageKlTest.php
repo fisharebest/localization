@@ -5,21 +5,23 @@ use Fisharebest\Localization\Script\ScriptLatn;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the LanguageKl class
+ * Tests for the LanguageKl class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LanguageKlTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$language = new LanguageKl;
+class LanguageKlTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $language = new LanguageKl();
 
-		$this->assertEquals(new ScriptLatn, $language->defaultScript());
-		$this->assertEquals(new PluralRule1, $language->pluralRule());
-		$this->assertSame('kl', $language->code());
-	}
+        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
+        $this->assertEquals(new PluralRule1(), $language->pluralRule());
+        $this->assertSame('kl', $language->code());
+    }
 }

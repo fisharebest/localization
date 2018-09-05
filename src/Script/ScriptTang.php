@@ -7,16 +7,20 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptTang extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Tang';
-	}
+class ScriptTang extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Tang';
+    }
 
-	public function number() {
-		return '520';
-	}
+    public function number()
+    {
+        return '520';
+    }
 
-    public function unicodeName() {
+    public function unicodeName()
+    {
         return 'Tangut';
     }
 }

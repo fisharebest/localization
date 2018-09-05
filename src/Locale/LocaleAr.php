@@ -5,28 +5,33 @@ use Fisharebest\Localization\Language\LanguageAr;
 /**
  * Class LocaleAr - Arabic
  *
- * @author        Greg Roach <fisharebest@gmail.com>
+ * @author    Greg Roach <fisharebest@gmail.com>
  * @copyright (c) 2018 Greg Roach
- * @license       GPLv3+
+ * @license   GPLv3+
  */
-class LocaleAr extends AbstractLocale implements LocaleInterface {
-	public function endonym() {
-		return 'العربية';
-	}
+class LocaleAr extends AbstractLocale implements LocaleInterface
+{
+    public function endonym()
+    {
+        return 'العربية';
+    }
 
-	public function language() {
-		return new LanguageAr;
-	}
+    public function language()
+    {
+        return new LanguageAr();
+    }
 
-	public function numberSymbols() {
-		return array(
-			self::GROUP    => self::ARAB_GROUP,
-			self::DECIMAL  => self::ARAB_DECIMAL,
-			self::NEGATIVE => self::ALM . self::HYPHEN,
-		);
-	}
+    public function numberSymbols()
+    {
+        return array(
+            self::GROUP    => self::ARAB_GROUP,
+            self::DECIMAL  => self::ARAB_DECIMAL,
+            self::NEGATIVE => self::ALM . self::HYPHEN,
+        );
+    }
 
-	protected function percentFormat() {
-		return '%s' . self::ARAB_PERCENT . self::ALM;
-	}
+    protected function percentFormat()
+    {
+        return self::PLACEHOLDER . self::ARAB_PERCENT . self::ALM;
+    }
 }

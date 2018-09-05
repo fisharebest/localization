@@ -5,24 +5,29 @@ use Fisharebest\Localization\Territory\TerritoryCh;
 /**
  * Class LocaleFrCh - Swiss French
  *
- * @author        Greg Roach <fisharebest@gmail.com>
+ * @author    Greg Roach <fisharebest@gmail.com>
  * @copyright (c) 2018 Greg Roach
- * @license       GPLv3+
+ * @license   GPLv3+
  */
-class LocaleFrCh extends LocaleFr {
-	public function endonym() {
-		return 'français suisse';
-	}
+class LocaleFrCh extends LocaleFr
+{
+    public function endonym()
+    {
+        return 'français suisse';
+    }
 
-	public function endonymSortable() {
-		return 'FRANCAIS SUISSE';
-	}
+    public function endonymSortable()
+    {
+        return 'FRANCAIS SUISSE';
+    }
 
-	protected function percentFormat() {
-		return '%s' . self::PERCENT;
-	}
+    protected function percentFormat()
+    {
+        return self::PLACEHOLDER . self::PERCENT;
+    }
 
-	public function territory() {
-		return new TerritoryCh;
-	}
+    public function territory()
+    {
+        return new TerritoryCh();
+    }
 }

@@ -3,23 +3,25 @@
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the ScriptCans class
+ * Tests for the ScriptCans class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptCansTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$script = new ScriptCans;
+class ScriptCansTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $script = new ScriptCans();
 
-		$this->assertSame('Cans', $script->code());
-		$this->assertSame('ltr', $script->direction());
-		$this->assertSame('440', $script->number());
-		$this->assertSame(array(), $script->numerals());
-		$this->assertSame('Canadian_Aboriginal', $script->unicodeName());
-	}
+        $this->assertSame('Cans', $script->code());
+        $this->assertSame('ltr', $script->direction());
+        $this->assertSame('440', $script->number());
+        $this->assertSame(array(), $script->numerals());
+        $this->assertSame('Canadian_Aboriginal', $script->unicodeName());
+    }
 }

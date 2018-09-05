@@ -5,21 +5,23 @@ use Fisharebest\Localization\Script\ScriptJava;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the LanguageKo class
+ * Tests for the LanguageKo class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LanguageJvTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$language = new LanguageJv;
+class LanguageJvTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $language = new LanguageJv();
 
-		$this->assertEquals(new ScriptJava, $language->defaultScript());
-		$this->assertEquals(new PluralRule0, $language->pluralRule());
-		$this->assertSame('jv', $language->code());
-	}
+        $this->assertEquals(new ScriptJava(), $language->defaultScript());
+        $this->assertEquals(new PluralRule0(), $language->pluralRule());
+        $this->assertSame('jv', $language->code());
+    }
 }

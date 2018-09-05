@@ -3,23 +3,25 @@
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the ScriptGeok class
+ * Tests for the ScriptGeok class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptGeokTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$script = new ScriptGeok;
+class ScriptGeokTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $script = new ScriptGeok();
 
-		$this->assertSame('Geok', $script->code());
-		$this->assertSame('ltr', $script->direction());
-		$this->assertSame('241', $script->number());
-		$this->assertSame(array(), $script->numerals());
-		$this->assertSame('Georgian', $script->unicodeName());
-	}
+        $this->assertSame('Geok', $script->code());
+        $this->assertSame('ltr', $script->direction());
+        $this->assertSame('241', $script->number());
+        $this->assertSame(array(), $script->numerals());
+        $this->assertSame('Georgian', $script->unicodeName());
+    }
 }

@@ -3,23 +3,25 @@
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the ScriptMtei class
+ * Tests for the ScriptMtei class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptMteiTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$script = new ScriptMtei;
+class ScriptMteiTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $script = new ScriptMtei();
 
-		$this->assertSame('Mtei', $script->code());
-		$this->assertSame('ltr', $script->direction());
-		$this->assertSame('337', $script->number());
-		$this->assertSame(array('꯰', '꯱', '꯲', '꯳', '꯴', '꯵', '꯶', '꯷', '꯸', '꯹'), $script->numerals());
-		$this->assertSame('Meetei_Mayek', $script->unicodeName());
-	}
+        $this->assertSame('Mtei', $script->code());
+        $this->assertSame('ltr', $script->direction());
+        $this->assertSame('337', $script->number());
+        $this->assertSame(array('꯰', '꯱', '꯲', '꯳', '꯴', '꯵', '꯶', '꯷', '꯸', '꯹'), $script->numerals());
+        $this->assertSame('Meetei_Mayek', $script->unicodeName());
+    }
 }

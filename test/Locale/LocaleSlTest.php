@@ -7,32 +7,34 @@ use Fisharebest\Localization\Territory\TerritorySi;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the LocaleSl class
+ * Tests for the LocaleSl class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LocaleSlTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$locale = new LocaleSl;
+class LocaleSlTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $locale = new LocaleSl();
 
-		$this->assertEquals(new LanguageSl, $locale->language());
-		$this->assertEquals(new PluralRule10, $locale->pluralRule());
-		$this->assertEquals(new ScriptLatn, $locale->script());
-		$this->assertEquals(new TerritorySi, $locale->territory());
-		$this->assertNull($locale->variant());
-		$this->assertSame('sl_SI', $locale->code());
-		$this->assertSame('slovenian_ci', $locale->collation());
-		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('slovenščina', $locale->endonym());
-		$this->assertSame('lang="sl"', $locale->htmlAttributes());
-		$this->assertSame('sl', $locale->languageTag());
-		$this->assertSame('−123', $locale->number(-123));
-		$this->assertSame('12.345.678,09', $locale->number(12345678.09));
-		$this->assertSame('1.234,56 %', $locale->percent(12.3456));
-	}
+        $this->assertEquals(new LanguageSl(), $locale->language());
+        $this->assertEquals(new PluralRule10(), $locale->pluralRule());
+        $this->assertEquals(new ScriptLatn(), $locale->script());
+        $this->assertEquals(new TerritorySi(), $locale->territory());
+        $this->assertNull($locale->variant());
+        $this->assertSame('sl_SI', $locale->code());
+        $this->assertSame('slovenian_ci', $locale->collation());
+        $this->assertSame('0123456789', $locale->digits('0123456789'));
+        $this->assertSame('slovenščina', $locale->endonym());
+        $this->assertSame('lang="sl"', $locale->htmlAttributes());
+        $this->assertSame('sl', $locale->languageTag());
+        $this->assertSame('−123', $locale->number(-123));
+        $this->assertSame('12.345.678,09', $locale->number(12345678.09));
+        $this->assertSame('1.234,56 %', $locale->percent(12.3456));
+    }
 }

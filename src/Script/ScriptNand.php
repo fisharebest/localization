@@ -7,16 +7,20 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptNand extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Nand';
-	}
+class ScriptNand extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Nand';
+    }
 
-	public function number() {
-		return '311';
-	}
+    public function number()
+    {
+        return '311';
+    }
 
-	public function unicodeName() {
-		return 'Nandinagari';
-	}
+    public function unicodeName()
+    {
+        return 'Nandinagari';
+    }
 }

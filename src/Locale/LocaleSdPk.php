@@ -3,9 +3,10 @@
 /**
  * Class LocaleScn - Sindhi
  *
- * @author        Greg Roach <fisharebest@gmail.com>
+ * @author    Greg Roach <fisharebest@gmail.com>
  * @copyright (c) 2018 Greg Roach
- * @license       GPLv3+
+ * @license   GPLv3+
  */
-class LocaleSdPk extends LocaleSd implements LocaleInterface {
+class LocaleSdPk extends LocaleSd
+{
 }

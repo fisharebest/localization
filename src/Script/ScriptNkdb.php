@@ -7,12 +7,15 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptNkdb extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Nkdb';
-	}
+class ScriptNkdb extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Nkdb';
+    }
 
-	public function number() {
-		return '085';
-	}
+    public function number()
+    {
+        return '085';
+    }
 }

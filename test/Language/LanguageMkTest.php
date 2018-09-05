@@ -5,21 +5,23 @@ use Fisharebest\Localization\Script\ScriptCyrl;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the LanguageMk class
+ * Tests for the LanguageMk class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LanguageMkTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$language = new LanguageMk;
+class LanguageMkTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $language = new LanguageMk();
 
-		$this->assertEquals(new ScriptCyrl, $language->defaultScript());
-		$this->assertEquals(new PluralRule15, $language->pluralRule());
-		$this->assertSame('mk', $language->code());
-	}
+        $this->assertEquals(new ScriptCyrl(), $language->defaultScript());
+        $this->assertEquals(new PluralRule15(), $language->pluralRule());
+        $this->assertSame('mk', $language->code());
+    }
 }

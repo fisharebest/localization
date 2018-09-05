@@ -5,12 +5,14 @@ use Fisharebest\Localization\Territory\TerritoryDo;
 /**
  * Class LocaleEsDo
  *
- * @author        Greg Roach <fisharebest@gmail.com>
+ * @author    Greg Roach <fisharebest@gmail.com>
  * @copyright (c) 2018 Greg Roach
- * @license       GPLv3+
+ * @license   GPLv3+
  */
-class LocaleEsDo extends LocaleEs {
-	public function territory() {
-		return new TerritoryDo;
-	}
+class LocaleEsDo extends LocaleEs
+{
+    public function territory()
+    {
+        return new TerritoryDo();
+    }
 }

@@ -7,8 +7,10 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class TerritoryEz extends AbstractTerritory implements TerritoryInterface {
-	public function code() {
-		return 'EZ';
-	}
+class TerritoryEz extends AbstractTerritory implements TerritoryInterface
+{
+    public function code()
+    {
+        return 'EZ';
+    }
 }

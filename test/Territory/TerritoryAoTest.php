@@ -3,24 +3,26 @@
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the TerritoryAo class
+ * Tests for the TerritoryAo class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class TerritoryAoTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$territory = new TerritoryAo;
+class TerritoryAoTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $territory = new TerritoryAo();
 
-		$this->assertSame('AO', $territory->code());
-		$this->assertSame(1, $territory->firstDay());
-		$this->assertSame(6, $territory->weekendStart());
-		$this->assertSame(0, $territory->weekendEnd());
-		$this->assertSame('metric', $territory->measurementSystem());
-		$this->assertSame('A4', $territory->paperSize());
-	}
+        $this->assertSame('AO', $territory->code());
+        $this->assertSame(1, $territory->firstDay());
+        $this->assertSame(6, $territory->weekendStart());
+        $this->assertSame(0, $territory->weekendEnd());
+        $this->assertSame('metric', $territory->measurementSystem());
+        $this->assertSame('A4', $territory->paperSize());
+    }
 }

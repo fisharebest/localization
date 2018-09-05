@@ -5,21 +5,23 @@ use Fisharebest\Localization\Script\ScriptTibt;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the LanguageDz class
+ * Tests for the LanguageDz class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LanguageDzTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$language = new LanguageDz;
+class LanguageDzTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $language = new LanguageDz();
 
-		$this->assertEquals(new ScriptTibt, $language->defaultScript());
-		$this->assertEquals(new PluralRule0, $language->pluralRule());
-		$this->assertSame('dz', $language->code());
-	}
+        $this->assertEquals(new ScriptTibt(), $language->defaultScript());
+        $this->assertEquals(new PluralRule0(), $language->pluralRule());
+        $this->assertSame('dz', $language->code());
+    }
 }

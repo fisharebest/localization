@@ -7,16 +7,20 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptSoyo extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Soyo';
-	}
+class ScriptSoyo extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Soyo';
+    }
 
-	public function number() {
-		return '329';
-	}
+    public function number()
+    {
+        return '329';
+    }
 
-    public function unicodeName() {
+    public function unicodeName()
+    {
         return 'Soyombo';
     }
 }

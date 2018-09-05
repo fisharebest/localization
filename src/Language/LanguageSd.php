@@ -11,21 +11,25 @@ use Fisharebest\Localization\Territory\TerritoryPk;
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LanguageSd extends AbstractLanguage implements LanguageInterface {
-	public function code() {
-		return 'sd';
-	}
+class LanguageSd extends AbstractLanguage implements LanguageInterface
+{
+    public function code()
+    {
+        return 'sd';
+    }
 
-	public function defaultScript()
+    public function defaultScript()
     {
         return new ScriptArab();
     }
 
-    public function defaultTerritory() {
-		return new TerritoryPk;
-	}
+    public function defaultTerritory()
+    {
+        return new TerritoryPk();
+    }
 
-	public function pluralRule() {
-		return new PluralRule1;
-	}
+    public function pluralRule()
+    {
+        return new PluralRule1();
+    }
 }

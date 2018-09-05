@@ -3,23 +3,25 @@
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the ScriptZanb class
+ * Tests for the ScriptZanb class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptZanbTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$script = new ScriptZanb;
+class ScriptZanbTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $script = new ScriptZanb();
 
-		$this->assertSame('Zanb', $script->code());
-		$this->assertSame('ltr', $script->direction());
-		$this->assertSame('339', $script->number());
-		$this->assertSame(array(), $script->numerals());
-		$this->assertSame('Zanabazar_Square', $script->unicodeName());
-	}
+        $this->assertSame('Zanb', $script->code());
+        $this->assertSame('ltr', $script->direction());
+        $this->assertSame('339', $script->number());
+        $this->assertSame(array(), $script->numerals());
+        $this->assertSame('Zanabazar_Square', $script->unicodeName());
+    }
 }

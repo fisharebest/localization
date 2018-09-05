@@ -10,16 +10,20 @@ use Fisharebest\Localization\Territory\TerritoryDe;
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LanguageNds extends AbstractLanguage implements LanguageInterface {
-	public function code() {
-		return 'nds';
-	}
+class LanguageNds extends AbstractLanguage implements LanguageInterface
+{
+    public function code()
+    {
+        return 'nds';
+    }
 
-	public function defaultTerritory() {
-		return new TerritoryDe;
-	}
+    public function defaultTerritory()
+    {
+        return new TerritoryDe();
+    }
 
-	public function pluralRule() {
-		return new PluralRule1;
-	}
+    public function pluralRule()
+    {
+        return new PluralRule1();
+    }
 }

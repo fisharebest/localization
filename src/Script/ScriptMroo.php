@@ -7,16 +7,20 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptMroo extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Mroo';
-	}
+class ScriptMroo extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Mroo';
+    }
 
-	public function number() {
-		return '264';
-	}
+    public function number()
+    {
+        return '264';
+    }
 
-	public function unicodeName() {
-		return 'Mro';
-	}
+    public function unicodeName()
+    {
+        return 'Mro';
+    }
 }

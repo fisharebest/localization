@@ -7,16 +7,20 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptZanb extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Zanb';
-	}
+class ScriptZanb extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Zanb';
+    }
 
-	public function number() {
-		return '339';
-	}
+    public function number()
+    {
+        return '339';
+    }
 
-	public function unicodeName() {
-		return 'Zanabazar_Square';
-	}
+    public function unicodeName()
+    {
+        return 'Zanabazar_Square';
+    }
 }

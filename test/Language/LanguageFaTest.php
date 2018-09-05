@@ -5,21 +5,23 @@ use Fisharebest\Localization\Script\ScriptArab;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the LanguageFa class
+ * Tests for the LanguageFa class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LanguageFaTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$language = new LanguageFa;
+class LanguageFaTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $language = new LanguageFa();
 
-		$this->assertEquals(new ScriptArab, $language->defaultScript());
-		$this->assertEquals(new PluralRule0, $language->pluralRule());
-		$this->assertSame('fa', $language->code());
-	}
+        $this->assertEquals(new ScriptArab(), $language->defaultScript());
+        $this->assertEquals(new PluralRule0(), $language->pluralRule());
+        $this->assertSame('fa', $language->code());
+    }
 }

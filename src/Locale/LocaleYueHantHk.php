@@ -3,9 +3,10 @@
 /**
  * Class LocaleYueHantHk - Yue
  *
- * @author        Greg Roach <fisharebest@gmail.com>
+ * @author    Greg Roach <fisharebest@gmail.com>
  * @copyright (c) 2018 Greg Roach
- * @license       GPLv3+
+ * @license   GPLv3+
  */
-class LocaleYueHantHk extends LocaleYueHant {
+class LocaleYueHantHk extends LocaleYueHant
+{
 }

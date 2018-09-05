@@ -7,12 +7,15 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptShui extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Shui';
-	}
+class ScriptShui extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Shui';
+    }
 
-	public function number() {
-		return '530';
-	}
+    public function number()
+    {
+        return '530';
+    }
 }

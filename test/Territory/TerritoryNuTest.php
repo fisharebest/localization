@@ -3,24 +3,26 @@
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the TerritoryNu class
+ * Tests for the TerritoryNu class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class TerritoryNuTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$territory = new TerritoryNu;
+class TerritoryNuTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $territory = new TerritoryNu();
 
-		$this->assertSame('NU', $territory->code());
-		$this->assertSame(1, $territory->firstDay());
-		$this->assertSame(6, $territory->weekendStart());
-		$this->assertSame(0, $territory->weekendEnd());
-		$this->assertSame('metric', $territory->measurementSystem());
-		$this->assertSame('A4', $territory->paperSize());
-	}
+        $this->assertSame('NU', $territory->code());
+        $this->assertSame(1, $territory->firstDay());
+        $this->assertSame(6, $territory->weekendStart());
+        $this->assertSame(0, $territory->weekendEnd());
+        $this->assertSame('metric', $territory->measurementSystem());
+        $this->assertSame('A4', $territory->paperSize());
+    }
 }

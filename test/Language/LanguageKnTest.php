@@ -5,21 +5,23 @@ use Fisharebest\Localization\Script\ScriptKnda;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the LanguageKn class
+ * Tests for the LanguageKn class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LanguageKnTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$language = new LanguageKn;
+class LanguageKnTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $language = new LanguageKn();
 
-		$this->assertEquals(new ScriptKnda, $language->defaultScript());
-		$this->assertEquals(new PluralRule2, $language->pluralRule());
-		$this->assertSame('kn', $language->code());
-	}
+        $this->assertEquals(new ScriptKnda(), $language->defaultScript());
+        $this->assertEquals(new PluralRule2(), $language->pluralRule());
+        $this->assertSame('kn', $language->code());
+    }
 }

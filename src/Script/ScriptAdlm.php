@@ -7,16 +7,20 @@
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class ScriptAdlm extends AbstractScript implements ScriptInterface {
-	public function code() {
-		return 'Adlm';
-	}
+class ScriptAdlm extends AbstractScript implements ScriptInterface
+{
+    public function code()
+    {
+        return 'Adlm';
+    }
 
-	public function number() {
-		return '166';
-	}
+    public function number()
+    {
+        return '166';
+    }
 
-    public function unicodeName() {
+    public function unicodeName()
+    {
         return 'Adlam';
     }
 }

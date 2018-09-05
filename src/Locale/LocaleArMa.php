@@ -6,12 +6,14 @@ use Fisharebest\Localization\Territory\TerritoryMa;
 /**
  * Class LocaleArMa
  *
- * @author        Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
- * @license       GPLv3+
+ * @author    Greg Roach <fisharebest@gmail.com>
+ * @copyright (c) 2018 Greg Roach
+ * @license   GPLv3+
  */
-class LocaleArMa extends LocaleAr {
-    public function numberSymbols() {
+class LocaleArMa extends LocaleAr
+{
+    public function numberSymbols()
+    {
         return array(
             self::GROUP    => self::DOT,
             self::DECIMAL  => self::COMMA,
@@ -19,17 +21,20 @@ class LocaleArMa extends LocaleAr {
         );
     }
 
-    protected function numerals() {
+    protected function numerals()
+    {
         $latin = new ScriptLatn();
 
         return $latin->numerals();
     }
 
-    protected function percentFormat() {
-        return '%s' . self::LTR_MARK . self::PERCENT . self::LTR_MARK;
+    protected function percentFormat()
+    {
+        return self::PLACEHOLDER . self::LTR_MARK . self::PERCENT . self::LTR_MARK;
     }
 
-    public function territory() {
-		return new TerritoryMa;
-	}
+    public function territory()
+    {
+        return new TerritoryMa();
+    }
 }

@@ -11,21 +11,25 @@ use Fisharebest\Localization\Territory\TerritoryTj;
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LanguageTg extends AbstractLanguage implements LanguageInterface {
-	public function code() {
-		return 'tg';
-	}
+class LanguageTg extends AbstractLanguage implements LanguageInterface
+{
+    public function code()
+    {
+        return 'tg';
+    }
 
-	public function defaultScript() {
-		return new ScriptCyrl;
-	}
+    public function defaultScript()
+    {
+        return new ScriptCyrl();
+    }
 
-	public function defaultTerritory()
+    public function defaultTerritory()
     {
         return new TerritoryTj();
     }
 
-    public function pluralRule() {
-		return new PluralRule1;
-	}
+    public function pluralRule()
+    {
+        return new PluralRule1();
+    }
 }

@@ -7,31 +7,33 @@ use Fisharebest\Localization\Territory\TerritoryGd;
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the LocaleEnGd class
+ * Tests for the LocaleEnGd class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LocaleEnGdTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$locale = new LocaleEnGd;
+class LocaleEnGdTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $locale = new LocaleEnGd();
 
-		$this->assertEquals(new LanguageEn, $locale->language());
-		$this->assertEquals(new PluralRule1, $locale->pluralRule());
-		$this->assertEquals(new ScriptLatn, $locale->script());
-		$this->assertEquals(new TerritoryGd, $locale->territory());
-		$this->assertNull($locale->variant());
-		$this->assertSame('en_GD', $locale->code());
-		$this->assertSame('unicode_ci', $locale->collation());
-		$this->assertSame('0123456789', $locale->digits('0123456789'));
-		$this->assertSame('lang="en-GD"', $locale->htmlAttributes());
-		$this->assertSame('en-GD', $locale->languageTag());
-		$this->assertSame('-123', $locale->number(-123));
-		$this->assertSame('12,345,678.09', $locale->number(12345678.09));
-		$this->assertSame('1,234.56%', $locale->percent(12.3456));
-	}
+        $this->assertEquals(new LanguageEn(), $locale->language());
+        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
+        $this->assertEquals(new ScriptLatn(), $locale->script());
+        $this->assertEquals(new TerritoryGd(), $locale->territory());
+        $this->assertNull($locale->variant());
+        $this->assertSame('en_GD', $locale->code());
+        $this->assertSame('unicode_ci', $locale->collation());
+        $this->assertSame('0123456789', $locale->digits('0123456789'));
+        $this->assertSame('lang="en-GD"', $locale->htmlAttributes());
+        $this->assertSame('en-GD', $locale->languageTag());
+        $this->assertSame('-123', $locale->number(-123));
+        $this->assertSame('12,345,678.09', $locale->number(12345678.09));
+        $this->assertSame('1,234.56%', $locale->percent(12.3456));
+    }
 }

@@ -5,23 +5,27 @@ use Fisharebest\Localization\Language\LanguageTg;
 /**
  * Class LocaleTg - Tajik
  *
- * @author        Greg Roach <fisharebest@gmail.com>
+ * @author    Greg Roach <fisharebest@gmail.com>
  * @copyright (c) 2018 Greg Roach
- * @license       GPLv3+
+ * @license   GPLv3+
  */
-class LocaleTg extends AbstractLocale implements LocaleInterface {
-	public function endonym() {
-		return 'тоҷикӣ';
-	}
+class LocaleTg extends AbstractLocale implements LocaleInterface
+{
+    public function endonym()
+    {
+        return 'тоҷикӣ';
+    }
 
-	public function language() {
-		return new LanguageTg;
-	}
+    public function language()
+    {
+        return new LanguageTg();
+    }
 
-    public function numberSymbols() {
+    public function numberSymbols()
+    {
         return array(
-            self::GROUP    => self::NBSP,
-            self::DECIMAL  => self::COMMA,
+            self::GROUP   => self::NBSP,
+            self::DECIMAL => self::COMMA,
         );
     }
 }

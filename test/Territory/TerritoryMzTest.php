@@ -3,24 +3,26 @@
 use PHPUnit_Framework_TestCase as TestCase;
 
 /**
- * Unit tests for the TerritoryMz class
+ * Tests for the TerritoryMz class
  *
  * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2015 Greg Roach
+ * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class TerritoryMzTest extends TestCase {
-	/**
-	 * Test the properties
-	 */
-	public function testProperties() {
-		$territory = new TerritoryMz;
+class TerritoryMzTest extends TestCase
+{
+    /**
+     * Test the properties
+     */
+    public function testProperties()
+    {
+        $territory = new TerritoryMz();
 
-		$this->assertSame('MZ', $territory->code());
-		$this->assertSame(0, $territory->firstDay());
-		$this->assertSame(6, $territory->weekendStart());
-		$this->assertSame(0, $territory->weekendEnd());
-		$this->assertSame('metric', $territory->measurementSystem());
-		$this->assertSame('A4', $territory->paperSize());
-	}
+        $this->assertSame('MZ', $territory->code());
+        $this->assertSame(0, $territory->firstDay());
+        $this->assertSame(6, $territory->weekendStart());
+        $this->assertSame(0, $territory->weekendEnd());
+        $this->assertSame('metric', $territory->measurementSystem());
+        $this->assertSame('A4', $territory->paperSize());
+    }
 }
