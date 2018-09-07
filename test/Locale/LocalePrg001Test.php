@@ -13,7 +13,7 @@ use PHPUnit_Framework_TestCase as TestCase;
  * @copyright (c) 2018 Greg Roach
  * @license   GPLv3+
  */
-class LocalePrgTest extends TestCase
+class LocalePrg001Test extends TestCase
 {
     /**
      * Test the properties

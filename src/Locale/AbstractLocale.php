@@ -129,7 +129,8 @@ abstract class AbstractLocale
      *
      * @return string
      */
-    public function endonymSortable() {
+    public function endonymSortable()
+    {
         return $this->endonym();
     }
 
@@ -153,7 +154,8 @@ abstract class AbstractLocale
      *
      * @return string
      */
-    public function languageTag() {
+    public function languageTag()
+    {
         $language_tag = $this->language()->code();
         if ($this->script() != $this->language()->defaultScript()) {
             $language_tag .= '-' . $this->script()->code();
