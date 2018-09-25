@@ -1,4 +1,6 @@
-<?php namespace Fisharebest\Localization\Locale;
+<?php
+
+namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageKsf;
 use Fisharebest\Localization\Script\ScriptLatn;

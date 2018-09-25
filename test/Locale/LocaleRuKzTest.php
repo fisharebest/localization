@@ -1,4 +1,6 @@
-<?php namespace Fisharebest\Localization\Locale;
+<?php
+
+namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageRu;
 use Fisharebest\Localization\PluralRule\PluralRule7;

@@ -1,4 +1,6 @@
-<?php namespace Fisharebest\Localization\Script;
+<?php
+
+namespace Fisharebest\Localization\Script;
 
 use PHPUnit_Framework_TestCase as TestCase;
 

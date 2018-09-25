@@ -1,4 +1,6 @@
-<?php namespace Fisharebest\Localization;
+<?php
+
+namespace Fisharebest\Localization;
 
 use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Territory\TerritoryInterface;
