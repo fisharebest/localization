@@ -1,6 +1,5 @@
 <?php namespace Fisharebest\Localization\Locale;
 
-use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Territory\TerritoryInterface;
