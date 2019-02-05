@@ -30,7 +30,7 @@ class LocaleFiFiTest extends TestCase
         $this->assertEquals(new TerritoryFi(), $locale->territory());
         $this->assertNull($locale->variant());
         $this->assertSame('fi_FI', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
+        $this->assertSame('swedish_ci', $locale->collation());
         $this->assertSame('0123456789', $locale->digits('0123456789'));
         $this->assertSame('lang="fi"', $locale->htmlAttributes());
         $this->assertSame('fi', $locale->languageTag());

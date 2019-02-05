@@ -13,6 +13,11 @@ use Fisharebest\Localization\Language\LanguageFi;
  */
 class LocaleFi extends AbstractLocale implements LocaleInterface
 {
+    public function collation()
+    {
+        return 'swedish_ci';
+    }
+
     public function endonym()
     {
         return 'suomi';
