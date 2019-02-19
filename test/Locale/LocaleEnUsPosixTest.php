@@ -7,7 +7,7 @@ use Fisharebest\Localization\PluralRule\PluralRule1;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryUs;
 use Fisharebest\Localization\Variant\VariantPosix;
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase as TestCase;
 
 /**
  * Tests for the LocaleEnUsPosix class

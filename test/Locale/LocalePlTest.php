@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguagePl;
 use Fisharebest\Localization\PluralRule\PluralRule9;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryPl;
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase as TestCase;
 
 /**
  * Tests for the LocalePl class

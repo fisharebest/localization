@@ -5,7 +5,7 @@ namespace Fisharebest\Localization;
 use Fisharebest\Localization\Locale\LocaleEnAu;
 use Fisharebest\Localization\Locale\LocaleEnGb;
 use Fisharebest\Localization\Locale\LocaleEnUs;
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase as TestCase;
 
 /**
  * Tests for the AbstractLocale class

@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization;
 
 use Fisharebest\Localization\PluralRule\PluralRule2;
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase as TestCase;
 
 /**
  * Tests for the Translator/Translation classes

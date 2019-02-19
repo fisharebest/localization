@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageDz;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptTibt;
 use Fisharebest\Localization\Territory\TerritoryBt;
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase as TestCase;
 
 /**
  * Tests for the LocaleDz class

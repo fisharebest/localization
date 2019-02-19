@@ -2,7 +2,7 @@
 
 namespace Fisharebest\Localization\Variant;
 
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase as TestCase;
 
 /**
  * Tests for the VariantValencia class

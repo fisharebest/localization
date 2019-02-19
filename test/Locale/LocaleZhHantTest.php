@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageZh;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptHant;
 use Fisharebest\Localization\Territory\TerritoryCn;
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase as TestCase;
 
 /**
  * Tests for the LocaleZhHant class

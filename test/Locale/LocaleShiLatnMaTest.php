@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageShi;
 use Fisharebest\Localization\PluralRule\PluralRuleTachelhit;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryMa;
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase as TestCase;
 
 /**
  * Tests for the LocaleShiLatnMa class

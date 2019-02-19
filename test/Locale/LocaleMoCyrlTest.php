@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageMo;
 use Fisharebest\Localization\PluralRule\PluralRule5;
 use Fisharebest\Localization\Script\ScriptCyrl;
 use Fisharebest\Localization\Territory\TerritoryMd;
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase as TestCase;
 
 /**
  * Tests for the LocaleRo class

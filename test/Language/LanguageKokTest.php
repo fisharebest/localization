@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\Script\ScriptDeva;
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase as TestCase;
 
 /**
  * Tests for the LanguageKok class

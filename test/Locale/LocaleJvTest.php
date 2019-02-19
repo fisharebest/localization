@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageJv;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptJava;
 use Fisharebest\Localization\Territory\TerritoryId;
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase as TestCase;
 
 /**
  * Tests for the LocaleKo class

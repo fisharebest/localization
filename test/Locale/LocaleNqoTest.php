@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageNqo;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptNkoo;
 use Fisharebest\Localization\Territory\TerritoryGn;
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase as TestCase;
 
 /**
  * Tests for the LocaleNqo class

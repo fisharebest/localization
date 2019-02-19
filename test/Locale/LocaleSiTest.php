@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageSi;
 use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Script\ScriptSinh;
 use Fisharebest\Localization\Territory\TerritoryLk;
-use PHPUnit_Framework_TestCase as TestCase;
+use PHPUnit\Framework\TestCase as TestCase;
 
 /**
  * Tests for the LocaleSi class

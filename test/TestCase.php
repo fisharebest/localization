@@ -17,7 +17,7 @@ if (class_exists('PHPUnit_Framework_TestCase')) {
     {
     }
 } else {
-    // Testing against PHP 5.3 and 5.4 requires PHPUnit 4
+    // Testing against PHP 5.5 and later requires PHPUnit 5 and later
     class TestCase extends \PHPUnit\Framework\TestCase
     {
     }
