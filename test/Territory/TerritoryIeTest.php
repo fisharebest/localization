@@ -21,7 +21,7 @@ class TerritoryIeTest extends TestCase
         $territory = new TerritoryIe();
 
         $this->assertSame('IE', $territory->code());
-        $this->assertSame(0, $territory->firstDay());
+        $this->assertSame(1, $territory->firstDay());
         $this->assertSame(6, $territory->weekendStart());
         $this->assertSame(0, $territory->weekendEnd());
         $this->assertSame('metric', $territory->measurementSystem());

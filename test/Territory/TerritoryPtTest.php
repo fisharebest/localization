@@ -21,7 +21,7 @@ class TerritoryPtTest extends TestCase
         $territory = new TerritoryPt();
 
         $this->assertSame('PT', $territory->code());
-        $this->assertSame(1, $territory->firstDay());
+        $this->assertSame(0, $territory->firstDay());
         $this->assertSame(6, $territory->weekendStart());
         $this->assertSame(0, $territory->weekendEnd());
         $this->assertSame('metric', $territory->measurementSystem());

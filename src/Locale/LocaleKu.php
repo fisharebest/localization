@@ -15,7 +15,7 @@ class LocaleKu extends AbstractLocale implements LocaleInterface
 {
     public function endonym()
     {
-        return 'Kurdî';
+        return 'kurdî';
     }
 
     public function endonymSortable()

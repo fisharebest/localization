@@ -32,11 +32,11 @@ class LocaleJvTest extends TestCase
         $this->assertSame('jv_ID', $locale->code());
         $this->assertSame('unicode_ci', $locale->collation());
         $this->assertSame('꧐꧑꧒꧓꧔꧕꧖꧗꧘꧙', $locale->digits('0123456789'));
-        $this->assertSame('ꦧꦱꦗꦮ', $locale->endonym());
+        $this->assertSame('Jawa', $locale->endonym());
         $this->assertSame('lang="jv"', $locale->htmlAttributes());
         $this->assertSame('jv', $locale->languageTag());
         $this->assertSame('-꧑꧒꧓', $locale->number(-123));
-        $this->assertSame('꧑꧒,꧓꧔꧕,꧖꧗꧘.꧐꧙', $locale->number(12345678.09));
-        $this->assertSame('꧑,꧒꧓꧔.꧕꧖%', $locale->percent(12.3456));
+        $this->assertSame('꧑꧒.꧓꧔꧕.꧖꧗꧘,꧐꧙', $locale->number(12345678.09));
+        $this->assertSame('꧑.꧒꧓꧔,꧕꧖%', $locale->percent(12.3456));
     }
 }

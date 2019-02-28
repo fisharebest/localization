@@ -20,7 +20,7 @@ class CldrPluralRulesTest extends TestCase
      */
     public function testPluralRules()
     {
-        $cldr = simplexml_load_file(__DIR__ . '/data/cldr-33.1/supplemental/plurals.xml');
+        $cldr = simplexml_load_file(__DIR__ . '/data/cldr-34/supplemental/plurals.xml');
 
         foreach ($cldr->xpath("/supplementalData/plurals[@type='cardinal']/pluralRules") as $plural_rule) {
             $tmp          = $plural_rule->attributes(); // For PHP5.3
@@ -58,6 +58,8 @@ class CldrPluralRulesTest extends TestCase
                     case 'ru':   // 4/3
                     case 'uk':   // 4/3
                     case 'gv':   // 5/4
+                        continue 2;
+                    case 'sc':   // CLDR has rules for this language, but no definitions
                         continue 2;
                 }
                 $locale = Locale::create($locale_code);

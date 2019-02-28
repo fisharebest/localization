@@ -15,4 +15,12 @@ class TerritoryPt extends AbstractTerritory implements TerritoryInterface
     {
         return 'PT';
     }
+
+    /**
+     * @return int
+     */
+    public function firstDay()
+    {
+        return 0;
+    }
 }

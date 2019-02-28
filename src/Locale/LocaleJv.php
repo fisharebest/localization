@@ -15,11 +15,19 @@ class LocaleJv extends AbstractLocale implements LocaleInterface
 {
     public function endonym()
     {
-        return 'ꦧꦱꦗꦮ';
+        return 'Jawa';
     }
 
     public function language()
     {
         return new LanguageJv();
+    }
+
+    public function numberSymbols()
+    {
+        return array(
+            self::DECIMAL => self::COMMA,
+            self::GROUP   => self::DOT,
+        );
     }
 }

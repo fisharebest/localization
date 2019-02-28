@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization;
 
 use Exception;
+use Fisharebest\Localization\Locale\AbstractLocale;
 use PHPUnit\Framework\TestCase as TestCase;
 
 /**
@@ -26,7 +27,7 @@ class CldrTest extends TestCase
             'right-to-left' => 'rtl',
         );
 
-        foreach (glob(__DIR__ . '/data/cldr-33.1/main/*.xml') as $cldr) {
+        foreach (glob(__DIR__ . '/data/cldr-34/main/*.xml') as $cldr) {
             if (strpos($cldr, '/root.xml') === false) {
                 $locale = Locale::create(basename($cldr, '.xml'));
                 $dir    = $this->cldrValue($cldr, '/ldml/layout/orientation/characterOrder');
@@ -43,7 +44,7 @@ class CldrTest extends TestCase
      */
     public function testNumbers()
     {
-        foreach (glob(__DIR__ . '/data/cldr-33.1/main/*.xml') as $cldr) {
+        foreach (glob(__DIR__ . '/data/cldr-34/main/*.xml') as $cldr) {
             if (strpos($cldr, '/root.xml') === false) {
                 $locale = Locale::create(basename($cldr, '.xml'));
 
@@ -90,7 +91,7 @@ class CldrTest extends TestCase
                     basename($cldr),
                     'regex=' . $regex . '=' . bin2hex($regex),
                     'number=' . $number . '=' . bin2hex($number),
-                    'standard=' . $standard,
+                    'standard=' . $standard . '=' . bin2hex($standard),
                 ));
 
                 $this->assertTrue(preg_match($regex, $number) === 1, $debug);

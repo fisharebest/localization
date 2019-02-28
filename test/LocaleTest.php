@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization;
 
+use DomainException;
 use Fisharebest\Localization\Locale\LocaleEnAu;
 use Fisharebest\Localization\Locale\LocaleEnGb;
 use Fisharebest\Localization\Locale\LocaleEnUs;
@@ -70,12 +71,17 @@ class LocaleTest extends TestCase
     /**
      * Test creating locales
      *
-     * @expectedException \DomainException
      * @return void
      */
     public function testCreateInvalidLocale()
     {
-        Locale::create('xxx');
+        try {
+            Locale::create('xxx');
+
+            $this->assertTrue(false);
+        } catch (DomainException $ex) {
+            $this->assertTrue(true);
+        }
     }
 
     /**

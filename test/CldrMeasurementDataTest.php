@@ -20,7 +20,7 @@ class CldrMeasurementDataTest extends TestCase
      */
     public function testMeasurementData()
     {
-        $cldr = simplexml_load_file(__DIR__ . '/data/cldr-33.1/supplemental/supplementalData.xml');
+        $cldr = simplexml_load_file(__DIR__ . '/data/cldr-34/supplemental/supplementalData.xml');
 
         foreach ($cldr->measurementData->measurementSystem as $xml) {
             if ($xml->attributes()->category != 'temperature') {

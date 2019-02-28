@@ -31,7 +31,7 @@ class LocaleFr extends AbstractLocale implements LocaleInterface
     public function numberSymbols()
     {
         return array(
-            self::GROUP   => self::NBSP,
+            self::GROUP   => self::NARROW_NBSP,
             self::DECIMAL => self::COMMA,
         );
     }

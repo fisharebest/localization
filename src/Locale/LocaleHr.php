@@ -40,4 +40,14 @@ class LocaleHr extends AbstractLocale implements LocaleInterface
             self::DECIMAL => self::COMMA,
         );
     }
+
+    /**
+     * How to format a floating point number (%s) as a percentage.
+     *
+     * @return string
+     */
+    protected function percentFormat()
+    {
+        return self::PLACEHOLDER . self::NBSP . self::PERCENT;
+    }
 }

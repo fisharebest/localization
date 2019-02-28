@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization;
 
 use Fisharebest\Localization\PluralRule\PluralRule2;
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase as TestCase;
 
 /**
@@ -141,12 +142,16 @@ class TranslateTest extends TestCase
 
     /**
      * Test translation using an invalid .MO data source
-     *
-     * @expectedException \InvalidArgumentException
      */
     public function testMoInvalid()
     {
-        new Translation(__DIR__ . '/data/fish.invalid.mo');
+        try {
+            new Translation(__DIR__ . '/data/fish.invalid.mo');
+
+            $this->assertTrue(false);
+        } catch (InvalidArgumentException $ex) {
+            $this->assertTrue(true);
+        }
     }
 
     /**

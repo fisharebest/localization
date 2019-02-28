@@ -15,9 +15,4 @@ class TerritoryIe extends AbstractTerritory implements TerritoryInterface
     {
         return 'IE';
     }
-
-    public function firstDay()
-    {
-        return 0;
-    }
 }

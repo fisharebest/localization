@@ -35,7 +35,7 @@ class LocaleFrMlTest extends TestCase
         $this->assertSame('lang="fr-ML"', $locale->htmlAttributes());
         $this->assertSame('fr-ML', $locale->languageTag());
         $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12 345 678,09', $locale->number(12345678.09));
-        $this->assertSame('1 234,56 %', $locale->percent(12.3456));
+        $this->assertSame('12 345 678,09', $locale->number(12345678.09));
+        $this->assertSame('1 234,56 %', $locale->percent(12.3456));
     }
 }

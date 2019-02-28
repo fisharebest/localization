@@ -32,7 +32,7 @@ class LocaleKuTest extends TestCase
         $this->assertSame('ku_TR', $locale->code());
         $this->assertSame('unicode_ci', $locale->collation());
         $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('Kurdî', $locale->endonym());
+        $this->assertSame('kurdî', $locale->endonym());
         $this->assertSame('lang="ku"', $locale->htmlAttributes());
         $this->assertSame('-123', $locale->number(-123));
         $this->assertSame('12.345.678,09', $locale->number(12345678.09));

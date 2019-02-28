@@ -33,7 +33,8 @@ abstract class AbstractLocale
     const HYPHEN       = '-';
     const LTR_MARK     = "\xE2\x80\x8E"; // Left-to-right marker
     const MINUS_SIGN   = "\xE2\x88\x92";
-    const NBSP         = "\xC2\xA0"; // A non-breaking space
+    const NARROW_NBSP  = "\xE2\x80\xAF"; // Narrow non-breaking space
+    const NBSP         = "\xC2\xA0"; // Non-breaking space
     const PRIME        = '\'';
     const RTL_MARK     = "\xE2\x80\x8F"; // Right-to-left marker
 
