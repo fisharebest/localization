@@ -1,7 +1,7 @@
 CHANGE LOG
 ==========
 
-## 1.14.0 (----------)
+## 1.14.0 (2019-03-09)
  - Better negotiation for browsers that request zh-CN instead of zh-Hans
  - Update to CLDR-34 and latest versions of iana-subtag-registry
  - Add PHP7.4 to the test matrix.
