@@ -161,6 +161,7 @@ class LocaleTest extends TestCase
         $available = array(
             Locale::create('zh-Hans'),
             Locale::create('zh-Hant'),
+            Locale::create('en-US'),
         );
 
         $default   = Locale::create('en-US');
@@ -184,6 +185,31 @@ class LocaleTest extends TestCase
         $server    = array('HTTP_ACCEPT_LANGUAGE' => 'zh-TW');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
         $this->assertEquals(Locale::create('zh-Hant'), $locale);
+
+        // google: ZH-CN，ZH; Q = 0.9
+        $server    = array('HTTP_ACCEPT_LANGUAGE' => 'ZH-CN，ZH; Q = 0.9');
+        $locale    = Locale::httpAcceptLanguage($server, $available, $default);
+        $this->assertEquals(Locale::create('zh-Hans'), $locale);
+
+        // QQ移动浏览器: zh-CN，zh-CN; q = 0.8，zh-CN; q = 0.6
+        $server    = array('HTTP_ACCEPT_LANGUAGE' => 'zh-CN，zh-CN; q = 0.8，zh-CN; q = 0.6');
+        $locale    = Locale::httpAcceptLanguage($server, $available, $default);
+        $this->assertEquals(Locale::create('zh-Hans'), $locale);
+
+        // 华为移动浏览器: zh-CN，zh-CN ; q = 0.8，en-US; q = 0.6
+        $server    = array('HTTP_ACCEPT_LANGUAGE' => 'zh-CN，zh-CN ; q = 0.8，en-US; q = 0.6');
+        $locale    = Locale::httpAcceptLanguage($server, $available, $default);
+        $this->assertEquals(Locale::create('zh-Hans'), $locale);
+
+        // UC Mobile Brower: zh-Hans-CN，en-US; q = 0.8
+        $server    = array('HTTP_ACCEPT_LANGUAGE' => 'zh-Hans-CN，en-US; q = 0.8');
+        $locale    = Locale::httpAcceptLanguage($server, $available, $default);
+        $this->assertEquals(Locale::create('zh-Hans'), $locale);
+
+        // Baidu Mobile Brower: zh-CN ，EN-US; q = 0.9
+        $server    = array('HTTP_ACCEPT_LANGUAGE' => 'zh-CN ，EN-US; q = 0.9');
+        $locale    = Locale::httpAcceptLanguage($server, $available, $default);
+        $this->assertEquals(Locale::create('zh-Hans'), $locale);
     }
 
     /**
