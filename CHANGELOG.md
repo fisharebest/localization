@@ -1,7 +1,8 @@
 CHANGE LOG
 ==========
 
-## 1.15.0
+## 1.15.0 (2019-06-22)
+ - Improve language negotiation for Chinese
  - Add support for PO files.
 
 ## 1.14.0 (2019-03-09)
