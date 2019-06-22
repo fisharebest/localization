@@ -75,6 +75,39 @@ class TranslateTest extends TestCase
     }
 
     /**
+     * Test translation using a .PO data source
+     */
+    public function testPo()
+    {
+        $translation = new Translation(__DIR__ . '/data/fish.po');
+        $translator  = new Translator($translation->asArray(), new PluralRule2());
+
+        // Simple translation
+        $this->assertSame('le poisson', $translator->translate('the fish'));
+        // Context-sensitive translation
+        $this->assertSame('poisson', $translator->translateContext('noun', 'fish'));
+        // Singular and plural
+        $this->assertSame('%d poisson', $translator->translatePlural('%d fish', '%d fishes', 0));
+        $this->assertSame('%d poisson', $translator->translatePlural('%d fish', '%d fishes', 1));
+        $this->assertSame('%d poissons', $translator->translatePlural('%d fish', '%d fishes', 2));
+
+        // Untranslated
+        $this->assertSame('FISH', $translator->translate('FISH'));
+        // Untranslated context
+        $this->assertSame('fish', $translator->translateContext('adjective', 'fish'));
+        // Untranslated plural (uses English plural rules)
+        $this->assertSame('%s fishes', $translator->translatePlural('%s fish', '%s fishes', 0));
+        $this->assertSame('%s fish', $translator->translatePlural('%s fish', '%s fishes', 1));
+        $this->assertSame('%s fishes', $translator->translatePlural('%s fish', '%s fishes', 2));
+        // Wrongly use singular as plural
+        $this->assertSame('fishes', $translator->translatePlural('fish', 'fishes', 0));
+        $this->assertSame('fish', $translator->translatePlural('fish', 'fishes', 1));
+        $this->assertSame('fishes', $translator->translatePlural('fish', 'fishes', 2));
+        // Wrongly use plural as singular
+        $this->assertSame('%s fish', $translator->translate('%s fish'));
+    }
+
+    /**
      * Test translation using a .MO data source
      */
     public function testMo()

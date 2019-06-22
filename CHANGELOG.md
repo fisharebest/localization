@@ -1,6 +1,9 @@
 CHANGE LOG
 ==========
 
+## 1.15.0
+ - Add support for PO files.
+
 ## 1.14.0 (2019-03-09)
  - Better negotiation for browsers that request zh-CN instead of zh-Hans
  - Update to CLDR-34 and latest versions of iana-subtag-registry
