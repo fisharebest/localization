@@ -18,6 +18,8 @@ class Translation
     const MO_MAGIC_BIG_ENDIAN    = 'de120495';
     const PACK_LITTLE_ENDIAN     = 'V';
     const PACK_BIG_ENDIAN        = 'N';
+    const PLURAL_SEPARATOR       = "\x00";
+    const CONTEXT_SEPARATOR      = "\x04";
 
     /** @var array An association of English -> translated messages */
     private $translations;

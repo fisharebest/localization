@@ -59,7 +59,7 @@ class Translator
      */
     public function translateContext($context, $message)
     {
-        $key = $context . chr(4) . $message;
+        $key = $context . Translation::CONTEXT_SEPARATOR . $message;
         if (isset($this->translations[$key])) {
             return $this->translations[$key];
         }
@@ -79,9 +79,9 @@ class Translator
      */
     public function translatePlural($message1, $message2, $number)
     {
-        $key = $message1 . chr(0) . $message2;
+        $key = $message1 . Translation::PLURAL_SEPARATOR . $message2;
         if (isset($this->translations[$key])) {
-            $plurals = explode(chr(0), $this->translations[$key]);
+            $plurals = explode(Translation::PLURAL_SEPARATOR, $this->translations[$key]);
             if (count($plurals) === $this->plural_rule->plurals()) {
                 return $plurals[$this->plural_rule->plural($number)];
             }
