@@ -4,15 +4,25 @@ msgstr "Content-Type: text/plain; charset=UTF-8\n"
 msgid "the fish"
 msgstr "le poisson"
 
+#~msgid "a fish"
+#~msgstr "un poisson"
+
 msgctxt "noun"
 msgid "fish"
 msgstr "poisson"
+
 
 msgctxt "verb"
 msgid "fish"
 msgstr "pêcher"
 
+
+
+#. Comment
+#: Imported comment
+#, php-format
 msgid "%d fish"
 msgid_plural "%d fishes"
 msgstr[0] "%d poisson"
 msgstr[1] "%d poissons"
+
