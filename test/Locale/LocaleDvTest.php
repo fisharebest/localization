@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageDv;
 use Fisharebest\Localization\PluralRule\PluralRule1;
 use Fisharebest\Localization\Script\ScriptThaa;
 use Fisharebest\Localization\Territory\TerritoryMv;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleDv class

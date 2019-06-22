@@ -97,8 +97,8 @@ class Locale
 
             foreach (array_keys($preferences) as $code) {
                 try {
-                    $locale = Locale::create($code);
-                    if (in_array($locale, $available)) {
+                    $locale = self::create($code);
+                    if (in_array($locale, $available, false)) {
                         return $locale;
                     }
                 } catch (DomainException $ex) {

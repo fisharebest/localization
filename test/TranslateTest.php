@@ -4,7 +4,7 @@ namespace Fisharebest\Localization;
 
 use Fisharebest\Localization\PluralRule\PluralRule2;
 use InvalidArgumentException;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the Translator/Translation classes

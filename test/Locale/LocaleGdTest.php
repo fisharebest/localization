@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageGd;
 use Fisharebest\Localization\PluralRule\PluralRule4;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryGb;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleGd class

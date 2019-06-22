@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageHr;
 use Fisharebest\Localization\PluralRule\PluralRule7;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryHr;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleHrHr class

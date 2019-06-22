@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageRu;
 use Fisharebest\Localization\PluralRule\PluralRule7;
 use Fisharebest\Localization\Script\ScriptCyrl;
 use Fisharebest\Localization\Territory\TerritoryBy;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleRuBy class

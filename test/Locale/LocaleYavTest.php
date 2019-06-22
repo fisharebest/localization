@@ -5,7 +5,7 @@ namespace Fisharebest\Localization\Locale;
 use Fisharebest\Localization\Language\LanguageYav;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryCm;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleYav class

@@ -4,7 +4,7 @@ namespace Fisharebest\Localization;
 
 use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Territory\TerritoryInterface;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the IANA subtag registry

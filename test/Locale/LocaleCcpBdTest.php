@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageCcp;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptCakm;
 use Fisharebest\Localization\Territory\TerritoryBd;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleCcpBd class

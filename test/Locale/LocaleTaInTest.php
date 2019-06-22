@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageTa;
 use Fisharebest\Localization\PluralRule\PluralRule1;
 use Fisharebest\Localization\Script\ScriptTaml;
 use Fisharebest\Localization\Territory\TerritoryIn;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleTaIn class

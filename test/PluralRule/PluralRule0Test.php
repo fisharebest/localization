@@ -2,7 +2,7 @@
 
 namespace Fisharebest\Localization\PluralRule;
 
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the PluralRule0 class

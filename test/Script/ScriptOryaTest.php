@@ -2,7 +2,7 @@
 
 namespace Fisharebest\Localization\Script;
 
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the ScriptOrya class

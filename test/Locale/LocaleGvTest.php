@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageGv;
 use Fisharebest\Localization\PluralRule\PluralRuleManx;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryIm;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleGv class

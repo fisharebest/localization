@@ -5,7 +5,7 @@ namespace Fisharebest\Localization\Locale;
 use Fisharebest\Localization\Language\LanguageNus;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritorySs;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleNusSs class

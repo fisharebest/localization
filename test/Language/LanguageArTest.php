@@ -4,7 +4,7 @@ namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule12;
 use Fisharebest\Localization\Script\ScriptArab;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LanguageAr class

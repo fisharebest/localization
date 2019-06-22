@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageYi;
 use Fisharebest\Localization\PluralRule\PluralRule1;
 use Fisharebest\Localization\Script\ScriptHebr;
 use Fisharebest\Localization\Territory\Territory001;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleYi001 class

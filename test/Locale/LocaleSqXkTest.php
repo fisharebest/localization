@@ -5,7 +5,7 @@ namespace Fisharebest\Localization\Locale;
 use Fisharebest\Localization\Language\LanguageSq;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryXk;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleSqXk class

@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageMt;
 use Fisharebest\Localization\PluralRule\PluralRule13;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryMt;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleMtMt class

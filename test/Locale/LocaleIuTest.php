@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageIu;
 use Fisharebest\Localization\PluralRule\PluralRuleOneTwoOther;
 use Fisharebest\Localization\Script\ScriptCans;
 use Fisharebest\Localization\Territory\TerritoryCa;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleIu class

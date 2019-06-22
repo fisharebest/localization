@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\Script\ScriptLatn;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LanguageSn class

@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageMfe;
 use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryMu;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleMfe class

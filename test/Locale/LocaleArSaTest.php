@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageAr;
 use Fisharebest\Localization\PluralRule\PluralRule12;
 use Fisharebest\Localization\Script\ScriptArab;
 use Fisharebest\Localization\Territory\TerritorySa;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleArSa class

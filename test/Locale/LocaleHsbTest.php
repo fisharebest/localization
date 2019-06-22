@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageHsb;
 use Fisharebest\Localization\PluralRule\PluralRule10;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryDe;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleHsb class

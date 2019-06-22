@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageMk;
 use Fisharebest\Localization\PluralRule\PluralRule15;
 use Fisharebest\Localization\Script\ScriptCyrl;
 use Fisharebest\Localization\Territory\TerritoryMk;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleMkMk class

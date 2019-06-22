@@ -5,7 +5,7 @@ namespace Fisharebest\Localization\Locale;
 use Fisharebest\Localization\Language\LanguageVai;
 use Fisharebest\Localization\Script\ScriptVaii;
 use Fisharebest\Localization\Territory\TerritoryLr;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleVaiVaii class

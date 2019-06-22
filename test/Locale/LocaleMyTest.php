@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageMy;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptMymr;
 use Fisharebest\Localization\Territory\TerritoryMm;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleMy class

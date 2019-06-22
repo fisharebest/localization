@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageNaq;
 use Fisharebest\Localization\PluralRule\PluralRuleOneTwoOther;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryNa;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleNaq class

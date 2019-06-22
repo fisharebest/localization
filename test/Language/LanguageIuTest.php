@@ -4,7 +4,7 @@ namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRuleOneTwoOther;
 use Fisharebest\Localization\Script\ScriptCans;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LanguageIu class

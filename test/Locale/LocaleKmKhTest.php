@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageKm;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptKhmr;
 use Fisharebest\Localization\Territory\TerritoryKh;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleKmKh class

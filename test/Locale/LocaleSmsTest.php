@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageSms;
 use Fisharebest\Localization\PluralRule\PluralRuleOneTwoOther;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryFi;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleSms class

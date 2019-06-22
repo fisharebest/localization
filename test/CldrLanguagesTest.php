@@ -2,7 +2,7 @@
 
 namespace Fisharebest\Localization;
 
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the CLDR

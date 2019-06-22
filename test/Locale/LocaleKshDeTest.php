@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageKsh;
 use Fisharebest\Localization\PluralRule\PluralRuleZeroOneOther;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryDe;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleKshDe class

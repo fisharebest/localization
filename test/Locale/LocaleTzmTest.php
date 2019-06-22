@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageTzm;
 use Fisharebest\Localization\PluralRule\PluralRuleCentralAtlasTamazight;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryMa;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleTzm class

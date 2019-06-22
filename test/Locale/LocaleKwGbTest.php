@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageKw;
 use Fisharebest\Localization\PluralRule\PluralRuleCornish;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryGb;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleKwGb class

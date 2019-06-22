@@ -4,7 +4,7 @@ namespace Fisharebest\Localization;
 
 use Exception;
 use Fisharebest\Localization\Locale\AbstractLocale;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the CLDR

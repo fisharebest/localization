@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguagePa;
 use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Script\ScriptArab;
 use Fisharebest\Localization\Territory\TerritoryPk;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocalePaArabPk class

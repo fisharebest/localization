@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageGa;
 use Fisharebest\Localization\PluralRule\PluralRule11;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryIe;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleGaIe class

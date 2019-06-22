@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageTh;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptThai;
 use Fisharebest\Localization\Territory\TerritoryTh;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleThTh class

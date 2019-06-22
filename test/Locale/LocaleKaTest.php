@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageKa;
 use Fisharebest\Localization\PluralRule\PluralRule1;
 use Fisharebest\Localization\Script\ScriptGeor;
 use Fisharebest\Localization\Territory\TerritoryGe;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleKa class

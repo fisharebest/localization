@@ -4,7 +4,7 @@ namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Script\ScriptBeng;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LanguageAs class

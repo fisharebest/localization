@@ -43,9 +43,9 @@ class Translator
     {
         if (isset($this->translations[$message])) {
             return $this->translations[$message];
-        } else {
-            return $message;
         }
+
+        return $message;
     }
 
     /**
@@ -62,9 +62,9 @@ class Translator
         $key = $context . chr(4) . $message;
         if (isset($this->translations[$key])) {
             return $this->translations[$key];
-        } else {
-            return $message;
         }
+
+        return $message;
     }
 
     /**

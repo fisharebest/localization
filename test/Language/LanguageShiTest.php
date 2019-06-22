@@ -4,7 +4,7 @@ namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRuleTachelhit;
 use Fisharebest\Localization\Script\ScriptTfng;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LanguageShi class

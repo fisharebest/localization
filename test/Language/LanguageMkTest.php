@@ -4,7 +4,7 @@ namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule15;
 use Fisharebest\Localization\Script\ScriptCyrl;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LanguageMk class

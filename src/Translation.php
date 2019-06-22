@@ -2,6 +2,8 @@
 
 namespace Fisharebest\Localization;
 
+use InvalidArgumentException;
+
 /**
  * Class Translation - a set of translated messages, such as a .MO file.
  *
@@ -31,7 +33,7 @@ class Translation
 
         switch (strtolower(pathinfo($filename, PATHINFO_EXTENSION))) {
             case 'csv':
-                $fp = fopen($filename, 'r');
+                $fp = fopen($filename, 'rb');
                 if ($fp) {
                     while (($data = fgetcsv($fp, 0, ';')) !== false) {
                         $this->translations[$data[0]] = $data[1];
@@ -107,7 +109,7 @@ class Translation
                 break;
             default:
                 // Not a valid .MO file.
-                throw new \InvalidArgumentException('Invalid .MO file');
+                throw new InvalidArgumentException('Invalid .MO file');
         }
 
         // Read the lookup tables

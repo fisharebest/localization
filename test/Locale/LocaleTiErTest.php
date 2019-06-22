@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageTi;
 use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Script\ScriptEthi;
 use Fisharebest\Localization\Territory\TerritoryEr;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleTiEr class

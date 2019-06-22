@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageEl;
 use Fisharebest\Localization\PluralRule\PluralRule1;
 use Fisharebest\Localization\Script\ScriptGrek;
 use Fisharebest\Localization\Territory\TerritoryCy;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleElCy class

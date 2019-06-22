@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageHi;
 use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Script\ScriptDeva;
 use Fisharebest\Localization\Territory\TerritoryIn;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleHiIn class

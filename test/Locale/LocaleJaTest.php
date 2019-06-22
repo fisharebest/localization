@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageJa;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptJpan;
 use Fisharebest\Localization\Territory\TerritoryJp;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleJa class

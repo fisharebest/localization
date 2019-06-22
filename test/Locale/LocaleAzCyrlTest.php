@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageAz;
 use Fisharebest\Localization\PluralRule\PluralRule1;
 use Fisharebest\Localization\Script\ScriptCyrl;
 use Fisharebest\Localization\Territory\TerritoryIr;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleAzCyrl class

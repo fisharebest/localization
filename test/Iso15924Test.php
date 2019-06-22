@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization;
 
 use Fisharebest\Localization\Script\ScriptInterface;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for ISO-15924

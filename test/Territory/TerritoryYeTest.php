@@ -2,7 +2,7 @@
 
 namespace Fisharebest\Localization\Territory;
 
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the TerritoryYe class

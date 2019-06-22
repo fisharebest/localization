@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageNe;
 use Fisharebest\Localization\PluralRule\PluralRule1;
 use Fisharebest\Localization\Script\ScriptDeva;
 use Fisharebest\Localization\Territory\TerritoryNp;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleNe class

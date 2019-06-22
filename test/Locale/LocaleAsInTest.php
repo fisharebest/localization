@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageAs;
 use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Script\ScriptBeng;
 use Fisharebest\Localization\Territory\TerritoryIn;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleAsIn class

@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageYue;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptHans;
 use Fisharebest\Localization\Territory\TerritoryCn;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleYue class

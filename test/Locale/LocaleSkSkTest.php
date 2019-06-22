@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageSk;
 use Fisharebest\Localization\PluralRule\PluralRule8;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritorySk;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the LocaleSkSk class

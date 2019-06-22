@@ -6,7 +6,7 @@ use DomainException;
 use Fisharebest\Localization\Locale\LocaleEnAu;
 use Fisharebest\Localization\Locale\LocaleEnGb;
 use Fisharebest\Localization\Locale\LocaleEnUs;
-use PHPUnit\Framework\TestCase as TestCase;
+use PHPUnit\Framework\TestCase;
 
 /**
  * Tests for the AbstractLocale class
