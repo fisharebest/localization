@@ -108,6 +108,21 @@ class TranslateTest extends TestCase
     }
 
     /**
+     * Test translation using a .PO data source
+     */
+    public function testPoWithEscape()
+    {
+        $translation = new Translation(__DIR__ . '/data/escape.po');
+        $translator  = new Translator($translation->asArray(), new PluralRule2());
+
+        // Our test data swaps quotes and newlines
+        $this->assertSame('\'', $translator->translate('"'));
+        $this->assertSame('"', $translator->translate('\''));
+        $this->assertSame("\r", $translator->translate("\n"));
+        $this->assertSame("\n", $translator->translate("\r"));
+    }
+
+    /**
      * Test translation using a .MO data source
      */
     public function testMo()
