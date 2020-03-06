@@ -5,8 +5,8 @@ namespace Fisharebest\Localization\Script;
 /**
  * Class ScriptMtei - Representation of the Meitei Mayek (Meithei, Meetei) script.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class ScriptMtei extends AbstractScript implements ScriptInterface

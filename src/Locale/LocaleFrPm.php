@@ -7,8 +7,8 @@ use Fisharebest\Localization\Territory\TerritoryPm;
 /**
  * Class LocaleFrPm
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class LocaleFrPm extends LocaleFr

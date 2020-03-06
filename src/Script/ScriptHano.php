@@ -5,8 +5,8 @@ namespace Fisharebest\Localization\Script;
 /**
  * Class ScriptHano - Representation of the Hanunoo (Hanunóo) script.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class ScriptHano extends AbstractScript implements ScriptInterface

@@ -5,8 +5,8 @@ namespace Fisharebest\Localization\Script;
 /**
  * Class ScriptLina - Representation of the Linear A script.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class ScriptLina extends AbstractScript implements ScriptInterface

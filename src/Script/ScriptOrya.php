@@ -5,8 +5,8 @@ namespace Fisharebest\Localization\Script;
 /**
  * Class ScriptOrya - Representation of the Oriya script.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class ScriptOrya extends AbstractScript implements ScriptInterface

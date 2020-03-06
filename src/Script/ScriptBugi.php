@@ -5,8 +5,8 @@ namespace Fisharebest\Localization\Script;
 /**
  * Class ScriptBugi - Representation of the Buginese script.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class ScriptBugi extends AbstractScript implements ScriptInterface

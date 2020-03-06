@@ -12,8 +12,8 @@ namespace Fisharebest\Localization\PluralRule;
  * Lao
  * nplurals=1; plural=0;
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class PluralRule0 implements PluralRuleInterface

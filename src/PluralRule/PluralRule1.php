@@ -13,8 +13,8 @@ namespace Fisharebest\Localization\PluralRule;
  * Romanic (Italian, Portuguese, Spanish, Catalan)
  * nplurals=2; plural=(n != 1);
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class PluralRule1 implements PluralRuleInterface

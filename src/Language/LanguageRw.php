@@ -8,8 +8,8 @@ use Fisharebest\Localization\Territory\TerritoryRw;
 /**
  * Class LanguageRw - Representation of the Kinyarwanda language.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class LanguageRw extends AbstractLanguage implements LanguageInterface

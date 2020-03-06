@@ -7,8 +7,8 @@ use Fisharebest\Localization\Language\LanguageMs;
 /**
  * Class LocaleMs - Malay
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class LocaleMs extends AbstractLocale implements LocaleInterface

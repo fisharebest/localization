@@ -7,8 +7,8 @@ use Fisharebest\Localization\Language\LanguageRwk;
 /**
  * Class LocaleRwk - Rwa
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class LocaleRwk extends AbstractLocale implements LocaleInterface

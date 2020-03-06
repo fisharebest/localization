@@ -8,8 +8,8 @@ use Fisharebest\Localization\Territory\TerritoryUg;
 /**
  * Class LanguageNyn - Representation of the Nyankole language.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class LanguageNyn extends AbstractLanguage implements LanguageInterface

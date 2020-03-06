@@ -8,8 +8,8 @@ use Fisharebest\Localization\Territory\TerritorySe;
 /**
  * Class LanguageSv - Representation of the Swedish language.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class LanguageSv extends AbstractLanguage implements LanguageInterface

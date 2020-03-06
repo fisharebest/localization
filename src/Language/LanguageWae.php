@@ -8,8 +8,8 @@ use Fisharebest\Localization\Territory\TerritoryCh;
 /**
  * Class LanguageWae - Representation of the Walser language.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class LanguageWae extends AbstractLanguage implements LanguageInterface

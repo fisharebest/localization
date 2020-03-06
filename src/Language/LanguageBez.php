@@ -8,8 +8,8 @@ use Fisharebest\Localization\Territory\TerritoryTz;
 /**
  * Class LanguageBez - Representation of the Bena (Tanzania) language.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class LanguageBez extends AbstractLanguage implements LanguageInterface

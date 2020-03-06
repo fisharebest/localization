@@ -8,8 +8,8 @@ use Fisharebest\Localization\Territory\TerritoryCv;
 /**
  * Class LanguageKea - Representation of the Kabuverdianu language.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class LanguageKea extends AbstractLanguage implements LanguageInterface

@@ -5,8 +5,8 @@ namespace Fisharebest\Localization\Variant;
 /**
  * Class Posix - Representation of the Posix variant of en-US.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class VariantPosix implements VariantInterface

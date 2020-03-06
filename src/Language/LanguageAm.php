@@ -9,8 +9,8 @@ use Fisharebest\Localization\Territory\TerritoryEt;
 /**
  * Class LanguageAm - Representation of the Amharic language.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class LanguageAm extends AbstractLanguage implements LanguageInterface

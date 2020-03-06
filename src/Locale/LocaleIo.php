@@ -7,8 +7,8 @@ use Fisharebest\Localization\Language\LanguageIo;
 /**
  * Class LocaleIo - Ido
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class LocaleIo extends AbstractLocale implements LocaleInterface

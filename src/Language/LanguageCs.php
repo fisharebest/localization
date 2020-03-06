@@ -8,8 +8,8 @@ use Fisharebest\Localization\Territory\TerritoryCz;
 /**
  * Class LanguageCs - Representation of the Czech language.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class LanguageCs extends AbstractLanguage implements LanguageInterface

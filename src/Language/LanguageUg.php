@@ -9,8 +9,8 @@ use Fisharebest\Localization\Territory\TerritoryCn;
 /**
  * Class LanguageUg - Representation of the Uighur language.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class LanguageUg extends AbstractLanguage implements LanguageInterface

@@ -9,8 +9,8 @@ use Fisharebest\Localization\Territory\TerritoryUa;
 /**
  * Class LanguageUk - Representation of the Ukrainian language.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class LanguageUk extends AbstractLanguage implements LanguageInterface

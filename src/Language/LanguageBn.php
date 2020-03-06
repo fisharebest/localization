@@ -9,8 +9,8 @@ use Fisharebest\Localization\Territory\TerritoryBd;
 /**
  * Class LanguageBn - Representation of the Bengali language.
  *
- * @author    Greg Roach <fisharebest@gmail.com>
- * @copyright (c) 2019 Greg Roach
+ * @author    Greg Roach <greg@subaqua.co.uk>
+ * @copyright (c) 2020 Greg Roach
  * @license   GPLv3+
  */
 class LanguageBn extends AbstractLanguage implements LanguageInterface
