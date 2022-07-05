@@ -152,6 +152,6 @@ Updates welcome
 
 Please provide references to sources, such as:
 
-* [CLDR](http://localization.unicode.org)
+* [Unicode CLDR](https://cldr.unicode.org/)
 * [Ethnologue](https://www.ethnologue.com)
 * [ScriptSource](https://www.scriptsource.org)
