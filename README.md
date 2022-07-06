@@ -110,7 +110,7 @@ $locale->pluralRule()->plural(0); // 0 (zero is singular in French "zero apple")
 ```
 
 Note that some of the plural definitions in CLDR differ to those traditionally used by
-`gettext`.  We use the gettext versions for br, fa, fil, he, lv, mk, pt, tr and se.
+`gettext`.  We use the gettext versions for br, fa, fil, he, lv, mk, pt and se.
 
 Translation functions work the same as `gettext`.
 

@@ -2,7 +2,7 @@
 
 namespace Fisharebest\Localization\Language;
 
-use Fisharebest\Localization\PluralRule\PluralRule0;
+use Fisharebest\Localization\PluralRule\PluralRule1;
 use Fisharebest\Localization\Script\ScriptLatn;
 use PHPUnit\Framework\TestCase;
 
@@ -23,7 +23,7 @@ class LanguageTrTest extends TestCase
         $language = new LanguageTr();
 
         $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule0(), $language->pluralRule());
+        $this->assertEquals(new PluralRule1(), $language->pluralRule());
         $this->assertSame('tr', $language->code());
     }
 }

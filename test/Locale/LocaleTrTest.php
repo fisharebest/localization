@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageTr;
-use Fisharebest\Localization\PluralRule\PluralRule0;
+use Fisharebest\Localization\PluralRule\PluralRule1;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryTr;
 use PHPUnit\Framework\TestCase;
@@ -25,7 +25,7 @@ class LocaleTrTest extends TestCase
         $locale = new LocaleTr();
 
         $this->assertEquals(new LanguageTr(), $locale->language());
-        $this->assertEquals(new PluralRule0(), $locale->pluralRule());
+        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
         $this->assertEquals(new ScriptLatn(), $locale->script());
         $this->assertEquals(new TerritoryTr(), $locale->territory());
         $this->assertNull($locale->variant());

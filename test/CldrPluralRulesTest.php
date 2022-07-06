@@ -47,7 +47,6 @@ class CldrPluralRulesTest extends TestCase
                     case 'pt':   // CLDR has the rule for pt_BR, whereas gettext has the rule for pt_PT
                     case 'se':   // CLDR has (1) (2) (other), whereas gettext has (0,1) (other)
                     case 'sh':   // This code (Serbo-croat) is deprecated
-                    case 'tr':   // CLDR has (1) (other), whereas gettext has (other)
                         continue 2;
                     case 'sdh':  // TO BE IMPLEMENTED
                     case 'cs':   // 4/3
