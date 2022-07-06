@@ -21,7 +21,7 @@ class Iso15924Test extends TestCase
      */
     public function testIso15924()
     {
-        $iso15924 = file(__DIR__ . '/data/iso15924-utf8-20180827.txt', FILE_IGNORE_NEW_LINES);
+        $iso15924 = file(__DIR__ . '/data/iso15924-2021-12-03.txt', FILE_IGNORE_NEW_LINES);
         $iso15924 = preg_grep('/^[A-Z][a-z]{3};/', $iso15924);
         $iso15924 = preg_grep('/Reserved for private use/', $iso15924, PREG_GREP_INVERT);
 
@@ -29,13 +29,13 @@ class Iso15924Test extends TestCase
             $fields = explode(';', $data);
 
             $class = __NAMESPACE__ . '\Script\Script' . $fields[0];
-            $this->assertTrue(class_exists($class));
+            $this->assertTrue(class_exists($class), $data);
 
             /** @var ScriptInterface $script */
             $script = new $class();
 
-            $this->assertSame($fields[0], $script->code());
-            $this->assertSame($fields[1], $script->number());
+            $this->assertSame($fields[0], $script->code(), $data);
+            $this->assertSame($fields[1], $script->number(), $data);
             $this->assertSame($fields[4] ?: null, $script->unicodeName());
         }
     }

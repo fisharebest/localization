@@ -24,6 +24,6 @@ class ScriptKitsTest extends TestCase
         $this->assertSame('ltr', $script->direction());
         $this->assertSame('288', $script->number());
         $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        $this->assertSame('Khitan_Small_Script', $script->unicodeName());
     }
 }

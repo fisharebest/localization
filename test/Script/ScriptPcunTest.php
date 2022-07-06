@@ -5,25 +5,25 @@ namespace Fisharebest\Localization\Script;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the ScriptCpmnTest class
+ * Tests for the ScriptPcun class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
  */
-class ScriptCpmnTest extends TestCase
+class ScriptPcunTest extends TestCase
 {
     /**
      * Test the properties
      */
     public function testProperties()
     {
-        $script = new ScriptCpmn();
+        $script = new ScriptPcun();
 
-        $this->assertSame('Cpmn', $script->code());
+        $this->assertSame('Pcun', $script->code());
         $this->assertSame('ltr', $script->direction());
-        $this->assertSame('402', $script->number());
+        $this->assertSame('015', $script->number());
         $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Cypro_Minoan', $script->unicodeName());
+        $this->assertNull($script->unicodeName());
     }
 }

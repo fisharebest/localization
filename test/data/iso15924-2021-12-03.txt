@@ -31,13 +31,15 @@ Cans;440;Unified Canadian Aboriginal Syllabics;syllabaire autochtone canadien un
 Cari;201;Carian;carien;Carian;5.1;2007-07-02
 Cham;358;Cham;cham (čam, tcham);Cham;5.1;2009-11-11
 Cher;445;Cherokee;tchérokî;Cherokee;3.0;2004-05-01
+Chrs;109;Chorasmian;chorasmien;Chorasmian;13.0;2019-08-19
 Cirt;291;Cirth;cirth;;;2004-05-01
 Copt;204;Coptic;copte;Coptic;4.1;2006-06-21
-Cpmn;402;Cypro-Minoan;syllabaire chypro-minoen;;;2017-07-26
+Cpmn;402;Cypro-Minoan;syllabaire chypro-minoen;Cypro_Minoan;14.0;2017-07-26
 Cprt;403;Cypriot syllabary;syllabaire chypriote;Cypriot;4.0;2017-07-26
 Cyrl;220;Cyrillic;cyrillique;Cyrillic;1.1;2004-05-01
 Cyrs;221;Cyrillic (Old Church Slavonic variant);cyrillique (variante slavonne);;1.1;2004-05-01
 Deva;315;Devanagari (Nagari);dévanâgarî;Devanagari;1.1;2004-05-01
+Diak;342;Dives Akuru;dives akuru;Dives_Akuru;13.0;2019-08-19
 Dogr;328;Dogra;dogra;Dogra;11.0;2016-12-05
 Dsrt;250;Deseret (Mormon);déseret (mormon);Deseret;3.1;2004-05-01
 Dupl;755;Duployan shorthand, Duployan stenography;sténographie Duployé;Duployan;7.0;2014-11-15
@@ -79,11 +81,12 @@ Jpan;413;Japanese (alias for Han + Hiragana + Katakana);japonais (alias pour han
 Jurc;510;Jurchen;jurchen;;;2010-12-21
 Kali;357;Kayah Li;kayah li;Kayah_Li;5.1;2007-07-02
 Kana;411;Katakana;katakana;Katakana;1.1;2004-05-01
+Kawi;368;Kawi;kawi;;;2021-12-03
 Khar;305;Kharoshthi;kharochthî;Kharoshthi;4.1;2006-06-21
 Khmr;355;Khmer;khmer;Khmer;3.0;2004-05-29
 Khoj;322;Khojki;khojkî;Khojki;7.0;2014-11-15
 Kitl;505;Khitan large script;grande écriture khitan;;;2015-07-15
-Kits;288;Khitan small script;petite écriture khitan;;;2015-07-15
+Kits;288;Khitan small script;petite écriture khitan;Khitan_Small_Script;13.0;2015-07-15
 Knda;345;Kannada;kannara (canara);Kannada;1.1;2004-05-29
 Kore;287;Korean (alias for Hangul + Han);coréen (alias pour hangûl + han);;1.1;2007-06-13
 Kpel;436;Kpelle;kpèllé;;;2010-03-26
@@ -120,6 +123,7 @@ Mroo;264;Mro, Mru;mro;Mro;7.0;2016-12-05
 Mtei;337;Meitei Mayek (Meithei, Meetei);meitei mayek;Meetei_Mayek;5.2;2009-06-01
 Mult;323;Multani;multanî;Multani;8.0;2015-07-07
 Mymr;350;Myanmar (Burmese);birman;Myanmar;3.0;2004-05-01
+Nagm;295;Nag Mundari;nag mundari;;;2021-12-03
 Nand;311;Nandinagari;nandinâgarî;Nandinagari;12.0;2018-08-26
 Narb;106;Old North Arabian (Ancient North Arabian);nord-arabique;Old_North_Arabian;7.0;2014-11-15
 Nbat;159;Nabataean;nabatéen;Nabataean;7.0;2014-11-15
@@ -134,8 +138,11 @@ Orkh;175;Old Turkic, Orkhon Runic;orkhon;Old_Turkic;5.2;2009-06-01
 Orya;327;Oriya (Odia);oriyâ (odia);Oriya;1.1;2016-12-05
 Osge;219;Osage;osage;Osage;9.0;2016-12-05
 Osma;260;Osmanya;osmanais;Osmanya;4.0;2004-05-01
+Ougr;143;Old Uyghur;ancien ouïgour;Old_Uyghur;14.0;2021-01-25
 Palm;126;Palmyrene;palmyrénien;Palmyrene;7.0;2014-11-15
 Pauc;263;Pau Cin Hau;paou chin haou;Pau_Cin_Hau;7.0;2014-11-15
+Pcun;015;Proto-Cuneiform;proto-cunéiforme;;;2021-01-25
+Pelm;016;Proto-Elamite;proto-élamite;;;2021-01-25
 Perm;227;Old Permic;ancien permien;Old_Permic;7.0;2014-11-15
 Phag;331;Phags-pa;’phags pa;Phags_Pa;5.0;2006-10-10
 Phli;131;Inscriptional Pahlavi;pehlevi des inscriptions;Inscriptional_Pahlavi;5.2;2009-06-01
@@ -145,8 +152,10 @@ Phnx;115;Phoenician;phénicien;Phoenician;5.0;2006-10-10
 Plrd;282;Miao (Pollard);miao (Pollard);Miao;6.1;2012-02-06
 Piqd;293;Klingon (KLI pIqaD);klingon (pIqaD du KLI);;;2015-12-16
 Prti;130;Inscriptional Parthian;parthe des inscriptions;Inscriptional_Parthian;5.2;2009-06-01
+Psin;103;Proto-Sinaitic;proto-sinaïtique;;;2021-01-25
 Qaaa;900;Reserved for private use (start);réservé à l’usage privé (début);;;2004-05-29
 Qabx;949;Reserved for private use (end);réservé à l’usage privé (fin);;;2004-05-29
+Ranj;303;Ranjana;ranjana;;;2021-01-25
 Rjng;363;Rejang (Redjang, Kaganga);redjang (kaganga);Rejang;5.1;2009-02-23
 Rohg;167;Hanifi Rohingya;hanifi rohingya;Hanifi_Rohingya;11.0;2017-11-21
 Roro;620;Rongorongo;rongorongo;;;2004-05-01
@@ -167,6 +176,7 @@ Sogo;142;Old Sogdian;ancien sogdien;Old_Sogdian;11.0;2017-11-21
 Sora;398;Sora Sompeng;sora sompeng;Sora_Sompeng;6.1;2012-02-06
 Soyo;329;Soyombo;soyombo;Soyombo;10.0;2017-07-26
 Sund;362;Sundanese;sundanais;Sundanese;5.1;2007-07-02
+Sunu;274;Sunuwar;sunuwar;;;2021-12-03
 Sylo;316;Syloti Nagri;sylotî nâgrî;Syloti_Nagri;4.1;2006-06-21
 Syrc;135;Syriac;syriaque;Syriac;3.0;2004-05-01
 Syre;138;Syriac (Estrangelo variant);syriaque (variante estranghélo);;3.0;2004-05-01
@@ -187,14 +197,18 @@ Thaa;170;Thaana;thâna;Thaana;3.0;2004-05-01
 Thai;352;Thai;thaï;Thai;1.1;2004-05-01
 Tibt;330;Tibetan;tibétain;Tibetan;2.0;2004-05-01
 Tirh;326;Tirhuta;tirhouta;Tirhuta;7.0;2014-11-15
+Tnsa;275;Tangsa;tangsa;Tangsa;14.0;2021-02-17
+Toto;294;Toto;toto;Toto;14.0;2020-04-16
 Ugar;040;Ugaritic;ougaritique;Ugaritic;4.0;2004-05-01
 Vaii;470;Vai;vaï;Vai;5.1;2007-07-02
 Visp;280;Visible Speech;parole visible;;;2004-05-01
+Vith;228;Vithkuqi;vithkuqi;Vithkuqi;14.0;2021-02-17
 Wara;262;Warang Citi (Varang Kshiti);warang citi;Warang_Citi;7.0;2014-11-15
 Wcho;283;Wancho;wantcho;Wancho;12.0;2017-07-26
 Wole;480;Woleai;woléaï;;;2010-12-21
 Xpeo;030;Old Persian;cunéiforme persépolitain;Old_Persian;4.1;2006-06-21
 Xsux;020;Cuneiform, Sumero-Akkadian;cunéiforme suméro-akkadien;Cuneiform;5.0;2006-10-10
+Yezi;192;Yezidi;yézidi;Yezidi;13.0;2019-08-19
 Yiii;460;Yi;yi;Yi;3.0;2004-05-01
 Zanb;339;Zanabazar Square (Zanabazarin Dörböljin Useg, Xewtee Dörböljin Bicig, Horizontal Square Script);zanabazar quadratique;Zanabazar_Square;10.0;2017-07-26
 Zinh;994;Code for inherited script;codet pour écriture héritée;Inherited;;2009-02-23

@@ -5,25 +5,25 @@ namespace Fisharebest\Localization\Script;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the ScriptCpmnTest class
+ * Tests for the ScriptTnsa class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
  */
-class ScriptCpmnTest extends TestCase
+class ScriptTnsaTest extends TestCase
 {
     /**
      * Test the properties
      */
     public function testProperties()
     {
-        $script = new ScriptCpmn();
+        $script = new ScriptTnsa();
 
-        $this->assertSame('Cpmn', $script->code());
+        $this->assertSame('Tnsa', $script->code());
         $this->assertSame('ltr', $script->direction());
-        $this->assertSame('402', $script->number());
+        $this->assertSame('275', $script->number());
         $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Cypro_Minoan', $script->unicodeName());
+        $this->assertSame('Tangsa', $script->unicodeName());
     }
 }

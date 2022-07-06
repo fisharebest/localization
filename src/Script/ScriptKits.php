@@ -20,4 +20,9 @@ class ScriptKits extends AbstractScript implements ScriptInterface
     {
         return '288';
     }
+
+    public function unicodeName()
+    {
+        return 'Khitan_Small_Script';
+    }
 }
