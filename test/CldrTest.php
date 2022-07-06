@@ -161,7 +161,7 @@ class CldrTest extends TestCase
      */
     private function cldrValue($file, $xpath)
     {
-        $xml = simplexml_load_file($file);
+        $xml = simplexml_load_string(file_get_contents($file));
         $tmp = $file;
 
         while ($xml->xpath($xpath) == false) {
@@ -169,7 +169,7 @@ class CldrTest extends TestCase
                 throw new Exception('Cannot find ' . $xpath . ' in ' . $tmp);
             }
             $file = $this->parentCldr($file);
-            $xml  = simplexml_load_file($file);
+            $xml  = simplexml_load_string(file_get_contents($file));
         }
         $data = $xml->xpath($xpath);
 

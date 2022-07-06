@@ -22,7 +22,7 @@ class CldrLanguagesTest extends TestCase
     {
         foreach (glob(__DIR__ . '/data/cldr-34/main/*.xml') as $xml) {
             if (strpos($xml, '/root.xml') === false) {
-                $cldr         = simplexml_load_file($xml);
+                $cldr         = simplexml_load_string(file_get_contents($xml));
                 $locale       = Locale::create(basename($xml, '.xml'));
                 $language_tag = $locale->languageTag();
 
