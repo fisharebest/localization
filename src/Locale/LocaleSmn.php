@@ -38,6 +38,6 @@ class LocaleSmn extends AbstractLocale implements LocaleInterface
 
     public function percentFormat()
     {
-        return self::PLACEHOLDER . self:: NBSP . self::PERCENT;
+        return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }
 }

@@ -1,4 +1,5 @@
 <?php
+
 return array(
     "%d fish\x00%d fishes" => "%d poisson",
     "noun\x04fish"         => 'poisson',

@@ -20,6 +20,11 @@
 	},
 	"require-dev": {
 		"ext-simplexml": "*",
+		"phpstan/phpstan": "*",
+		"phpstan/extension-installer": "*",
+		"phpstan/phpstan-deprecation-rules": "*",
+		"phpstan/phpstan-strict-rules": "*",
+		"phpstan/phpstan-phpunit": "*",
 		"phpunit/phpunit": "*",
 		"yoast/phpunit-polyfills":  "*",
 		"php-coveralls/php-coveralls": "*"
@@ -28,6 +33,10 @@
 		"psr-4": {
 			"Fisharebest\\Localization\\": "src/"
 		}
+	},
+	"config": {
+		"allow-plugins": {
+			"phpstan/extension-installer": true
+		}
 	}
 }
-

@@ -24,4 +24,4 @@ jobs:
       - run: composer global require squizlabs/php_codesniffer
 
       - name: PHP
-        run: ~/.composer/vendor/bin/phpcs --colors --standard=PSR12 --exclude=Generic.Files.LineLength src test
+        run: ~/.composer/vendor/bin/phpcs --colors --standard=PSR12 --exclude=Generic.Files.LineLength,PSR12.Properties.ConstantVisibility src test
