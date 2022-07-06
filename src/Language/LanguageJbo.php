@@ -8,7 +8,7 @@ use Fisharebest\Localization\PluralRule\PluralRule0;
  * Class LanguageJbo - Representation of the Lojban language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageJbo extends AbstractLanguage implements LanguageInterface

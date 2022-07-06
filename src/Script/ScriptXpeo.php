@@ -6,7 +6,7 @@ namespace Fisharebest\Localization\Script;
  * Class ScriptXpeo - Representation of the Old Persian script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class ScriptXpeo extends AbstractScript implements ScriptInterface

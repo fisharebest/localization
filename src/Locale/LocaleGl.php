@@ -8,7 +8,7 @@ use Fisharebest\Localization\Language\LanguageGl;
  * Class LocaleGl - Galician
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LocaleGl extends AbstractLocale implements LocaleInterface

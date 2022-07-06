@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryGl;
  * Class LanguageKl - Representation of the Kalaallisut language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageKl extends AbstractLanguage implements LanguageInterface

@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  * Tests for the LocaleEo001 class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LocaleEo001Test extends TestCase

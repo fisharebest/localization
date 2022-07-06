@@ -8,7 +8,7 @@ use Fisharebest\Localization\PluralRule\PluralRule1;
  * Class LanguageEo - Representation of the Esperanto language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageEo extends AbstractLanguage implements LanguageInterface

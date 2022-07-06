@@ -10,7 +10,7 @@ use Fisharebest\Localization\Territory\Territory001;
  * Class AbstractLanguage - Representation of a language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 abstract class AbstractLanguage

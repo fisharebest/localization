@@ -8,7 +8,7 @@ use Fisharebest\Localization\Territory\TerritorySn;
  * Class LanguageDyo - Representation of the Jola-Fonyi language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageDyo extends AbstractLanguage implements LanguageInterface

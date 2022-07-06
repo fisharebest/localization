@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryIn;
  * Class LanguageKok - Representation of the Konkani language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageKok extends AbstractLanguage implements LanguageInterface

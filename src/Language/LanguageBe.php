@@ -10,7 +10,7 @@ use Fisharebest\Localization\Territory\TerritoryBy;
  * Class LanguageBe - Representation of the Belarusian language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageBe extends AbstractLanguage implements LanguageInterface

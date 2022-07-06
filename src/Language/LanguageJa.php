@@ -10,7 +10,7 @@ use Fisharebest\Localization\Territory\TerritoryJp;
  * Class LanguageJa - Representation of the Japanese language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageJa extends AbstractLanguage implements LanguageInterface

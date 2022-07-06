@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryLs;
  * Class LanguageEn - Representation of the Sotho language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageSt extends AbstractLanguage implements LanguageInterface

@@ -10,7 +10,7 @@ use Fisharebest\Localization\Territory\TerritoryId;
  * Class LanguageJv - Representation of the Javanese language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageJv extends AbstractLanguage implements LanguageInterface

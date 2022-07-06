@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryFi;
  * Class LanguageSmn - Representation of the Inari Sami language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageSmn extends AbstractLanguage implements LanguageInterface

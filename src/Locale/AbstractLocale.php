@@ -12,7 +12,7 @@ use Fisharebest\Localization\Variant\VariantInterface;
  * Class AbstractLocale - The “root” locale, from which all others are derived.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 abstract class AbstractLocale

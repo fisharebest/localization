@@ -6,7 +6,7 @@ namespace Fisharebest\Localization\Script;
  * Class ScriptKhmr - Representation of the Khmer script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class ScriptKhmr extends AbstractScript implements ScriptInterface

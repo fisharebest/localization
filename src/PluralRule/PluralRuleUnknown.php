@@ -10,7 +10,7 @@ use DomainException;
  * We cannot use this language for translation, but we can use its other attributes.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class PluralRuleUnknown implements PluralRuleInterface

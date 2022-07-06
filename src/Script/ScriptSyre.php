@@ -6,7 +6,7 @@ namespace Fisharebest\Localization\Script;
  * Class ScriptSyre - Representation of the Syriac (Estrangelo variant) script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class ScriptSyre extends AbstractScript implements ScriptInterface

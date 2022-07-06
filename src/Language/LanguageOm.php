@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryEt;
  * Class LanguageOm - Representation of the Oromo language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageOm extends AbstractLanguage implements LanguageInterface

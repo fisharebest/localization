@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryFi;
  * Class LanguageSma - Representation of the Southern Sami language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageSma extends AbstractLanguage implements LanguageInterface

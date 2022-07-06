@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryZa;
  * Class LanguageNr - Representation of the South Ndebele language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageNr extends AbstractLanguage implements LanguageInterface

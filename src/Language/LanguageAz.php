@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryIr;
  * Class LanguageAz - Representation of the Azerbaijani language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageAz extends AbstractLanguage implements LanguageInterface

@@ -6,7 +6,7 @@ namespace Fisharebest\Localization\Territory;
  * Class AbstractTerritory - Representation of the territory 202 - Sub-Saharan Africa.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class Territory202 extends AbstractTerritory implements TerritoryInterface

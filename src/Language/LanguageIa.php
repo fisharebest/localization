@@ -8,7 +8,7 @@ use Fisharebest\Localization\PluralRule\PluralRule1;
  * Class LanguageIa - Representation of the Interlingua (International Auxiliary AbstractLanguage language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageIa extends AbstractLanguage implements LanguageInterface

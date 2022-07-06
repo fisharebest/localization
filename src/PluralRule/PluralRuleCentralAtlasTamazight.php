@@ -7,7 +7,7 @@ namespace Fisharebest\Localization\PluralRule;
  * nplurals=4; plural=(n>=2 && n<=10 || n>99) ? 1 : 0
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class PluralRuleCentralAtlasTamazight implements PluralRuleInterface

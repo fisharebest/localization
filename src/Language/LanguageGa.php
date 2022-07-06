@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryIe;
  * Class LanguageGa - Representation of the Irish language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageGa extends AbstractLanguage implements LanguageInterface

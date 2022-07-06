@@ -8,7 +8,7 @@ use Fisharebest\Localization\Language\LanguageLrc;
  * Class LocaleLrc - Luri
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LocaleLrc extends AbstractLocale implements LocaleInterface

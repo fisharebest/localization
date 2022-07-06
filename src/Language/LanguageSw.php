@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryTz;
  * Class LanguageSw - Representation of the Swahili language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageSw extends AbstractLanguage implements LanguageInterface

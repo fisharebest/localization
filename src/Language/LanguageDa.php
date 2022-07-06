@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryDk;
  * Class LanguageDa - Representation of the Danish language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageDa extends AbstractLanguage implements LanguageInterface

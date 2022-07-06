@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryCz;
  * Class LanguageCs - Representation of the Czech language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageCs extends AbstractLanguage implements LanguageInterface

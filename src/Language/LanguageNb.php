@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryNo;
  * Class LanguageNb - Representation of the Norwegian Bokmål language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageNb extends AbstractLanguage implements LanguageInterface

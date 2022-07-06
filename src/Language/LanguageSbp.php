@@ -8,7 +8,7 @@ use Fisharebest\Localization\Territory\TerritoryTz;
  * Class LanguageSbp - Representation of the Sangu (Tanzania) language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageSbp extends AbstractLanguage implements LanguageInterface

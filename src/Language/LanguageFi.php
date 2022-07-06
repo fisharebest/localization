@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryFi;
  * Class LanguageFi - Representation of the Finnish language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageFi extends AbstractLanguage implements LanguageInterface

@@ -8,7 +8,7 @@ use Fisharebest\Localization\Language\LanguageHsb;
  * Class LocaleHsb - Upper Sorbian
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LocaleHsb extends AbstractLocale implements LocaleInterface

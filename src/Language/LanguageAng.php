@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryGb;
  * Class LanguageEn - Representation of the Anglo-Saxon / Old-English language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageAng extends AbstractLanguage implements LanguageInterface

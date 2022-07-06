@@ -8,7 +8,7 @@ use Fisharebest\Localization\Language\LanguageAsa;
  * Class LocaleAsa - Asu
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LocaleAsa extends AbstractLocale implements LocaleInterface

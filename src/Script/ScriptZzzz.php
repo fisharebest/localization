@@ -6,7 +6,7 @@ namespace Fisharebest\Localization\Script;
  * Class ScriptZzzz - Representation of the Code for uncoded script script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class ScriptZzzz extends AbstractScript implements ScriptInterface

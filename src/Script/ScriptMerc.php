@@ -6,7 +6,7 @@ namespace Fisharebest\Localization\Script;
  * Class ScriptMerc - Representation of the Meroitic Cursive script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class ScriptMerc extends AbstractScript implements ScriptInterface

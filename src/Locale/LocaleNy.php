@@ -8,7 +8,7 @@ use Fisharebest\Localization\Language\LanguageNy;
  * Class LocaleNy - Chewa
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LocaleNy extends AbstractLocale implements LocaleInterface

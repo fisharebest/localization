@@ -9,7 +9,7 @@ use Fisharebest\Localization\Script\ScriptArab;
  * Class LanguageAr - Representation of the Arabic language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageAr extends AbstractLanguage implements LanguageInterface

@@ -8,7 +8,7 @@ use Fisharebest\Localization\Language\LanguageDa;
  * Class LocaleDa - Danish
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LocaleDa extends AbstractLocale implements LocaleInterface

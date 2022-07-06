@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryUg;
  * Class LanguageCgg - Representation of the Chiga language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageCgg extends AbstractLanguage implements LanguageInterface

@@ -8,7 +8,7 @@ use Fisharebest\Localization\Language\LanguageSwc;
  * Class LocaleSwc - Congo Swahili
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LocaleSwc extends AbstractLocale implements LocaleInterface

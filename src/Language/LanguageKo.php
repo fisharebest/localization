@@ -10,7 +10,7 @@ use Fisharebest\Localization\Territory\TerritoryKr;
  * Class LanguageKo - Representation of the Korean language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageKo extends AbstractLanguage implements LanguageInterface

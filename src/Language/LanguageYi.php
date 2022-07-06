@@ -9,7 +9,7 @@ use Fisharebest\Localization\Script\ScriptHebr;
  * Class LanguageYi - Representation of the Yiddish language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageYi extends AbstractLanguage implements LanguageInterface

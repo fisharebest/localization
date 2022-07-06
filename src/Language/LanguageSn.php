@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryZw;
  * Class LanguageSn - Representation of the Shona language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageSn extends AbstractLanguage implements LanguageInterface

@@ -8,7 +8,7 @@ use Fisharebest\Localization\Territory\TerritoryDe;
  * Class LocaleEnDe - English
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LocaleEnDe extends LocaleEn

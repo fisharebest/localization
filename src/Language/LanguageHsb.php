@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryDe;
  * Class LanguageHsb - Representation of the Upper Sorbian language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageHsb extends AbstractLanguage implements LanguageInterface

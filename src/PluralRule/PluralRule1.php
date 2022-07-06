@@ -14,7 +14,7 @@ namespace Fisharebest\Localization\PluralRule;
  * nplurals=2; plural=(n != 1);
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class PluralRule1 implements PluralRuleInterface

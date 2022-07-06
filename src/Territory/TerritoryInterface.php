@@ -6,7 +6,7 @@ namespace Fisharebest\Localization\Territory;
  * Interface TerritoryInterface - Representation of a geographic area.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 interface TerritoryInterface

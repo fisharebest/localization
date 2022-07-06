@@ -8,7 +8,7 @@ use Fisharebest\Localization\Territory\TerritoryIt;
  * Class LocaleDeCh - Swiss High German
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LocaleDeIt extends LocaleDe

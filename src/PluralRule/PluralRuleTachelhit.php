@@ -7,7 +7,7 @@ namespace Fisharebest\Localization\PluralRule;
  * nplurals=4; plural=(n==0 || n==1) ? 0 : (n>=2 && n<=10) ? 1 : 2;
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class PluralRuleTachelhit implements PluralRuleInterface

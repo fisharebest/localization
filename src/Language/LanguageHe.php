@@ -10,7 +10,7 @@ use Fisharebest\Localization\Territory\TerritoryIl;
  * Class LanguageHe - Representation of the Hebrew language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageHe extends AbstractLanguage implements LanguageInterface

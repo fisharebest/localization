@@ -8,7 +8,7 @@ use Fisharebest\Localization\Territory\TerritoryFk;
  * Class LocaleEnFk
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LocaleEnFk extends LocaleEn

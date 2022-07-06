@@ -8,7 +8,7 @@ use Fisharebest\Localization\Language\LanguageTr;
  * Class LocaleTr - Turkish
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LocaleTr extends AbstractLocale implements LocaleInterface

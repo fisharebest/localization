@@ -9,7 +9,7 @@ use Fisharebest\Localization\Territory\TerritoryCh;
  * Class LanguageRm - Representation of the Romansh language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class LanguageRm extends AbstractLanguage implements LanguageInterface

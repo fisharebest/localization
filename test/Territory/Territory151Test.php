@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
  * Tests for the Territory151 class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class Territory151Test extends TestCase

@@ -6,7 +6,7 @@ namespace Fisharebest\Localization\Script;
  * Class ScriptEgyp - Representation of the Egyptian hieroglyphs script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class ScriptEgyp extends AbstractScript implements ScriptInterface

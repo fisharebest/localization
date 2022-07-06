@@ -6,7 +6,7 @@ namespace Fisharebest\Localization\Script;
  * Class ScriptBali - Representation of the Balinese script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2020 Greg Roach
+ * @copyright (c) 2022 Greg Roach
  * @license   GPLv3+
  */
 class ScriptBali extends AbstractScript implements ScriptInterface
