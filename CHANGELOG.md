@@ -2,6 +2,10 @@ CHANGE LOG
 ==========
 
 ## ?.??.? (????-??-??)
+ - Fix: plural rules for Turkish
+ - Add PHP 8.0 and PHP 8.1 to the test matrix
+
+## 1.15.1 (2019-07-02)
  - Fix: escaped characters in PO files.
 
 ## 1.15.0 (2019-06-22)

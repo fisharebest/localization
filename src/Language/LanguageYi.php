@@ -10,7 +10,7 @@ use Fisharebest\Localization\Script\ScriptHebr;
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
- * @license   GPLv3+
+ * @license   GPL-3.0-or-later
  */
 class LanguageYi extends AbstractLanguage implements LanguageInterface
 {

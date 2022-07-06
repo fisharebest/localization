@@ -10,7 +10,7 @@ use Fisharebest\Localization\Territory\TerritoryBe;
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
- * @license   GPLv3+
+ * @license   GPL-3.0-or-later
  */
 class LanguageWa extends AbstractLanguage implements LanguageInterface
 {

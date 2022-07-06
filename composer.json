@@ -21,6 +21,7 @@
 	"require-dev": {
 		"ext-simplexml": "*",
 		"phpunit/phpunit": "*",
+		"yoast/phpunit-polyfills":  "*",
 		"php-coveralls/php-coveralls": "*"
 	},
 	"autoload": {

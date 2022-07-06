@@ -11,7 +11,7 @@ use Fisharebest\Localization\Territory\TerritoryGr;
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
- * @license   GPLv3+
+ * @license   GPL-3.0-or-later
  */
 class LanguageEl extends AbstractLanguage implements LanguageInterface
 {

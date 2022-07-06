@@ -9,7 +9,7 @@ use Fisharebest\Localization\Language\LanguageSms;
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
- * @license   GPLv3+
+ * @license   GPL-3.0-or-later
  */
 class LocaleSms extends AbstractLocale implements LocaleInterface
 {

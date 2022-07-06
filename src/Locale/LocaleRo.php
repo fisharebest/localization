@@ -9,7 +9,7 @@ use Fisharebest\Localization\Language\LanguageRo;
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
- * @license   GPLv3+
+ * @license   GPL-3.0-or-later
  */
 class LocaleRo extends AbstractLocale implements LocaleInterface
 {

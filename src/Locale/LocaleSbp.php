@@ -9,7 +9,7 @@ use Fisharebest\Localization\Language\LanguageSbp;
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
- * @license   GPLv3+
+ * @license   GPL-3.0-or-later
  */
 class LocaleSbp extends AbstractLocale implements LocaleInterface
 {

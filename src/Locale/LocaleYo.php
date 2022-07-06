@@ -9,7 +9,7 @@ use Fisharebest\Localization\Language\LanguageYo;
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
- * @license   GPLv3+
+ * @license   GPL-3.0-or-later
  */
 class LocaleYo extends AbstractLocale implements LocaleInterface
 {
