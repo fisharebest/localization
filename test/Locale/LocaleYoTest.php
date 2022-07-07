@@ -24,17 +24,17 @@ class LocaleYoTest extends TestCase
     {
         $locale = new LocaleYo();
 
-        $this->assertEquals(new LanguageYo(), $locale->language());
-        $this->assertEquals(new PluralRule0(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryNg(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('Èdè Yorùbá', $locale->endonym());
-        $this->assertSame('lang="yo"', $locale->htmlAttributes());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12,345,678.09', $locale->number(12345678.09));
-        $this->assertSame('1,234.56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageYo(), $locale->language());
+        self::assertEquals(new PluralRule0(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryNg(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('Èdè Yorùbá', $locale->endonym());
+        self::assertSame('lang="yo"', $locale->htmlAttributes());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12,345,678.09', $locale->number(12345678.09));
+        self::assertSame('1,234.56%', $locale->percent(12.3456));
     }
 }

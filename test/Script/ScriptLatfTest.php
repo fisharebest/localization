@@ -20,10 +20,10 @@ class ScriptLatfTest extends TestCase
     {
         $script = new ScriptLatf();
 
-        $this->assertSame('Latf', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('217', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Latf', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('217', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

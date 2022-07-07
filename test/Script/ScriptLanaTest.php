@@ -20,10 +20,10 @@ class ScriptLanaTest extends TestCase
     {
         $script = new ScriptLana();
 
-        $this->assertSame('Lana', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('351', $script->number());
-        $this->assertSame(array('᪀', '᪁', '᪂', '᪃', '᪄', '᪅', '᪆', '᪇', '᪈', '᪉'), $script->numerals());
-        $this->assertSame('Tai_Tham', $script->unicodeName());
+        self::assertSame('Lana', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('351', $script->number());
+        self::assertSame(array('᪀', '᪁', '᪂', '᪃', '᪄', '᪅', '᪆', '᪇', '᪈', '᪉'), $script->numerals());
+        self::assertSame('Tai_Tham', $script->unicodeName());
     }
 }

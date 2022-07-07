@@ -21,7 +21,7 @@ class LanguageAgqTest extends TestCase
     {
         $language = new LanguageAgq();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('agq', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('agq', $language->code());
     }
 }

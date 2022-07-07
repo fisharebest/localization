@@ -20,10 +20,10 @@ class ScriptKpelTest extends TestCase
     {
         $script = new ScriptKpel();
 
-        $this->assertSame('Kpel', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('436', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Kpel', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('436', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

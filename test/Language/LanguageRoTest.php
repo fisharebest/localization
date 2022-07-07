@@ -22,8 +22,8 @@ class LanguageRoTest extends TestCase
     {
         $language = new LanguageRo();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule5(), $language->pluralRule());
-        $this->assertSame('ro', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule5(), $language->pluralRule());
+        self::assertSame('ro', $language->code());
     }
 }

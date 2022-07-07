@@ -20,6 +20,6 @@ class TerritoryGgTest extends TestCase
     {
         $territory = new TerritoryGg();
 
-        $this->assertSame('GG', $territory->code());
+        self::assertSame('GG', $territory->code());
     }
 }

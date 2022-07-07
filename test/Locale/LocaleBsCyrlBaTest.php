@@ -24,18 +24,18 @@ class LocaleBsCyrlBaTest extends TestCase
     {
         $locale = new LocaleBsCyrlBa();
 
-        $this->assertEquals(new LanguageBs(), $locale->language());
-        $this->assertEquals(new PluralRule7(), $locale->pluralRule());
-        $this->assertEquals(new ScriptCyrl(), $locale->script());
-        $this->assertEquals(new TerritoryBa(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('bs_BA@cyrillic', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('lang="bs-Cyrl"', $locale->htmlAttributes());
-        $this->assertSame('bs-Cyrl', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12.345.678,09', $locale->number(12345678.09));
-        $this->assertSame('1.234,56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageBs(), $locale->language());
+        self::assertEquals(new PluralRule7(), $locale->pluralRule());
+        self::assertEquals(new ScriptCyrl(), $locale->script());
+        self::assertEquals(new TerritoryBa(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('bs_BA@cyrillic', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('lang="bs-Cyrl"', $locale->htmlAttributes());
+        self::assertSame('bs-Cyrl', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12.345.678,09', $locale->number(12345678.09));
+        self::assertSame('1.234,56%', $locale->percent(12.3456));
     }
 }

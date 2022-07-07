@@ -20,10 +20,10 @@ class ScriptKitsTest extends TestCase
     {
         $script = new ScriptKits();
 
-        $this->assertSame('Kits', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('288', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Khitan_Small_Script', $script->unicodeName());
+        self::assertSame('Kits', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('288', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Khitan_Small_Script', $script->unicodeName());
     }
 }

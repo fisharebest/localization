@@ -23,17 +23,17 @@ class LocaleMuaCmTest extends TestCase
     {
         $locale = new LocaleMuaCm();
 
-        $this->assertEquals(new LanguageMua(), $locale->language());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryCm(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('mua_CM', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('lang="mua"', $locale->htmlAttributes());
-        $this->assertSame('mua', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12.345.678,09', $locale->number(12345678.09));
-        $this->assertSame('1.234,56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageMua(), $locale->language());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryCm(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('mua_CM', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('lang="mua"', $locale->htmlAttributes());
+        self::assertSame('mua', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12.345.678,09', $locale->number(12345678.09));
+        self::assertSame('1.234,56%', $locale->percent(12.3456));
     }
 }

@@ -24,19 +24,19 @@ class LocaleSuTest extends TestCase
     {
         $locale = new LocaleSu();
 
-        $this->assertEquals(new LanguageSu(), $locale->language());
-        $this->assertEquals(new PluralRule0(), $locale->pluralRule());
-        $this->assertEquals(new ScriptSund(), $locale->script());
-        $this->assertEquals(new TerritoryId(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('su_ID', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹', $locale->digits('0123456789'));
-        $this->assertSame('ᮘᮞ ᮞᮥᮔ᮪ᮓ', $locale->endonym());
-        $this->assertSame('lang="su"', $locale->htmlAttributes());
-        $this->assertSame('su', $locale->languageTag());
-        $this->assertSame('-᮱᮲᮳', $locale->number(-123));
-        $this->assertSame('᮱᮲,᮳᮴᮵,᮶᮷᮸.᮰᮹', $locale->number(12345678.09));
-        $this->assertSame('᮱,᮲᮳᮴.᮵᮶%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageSu(), $locale->language());
+        self::assertEquals(new PluralRule0(), $locale->pluralRule());
+        self::assertEquals(new ScriptSund(), $locale->script());
+        self::assertEquals(new TerritoryId(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('su_ID', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹', $locale->digits('0123456789'));
+        self::assertSame('ᮘᮞ ᮞᮥᮔ᮪ᮓ', $locale->endonym());
+        self::assertSame('lang="su"', $locale->htmlAttributes());
+        self::assertSame('su', $locale->languageTag());
+        self::assertSame('-᮱᮲᮳', $locale->number(-123));
+        self::assertSame('᮱᮲,᮳᮴᮵,᮶᮷᮸.᮰᮹', $locale->number(12345678.09));
+        self::assertSame('᮱,᮲᮳᮴.᮵᮶%', $locale->percent(12.3456));
     }
 }

@@ -20,10 +20,10 @@ class ScriptMongTest extends TestCase
     {
         $script = new ScriptMong();
 
-        $this->assertSame('Mong', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('145', $script->number());
-        $this->assertSame(array('᠐', '᠑', '᠒', '᠓', '᠔', '᠕', '᠖', '᠗', '᠘', '᠙'), $script->numerals());
-        $this->assertSame('Mongolian', $script->unicodeName());
+        self::assertSame('Mong', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('145', $script->number());
+        self::assertSame(array('᠐', '᠑', '᠒', '᠓', '᠔', '᠕', '᠖', '᠗', '᠘', '᠙'), $script->numerals());
+        self::assertSame('Mongolian', $script->unicodeName());
     }
 }

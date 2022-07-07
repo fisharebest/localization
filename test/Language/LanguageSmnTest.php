@@ -22,8 +22,8 @@ class LanguageSmnTest extends TestCase
     {
         $language = new LanguageSmn();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRuleOneTwoOther(), $language->pluralRule());
-        $this->assertSame('smn', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRuleOneTwoOther(), $language->pluralRule());
+        self::assertSame('smn', $language->code());
     }
 }

@@ -20,10 +20,10 @@ class ScriptSyloTest extends TestCase
     {
         $script = new ScriptSylo();
 
-        $this->assertSame('Sylo', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('316', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Syloti_Nagri', $script->unicodeName());
+        self::assertSame('Sylo', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('316', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Syloti_Nagri', $script->unicodeName());
     }
 }

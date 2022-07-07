@@ -20,7 +20,7 @@ class PluralRule2Test extends TestCase
     {
         $plural_rule = new PluralRule2();
 
-        $this->assertSame(2, $plural_rule->plurals());
+        self::assertSame(2, $plural_rule->plurals());
     }
 
     /**
@@ -31,10 +31,10 @@ class PluralRule2Test extends TestCase
         $plural_rule = new PluralRule2();
 
         foreach (array(0, 1) as $n) {
-            $this->assertSame(0, $plural_rule->plural($n));
+            self::assertSame(0, $plural_rule->plural($n));
         }
         foreach (array(2, 3, 4, 5, 6, 7, 8, 9) as $n) {
-            $this->assertSame(1, $plural_rule->plural($n));
+            self::assertSame(1, $plural_rule->plural($n));
         }
     }
 }

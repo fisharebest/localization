@@ -20,10 +20,10 @@ class ScriptLydiTest extends TestCase
     {
         $script = new ScriptLydi();
 
-        $this->assertSame('Lydi', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('116', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Lydian', $script->unicodeName());
+        self::assertSame('Lydi', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('116', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Lydian', $script->unicodeName());
     }
 }

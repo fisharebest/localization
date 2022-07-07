@@ -22,8 +22,8 @@ class LanguageXogTest extends TestCase
     {
         $language = new LanguageXog();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('xog', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('xog', $language->code());
     }
 }

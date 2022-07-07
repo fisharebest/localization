@@ -21,7 +21,7 @@ class LanguageDavTest extends TestCase
     {
         $language = new LanguageDav();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('dav', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('dav', $language->code());
     }
 }

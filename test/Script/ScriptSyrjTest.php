@@ -20,10 +20,10 @@ class ScriptSyrjTest extends TestCase
     {
         $script = new ScriptSyrj();
 
-        $this->assertSame('Syrj', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('137', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Syrj', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('137', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

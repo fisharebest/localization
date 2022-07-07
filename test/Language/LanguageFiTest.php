@@ -22,8 +22,8 @@ class LanguageFiTest extends TestCase
     {
         $language = new LanguageFi();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('fi', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('fi', $language->code());
     }
 }

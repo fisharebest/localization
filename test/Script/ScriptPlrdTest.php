@@ -20,10 +20,10 @@ class ScriptPlrdTest extends TestCase
     {
         $script = new ScriptPlrd();
 
-        $this->assertSame('Plrd', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('282', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Miao', $script->unicodeName());
+        self::assertSame('Plrd', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('282', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Miao', $script->unicodeName());
     }
 }

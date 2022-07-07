@@ -22,8 +22,8 @@ class LanguageLrcTest extends TestCase
     {
         $language = new LanguageLrc();
 
-        $this->assertEquals(new ScriptArab(), $language->defaultScript());
-        $this->assertEquals(new PluralRule12(), $language->pluralRule());
-        $this->assertSame('lrc', $language->code());
+        self::assertEquals(new ScriptArab(), $language->defaultScript());
+        self::assertEquals(new PluralRule12(), $language->pluralRule());
+        self::assertSame('lrc', $language->code());
     }
 }

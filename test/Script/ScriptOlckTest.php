@@ -20,10 +20,10 @@ class ScriptOlckTest extends TestCase
     {
         $script = new ScriptOlck();
 
-        $this->assertSame('Olck', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('261', $script->number());
-        $this->assertSame(array('᱐', '᱑', '᱒', '᱓', '᱔', '᱕', '᱖', '᱗', '᱘', '᱙'), $script->numerals());
-        $this->assertSame('Ol_Chiki', $script->unicodeName());
+        self::assertSame('Olck', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('261', $script->number());
+        self::assertSame(array('᱐', '᱑', '᱒', '᱓', '᱔', '᱕', '᱖', '᱗', '᱘', '᱙'), $script->numerals());
+        self::assertSame('Ol_Chiki', $script->unicodeName());
     }
 }

@@ -24,18 +24,18 @@ class LocaleOrInTest extends TestCase
     {
         $locale = new LocaleOrIn();
 
-        $this->assertEquals(new LanguageOr(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptOrya(), $locale->script());
-        $this->assertEquals(new TerritoryIn(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('or_IN', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('୦୧୨୩୪୫୬୭୮୯', $locale->digits('0123456789'));
-        $this->assertSame('lang="or"', $locale->htmlAttributes());
-        $this->assertSame('or', $locale->languageTag());
-        $this->assertSame('-୧୨୩', $locale->number(-123));
-        $this->assertSame('୧,୨୩,୪୫,୬୭୮.୦୯', $locale->number(12345678.09));
-        $this->assertSame('୧,୨୩୪.୫୬%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageOr(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptOrya(), $locale->script());
+        self::assertEquals(new TerritoryIn(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('or_IN', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('୦୧୨୩୪୫୬୭୮୯', $locale->digits('0123456789'));
+        self::assertSame('lang="or"', $locale->htmlAttributes());
+        self::assertSame('or', $locale->languageTag());
+        self::assertSame('-୧୨୩', $locale->number(-123));
+        self::assertSame('୧,୨୩,୪୫,୬୭୮.୦୯', $locale->number(12345678.09));
+        self::assertSame('୧,୨୩୪.୫୬%', $locale->percent(12.3456));
     }
 }

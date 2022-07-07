@@ -24,19 +24,19 @@ class LocaleKmTest extends TestCase
     {
         $locale = new LocaleKm();
 
-        $this->assertEquals(new LanguageKm(), $locale->language());
-        $this->assertEquals(new PluralRule0(), $locale->pluralRule());
-        $this->assertEquals(new ScriptKhmr(), $locale->script());
-        $this->assertEquals(new TerritoryKh(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('km_KH', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('០១២៣៤៥៦៧៨៩', $locale->digits('0123456789'));
-        $this->assertSame('ខ្មែរ', $locale->endonym());
-        $this->assertSame('lang="km"', $locale->htmlAttributes());
-        $this->assertSame('km', $locale->languageTag());
-        $this->assertSame('-១២៣', $locale->number(-123));
-        $this->assertSame('១២.៣៤៥.៦៧៨,០៩', $locale->number(12345678.09));
-        $this->assertSame('១.២៣៤,៥៦%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageKm(), $locale->language());
+        self::assertEquals(new PluralRule0(), $locale->pluralRule());
+        self::assertEquals(new ScriptKhmr(), $locale->script());
+        self::assertEquals(new TerritoryKh(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('km_KH', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('០១២៣៤៥៦៧៨៩', $locale->digits('0123456789'));
+        self::assertSame('ខ្មែរ', $locale->endonym());
+        self::assertSame('lang="km"', $locale->htmlAttributes());
+        self::assertSame('km', $locale->languageTag());
+        self::assertSame('-១២៣', $locale->number(-123));
+        self::assertSame('១២.៣៤៥.៦៧៨,០៩', $locale->number(12345678.09));
+        self::assertSame('១.២៣៤,៥៦%', $locale->percent(12.3456));
     }
 }

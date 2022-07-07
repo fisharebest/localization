@@ -21,7 +21,7 @@ class LanguageKlnTest extends TestCase
     {
         $language = new LanguageKln();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('kln', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('kln', $language->code());
     }
 }

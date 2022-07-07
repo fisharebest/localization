@@ -20,10 +20,10 @@ class ScriptOryaTest extends TestCase
     {
         $script = new ScriptOrya();
 
-        $this->assertSame('Orya', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('327', $script->number());
-        $this->assertSame(array('୦', '୧', '୨', '୩', '୪', '୫', '୬', '୭', '୮', '୯'), $script->numerals());
-        $this->assertSame('Oriya', $script->unicodeName());
+        self::assertSame('Orya', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('327', $script->number());
+        self::assertSame(array('୦', '୧', '୨', '୩', '୪', '୫', '୬', '୭', '୮', '୯'), $script->numerals());
+        self::assertSame('Oriya', $script->unicodeName());
     }
 }

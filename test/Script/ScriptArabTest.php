@@ -20,10 +20,10 @@ class ScriptArabTest extends TestCase
     {
         $script = new ScriptArab();
 
-        $this->assertSame('Arab', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('160', $script->number());
-        $this->assertSame(array('٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'), $script->numerals());
-        $this->assertSame('Arabic', $script->unicodeName());
+        self::assertSame('Arab', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('160', $script->number());
+        self::assertSame(array('٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'), $script->numerals());
+        self::assertSame('Arabic', $script->unicodeName());
     }
 }

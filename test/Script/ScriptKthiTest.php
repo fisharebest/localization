@@ -20,10 +20,10 @@ class ScriptKthiTest extends TestCase
     {
         $script = new ScriptKthi();
 
-        $this->assertSame('Kthi', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('317', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Kaithi', $script->unicodeName());
+        self::assertSame('Kthi', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('317', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Kaithi', $script->unicodeName());
     }
 }

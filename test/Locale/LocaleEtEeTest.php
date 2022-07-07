@@ -24,18 +24,18 @@ class LocaleEtEeTest extends TestCase
     {
         $locale = new LocaleEtEe();
 
-        $this->assertEquals(new LanguageEt(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryEe(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('et_EE', $locale->code());
-        $this->assertSame('estonian_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('lang="et"', $locale->htmlAttributes());
-        $this->assertSame('et', $locale->languageTag());
-        $this->assertSame('−123', $locale->number(-123));
-        $this->assertSame('12345 678,09', $locale->number(12345678.09));
-        $this->assertSame('1234,56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageEt(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryEe(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('et_EE', $locale->code());
+        self::assertSame('estonian_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('lang="et"', $locale->htmlAttributes());
+        self::assertSame('et', $locale->languageTag());
+        self::assertSame('−123', $locale->number(-123));
+        self::assertSame('12345 678,09', $locale->number(12345678.09));
+        self::assertSame('1234,56%', $locale->percent(12.3456));
     }
 }

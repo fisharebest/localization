@@ -20,10 +20,10 @@ class ScriptLimbTest extends TestCase
     {
         $script = new ScriptLimb();
 
-        $this->assertSame('Limb', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('336', $script->number());
-        $this->assertSame(array('᥆', '᥇', '᥈', '᥉', '᥊', '᥋', '᥌', '᥍', '᥎', '᥏'), $script->numerals());
-        $this->assertSame('Limbu', $script->unicodeName());
+        self::assertSame('Limb', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('336', $script->number());
+        self::assertSame(array('᥆', '᥇', '᥈', '᥉', '᥊', '᥋', '᥌', '᥍', '᥎', '᥏'), $script->numerals());
+        self::assertSame('Limbu', $script->unicodeName());
     }
 }

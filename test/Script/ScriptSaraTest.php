@@ -20,10 +20,10 @@ class ScriptSaraTest extends TestCase
     {
         $script = new ScriptSara();
 
-        $this->assertSame('Sara', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('292', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Sara', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('292', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

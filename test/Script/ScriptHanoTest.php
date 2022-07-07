@@ -20,10 +20,10 @@ class ScriptHanoTest extends TestCase
     {
         $script = new ScriptHano();
 
-        $this->assertSame('Hano', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('371', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Hanunoo', $script->unicodeName());
+        self::assertSame('Hano', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('371', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Hanunoo', $script->unicodeName());
     }
 }

@@ -24,18 +24,18 @@ class LocalePaArabTest extends TestCase
     {
         $locale = new LocalePaArab();
 
-        $this->assertEquals(new LanguagePa(), $locale->language());
-        $this->assertEquals(new PluralRule2(), $locale->pluralRule());
-        $this->assertEquals(new ScriptArab(), $locale->script());
-        $this->assertEquals(new TerritoryIn(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('pa_IN@arabic', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
-        $this->assertSame('lang="pa-Arab" dir="rtl"', $locale->htmlAttributes());
-        $this->assertSame('pa-Arab', $locale->languageTag());
-        $this->assertSame('١,٢٣,٤٥,٦٧٨٫٠٩', $locale->number(12345678.09));
-        $this->assertSame('-١٢٣', $locale->number(-123));
-        $this->assertSame('١,٢٣٤٫٥٦٪', $locale->percent(12.3456));
+        self::assertEquals(new LanguagePa(), $locale->language());
+        self::assertEquals(new PluralRule2(), $locale->pluralRule());
+        self::assertEquals(new ScriptArab(), $locale->script());
+        self::assertEquals(new TerritoryIn(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('pa_IN@arabic', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+        self::assertSame('lang="pa-Arab" dir="rtl"', $locale->htmlAttributes());
+        self::assertSame('pa-Arab', $locale->languageTag());
+        self::assertSame('١,٢٣,٤٥,٦٧٨٫٠٩', $locale->number(12345678.09));
+        self::assertSame('-١٢٣', $locale->number(-123));
+        self::assertSame('١,٢٣٤٫٥٦٪', $locale->percent(12.3456));
     }
 }

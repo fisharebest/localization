@@ -24,19 +24,19 @@ class LocaleNqoTest extends TestCase
     {
         $locale = new LocaleNqo();
 
-        $this->assertEquals(new LanguageNqo(), $locale->language());
-        $this->assertEquals(new PluralRule0(), $locale->pluralRule());
-        $this->assertEquals(new ScriptNkoo(), $locale->script());
-        $this->assertEquals(new TerritoryGn(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('nqo_GN', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('߀߁߂߃߄߅߆߇߈߉', $locale->digits('0123456789'));
-        $this->assertSame('ߒߞߏ', $locale->endonym());
-        $this->assertSame('lang="nqo" dir="rtl"', $locale->htmlAttributes());
-        $this->assertSame('nqo', $locale->languageTag());
-        $this->assertSame('-߁߂߃', $locale->number(-123));
-        $this->assertSame('߁߂,߃߄߅,߆߇߈.߀߉', $locale->number(12345678.09));
-        $this->assertSame('߁,߂߃߄.߅߆%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageNqo(), $locale->language());
+        self::assertEquals(new PluralRule0(), $locale->pluralRule());
+        self::assertEquals(new ScriptNkoo(), $locale->script());
+        self::assertEquals(new TerritoryGn(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('nqo_GN', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('߀߁߂߃߄߅߆߇߈߉', $locale->digits('0123456789'));
+        self::assertSame('ߒߞߏ', $locale->endonym());
+        self::assertSame('lang="nqo" dir="rtl"', $locale->htmlAttributes());
+        self::assertSame('nqo', $locale->languageTag());
+        self::assertSame('-߁߂߃', $locale->number(-123));
+        self::assertSame('߁߂,߃߄߅,߆߇߈.߀߉', $locale->number(12345678.09));
+        self::assertSame('߁,߂߃߄.߅߆%', $locale->percent(12.3456));
     }
 }

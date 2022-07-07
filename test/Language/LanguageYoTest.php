@@ -22,8 +22,8 @@ class LanguageYoTest extends TestCase
     {
         $language = new LanguageYo();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule0(), $language->pluralRule());
-        $this->assertSame('yo', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule0(), $language->pluralRule());
+        self::assertSame('yo', $language->code());
     }
 }

@@ -22,8 +22,8 @@ class LanguageNynTest extends TestCase
     {
         $language = new LanguageNyn();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('nyn', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('nyn', $language->code());
     }
 }

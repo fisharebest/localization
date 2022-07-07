@@ -24,19 +24,19 @@ class LocaleEnCaTest extends TestCase
     {
         $locale = new LocaleEnCa();
 
-        $this->assertEquals(new LanguageEn(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryCa(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('en_CA', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('Canadian English', $locale->endonym());
-        $this->assertSame('lang="en-CA"', $locale->htmlAttributes());
-        $this->assertSame('en-CA', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12,345,678.09', $locale->number(12345678.09));
-        $this->assertSame('1,234.56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageEn(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryCa(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('en_CA', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('Canadian English', $locale->endonym());
+        self::assertSame('lang="en-CA"', $locale->htmlAttributes());
+        self::assertSame('en-CA', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12,345,678.09', $locale->number(12345678.09));
+        self::assertSame('1,234.56%', $locale->percent(12.3456));
     }
 }

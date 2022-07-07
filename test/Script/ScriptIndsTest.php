@@ -20,10 +20,10 @@ class ScriptIndsTest extends TestCase
     {
         $script = new ScriptInds();
 
-        $this->assertSame('Inds', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('610', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Inds', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('610', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

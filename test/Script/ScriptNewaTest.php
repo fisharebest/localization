@@ -20,10 +20,10 @@ class ScriptNewaTest extends TestCase
     {
         $script = new ScriptNewa();
 
-        $this->assertSame('Newa', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('333', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Newa', $script->unicodeName());
+        self::assertSame('Newa', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('333', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Newa', $script->unicodeName());
     }
 }

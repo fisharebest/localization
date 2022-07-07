@@ -22,8 +22,8 @@ class LanguageKabTest extends TestCase
     {
         $language = new LanguageKab();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule2(), $language->pluralRule());
-        $this->assertSame('kab', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule2(), $language->pluralRule());
+        self::assertSame('kab', $language->code());
     }
 }

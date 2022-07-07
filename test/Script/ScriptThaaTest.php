@@ -20,10 +20,10 @@ class ScriptThaaTest extends TestCase
     {
         $script = new ScriptThaa();
 
-        $this->assertSame('Thaa', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('170', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Thaana', $script->unicodeName());
+        self::assertSame('Thaa', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('170', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Thaana', $script->unicodeName());
     }
 }

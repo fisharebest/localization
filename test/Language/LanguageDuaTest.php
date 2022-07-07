@@ -21,7 +21,7 @@ class LanguageDuaTest extends TestCase
     {
         $language = new LanguageDua();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('dua', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('dua', $language->code());
     }
 }

@@ -20,9 +20,9 @@ class ScriptPermTest extends TestCase
     {
         $script = new ScriptPerm();
 
-        $this->assertSame('Perm', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('227', $script->number());
-        $this->assertSame(array(), $script->numerals());
+        self::assertSame('Perm', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('227', $script->number());
+        self::assertSame(array(), $script->numerals());
     }
 }

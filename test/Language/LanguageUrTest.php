@@ -22,8 +22,8 @@ class LanguageUrTest extends TestCase
     {
         $language = new LanguageUr();
 
-        $this->assertEquals(new ScriptArab(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('ur', $language->code());
+        self::assertEquals(new ScriptArab(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('ur', $language->code());
     }
 }

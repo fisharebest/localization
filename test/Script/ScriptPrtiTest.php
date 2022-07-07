@@ -20,10 +20,10 @@ class ScriptPrtiTest extends TestCase
     {
         $script = new ScriptPrti();
 
-        $this->assertSame('Prti', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('130', $script->number());
-        $this->assertSame('Inscriptional_Parthian', $script->unicodeName());
-        $this->assertSame(array(), $script->numerals());
+        self::assertSame('Prti', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('130', $script->number());
+        self::assertSame('Inscriptional_Parthian', $script->unicodeName());
+        self::assertSame(array(), $script->numerals());
     }
 }

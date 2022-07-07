@@ -22,8 +22,8 @@ class LanguageLoTest extends TestCase
     {
         $language = new LanguageLo();
 
-        $this->assertEquals(new ScriptLaoo(), $language->defaultScript());
-        $this->assertEquals(new PluralRule0(), $language->pluralRule());
-        $this->assertSame('lo', $language->code());
+        self::assertEquals(new ScriptLaoo(), $language->defaultScript());
+        self::assertEquals(new PluralRule0(), $language->pluralRule());
+        self::assertSame('lo', $language->code());
     }
 }

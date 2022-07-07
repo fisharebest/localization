@@ -22,8 +22,8 @@ class LanguageIuTest extends TestCase
     {
         $language = new LanguageIu();
 
-        $this->assertEquals(new ScriptCans(), $language->defaultScript());
-        $this->assertEquals(new PluralRuleOneTwoOther(), $language->pluralRule());
-        $this->assertSame('iu', $language->code());
+        self::assertEquals(new ScriptCans(), $language->defaultScript());
+        self::assertEquals(new PluralRuleOneTwoOther(), $language->pluralRule());
+        self::assertSame('iu', $language->code());
     }
 }

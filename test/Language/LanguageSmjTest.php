@@ -22,8 +22,8 @@ class LanguageSmjTest extends TestCase
     {
         $language = new LanguageSmj();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRuleOneTwoOther(), $language->pluralRule());
-        $this->assertSame('smj', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRuleOneTwoOther(), $language->pluralRule());
+        self::assertSame('smj', $language->code());
     }
 }

@@ -20,10 +20,10 @@ class ScriptTavtTest extends TestCase
     {
         $script = new ScriptTavt();
 
-        $this->assertSame('Tavt', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('359', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Tai_Viet', $script->unicodeName());
+        self::assertSame('Tavt', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('359', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Tai_Viet', $script->unicodeName());
     }
 }

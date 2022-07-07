@@ -20,10 +20,10 @@ class ScriptBassTest extends TestCase
     {
         $script = new ScriptBass();
 
-        $this->assertSame('Bass', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('259', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Bassa_Vah', $script->unicodeName());
+        self::assertSame('Bass', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('259', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Bassa_Vah', $script->unicodeName());
     }
 }

@@ -24,18 +24,18 @@ class LocaleBnBdTest extends TestCase
     {
         $locale = new LocaleBnBd();
 
-        $this->assertEquals(new LanguageBn(), $locale->language());
-        $this->assertEquals(new PluralRule2(), $locale->pluralRule());
-        $this->assertEquals(new ScriptBeng(), $locale->script());
-        $this->assertEquals(new TerritoryBd(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('bn_BD', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('০১২৩৪৫৬৭৮৯', $locale->digits('0123456789'));
-        $this->assertSame('lang="bn"', $locale->htmlAttributes());
-        $this->assertSame('bn', $locale->languageTag());
-        $this->assertSame('-১২৩', $locale->number(-123));
-        $this->assertSame('১,২৩,৪৫,৬৭৮.০৯', $locale->number(12345678.09));
-        $this->assertSame('১,২৩৪.৫৬%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageBn(), $locale->language());
+        self::assertEquals(new PluralRule2(), $locale->pluralRule());
+        self::assertEquals(new ScriptBeng(), $locale->script());
+        self::assertEquals(new TerritoryBd(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('bn_BD', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('০১২৩৪৫৬৭৮৯', $locale->digits('0123456789'));
+        self::assertSame('lang="bn"', $locale->htmlAttributes());
+        self::assertSame('bn', $locale->languageTag());
+        self::assertSame('-১২৩', $locale->number(-123));
+        self::assertSame('১,২৩,৪৫,৬৭৮.০৯', $locale->number(12345678.09));
+        self::assertSame('১,২৩৪.৫৬%', $locale->percent(12.3456));
     }
 }

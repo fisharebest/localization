@@ -20,10 +20,10 @@ class ScriptHebrTest extends TestCase
     {
         $script = new ScriptHebr();
 
-        $this->assertSame('Hebr', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('125', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Hebrew', $script->unicodeName());
+        self::assertSame('Hebr', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('125', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Hebrew', $script->unicodeName());
     }
 }

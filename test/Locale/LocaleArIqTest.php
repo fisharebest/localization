@@ -24,18 +24,18 @@ class LocaleArIqTest extends TestCase
     {
         $locale = new LocaleArIq();
 
-        $this->assertEquals(new LanguageAr(), $locale->language());
-        $this->assertEquals(new PluralRule12(), $locale->pluralRule());
-        $this->assertEquals(new ScriptArab(), $locale->script());
-        $this->assertEquals(new TerritoryIq(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('ar_IQ', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
-        $this->assertSame('lang="ar-IQ" dir="rtl"', $locale->htmlAttributes());
-        $this->assertSame('ar-IQ', $locale->languageTag());
-        $this->assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
-        $this->assertSame('؜-١٢٣', $locale->number(-123));
-        $this->assertSame('١٬٢٣٤٫٥٦٪؜', $locale->percent(12.3456));
+        self::assertEquals(new LanguageAr(), $locale->language());
+        self::assertEquals(new PluralRule12(), $locale->pluralRule());
+        self::assertEquals(new ScriptArab(), $locale->script());
+        self::assertEquals(new TerritoryIq(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('ar_IQ', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+        self::assertSame('lang="ar-IQ" dir="rtl"', $locale->htmlAttributes());
+        self::assertSame('ar-IQ', $locale->languageTag());
+        self::assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
+        self::assertSame('؜-١٢٣', $locale->number(-123));
+        self::assertSame('١٬٢٣٤٫٥٦٪؜', $locale->percent(12.3456));
     }
 }

@@ -20,6 +20,6 @@ class VariantValenciaTest extends TestCase
     {
         $variant = new VariantValencia();
 
-        $this->assertSame('valencia', $variant->code());
+        self::assertSame('valencia', $variant->code());
     }
 }

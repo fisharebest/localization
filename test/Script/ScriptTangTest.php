@@ -20,10 +20,10 @@ class ScriptTangTest extends TestCase
     {
         $script = new ScriptTang();
 
-        $this->assertSame('Tang', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('520', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Tangut', $script->unicodeName());
+        self::assertSame('Tang', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('520', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Tangut', $script->unicodeName());
     }
 }

@@ -20,10 +20,10 @@ class ScriptPcunTest extends TestCase
     {
         $script = new ScriptPcun();
 
-        $this->assertSame('Pcun', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('015', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Pcun', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('015', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

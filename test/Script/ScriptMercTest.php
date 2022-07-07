@@ -20,10 +20,10 @@ class ScriptMercTest extends TestCase
     {
         $script = new ScriptMerc();
 
-        $this->assertSame('Merc', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('101', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Meroitic_Cursive', $script->unicodeName());
+        self::assertSame('Merc', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('101', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Meroitic_Cursive', $script->unicodeName());
     }
 }

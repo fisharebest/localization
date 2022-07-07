@@ -20,10 +20,10 @@ class ScriptCansTest extends TestCase
     {
         $script = new ScriptCans();
 
-        $this->assertSame('Cans', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('440', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Canadian_Aboriginal', $script->unicodeName());
+        self::assertSame('Cans', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('440', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Canadian_Aboriginal', $script->unicodeName());
     }
 }

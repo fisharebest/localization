@@ -22,8 +22,8 @@ class LanguageZhTest extends TestCase
     {
         $language = new LanguageZh();
 
-        $this->assertEquals(new ScriptHans(), $language->defaultScript());
-        $this->assertEquals(new PluralRule0(), $language->pluralRule());
-        $this->assertSame('zh', $language->code());
+        self::assertEquals(new ScriptHans(), $language->defaultScript());
+        self::assertEquals(new PluralRule0(), $language->pluralRule());
+        self::assertSame('zh', $language->code());
     }
 }

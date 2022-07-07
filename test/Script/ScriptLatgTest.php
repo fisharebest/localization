@@ -20,10 +20,10 @@ class ScriptLatgTest extends TestCase
     {
         $script = new ScriptLatg();
 
-        $this->assertSame('Latg', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('216', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Latg', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('216', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

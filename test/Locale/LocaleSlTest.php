@@ -24,19 +24,19 @@ class LocaleSlTest extends TestCase
     {
         $locale = new LocaleSl();
 
-        $this->assertEquals(new LanguageSl(), $locale->language());
-        $this->assertEquals(new PluralRule10(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritorySi(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('sl_SI', $locale->code());
-        $this->assertSame('slovenian_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('slovenščina', $locale->endonym());
-        $this->assertSame('lang="sl"', $locale->htmlAttributes());
-        $this->assertSame('sl', $locale->languageTag());
-        $this->assertSame('−123', $locale->number(-123));
-        $this->assertSame('12.345.678,09', $locale->number(12345678.09));
-        $this->assertSame('1.234,56 %', $locale->percent(12.3456));
+        self::assertEquals(new LanguageSl(), $locale->language());
+        self::assertEquals(new PluralRule10(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritorySi(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('sl_SI', $locale->code());
+        self::assertSame('slovenian_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('slovenščina', $locale->endonym());
+        self::assertSame('lang="sl"', $locale->htmlAttributes());
+        self::assertSame('sl', $locale->languageTag());
+        self::assertSame('−123', $locale->number(-123));
+        self::assertSame('12.345.678,09', $locale->number(12345678.09));
+        self::assertSame('1.234,56 %', $locale->percent(12.3456));
     }
 }

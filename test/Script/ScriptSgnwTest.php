@@ -20,10 +20,10 @@ class ScriptSgnwTest extends TestCase
     {
         $script = new ScriptSgnw();
 
-        $this->assertSame('Sgnw', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('095', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('SignWriting', $script->unicodeName());
+        self::assertSame('Sgnw', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('095', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('SignWriting', $script->unicodeName());
     }
 }

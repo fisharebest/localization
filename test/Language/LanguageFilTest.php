@@ -22,8 +22,8 @@ class LanguageFilTest extends TestCase
     {
         $language = new LanguageFil();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule2(), $language->pluralRule());
-        $this->assertSame('fil', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule2(), $language->pluralRule());
+        self::assertSame('fil', $language->code());
     }
 }

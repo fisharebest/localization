@@ -22,8 +22,8 @@ class LanguageMznTest extends TestCase
     {
         $language = new LanguageMzn();
 
-        $this->assertEquals(new ScriptArab(), $language->defaultScript());
-        $this->assertEquals(new PluralRule12(), $language->pluralRule());
-        $this->assertSame('mzn', $language->code());
+        self::assertEquals(new ScriptArab(), $language->defaultScript());
+        self::assertEquals(new PluralRule12(), $language->pluralRule());
+        self::assertSame('mzn', $language->code());
     }
 }

@@ -22,8 +22,8 @@ class LanguageCggTest extends TestCase
     {
         $language = new LanguageCgg();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('cgg', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('cgg', $language->code());
     }
 }

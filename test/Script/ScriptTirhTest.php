@@ -20,10 +20,10 @@ class ScriptTirhTest extends TestCase
     {
         $script = new ScriptTirh();
 
-        $this->assertSame('Tirh', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('326', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Tirhuta', $script->unicodeName());
+        self::assertSame('Tirh', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('326', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Tirhuta', $script->unicodeName());
     }
 }

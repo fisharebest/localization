@@ -20,10 +20,10 @@ class ScriptThaiTest extends TestCase
     {
         $script = new ScriptThai();
 
-        $this->assertSame('Thai', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('352', $script->number());
-        $this->assertSame(array('๐', '๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙'), $script->numerals());
-        $this->assertSame('Thai', $script->unicodeName());
+        self::assertSame('Thai', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('352', $script->number());
+        self::assertSame(array('๐', '๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙'), $script->numerals());
+        self::assertSame('Thai', $script->unicodeName());
     }
 }

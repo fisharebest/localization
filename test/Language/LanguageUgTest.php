@@ -22,8 +22,8 @@ class LanguageUgTest extends TestCase
     {
         $language = new LanguageUg();
 
-        $this->assertEquals(new ScriptArab(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('ug', $language->code());
+        self::assertEquals(new ScriptArab(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('ug', $language->code());
     }
 }

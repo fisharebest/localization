@@ -20,10 +20,10 @@ class ScriptMymrTest extends TestCase
     {
         $script = new ScriptMymr();
 
-        $this->assertSame('Mymr', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('350', $script->number());
-        $this->assertSame(array('၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉'), $script->numerals());
-        $this->assertSame('Myanmar', $script->unicodeName());
+        self::assertSame('Mymr', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('350', $script->number());
+        self::assertSame(array('၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉'), $script->numerals());
+        self::assertSame('Myanmar', $script->unicodeName());
     }
 }

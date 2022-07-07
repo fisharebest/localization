@@ -22,8 +22,8 @@ class LanguagePaTest extends TestCase
     {
         $language = new LanguagePa();
 
-        $this->assertEquals(new ScriptGuru(), $language->defaultScript());
-        $this->assertEquals(new PluralRule2(), $language->pluralRule());
-        $this->assertSame('pa', $language->code());
+        self::assertEquals(new ScriptGuru(), $language->defaultScript());
+        self::assertEquals(new PluralRule2(), $language->pluralRule());
+        self::assertSame('pa', $language->code());
     }
 }

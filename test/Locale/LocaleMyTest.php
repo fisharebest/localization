@@ -24,19 +24,19 @@ class LocaleMyTest extends TestCase
     {
         $locale = new LocaleMy();
 
-        $this->assertEquals(new LanguageMy(), $locale->language());
-        $this->assertEquals(new PluralRule0(), $locale->pluralRule());
-        $this->assertEquals(new ScriptMymr(), $locale->script());
-        $this->assertEquals(new TerritoryMm(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('my_MM', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('၀၁၂၃၄၅၆၇၈၉', $locale->digits('0123456789'));
-        $this->assertSame('မြန်မာ', $locale->endonym());
-        $this->assertSame('lang="my"', $locale->htmlAttributes());
-        $this->assertSame('my', $locale->languageTag());
-        $this->assertSame('-၁၂၃', $locale->number(-123));
-        $this->assertSame('၁၂၃၄၅,၆၇၈.၀၉', $locale->number(12345678.09));
-        $this->assertSame('၁၂၃၄.၅၆%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageMy(), $locale->language());
+        self::assertEquals(new PluralRule0(), $locale->pluralRule());
+        self::assertEquals(new ScriptMymr(), $locale->script());
+        self::assertEquals(new TerritoryMm(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('my_MM', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('၀၁၂၃၄၅၆၇၈၉', $locale->digits('0123456789'));
+        self::assertSame('မြန်မာ', $locale->endonym());
+        self::assertSame('lang="my"', $locale->htmlAttributes());
+        self::assertSame('my', $locale->languageTag());
+        self::assertSame('-၁၂၃', $locale->number(-123));
+        self::assertSame('၁၂၃၄၅,၆၇၈.၀၉', $locale->number(12345678.09));
+        self::assertSame('၁၂၃၄.၅၆%', $locale->percent(12.3456));
     }
 }

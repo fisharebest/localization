@@ -22,8 +22,8 @@ class LanguageYiTest extends TestCase
     {
         $language = new LanguageYi();
 
-        $this->assertEquals(new ScriptHebr(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('yi', $language->code());
+        self::assertEquals(new ScriptHebr(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('yi', $language->code());
     }
 }

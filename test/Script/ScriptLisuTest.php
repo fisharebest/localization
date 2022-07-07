@@ -20,10 +20,10 @@ class ScriptLisuTest extends TestCase
     {
         $script = new ScriptLisu();
 
-        $this->assertSame('Lisu', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('399', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Lisu', $script->unicodeName());
+        self::assertSame('Lisu', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('399', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Lisu', $script->unicodeName());
     }
 }

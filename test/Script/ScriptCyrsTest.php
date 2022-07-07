@@ -20,10 +20,10 @@ class ScriptCyrsTest extends TestCase
     {
         $script = new ScriptCyrs();
 
-        $this->assertSame('Cyrs', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('221', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Cyrs', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('221', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

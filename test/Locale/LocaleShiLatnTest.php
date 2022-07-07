@@ -24,19 +24,19 @@ class LocaleShiLatnTest extends TestCase
     {
         $locale = new LocaleShiLatn();
 
-        $this->assertEquals(new LanguageShi(), $locale->language());
-        $this->assertEquals(new PluralRuleTachelhit(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryMa(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('shi_MA@latin', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('tamazight', $locale->endonym());
-        $this->assertSame('lang="shi-Latn"', $locale->htmlAttributes());
-        $this->assertSame('shi-Latn', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12 345 678,09', $locale->number(12345678.09));
-        $this->assertSame('1 234,56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageShi(), $locale->language());
+        self::assertEquals(new PluralRuleTachelhit(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryMa(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('shi_MA@latin', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('tamazight', $locale->endonym());
+        self::assertSame('lang="shi-Latn"', $locale->htmlAttributes());
+        self::assertSame('shi-Latn', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12 345 678,09', $locale->number(12345678.09));
+        self::assertSame('1 234,56%', $locale->percent(12.3456));
     }
 }

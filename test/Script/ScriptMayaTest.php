@@ -20,10 +20,10 @@ class ScriptMayaTest extends TestCase
     {
         $script = new ScriptMaya();
 
-        $this->assertSame('Maya', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('090', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Maya', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('090', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

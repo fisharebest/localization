@@ -20,10 +20,10 @@ class ScriptNandTest extends TestCase
     {
         $script = new ScriptNand();
 
-        $this->assertSame('Nand', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('311', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Nandinagari', $script->unicodeName());
+        self::assertSame('Nand', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('311', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Nandinagari', $script->unicodeName());
     }
 }

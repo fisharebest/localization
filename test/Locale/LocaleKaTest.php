@@ -24,19 +24,19 @@ class LocaleKaTest extends TestCase
     {
         $locale = new LocaleKa();
 
-        $this->assertEquals(new LanguageKa(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptGeor(), $locale->script());
-        $this->assertEquals(new TerritoryGe(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('ka_GE', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('ქართული', $locale->endonym());
-        $this->assertSame('lang="ka"', $locale->htmlAttributes());
-        $this->assertSame('ka', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12 345 678,09', $locale->number(12345678.09));
-        $this->assertSame('1234,56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageKa(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptGeor(), $locale->script());
+        self::assertEquals(new TerritoryGe(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('ka_GE', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ქართული', $locale->endonym());
+        self::assertSame('lang="ka"', $locale->htmlAttributes());
+        self::assertSame('ka', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12 345 678,09', $locale->number(12345678.09));
+        self::assertSame('1234,56%', $locale->percent(12.3456));
     }
 }

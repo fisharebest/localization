@@ -22,8 +22,8 @@ class LanguageBnTest extends TestCase
     {
         $language = new LanguageBn();
 
-        $this->assertEquals(new ScriptBeng(), $language->defaultScript());
-        $this->assertEquals(new PluralRule2(), $language->pluralRule());
-        $this->assertSame('bn', $language->code());
+        self::assertEquals(new ScriptBeng(), $language->defaultScript());
+        self::assertEquals(new PluralRule2(), $language->pluralRule());
+        self::assertSame('bn', $language->code());
     }
 }

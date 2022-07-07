@@ -24,18 +24,18 @@ class LocaleCkbIrTest extends TestCase
     {
         $locale = new LocaleCkbIr();
 
-        $this->assertEquals(new LanguageCkb(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptArab(), $locale->script());
-        $this->assertEquals(new TerritoryIr(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('ckb_IR', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
-        $this->assertSame('کوردیی ناوەندی', $locale->endonym());
-        $this->assertSame('lang="ckb-IR" dir="rtl"', $locale->htmlAttributes());
-        $this->assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
-        $this->assertSame('‏-١٢٣', $locale->number(-123));
-        $this->assertSame('١٬٢٣٤٫٥٦٪', $locale->percent(12.3456));
+        self::assertEquals(new LanguageCkb(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptArab(), $locale->script());
+        self::assertEquals(new TerritoryIr(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('ckb_IR', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+        self::assertSame('کوردیی ناوەندی', $locale->endonym());
+        self::assertSame('lang="ckb-IR" dir="rtl"', $locale->htmlAttributes());
+        self::assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
+        self::assertSame('‏-١٢٣', $locale->number(-123));
+        self::assertSame('١٬٢٣٤٫٥٦٪', $locale->percent(12.3456));
     }
 }

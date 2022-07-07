@@ -20,10 +20,10 @@ class ScriptHmngTest extends TestCase
     {
         $script = new ScriptHmng();
 
-        $this->assertSame('Hmng', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('450', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Pahawh_Hmong', $script->unicodeName());
+        self::assertSame('Hmng', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('450', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Pahawh_Hmong', $script->unicodeName());
     }
 }

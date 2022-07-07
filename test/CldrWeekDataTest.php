@@ -39,7 +39,7 @@ class CldrWeekDataTest extends TestCase
                 foreach ($territories as $code) {
                     $class     = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
                     $territory = new $class();
-                    $this->assertSame($day, $territory->firstDay());
+                    self::assertSame($day, $territory->firstDay());
                 }
             }
         }
@@ -50,7 +50,7 @@ class CldrWeekDataTest extends TestCase
             foreach ($territories as $code) {
                 $class     = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
                 $territory = new $class();
-                $this->assertSame($day, $territory->weekendStart());
+                self::assertSame($day, $territory->weekendStart());
             }
         }
 
@@ -60,7 +60,7 @@ class CldrWeekDataTest extends TestCase
             foreach ($territories as $code) {
                 $class     = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
                 $territory = new $class();
-                $this->assertSame($day, $territory->weekendEnd());
+                self::assertSame($day, $territory->weekendEnd());
             }
         }
     }

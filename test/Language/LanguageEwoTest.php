@@ -21,7 +21,7 @@ class LanguageEwoTest extends TestCase
     {
         $language = new LanguageEwo();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('ewo', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('ewo', $language->code());
     }
 }

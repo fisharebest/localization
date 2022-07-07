@@ -20,10 +20,10 @@ class ScriptPhliTest extends TestCase
     {
         $script = new ScriptPhli();
 
-        $this->assertSame('Phli', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('131', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Inscriptional_Pahlavi', $script->unicodeName());
+        self::assertSame('Phli', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('131', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Inscriptional_Pahlavi', $script->unicodeName());
     }
 }

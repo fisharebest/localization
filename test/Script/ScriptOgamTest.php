@@ -20,10 +20,10 @@ class ScriptOgamTest extends TestCase
     {
         $script = new ScriptOgam();
 
-        $this->assertSame('Ogam', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('212', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Ogham', $script->unicodeName());
+        self::assertSame('Ogam', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('212', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Ogham', $script->unicodeName());
     }
 }

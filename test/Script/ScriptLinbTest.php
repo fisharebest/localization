@@ -20,10 +20,10 @@ class ScriptLinbTest extends TestCase
     {
         $script = new ScriptLinb();
 
-        $this->assertSame('Linb', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('401', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Linear_B', $script->unicodeName());
+        self::assertSame('Linb', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('401', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Linear_B', $script->unicodeName());
     }
 }

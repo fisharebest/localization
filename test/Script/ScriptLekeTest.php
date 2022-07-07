@@ -20,10 +20,10 @@ class ScriptLekeTest extends TestCase
     {
         $script = new ScriptLeke();
 
-        $this->assertSame('Leke', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('364', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Leke', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('364', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

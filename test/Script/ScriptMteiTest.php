@@ -20,10 +20,10 @@ class ScriptMteiTest extends TestCase
     {
         $script = new ScriptMtei();
 
-        $this->assertSame('Mtei', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('337', $script->number());
-        $this->assertSame(array('꯰', '꯱', '꯲', '꯳', '꯴', '꯵', '꯶', '꯷', '꯸', '꯹'), $script->numerals());
-        $this->assertSame('Meetei_Mayek', $script->unicodeName());
+        self::assertSame('Mtei', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('337', $script->number());
+        self::assertSame(array('꯰', '꯱', '꯲', '꯳', '꯴', '꯵', '꯶', '꯷', '꯸', '꯹'), $script->numerals());
+        self::assertSame('Meetei_Mayek', $script->unicodeName());
     }
 }

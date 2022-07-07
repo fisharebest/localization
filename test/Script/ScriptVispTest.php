@@ -20,10 +20,10 @@ class ScriptVispTest extends TestCase
     {
         $script = new ScriptVisp();
 
-        $this->assertSame('Visp', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('280', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Visp', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('280', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

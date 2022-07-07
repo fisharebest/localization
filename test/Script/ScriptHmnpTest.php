@@ -20,10 +20,10 @@ class ScriptHmnpTest extends TestCase
     {
         $script = new ScriptHmnp();
 
-        $this->assertSame('Hmnp', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('451', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Nyiakeng_Puachue_Hmong', $script->unicodeName());
+        self::assertSame('Hmnp', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('451', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Nyiakeng_Puachue_Hmong', $script->unicodeName());
     }
 }

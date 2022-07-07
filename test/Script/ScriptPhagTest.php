@@ -20,10 +20,10 @@ class ScriptPhagTest extends TestCase
     {
         $script = new ScriptPhag();
 
-        $this->assertSame('Phag', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('331', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Phags_Pa', $script->unicodeName());
+        self::assertSame('Phag', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('331', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Phags_Pa', $script->unicodeName());
     }
 }

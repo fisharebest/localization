@@ -24,19 +24,19 @@ class LocaleSdTest extends TestCase
     {
         $locale = new LocaleSd();
 
-        $this->assertEquals(new LanguageSd(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptArab(), $locale->script());
-        $this->assertEquals(new TerritoryPk(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('sd_PK', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
-        $this->assertSame('سنڌي', $locale->endonym());
-        $this->assertSame('lang="sd" dir="rtl"', $locale->htmlAttributes());
-        $this->assertSame('sd', $locale->languageTag());
-        $this->assertSame('؜-١٢٣', $locale->number(-123));
-        $this->assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
-        $this->assertSame('١٬٢٣٤٫٥٦٪؜', $locale->percent(12.3456));
+        self::assertEquals(new LanguageSd(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptArab(), $locale->script());
+        self::assertEquals(new TerritoryPk(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('sd_PK', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+        self::assertSame('سنڌي', $locale->endonym());
+        self::assertSame('lang="sd" dir="rtl"', $locale->htmlAttributes());
+        self::assertSame('sd', $locale->languageTag());
+        self::assertSame('؜-١٢٣', $locale->number(-123));
+        self::assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
+        self::assertSame('١٬٢٣٤٫٥٦٪؜', $locale->percent(12.3456));
     }
 }

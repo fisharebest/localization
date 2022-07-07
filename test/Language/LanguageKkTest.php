@@ -22,8 +22,8 @@ class LanguageKkTest extends TestCase
     {
         $language = new LanguageKk();
 
-        $this->assertEquals(new ScriptCyrl(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('kk', $language->code());
+        self::assertEquals(new ScriptCyrl(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('kk', $language->code());
     }
 }

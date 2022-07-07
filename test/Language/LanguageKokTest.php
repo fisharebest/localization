@@ -21,7 +21,7 @@ class LanguageKokTest extends TestCase
     {
         $language = new LanguageKok();
 
-        $this->assertEquals(new ScriptDeva(), $language->defaultScript());
-        $this->assertSame('kok', $language->code());
+        self::assertEquals(new ScriptDeva(), $language->defaultScript());
+        self::assertSame('kok', $language->code());
     }
 }

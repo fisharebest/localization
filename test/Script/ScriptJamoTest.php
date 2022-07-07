@@ -20,10 +20,10 @@ class ScriptJamoTest extends TestCase
     {
         $script = new ScriptJamo();
 
-        $this->assertSame('Jamo', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('284', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Jamo', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('284', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

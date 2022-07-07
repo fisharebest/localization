@@ -20,10 +20,10 @@ class ScriptNagmTest extends TestCase
     {
         $script = new ScriptNagm();
 
-        $this->assertSame('Nagm', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('295', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Nagm', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('295', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

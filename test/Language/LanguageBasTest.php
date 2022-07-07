@@ -21,7 +21,7 @@ class LanguageBasTest extends TestCase
     {
         $language = new LanguageBas();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('bas', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('bas', $language->code());
     }
 }

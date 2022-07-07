@@ -20,10 +20,10 @@ class ScriptTnsaTest extends TestCase
     {
         $script = new ScriptTnsa();
 
-        $this->assertSame('Tnsa', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('275', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Tangsa', $script->unicodeName());
+        self::assertSame('Tnsa', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('275', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Tangsa', $script->unicodeName());
     }
 }

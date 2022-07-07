@@ -22,8 +22,8 @@ class LanguageArTest extends TestCase
     {
         $language = new LanguageAr();
 
-        $this->assertEquals(new ScriptArab(), $language->defaultScript());
-        $this->assertEquals(new PluralRule12(), $language->pluralRule());
-        $this->assertSame('ar', $language->code());
+        self::assertEquals(new ScriptArab(), $language->defaultScript());
+        self::assertEquals(new PluralRule12(), $language->pluralRule());
+        self::assertSame('ar', $language->code());
     }
 }

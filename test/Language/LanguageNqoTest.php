@@ -22,8 +22,8 @@ class LanguageNqoTest extends TestCase
     {
         $language = new LanguageNqo();
 
-        $this->assertEquals(new ScriptNkoo(), $language->defaultScript());
-        $this->assertEquals(new PluralRule0(), $language->pluralRule());
-        $this->assertSame('nqo', $language->code());
+        self::assertEquals(new ScriptNkoo(), $language->defaultScript());
+        self::assertEquals(new PluralRule0(), $language->pluralRule());
+        self::assertSame('nqo', $language->code());
     }
 }

@@ -20,10 +20,10 @@ class ScriptYiiiTest extends TestCase
     {
         $script = new ScriptYiii();
 
-        $this->assertSame('Yiii', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('460', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Yi', $script->unicodeName());
+        self::assertSame('Yiii', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('460', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Yi', $script->unicodeName());
     }
 }

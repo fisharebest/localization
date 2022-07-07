@@ -22,8 +22,8 @@ class LanguageKwTest extends TestCase
     {
         $language = new LanguageKw();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRuleCornish(), $language->pluralRule());
-        $this->assertSame('kw', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRuleCornish(), $language->pluralRule());
+        self::assertSame('kw', $language->code());
     }
 }

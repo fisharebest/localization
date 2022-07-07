@@ -20,10 +20,10 @@ class ScriptOrkhTest extends TestCase
     {
         $script = new ScriptOrkh();
 
-        $this->assertSame('Orkh', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('175', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Old_Turkic', $script->unicodeName());
+        self::assertSame('Orkh', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('175', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Old_Turkic', $script->unicodeName());
     }
 }

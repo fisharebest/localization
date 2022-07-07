@@ -24,19 +24,19 @@ class LocaleMoCyrlTest extends TestCase
     {
         $locale = new LocaleMoCyrl();
 
-        $this->assertEquals(new LanguageMo(), $locale->language());
-        $this->assertEquals(new PluralRule5(), $locale->pluralRule());
-        $this->assertEquals(new ScriptCyrl(), $locale->script());
-        $this->assertEquals(new TerritoryMd(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('mo_MD@cyrillic', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('лимба молдовеняскэ', $locale->endonym());
-        $this->assertSame('lang="mo-Cyrl"', $locale->htmlAttributes());
-        $this->assertSame('mo-Cyrl', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12.345.678,09', $locale->number(12345678.09));
-        $this->assertSame('1.234,56 %', $locale->percent(12.3456));
+        self::assertEquals(new LanguageMo(), $locale->language());
+        self::assertEquals(new PluralRule5(), $locale->pluralRule());
+        self::assertEquals(new ScriptCyrl(), $locale->script());
+        self::assertEquals(new TerritoryMd(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('mo_MD@cyrillic', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('лимба молдовеняскэ', $locale->endonym());
+        self::assertSame('lang="mo-Cyrl"', $locale->htmlAttributes());
+        self::assertSame('mo-Cyrl', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12.345.678,09', $locale->number(12345678.09));
+        self::assertSame('1.234,56 %', $locale->percent(12.3456));
     }
 }

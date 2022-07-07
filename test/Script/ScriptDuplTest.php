@@ -20,10 +20,10 @@ class ScriptDuplTest extends TestCase
     {
         $script = new ScriptDupl();
 
-        $this->assertSame('Dupl', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('755', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Duployan', $script->unicodeName());
+        self::assertSame('Dupl', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('755', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Duployan', $script->unicodeName());
     }
 }

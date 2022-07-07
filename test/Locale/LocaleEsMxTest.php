@@ -24,19 +24,19 @@ class LocaleEsMxTest extends TestCase
     {
         $locale = new LocaleEsMx();
 
-        $this->assertEquals(new LanguageEs(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryMx(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('es_MX', $locale->code());
-        $this->assertSame('spanish_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('español de México', $locale->endonym());
-        $this->assertSame('lang="es-MX"', $locale->htmlAttributes());
-        $this->assertSame('es-MX', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12.345.678,09', $locale->number(12345678.09));
-        $this->assertSame('1.234,56 %', $locale->percent(12.3456));
+        self::assertEquals(new LanguageEs(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryMx(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('es_MX', $locale->code());
+        self::assertSame('spanish_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('español de México', $locale->endonym());
+        self::assertSame('lang="es-MX"', $locale->htmlAttributes());
+        self::assertSame('es-MX', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12.345.678,09', $locale->number(12345678.09));
+        self::assertSame('1.234,56 %', $locale->percent(12.3456));
     }
 }

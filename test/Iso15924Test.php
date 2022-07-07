@@ -29,14 +29,14 @@ class Iso15924Test extends TestCase
             $fields = explode(';', $data);
 
             $class = __NAMESPACE__ . '\Script\Script' . $fields[0];
-            $this->assertTrue(class_exists($class), $data);
+            self::assertTrue(class_exists($class), $data);
 
             /** @var ScriptInterface $script */
             $script = new $class();
 
-            $this->assertSame($fields[0], $script->code(), $data);
-            $this->assertSame($fields[1], $script->number(), $data);
-            $this->assertSame($fields[4] ?: null, $script->unicodeName());
+            self::assertSame($fields[0], $script->code(), $data);
+            self::assertSame($fields[1], $script->number(), $data);
+            self::assertSame($fields[4] ?: null, $script->unicodeName());
         }
     }
 }

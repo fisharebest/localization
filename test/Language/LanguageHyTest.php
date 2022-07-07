@@ -22,8 +22,8 @@ class LanguageHyTest extends TestCase
     {
         $language = new LanguageHy();
 
-        $this->assertEquals(new ScriptArmn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule2(), $language->pluralRule());
-        $this->assertSame('hy', $language->code());
+        self::assertEquals(new ScriptArmn(), $language->defaultScript());
+        self::assertEquals(new PluralRule2(), $language->pluralRule());
+        self::assertSame('hy', $language->code());
     }
 }

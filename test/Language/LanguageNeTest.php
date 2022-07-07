@@ -22,8 +22,8 @@ class LanguageNeTest extends TestCase
     {
         $language = new LanguageNe();
 
-        $this->assertEquals(new ScriptDeva(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('ne', $language->code());
+        self::assertEquals(new ScriptDeva(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('ne', $language->code());
     }
 }

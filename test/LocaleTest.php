@@ -23,17 +23,17 @@ class LocaleTest extends TestCase
     public function testCompare()
     {
         // American English, Australian English, British English
-        $this->assertLessThan(0, Locale::compare(new LocaleEnAU(), new LocaleEnGb()));
-        $this->assertLessThan(0, Locale::compare(new LocaleEnUs(), new LocaleEnAu()));
-        $this->assertLessThan(0, Locale::compare(new LocaleEnUs(), new LocaleEnGb()));
+        self::assertLessThan(0, Locale::compare(new LocaleEnAU(), new LocaleEnGb()));
+        self::assertLessThan(0, Locale::compare(new LocaleEnUs(), new LocaleEnAu()));
+        self::assertLessThan(0, Locale::compare(new LocaleEnUs(), new LocaleEnGb()));
 
-        $this->assertEquals(0, Locale::compare(new LocaleEnAu(), new LocaleEnAu()));
-        $this->assertEquals(0, Locale::compare(new LocaleEnGb(), new LocaleEnGb()));
-        $this->assertEquals(0, Locale::compare(new LocaleEnUs(), new LocaleEnUs()));
+        self::assertEquals(0, Locale::compare(new LocaleEnAu(), new LocaleEnAu()));
+        self::assertEquals(0, Locale::compare(new LocaleEnGb(), new LocaleEnGb()));
+        self::assertEquals(0, Locale::compare(new LocaleEnUs(), new LocaleEnUs()));
 
-        $this->assertGreaterThan(0, Locale::compare(new LocaleEnAu(), new LocaleEnUs()));
-        $this->assertGreaterThan(0, Locale::compare(new LocaleEnGb(), new LocaleEnUs()));
-        $this->assertGreaterThan(0, Locale::compare(new LocaleEnGb(), new LocaleEnAu()));
+        self::assertGreaterThan(0, Locale::compare(new LocaleEnAu(), new LocaleEnUs()));
+        self::assertGreaterThan(0, Locale::compare(new LocaleEnGb(), new LocaleEnUs()));
+        self::assertGreaterThan(0, Locale::compare(new LocaleEnGb(), new LocaleEnAu()));
     }
 
     /**
@@ -50,8 +50,8 @@ class LocaleTest extends TestCase
         }, preg_grep('/Abstract|Interface/', glob(__DIR__ . '/../src/Locale/Locale??*.php'), PREG_GREP_INVERT));
 
         usort($array, __NAMESPACE__ . '\Locale::compare');
-        $this->assertNotEmpty($array);
-        $this->assertTrue(is_array($array));
+        self::assertNotEmpty($array);
+        self::assertTrue(is_array($array));
     }
 
     /**
@@ -63,9 +63,9 @@ class LocaleTest extends TestCase
         $locale2 = Locale::create('en_GB');
         $locale3 = Locale::create('En-gB');
 
-        $this->assertinstanceof(get_class(new LocaleEnGb()), $locale1);
-        $this->assertinstanceof(get_class(new LocaleEnGb()), $locale2);
-        $this->assertinstanceof(get_class(new LocaleEnGb()), $locale3);
+        self::assertinstanceof(get_class(new LocaleEnGb()), $locale1);
+        self::assertinstanceof(get_class(new LocaleEnGb()), $locale2);
+        self::assertinstanceof(get_class(new LocaleEnGb()), $locale3);
     }
 
     /**
@@ -78,9 +78,9 @@ class LocaleTest extends TestCase
         try {
             Locale::create('xxx');
 
-            $this->assertTrue(false);
+            self::assertTrue(false);
         } catch (DomainException $ex) {
-            $this->assertTrue(true);
+            self::assertTrue(true);
         }
     }
 
@@ -99,7 +99,7 @@ class LocaleTest extends TestCase
         $default   = Locale::create('en-US');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
 
-        $this->assertEquals(Locale::create('de'), $locale);
+        self::assertEquals(Locale::create('de'), $locale);
     }
 
     /**
@@ -117,7 +117,7 @@ class LocaleTest extends TestCase
         $default   = Locale::create('en-US');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
 
-        $this->assertEquals($default, $locale);
+        self::assertEquals($default, $locale);
     }
 
     /**
@@ -135,7 +135,7 @@ class LocaleTest extends TestCase
         $default   = Locale::create('en-US');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
 
-        $this->assertEquals(Locale::create('de'), $locale);
+        self::assertEquals(Locale::create('de'), $locale);
     }
 
     /**
@@ -150,7 +150,7 @@ class LocaleTest extends TestCase
         $default   = Locale::create('en-US');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
 
-        $this->assertEquals(Locale::create('zh'), $locale);
+        self::assertEquals(Locale::create('zh'), $locale);
     }
 
     /**
@@ -168,48 +168,48 @@ class LocaleTest extends TestCase
 
         $server    = array('HTTP_ACCEPT_LANGUAGE' => 'zh-CN');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
-        $this->assertEquals(Locale::create('zh-Hans'), $locale);
+        self::assertEquals(Locale::create('zh-Hans'), $locale);
 
         $server    = array('HTTP_ACCEPT_LANGUAGE' => 'zh-SG');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
-        $this->assertEquals(Locale::create('zh-Hans'), $locale);
+        self::assertEquals(Locale::create('zh-Hans'), $locale);
 
         $server    = array('HTTP_ACCEPT_LANGUAGE' => 'zh-HK');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
-        $this->assertEquals(Locale::create('zh-Hant'), $locale);
+        self::assertEquals(Locale::create('zh-Hant'), $locale);
 
         $server    = array('HTTP_ACCEPT_LANGUAGE' => 'zh-MO');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
-        $this->assertEquals(Locale::create('zh-Hant'), $locale);
+        self::assertEquals(Locale::create('zh-Hant'), $locale);
 
         $server    = array('HTTP_ACCEPT_LANGUAGE' => 'zh-TW');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
-        $this->assertEquals(Locale::create('zh-Hant'), $locale);
+        self::assertEquals(Locale::create('zh-Hant'), $locale);
 
         // google: ZH-CN，ZH; Q = 0.9
         $server    = array('HTTP_ACCEPT_LANGUAGE' => 'ZH-CN，ZH; Q = 0.9');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
-        $this->assertEquals(Locale::create('zh-Hans'), $locale);
+        self::assertEquals(Locale::create('zh-Hans'), $locale);
 
         // QQ移动浏览器: zh-CN，zh-CN; q = 0.8，zh-CN; q = 0.6
         $server    = array('HTTP_ACCEPT_LANGUAGE' => 'zh-CN，zh-CN; q = 0.8，zh-CN; q = 0.6');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
-        $this->assertEquals(Locale::create('zh-Hans'), $locale);
+        self::assertEquals(Locale::create('zh-Hans'), $locale);
 
         // 华为移动浏览器: zh-CN，zh-CN ; q = 0.8，en-US; q = 0.6
         $server    = array('HTTP_ACCEPT_LANGUAGE' => 'zh-CN，zh-CN ; q = 0.8，en-US; q = 0.6');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
-        $this->assertEquals(Locale::create('zh-Hans'), $locale);
+        self::assertEquals(Locale::create('zh-Hans'), $locale);
 
         // UC Mobile Brower: zh-Hans-CN，en-US; q = 0.8
         $server    = array('HTTP_ACCEPT_LANGUAGE' => 'zh-Hans-CN，en-US; q = 0.8');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
-        $this->assertEquals(Locale::create('zh-Hans'), $locale);
+        self::assertEquals(Locale::create('zh-Hans'), $locale);
 
         // Baidu Mobile Brower: zh-CN ，EN-US; q = 0.9
         $server    = array('HTTP_ACCEPT_LANGUAGE' => 'zh-CN ，EN-US; q = 0.9');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
-        $this->assertEquals(Locale::create('zh-Hans'), $locale);
+        self::assertEquals(Locale::create('zh-Hans'), $locale);
     }
 
     /**
@@ -222,6 +222,6 @@ class LocaleTest extends TestCase
         $default   = Locale::create('en-US');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
 
-        $this->assertEquals($default, $locale);
+        self::assertEquals($default, $locale);
     }
 }

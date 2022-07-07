@@ -22,8 +22,8 @@ class LanguageNaqTest extends TestCase
     {
         $language = new LanguageNaq();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRuleOneTwoOther(), $language->pluralRule());
-        $this->assertSame('naq', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRuleOneTwoOther(), $language->pluralRule());
+        self::assertSame('naq', $language->code());
     }
 }

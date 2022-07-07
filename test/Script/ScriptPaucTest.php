@@ -20,10 +20,10 @@ class ScriptPaucTest extends TestCase
     {
         $script = new ScriptPauc();
 
-        $this->assertSame('Pauc', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('263', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Pau_Cin_Hau', $script->unicodeName());
+        self::assertSame('Pauc', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('263', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Pau_Cin_Hau', $script->unicodeName());
     }
 }

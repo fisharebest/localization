@@ -24,19 +24,19 @@ class LocaleTtTest extends TestCase
     {
         $locale = new LocaleTt();
 
-        $this->assertEquals(new LanguageTt(), $locale->language());
-        $this->assertEquals(new PluralRule0(), $locale->pluralRule());
-        $this->assertEquals(new ScriptCyrl(), $locale->script());
-        $this->assertEquals(new TerritoryRu(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('tt_RU', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('татар', $locale->endonym());
-        $this->assertSame('lang="tt"', $locale->htmlAttributes());
-        $this->assertSame('tt', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12 345 678,09', $locale->number(12345678.09));
-        $this->assertSame('1 234,56 %', $locale->percent(12.3456));
+        self::assertEquals(new LanguageTt(), $locale->language());
+        self::assertEquals(new PluralRule0(), $locale->pluralRule());
+        self::assertEquals(new ScriptCyrl(), $locale->script());
+        self::assertEquals(new TerritoryRu(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('tt_RU', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('татар', $locale->endonym());
+        self::assertSame('lang="tt"', $locale->htmlAttributes());
+        self::assertSame('tt', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12 345 678,09', $locale->number(12345678.09));
+        self::assertSame('1 234,56 %', $locale->percent(12.3456));
     }
 }

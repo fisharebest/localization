@@ -22,8 +22,8 @@ class LanguageBgTest extends TestCase
     {
         $language = new LanguageBg();
 
-        $this->assertEquals(new ScriptCyrl(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('bg', $language->code());
+        self::assertEquals(new ScriptCyrl(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('bg', $language->code());
     }
 }

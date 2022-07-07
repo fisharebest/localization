@@ -24,19 +24,19 @@ class LocaleHyTest extends TestCase
     {
         $locale = new LocaleHy();
 
-        $this->assertEquals(new LanguageHy(), $locale->language());
-        $this->assertEquals(new PluralRule2(), $locale->pluralRule());
-        $this->assertEquals(new ScriptArmn(), $locale->script());
-        $this->assertEquals(new TerritoryAm(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('hy_AM', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('հայերեն', $locale->endonym());
-        $this->assertSame('lang="hy"', $locale->htmlAttributes());
-        $this->assertSame('hy', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12 345 678,09', $locale->number(12345678.09));
-        $this->assertSame('1 234,56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageHy(), $locale->language());
+        self::assertEquals(new PluralRule2(), $locale->pluralRule());
+        self::assertEquals(new ScriptArmn(), $locale->script());
+        self::assertEquals(new TerritoryAm(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('hy_AM', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('հայերեն', $locale->endonym());
+        self::assertSame('lang="hy"', $locale->htmlAttributes());
+        self::assertSame('hy', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12 345 678,09', $locale->number(12345678.09));
+        self::assertSame('1 234,56%', $locale->percent(12.3456));
     }
 }

@@ -24,19 +24,19 @@ class LocaleArsTest extends TestCase
     {
         $locale = new LocaleArs();
 
-        $this->assertEquals(new LanguageArs(), $locale->language());
-        $this->assertEquals(new PluralRule12(), $locale->pluralRule());
-        $this->assertEquals(new ScriptArab(), $locale->script());
-        $this->assertEquals(new TerritorySa(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('ars_SA', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
-        $this->assertSame('اللهجة النجدية‎', $locale->endonym());
-        $this->assertSame('lang="ars" dir="rtl"', $locale->htmlAttributes());
-        $this->assertSame('ars', $locale->languageTag());
-        $this->assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
-        $this->assertSame('؜-١٢٣', $locale->number(-123));
-        $this->assertSame('١٬٢٣٤٫٥٦٪؜', $locale->percent(12.3456));
+        self::assertEquals(new LanguageArs(), $locale->language());
+        self::assertEquals(new PluralRule12(), $locale->pluralRule());
+        self::assertEquals(new ScriptArab(), $locale->script());
+        self::assertEquals(new TerritorySa(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('ars_SA', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+        self::assertSame('اللهجة النجدية‎', $locale->endonym());
+        self::assertSame('lang="ars" dir="rtl"', $locale->htmlAttributes());
+        self::assertSame('ars', $locale->languageTag());
+        self::assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
+        self::assertSame('؜-١٢٣', $locale->number(-123));
+        self::assertSame('١٬٢٣٤٫٥٦٪؜', $locale->percent(12.3456));
     }
 }

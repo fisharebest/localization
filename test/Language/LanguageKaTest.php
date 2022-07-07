@@ -22,8 +22,8 @@ class LanguageKaTest extends TestCase
     {
         $language = new LanguageKa();
 
-        $this->assertEquals(new ScriptGeor(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('ka', $language->code());
+        self::assertEquals(new ScriptGeor(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('ka', $language->code());
     }
 }

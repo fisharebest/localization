@@ -23,15 +23,15 @@ class LocaleVaiVaiiLrTest extends TestCase
     {
         $locale = new LocaleVaiVaiiLr();
 
-        $this->assertEquals(new LanguageVai(), $locale->language());
-        $this->assertEquals(new ScriptVaii(), $locale->script());
-        $this->assertEquals(new TerritoryLr(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩', $locale->digits('0123456789'));
-        $this->assertSame('lang="vai"', $locale->htmlAttributes());
-        $this->assertSame('-꘡꘢꘣', $locale->number(-123));
-        $this->assertSame('꘡꘢,꘣꘤꘥,꘦꘧꘨.꘠꘩', $locale->number(12345678.09));
-        $this->assertSame('꘡,꘢꘣꘤.꘥꘦%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageVai(), $locale->language());
+        self::assertEquals(new ScriptVaii(), $locale->script());
+        self::assertEquals(new TerritoryLr(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('꘠꘡꘢꘣꘤꘥꘦꘧꘨꘩', $locale->digits('0123456789'));
+        self::assertSame('lang="vai"', $locale->htmlAttributes());
+        self::assertSame('-꘡꘢꘣', $locale->number(-123));
+        self::assertSame('꘡꘢,꘣꘤꘥,꘦꘧꘨.꘠꘩', $locale->number(12345678.09));
+        self::assertSame('꘡,꘢꘣꘤.꘥꘦%', $locale->percent(12.3456));
     }
 }

@@ -24,19 +24,19 @@ class LocaleCsTest extends TestCase
     {
         $locale = new LocaleCs();
 
-        $this->assertEquals(new LanguageCs(), $locale->language());
-        $this->assertEquals(new PluralRule8(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryCz(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('cs_CZ', $locale->code());
-        $this->assertSame('czech_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('čeština', $locale->endonym());
-        $this->assertSame('lang="cs"', $locale->htmlAttributes());
-        $this->assertSame('cs', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12 345 678,09', $locale->number(12345678.09));
-        $this->assertSame('1 234,56 %', $locale->percent(12.3456));
+        self::assertEquals(new LanguageCs(), $locale->language());
+        self::assertEquals(new PluralRule8(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryCz(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('cs_CZ', $locale->code());
+        self::assertSame('czech_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('čeština', $locale->endonym());
+        self::assertSame('lang="cs"', $locale->htmlAttributes());
+        self::assertSame('cs', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12 345 678,09', $locale->number(12345678.09));
+        self::assertSame('1 234,56 %', $locale->percent(12.3456));
     }
 }

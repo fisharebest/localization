@@ -20,10 +20,10 @@ class ScriptBopoTest extends TestCase
     {
         $script = new ScriptBopo();
 
-        $this->assertSame('Bopo', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('285', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Bopomofo', $script->unicodeName());
+        self::assertSame('Bopo', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('285', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Bopomofo', $script->unicodeName());
     }
 }

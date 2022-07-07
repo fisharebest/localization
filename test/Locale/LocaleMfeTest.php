@@ -24,19 +24,19 @@ class LocaleMfeTest extends TestCase
     {
         $locale = new LocaleMfe();
 
-        $this->assertEquals(new LanguageMfe(), $locale->language());
-        $this->assertEquals(new PluralRule2(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryMu(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('mfe_MU', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('kreol morisien', $locale->endonym());
-        $this->assertSame('lang="mfe"', $locale->htmlAttributes());
-        $this->assertSame('mfe', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12 345 678.09', $locale->number(12345678.09));
-        $this->assertSame('1 234.56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageMfe(), $locale->language());
+        self::assertEquals(new PluralRule2(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryMu(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('mfe_MU', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('kreol morisien', $locale->endonym());
+        self::assertSame('lang="mfe"', $locale->htmlAttributes());
+        self::assertSame('mfe', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12 345 678.09', $locale->number(12345678.09));
+        self::assertSame('1 234.56%', $locale->percent(12.3456));
     }
 }

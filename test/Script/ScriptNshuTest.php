@@ -20,10 +20,10 @@ class ScriptNshuTest extends TestCase
     {
         $script = new ScriptNshu();
 
-        $this->assertSame('Nshu', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('499', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Nushu', $script->unicodeName());
+        self::assertSame('Nshu', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('499', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Nushu', $script->unicodeName());
     }
 }

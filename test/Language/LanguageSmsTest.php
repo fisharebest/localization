@@ -22,8 +22,8 @@ class LanguageSmsTest extends TestCase
     {
         $language = new LanguageSms();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRuleOneTwoOther(), $language->pluralRule());
-        $this->assertSame('sms', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRuleOneTwoOther(), $language->pluralRule());
+        self::assertSame('sms', $language->code());
     }
 }

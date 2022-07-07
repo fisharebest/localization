@@ -22,8 +22,8 @@ class LanguageNsoTest extends TestCase
     {
         $language = new LanguageNso();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule2(), $language->pluralRule());
-        $this->assertSame('nso', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule2(), $language->pluralRule());
+        self::assertSame('nso', $language->code());
     }
 }

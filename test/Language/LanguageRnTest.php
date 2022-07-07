@@ -21,7 +21,7 @@ class LanguageRnTest extends TestCase
     {
         $language = new LanguageRn();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('rn', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('rn', $language->code());
     }
 }

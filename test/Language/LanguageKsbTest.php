@@ -22,8 +22,8 @@ class LanguageKsbTest extends TestCase
     {
         $language = new LanguageKsb();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('ksb', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('ksb', $language->code());
     }
 }

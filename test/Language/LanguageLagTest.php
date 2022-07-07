@@ -22,8 +22,8 @@ class LanguageLagTest extends TestCase
     {
         $language = new LanguageLag();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRuleZeroOneOther(), $language->pluralRule());
-        $this->assertSame('lag', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRuleZeroOneOther(), $language->pluralRule());
+        self::assertSame('lag', $language->code());
     }
 }

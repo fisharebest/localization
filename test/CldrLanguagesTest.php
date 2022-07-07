@@ -33,7 +33,7 @@ class CldrLanguagesTest extends TestCase
                         $endonym,
                     ));
 
-                    $this->assertSame((string) $endonym, $locale->endonym(), $debug);
+                    self::assertSame((string) $endonym, $locale->endonym(), $debug);
                 }
             }
         }

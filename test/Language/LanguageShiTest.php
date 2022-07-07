@@ -22,8 +22,8 @@ class LanguageShiTest extends TestCase
     {
         $language = new LanguageShi();
 
-        $this->assertEquals(new ScriptTfng(), $language->defaultScript());
-        $this->assertEquals(new PluralRuleTachelhit(), $language->pluralRule());
-        $this->assertSame('shi', $language->code());
+        self::assertEquals(new ScriptTfng(), $language->defaultScript());
+        self::assertEquals(new PluralRuleTachelhit(), $language->pluralRule());
+        self::assertSame('shi', $language->code());
     }
 }

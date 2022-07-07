@@ -22,8 +22,8 @@ class LanguageNnhTest extends TestCase
     {
         $language = new LanguageNnh();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('nnh', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('nnh', $language->code());
     }
 }

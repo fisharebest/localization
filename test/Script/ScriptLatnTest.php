@@ -20,10 +20,10 @@ class ScriptLatnTest extends TestCase
     {
         $script = new ScriptLatn();
 
-        $this->assertSame('Latn', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('215', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Latin', $script->unicodeName());
+        self::assertSame('Latn', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('215', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Latin', $script->unicodeName());
     }
 }

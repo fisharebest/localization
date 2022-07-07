@@ -20,10 +20,10 @@ class ScriptPhnxTest extends TestCase
     {
         $script = new ScriptPhnx();
 
-        $this->assertSame('Phnx', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('115', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Phoenician', $script->unicodeName());
+        self::assertSame('Phnx', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('115', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Phoenician', $script->unicodeName());
     }
 }

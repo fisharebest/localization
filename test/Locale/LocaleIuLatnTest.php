@@ -24,19 +24,19 @@ class LocaleIuLatnTest extends TestCase
     {
         $locale = new LocaleIuLatn();
 
-        $this->assertEquals(new LanguageIu(), $locale->language());
-        $this->assertEquals(new PluralRuleOneTwoOther(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryCa(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('iu_CA@latin', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('Inuktitut', $locale->endonym());
-        $this->assertSame('lang="iu-Latn"', $locale->htmlAttributes());
-        $this->assertSame('iu-Latn', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12 345 678,09', $locale->number(12345678.09));
-        $this->assertSame('1 234,56 %', $locale->percent(12.3456));
+        self::assertEquals(new LanguageIu(), $locale->language());
+        self::assertEquals(new PluralRuleOneTwoOther(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryCa(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('iu_CA@latin', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('Inuktitut', $locale->endonym());
+        self::assertSame('lang="iu-Latn"', $locale->htmlAttributes());
+        self::assertSame('iu-Latn', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12 345 678,09', $locale->number(12345678.09));
+        self::assertSame('1 234,56 %', $locale->percent(12.3456));
     }
 }

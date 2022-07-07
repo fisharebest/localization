@@ -22,8 +22,8 @@ class LanguageKnTest extends TestCase
     {
         $language = new LanguageKn();
 
-        $this->assertEquals(new ScriptKnda(), $language->defaultScript());
-        $this->assertEquals(new PluralRule2(), $language->pluralRule());
-        $this->assertSame('kn', $language->code());
+        self::assertEquals(new ScriptKnda(), $language->defaultScript());
+        self::assertEquals(new PluralRule2(), $language->pluralRule());
+        self::assertSame('kn', $language->code());
     }
 }

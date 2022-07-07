@@ -20,10 +20,10 @@ class ScriptGonmTest extends TestCase
     {
         $script = new ScriptGonm();
 
-        $this->assertSame('Gonm', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('313', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Masaram_Gondi', $script->unicodeName());
+        self::assertSame('Gonm', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('313', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Masaram_Gondi', $script->unicodeName());
     }
 }

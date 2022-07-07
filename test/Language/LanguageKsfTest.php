@@ -21,7 +21,7 @@ class LanguageKsfTest extends TestCase
     {
         $language = new LanguageKsf();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('ksf', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('ksf', $language->code());
     }
 }

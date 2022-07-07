@@ -20,10 +20,10 @@ class ScriptRunrTest extends TestCase
     {
         $script = new ScriptRunr();
 
-        $this->assertSame('Runr', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('211', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Runic', $script->unicodeName());
+        self::assertSame('Runr', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('211', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Runic', $script->unicodeName());
     }
 }

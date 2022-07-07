@@ -20,10 +20,10 @@ class ScriptSamrTest extends TestCase
     {
         $script = new ScriptSamr();
 
-        $this->assertSame('Samr', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('123', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Samaritan', $script->unicodeName());
+        self::assertSame('Samr', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('123', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Samaritan', $script->unicodeName());
     }
 }

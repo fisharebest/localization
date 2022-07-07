@@ -24,18 +24,18 @@ class LocaleTaLkTest extends TestCase
     {
         $locale = new LocaleTaLk();
 
-        $this->assertEquals(new LanguageTa(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptTaml(), $locale->script());
-        $this->assertEquals(new TerritoryLk(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('ta_LK', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('௦௧௨௩௪௫௬௭௮௯', $locale->digits('0123456789'));
-        $this->assertSame('lang="ta-LK"', $locale->htmlAttributes());
-        $this->assertSame('ta-LK', $locale->languageTag());
-        $this->assertSame('-௧௨௩', $locale->number(-123));
-        $this->assertSame('௧,௨௩,௪௫,௬௭௮.௦௯', $locale->number(12345678.09));
-        $this->assertSame('௧,௨௩௪.௫௬%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageTa(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptTaml(), $locale->script());
+        self::assertEquals(new TerritoryLk(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('ta_LK', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('௦௧௨௩௪௫௬௭௮௯', $locale->digits('0123456789'));
+        self::assertSame('lang="ta-LK"', $locale->htmlAttributes());
+        self::assertSame('ta-LK', $locale->languageTag());
+        self::assertSame('-௧௨௩', $locale->number(-123));
+        self::assertSame('௧,௨௩,௪௫,௬௭௮.௦௯', $locale->number(12345678.09));
+        self::assertSame('௧,௨௩௪.௫௬%', $locale->percent(12.3456));
     }
 }

@@ -24,19 +24,19 @@ class LocaleSmnTest extends TestCase
     {
         $locale = new LocaleSmn();
 
-        $this->assertEquals(new LanguageSmn(), $locale->language());
-        $this->assertEquals(new PluralRuleOneTwoOther(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryFi(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('smn_FI', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('anarâškielâ', $locale->endonym());
-        $this->assertSame('lang="smn"', $locale->htmlAttributes());
-        $this->assertSame('smn', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12 345 678,09', $locale->number(12345678.09));
-        $this->assertSame('1 234,56 %', $locale->percent(12.3456));
+        self::assertEquals(new LanguageSmn(), $locale->language());
+        self::assertEquals(new PluralRuleOneTwoOther(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryFi(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('smn_FI', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('anarâškielâ', $locale->endonym());
+        self::assertSame('lang="smn"', $locale->htmlAttributes());
+        self::assertSame('smn', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12 345 678,09', $locale->number(12345678.09));
+        self::assertSame('1 234,56 %', $locale->percent(12.3456));
     }
 }

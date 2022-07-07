@@ -20,10 +20,10 @@ class ScriptPiqdTest extends TestCase
     {
         $script = new ScriptPiqd();
 
-        $this->assertSame('Piqd', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('293', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Piqd', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('293', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

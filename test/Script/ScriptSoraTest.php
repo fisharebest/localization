@@ -20,10 +20,10 @@ class ScriptSoraTest extends TestCase
     {
         $script = new ScriptSora();
 
-        $this->assertSame('Sora', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('398', $script->number());
-        $this->assertSame(array('𑃰', '𑃱', '𑃲', '𑃳', '𑃴', '𑃵', '𑃶', '𑃷', '𑃸', '𑃹'), $script->numerals());
-        $this->assertSame('Sora_Sompeng', $script->unicodeName());
+        self::assertSame('Sora', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('398', $script->number());
+        self::assertSame(array('𑃰', '𑃱', '𑃲', '𑃳', '𑃴', '𑃵', '𑃶', '𑃷', '𑃸', '𑃹'), $script->numerals());
+        self::assertSame('Sora_Sompeng', $script->unicodeName());
     }
 }

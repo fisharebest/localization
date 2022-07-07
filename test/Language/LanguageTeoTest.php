@@ -22,8 +22,8 @@ class LanguageTeoTest extends TestCase
     {
         $language = new LanguageTeo();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('teo', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('teo', $language->code());
     }
 }

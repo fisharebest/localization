@@ -24,19 +24,19 @@ class LocaleIoTest extends TestCase
     {
         $locale = new LocaleIo();
 
-        $this->assertEquals(new LanguageIo(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new Territory001(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('io_001', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('Ido', $locale->endonym());
-        $this->assertSame('lang="io"', $locale->htmlAttributes());
-        $this->assertSame('io', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12,345,678.09', $locale->number(12345678.09));
-        $this->assertSame('1,234.56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageIo(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new Territory001(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('io_001', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('Ido', $locale->endonym());
+        self::assertSame('lang="io"', $locale->htmlAttributes());
+        self::assertSame('io', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12,345,678.09', $locale->number(12345678.09));
+        self::assertSame('1,234.56%', $locale->percent(12.3456));
     }
 }

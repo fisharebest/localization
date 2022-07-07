@@ -22,8 +22,8 @@ class LanguageOrTest extends TestCase
     {
         $language = new LanguageOr();
 
-        $this->assertEquals(new ScriptOrya(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('or', $language->code());
+        self::assertEquals(new ScriptOrya(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('or', $language->code());
     }
 }

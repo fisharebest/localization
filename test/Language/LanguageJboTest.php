@@ -22,8 +22,8 @@ class LanguageJboTest extends TestCase
     {
         $language = new LanguageJbo();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule0(), $language->pluralRule());
-        $this->assertSame('jbo', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule0(), $language->pluralRule());
+        self::assertSame('jbo', $language->code());
     }
 }

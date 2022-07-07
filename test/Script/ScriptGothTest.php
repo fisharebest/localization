@@ -20,10 +20,10 @@ class ScriptGothTest extends TestCase
     {
         $script = new ScriptGoth();
 
-        $this->assertSame('Goth', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('206', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Gothic', $script->unicodeName());
+        self::assertSame('Goth', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('206', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Gothic', $script->unicodeName());
     }
 }

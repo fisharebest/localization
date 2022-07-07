@@ -20,10 +20,10 @@ class ScriptElymTest extends TestCase
     {
         $script = new ScriptElym();
 
-        $this->assertSame('Elym', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('128', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Elymaic', $script->unicodeName());
+        self::assertSame('Elym', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('128', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Elymaic', $script->unicodeName());
     }
 }

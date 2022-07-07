@@ -20,10 +20,10 @@ class ScriptOugrTest extends TestCase
     {
         $script = new ScriptOugr();
 
-        $this->assertSame('Ougr', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('143', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Old_Uyghur', $script->unicodeName());
+        self::assertSame('Ougr', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('143', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Old_Uyghur', $script->unicodeName());
     }
 }

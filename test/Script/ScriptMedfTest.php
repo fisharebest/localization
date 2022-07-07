@@ -20,10 +20,10 @@ class ScriptMedfTest extends TestCase
     {
         $script = new ScriptMedf();
 
-        $this->assertSame('Medf', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('265', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Medefaidrin', $script->unicodeName());
+        self::assertSame('Medf', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('265', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Medefaidrin', $script->unicodeName());
     }
 }

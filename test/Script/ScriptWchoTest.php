@@ -20,10 +20,10 @@ class ScriptWchoTest extends TestCase
     {
         $script = new ScriptWcho();
 
-        $this->assertSame('Wcho', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('283', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Wancho', $script->unicodeName());
+        self::assertSame('Wcho', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('283', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Wancho', $script->unicodeName());
     }
 }

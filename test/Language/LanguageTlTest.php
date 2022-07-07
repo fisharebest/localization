@@ -22,8 +22,8 @@ class LanguageTlTest extends TestCase
     {
         $language = new LanguageTl();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRuleTagalog(), $language->pluralRule());
-        $this->assertSame('tl', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRuleTagalog(), $language->pluralRule());
+        self::assertSame('tl', $language->code());
     }
 }

@@ -24,18 +24,18 @@ class LocalePaGuruInTest extends TestCase
     {
         $locale = new LocalePaGuruIn();
 
-        $this->assertEquals(new LanguagePa(), $locale->language());
-        $this->assertEquals(new PluralRule2(), $locale->pluralRule());
-        $this->assertEquals(new ScriptGuru(), $locale->script());
-        $this->assertEquals(new TerritoryIn(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('pa_IN', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('੦੧੨੩੪੫੬੭੮੯', $locale->digits('0123456789'));
-        $this->assertSame('lang="pa"', $locale->htmlAttributes());
-        $this->assertSame('pa', $locale->languageTag());
-        $this->assertSame('-੧੨੩', $locale->number(-123));
-        $this->assertSame('੧,੨੩,੪੫,੬੭੮.੦੯', $locale->number(12345678.09));
-        $this->assertSame('੧,੨੩੪.੫੬%', $locale->percent(12.3456));
+        self::assertEquals(new LanguagePa(), $locale->language());
+        self::assertEquals(new PluralRule2(), $locale->pluralRule());
+        self::assertEquals(new ScriptGuru(), $locale->script());
+        self::assertEquals(new TerritoryIn(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('pa_IN', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('੦੧੨੩੪੫੬੭੮੯', $locale->digits('0123456789'));
+        self::assertSame('lang="pa"', $locale->htmlAttributes());
+        self::assertSame('pa', $locale->languageTag());
+        self::assertSame('-੧੨੩', $locale->number(-123));
+        self::assertSame('੧,੨੩,੪੫,੬੭੮.੦੯', $locale->number(12345678.09));
+        self::assertSame('੧,੨੩੪.੫੬%', $locale->percent(12.3456));
     }
 }

@@ -22,8 +22,8 @@ class LanguageGuwTest extends TestCase
     {
         $language = new LanguageGuw();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule2(), $language->pluralRule());
-        $this->assertSame('guw', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule2(), $language->pluralRule());
+        self::assertSame('guw', $language->code());
     }
 }

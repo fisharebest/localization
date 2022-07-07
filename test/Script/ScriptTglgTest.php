@@ -20,10 +20,10 @@ class ScriptTglgTest extends TestCase
     {
         $script = new ScriptTglg();
 
-        $this->assertSame('Tglg', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('370', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Tagalog', $script->unicodeName());
+        self::assertSame('Tglg', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('370', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Tagalog', $script->unicodeName());
     }
 }

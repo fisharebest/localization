@@ -24,19 +24,19 @@ class LocaleGuTest extends TestCase
     {
         $locale = new LocaleGu();
 
-        $this->assertEquals(new LanguageGu(), $locale->language());
-        $this->assertEquals(new PluralRule2(), $locale->pluralRule());
-        $this->assertEquals(new ScriptGujr(), $locale->script());
-        $this->assertEquals(new TerritoryIn(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('gu_IN', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('૦૧૨૩૪૫૬૭૮૯', $locale->digits('0123456789'));
-        $this->assertSame('ગુજરાતી', $locale->endonym());
-        $this->assertSame('lang="gu"', $locale->htmlAttributes());
-        $this->assertSame('gu', $locale->languageTag());
-        $this->assertSame('-૧૨૩', $locale->number(-123));
-        $this->assertSame('૧,૨૩,૪૫,૬૭૮.૦૯', $locale->number(12345678.09));
-        $this->assertSame('૧,૨૩૪.૫૬%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageGu(), $locale->language());
+        self::assertEquals(new PluralRule2(), $locale->pluralRule());
+        self::assertEquals(new ScriptGujr(), $locale->script());
+        self::assertEquals(new TerritoryIn(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('gu_IN', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('૦૧૨૩૪૫૬૭૮૯', $locale->digits('0123456789'));
+        self::assertSame('ગુજરાતી', $locale->endonym());
+        self::assertSame('lang="gu"', $locale->htmlAttributes());
+        self::assertSame('gu', $locale->languageTag());
+        self::assertSame('-૧૨૩', $locale->number(-123));
+        self::assertSame('૧,૨૩,૪૫,૬૭૮.૦૯', $locale->number(12345678.09));
+        self::assertSame('૧,૨૩૪.૫૬%', $locale->percent(12.3456));
     }
 }

@@ -21,7 +21,7 @@ class LanguageKamTest extends TestCase
     {
         $language = new LanguageKam();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('kam', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('kam', $language->code());
     }
 }

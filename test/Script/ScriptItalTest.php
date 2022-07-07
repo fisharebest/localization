@@ -20,10 +20,10 @@ class ScriptItalTest extends TestCase
     {
         $script = new ScriptItal();
 
-        $this->assertSame('Ital', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('210', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Old_Italic', $script->unicodeName());
+        self::assertSame('Ital', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('210', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Old_Italic', $script->unicodeName());
     }
 }

@@ -20,10 +20,10 @@ class ScriptKharTest extends TestCase
     {
         $script = new ScriptKhar();
 
-        $this->assertSame('Khar', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('305', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Kharoshthi', $script->unicodeName());
+        self::assertSame('Khar', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('305', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Kharoshthi', $script->unicodeName());
     }
 }

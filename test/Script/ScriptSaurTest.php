@@ -20,10 +20,10 @@ class ScriptSaurTest extends TestCase
     {
         $script = new ScriptSaur();
 
-        $this->assertSame('Saur', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('344', $script->number());
-        $this->assertSame(array('꣐', '꣑', '꣒', '꣓', '꣔', '꣕', '꣖', '꣗', '꣘', '꣙'), $script->numerals());
-        $this->assertSame('Saurashtra', $script->unicodeName());
+        self::assertSame('Saur', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('344', $script->number());
+        self::assertSame(array('꣐', '꣑', '꣒', '꣓', '꣔', '꣕', '꣖', '꣗', '꣘', '꣙'), $script->numerals());
+        self::assertSame('Saurashtra', $script->unicodeName());
     }
 }

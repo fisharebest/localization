@@ -20,10 +20,10 @@ class ScriptTeluTest extends TestCase
     {
         $script = new ScriptTelu();
 
-        $this->assertSame('Telu', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('340', $script->number());
-        $this->assertSame(array('౦', '౧', '౨', '౩', '౪', '౫', '౬', '౭', '౮', '౯'), $script->numerals());
-        $this->assertSame('Telugu', $script->unicodeName());
+        self::assertSame('Telu', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('340', $script->number());
+        self::assertSame(array('౦', '౧', '౨', '౩', '౪', '౫', '౬', '౭', '౮', '౯'), $script->numerals());
+        self::assertSame('Telugu', $script->unicodeName());
     }
 }

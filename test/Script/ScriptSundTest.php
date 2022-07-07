@@ -20,10 +20,10 @@ class ScriptSundTest extends TestCase
     {
         $script = new ScriptSund();
 
-        $this->assertSame('Sund', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('362', $script->number());
-        $this->assertSame(array('᮰', '᮱', '᮲', '᮳', '᮴', '᮵', '᮶', '᮷', '᮸', '᮹'), $script->numerals());
-        $this->assertSame('Sundanese', $script->unicodeName());
+        self::assertSame('Sund', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('362', $script->number());
+        self::assertSame(array('᮰', '᮱', '᮲', '᮳', '᮴', '᮵', '᮶', '᮷', '᮸', '᮹'), $script->numerals());
+        self::assertSame('Sundanese', $script->unicodeName());
     }
 }

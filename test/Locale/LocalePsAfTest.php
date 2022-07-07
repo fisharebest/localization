@@ -24,18 +24,18 @@ class LocalePsAfTest extends TestCase
     {
         $locale = new LocalePsAf();
 
-        $this->assertEquals(new LanguagePs(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptArab(), $locale->script());
-        $this->assertEquals(new TerritoryAf(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('ps_AF', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
-        $this->assertSame('lang="ps-AF" dir="rtl"', $locale->htmlAttributes());
-        $this->assertSame('ps-AF', $locale->languageTag());
-        $this->assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
-        $this->assertSame('‎-‎١٢٣', $locale->number(-123));
-        $this->assertSame('١٬٢٣٤٫٥٦٪', $locale->percent(12.3456));
+        self::assertEquals(new LanguagePs(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptArab(), $locale->script());
+        self::assertEquals(new TerritoryAf(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('ps_AF', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+        self::assertSame('lang="ps-AF" dir="rtl"', $locale->htmlAttributes());
+        self::assertSame('ps-AF', $locale->languageTag());
+        self::assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
+        self::assertSame('‎-‎١٢٣', $locale->number(-123));
+        self::assertSame('١٬٢٣٤٫٥٦٪', $locale->percent(12.3456));
     }
 }

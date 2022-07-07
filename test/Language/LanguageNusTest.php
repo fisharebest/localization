@@ -21,7 +21,7 @@ class LanguageNusTest extends TestCase
     {
         $language = new LanguageNus();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('nus', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('nus', $language->code());
     }
 }

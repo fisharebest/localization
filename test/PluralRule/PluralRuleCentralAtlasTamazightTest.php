@@ -20,7 +20,7 @@ class PluralRuleCentralAtlasTamazightTest extends TestCase
     {
         $plural_rule = new PluralRuleCentralAtlasTamazight();
 
-        $this->assertSame(2, $plural_rule->plurals());
+        self::assertSame(2, $plural_rule->plurals());
     }
 
     /**
@@ -30,35 +30,35 @@ class PluralRuleCentralAtlasTamazightTest extends TestCase
     {
         $plural_rule = new PluralRuleCentralAtlasTamazight();
 
-        $this->assertSame(0, $plural_rule->plural(0));
-        $this->assertSame(0, $plural_rule->plural(1));
-        $this->assertSame(1, $plural_rule->plural(2));
-        $this->assertSame(1, $plural_rule->plural(3));
-        $this->assertSame(1, $plural_rule->plural(4));
-        $this->assertSame(1, $plural_rule->plural(5));
-        $this->assertSame(1, $plural_rule->plural(6));
-        $this->assertSame(1, $plural_rule->plural(7));
-        $this->assertSame(1, $plural_rule->plural(8));
-        $this->assertSame(1, $plural_rule->plural(9));
-        $this->assertSame(1, $plural_rule->plural(10));
-        $this->assertSame(0, $plural_rule->plural(11));
-        $this->assertSame(0, $plural_rule->plural(12));
-        $this->assertSame(0, $plural_rule->plural(13));
-        $this->assertSame(0, $plural_rule->plural(14));
-        $this->assertSame(0, $plural_rule->plural(15));
-        $this->assertSame(0, $plural_rule->plural(16));
-        $this->assertSame(0, $plural_rule->plural(17));
-        $this->assertSame(0, $plural_rule->plural(18));
-        $this->assertSame(0, $plural_rule->plural(19));
-        $this->assertSame(0, $plural_rule->plural(20));
-        $this->assertSame(0, $plural_rule->plural(21));
-        $this->assertSame(0, $plural_rule->plural(22));
-        $this->assertSame(0, $plural_rule->plural(23));
-        $this->assertSame(0, $plural_rule->plural(24));
-        $this->assertSame(0, $plural_rule->plural(25));
-        $this->assertSame(0, $plural_rule->plural(26));
-        $this->assertSame(0, $plural_rule->plural(27));
-        $this->assertSame(0, $plural_rule->plural(28));
-        $this->assertSame(0, $plural_rule->plural(29));
+        self::assertSame(0, $plural_rule->plural(0));
+        self::assertSame(0, $plural_rule->plural(1));
+        self::assertSame(1, $plural_rule->plural(2));
+        self::assertSame(1, $plural_rule->plural(3));
+        self::assertSame(1, $plural_rule->plural(4));
+        self::assertSame(1, $plural_rule->plural(5));
+        self::assertSame(1, $plural_rule->plural(6));
+        self::assertSame(1, $plural_rule->plural(7));
+        self::assertSame(1, $plural_rule->plural(8));
+        self::assertSame(1, $plural_rule->plural(9));
+        self::assertSame(1, $plural_rule->plural(10));
+        self::assertSame(0, $plural_rule->plural(11));
+        self::assertSame(0, $plural_rule->plural(12));
+        self::assertSame(0, $plural_rule->plural(13));
+        self::assertSame(0, $plural_rule->plural(14));
+        self::assertSame(0, $plural_rule->plural(15));
+        self::assertSame(0, $plural_rule->plural(16));
+        self::assertSame(0, $plural_rule->plural(17));
+        self::assertSame(0, $plural_rule->plural(18));
+        self::assertSame(0, $plural_rule->plural(19));
+        self::assertSame(0, $plural_rule->plural(20));
+        self::assertSame(0, $plural_rule->plural(21));
+        self::assertSame(0, $plural_rule->plural(22));
+        self::assertSame(0, $plural_rule->plural(23));
+        self::assertSame(0, $plural_rule->plural(24));
+        self::assertSame(0, $plural_rule->plural(25));
+        self::assertSame(0, $plural_rule->plural(26));
+        self::assertSame(0, $plural_rule->plural(27));
+        self::assertSame(0, $plural_rule->plural(28));
+        self::assertSame(0, $plural_rule->plural(29));
     }
 }

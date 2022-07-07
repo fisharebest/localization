@@ -23,15 +23,15 @@ class LocaleVaiLatnLrTest extends TestCase
     {
         $locale = new LocaleVaiLatnLr();
 
-        $this->assertEquals(new LanguageVai(), $locale->language());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryLr(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('lang="vai-Latn"', $locale->htmlAttributes());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12,345,678.09', $locale->number(12345678.09));
-        $this->assertSame('1,234.56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageVai(), $locale->language());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryLr(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('lang="vai-Latn"', $locale->htmlAttributes());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12,345,678.09', $locale->number(12345678.09));
+        self::assertSame('1,234.56%', $locale->percent(12.3456));
     }
 }

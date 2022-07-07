@@ -20,10 +20,10 @@ class ScriptSinhTest extends TestCase
     {
         $script = new ScriptSinh();
 
-        $this->assertSame('Sinh', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('348', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Sinhala', $script->unicodeName());
+        self::assertSame('Sinh', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('348', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Sinhala', $script->unicodeName());
     }
 }

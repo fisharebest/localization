@@ -20,10 +20,10 @@ class ScriptMarcTest extends TestCase
     {
         $script = new ScriptMarc();
 
-        $this->assertSame('Marc', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('332', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Marchen', $script->unicodeName());
+        self::assertSame('Marc', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('332', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Marchen', $script->unicodeName());
     }
 }

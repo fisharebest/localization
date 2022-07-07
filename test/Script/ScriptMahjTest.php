@@ -20,10 +20,10 @@ class ScriptMahjTest extends TestCase
     {
         $script = new ScriptMahj();
 
-        $this->assertSame('Mahj', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('314', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Mahajani', $script->unicodeName());
+        self::assertSame('Mahj', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('314', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Mahajani', $script->unicodeName());
     }
 }

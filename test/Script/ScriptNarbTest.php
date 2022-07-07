@@ -20,10 +20,10 @@ class ScriptNarbTest extends TestCase
     {
         $script = new ScriptNarb();
 
-        $this->assertSame('Narb', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('106', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Old_North_Arabian', $script->unicodeName());
+        self::assertSame('Narb', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('106', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Old_North_Arabian', $script->unicodeName());
     }
 }

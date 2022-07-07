@@ -20,10 +20,10 @@ class ScriptBrahTest extends TestCase
     {
         $script = new ScriptBrah();
 
-        $this->assertSame('Brah', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('300', $script->number());
-        $this->assertSame(array('𑁦', '𑁧', '𑁨', '𑁩', '𑁪', '𑁫', '𑁬', '𑁭', '𑁮', '𑁯'), $script->numerals());
-        $this->assertSame('Brahmi', $script->unicodeName());
+        self::assertSame('Brah', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('300', $script->number());
+        self::assertSame(array('𑁦', '𑁧', '𑁨', '𑁩', '𑁪', '𑁫', '𑁬', '𑁭', '𑁮', '𑁯'), $script->numerals());
+        self::assertSame('Brahmi', $script->unicodeName());
     }
 }

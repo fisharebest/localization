@@ -20,10 +20,10 @@ class ScriptMendTest extends TestCase
     {
         $script = new ScriptMend();
 
-        $this->assertSame('Mend', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('438', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Mende_Kikakui', $script->unicodeName());
+        self::assertSame('Mend', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('438', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Mende_Kikakui', $script->unicodeName());
     }
 }

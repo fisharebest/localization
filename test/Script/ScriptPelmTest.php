@@ -20,10 +20,10 @@ class ScriptPelmTest extends TestCase
     {
         $script = new ScriptPelm();
 
-        $this->assertSame('Pelm', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('016', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Pelm', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('016', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

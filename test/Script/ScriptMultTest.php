@@ -20,10 +20,10 @@ class ScriptMultTest extends TestCase
     {
         $script = new ScriptMult();
 
-        $this->assertSame('Mult', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('323', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Multani', $script->unicodeName());
+        self::assertSame('Mult', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('323', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Multani', $script->unicodeName());
     }
 }

@@ -22,8 +22,8 @@ class LanguageKdeTest extends TestCase
     {
         $language = new LanguageKde();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule0(), $language->pluralRule());
-        $this->assertSame('kde', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule0(), $language->pluralRule());
+        self::assertSame('kde', $language->code());
     }
 }

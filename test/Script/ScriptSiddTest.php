@@ -20,10 +20,10 @@ class ScriptSiddTest extends TestCase
     {
         $script = new ScriptSidd();
 
-        $this->assertSame('Sidd', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('302', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Siddham', $script->unicodeName());
+        self::assertSame('Sidd', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('302', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Siddham', $script->unicodeName());
     }
 }

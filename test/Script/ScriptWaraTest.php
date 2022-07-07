@@ -20,10 +20,10 @@ class ScriptWaraTest extends TestCase
     {
         $script = new ScriptWara();
 
-        $this->assertSame('Wara', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('262', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Warang_Citi', $script->unicodeName());
+        self::assertSame('Wara', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('262', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Warang_Citi', $script->unicodeName());
     }
 }

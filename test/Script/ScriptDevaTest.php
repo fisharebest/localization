@@ -20,10 +20,10 @@ class ScriptDevaTest extends TestCase
     {
         $script = new ScriptDeva();
 
-        $this->assertSame('Deva', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('315', $script->number());
-        $this->assertSame(array('०', '१', '२', '३', '४', '५', '६', '७', '८', '९'), $script->numerals());
-        $this->assertSame('Devanagari', $script->unicodeName());
+        self::assertSame('Deva', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('315', $script->number());
+        self::assertSame(array('०', '१', '२', '३', '४', '५', '६', '७', '८', '९'), $script->numerals());
+        self::assertSame('Devanagari', $script->unicodeName());
     }
 }

@@ -20,10 +20,10 @@ class ScriptGlagTest extends TestCase
     {
         $script = new ScriptGlag();
 
-        $this->assertSame('Glag', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('225', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Glagolitic', $script->unicodeName());
+        self::assertSame('Glag', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('225', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Glagolitic', $script->unicodeName());
     }
 }

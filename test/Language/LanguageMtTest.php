@@ -22,8 +22,8 @@ class LanguageMtTest extends TestCase
     {
         $language = new LanguageMt();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule13(), $language->pluralRule());
-        $this->assertSame('mt', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule13(), $language->pluralRule());
+        self::assertSame('mt', $language->code());
     }
 }

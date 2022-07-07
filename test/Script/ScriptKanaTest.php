@@ -20,10 +20,10 @@ class ScriptKanaTest extends TestCase
     {
         $script = new ScriptKana();
 
-        $this->assertSame('Kana', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('411', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Katakana', $script->unicodeName());
+        self::assertSame('Kana', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('411', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Katakana', $script->unicodeName());
     }
 }

@@ -20,10 +20,10 @@ class ScriptMoonTest extends TestCase
     {
         $script = new ScriptMoon();
 
-        $this->assertSame('Moon', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('218', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Moon', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('218', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

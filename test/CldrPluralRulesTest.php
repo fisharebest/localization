@@ -63,7 +63,7 @@ class CldrPluralRulesTest extends TestCase
                 }
                 $locale = Locale::create($locale_code);
 
-                $this->assertSame($locale->pluralRule()->plurals(), count($plurals));
+                self::assertSame($locale->pluralRule()->plurals(), count($plurals));
 
                 $plural_rule = 0;
                 foreach ($plurals as $plural_examples) {
@@ -87,7 +87,7 @@ class CldrPluralRulesTest extends TestCase
                                     $rule,
                                 ));
 
-                                $this->assertSame($plural_rule, $locale->pluralRule()->plural($number), $debug);
+                                self::assertSame($plural_rule, $locale->pluralRule()->plural($number), $debug);
                             }
                         }
                     }

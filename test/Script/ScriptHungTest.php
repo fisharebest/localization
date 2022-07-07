@@ -20,10 +20,10 @@ class ScriptHungTest extends TestCase
     {
         $script = new ScriptHung();
 
-        $this->assertSame('Hung', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('176', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Old_Hungarian', $script->unicodeName());
+        self::assertSame('Hung', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('176', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Old_Hungarian', $script->unicodeName());
     }
 }

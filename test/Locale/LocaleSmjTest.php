@@ -24,19 +24,19 @@ class LocaleSmjTest extends TestCase
     {
         $locale = new LocaleSmj();
 
-        $this->assertEquals(new LanguageSmj(), $locale->language());
-        $this->assertEquals(new PluralRuleOneTwoOther(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritorySe(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('smj_SE', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('julevsámegiella', $locale->endonym());
-        $this->assertSame('lang="smj"', $locale->htmlAttributes());
-        $this->assertSame('smj', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12,345,678.09', $locale->number(12345678.09));
-        $this->assertSame('1,234.56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageSmj(), $locale->language());
+        self::assertEquals(new PluralRuleOneTwoOther(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritorySe(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('smj_SE', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('julevsámegiella', $locale->endonym());
+        self::assertSame('lang="smj"', $locale->htmlAttributes());
+        self::assertSame('smj', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12,345,678.09', $locale->number(12345678.09));
+        self::assertSame('1,234.56%', $locale->percent(12.3456));
     }
 }

@@ -20,10 +20,10 @@ class ScriptMandTest extends TestCase
     {
         $script = new ScriptMand();
 
-        $this->assertSame('Mand', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('140', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Mandaic', $script->unicodeName());
+        self::assertSame('Mand', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('140', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Mandaic', $script->unicodeName());
     }
 }

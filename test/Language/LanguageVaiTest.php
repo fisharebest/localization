@@ -21,7 +21,7 @@ class LanguageVaiTest extends TestCase
     {
         $language = new LanguageVai();
 
-        $this->assertEquals(new ScriptVaii(), $language->defaultScript());
-        $this->assertSame('vai', $language->code());
+        self::assertEquals(new ScriptVaii(), $language->defaultScript());
+        self::assertSame('vai', $language->code());
     }
 }

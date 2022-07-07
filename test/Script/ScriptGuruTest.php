@@ -20,10 +20,10 @@ class ScriptGuruTest extends TestCase
     {
         $script = new ScriptGuru();
 
-        $this->assertSame('Guru', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('310', $script->number());
-        $this->assertSame(array('੦', '੧', '੨', '੩', '੪', '੫', '੬', '੭', '੮', '੯'), $script->numerals());
-        $this->assertSame('Gurmukhi', $script->unicodeName());
+        self::assertSame('Guru', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('310', $script->number());
+        self::assertSame(array('੦', '੧', '੨', '੩', '੪', '੫', '੬', '੭', '੮', '੯'), $script->numerals());
+        self::assertSame('Gurmukhi', $script->unicodeName());
     }
 }

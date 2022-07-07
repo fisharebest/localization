@@ -20,10 +20,10 @@ class ScriptKndaTest extends TestCase
     {
         $script = new ScriptKnda();
 
-        $this->assertSame('Knda', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('345', $script->number());
-        $this->assertSame(array('೦', '೧', '೨', '೩', '೪', '೫', '೬', '೭', '೮', '೯'), $script->numerals());
-        $this->assertSame('Kannada', $script->unicodeName());
+        self::assertSame('Knda', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('345', $script->number());
+        self::assertSame(array('೦', '೧', '೨', '೩', '೪', '೫', '೬', '೭', '೮', '೯'), $script->numerals());
+        self::assertSame('Kannada', $script->unicodeName());
     }
 }

@@ -20,10 +20,10 @@ class ScriptNbatTest extends TestCase
     {
         $script = new ScriptNbat();
 
-        $this->assertSame('Nbat', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('159', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Nabataean', $script->unicodeName());
+        self::assertSame('Nbat', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('159', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Nabataean', $script->unicodeName());
     }
 }

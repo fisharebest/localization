@@ -20,10 +20,10 @@ class ScriptZsyeTest extends TestCase
     {
         $script = new ScriptZsye();
 
-        $this->assertSame('Zsye', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('993', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Zsye', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('993', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

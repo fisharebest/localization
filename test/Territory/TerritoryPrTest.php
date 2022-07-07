@@ -20,11 +20,11 @@ class TerritoryPrTest extends TestCase
     {
         $territory = new TerritoryPr();
 
-        $this->assertSame('PR', $territory->code());
-        $this->assertSame(0, $territory->firstDay());
-        $this->assertSame(6, $territory->weekendStart());
-        $this->assertSame(0, $territory->weekendEnd());
-        $this->assertSame('US', $territory->measurementSystem());
-        $this->assertSame('US-Letter', $territory->paperSize());
+        self::assertSame('PR', $territory->code());
+        self::assertSame(0, $territory->firstDay());
+        self::assertSame(6, $territory->weekendStart());
+        self::assertSame(0, $territory->weekendEnd());
+        self::assertSame('US', $territory->measurementSystem());
+        self::assertSame('US-Letter', $territory->paperSize());
     }
 }

@@ -21,7 +21,7 @@ class LanguageGuzTest extends TestCase
     {
         $language = new LanguageGuz();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('guz', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('guz', $language->code());
     }
 }

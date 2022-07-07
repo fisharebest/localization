@@ -24,19 +24,19 @@ class LocaleDzTest extends TestCase
     {
         $locale = new LocaleDz();
 
-        $this->assertEquals(new LanguageDz(), $locale->language());
-        $this->assertEquals(new PluralRule0(), $locale->pluralRule());
-        $this->assertEquals(new ScriptTibt(), $locale->script());
-        $this->assertEquals(new TerritoryBt(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('dz_BT', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('༠༡༢༣༤༥༦༧༨༩', $locale->digits('0123456789'));
-        $this->assertSame('རྫོང་ཁ', $locale->endonym());
-        $this->assertSame('lang="dz"', $locale->htmlAttributes());
-        $this->assertSame('dz', $locale->languageTag());
-        $this->assertSame('-༡༢༣', $locale->number(-123));
-        $this->assertSame('༡,༢༣,༤༥,༦༧༨.༠༩', $locale->number(12345678.09));
-        $this->assertSame('༡,༢༣༤.༥༦ %', $locale->percent(12.3456));
+        self::assertEquals(new LanguageDz(), $locale->language());
+        self::assertEquals(new PluralRule0(), $locale->pluralRule());
+        self::assertEquals(new ScriptTibt(), $locale->script());
+        self::assertEquals(new TerritoryBt(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('dz_BT', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('༠༡༢༣༤༥༦༧༨༩', $locale->digits('0123456789'));
+        self::assertSame('རྫོང་ཁ', $locale->endonym());
+        self::assertSame('lang="dz"', $locale->htmlAttributes());
+        self::assertSame('dz', $locale->languageTag());
+        self::assertSame('-༡༢༣', $locale->number(-123));
+        self::assertSame('༡,༢༣,༤༥,༦༧༨.༠༩', $locale->number(12345678.09));
+        self::assertSame('༡,༢༣༤.༥༦ %', $locale->percent(12.3456));
     }
 }

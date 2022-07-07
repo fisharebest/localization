@@ -24,18 +24,18 @@ class LocaleLoLaTest extends TestCase
     {
         $locale = new LocaleLoLa();
 
-        $this->assertEquals(new LanguageLo(), $locale->language());
-        $this->assertEquals(new PluralRule0(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLaoo(), $locale->script());
-        $this->assertEquals(new TerritoryLa(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('lo_LA', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('໐໑໒໓໔໕໖໗໘໙', $locale->digits('0123456789'));
-        $this->assertSame('lang="lo"', $locale->htmlAttributes());
-        $this->assertSame('lo', $locale->languageTag());
-        $this->assertSame('-໑໒໓', $locale->number(-123));
-        $this->assertSame('໑໒.໓໔໕.໖໗໘,໐໙', $locale->number(12345678.09));
-        $this->assertSame('໑.໒໓໔,໕໖%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageLo(), $locale->language());
+        self::assertEquals(new PluralRule0(), $locale->pluralRule());
+        self::assertEquals(new ScriptLaoo(), $locale->script());
+        self::assertEquals(new TerritoryLa(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('lo_LA', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('໐໑໒໓໔໕໖໗໘໙', $locale->digits('0123456789'));
+        self::assertSame('lang="lo"', $locale->htmlAttributes());
+        self::assertSame('lo', $locale->languageTag());
+        self::assertSame('-໑໒໓', $locale->number(-123));
+        self::assertSame('໑໒.໓໔໕.໖໗໘,໐໙', $locale->number(12345678.09));
+        self::assertSame('໑.໒໓໔,໕໖%', $locale->percent(12.3456));
     }
 }

@@ -20,10 +20,10 @@ class ScriptDiakTest extends TestCase
     {
         $script = new ScriptDiak();
 
-        $this->assertSame('Diak', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('342', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Dives_Akuru', $script->unicodeName());
+        self::assertSame('Diak', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('342', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Dives_Akuru', $script->unicodeName());
     }
 }

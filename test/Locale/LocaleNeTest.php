@@ -24,19 +24,19 @@ class LocaleNeTest extends TestCase
     {
         $locale = new LocaleNe();
 
-        $this->assertEquals(new LanguageNe(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptDeva(), $locale->script());
-        $this->assertEquals(new TerritoryNp(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('ne_NP', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('०१२३४५६७८९', $locale->digits('0123456789'));
-        $this->assertSame('नेपाली', $locale->endonym());
-        $this->assertSame('lang="ne"', $locale->htmlAttributes());
-        $this->assertSame('ne', $locale->languageTag());
-        $this->assertSame('-१२३', $locale->number(-123));
-        $this->assertSame('१२,३४५,६७८.०९', $locale->number(12345678.09));
-        $this->assertSame('१,२३४.५६%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageNe(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptDeva(), $locale->script());
+        self::assertEquals(new TerritoryNp(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('ne_NP', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('०१२३४५६७८९', $locale->digits('0123456789'));
+        self::assertSame('नेपाली', $locale->endonym());
+        self::assertSame('lang="ne"', $locale->htmlAttributes());
+        self::assertSame('ne', $locale->languageTag());
+        self::assertSame('-१२३', $locale->number(-123));
+        self::assertSame('१२,३४५,६७८.०९', $locale->number(12345678.09));
+        self::assertSame('१,२३४.५६%', $locale->percent(12.3456));
     }
 }

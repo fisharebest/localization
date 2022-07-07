@@ -20,10 +20,10 @@ class ScriptSogdTest extends TestCase
     {
         $script = new ScriptSogd();
 
-        $this->assertSame('Sogd', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('141', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Sogdian', $script->unicodeName());
+        self::assertSame('Sogd', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('141', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Sogdian', $script->unicodeName());
     }
 }

@@ -22,8 +22,8 @@ class LanguageJmcTest extends TestCase
     {
         $language = new LanguageJmc();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('jmc', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('jmc', $language->code());
     }
 }

@@ -22,8 +22,8 @@ class LanguageTzmTest extends TestCase
     {
         $language = new LanguageTzm();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRuleCentralAtlasTamazight(), $language->pluralRule());
-        $this->assertSame('tzm', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRuleCentralAtlasTamazight(), $language->pluralRule());
+        self::assertSame('tzm', $language->code());
     }
 }

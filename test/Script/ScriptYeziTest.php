@@ -20,10 +20,10 @@ class ScriptYeziTest extends TestCase
     {
         $script = new ScriptYezi();
 
-        $this->assertSame('Yezi', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('192', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Yezidi', $script->unicodeName());
+        self::assertSame('Yezi', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('192', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Yezidi', $script->unicodeName());
     }
 }

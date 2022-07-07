@@ -20,10 +20,10 @@ class ScriptPsinTest extends TestCase
     {
         $script = new ScriptPsin();
 
-        $this->assertSame('Psin', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('103', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Psin', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('103', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

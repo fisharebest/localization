@@ -24,19 +24,19 @@ class LocaleCcpInTest extends TestCase
     {
         $locale = new LocaleCcpIn();
 
-        $this->assertEquals(new LanguageCcp(), $locale->language());
-        $this->assertEquals(new PluralRule0(), $locale->pluralRule());
-        $this->assertEquals(new ScriptCakm(), $locale->script());
-        $this->assertEquals(new TerritoryIn(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('ccp_IN', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿', $locale->digits('0123456789'));
-        $this->assertSame('𑄌𑄋𑄴𑄟𑄳𑄦', $locale->endonym());
-        $this->assertSame('lang="ccp-IN"', $locale->htmlAttributes());
-        $this->assertSame('ccp-IN', $locale->languageTag());
-        $this->assertSame('-𑄷𑄸𑄹', $locale->number(-123));
-        $this->assertSame('𑄷,𑄸𑄹,𑄺𑄻,𑄼𑄽𑄾.𑄶𑄿', $locale->number(12345678.09));
-        $this->assertSame('𑄷,𑄸𑄹𑄺.𑄻𑄼%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageCcp(), $locale->language());
+        self::assertEquals(new PluralRule0(), $locale->pluralRule());
+        self::assertEquals(new ScriptCakm(), $locale->script());
+        self::assertEquals(new TerritoryIn(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('ccp_IN', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿', $locale->digits('0123456789'));
+        self::assertSame('𑄌𑄋𑄴𑄟𑄳𑄦', $locale->endonym());
+        self::assertSame('lang="ccp-IN"', $locale->htmlAttributes());
+        self::assertSame('ccp-IN', $locale->languageTag());
+        self::assertSame('-𑄷𑄸𑄹', $locale->number(-123));
+        self::assertSame('𑄷,𑄸𑄹,𑄺𑄻,𑄼𑄽𑄾.𑄶𑄿', $locale->number(12345678.09));
+        self::assertSame('𑄷,𑄸𑄹𑄺.𑄻𑄼%', $locale->percent(12.3456));
     }
 }

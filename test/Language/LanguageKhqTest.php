@@ -21,7 +21,7 @@ class LanguageKhqTest extends TestCase
     {
         $language = new LanguageKhq();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('khq', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('khq', $language->code());
     }
 }

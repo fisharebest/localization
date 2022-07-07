@@ -21,7 +21,7 @@ class LanguageMuaTest extends TestCase
     {
         $language = new LanguageMua();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('mua', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('mua', $language->code());
     }
 }

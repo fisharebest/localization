@@ -22,8 +22,8 @@ class LanguageHrTest extends TestCase
     {
         $language = new LanguageHr();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule7(), $language->pluralRule());
-        $this->assertSame('hr', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule7(), $language->pluralRule());
+        self::assertSame('hr', $language->code());
     }
 }

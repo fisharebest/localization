@@ -22,8 +22,8 @@ class LanguageKmTest extends TestCase
     {
         $language = new LanguageKm();
 
-        $this->assertEquals(new ScriptKhmr(), $language->defaultScript());
-        $this->assertEquals(new PluralRule0(), $language->pluralRule());
-        $this->assertSame('km', $language->code());
+        self::assertEquals(new ScriptKhmr(), $language->defaultScript());
+        self::assertEquals(new PluralRule0(), $language->pluralRule());
+        self::assertSame('km', $language->code());
     }
 }

@@ -22,8 +22,8 @@ class LanguageJvTest extends TestCase
     {
         $language = new LanguageJv();
 
-        $this->assertEquals(new ScriptJava(), $language->defaultScript());
-        $this->assertEquals(new PluralRule0(), $language->pluralRule());
-        $this->assertSame('jv', $language->code());
+        self::assertEquals(new ScriptJava(), $language->defaultScript());
+        self::assertEquals(new PluralRule0(), $language->pluralRule());
+        self::assertSame('jv', $language->code());
     }
 }

@@ -20,9 +20,9 @@ class ScriptLaooTest extends TestCase
     {
         $script = new ScriptLaoo();
 
-        $this->assertSame('Laoo', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame(array('໐', '໑', '໒', '໓', '໔', '໕', '໖', '໗', '໘', '໙'), $script->numerals());
-        $this->assertSame('Lao', $script->unicodeName());
+        self::assertSame('Laoo', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame(array('໐', '໑', '໒', '໓', '໔', '໕', '໖', '໗', '໘', '໙'), $script->numerals());
+        self::assertSame('Lao', $script->unicodeName());
     }
 }

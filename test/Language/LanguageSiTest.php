@@ -22,8 +22,8 @@ class LanguageSiTest extends TestCase
     {
         $language = new LanguageSi();
 
-        $this->assertEquals(new ScriptSinh(), $language->defaultScript());
-        $this->assertEquals(new PluralRule2(), $language->pluralRule());
-        $this->assertSame('si', $language->code());
+        self::assertEquals(new ScriptSinh(), $language->defaultScript());
+        self::assertEquals(new PluralRule2(), $language->pluralRule());
+        self::assertSame('si', $language->code());
     }
 }

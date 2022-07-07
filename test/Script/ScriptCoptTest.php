@@ -20,10 +20,10 @@ class ScriptCoptTest extends TestCase
     {
         $script = new ScriptCopt();
 
-        $this->assertSame('Copt', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('204', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Coptic', $script->unicodeName());
+        self::assertSame('Copt', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('204', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Coptic', $script->unicodeName());
     }
 }

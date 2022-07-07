@@ -20,9 +20,9 @@ class ScriptHluwTest extends TestCase
     {
         $script = new ScriptHluw();
 
-        $this->assertSame('Hluw', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Anatolian_Hieroglyphs', $script->unicodeName());
+        self::assertSame('Hluw', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Anatolian_Hieroglyphs', $script->unicodeName());
     }
 }

@@ -24,19 +24,19 @@ class LocaleEeTest extends TestCase
     {
         $locale = new LocaleEe();
 
-        $this->assertEquals(new LanguageEe(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryGh(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('ee_GH', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('Eʋegbe', $locale->endonym());
-        $this->assertSame('lang="ee"', $locale->htmlAttributes());
-        $this->assertSame('ee', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12,345,678.09', $locale->number(12345678.09));
-        $this->assertSame('1,234.56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageEe(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryGh(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('ee_GH', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('Eʋegbe', $locale->endonym());
+        self::assertSame('lang="ee"', $locale->htmlAttributes());
+        self::assertSame('ee', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12,345,678.09', $locale->number(12345678.09));
+        self::assertSame('1,234.56%', $locale->percent(12.3456));
     }
 }

@@ -20,10 +20,10 @@ class ScriptDsrtTest extends TestCase
     {
         $script = new ScriptDsrt();
 
-        $this->assertSame('Dsrt', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('250', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Deseret', $script->unicodeName());
+        self::assertSame('Dsrt', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('250', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Deseret', $script->unicodeName());
     }
 }

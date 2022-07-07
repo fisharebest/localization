@@ -22,8 +22,8 @@ class LanguageSyrTest extends TestCase
     {
         $language = new LanguageSyr();
 
-        $this->assertEquals(new ScriptSyrc(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('syr', $language->code());
+        self::assertEquals(new ScriptSyrc(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('syr', $language->code());
     }
 }

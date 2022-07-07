@@ -22,8 +22,8 @@ class LanguageCcpTest extends TestCase
     {
         $language = new LanguageCcp();
 
-        $this->assertEquals(new ScriptCakm(), $language->defaultScript());
-        $this->assertEquals(new PluralRule0(), $language->pluralRule());
-        $this->assertSame('ccp', $language->code());
+        self::assertEquals(new ScriptCakm(), $language->defaultScript());
+        self::assertEquals(new PluralRule0(), $language->pluralRule());
+        self::assertSame('ccp', $language->code());
     }
 }

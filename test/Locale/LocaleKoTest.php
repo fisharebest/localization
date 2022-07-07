@@ -24,19 +24,19 @@ class LocaleKoTest extends TestCase
     {
         $locale = new LocaleKo();
 
-        $this->assertEquals(new LanguageKo(), $locale->language());
-        $this->assertEquals(new PluralRule0(), $locale->pluralRule());
-        $this->assertEquals(new ScriptKore(), $locale->script());
-        $this->assertEquals(new TerritoryKr(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('ko_KR', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('한국어', $locale->endonym());
-        $this->assertSame('lang="ko"', $locale->htmlAttributes());
-        $this->assertSame('ko', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12,345,678.09', $locale->number(12345678.09));
-        $this->assertSame('1,234.56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageKo(), $locale->language());
+        self::assertEquals(new PluralRule0(), $locale->pluralRule());
+        self::assertEquals(new ScriptKore(), $locale->script());
+        self::assertEquals(new TerritoryKr(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('ko_KR', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('한국어', $locale->endonym());
+        self::assertSame('lang="ko"', $locale->htmlAttributes());
+        self::assertSame('ko', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12,345,678.09', $locale->number(12345678.09));
+        self::assertSame('1,234.56%', $locale->percent(12.3456));
     }
 }

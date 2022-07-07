@@ -20,10 +20,10 @@ class ScriptCakmTest extends TestCase
     {
         $script = new ScriptCakm();
 
-        $this->assertSame('Cakm', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('349', $script->number());
-        $this->assertSame(array('𑄶', '𑄷', '𑄸', '𑄹', '𑄺', '𑄻', '𑄼', '𑄽', '𑄾', '𑄿'), $script->numerals());
-        $this->assertSame('Chakma', $script->unicodeName());
+        self::assertSame('Cakm', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('349', $script->number());
+        self::assertSame(array('𑄶', '𑄷', '𑄸', '𑄹', '𑄺', '𑄻', '𑄼', '𑄽', '𑄾', '𑄿'), $script->numerals());
+        self::assertSame('Chakma', $script->unicodeName());
     }
 }

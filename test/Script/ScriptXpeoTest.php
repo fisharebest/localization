@@ -20,10 +20,10 @@ class ScriptXpeoTest extends TestCase
     {
         $script = new ScriptXpeo();
 
-        $this->assertSame('Xpeo', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('030', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Old_Persian', $script->unicodeName());
+        self::assertSame('Xpeo', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('030', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Old_Persian', $script->unicodeName());
     }
 }

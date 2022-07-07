@@ -20,10 +20,10 @@ class ScriptSyrnTest extends TestCase
     {
         $script = new ScriptSyrn();
 
-        $this->assertSame('Syrn', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('136', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Syrn', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('136', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

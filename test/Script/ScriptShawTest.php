@@ -20,10 +20,10 @@ class ScriptShawTest extends TestCase
     {
         $script = new ScriptShaw();
 
-        $this->assertSame('Shaw', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('281', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Shavian', $script->unicodeName());
+        self::assertSame('Shaw', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('281', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Shavian', $script->unicodeName());
     }
 }

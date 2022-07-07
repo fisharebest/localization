@@ -23,17 +23,17 @@ class LocaleKokInTest extends TestCase
     {
         $locale = new LocaleKokIn();
 
-        $this->assertEquals(new LanguageKok(), $locale->language());
-        $this->assertEquals(new ScriptDeva(), $locale->script());
-        $this->assertEquals(new TerritoryIn(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('kok_IN', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('०१२३४५६७८९', $locale->digits('0123456789'));
-        $this->assertSame('lang="kok"', $locale->htmlAttributes());
-        $this->assertSame('kok', $locale->languageTag());
-        $this->assertSame('-१२३', $locale->number(-123));
-        $this->assertSame('१,२३,४५,६७८.०९', $locale->number(12345678.09));
-        $this->assertSame('१,२३४.५६%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageKok(), $locale->language());
+        self::assertEquals(new ScriptDeva(), $locale->script());
+        self::assertEquals(new TerritoryIn(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('kok_IN', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('०१२३४५६७८९', $locale->digits('0123456789'));
+        self::assertSame('lang="kok"', $locale->htmlAttributes());
+        self::assertSame('kok', $locale->languageTag());
+        self::assertSame('-१२३', $locale->number(-123));
+        self::assertSame('१,२३,४५,६७८.०९', $locale->number(12345678.09));
+        self::assertSame('१,२३४.५६%', $locale->percent(12.3456));
     }
 }

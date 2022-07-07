@@ -24,16 +24,16 @@ class LocaleUgCnTest extends TestCase
     {
         $locale = new LocaleUgCn();
 
-        $this->assertEquals(new LanguageUg(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptArab(), $locale->script());
-        $this->assertEquals(new TerritoryCn(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
-        $this->assertSame('lang="ug" dir="rtl"', $locale->htmlAttributes());
-        $this->assertSame('-١٢٣', $locale->number(-123));
-        $this->assertSame('١٢,٣٤٥,٦٧٨.٠٩', $locale->number(12345678.09));
-        $this->assertSame('١,٢٣٤.٥٦%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageUg(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptArab(), $locale->script());
+        self::assertEquals(new TerritoryCn(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+        self::assertSame('lang="ug" dir="rtl"', $locale->htmlAttributes());
+        self::assertSame('-١٢٣', $locale->number(-123));
+        self::assertSame('١٢,٣٤٥,٦٧٨.٠٩', $locale->number(12345678.09));
+        self::assertSame('١,٢٣٤.٥٦%', $locale->percent(12.3456));
     }
 }

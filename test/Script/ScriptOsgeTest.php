@@ -20,10 +20,10 @@ class ScriptOsgeTest extends TestCase
     {
         $script = new ScriptOsge();
 
-        $this->assertSame('Osge', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('219', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Osage', $script->unicodeName());
+        self::assertSame('Osge', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('219', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Osage', $script->unicodeName());
     }
 }

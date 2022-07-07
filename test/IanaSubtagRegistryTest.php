@@ -35,7 +35,7 @@ class IanaSubtagRegistryTest extends TestCase
                 /** @var LanguageInterface $language */
                 $language = new $class();
 
-                $this->assertSame($match[1], $language->code());
+                self::assertSame($match[1], $language->code());
             }
         }
     }
@@ -58,7 +58,7 @@ class IanaSubtagRegistryTest extends TestCase
             /** @var ScriptInterface $script */
             $script = new $class();
 
-            $this->assertSame($match[1], $script->code());
+            self::assertSame($match[1], $script->code());
         }
     }
 
@@ -80,7 +80,7 @@ class IanaSubtagRegistryTest extends TestCase
             /** @var TerritoryInterface $territory */
             $territory = new $class();
 
-            $this->assertSame($match[1], $territory->code());
+            self::assertSame($match[1], $territory->code());
         }
     }
 }

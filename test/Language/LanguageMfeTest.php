@@ -22,8 +22,8 @@ class LanguageMfeTest extends TestCase
     {
         $language = new LanguageMfe();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule2(), $language->pluralRule());
-        $this->assertSame('mfe', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule2(), $language->pluralRule());
+        self::assertSame('mfe', $language->code());
     }
 }

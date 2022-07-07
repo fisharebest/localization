@@ -22,8 +22,8 @@ class LanguageDzTest extends TestCase
     {
         $language = new LanguageDz();
 
-        $this->assertEquals(new ScriptTibt(), $language->defaultScript());
-        $this->assertEquals(new PluralRule0(), $language->pluralRule());
-        $this->assertSame('dz', $language->code());
+        self::assertEquals(new ScriptTibt(), $language->defaultScript());
+        self::assertEquals(new PluralRule0(), $language->pluralRule());
+        self::assertSame('dz', $language->code());
     }
 }

@@ -20,10 +20,10 @@ class ScriptZanbTest extends TestCase
     {
         $script = new ScriptZanb();
 
-        $this->assertSame('Zanb', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('339', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Zanabazar_Square', $script->unicodeName());
+        self::assertSame('Zanb', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('339', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Zanabazar_Square', $script->unicodeName());
     }
 }

@@ -24,18 +24,18 @@ class LocaleArTnTest extends TestCase
     {
         $locale = new LocaleArTn();
 
-        $this->assertEquals(new LanguageAr(), $locale->language());
-        $this->assertEquals(new PluralRule12(), $locale->pluralRule());
-        $this->assertEquals(new ScriptArab(), $locale->script());
-        $this->assertEquals(new TerritoryTn(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('ar_TN', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('lang="ar-TN" dir="rtl"', $locale->htmlAttributes());
-        $this->assertSame('ar-TN', $locale->languageTag());
-        $this->assertSame('12.345.678,09', $locale->number(12345678.09));
-        $this->assertSame('‎-123', $locale->number(-123));
-        $this->assertSame('1.234,56‎%‎', $locale->percent(12.3456));
+        self::assertEquals(new LanguageAr(), $locale->language());
+        self::assertEquals(new PluralRule12(), $locale->pluralRule());
+        self::assertEquals(new ScriptArab(), $locale->script());
+        self::assertEquals(new TerritoryTn(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('ar_TN', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('lang="ar-TN" dir="rtl"', $locale->htmlAttributes());
+        self::assertSame('ar-TN', $locale->languageTag());
+        self::assertSame('12.345.678,09', $locale->number(12345678.09));
+        self::assertSame('‎-123', $locale->number(-123));
+        self::assertSame('1.234,56‎%‎', $locale->percent(12.3456));
     }
 }

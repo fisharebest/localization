@@ -24,19 +24,19 @@ class LocaleJboTest extends TestCase
     {
         $locale = new LocaleJbo();
 
-        $this->assertEquals(new LanguageJbo(), $locale->language());
-        $this->assertEquals(new PluralRule0(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new Territory001(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('jbo_001', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('Lojban', $locale->endonym());
-        $this->assertSame('lang="jbo"', $locale->htmlAttributes());
-        $this->assertSame('jbo', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12,345,678.09', $locale->number(12345678.09));
-        $this->assertSame('1,234.56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageJbo(), $locale->language());
+        self::assertEquals(new PluralRule0(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new Territory001(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('jbo_001', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('Lojban', $locale->endonym());
+        self::assertSame('lang="jbo"', $locale->htmlAttributes());
+        self::assertSame('jbo', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12,345,678.09', $locale->number(12345678.09));
+        self::assertSame('1,234.56%', $locale->percent(12.3456));
     }
 }

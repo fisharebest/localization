@@ -24,18 +24,18 @@ class LocaleTeInTest extends TestCase
     {
         $locale = new LocaleTeIn();
 
-        $this->assertEquals(new LanguageTe(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptTelu(), $locale->script());
-        $this->assertEquals(new TerritoryIn(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('te_IN', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('౦౧౨౩౪౫౬౭౮౯', $locale->digits('0123456789'));
-        $this->assertSame('lang="te"', $locale->htmlAttributes());
-        $this->assertSame('te', $locale->languageTag());
-        $this->assertSame('-౧౨౩', $locale->number(-123));
-        $this->assertSame('౧,౨౩,౪౫,౬౭౮.౦౯', $locale->number(12345678.09));
-        $this->assertSame('౧,౨౩౪.౫౬%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageTe(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptTelu(), $locale->script());
+        self::assertEquals(new TerritoryIn(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('te_IN', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('౦౧౨౩౪౫౬౭౮౯', $locale->digits('0123456789'));
+        self::assertSame('lang="te"', $locale->htmlAttributes());
+        self::assertSame('te', $locale->languageTag());
+        self::assertSame('-౧౨౩', $locale->number(-123));
+        self::assertSame('౧,౨౩,౪౫,౬౭౮.౦౯', $locale->number(12345678.09));
+        self::assertSame('౧,౨౩౪.౫౬%', $locale->percent(12.3456));
     }
 }

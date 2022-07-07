@@ -20,10 +20,10 @@ class ScriptTagbTest extends TestCase
     {
         $script = new ScriptTagb();
 
-        $this->assertSame('Tagb', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('373', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Tagbanwa', $script->unicodeName());
+        self::assertSame('Tagb', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('373', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Tagbanwa', $script->unicodeName());
     }
 }

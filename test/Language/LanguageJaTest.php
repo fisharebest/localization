@@ -22,8 +22,8 @@ class LanguageJaTest extends TestCase
     {
         $language = new LanguageJa();
 
-        $this->assertEquals(new ScriptJpan(), $language->defaultScript());
-        $this->assertEquals(new PluralRule0(), $language->pluralRule());
-        $this->assertSame('ja', $language->code());
+        self::assertEquals(new ScriptJpan(), $language->defaultScript());
+        self::assertEquals(new PluralRule0(), $language->pluralRule());
+        self::assertSame('ja', $language->code());
     }
 }

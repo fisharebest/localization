@@ -20,10 +20,10 @@ class ScriptVithTest extends TestCase
     {
         $script = new ScriptVith();
 
-        $this->assertSame('Vith', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('228', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Vithkuqi', $script->unicodeName());
+        self::assertSame('Vith', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('228', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Vithkuqi', $script->unicodeName());
     }
 }

@@ -22,8 +22,8 @@ class LanguageTiTest extends TestCase
     {
         $language = new LanguageTi();
 
-        $this->assertEquals(new ScriptEthi(), $language->defaultScript());
-        $this->assertEquals(new PluralRule2(), $language->pluralRule());
-        $this->assertSame('ti', $language->code());
+        self::assertEquals(new ScriptEthi(), $language->defaultScript());
+        self::assertEquals(new PluralRule2(), $language->pluralRule());
+        self::assertSame('ti', $language->code());
     }
 }

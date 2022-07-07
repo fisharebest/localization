@@ -20,10 +20,10 @@ class ScriptChrsTest extends TestCase
     {
         $script = new ScriptChrs();
 
-        $this->assertSame('Chrs', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('109', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Chorasmian', $script->unicodeName());
+        self::assertSame('Chrs', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('109', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Chorasmian', $script->unicodeName());
     }
 }

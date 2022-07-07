@@ -20,10 +20,10 @@ class ScriptManiTest extends TestCase
     {
         $script = new ScriptMani();
 
-        $this->assertSame('Mani', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('139', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Manichaean', $script->unicodeName());
+        self::assertSame('Mani', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('139', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Manichaean', $script->unicodeName());
     }
 }

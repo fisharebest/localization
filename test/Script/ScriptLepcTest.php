@@ -20,10 +20,10 @@ class ScriptLepcTest extends TestCase
     {
         $script = new ScriptLepc();
 
-        $this->assertSame('Lepc', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('335', $script->number());
-        $this->assertSame(array('᱀', '᱁', '᱂', '᱃', '᱄', '᱅', '᱆', '᱇', '᱈', '᱉'), $script->numerals());
-        $this->assertSame('Lepcha', $script->unicodeName());
+        self::assertSame('Lepc', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('335', $script->number());
+        self::assertSame(array('᱀', '᱁', '᱂', '᱃', '᱄', '᱅', '᱆', '᱇', '᱈', '᱉'), $script->numerals());
+        self::assertSame('Lepcha', $script->unicodeName());
     }
 }

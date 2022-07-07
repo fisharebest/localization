@@ -23,18 +23,18 @@ class LocaleMerTest extends TestCase
     {
         $locale = new LocaleMer();
 
-        $this->assertEquals(new LanguageMer(), $locale->language());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryKe(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('mer_KE', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('Kĩmĩrũ', $locale->endonym());
-        $this->assertSame('lang="mer"', $locale->htmlAttributes());
-        $this->assertSame('mer', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12,345,678.09', $locale->number(12345678.09));
-        $this->assertSame('1,234.56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageMer(), $locale->language());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryKe(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('mer_KE', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('Kĩmĩrũ', $locale->endonym());
+        self::assertSame('lang="mer"', $locale->htmlAttributes());
+        self::assertSame('mer', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12,345,678.09', $locale->number(12345678.09));
+        self::assertSame('1,234.56%', $locale->percent(12.3456));
     }
 }

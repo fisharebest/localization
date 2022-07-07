@@ -22,8 +22,8 @@ class LanguageAmTest extends TestCase
     {
         $language = new LanguageAm();
 
-        $this->assertEquals(new ScriptEthi(), $language->defaultScript());
-        $this->assertEquals(new PluralRule2(), $language->pluralRule());
-        $this->assertSame('am', $language->code());
+        self::assertEquals(new ScriptEthi(), $language->defaultScript());
+        self::assertEquals(new PluralRule2(), $language->pluralRule());
+        self::assertSame('am', $language->code());
     }
 }

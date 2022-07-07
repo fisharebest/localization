@@ -22,8 +22,8 @@ class LanguageKkjTest extends TestCase
     {
         $language = new LanguageKkj();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('kkj', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('kkj', $language->code());
     }
 }

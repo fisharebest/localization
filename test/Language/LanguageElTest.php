@@ -22,8 +22,8 @@ class LanguageElTest extends TestCase
     {
         $language = new LanguageEl();
 
-        $this->assertEquals(new ScriptGrek(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('el', $language->code());
+        self::assertEquals(new ScriptGrek(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('el', $language->code());
     }
 }

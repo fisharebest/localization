@@ -20,10 +20,10 @@ class ScriptBuhdTest extends TestCase
     {
         $script = new ScriptBuhd();
 
-        $this->assertSame('Buhd', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('372', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Buhid', $script->unicodeName());
+        self::assertSame('Buhd', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('372', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Buhid', $script->unicodeName());
     }
 }

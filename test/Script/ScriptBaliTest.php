@@ -20,10 +20,10 @@ class ScriptBaliTest extends TestCase
     {
         $script = new ScriptBali();
 
-        $this->assertSame('Bali', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('360', $script->number());
-        $this->assertSame(array('᭐', '᭑', '᭒', '᭓', '᭔', '᭕', '᭖', '᭗', '᭘', '᭙'), $script->numerals());
-        $this->assertSame('Balinese', $script->unicodeName());
+        self::assertSame('Bali', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('360', $script->number());
+        self::assertSame(array('᭐', '᭑', '᭒', '᭓', '᭔', '᭕', '᭖', '᭗', '᭘', '᭙'), $script->numerals());
+        self::assertSame('Balinese', $script->unicodeName());
     }
 }

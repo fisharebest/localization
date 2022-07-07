@@ -20,10 +20,10 @@ class ScriptAghbTest extends TestCase
     {
         $script = new ScriptAghb();
 
-        $this->assertSame('Aghb', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('239', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Caucasian_Albanian', $script->unicodeName());
+        self::assertSame('Aghb', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('239', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Caucasian_Albanian', $script->unicodeName());
     }
 }

@@ -20,10 +20,10 @@ class ScriptBraiTest extends TestCase
     {
         $script = new ScriptBrai();
 
-        $this->assertSame('Brai', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('570', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Braille', $script->unicodeName());
+        self::assertSame('Brai', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('570', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Braille', $script->unicodeName());
     }
 }

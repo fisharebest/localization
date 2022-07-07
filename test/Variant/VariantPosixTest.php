@@ -20,6 +20,6 @@ class VariantPosixTest extends TestCase
     {
         $variant = new VariantPosix();
 
-        $this->assertSame('posix', $variant->code());
+        self::assertSame('posix', $variant->code());
     }
 }

@@ -20,10 +20,10 @@ class ScriptKhmrTest extends TestCase
     {
         $script = new ScriptKhmr();
 
-        $this->assertSame('Khmr', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('355', $script->number());
-        $this->assertSame(array('០', '១', '២', '៣', '៤', '៥', '៦', '៧', '៨', '៩'), $script->numerals());
-        $this->assertSame('Khmer', $script->unicodeName());
+        self::assertSame('Khmr', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('355', $script->number());
+        self::assertSame(array('០', '១', '២', '៣', '៤', '៥', '៦', '៧', '៨', '៩'), $script->numerals());
+        self::assertSame('Khmer', $script->unicodeName());
     }
 }

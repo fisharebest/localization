@@ -22,8 +22,8 @@ class LanguageKshTest extends TestCase
     {
         $language = new LanguageKsh();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRuleZeroOneOther(), $language->pluralRule());
-        $this->assertSame('ksh', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRuleZeroOneOther(), $language->pluralRule());
+        self::assertSame('ksh', $language->code());
     }
 }

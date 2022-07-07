@@ -20,10 +20,10 @@ class ScriptArmiTest extends TestCase
     {
         $script = new ScriptArmi();
 
-        $this->assertSame('Armi', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('124', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Imperial_Aramaic', $script->unicodeName());
+        self::assertSame('Armi', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('124', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Imperial_Aramaic', $script->unicodeName());
     }
 }

@@ -21,7 +21,7 @@ class LanguageDjeTest extends TestCase
     {
         $language = new LanguageDje();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('dje', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('dje', $language->code());
     }
 }

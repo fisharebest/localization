@@ -24,18 +24,18 @@ class LocaleMrInTest extends TestCase
     {
         $locale = new LocaleMrIn();
 
-        $this->assertEquals(new LanguageMr(), $locale->language());
-        $this->assertEquals(new PluralRule2(), $locale->pluralRule());
-        $this->assertEquals(new ScriptDeva(), $locale->script());
-        $this->assertEquals(new TerritoryIn(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('mr_IN', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('०१२३४५६७८९', $locale->digits('0123456789'));
-        $this->assertSame('lang="mr"', $locale->htmlAttributes());
-        $this->assertSame('mr', $locale->languageTag());
-        $this->assertSame('-१२३', $locale->number(-123));
-        $this->assertSame('१,२३,४५,६७८.०९', $locale->number(12345678.09));
-        $this->assertSame('१,२३४.५६%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageMr(), $locale->language());
+        self::assertEquals(new PluralRule2(), $locale->pluralRule());
+        self::assertEquals(new ScriptDeva(), $locale->script());
+        self::assertEquals(new TerritoryIn(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('mr_IN', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('०१२३४५६७८९', $locale->digits('0123456789'));
+        self::assertSame('lang="mr"', $locale->htmlAttributes());
+        self::assertSame('mr', $locale->languageTag());
+        self::assertSame('-१२३', $locale->number(-123));
+        self::assertSame('१,२३,४५,६७८.०९', $locale->number(12345678.09));
+        self::assertSame('१,२३४.५६%', $locale->percent(12.3456));
     }
 }

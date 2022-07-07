@@ -20,10 +20,10 @@ class ScriptMrooTest extends TestCase
     {
         $script = new ScriptMroo();
 
-        $this->assertSame('Mroo', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('264', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Mro', $script->unicodeName());
+        self::assertSame('Mroo', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('264', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Mro', $script->unicodeName());
     }
 }

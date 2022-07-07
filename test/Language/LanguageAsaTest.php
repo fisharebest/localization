@@ -22,8 +22,8 @@ class LanguageAsaTest extends TestCase
     {
         $language = new LanguageAsa();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('asa', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('asa', $language->code());
     }
 }

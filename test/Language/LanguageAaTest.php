@@ -21,7 +21,7 @@ class LanguageAaTest extends TestCase
     {
         $language = new LanguageAa();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('aa', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('aa', $language->code());
     }
 }

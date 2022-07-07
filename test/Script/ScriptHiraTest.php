@@ -20,10 +20,10 @@ class ScriptHiraTest extends TestCase
     {
         $script = new ScriptHira();
 
-        $this->assertSame('Hira', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('410', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Hiragana', $script->unicodeName());
+        self::assertSame('Hira', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('410', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Hiragana', $script->unicodeName());
     }
 }

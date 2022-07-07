@@ -20,10 +20,10 @@ class ScriptEgydTest extends TestCase
     {
         $script = new ScriptEgyd();
 
-        $this->assertSame('Egyd', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('070', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Egyd', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('070', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

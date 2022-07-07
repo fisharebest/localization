@@ -20,10 +20,10 @@ class ScriptCariTest extends TestCase
     {
         $script = new ScriptCari();
 
-        $this->assertSame('Cari', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('201', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Carian', $script->unicodeName());
+        self::assertSame('Cari', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('201', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Carian', $script->unicodeName());
     }
 }

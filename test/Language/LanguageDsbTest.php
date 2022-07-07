@@ -22,8 +22,8 @@ class LanguageDsbTest extends TestCase
     {
         $language = new LanguageDsb();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule10(), $language->pluralRule());
-        $this->assertSame('dsb', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule10(), $language->pluralRule());
+        self::assertSame('dsb', $language->code());
     }
 }

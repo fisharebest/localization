@@ -32,7 +32,7 @@ class CldrTest extends TestCase
                 $locale = Locale::create(basename($cldr, '.xml'));
                 $dir    = $this->cldrValue($cldr, '/ldml/layout/orientation/characterOrder');
 
-                $this->assertSame($direction[$dir], $locale->direction());
+                self::assertSame($direction[$dir], $locale->direction());
             }
         }
     }
@@ -94,7 +94,7 @@ class CldrTest extends TestCase
                     'standard=' . $standard . '=' . bin2hex($standard),
                 ));
 
-                $this->assertTrue(preg_match($regex, $number) === 1, $debug);
+                self::assertTrue(preg_match($regex, $number) === 1, $debug);
 
                 // Check the percentage matches the pattern.
                 $number = $locale->percent(12345.67);
@@ -115,7 +115,7 @@ class CldrTest extends TestCase
                     'percent=' . $percent,
                 ));
 
-                $this->assertTrue(preg_match($regex, $number) === 1, $debug);
+                self::assertTrue(preg_match($regex, $number) === 1, $debug);
 
                 // Check the minus sign is correct
                 $number = $locale->number(-1);
@@ -126,7 +126,7 @@ class CldrTest extends TestCase
                     'number=' . $number . '=' . bin2hex($number),
                 ));
 
-                $this->assertTrue(strpos($number, $minus_sign) === 0, $debug);
+                self::assertTrue(strpos($number, $minus_sign) === 0, $debug);
             }
         }
     }

@@ -24,19 +24,19 @@ class LocaleSmsTest extends TestCase
     {
         $locale = new LocaleSms();
 
-        $this->assertEquals(new LanguageSms(), $locale->language());
-        $this->assertEquals(new PluralRuleOneTwoOther(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryFi(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('sms_FI', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('sääʹmǩiõll', $locale->endonym());
-        $this->assertSame('lang="sms"', $locale->htmlAttributes());
-        $this->assertSame('sms', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12,345,678.09', $locale->number(12345678.09));
-        $this->assertSame('1,234.56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageSms(), $locale->language());
+        self::assertEquals(new PluralRuleOneTwoOther(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryFi(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('sms_FI', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('sääʹmǩiõll', $locale->endonym());
+        self::assertSame('lang="sms"', $locale->htmlAttributes());
+        self::assertSame('sms', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12,345,678.09', $locale->number(12345678.09));
+        self::assertSame('1,234.56%', $locale->percent(12.3456));
     }
 }

@@ -20,10 +20,10 @@ class ScriptPhlvTest extends TestCase
     {
         $script = new ScriptPhlv();
 
-        $this->assertSame('Phlv', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('133', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Phlv', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('133', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

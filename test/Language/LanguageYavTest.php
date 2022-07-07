@@ -21,7 +21,7 @@ class LanguageYavTest extends TestCase
     {
         $language = new LanguageYav();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('yav', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('yav', $language->code());
     }
 }

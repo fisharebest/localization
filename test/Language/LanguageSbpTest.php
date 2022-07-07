@@ -21,7 +21,7 @@ class LanguageSbpTest extends TestCase
     {
         $language = new LanguageSbp();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('sbp', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('sbp', $language->code());
     }
 }

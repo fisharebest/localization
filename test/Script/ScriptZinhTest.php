@@ -20,10 +20,10 @@ class ScriptZinhTest extends TestCase
     {
         $script = new ScriptZinh();
 
-        $this->assertSame('Zinh', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('994', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Inherited', $script->unicodeName());
+        self::assertSame('Zinh', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('994', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Inherited', $script->unicodeName());
     }
 }

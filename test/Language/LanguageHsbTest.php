@@ -22,8 +22,8 @@ class LanguageHsbTest extends TestCase
     {
         $language = new LanguageHsb();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule10(), $language->pluralRule());
-        $this->assertSame('hsb', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule10(), $language->pluralRule());
+        self::assertSame('hsb', $language->code());
     }
 }

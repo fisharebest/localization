@@ -20,10 +20,10 @@ class ScriptGongTest extends TestCase
     {
         $script = new ScriptGong();
 
-        $this->assertSame('Gong', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('312', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Gunjala_Gondi', $script->unicodeName());
+        self::assertSame('Gong', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('312', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Gunjala_Gondi', $script->unicodeName());
     }
 }

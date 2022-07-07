@@ -20,10 +20,10 @@ class ScriptGeokTest extends TestCase
     {
         $script = new ScriptGeok();
 
-        $this->assertSame('Geok', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('241', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Georgian', $script->unicodeName());
+        self::assertSame('Geok', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('241', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Georgian', $script->unicodeName());
     }
 }

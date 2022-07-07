@@ -20,10 +20,10 @@ class ScriptMakaTest extends TestCase
     {
         $script = new ScriptMaka();
 
-        $this->assertSame('Maka', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('366', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Makasar', $script->unicodeName());
+        self::assertSame('Maka', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('366', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Makasar', $script->unicodeName());
     }
 }

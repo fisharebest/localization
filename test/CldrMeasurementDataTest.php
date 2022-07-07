@@ -29,7 +29,7 @@ class CldrMeasurementDataTest extends TestCase
                 foreach ($territories as $code) {
                     $class     = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
                     $territory = new $class();
-                    $this->assertSame($type, $territory->measurementSystem());
+                    self::assertSame($type, $territory->measurementSystem());
                 }
             }
         }
@@ -40,7 +40,7 @@ class CldrMeasurementDataTest extends TestCase
             foreach ($territories as $code) {
                 $class     = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
                 $territory = new $class();
-                $this->assertSame($type, $territory->paperSize());
+                self::assertSame($type, $territory->paperSize());
             }
         }
     }

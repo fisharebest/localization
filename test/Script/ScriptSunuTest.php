@@ -20,10 +20,10 @@ class ScriptSunuTest extends TestCase
     {
         $script = new ScriptSunu();
 
-        $this->assertSame('Sunu', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('274', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Sunu', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('274', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

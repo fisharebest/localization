@@ -20,10 +20,10 @@ class ScriptXsuxTest extends TestCase
     {
         $script = new ScriptXsux();
 
-        $this->assertSame('Xsux', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('020', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Cuneiform', $script->unicodeName());
+        self::assertSame('Xsux', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('020', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Cuneiform', $script->unicodeName());
     }
 }

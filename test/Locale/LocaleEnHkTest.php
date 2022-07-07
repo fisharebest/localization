@@ -24,18 +24,18 @@ class LocaleEnHkTest extends TestCase
     {
         $locale = new LocaleEnHk();
 
-        $this->assertEquals(new LanguageEn(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryHk(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('en_HK', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('lang="en-HK"', $locale->htmlAttributes());
-        $this->assertSame('en-HK', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12,345,678.09', $locale->number(12345678.09));
-        $this->assertSame('1,234.56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageEn(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryHk(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('en_HK', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('lang="en-HK"', $locale->htmlAttributes());
+        self::assertSame('en-HK', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12,345,678.09', $locale->number(12345678.09));
+        self::assertSame('1,234.56%', $locale->percent(12.3456));
     }
 }

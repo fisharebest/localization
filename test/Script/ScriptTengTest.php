@@ -20,10 +20,10 @@ class ScriptTengTest extends TestCase
     {
         $script = new ScriptTeng();
 
-        $this->assertSame('Teng', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('290', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Teng', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('290', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

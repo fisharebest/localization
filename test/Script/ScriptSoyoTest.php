@@ -20,10 +20,10 @@ class ScriptSoyoTest extends TestCase
     {
         $script = new ScriptSoyo();
 
-        $this->assertSame('Soyo', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('329', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Soyombo', $script->unicodeName());
+        self::assertSame('Soyo', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('329', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Soyombo', $script->unicodeName());
     }
 }

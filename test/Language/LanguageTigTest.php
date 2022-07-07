@@ -22,8 +22,8 @@ class LanguageTigTest extends TestCase
     {
         $language = new LanguageTig();
 
-        $this->assertEquals(new ScriptEthi(), $language->defaultScript());
-        $this->assertEquals(new PluralRule1(), $language->pluralRule());
-        $this->assertSame('tig', $language->code());
+        self::assertEquals(new ScriptEthi(), $language->defaultScript());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
+        self::assertSame('tig', $language->code());
     }
 }

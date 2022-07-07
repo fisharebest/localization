@@ -20,10 +20,10 @@ class ScriptTotoTest extends TestCase
     {
         $script = new ScriptToto();
 
-        $this->assertSame('Toto', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('294', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Toto', $script->unicodeName());
+        self::assertSame('Toto', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('294', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Toto', $script->unicodeName());
     }
 }

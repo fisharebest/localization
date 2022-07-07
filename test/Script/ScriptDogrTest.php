@@ -20,10 +20,10 @@ class ScriptDogrTest extends TestCase
     {
         $script = new ScriptDogr();
 
-        $this->assertSame('Dogr', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('328', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Dogra', $script->unicodeName());
+        self::assertSame('Dogr', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('328', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Dogra', $script->unicodeName());
     }
 }

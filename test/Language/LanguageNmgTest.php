@@ -21,7 +21,7 @@ class LanguageNmgTest extends TestCase
     {
         $language = new LanguageNmg();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('nmg', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('nmg', $language->code());
     }
 }

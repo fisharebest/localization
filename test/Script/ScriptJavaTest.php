@@ -20,10 +20,10 @@ class ScriptJavaTest extends TestCase
     {
         $script = new ScriptJava();
 
-        $this->assertSame('Java', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('361', $script->number());
-        $this->assertSame(array('꧐', '꧑', '꧒', '꧓', '꧔', '꧕', '꧖', '꧗', '꧘', '꧙'), $script->numerals());
-        $this->assertSame('Javanese', $script->unicodeName());
+        self::assertSame('Java', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('361', $script->number());
+        self::assertSame(array('꧐', '꧑', '꧒', '꧓', '꧔', '꧕', '꧖', '꧗', '꧘', '꧙'), $script->numerals());
+        self::assertSame('Javanese', $script->unicodeName());
     }
 }

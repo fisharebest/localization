@@ -20,10 +20,10 @@ class ScriptAdlmTest extends TestCase
     {
         $script = new ScriptAdlm();
 
-        $this->assertSame('Adlm', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('166', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Adlam', $script->unicodeName());
+        self::assertSame('Adlm', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('166', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Adlam', $script->unicodeName());
     }
 }

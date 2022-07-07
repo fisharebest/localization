@@ -22,8 +22,8 @@ class LanguageFaTest extends TestCase
     {
         $language = new LanguageFa();
 
-        $this->assertEquals(new ScriptArab(), $language->defaultScript());
-        $this->assertEquals(new PluralRule0(), $language->pluralRule());
-        $this->assertSame('fa', $language->code());
+        self::assertEquals(new ScriptArab(), $language->defaultScript());
+        self::assertEquals(new PluralRule0(), $language->pluralRule());
+        self::assertSame('fa', $language->code());
     }
 }

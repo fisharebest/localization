@@ -20,10 +20,10 @@ class ScriptLomaTest extends TestCase
     {
         $script = new ScriptLoma();
 
-        $this->assertSame('Loma', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('437', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Loma', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('437', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

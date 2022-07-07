@@ -20,10 +20,10 @@ class ScriptRohgTest extends TestCase
     {
         $script = new ScriptRohg();
 
-        $this->assertSame('Rohg', $script->code());
-        $this->assertSame('rtl', $script->direction());
-        $this->assertSame('167', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertSame('Hanifi_Rohingya', $script->unicodeName());
+        self::assertSame('Rohg', $script->code());
+        self::assertSame('rtl', $script->direction());
+        self::assertSame('167', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertSame('Hanifi_Rohingya', $script->unicodeName());
     }
 }

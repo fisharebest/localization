@@ -24,19 +24,19 @@ class LocaleNdsTest extends TestCase
     {
         $locale = new LocaleNds();
 
-        $this->assertEquals(new LanguageNds(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryDe(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('nds_DE', $locale->code());
-        $this->assertSame('german2_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('Neddersass’sch', $locale->endonym());
-        $this->assertSame('lang="nds"', $locale->htmlAttributes());
-        $this->assertSame('nds', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12.345.678,09', $locale->number(12345678.09));
-        $this->assertSame('1.234,56 %', $locale->percent(12.3456));
+        self::assertEquals(new LanguageNds(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryDe(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('nds_DE', $locale->code());
+        self::assertSame('german2_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('Neddersass’sch', $locale->endonym());
+        self::assertSame('lang="nds"', $locale->htmlAttributes());
+        self::assertSame('nds', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12.345.678,09', $locale->number(12345678.09));
+        self::assertSame('1.234,56 %', $locale->percent(12.3456));
     }
 }

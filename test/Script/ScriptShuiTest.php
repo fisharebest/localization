@@ -20,10 +20,10 @@ class ScriptShuiTest extends TestCase
     {
         $script = new ScriptShui();
 
-        $this->assertSame('Shui', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('530', $script->number());
-        $this->assertSame(array(), $script->numerals());
-        $this->assertNull($script->unicodeName());
+        self::assertSame('Shui', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('530', $script->number());
+        self::assertSame(array(), $script->numerals());
+        self::assertNull($script->unicodeName());
     }
 }

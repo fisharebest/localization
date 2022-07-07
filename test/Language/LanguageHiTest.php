@@ -22,8 +22,8 @@ class LanguageHiTest extends TestCase
     {
         $language = new LanguageHi();
 
-        $this->assertEquals(new ScriptDeva(), $language->defaultScript());
-        $this->assertEquals(new PluralRule2(), $language->pluralRule());
-        $this->assertSame('hi', $language->code());
+        self::assertEquals(new ScriptDeva(), $language->defaultScript());
+        self::assertEquals(new PluralRule2(), $language->pluralRule());
+        self::assertSame('hi', $language->code());
     }
 }

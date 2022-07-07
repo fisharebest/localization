@@ -24,18 +24,18 @@ class LocaleFaAfTest extends TestCase
     {
         $locale = new LocaleFaAf();
 
-        $this->assertEquals(new LanguageFa(), $locale->language());
-        $this->assertEquals(new PluralRule0(), $locale->pluralRule());
-        $this->assertEquals(new ScriptArab(), $locale->script());
-        $this->assertEquals(new TerritoryAf(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('fa_AF', $locale->code());
-        $this->assertSame('persian_ci', $locale->collation());
-        $this->assertSame('۰۱۲۳۴۵۶۷۸۹', $locale->digits('0123456789'));
-        $this->assertSame('lang="fa-AF" dir="rtl"', $locale->htmlAttributes());
-        $this->assertSame('fa-AF', $locale->languageTag());
-        $this->assertSame('۱۲٬۳۴۵٬۶۷۸٫۰۹', $locale->number(12345678.09));
-        $this->assertSame('‎−۱۲۳', $locale->number(-123));
-        $this->assertSame('۱٬۲۳۴٫۵۶٪', $locale->percent(12.3456));
+        self::assertEquals(new LanguageFa(), $locale->language());
+        self::assertEquals(new PluralRule0(), $locale->pluralRule());
+        self::assertEquals(new ScriptArab(), $locale->script());
+        self::assertEquals(new TerritoryAf(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('fa_AF', $locale->code());
+        self::assertSame('persian_ci', $locale->collation());
+        self::assertSame('۰۱۲۳۴۵۶۷۸۹', $locale->digits('0123456789'));
+        self::assertSame('lang="fa-AF" dir="rtl"', $locale->htmlAttributes());
+        self::assertSame('fa-AF', $locale->languageTag());
+        self::assertSame('۱۲٬۳۴۵٬۶۷۸٫۰۹', $locale->number(12345678.09));
+        self::assertSame('‎−۱۲۳', $locale->number(-123));
+        self::assertSame('۱٬۲۳۴٫۵۶٪', $locale->percent(12.3456));
     }
 }

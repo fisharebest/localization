@@ -24,16 +24,16 @@ class LocaleUrPkTest extends TestCase
     {
         $locale = new LocaleUrPk();
 
-        $this->assertEquals(new LanguageUr(), $locale->language());
-        $this->assertEquals(new PluralRule1(), $locale->pluralRule());
-        $this->assertEquals(new ScriptArab(), $locale->script());
-        $this->assertEquals(new TerritoryPk(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
-        $this->assertSame('lang="ur" dir="rtl"', $locale->htmlAttributes());
-        $this->assertSame('١,٢٣,٤٥,٦٧٨.٠٩', $locale->number(12345678.09));
-        $this->assertSame('‎-١٢٣', $locale->number(-123));
-        $this->assertSame('١,٢٣٤.٥٦%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageUr(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new ScriptArab(), $locale->script());
+        self::assertEquals(new TerritoryPk(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+        self::assertSame('lang="ur" dir="rtl"', $locale->htmlAttributes());
+        self::assertSame('١,٢٣,٤٥,٦٧٨.٠٩', $locale->number(12345678.09));
+        self::assertSame('‎-١٢٣', $locale->number(-123));
+        self::assertSame('١,٢٣٤.٥٦%', $locale->percent(12.3456));
     }
 }

@@ -22,8 +22,8 @@ class LanguagePrgTest extends TestCase
     {
         $language = new LanguagePrg();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRule3(), $language->pluralRule());
-        $this->assertSame('prg', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRule3(), $language->pluralRule());
+        self::assertSame('prg', $language->code());
     }
 }

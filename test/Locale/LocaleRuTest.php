@@ -24,19 +24,19 @@ class LocaleRuTest extends TestCase
     {
         $locale = new LocaleRu();
 
-        $this->assertEquals(new LanguageRu(), $locale->language());
-        $this->assertEquals(new PluralRule7(), $locale->pluralRule());
-        $this->assertEquals(new ScriptCyrl(), $locale->script());
-        $this->assertEquals(new TerritoryRu(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('ru_RU', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('русский', $locale->endonym());
-        $this->assertSame('lang="ru"', $locale->htmlAttributes());
-        $this->assertSame('ru', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12 345 678,09', $locale->number(12345678.09));
-        $this->assertSame('1 234,56 %', $locale->percent(12.3456));
+        self::assertEquals(new LanguageRu(), $locale->language());
+        self::assertEquals(new PluralRule7(), $locale->pluralRule());
+        self::assertEquals(new ScriptCyrl(), $locale->script());
+        self::assertEquals(new TerritoryRu(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('ru_RU', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('русский', $locale->endonym());
+        self::assertSame('lang="ru"', $locale->htmlAttributes());
+        self::assertSame('ru', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12 345 678,09', $locale->number(12345678.09));
+        self::assertSame('1 234,56 %', $locale->percent(12.3456));
     }
 }

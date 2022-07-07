@@ -24,19 +24,19 @@ class LocaleKwTest extends TestCase
     {
         $locale = new LocaleKw();
 
-        $this->assertEquals(new LanguageKw(), $locale->language());
-        $this->assertEquals(new PluralRuleCornish(), $locale->pluralRule());
-        $this->assertEquals(new ScriptLatn(), $locale->script());
-        $this->assertEquals(new TerritoryGb(), $locale->territory());
-        $this->assertNull($locale->variant());
-        $this->assertSame('kw_GB', $locale->code());
-        $this->assertSame('unicode_ci', $locale->collation());
-        $this->assertSame('0123456789', $locale->digits('0123456789'));
-        $this->assertSame('kernewek', $locale->endonym());
-        $this->assertSame('lang="kw"', $locale->htmlAttributes());
-        $this->assertSame('kw', $locale->languageTag());
-        $this->assertSame('-123', $locale->number(-123));
-        $this->assertSame('12,345,678.09', $locale->number(12345678.09));
-        $this->assertSame('1,234.56%', $locale->percent(12.3456));
+        self::assertEquals(new LanguageKw(), $locale->language());
+        self::assertEquals(new PluralRuleCornish(), $locale->pluralRule());
+        self::assertEquals(new ScriptLatn(), $locale->script());
+        self::assertEquals(new TerritoryGb(), $locale->territory());
+        self::assertNull($locale->variant());
+        self::assertSame('kw_GB', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
+        self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('kernewek', $locale->endonym());
+        self::assertSame('lang="kw"', $locale->htmlAttributes());
+        self::assertSame('kw', $locale->languageTag());
+        self::assertSame('-123', $locale->number(-123));
+        self::assertSame('12,345,678.09', $locale->number(12345678.09));
+        self::assertSame('1,234.56%', $locale->percent(12.3456));
     }
 }

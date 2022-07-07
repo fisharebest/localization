@@ -20,11 +20,11 @@ class TerritoryAfTest extends TestCase
     {
         $territory = new TerritoryAf();
 
-        $this->assertSame('AF', $territory->code());
-        $this->assertSame(6, $territory->firstDay());
-        $this->assertSame(4, $territory->weekendStart());
-        $this->assertSame(5, $territory->weekendEnd());
-        $this->assertSame('metric', $territory->measurementSystem());
-        $this->assertSame('A4', $territory->paperSize());
+        self::assertSame('AF', $territory->code());
+        self::assertSame(6, $territory->firstDay());
+        self::assertSame(4, $territory->weekendStart());
+        self::assertSame(5, $territory->weekendEnd());
+        self::assertSame('metric', $territory->measurementSystem());
+        self::assertSame('A4', $territory->paperSize());
     }
 }

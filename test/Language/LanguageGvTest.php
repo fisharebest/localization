@@ -22,8 +22,8 @@ class LanguageGvTest extends TestCase
     {
         $language = new LanguageGv();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertEquals(new PluralRuleManx(), $language->pluralRule());
-        $this->assertSame('gv', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new PluralRuleManx(), $language->pluralRule());
+        self::assertSame('gv', $language->code());
     }
 }

@@ -21,7 +21,7 @@ class LanguageZghTest extends TestCase
     {
         $language = new LanguageZgh();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('zgh', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('zgh', $language->code());
     }
 }

@@ -20,10 +20,10 @@ class ScriptGujrTest extends TestCase
     {
         $script = new ScriptGujr();
 
-        $this->assertSame('Gujr', $script->code());
-        $this->assertSame('ltr', $script->direction());
-        $this->assertSame('320', $script->number());
-        $this->assertSame(array('૦', '૧', '૨', '૩', '૪', '૫', '૬', '૭', '૮', '૯'), $script->numerals());
-        $this->assertSame('Gujarati', $script->unicodeName());
+        self::assertSame('Gujr', $script->code());
+        self::assertSame('ltr', $script->direction());
+        self::assertSame('320', $script->number());
+        self::assertSame(array('૦', '૧', '૨', '૩', '૪', '૫', '૬', '૭', '૮', '૯'), $script->numerals());
+        self::assertSame('Gujarati', $script->unicodeName());
     }
 }

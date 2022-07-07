@@ -21,7 +21,7 @@ class LanguageMnTest extends TestCase
     {
         $language = new LanguageMn();
 
-        $this->assertEquals(new ScriptLatn(), $language->defaultScript());
-        $this->assertSame('mn', $language->code());
+        self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertSame('mn', $language->code());
     }
 }

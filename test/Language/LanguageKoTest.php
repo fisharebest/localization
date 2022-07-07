@@ -22,8 +22,8 @@ class LanguageKoTest extends TestCase
     {
         $language = new LanguageKo();
 
-        $this->assertEquals(new ScriptKore(), $language->defaultScript());
-        $this->assertEquals(new PluralRule0(), $language->pluralRule());
-        $this->assertSame('ko', $language->code());
+        self::assertEquals(new ScriptKore(), $language->defaultScript());
+        self::assertEquals(new PluralRule0(), $language->pluralRule());
+        self::assertSame('ko', $language->code());
     }
 }
