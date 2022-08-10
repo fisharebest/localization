@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageFa;
-use Fisharebest\Localization\PluralRule\PluralRule0;
+use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Script\ScriptArab;
 use Fisharebest\Localization\Territory\TerritoryIr;
 use PHPUnit\Framework\TestCase;
@@ -25,7 +25,7 @@ class LocaleFaTest extends TestCase
         $locale = new LocaleFa();
 
         self::assertEquals(new LanguageFa(), $locale->language());
-        self::assertEquals(new PluralRule0(), $locale->pluralRule());
+        self::assertEquals(new PluralRule2(), $locale->pluralRule());
         self::assertEquals(new ScriptArab(), $locale->script());
         self::assertEquals(new TerritoryIr(), $locale->territory());
         self::assertNull($locale->variant());

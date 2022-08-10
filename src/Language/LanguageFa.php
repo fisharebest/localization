@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule0;
+use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Script\ScriptArab;
 use Fisharebest\Localization\Territory\TerritoryIr;
 
@@ -32,6 +33,6 @@ class LanguageFa extends AbstractLanguage implements LanguageInterface
 
     public function pluralRule()
     {
-        return new PluralRule0();
+        return new PluralRule2();
     }
 }

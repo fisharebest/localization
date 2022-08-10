@@ -32,7 +32,6 @@ class CldrPluralRulesTest extends TestCase
                     case 'root': // This isn't a locale
                     case 'br':   // CLDR has 5 rules, whereas gettext has (0,1) (other)
                     case 'cy':   // CLDR has 5 rules, whereas gettext has (1), (2), (other), (8,11)
-                    case 'fa':   // CLDR has (0,1) (other), whereas gettext has (other)
                     case 'fil':  // CLDR has a different rule from gettext
                     case 'he':   // CLDR has (1) (2) (many) (other), whereas gettext has (1) (other)
                     case 'in':   // This code (Indonesian) is deprecated. Use id.

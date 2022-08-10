@@ -2,7 +2,7 @@
 
 namespace Fisharebest\Localization\Language;
 
-use Fisharebest\Localization\PluralRule\PluralRule0;
+use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Script\ScriptArab;
 use PHPUnit\Framework\TestCase;
 
@@ -23,7 +23,7 @@ class LanguageFaTest extends TestCase
         $language = new LanguageFa();
 
         self::assertEquals(new ScriptArab(), $language->defaultScript());
-        self::assertEquals(new PluralRule0(), $language->pluralRule());
+        self::assertEquals(new PluralRule2(), $language->pluralRule());
         self::assertSame('fa', $language->code());
     }
 }

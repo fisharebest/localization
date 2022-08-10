@@ -1,6 +1,9 @@
 CHANGE LOG
 ==========
 
+## 1.16.1 (2022-08-10)
+ - Fix: plural rules for Farsi
+
 ## 1.16.0 (2022-07-07)
  - Fix: plural rules for Turkish
  - Add PHP 8.0 and PHP 8.1 to the test matrix
