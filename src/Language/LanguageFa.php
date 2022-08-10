@@ -2,7 +2,6 @@
 
 namespace Fisharebest\Localization\Language;
 
-use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Script\ScriptArab;
 use Fisharebest\Localization\Territory\TerritoryIr;
