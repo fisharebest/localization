@@ -2,8 +2,6 @@
 
 namespace Fisharebest\Localization\Language;
 
-use Fisharebest\Localization\PluralRule\PluralRule1;
-use Fisharebest\Localization\PluralRule\PluralRuleCebuano;
 use Fisharebest\Localization\PluralRule\PluralRuleFilipino;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryPh;

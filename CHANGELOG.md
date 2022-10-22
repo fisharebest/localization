@@ -1,6 +1,7 @@
 CHANGE LOG
 ==========
 
+ - Update to CLDR-35.1
  - Update to CLDR-35
  - Add PHP 8.2 to the test matrix
  - Update to 2022-08-08 version of iana-subtag-registry
