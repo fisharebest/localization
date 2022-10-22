@@ -2,29 +2,29 @@
 
 namespace Fisharebest\Localization\Locale;
 
-use Fisharebest\Localization\Language\LanguageCeb;
+use Fisharebest\Localization\Language\LanguageAn;
 
 /**
- * Class LocaleCeb - Cebuano
+ * Class LocaleAn - Anglo-Saxon / Old-English
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
  */
-class LocaleCeb extends AbstractLocale implements LocaleInterface
+class LocaleAn extends AbstractLocale implements LocaleInterface
 {
     public function endonym()
     {
-        return 'Binisaya';
+        return 'aragonés';
     }
 
     public function endonymSortable()
     {
-        return 'BINISAYA';
+        return 'ARAGONÉS';
     }
 
     public function language()
     {
-        return new LanguageCeb();
+        return new LanguageAn();
     }
 }

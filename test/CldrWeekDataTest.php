@@ -30,7 +30,7 @@ class CldrWeekDataTest extends TestCase
             'sat' => 6,
         );
 
-        $cldr = simplexml_load_string(file_get_contents(__DIR__ . '/data/cldr-35.1/supplemental/supplementalData.xml'));
+        $cldr = simplexml_load_string(file_get_contents(__DIR__ . '/data/cldr-36/supplemental/supplementalData.xml'));
 
         foreach ($cldr->weekData->firstDay as $xml) {
             if ($xml->attributes()->alt != 'variant') {
@@ -39,7 +39,7 @@ class CldrWeekDataTest extends TestCase
                 foreach ($territories as $code) {
                     $class     = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
                     $territory = new $class();
-                    self::assertSame($day, $territory->firstDay());
+                    self::assertSame($day, $territory->firstDay(), $code);
                 }
             }
         }
@@ -50,7 +50,7 @@ class CldrWeekDataTest extends TestCase
             foreach ($territories as $code) {
                 $class     = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
                 $territory = new $class();
-                self::assertSame($day, $territory->weekendStart());
+                self::assertSame($day, $territory->weekendStart(), $code);
             }
         }
 
@@ -60,7 +60,7 @@ class CldrWeekDataTest extends TestCase
             foreach ($territories as $code) {
                 $class     = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
                 $territory = new $class();
-                self::assertSame($day, $territory->weekendEnd());
+                self::assertSame($day, $territory->weekendEnd(), $code);
             }
         }
     }

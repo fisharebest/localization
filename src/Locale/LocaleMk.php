@@ -35,4 +35,9 @@ class LocaleMk extends AbstractLocale implements LocaleInterface
             self::DECIMAL => self::COMMA,
         );
     }
+
+    protected function percentFormat()
+    {
+        return self::PLACEHOLDER . self::NBSP . self::PERCENT;
+    }
 }
