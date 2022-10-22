@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageSe;
-use Fisharebest\Localization\PluralRule\PluralRule1;
+use Fisharebest\Localization\PluralRule\PluralRuleOneTwoOther;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryNo;
 use PHPUnit\Framework\TestCase;
@@ -25,7 +25,7 @@ class LocaleSeTest extends TestCase
         $locale = new LocaleSe();
 
         self::assertEquals(new LanguageSe(), $locale->language());
-        self::assertEquals(new PluralRule1(), $locale->pluralRule());
+        self::assertEquals(new PluralRuleOneTwoOther(), $locale->pluralRule());
         self::assertEquals(new ScriptLatn(), $locale->script());
         self::assertEquals(new TerritoryNo(), $locale->territory());
         self::assertNull($locale->variant());

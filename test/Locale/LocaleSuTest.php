@@ -32,11 +32,11 @@ class LocaleSuTest extends TestCase
         self::assertSame('su_ID', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹', $locale->digits('0123456789'));
-        self::assertSame('ᮘᮞ ᮞᮥᮔ᮪ᮓ', $locale->endonym());
+        self::assertSame('Basa Sunda', $locale->endonym());
         self::assertSame('lang="su"', $locale->htmlAttributes());
         self::assertSame('su', $locale->languageTag());
         self::assertSame('-᮱᮲᮳', $locale->number(-123));
-        self::assertSame('᮱᮲,᮳᮴᮵,᮶᮷᮸.᮰᮹', $locale->number(12345678.09));
-        self::assertSame('᮱,᮲᮳᮴.᮵᮶%', $locale->percent(12.3456));
+        self::assertSame('᮱᮲.᮳᮴᮵.᮶᮷᮸,᮰᮹', $locale->number(12345678.09));
+        self::assertSame('᮱.᮲᮳᮴,᮵᮶%', $locale->percent(12.3456));
     }
 }

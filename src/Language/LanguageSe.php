@@ -2,7 +2,7 @@
 
 namespace Fisharebest\Localization\Language;
 
-use Fisharebest\Localization\PluralRule\PluralRule1;
+use Fisharebest\Localization\PluralRule\PluralRuleOneTwoOther;
 use Fisharebest\Localization\Territory\TerritoryNo;
 
 /**
@@ -26,6 +26,6 @@ class LanguageSe extends AbstractLanguage implements LanguageInterface
 
     public function pluralRule()
     {
-        return new PluralRule1();
+        return new PluralRuleOneTwoOther();
     }
 }

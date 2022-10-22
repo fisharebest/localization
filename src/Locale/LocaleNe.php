@@ -13,6 +13,11 @@ use Fisharebest\Localization\Language\LanguageNe;
  */
 class LocaleNe extends AbstractLocale implements LocaleInterface
 {
+    protected function digitsGroup()
+    {
+        return 2;
+    }
+
     public function endonym()
     {
         return 'नेपाली';

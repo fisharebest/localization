@@ -35,7 +35,7 @@ class LocaleNeInTest extends TestCase
         self::assertSame('lang="ne-IN"', $locale->htmlAttributes());
         self::assertSame('ne-IN', $locale->languageTag());
         self::assertSame('-१२३', $locale->number(-123));
-        self::assertSame('१२,३४५,६७८.०९', $locale->number(12345678.09));
+        self::assertSame('१,२३,४५,६७८.०९', $locale->number(12345678.09));
         self::assertSame('१,२३४.५६%', $locale->percent(12.3456));
     }
 }

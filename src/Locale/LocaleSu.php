@@ -15,11 +15,19 @@ class LocaleSu extends AbstractLocale implements LocaleInterface
 {
     public function endonym()
     {
-        return 'ᮘᮞ ᮞᮥᮔ᮪ᮓ';
+        return 'Basa Sunda';
     }
 
     public function language()
     {
         return new LanguageSu();
+    }
+
+    public function numberSymbols()
+    {
+        return array(
+            self::GROUP   => self::DOT,
+            self::DECIMAL => self::COMMA,
+        );
     }
 }
