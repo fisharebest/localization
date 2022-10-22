@@ -3,7 +3,6 @@
 namespace Fisharebest\Localization;
 
 use Exception;
-use Fisharebest\Localization\Locale\AbstractLocale;
 use PHPUnit\Framework\TestCase;
 
 /**

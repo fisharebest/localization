@@ -2,8 +2,6 @@
 
 namespace Fisharebest\Localization\Locale;
 
-use Fisharebest\Localization\Territory\TerritoryEs;
-
 /**
  * Class LocaleEsEs - European Spanish
  *

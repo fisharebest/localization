@@ -3,7 +3,6 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule3;
-use Fisharebest\Localization\Territory\Territory001;
 
 /**
  * Class LanguagePrg - Representation of the Old Prussian language.

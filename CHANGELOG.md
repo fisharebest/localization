@@ -1,6 +1,7 @@
 CHANGE LOG
 ==========
 
+ - Add PHP 8.2 to the test matrix
  - Update to 2022-08-08 version of iana-subtag-registry
 
 ## 1.16.1 (2022-08-10)

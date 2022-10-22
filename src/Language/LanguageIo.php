@@ -3,7 +3,6 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule1;
-use Fisharebest\Localization\Territory\Territory001;
 
 /**
  * Class LanguageIo - Representation of the Ido language.
