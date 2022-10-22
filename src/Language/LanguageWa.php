@@ -6,7 +6,7 @@ use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Territory\TerritoryBe;
 
 /**
- * Class LanguageXh - Representation of the Walloon language.
+ * Class LanguageWa - Representation of the Walloon language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

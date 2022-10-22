@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\PluralRule;
 
 /**
- * Class PluralRuleWelsh - Select a plural form for a specified number.
+ * Class PluralRuleCornish - Select a plural form for a specified number.
  * nplurals=4; plural=(n==1) ? 0 : (n==2) ? 1 : (n == 3) ? 2 : 3;
  *
  * @author    Greg Roach <greg@subaqua.co.uk>

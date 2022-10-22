@@ -6,7 +6,7 @@ use Fisharebest\Localization\PluralRule\PluralRule5;
 use Fisharebest\Localization\Territory\TerritoryMd;
 
 /**
- * Class LanguageIt - Representation of the Italian language.
+ * Class LanguageMo - Representation of the Moldovan language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

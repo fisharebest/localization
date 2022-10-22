@@ -7,7 +7,7 @@ use Fisharebest\Localization\Script\ScriptCyrl;
 use Fisharebest\Localization\Territory\TerritoryRu;
 
 /**
- * Class LanguageRu - Representation of the Russian language.
+ * Class LanguageCe - Representation of the Chechen language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

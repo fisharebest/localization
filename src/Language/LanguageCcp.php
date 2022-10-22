@@ -7,7 +7,7 @@ use Fisharebest\Localization\Script\ScriptCakm;
 use Fisharebest\Localization\Territory\TerritoryBd;
 
 /**
- * Class LanguageCgg - Representation of the Chakma language.
+ * Class LanguageCcp - Representation of the Chakma language.
  *
  * @TODO          Plural rules
  * @author    Greg Roach <greg@subaqua.co.uk>

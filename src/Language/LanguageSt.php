@@ -6,7 +6,7 @@ use Fisharebest\Localization\PluralRule\PluralRule1;
 use Fisharebest\Localization\Territory\TerritoryLs;
 
 /**
- * Class LanguageEn - Representation of the Sotho language.
+ * Class LanguageSt - Representation of the Sotho language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

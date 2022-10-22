@@ -41,7 +41,7 @@ interface LanguageInterface
     public function defaultScript();
 
     /**
-     * Which plural rule is used in this locale?
+     * Which plural rule is used in this language?
      *
      * @return PluralRuleInterface
      */

@@ -7,7 +7,7 @@ use Fisharebest\Localization\Script\ScriptHans;
 use Fisharebest\Localization\Territory\TerritoryCn;
 
 /**
- * Class LanguageZh - Representation of the Chinese language.
+ * Class LanguageYue - Representation of the Chinese language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

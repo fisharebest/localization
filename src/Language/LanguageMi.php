@@ -6,7 +6,7 @@ use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Territory\TerritoryNz;
 
 /**
- * Class LanguageEn - Representation of the Maori language.
+ * Class LanguageMi - Representation of the Maori language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

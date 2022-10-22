@@ -7,7 +7,7 @@ use Fisharebest\Localization\Script\ScriptCans;
 use Fisharebest\Localization\Territory\TerritoryCa;
 
 /**
- * Class LanguageEl - Representation of the Modern Greek (1453-) language.
+ * Class LanguageIu - Representation of the Inuktitut language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

@@ -5,7 +5,7 @@ namespace Fisharebest\Localization\Language;
 use Fisharebest\Localization\Territory\TerritorySa;
 
 /**
- * Class LanguageAr - Representation of the Najdi Arabic language.
+ * Class LanguageArs - Representation of the Najdi Arabic language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

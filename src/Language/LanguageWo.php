@@ -6,7 +6,7 @@ use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Territory\TerritorySn;
 
 /**
- * Class LanguageXh - Representation of the Wolof language.
+ * Class LanguageWo - Representation of the Wolof language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
