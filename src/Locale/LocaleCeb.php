@@ -2,29 +2,29 @@
 
 namespace Fisharebest\Localization\Locale;
 
-use Fisharebest\Localization\Language\LanguageIg;
+use Fisharebest\Localization\Language\LanguageCeb;
 
 /**
- * Class LocaleIg - Igbo
+ * Class LocaleCeb - Cebuano
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
  */
-class LocaleIg extends AbstractLocale implements LocaleInterface
+class LocaleCeb extends AbstractLocale implements LocaleInterface
 {
     public function endonym()
     {
-        return 'Asụsụ Igbo';
+        return 'Cebuano';
     }
 
     public function endonymSortable()
     {
-        return 'ASUSU IGBO';
+        return 'CEBUANO';
     }
 
     public function language()
     {
-        return new LanguageIg();
+        return new LanguageCeb();
     }
 }

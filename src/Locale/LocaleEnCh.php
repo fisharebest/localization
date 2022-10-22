@@ -13,6 +13,13 @@ use Fisharebest\Localization\Territory\TerritoryCh;
  */
 class LocaleEnCh extends LocaleEn
 {
+    public function numberSymbols()
+    {
+        return array(
+            self::GROUP => self::APOSTROPHE,
+        );
+    }
+
     public function territory()
     {
         return new TerritoryCh();

@@ -2,7 +2,7 @@
 
 namespace Fisharebest\Localization\Language;
 
-use Fisharebest\Localization\PluralRule\PluralRule2;
+use Fisharebest\Localization\PluralRule\PluralRule1;
 use Fisharebest\Localization\Script\ScriptDeva;
 use Fisharebest\Localization\Territory\TerritoryIn;
 
@@ -32,6 +32,6 @@ class LanguageMr extends AbstractLanguage implements LanguageInterface
 
     public function pluralRule()
     {
-        return new PluralRule2();
+        return new PluralRule1();
     }
 }

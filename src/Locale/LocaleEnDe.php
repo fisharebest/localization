@@ -13,6 +13,14 @@ use Fisharebest\Localization\Territory\TerritoryDe;
  */
 class LocaleEnDe extends LocaleEn
 {
+    public function numberSymbols()
+    {
+        return array(
+            self::GROUP   => self::DOT,
+            self::DECIMAL => self::COMMA,
+        );
+    }
+
     protected function percentFormat()
     {
         return self::PLACEHOLDER . self::NBSP . self::PERCENT;

@@ -2,7 +2,7 @@
 
 namespace Fisharebest\Localization\Language;
 
-use Fisharebest\Localization\PluralRule\PluralRule2;
+use Fisharebest\Localization\PluralRule\PluralRuleFilipino;
 use Fisharebest\Localization\Script\ScriptLatn;
 use PHPUnit\Framework\TestCase;
 
@@ -23,7 +23,7 @@ class LanguageFilTest extends TestCase
         $language = new LanguageFil();
 
         self::assertEquals(new ScriptLatn(), $language->defaultScript());
-        self::assertEquals(new PluralRule2(), $language->pluralRule());
+        self::assertEquals(new PluralRuleFilipino(), $language->pluralRule());
         self::assertSame('fil', $language->code());
     }
 }

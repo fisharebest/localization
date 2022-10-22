@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageFil;
-use Fisharebest\Localization\PluralRule\PluralRule2;
+use Fisharebest\Localization\PluralRule\PluralRuleFilipino;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryPh;
 use PHPUnit\Framework\TestCase;
@@ -25,7 +25,7 @@ class LocaleFilPhTest extends TestCase
         $locale = new LocaleFilPh();
 
         self::assertEquals(new LanguageFil(), $locale->language());
-        self::assertEquals(new PluralRule2(), $locale->pluralRule());
+        self::assertEquals(new PluralRuleFilipino(), $locale->pluralRule());
         self::assertEquals(new ScriptLatn(), $locale->script());
         self::assertEquals(new TerritoryPh(), $locale->territory());
         self::assertNull($locale->variant());

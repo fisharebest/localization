@@ -2,19 +2,19 @@
 
 namespace Fisharebest\Localization\Locale;
 
-use Fisharebest\Localization\Territory\Territory150;
+use Fisharebest\Localization\Territory\TerritoryAe;
 
 /**
- * Class LocaleEn150
+ * Class LocaleEnAi
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
  */
-class LocaleEn150 extends LocaleEn
+class LocaleEnAe extends LocaleEn
 {
     public function territory()
     {
-        return new Territory150();
+        return new TerritoryAe();
     }
 }

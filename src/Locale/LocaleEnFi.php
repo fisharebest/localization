@@ -17,6 +17,7 @@ class LocaleEnFi extends LocaleEn
     {
         return array(
             self::GROUP => self::NBSP,
+            self::DECIMAL => self::COMMA,
         );
     }
 

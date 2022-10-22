@@ -2,7 +2,7 @@
 
 namespace Fisharebest\Localization\Language;
 
-use Fisharebest\Localization\PluralRule\PluralRuleTagalog;
+use Fisharebest\Localization\PluralRule\PluralRuleFilipino;
 use Fisharebest\Localization\Territory\TerritoryPh;
 
 /**
@@ -26,6 +26,6 @@ class LanguageTl extends AbstractLanguage implements LanguageInterface
 
     public function pluralRule()
     {
-        return new PluralRuleTagalog();
+        return new PluralRuleFilipino();
     }
 }

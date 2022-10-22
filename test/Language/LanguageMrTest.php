@@ -2,7 +2,7 @@
 
 namespace Fisharebest\Localization\Language;
 
-use Fisharebest\Localization\PluralRule\PluralRule2;
+use Fisharebest\Localization\PluralRule\PluralRule1;
 use Fisharebest\Localization\Script\ScriptDeva;
 use PHPUnit\Framework\TestCase;
 
@@ -23,7 +23,7 @@ class LanguageMrTest extends TestCase
         $language = new LanguageMr();
 
         self::assertEquals(new ScriptDeva(), $language->defaultScript());
-        self::assertEquals(new PluralRule2(), $language->pluralRule());
+        self::assertEquals(new PluralRule1(), $language->pluralRule());
         self::assertSame('mr', $language->code());
     }
 }

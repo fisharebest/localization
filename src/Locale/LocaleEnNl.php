@@ -13,6 +13,14 @@ use Fisharebest\Localization\Territory\TerritoryNl;
  */
 class LocaleEnNl extends LocaleEn
 {
+    public function numberSymbols()
+    {
+        return array(
+            self::GROUP   => self::DOT,
+            self::DECIMAL => self::COMMA,
+        );
+    }
+
     public function territory()
     {
         return new TerritoryNl();
