@@ -15,7 +15,7 @@ class LocaleTi extends AbstractLocale implements LocaleInterface
 {
     public function endonym()
     {
-        return 'ትግርኛ';
+        return 'ትግር';
     }
 
     public function language()

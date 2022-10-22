@@ -15,7 +15,12 @@ class LocaleMi extends AbstractLocale implements LocaleInterface
 {
     public function endonym()
     {
-        return 'Māori';
+        return 'te reo Māori';
+    }
+
+    public function endonymSortable()
+    {
+        return 'TE REO MĀORI';
     }
 
     public function language()

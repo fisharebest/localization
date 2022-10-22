@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization;
 
 use Fisharebest\Localization\Language\LanguageInterface;
+use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Territory\TerritoryInterface;
 use PHPUnit\Framework\TestCase;
 

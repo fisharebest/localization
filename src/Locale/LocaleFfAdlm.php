@@ -23,6 +23,14 @@ class LocaleFfAdlm extends LocaleFf
         return '𞤊𞤵𞤤𞤬𞤵𞤤𞤣𞤫';
     }
 
+    public function numberSymbols()
+    {
+        return array(
+            self::DECIMAL => self::DOT,
+            self::GROUP   => self::ADLM_GROUP,
+        );
+    }
+
     public function script()
     {
         return new ScriptAdlm();

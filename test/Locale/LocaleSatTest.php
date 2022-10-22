@@ -26,7 +26,7 @@ class LocaleSatTest extends TestCase
 
         self::assertEquals(new LanguageSat(), $locale->language());
         self::assertEquals(new PluralRuleOneTwoOther(), $locale->pluralRule());
-        self::assertEquals(new ScriptOlck, $locale->script());
+        self::assertEquals(new ScriptOlck(), $locale->script());
         self::assertEquals(new TerritoryIn(), $locale->territory());
         self::assertNull($locale->variant());
         self::assertSame('sat_IN', $locale->code());

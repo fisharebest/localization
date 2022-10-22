@@ -26,7 +26,7 @@ class CldrTest extends TestCase
             'right-to-left' => 'rtl',
         );
 
-        foreach (glob(__DIR__ . '/data/cldr-37/main/*.xml') as $cldr) {
+        foreach (glob(__DIR__ . '/data/cldr-39/main/*.xml') as $cldr) {
             if (strpos($cldr, '/root.xml') === false) {
                 $locale = Locale::create(basename($cldr, '.xml'));
                 $dir    = $this->cldrValue($cldr, '/ldml/layout/orientation/characterOrder');
@@ -43,7 +43,7 @@ class CldrTest extends TestCase
      */
     public function testNumbers()
     {
-        foreach (glob(__DIR__ . '/data/cldr-37/main/*.xml') as $cldr) {
+        foreach (glob(__DIR__ . '/data/cldr-39/main/*.xml') as $cldr) {
             if (strpos($cldr, '/root.xml') === false) {
                 $locale = Locale::create(basename($cldr, '.xml'));
 
@@ -114,11 +114,7 @@ class CldrTest extends TestCase
                     'percent=' . $percent,
                 ));
 
-                if (strpos(basename($cldr), 'ceb') === false) {
-                    // ceb.xml has the percent pattern as "#,#0%".  i.e. a grouping, but no decimal.
-                    // This is wrong.  It is fixed in CLDR38
-                    self::assertTrue(preg_match($regex, $number) === 1, $debug);
-                }
+                self::assertTrue(preg_match($regex, $number) === 1, $debug);
 
                 // Check the minus sign is correct
                 $number = $locale->number(-1);

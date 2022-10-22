@@ -24,7 +24,7 @@ class TerritoryMmTest extends TestCase
         self::assertSame(0, $territory->firstDay());
         self::assertSame(6, $territory->weekendStart());
         self::assertSame(0, $territory->weekendEnd());
-        self::assertSame('US', $territory->measurementSystem());
+        self::assertSame('UK', $territory->measurementSystem());
         self::assertSame('A4', $territory->paperSize());
     }
 }

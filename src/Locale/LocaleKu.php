@@ -28,7 +28,6 @@ class LocaleKu extends AbstractLocale implements LocaleInterface
         return new LanguageKu();
     }
 
-
     public function numberSymbols()
     {
         return array(

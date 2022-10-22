@@ -2,9 +2,6 @@
 
 namespace Fisharebest\Localization\Locale;
 
-use Fisharebest\Localization\Language\LanguageMni;
-use Fisharebest\Localization\Script\ScriptBeng;
-
 /**
  * Class LocaleMni - Meitei
  *

@@ -2,26 +2,26 @@
 
 namespace Fisharebest\Localization\Language;
 
-use Fisharebest\Localization\Script\ScriptMtei;
+use Fisharebest\Localization\Script\ScriptDeva;
 use Fisharebest\Localization\Territory\TerritoryIn;
 
 /**
- * Class LanguageMai - Representation of the Meitei language.
+ * Class LanguageSa - Representation of the Sanskrit language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
  */
-class LanguageMni extends AbstractLanguage implements LanguageInterface
+class LanguageSa extends AbstractLanguage implements LanguageInterface
 {
     public function code()
     {
-        return 'mni';
+        return 'sa';
     }
 
     public function defaultScript()
     {
-        return new ScriptMtei();
+        return new ScriptDeva();
     }
 
     public function defaultTerritory()

@@ -122,10 +122,10 @@ $translation = new Translation('/path/to/fr.mo');  // Can use .CSV, .PHP, .PO an
 // Create the translator
 $translator = new Translator($translation->asArray(), $locale->pluralRule());
 // Use the translator
-$translator->translate('the fish');                // "le poisson" 
-$translator->translateContext('noun', 'fish');     // "poisson" 
-$translator->translateContext('verb', 'fish');     // "pêcher" 
-$translator->plural('%d fish', '%d fishes', 4);    // "%d poissons" 
+$translator->translate('the fish');                // "le poisson"
+$translator->translateContext('noun', 'fish');     // "poisson"
+$translator->translateContext('verb', 'fish');     // "pêcher"
+$translator->plural('%d fish', '%d fishes', 4);    // "%d poissons"
 ```
 
 TIP: If your translations are stored in more than one file, you can merge them easily.
@@ -145,7 +145,6 @@ You can convert and/or cache them using this approach.
 $translation = new Translation('/path/to/fr.mo');
 file_put_contents('/path/to/fr.php', '<?php return ' . var_export($translations->asArray(), true) . ';');
 ```
-
 
 Updates welcome
 ===============

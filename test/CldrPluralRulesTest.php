@@ -20,7 +20,7 @@ class CldrPluralRulesTest extends TestCase
      */
     public function testPluralRules()
     {
-        $cldr = simplexml_load_string(file_get_contents(__DIR__ . '/data/cldr-37/supplemental/plurals.xml'));
+        $cldr = simplexml_load_string(file_get_contents(__DIR__ . '/data/cldr-39/supplemental/plurals.xml'));
 
         foreach ($cldr->xpath("/supplementalData/plurals[@type='cardinal']/pluralRules") as $plural_rule) {
             $tmp          = $plural_rule->attributes(); // For PHP5.3
@@ -33,10 +33,11 @@ class CldrPluralRulesTest extends TestCase
                     case 'br':   // CLDR has 5 rules, whereas gettext has (0,1) (other)
                     case 'cy':   // CLDR has 5 rules, whereas gettext has (1), (2), (other), (8,11)
                     case 'fil':  // CLDR has a different rule from gettext
+                    case 'fr':   // CLDR has 3 rules, we have 2?
                     case 'he':   // CLDR has (1) (2) (many) (other), whereas gettext has (1) (other)
                     case 'in':   // This code (Indonesian) is deprecated. Use id.
                     case 'iw':   // This code (Hebrew) is deprecated. Use he.
-                    case 'ji':   // This code (Javanese) is deprecated,  Use yi.
+                    case 'ji':   // This code (Javanese) is deprecated, Use yi.
                     case 'jw':   // This code (Javanese) is deprecated.  Use jv.
                     case 'kw':   // CLDR has 3 rules, whereas gettext has (1), (2), (3), (other)
                     case 'lv':   // CLDR has (0) (1) (other), whereas gettext has (1) (other) (0)
@@ -62,7 +63,7 @@ class CldrPluralRulesTest extends TestCase
                 }
                 $locale = Locale::create($locale_code);
 
-                self::assertSame($locale->pluralRule()->plurals(), count($plurals));
+                self::assertSame($locale->pluralRule()->plurals(), count($plurals), $locale_code);
 
                 $plural_rule = 0;
                 foreach ($plurals as $plural_examples) {

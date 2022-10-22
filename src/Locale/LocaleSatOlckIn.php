@@ -2,7 +2,6 @@
 
 namespace Fisharebest\Localization\Locale;
 
-
 /**
  * Class LocaleSat - Santali
  *

@@ -23,6 +23,6 @@ class TerritoryMm extends AbstractTerritory implements TerritoryInterface
 
     public function measurementSystem()
     {
-        return 'US';
+        return 'UK';
     }
 }

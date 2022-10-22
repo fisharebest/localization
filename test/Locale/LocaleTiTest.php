@@ -31,7 +31,7 @@ class LocaleTiTest extends TestCase
         self::assertNull($locale->variant());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
-        self::assertSame('ትግርኛ', $locale->endonym());
+        self::assertSame('ትግር', $locale->endonym());
         self::assertSame('lang="ti"', $locale->htmlAttributes());
         self::assertSame('-123', $locale->number(-123));
         self::assertSame('12,345,678.09', $locale->number(12345678.09));

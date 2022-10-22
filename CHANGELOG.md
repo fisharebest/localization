@@ -1,6 +1,8 @@
 CHANGE LOG
 ==========
 
+ - Update to CLDR-38.1
+ - Update to CLDR-38
  - Update to CLDR-37
  - Update to CLDR-36.1
  - Update to CLDR-36

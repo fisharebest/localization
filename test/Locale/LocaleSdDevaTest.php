@@ -35,7 +35,7 @@ class LocaleSdDevaTest extends TestCase
         self::assertSame('سنڌي', $locale->endonym());
         self::assertSame('lang="sd-Deva" dir="rtl"', $locale->htmlAttributes());
         self::assertSame('sd-Deva', $locale->languageTag());
-        self::assertSame('-१२३',  $locale->number(-123));
+        self::assertSame('-१२३', $locale->number(-123));
         self::assertSame('१२,३४५,६७८.०९', $locale->number(12345678.09));
         self::assertSame('१,२३४.५६%', $locale->percent(12.3456));
     }

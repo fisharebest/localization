@@ -2,7 +2,6 @@
 
 namespace Fisharebest\Localization\Locale;
 
-use Fisharebest\Localization\Language\LanguageMni;
 use Fisharebest\Localization\Script\ScriptBeng;
 
 /**
@@ -15,11 +14,6 @@ use Fisharebest\Localization\Script\ScriptBeng;
 class LocaleMniBeng extends LocaleMni
 {
     public function endonym()
-    {
-        return 'মৈতৈলোন্';
-    }
-
-    public function endonymSortable()
     {
         return 'মৈতৈলোন্';
     }

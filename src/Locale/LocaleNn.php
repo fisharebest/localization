@@ -20,30 +20,16 @@ class LocaleNn extends AbstractLocale implements LocaleInterface
 
     public function endonym()
     {
-        return 'nynorsk';
+        return 'norsk nynorsk';
     }
 
     public function endonymSortable()
     {
-        return 'NYNORSK';
+        return 'NORSK NYNORSK';
     }
 
     public function language()
     {
         return new LanguageNn();
-    }
-
-    public function numberSymbols()
-    {
-        return array(
-            self::GROUP    => self::NBSP,
-            self::DECIMAL  => self::COMMA,
-            self::NEGATIVE => self::MINUS_SIGN,
-        );
-    }
-
-    protected function percentFormat()
-    {
-        return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }
 }

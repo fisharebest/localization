@@ -17,7 +17,7 @@ class Locale
     /**
      * Some browsers let the user choose "Chinese, Traditional", but add headers for "zh-HK"...
      *
-     * @var array
+     * @var array<string,string>
      */
     private static $http_accept_chinese = array(
         'zh-cn' => 'zh-hans-cn',
@@ -113,9 +113,9 @@ class Locale
     /**
      * If a client requests "de-DE" (but not "de"), then add "de" as a lower-priority fallback.
      *
-     * @param $preferences
+     * @param array<string,float> $preferences
      *
-     * @return int[]
+     * @return array<string,float>
      */
     private static function httpAcceptDowngrade($preferences)
     {
@@ -142,9 +142,9 @@ class Locale
      * Some browsers allow the user to select "Chinese (simplified)", but then use zh-CN instead of zh-Hans.
      * This goes against the advice of w3.org.
      *
-     * @param int[] $preferences
+     * @param array<string,float> $preferences
      *
-     * @return int[]
+     * @return array<string,float>
      */
     private static function httpAcceptChinese($preferences)
     {
