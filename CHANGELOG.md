@@ -1,6 +1,8 @@
 CHANGE LOG
 ==========
 
+ - Update to 2022-08-08 version of iana-subtag-registry
+
 ## 1.16.1 (2022-08-10)
  - Fix: plural rules for Farsi
 
