@@ -89,7 +89,7 @@ $locale->number('12345678.9');  // "12'345'678.9"
 $locale->percent(0.123);        // "12.3%"
 
 // To sort data properly in MySQL, you need to specify a collation sequence.
-// See http://dev.mysql.com/doc/refman/5.7/en/charset-unicode-sets.html
+// See https://dev.mysql.com/doc/refman/8.0/en/charset-unicode-sets.html
 $locale->collation();           // "unicode_ci", "swedish_ci", etc.
 ```
 
@@ -98,7 +98,7 @@ Translation
 
 Plural rules are defined for each locale.  This example shows that although
 English and French both have two plural forms, English considers zero as plural,
-while french considers it to be singular.
+while French considers it to be singular.
 
 ``` php
 $locale = new LocaleEn;
@@ -109,7 +109,7 @@ $locale->pluralRule()->plurals(); // 2 (French also has two plural forms)
 $locale->pluralRule()->plural(0); // 0 (zero is singular in French "zero apple")
 ```
 
-Note that some of the plural definitions in CLDR differ to those traditionally used by
+Note that some plural definitions in CLDR differ to those traditionally used by
 `gettext`.  We use the gettext versions for br, fa, fil, he, lv, mk, pt and se.
 
 Translation functions work the same as `gettext`.

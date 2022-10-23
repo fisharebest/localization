@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Territory;
 
 /**
- * Class AbstractTerritory - Representation of the territory ST - Sao Tome and Principe.
+ * Class AbstractTerritory - Representation of the territory ST - São Tomé and Príncipe.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

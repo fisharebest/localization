@@ -5,7 +5,7 @@ namespace Fisharebest\Localization\Language;
 use Fisharebest\Localization\PluralRule\PluralRule1;
 
 /**
- * Class LanguageIa - Representation of the Interlingua (International Auxiliary AbstractLanguage language.
+ * Class LanguageIa - Representation of the Interlingua (International Auxiliary Abstract Language) language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

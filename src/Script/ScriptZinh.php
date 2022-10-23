@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Script;
 
 /**
- * Class ScriptZinh - Representation of the Code for inherited script script.
+ * Class ScriptZinh - Representation of the Code for inherited script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

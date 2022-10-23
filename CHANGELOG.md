@@ -19,8 +19,8 @@ CHANGE LOG
 ## 1.16.0 (2022-07-07)
  - Fix: plural rules for Turkish
  - Add PHP 8.0 and PHP 8.1 to the test matrix
- - Update to latest version of ISO-15924
- - Update to latest version of iana-subtag-registry
+ - Update to the latest version of ISO-15924
+ - Update to the latest version of iana-subtag-registry
 
 ## 1.15.1 (2019-07-02)
  - Fix: escaped characters in PO files.

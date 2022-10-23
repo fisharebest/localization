@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Territory;
 
 /**
- * Class AbstractTerritory - Representation of the territory VN - Viet Nam.
+ * Class AbstractTerritory - Representation of the territory VN - Vietnam.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

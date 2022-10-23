@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Script;
 
 /**
- * Class ScriptZyyy - Representation of the Code for undetermined script script.
+ * Class ScriptZyyy - Representation of the Code for undetermined script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
