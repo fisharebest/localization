@@ -15,7 +15,25 @@ class LocaleOc extends AbstractLocale implements LocaleInterface
 {
     public function endonym()
     {
-        return 'lenga d’òc';
+        return 'occitan';
+    }
+
+    public function endonymSortable()
+    {
+        return 'OCCITAN';
+    }
+
+    public function numberSymbols()
+    {
+        return array(
+            self::DECIMAL => self::COMMA,
+            self::GROUP   => self::NBSP,
+         );
+    }
+
+    public function percentFormat()
+    {
+        return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }
 
     public function language()

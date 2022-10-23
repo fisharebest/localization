@@ -15,12 +15,12 @@ class LocaleCeb extends AbstractLocale implements LocaleInterface
 {
     public function endonym()
     {
-        return 'Binisaya';
+        return 'Cebuano';
     }
 
     public function endonymSortable()
     {
-        return 'BINISAYA';
+        return 'CEBUANO';
     }
 
     public function language()

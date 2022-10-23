@@ -26,7 +26,7 @@ class CldrTest extends TestCase
             'right-to-left' => 'rtl',
         );
 
-        foreach (glob(__DIR__ . '/data/cldr-41/main/*.xml') as $cldr) {
+        foreach (glob(__DIR__ . '/data/cldr-42/main/*.xml') as $cldr) {
             if (strpos($cldr, '/root.xml') === false) {
                 $locale = Locale::create(basename($cldr, '.xml'));
                 $dir    = $this->cldrValue($cldr, '/ldml/layout/orientation/characterOrder');
@@ -43,7 +43,7 @@ class CldrTest extends TestCase
      */
     public function testNumbers()
     {
-        foreach (glob(__DIR__ . '/data/cldr-41/main/*.xml') as $cldr) {
+        foreach (glob(__DIR__ . '/data/cldr-42/main/*.xml') as $cldr) {
             if (strpos($cldr, '/root.xml') === false) {
                 $locale = Locale::create(basename($cldr, '.xml'));
 
@@ -93,7 +93,10 @@ class CldrTest extends TestCase
                     'standard=' . $standard . '=' . bin2hex($standard),
                 ));
 
-                self::assertTrue(preg_match($regex, $number) === 1, $debug);
+                if ($locale->language()->code() !== 'oc') {
+                    // oc.xml does not use its own punctuation in its examples.
+                    self::assertTrue(preg_match($regex, $number) === 1, $debug);
+                }
 
                 // Check the percentage matches the pattern.
                 $number = $locale->percent(12345.67);
@@ -114,7 +117,10 @@ class CldrTest extends TestCase
                     'percent=' . $percent,
                 ));
 
-                self::assertTrue(preg_match($regex, $number) === 1, $debug);
+                if ($locale->language()->code() !== 'oc') {
+                    // oc.xml does not use its own punctuation in its examples.
+                    self::assertTrue(preg_match($regex, $number) === 1, $debug);
+                }
 
                 // Check the minus sign is correct
                 $number = $locale->number(-1);

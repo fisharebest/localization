@@ -32,7 +32,7 @@ class LocaleXhTest extends TestCase
         self::assertSame('xh_ZA', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
-        self::assertSame('isiXhosa', $locale->endonym());
+        self::assertSame('IsiXhosa', $locale->endonym());
         self::assertSame('lang="xh"', $locale->htmlAttributes());
         self::assertSame('xh', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

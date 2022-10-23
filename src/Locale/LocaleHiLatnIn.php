@@ -2,8 +2,6 @@
 
 namespace Fisharebest\Localization\Locale;
 
-use Fisharebest\Localization\Script\ScriptLatn;
-
 /**
  * Class LocaleHiLatn - Hindi
  *

@@ -15,9 +15,4 @@ class TerritoryAr extends AbstractTerritory implements TerritoryInterface
     {
         return 'AR';
     }
-
-    public function firstDay()
-    {
-        return 1;
-    }
 }

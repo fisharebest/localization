@@ -15,7 +15,7 @@ class LocaleXh extends AbstractLocale implements LocaleInterface
 {
     public function endonym()
     {
-        return 'isiXhosa';
+        return 'IsiXhosa';
     }
 
     public function endonymSortable()

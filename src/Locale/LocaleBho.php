@@ -5,7 +5,7 @@ namespace Fisharebest\Localization\Locale;
 use Fisharebest\Localization\Language\LanguageBho;
 
 /**
- * Class LocaleBh - Bhojpuri
+ * Class LocaleBho - Bhojpuri
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

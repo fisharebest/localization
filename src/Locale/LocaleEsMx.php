@@ -23,6 +23,11 @@ class LocaleEsMx extends LocaleEs
         return 'ESPANOL DE MEXICO';
     }
 
+    public function percentFormat()
+    {
+        return self::PLACEHOLDER . self::PERCENT;
+    }
+
     public function territory()
     {
         return new TerritoryMx();

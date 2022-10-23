@@ -32,7 +32,7 @@ class LocaleMiNzTest extends TestCase
         self::assertSame('mi_NZ', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
-        self::assertSame('te reo Māori', $locale->endonym());
+        self::assertSame('Māori', $locale->endonym());
         self::assertSame('lang="mi"', $locale->htmlAttributes());
         self::assertSame('mi', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));
