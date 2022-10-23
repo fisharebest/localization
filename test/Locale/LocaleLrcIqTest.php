@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization\Locale;
+namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageLrc;
+use Fisharebest\Localization\Locale\LocaleLrcIq;
 use Fisharebest\Localization\PluralRule\PluralRule12;
 use Fisharebest\Localization\Script\ScriptArab;
 use Fisharebest\Localization\Territory\TerritoryIq;

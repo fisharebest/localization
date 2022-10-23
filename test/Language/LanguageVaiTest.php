@@ -1,7 +1,8 @@
 <?php
 
-namespace Fisharebest\Localization\Language;
+namespace Fisharebest\LocalizationTest\Language;
 
+use Fisharebest\Localization\Language\LanguageVai;
 use Fisharebest\Localization\Script\ScriptVaii;
 use PHPUnit\Framework\TestCase;
 

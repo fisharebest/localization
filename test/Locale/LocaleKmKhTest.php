@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization\Locale;
+namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageKm;
+use Fisharebest\Localization\Locale\LocaleKmKh;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptKhmr;
 use Fisharebest\Localization\Territory\TerritoryKh;

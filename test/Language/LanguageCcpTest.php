@@ -1,7 +1,8 @@
 <?php
 
-namespace Fisharebest\Localization\Language;
+namespace Fisharebest\LocalizationTest\Language;
 
+use Fisharebest\Localization\Language\LanguageCcp;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptCakm;
 use PHPUnit\Framework\TestCase;

@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization\Locale;
+namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageSr;
+use Fisharebest\Localization\Locale\LocaleSrLatnXk;
 use Fisharebest\Localization\PluralRule\PluralRule7;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryXk;

@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization\Locale;
+namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageKw;
+use Fisharebest\Localization\Locale\LocaleKwGb;
 use Fisharebest\Localization\PluralRule\PluralRuleCornish;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryGb;

@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization\Locale;
+namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageTzm;
+use Fisharebest\Localization\Locale\LocaleTzmMa;
 use Fisharebest\Localization\PluralRule\PluralRuleCentralAtlasTamazight;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryMa;

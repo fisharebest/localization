@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization\Locale;
+namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageKok;
+use Fisharebest\Localization\Locale\LocaleKok;
 use Fisharebest\Localization\Script\ScriptDeva;
 use Fisharebest\Localization\Territory\TerritoryIn;
 use PHPUnit\Framework\TestCase;

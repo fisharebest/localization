@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization\Locale;
+namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageFil;
+use Fisharebest\Localization\Locale\LocaleFil;
 use Fisharebest\Localization\PluralRule\PluralRuleFilipino;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryPh;

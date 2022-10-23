@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization\Locale;
+namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageNqo;
+use Fisharebest\Localization\Locale\LocaleNqo;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptNkoo;
 use Fisharebest\Localization\Territory\TerritoryGn;

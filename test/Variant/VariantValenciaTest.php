@@ -1,7 +1,8 @@
 <?php
 
-namespace Fisharebest\Localization\Variant;
+namespace Fisharebest\LocalizationTest\Variant;
 
+use Fisharebest\Localization\Variant\VariantValencia;
 use PHPUnit\Framework\TestCase;
 
 /**

@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization\Locale;
+namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageHnj;
+use Fisharebest\Localization\Locale\LocaleHnj;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptHmng;
 use Fisharebest\Localization\Territory\TerritoryCn;

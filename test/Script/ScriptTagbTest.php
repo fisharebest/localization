@@ -1,7 +1,8 @@
 <?php
 
-namespace Fisharebest\Localization\Script;
+namespace Fisharebest\LocalizationTest\Script;
 
+use Fisharebest\Localization\Script\ScriptTagb;
 use PHPUnit\Framework\TestCase;
 
 /**

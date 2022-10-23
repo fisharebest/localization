@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization\Locale;
+namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageMni;
+use Fisharebest\Localization\Locale\LocaleMniBeng;
 use Fisharebest\Localization\PluralRule\PluralRuleUnknown;
 use Fisharebest\Localization\Script\ScriptBeng;
 use Fisharebest\Localization\Territory\TerritoryIn;

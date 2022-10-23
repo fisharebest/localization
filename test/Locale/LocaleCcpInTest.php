@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization\Locale;
+namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageCcp;
+use Fisharebest\Localization\Locale\LocaleCcpIn;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptCakm;
 use Fisharebest\Localization\Territory\TerritoryIn;

@@ -1,7 +1,8 @@
 <?php
 
-namespace Fisharebest\Localization\Territory;
+namespace Fisharebest\LocalizationTest\Territory;
 
+use Fisharebest\Localization\Territory\TerritoryQa;
 use PHPUnit\Framework\TestCase;
 
 /**

@@ -1,7 +1,8 @@
 <?php
 
-namespace Fisharebest\Localization\Language;
+namespace Fisharebest\LocalizationTest\Language;
 
+use Fisharebest\Localization\Language\LanguageKw;
 use Fisharebest\Localization\PluralRule\PluralRuleCornish;
 use Fisharebest\Localization\Script\ScriptLatn;
 use PHPUnit\Framework\TestCase;

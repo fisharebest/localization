@@ -1,7 +1,8 @@
 <?php
 
-namespace Fisharebest\Localization\Language;
+namespace Fisharebest\LocalizationTest\Language;
 
+use Fisharebest\Localization\Language\LanguageShi;
 use Fisharebest\Localization\PluralRule\PluralRuleTachelhit;
 use Fisharebest\Localization\Script\ScriptTfng;
 use PHPUnit\Framework\TestCase;

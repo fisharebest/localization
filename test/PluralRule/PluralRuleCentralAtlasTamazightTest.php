@@ -1,7 +1,8 @@
 <?php
 
-namespace Fisharebest\Localization\PluralRule;
+namespace Fisharebest\LocalizationTest\PluralRule;
 
+use Fisharebest\Localization\PluralRule\PluralRuleCentralAtlasTamazight;
 use PHPUnit\Framework\TestCase;
 
 /**

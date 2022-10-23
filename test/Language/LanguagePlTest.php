@@ -1,7 +1,8 @@
 <?php
 
-namespace Fisharebest\Localization\Language;
+namespace Fisharebest\LocalizationTest\Language;
 
+use Fisharebest\Localization\Language\LanguagePl;
 use Fisharebest\Localization\PluralRule\PluralRule9;
 use Fisharebest\Localization\Script\ScriptLatn;
 use PHPUnit\Framework\TestCase;

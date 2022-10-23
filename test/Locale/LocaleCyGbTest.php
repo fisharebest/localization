@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization\Locale;
+namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageCy;
+use Fisharebest\Localization\Locale\LocaleCyGb;
 use Fisharebest\Localization\PluralRule\PluralRuleWelsh;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryGb;

@@ -1,7 +1,8 @@
 <?php
 
-namespace Fisharebest\Localization\PluralRule;
+namespace Fisharebest\LocalizationTest\PluralRule;
 
+use Fisharebest\Localization\PluralRule\PluralRule13;
 use PHPUnit\Framework\TestCase;
 
 /**

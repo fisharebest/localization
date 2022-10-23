@@ -34,6 +34,11 @@
 			"Fisharebest\\Localization\\": "src/"
 		}
 	},
+	"autoload-dev": {
+		"psr-4": {
+			"Fisharebest\\LocalizationTest\\": "test/"
+		}
+	},
 	"config": {
 		"allow-plugins": {
 			"phpstan/extension-installer": true

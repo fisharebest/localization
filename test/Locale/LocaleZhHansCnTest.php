@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization\Locale;
+namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageZh;
+use Fisharebest\Localization\Locale\LocaleZhHansCn;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptHans;
 use Fisharebest\Localization\Territory\TerritoryCn;

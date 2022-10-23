@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization\Locale;
+namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageShi;
+use Fisharebest\Localization\Locale\LocaleShiLatn;
 use Fisharebest\Localization\PluralRule\PluralRuleTachelhit;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryMa;
