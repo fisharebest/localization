@@ -20,7 +20,7 @@ class LocaleBrx extends AbstractLocale implements LocaleInterface
 
     public function endonym()
     {
-        return 'बड़ो';
+        return 'बर’';
     }
 
     public function language()

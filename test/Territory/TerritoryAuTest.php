@@ -21,7 +21,7 @@ class TerritoryAuTest extends TestCase
         $territory = new TerritoryAu();
 
         self::assertSame('AU', $territory->code());
-        self::assertSame(0, $territory->firstDay());
+        self::assertSame(1, $territory->firstDay());
         self::assertSame(6, $territory->weekendStart());
         self::assertSame(0, $territory->weekendEnd());
         self::assertSame('metric', $territory->measurementSystem());

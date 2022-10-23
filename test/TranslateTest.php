@@ -196,7 +196,7 @@ class TranslateTest extends TestCase
         try {
             new Translation(__DIR__ . '/data/fish.invalid.mo');
 
-            self::assertTrue(false);
+            self::fail();
         } catch (InvalidArgumentException $ex) {
             self::assertTrue(true);
         }

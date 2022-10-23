@@ -26,7 +26,7 @@ class CldrTest extends TestCase
             'right-to-left' => 'rtl',
         );
 
-        foreach (glob(__DIR__ . '/data/cldr-39/main/*.xml') as $cldr) {
+        foreach (glob(__DIR__ . '/data/cldr-41/main/*.xml') as $cldr) {
             if (strpos($cldr, '/root.xml') === false) {
                 $locale = Locale::create(basename($cldr, '.xml'));
                 $dir    = $this->cldrValue($cldr, '/ldml/layout/orientation/characterOrder');
@@ -43,7 +43,7 @@ class CldrTest extends TestCase
      */
     public function testNumbers()
     {
-        foreach (glob(__DIR__ . '/data/cldr-39/main/*.xml') as $cldr) {
+        foreach (glob(__DIR__ . '/data/cldr-41/main/*.xml') as $cldr) {
             if (strpos($cldr, '/root.xml') === false) {
                 $locale = Locale::create(basename($cldr, '.xml'));
 

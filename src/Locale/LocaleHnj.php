@@ -2,24 +2,24 @@
 
 namespace Fisharebest\Localization\Locale;
 
-use Fisharebest\Localization\Language\LanguageTi;
+use Fisharebest\Localization\Language\LanguageHnj;
 
 /**
- * Class LocaleTi - Tigrinya
+ * Class LocaleHnj - Hmong
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
  */
-class LocaleTi extends AbstractLocale implements LocaleInterface
+class LocaleHnj extends AbstractLocale implements LocaleInterface
 {
     public function endonym()
     {
-        return 'ትግርኛ';
+        return '𖬇𖬰𖬞 𖬌𖬣𖬵';
     }
 
     public function language()
     {
-        return new LanguageTi();
+        return new LanguageHnj();
     }
 }

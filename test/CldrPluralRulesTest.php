@@ -20,7 +20,7 @@ class CldrPluralRulesTest extends TestCase
      */
     public function testPluralRules()
     {
-        $cldr = simplexml_load_string(file_get_contents(__DIR__ . '/data/cldr-39/supplemental/plurals.xml'));
+        $cldr = simplexml_load_string(file_get_contents(__DIR__ . '/data/cldr-41/supplemental/plurals.xml'));
 
         foreach ($cldr->xpath("/supplementalData/plurals[@type='cardinal']/pluralRules") as $plural_rule) {
             $tmp          = $plural_rule->attributes(); // For PHP5.3
@@ -36,6 +36,7 @@ class CldrPluralRulesTest extends TestCase
                     case 'fr':   // CLDR has 3 rules, we have 2?
                     case 'he':   // CLDR has (1) (2) (many) (other), whereas gettext has (1) (other)
                     case 'in':   // This code (Indonesian) is deprecated. Use id.
+                    case 'it':   // CLDR has 3 rules, we have 2
                     case 'iw':   // This code (Hebrew) is deprecated. Use he.
                     case 'ji':   // This code (Javanese) is deprecated, Use yi.
                     case 'jw':   // This code (Javanese) is deprecated.  Use jv.
@@ -44,7 +45,9 @@ class CldrPluralRulesTest extends TestCase
                     case 'mk':   // There are lots of conflicting definitions.
                     case 'no':   // This code (Norwegian) is deprecated. Use nb or nn.
                     case 'prg':  // Same as lv
-                    case 'pt':   // CLDR has the rule for pt_BR, whereas gettext has the rule for pt_PT
+                    case 'pt':   // CLDR has 3 rules, we have 2
+                    case 'pt_PT': // CLDR has 3 rules, we have 2
+                    case 'es': // CLDR has 3 rules, we have 2
                     case 'se':   // CLDR has (1) (2) (other), whereas gettext has (0,1) (other)
                     case 'sh':   // This code (Serbo-croat) is deprecated
                         continue 2;
