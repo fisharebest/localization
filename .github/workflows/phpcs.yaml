@@ -4,24 +4,21 @@ on: [push, pull_request]
 
 jobs:
   run:
-    runs-on: ${{ matrix.operating-system }}
+    runs-on: ubuntu-latest
     name: Code style
-
-    strategy:
-      matrix:
-        operating-system: ['ubuntu-latest']
-        php-version: ['8.1']
 
     steps:
       - uses: shivammathur/setup-php@master
         with:
-          php-version: ${{ matrix.php-version }}
+          php-version: latest
 
       - uses: actions/checkout@v2
 
       - run: composer validate
 
-      - run: composer global require squizlabs/php_codesniffer
+      - run: composer install
+
+      - run: composer require squizlabs/php_codesniffer
 
       - name: PHP
-        run: ~/.composer/vendor/bin/phpcs --colors --standard=PSR12 --exclude=Generic.Files.LineLength,PSR12.Properties.ConstantVisibility src test
+        run: vendor/bin/phpcs --colors --standard=PSR12 --exclude=Generic.Files.LineLength,PSR12.Properties.ConstantVisibility src test

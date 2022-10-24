@@ -4,9 +4,9 @@ on: [push, pull_request]
 
 jobs:
   run:
-    runs-on: ${{ matrix.operating-system }}
+    runs-on: ubuntu-latest
     continue-on-error: true
-    name: Testing PHP ${{ matrix.php-version }} on ${{ matrix.operating-system }}
+    name: Testing PHP ${{ matrix.php-version }}
 
     strategy:
       matrix:
@@ -23,7 +23,9 @@ jobs:
 
       - run: composer validate
 
-      - run: composer install --no-progress
+      - run: composer install
+
+      - run: composer require --ignore-platform-req yoast/phpunit-polyfills
 
       - run: vendor/bin/phpunit --coverage-clover=tests/coverage.xml
 
