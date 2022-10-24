@@ -1,6 +1,7 @@
 CHANGE LOG
 ==========
 
+ - Bump minimum PHP version to 8.0
  - Support deprecated language codes: in (id), iw (he), ji (yi), jw (jv), mo (ro)
 
 ## 1.17.0 (2022-10-24)

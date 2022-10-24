@@ -1,0 +1,31 @@
+name: Static analysis
+
+on: [push, pull_request]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    name: phpstan
+
+    steps:
+      - uses: shivammathur/setup-php@master
+        with:
+          php-version: latest
+
+      - uses: actions/checkout@v2
+
+      - run: composer validate
+
+      - run: composer require phpstan/phpstan
+
+      - run: composer require phpstan/extension-installer
+
+      - run: composer require phpstan/phpstan-deprecation-rules
+
+      - run: composer require phpstan/phpstan-strict-rules
+
+      - run: composer require phpstan/phpstan-phpunit
+
+      - run: composer install
+
+      - run: vendor/bin/phpstan analyze --no-progress --level=max src test
