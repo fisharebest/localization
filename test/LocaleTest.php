@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization;
+namespace Fisharebest\LocalizationTest;
 
 use DomainException;
+use Fisharebest\Localization\Locale;
 use Fisharebest\Localization\Locale\LocaleEnAu;
 use Fisharebest\Localization\Locale\LocaleEnGb;
 use Fisharebest\Localization\Locale\LocaleEnUs;
@@ -47,14 +48,14 @@ class LocaleTest extends TestCase
     public function testCompareAll()
     {
         $array = array_map(function ($x) {
-            $class = __NAMESPACE__ . '\Locale\\' . basename($x, '.php');
+            $class = '\\Fisharebest\\Localization\\Locale\\' . basename($x, '.php');
 
             return new $class();
         }, preg_grep('/Abstract|Interface/', glob(__DIR__ . '/../src/Locale/Locale??*.php'), PREG_GREP_INVERT));
 
-        usort($array, __NAMESPACE__ . '\Locale::compare');
+        usort($array, '\\Fisharebest\\Localization\\Locale::compare');
         self::assertNotEmpty($array);
-        self::assertTrue(is_array($array));
+        self::assertIsArray($array);
     }
 
     /**

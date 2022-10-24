@@ -19,7 +19,7 @@ use PHPUnit\Framework\TestCase;
  * @covers \Fisharebest\Localization\Locale\AbstractLocale
  * @covers \Fisharebest\Localization\Locale\LocaleGaGB
  */
-class LocaleGaGBTest extends TestCase
+class LocaleGaGbTest extends TestCase
 {
     /**
      * Test the properties

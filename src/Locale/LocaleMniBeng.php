@@ -13,11 +13,6 @@ use Fisharebest\Localization\Script\ScriptBeng;
  */
 class LocaleMniBeng extends LocaleMni
 {
-    public function endonym()
-    {
-        return 'মৈতৈলোন্';
-    }
-
     public function script()
     {
         return new ScriptBeng();

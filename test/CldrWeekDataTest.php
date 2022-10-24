@@ -1,6 +1,6 @@
 <?php
 
-namespace Fisharebest\Localization;
+namespace Fisharebest\LocalizationTest;
 
 use PHPUnit\Framework\TestCase;
 
@@ -39,7 +39,7 @@ class CldrWeekDataTest extends TestCase
                 $day         = $days[(string) $xml->attributes()->day];
                 $territories = preg_split('/\s/', (string) $xml->attributes()->territories, -1, PREG_SPLIT_NO_EMPTY);
                 foreach ($territories as $code) {
-                    $class     = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
+                    $class     = '\\Fisharebest\\Localization\\Territory\\Territory' . ucfirst(strtolower($code));
                     $territory = new $class();
                     self::assertSame($day, $territory->firstDay(), $code);
                 }
@@ -50,7 +50,7 @@ class CldrWeekDataTest extends TestCase
             $day         = $days[(string) $xml->attributes()->day];
             $territories = preg_split('/\s/', (string) $xml->attributes()->territories, -1, PREG_SPLIT_NO_EMPTY);
             foreach ($territories as $code) {
-                $class     = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
+                $class     = '\\Fisharebest\\Localization\\Territory\\Territory' . ucfirst(strtolower($code));
                 $territory = new $class();
                 self::assertSame($day, $territory->weekendStart(), $code);
             }
@@ -60,7 +60,7 @@ class CldrWeekDataTest extends TestCase
             $day         = $days[(string) $xml->attributes()->day];
             $territories = preg_split('/\s/', (string) $xml->attributes()->territories, -1, PREG_SPLIT_NO_EMPTY);
             foreach ($territories as $code) {
-                $class     = __NAMESPACE__ . '\Territory\Territory' . ucfirst(strtolower($code));
+                $class     = '\\Fisharebest\\Localization\\Territory\\Territory' . ucfirst(strtolower($code));
                 $territory = new $class();
                 self::assertSame($day, $territory->weekendEnd(), $code);
             }

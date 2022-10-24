@@ -53,7 +53,7 @@ abstract class AbstractLocale
         $code   = $this->language()->code() . '_' . $this->territory()->code();
         $script = $this->script()->unicodeName();
 
-        if ($this->script()->code() !== $this->language()->defaultScript()->code() && $script !== null) {
+        if ($script !== null && $this->script()->code() !== $this->language()->defaultScript()->code()) {
             $code .= '@' . strtolower($script);
         }
 

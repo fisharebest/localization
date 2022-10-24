@@ -18,6 +18,11 @@ class LocaleSu extends AbstractLocale implements LocaleInterface
         return 'Basa Sunda';
     }
 
+    public function endonymSortable()
+    {
+        return 'BASA SUNDA';
+    }
+
     public function language()
     {
         return new LanguageSu();

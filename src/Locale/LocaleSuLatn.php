@@ -13,16 +13,6 @@ use Fisharebest\Localization\Script\ScriptLatn;
  */
 class LocaleSuLatn extends LocaleSu
 {
-    public function endonym()
-    {
-        return 'Basa Sunda';
-    }
-
-    public function endonymSortable()
-    {
-        return 'BASA SUNDA';
-    }
-
     public function script()
     {
         return new ScriptLatn();

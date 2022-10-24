@@ -51,7 +51,7 @@ class Locale
      */
     public static function create($code)
     {
-        $class = __NAMESPACE__ . '\Locale\Locale' . implode(array_map(function ($x) {
+        $class = '\\Fisharebest\\Localization\\Locale\\Locale' . implode(array_map(function ($x) {
             return ucfirst(strtolower($x));
         }, preg_split('/[^a-zA-Z0-9]+/', $code)));
 
@@ -79,7 +79,7 @@ class Locale
     {
         if (!empty($server['HTTP_ACCEPT_LANGUAGE'])) {
             $http_accept_language = strtolower(str_replace(' ', '', $server['HTTP_ACCEPT_LANGUAGE']));
-            preg_match_all('/(?:([a-z][a-z0-9_-]+)(?:;q=([0-9.]+))?)/', $http_accept_language, $match);
+            preg_match_all('/([a-z][a-z0-9_-]+)(?:;q=([0-9.]+))?/', $http_accept_language, $match);
             $preferences = array_map(function ($x) {
                 return $x === '' ? 1.0 : (float) $x;
             }, array_combine($match[1], $match[2]));

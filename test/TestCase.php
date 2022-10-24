@@ -1,6 +1,6 @@
 <?php
 
-namespace Fisharebest\Localization;
+namespace Fisharebest\LocalizationTest;
 
 /**
  * Tests for the Localization package

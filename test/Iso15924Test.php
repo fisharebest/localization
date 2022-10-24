@@ -1,6 +1,6 @@
 <?php
 
-namespace Fisharebest\Localization;
+namespace Fisharebest\LocalizationTest;
 
 use Fisharebest\Localization\Script\ScriptInterface;
 use PHPUnit\Framework\TestCase;
@@ -30,7 +30,7 @@ class Iso15924Test extends TestCase
         foreach ($iso15924 as $data) {
             $fields = explode(';', $data);
 
-            $class = __NAMESPACE__ . '\Script\Script' . $fields[0];
+            $class = '\\Fisharebest\\Localization\\Script\\Script' . $fields[0];
             self::assertTrue(class_exists($class), $data);
 
             /** @var ScriptInterface $script */

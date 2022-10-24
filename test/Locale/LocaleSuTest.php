@@ -38,7 +38,7 @@ class LocaleSuTest extends TestCase
         self::assertSame('᮰᮱᮲᮳᮴᮵᮶᮷᮸᮹', $locale->digits('0123456789'));
         self::assertSame('ltr', $locale->direction());
         self::assertSame('Basa Sunda', $locale->endonym());
-        self::assertSame('Basa Sunda', $locale->endonymSortable());
+        self::assertSame('BASA SUNDA', $locale->endonymSortable());
         self::assertSame('lang="su"', $locale->htmlAttributes());
         self::assertSame('su', $locale->languageTag());
         self::assertSame('-᮱᮲᮳', $locale->number(-123));

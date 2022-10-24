@@ -1,7 +1,8 @@
 <?php
 
-namespace Fisharebest\Localization;
+namespace Fisharebest\LocalizationTest;
 
+use Fisharebest\Localization\Locale;
 use PHPUnit\Framework\TestCase;
 
 /**

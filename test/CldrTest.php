@@ -1,8 +1,9 @@
 <?php
 
-namespace Fisharebest\Localization;
+namespace Fisharebest\LocalizationTest;
 
 use Exception;
+use Fisharebest\Localization\Locale;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -97,7 +98,7 @@ class CldrTest extends TestCase
 
                 if ($locale->language()->code() !== 'oc') {
                     // oc.xml does not use its own punctuation in its examples.
-                    self::assertTrue(preg_match($regex, $number) === 1, $debug);
+                    self::assertMatchesRegularExpression($regex, $number, $debug);
                 }
 
                 // Check the percentage matches the pattern.
@@ -121,7 +122,7 @@ class CldrTest extends TestCase
 
                 if ($locale->language()->code() !== 'oc') {
                     // oc.xml does not use its own punctuation in its examples.
-                    self::assertTrue(preg_match($regex, $number) === 1, $debug);
+                    self::assertMatchesRegularExpression($regex, $number, $debug);
                 }
 
                 // Check the minus sign is correct
@@ -133,7 +134,7 @@ class CldrTest extends TestCase
                     'number=' . $number . '=' . bin2hex($number),
                 ));
 
-                self::assertTrue(strpos($number, $minus_sign) === 0, $debug);
+                self::assertStringStartsWith($minus_sign, $number, $debug);
             }
         }
     }
@@ -152,11 +153,11 @@ class CldrTest extends TestCase
         $basename = basename($file, '.xml');
         $parts    = explode('_', $basename);
 
-        if (count($parts) == 1) {
+        if (count($parts) === 1) {
             return $dirname . '/root.xml';
-        } else {
-            return $dirname . '/' . implode('_', array_slice($parts, 0, -1)) . '.xml';
         }
+
+        return $dirname . '/' . implode('_', array_slice($parts, 0, -1)) . '.xml';
     }
 
     /**

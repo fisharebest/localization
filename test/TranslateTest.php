@@ -1,8 +1,10 @@
 <?php
 
-namespace Fisharebest\Localization;
+namespace Fisharebest\LocalizationTest;
 
 use Fisharebest\Localization\PluralRule\PluralRule2;
+use Fisharebest\Localization\Translation;
+use Fisharebest\Localization\Translator;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 

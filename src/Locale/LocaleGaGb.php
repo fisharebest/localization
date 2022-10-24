@@ -11,7 +11,7 @@ use Fisharebest\Localization\Territory\TerritoryGb;
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
  */
-class LocaleGaGB extends LocaleGa
+class LocaleGaGb extends LocaleGa
 {
     public function territory()
     {
