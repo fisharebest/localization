@@ -50,10 +50,11 @@ abstract class AbstractLocale
      */
     public function code()
     {
-        $code = $this->language()->code() . '_' . $this->territory()->code();
+        $code   = $this->language()->code() . '_' . $this->territory()->code();
+        $script = $this->script()->unicodeName();
 
-        if ($this->script()->code() !== $this->language()->defaultScript()->code()) {
-            $code .= '@' . strtolower($this->script()->unicodeName());
+        if ($this->script()->code() !== $this->language()->defaultScript()->code() && $script !== null) {
+            $code .= '@' . strtolower($script);
         }
 
         if ($this->variant() !== null) {

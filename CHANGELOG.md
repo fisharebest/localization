@@ -1,6 +1,7 @@
 CHANGE LOG
 ==========
 
+ - Fix: wrong locale code for scripts with no unicode name
  - Update to CLDR-41
  - Update to CLDR-39
  - Update to CLDR-38.1
