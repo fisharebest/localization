@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryCa;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleFrCa - Canadian French
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Territory\TerritoryCa;
  */
 class LocaleFrCa extends LocaleFr
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'français canadien';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'FRANCAIS CANADIEN';
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,
@@ -31,7 +32,7 @@ class LocaleFrCa extends LocaleFr
         );
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryCa();
     }

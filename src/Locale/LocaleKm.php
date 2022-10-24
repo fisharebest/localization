@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageKm;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageKm;
  */
 class LocaleKm extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'ខ្មែរ';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageKm();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

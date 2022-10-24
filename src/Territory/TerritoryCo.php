@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Territory;
  */
 class TerritoryCo extends AbstractTerritory implements TerritoryInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'CO';
     }
 
-    public function firstDay()
+    public function firstDay(): int
     {
         return 0;
     }
 
-    public function paperSize()
+    public function paperSize(): string
     {
         return 'US-Letter';
     }

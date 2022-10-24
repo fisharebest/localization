@@ -3,8 +3,11 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule1;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Script\ScriptArab;
+use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Territory\TerritoryCn;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageUg - Representation of the Uighur language.
@@ -15,22 +18,22 @@ use Fisharebest\Localization\Territory\TerritoryCn;
  */
 class LanguageUg extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'ug';
     }
 
-    public function defaultScript()
+    public function defaultScript(): ScriptInterface
     {
         return new ScriptArab();
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryCn();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule1();
     }

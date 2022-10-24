@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptJava extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Java';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('꧐', '꧑', '꧒', '꧓', '꧔', '꧕', '꧖', '꧗', '꧘', '꧙');
     }
 
-    public function number()
+    public function number(): string
     {
         return '361';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Javanese';
     }

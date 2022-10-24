@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule1;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Territory\TerritoryCm;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageJgo - Representation of the Ngomba language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryCm;
  */
 class LanguageJgo extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'jgo';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryCm();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule1();
     }

@@ -21,7 +21,7 @@ class LanguageMoTest extends TestCase
     /**
      * Test the properties
      */
-    public function testProperties()
+    public function testProperties(): void
     {
         $language = new LanguageMo(); // mo is deprecated - use ro
 

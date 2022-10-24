@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule1;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Territory\TerritoryCh;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageRm - Representation of the Romansh language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryCh;
  */
 class LanguageRm extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'rm';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryCh();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule1();
     }

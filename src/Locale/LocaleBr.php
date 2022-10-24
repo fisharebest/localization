@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageBr;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleBr - Breton
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageBr;
  */
 class LocaleBr extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'brezhoneg';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'BREZHONEG';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageBr();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,
@@ -36,7 +37,7 @@ class LocaleBr extends AbstractLocale implements LocaleInterface
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }

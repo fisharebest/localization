@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryDg;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleEnDg
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryDg;
  */
 class LocaleEnDg extends LocaleEn
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryDg();
     }

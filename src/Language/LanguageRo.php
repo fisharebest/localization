@@ -3,6 +3,8 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule5;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryRo;
 
 /**
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryRo;
  */
 class LanguageRo extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'ro';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryRo();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule5();
     }

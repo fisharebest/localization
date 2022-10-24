@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryPf;
 
 /**
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryPf;
  */
 class LocaleFrPf extends LocaleFr
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryPf();
     }

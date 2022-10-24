@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageRof;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageRof;
  */
 class LocaleRof extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Kihorombo';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'KIHOROMBO';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageRof();
     }

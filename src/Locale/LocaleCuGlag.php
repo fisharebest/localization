@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Script\ScriptGlag;
+use Fisharebest\Localization\Script\ScriptInterface;
 
 /**
  * Class LocaleCuGlag - Old Church Slavonic
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Script\ScriptGlag;
  */
 class LocaleCuGlag extends LocaleCu
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ';
     }
 
-    public function script()
+    public function script(): ScriptInterface
     {
         return new ScriptGlag();
     }

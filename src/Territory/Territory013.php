@@ -11,7 +11,7 @@ namespace Fisharebest\Localization\Territory;
  */
 class Territory013 extends AbstractTerritory implements TerritoryInterface
 {
-    public function code()
+    public function code(): string
     {
         return '013';
     }

@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageCcp;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleCcp - Chakma
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageCcp;
  */
 class LocaleCcp extends AbstractLocale implements LocaleInterface
 {
-    protected function digitsGroup()
+    protected function digitsGroup(): int
     {
         return 2;
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return '𑄌𑄋𑄴𑄟𑄳𑄦';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageCcp();
     }

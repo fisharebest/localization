@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageSd;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageSd;
  */
 class LocaleSd extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'سنڌي';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageSd();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP    => self::ARAB_GROUP,
@@ -32,7 +33,7 @@ class LocaleSd extends AbstractLocale implements LocaleInterface
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::ARAB_PERCENT . self::ALM;
     }

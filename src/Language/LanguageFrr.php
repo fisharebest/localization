@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\Territory\TerritoryDe;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageEn - Representation of the North Frisian language.
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryDe;
  */
 class LanguageFrr extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'frr';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryDe();
     }

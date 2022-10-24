@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryIn;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleUrIn
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryIn;
  */
 class LocaleUrIn extends LocaleUr
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryIn();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::DECIMAL  => self::ARAB_DECIMAL,

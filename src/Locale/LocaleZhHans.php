@@ -11,7 +11,7 @@ namespace Fisharebest\Localization\Locale;
  */
 class LocaleZhHans extends LocaleZh
 {
-    public function endonym()
+    public function endonym(): string
     {
         if (get_class($this) === __NAMESPACE__ . '\LocaleZhHans') {
             // If the Hans script has been specified (but no other tags), then it is customary to include it.
@@ -21,7 +21,7 @@ class LocaleZhHans extends LocaleZh
         return parent::endonym();
     }
 
-    public function languageTag()
+    public function languageTag(): string
     {
         if (get_class($this) === __NAMESPACE__ . '\LocaleZhHans') {
             // If the Hans script has been specified (but no other tags), then it is customary to include it.

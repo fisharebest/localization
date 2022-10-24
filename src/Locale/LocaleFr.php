@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageFr;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleFr - French
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageFr;
  */
 class LocaleFr extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'français';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'FRANCAIS';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageFr();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NARROW_NBSP,
@@ -36,7 +37,7 @@ class LocaleFr extends AbstractLocale implements LocaleInterface
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }

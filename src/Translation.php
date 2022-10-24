@@ -22,14 +22,14 @@ class Translation
     const CONTEXT_SEPARATOR      = "\x04";
 
     /** @var array<array-key,string> An association of English -> translated messages */
-    private $translations;
+    private array $translations;
 
     /**
      * The code for this variant.
      *
      * @param string $filename
      */
-    public function __construct($filename)
+    public function __construct(string $filename)
     {
         $this->translations = array();
 
@@ -70,7 +70,7 @@ class Translation
      *
      * @return array<array-key,string>
      */
-    public function asArray()
+    public function asArray(): array
     {
         return $this->translations;
     }
@@ -85,7 +85,7 @@ class Translation
      *
      * @return array<int>
      */
-    private function readMoWords($fp, $offset, $count, $pack)
+    private function readMoWords($fp, int $offset, int $count, string $pack): array
     {
         fseek($fp, $offset);
 
@@ -101,7 +101,7 @@ class Translation
      *
      * @return void
      */
-    private function readMoFile($fp)
+    private function readMoFile($fp): void
     {
         // How is the numeric data packed in the .MO file?
         $magic = $this->readMoWords($fp, 0, 1, self::PACK_LITTLE_ENDIAN);
@@ -119,7 +119,7 @@ class Translation
         }
 
         // Read the lookup tables
-        list(, $number_of_strings, $offset_original, $offset_translated) = $this->readMoWords($fp, 8, 3, $pack);
+        [, $number_of_strings, $offset_original, $offset_translated] = $this->readMoWords($fp, 8, 3, $pack);
         $lookup_original   = $this->readMoWords($fp, $offset_original, $number_of_strings * 2, $pack);
         $lookup_translated = $this->readMoWords($fp, $offset_translated, $number_of_strings * 2, $pack);
 
@@ -142,7 +142,7 @@ class Translation
      *
      * @return void
      */
-    private function readPoFile($lines)
+    private function readPoFile(array $lines): void
     {
         // Strip comments
         $lines = array_filter($lines, function ($line) {
@@ -214,7 +214,7 @@ class Translation
      *
      * @return string
      */
-    private function unescapePoText($text)
+    private function unescapePoText(string $text): string
     {
         return strtr($text, array(
             '\\\\' => '\\',

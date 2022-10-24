@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageJgo;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageJgo;
  */
 class LocaleJgo extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Ndaꞌa';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'NDAA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageJgo();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

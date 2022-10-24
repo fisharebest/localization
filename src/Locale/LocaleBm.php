@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageBm;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleBm - Bambara
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageBm;
  */
 class LocaleBm extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'bamanakan';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'BAMANAKAN';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageBm();
     }

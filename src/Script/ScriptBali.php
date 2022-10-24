@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptBali extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Bali';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('᭐', '᭑', '᭒', '᭓', '᭔', '᭕', '᭖', '᭗', '᭘', '᭙');
     }
 
-    public function number()
+    public function number(): string
     {
         return '360';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Balinese';
     }

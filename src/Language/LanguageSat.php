@@ -2,9 +2,12 @@
 
 namespace Fisharebest\Localization\Language;
 
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\PluralRule\PluralRuleOneTwoOther;
+use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Script\ScriptOlck;
 use Fisharebest\Localization\Territory\TerritoryIn;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageSat - Representation of the Santali language.
@@ -15,22 +18,22 @@ use Fisharebest\Localization\Territory\TerritoryIn;
  */
 class LanguageSat extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'sat';
     }
 
-    public function defaultScript()
+    public function defaultScript(): ScriptInterface
     {
         return new ScriptOlck();
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryIn();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRuleOneTwoOther();
     }

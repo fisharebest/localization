@@ -2,8 +2,10 @@
 
 namespace Fisharebest\Localization\Language;
 
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\PluralRule\PluralRuleOneTwoOther;
 use Fisharebest\Localization\Territory\TerritoryFi;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageSma - Representation of the Southern Sami language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryFi;
  */
 class LanguageSma extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'sma';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryFi();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRuleOneTwoOther();
     }

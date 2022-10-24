@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Language;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryKe;
 
 /**
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryKe;
  */
 class LanguageKln extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'kln';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryKe();
     }

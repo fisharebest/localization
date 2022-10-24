@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguagePcm;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguagePcm;
  */
 class LocalePcm extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Naijíriá Píjin';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'NAIJÍRIÁ PÍJIN';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguagePcm();
     }

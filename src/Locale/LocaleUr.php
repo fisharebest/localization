@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageUr;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageUr;
  */
 class LocaleUr extends AbstractLocale implements LocaleInterface
 {
-    protected function digitsGroup()
+    protected function digitsGroup(): int
     {
         return 2;
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'اردو';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageUr();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::NEGATIVE => self::LTR_MARK . self::HYPHEN,

@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptShrd extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Shrd';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('𑇐', '𑇑', '𑇒', '𑇓', '𑇔', '𑇕', '𑇖', '𑇗', '𑇘', '𑇙');
     }
 
-    public function number()
+    public function number(): string
     {
         return '319';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Sharada';
     }

@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageCeb;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleCeb - Cebuano
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageCeb;
  */
 class LocaleCeb extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Cebuano';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'CEBUANO';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageCeb();
     }

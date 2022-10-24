@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryMd;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Territory\TerritoryMd;
  */
 class LocaleRoMd extends LocaleRo
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'moldovenească';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'MOLDOVENEASCA';
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryMd();
     }

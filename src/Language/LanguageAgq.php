@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\Territory\TerritoryCm;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageAgq - Representation of the Aghem language.
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryCm;
  */
 class LanguageAgq extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'agq';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryCm();
     }

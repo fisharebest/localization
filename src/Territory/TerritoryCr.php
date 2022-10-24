@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Territory;
  */
 class TerritoryCr extends AbstractTerritory implements TerritoryInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'CR';
     }
 
-    public function paperSize()
+    public function paperSize(): string
     {
         return 'US-Letter';
     }

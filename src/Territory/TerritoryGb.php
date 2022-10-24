@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Territory;
  */
 class TerritoryGb extends AbstractTerritory implements TerritoryInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'GB';
     }
 
-    public function measurementSystem()
+    public function measurementSystem(): string
     {
         return 'UK';
     }

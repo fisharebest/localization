@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageSu;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageSu;
  */
 class LocaleSu extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Basa Sunda';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'BASA SUNDA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageSu();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

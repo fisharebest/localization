@@ -3,7 +3,10 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule0;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
+use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Script\ScriptMymr;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryMm;
 
 /**
@@ -15,22 +18,22 @@ use Fisharebest\Localization\Territory\TerritoryMm;
  */
 class LanguageMy extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'my';
     }
 
-    public function defaultScript()
+    public function defaultScript(): ScriptInterface
     {
         return new ScriptMymr();
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryMm();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule0();
     }

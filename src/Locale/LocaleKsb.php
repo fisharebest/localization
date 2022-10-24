@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageKsb;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageKsb;
  */
 class LocaleKsb extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Kishambaa';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'KISHAMBAA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageKsb();
     }

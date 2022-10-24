@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryPk;
 
 /**
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryPk;
  */
 class LocaleEnPk extends LocaleEn
 {
-    protected function digitsGroup()
+    protected function digitsGroup(): int
     {
         return 2;
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryPk();
     }

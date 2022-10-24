@@ -2,8 +2,10 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageMai;
 use Fisharebest\Localization\Script\ScriptDeva;
+use Fisharebest\Localization\Script\ScriptInterface;
 
 /**
  * Class LocaleMaiIn - Maithili
@@ -14,22 +16,22 @@ use Fisharebest\Localization\Script\ScriptDeva;
  */
 class LocaleMaiIn extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'मैथिली';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'मैथिली';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageMai();
     }
 
-    public function script()
+    public function script(): ScriptInterface
     {
         return new ScriptDeva();
     }

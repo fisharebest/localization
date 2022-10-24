@@ -19,7 +19,7 @@ class Locale
      *
      * @var array<string,string>
      */
-    private static $http_accept_chinese = array(
+    private static array $http_accept_chinese = array(
         'zh-cn' => 'zh-hans-cn',
         'zh-sg' => 'zh-hans-sg',
         'zh-hk' => 'zh-hant-hk',
@@ -36,7 +36,7 @@ class Locale
      *
      * @return int
      */
-    public static function compare(LocaleInterface $x, LocaleInterface $y)
+    public static function compare(LocaleInterface $x, LocaleInterface $y): int
     {
         return strcmp($x->endonymSortable(), $y->endonymSortable());
     }
@@ -49,7 +49,7 @@ class Locale
      * @return LocaleInterface
      * @throws DomainException
      */
-    public static function create($code)
+    public static function create(string $code): LocaleInterface
     {
         $class = '\\Fisharebest\\Localization\\Locale\\Locale' . implode(array_map(function ($x) {
             return ucfirst(strtolower($x));
@@ -75,7 +75,7 @@ class Locale
      *
      * @return LocaleInterface
      */
-    public static function httpAcceptLanguage(array $server, array $available, LocaleInterface $default)
+    public static function httpAcceptLanguage(array $server, array $available, LocaleInterface $default): LocaleInterface
     {
         if (!empty($server['HTTP_ACCEPT_LANGUAGE'])) {
             $http_accept_language = strtolower(str_replace(' ', '', $server['HTTP_ACCEPT_LANGUAGE']));
@@ -121,7 +121,7 @@ class Locale
      *
      * @return array<array-key,float>
      */
-    private static function httpAcceptDowngrade($preferences)
+    private static function httpAcceptDowngrade(array $preferences): array
     {
         foreach ($preferences as $code => $priority) {
             // Three parts: "zh-hans-cn" => "zh-hans" and "zh"
@@ -150,7 +150,7 @@ class Locale
      *
      * @return array<array-key,float>
      */
-    private static function httpAcceptChinese($preferences)
+    private static function httpAcceptChinese(array $preferences): array
     {
         foreach (self::$http_accept_chinese as $old => $new) {
             if (array_key_exists($old, $preferences) && !array_key_exists($new, $preferences)) {

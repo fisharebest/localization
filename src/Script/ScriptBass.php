@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptBass extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Bass';
     }
 
-    public function number()
+    public function number(): string
     {
         return '259';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Bassa_Vah';
     }

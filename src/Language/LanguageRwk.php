@@ -3,6 +3,8 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule1;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryTz;
 
 /**
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryTz;
  */
 class LanguageRwk extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'rwk';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryTz();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule1();
     }

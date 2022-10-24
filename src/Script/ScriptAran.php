@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptAran extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Aran';
     }
 
-    public function number()
+    public function number(): string
     {
         return '161';
     }

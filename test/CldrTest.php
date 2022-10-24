@@ -22,7 +22,7 @@ class CldrTest extends TestCase
      *
      * @medium
      */
-    public function testCharacterOrder()
+    public function testCharacterOrder(): void
     {
         $direction = array(
             'left-to-right' => 'ltr',
@@ -44,7 +44,7 @@ class CldrTest extends TestCase
      *
      * @large
      */
-    public function testNumbers()
+    public function testNumbers(): void
     {
         foreach (glob(__DIR__ . '/data/cldr-42/main/*.xml') as $cldr) {
             if (strpos($cldr, '/root.xml') === false) {
@@ -147,7 +147,7 @@ class CldrTest extends TestCase
      *
      * @return string
      */
-    private function parentCldr($file)
+    private function parentCldr(string $file): string
     {
         $dirname  = dirname($file);
         $basename = basename($file, '.xml');
@@ -167,7 +167,7 @@ class CldrTest extends TestCase
      * @return string
      * @throws Exception
      */
-    private function cldrValue($file, $xpath)
+    private function cldrValue(string $file, string $xpath): string
     {
         $xml = simplexml_load_string(file_get_contents($file));
         $tmp = $file;

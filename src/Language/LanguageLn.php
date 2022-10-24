@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule2;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Territory\TerritoryCd;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageLn - Representation of the Lingala language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryCd;
  */
 class LanguageLn extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'ln';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryCd();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule2();
     }

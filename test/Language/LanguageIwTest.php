@@ -21,7 +21,7 @@ class LanguageIwTest extends TestCase
     /**
      * Test the properties
      */
-    public function testProperties()
+    public function testProperties(): void
     {
         $language = new LanguageIw(); // iw is deprecated - use he
 

@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptSarb extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Sarb';
     }
 
-    public function number()
+    public function number(): string
     {
         return '105';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Old_South_Arabian';
     }

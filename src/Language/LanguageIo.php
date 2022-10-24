@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule1;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 
 /**
  * Class LanguageIo - Representation of the Ido language.
@@ -13,12 +14,12 @@ use Fisharebest\Localization\PluralRule\PluralRule1;
  */
 class LanguageIo extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'io';
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule1();
     }

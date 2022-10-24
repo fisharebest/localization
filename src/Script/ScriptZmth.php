@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptZmth extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Zmth';
     }
 
-    public function number()
+    public function number(): string
     {
         return '995';
     }

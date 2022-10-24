@@ -3,6 +3,8 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule3;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryLv;
 
 /**
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryLv;
  */
 class LanguageLv extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'lv';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryLv();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule3();
     }

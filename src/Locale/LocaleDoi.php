@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageDoi;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleDoi - Dogri
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageDoi;
  */
 class LocaleDoi extends AbstractLocale implements LocaleInterface
 {
-    protected function digitsGroup()
+    protected function digitsGroup(): int
     {
         return 2;
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'डोगरी';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'डोगरी';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageDoi();
     }

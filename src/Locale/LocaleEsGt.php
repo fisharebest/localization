@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryGt;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleEsGt
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryGt;
  */
 class LocaleEsGt extends LocaleEs
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryGt();
     }

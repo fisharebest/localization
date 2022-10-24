@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryGb;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleEnGb - British English
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Territory\TerritoryGb;
  */
 class LocaleEnGb extends LocaleEn
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'British English';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ENGLISH, BRITISH';
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryGb();
     }

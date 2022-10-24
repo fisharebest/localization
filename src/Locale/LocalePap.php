@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguagePap;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguagePap;
  */
 class LocalePap extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Papiamentu';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'PAPIAMENTU';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguagePap();
     }

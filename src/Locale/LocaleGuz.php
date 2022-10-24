@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageGuz;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleGuz - Gusii
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageGuz;
  */
 class LocaleGuz extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Ekegusii';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'EKEGUSII';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageGuz();
     }

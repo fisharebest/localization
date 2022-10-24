@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryAd;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleCaAd
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryAd;
  */
 class LocaleCaAd extends LocaleCa
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryAd();
     }

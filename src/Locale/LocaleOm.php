@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageOm;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageOm;
  */
 class LocaleOm extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Oromoo';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'OROMOO';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageOm();
     }

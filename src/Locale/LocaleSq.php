@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageSq;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageSq;
  */
 class LocaleSq extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'shqip';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'SHQIP';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageSq();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,

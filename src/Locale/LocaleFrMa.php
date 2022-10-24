@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryMa;
 
 /**
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryMa;
  */
 class LocaleFrMa extends LocaleFr
 {
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,
@@ -21,7 +22,7 @@ class LocaleFrMa extends LocaleFr
         );
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryMa();
     }

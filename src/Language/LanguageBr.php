@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule2;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Territory\TerritoryFr;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageBr - Representation of the Breton language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryFr;
  */
 class LanguageBr extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'br';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryFr();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule2();
     }

@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptSogo extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Sogo';
     }
 
-    public function number()
+    public function number(): string
     {
         return '142';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Old_Sogdian';
     }

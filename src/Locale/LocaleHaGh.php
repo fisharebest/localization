@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryGh;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleHaGh
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryGh;
  */
 class LocaleHaGh extends LocaleHa
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryGh();
     }

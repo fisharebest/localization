@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageKi;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageKi;
  */
 class LocaleKi extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Gikuyu';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'GIKUYU';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageKi();
     }

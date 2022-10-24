@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageKhq;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageKhq;
  */
 class LocaleKhq extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Koyra ciini';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'KOYRA CIINI';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageKhq();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP => self::NBSP,

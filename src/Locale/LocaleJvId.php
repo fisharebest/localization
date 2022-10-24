@@ -11,7 +11,7 @@ namespace Fisharebest\Localization\Locale;
  */
 class LocaleJvId extends LocaleJv
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'ꦧꦱꦗꦮ';
     }

@@ -23,7 +23,7 @@ class TranslateTest extends TestCase
     /**
      * Test invalid translation file
      */
-    public function testInvalidPhpFile()
+    public function testInvalidPhpFile(): void
     {
         $translation = new Translation(__DIR__ . '/data/invalid.php');
         $translator  = new Translator($translation->asArray(), new PluralRule2());
@@ -35,7 +35,7 @@ class TranslateTest extends TestCase
     /**
      * Test translation using a .CSV data source
      */
-    public function testCsv()
+    public function testCsv(): void
     {
         $translation = new Translation(__DIR__ . '/data/fish.csv');
         $translator  = new Translator($translation->asArray(), new PluralRule2());
@@ -68,7 +68,7 @@ class TranslateTest extends TestCase
     /**
      * Test translation with invalid plural.
      */
-    public function testInvalidPlural()
+    public function testInvalidPlural(): void
     {
         $translation = new Translation(__DIR__ . '/data/fish.bad-plural.php');
         $translator  = new Translator($translation->asArray(), new PluralRule2());
@@ -82,7 +82,7 @@ class TranslateTest extends TestCase
     /**
      * Test translation using a .PO data source
      */
-    public function testPo()
+    public function testPo(): void
     {
         $translation = new Translation(__DIR__ . '/data/fish.po');
         $translator  = new Translator($translation->asArray(), new PluralRule2());
@@ -115,7 +115,7 @@ class TranslateTest extends TestCase
     /**
      * Test translation using a .PO data source
      */
-    public function testPoWithEscape()
+    public function testPoWithEscape(): void
     {
         $translation = new Translation(__DIR__ . '/data/escape.po');
         $translator  = new Translator($translation->asArray(), new PluralRule2());
@@ -130,7 +130,7 @@ class TranslateTest extends TestCase
     /**
      * Test translation using a .MO data source
      */
-    public function testMo()
+    public function testMo(): void
     {
         $translation = new Translation(__DIR__ . '/data/fish.mo');
         $translator  = new Translator($translation->asArray(), new PluralRule2());
@@ -163,7 +163,7 @@ class TranslateTest extends TestCase
     /**
      * Test translation using a big-endian .MO data source
      */
-    public function testMoBigEndian()
+    public function testMoBigEndian(): void
     {
         $translation = new Translation(__DIR__ . '/data/fish.big-endian.mo');
         $translator  = new Translator($translation->asArray(), new PluralRule2());
@@ -196,7 +196,7 @@ class TranslateTest extends TestCase
     /**
      * Test translation using an invalid .MO data source
      */
-    public function testMoInvalid()
+    public function testMoInvalid(): void
     {
         try {
             new Translation(__DIR__ . '/data/fish.invalid.mo');
@@ -210,7 +210,7 @@ class TranslateTest extends TestCase
     /**
      * Test translation using a .PHP data source
      */
-    public function testPhp()
+    public function testPhp(): void
     {
         $translation = new Translation(__DIR__ . '/data/fish.php');
         $translator  = new Translator($translation->asArray(), new PluralRule2());

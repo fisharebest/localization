@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptPiqd extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Piqd';
     }
 
-    public function number()
+    public function number(): string
     {
         return '293';
     }

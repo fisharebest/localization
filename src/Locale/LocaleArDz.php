@@ -4,6 +4,7 @@ namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryDz;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleArDz
@@ -14,7 +15,7 @@ use Fisharebest\Localization\Territory\TerritoryDz;
  */
 class LocaleArDz extends LocaleAr
 {
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP    => self::DOT,
@@ -23,19 +24,19 @@ class LocaleArDz extends LocaleAr
         );
     }
 
-    protected function numerals()
+    protected function numerals(): array
     {
         $latin = new ScriptLatn();
 
         return $latin->numerals();
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::LTR_MARK . self::PERCENT . self::LTR_MARK;
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryDz();
     }

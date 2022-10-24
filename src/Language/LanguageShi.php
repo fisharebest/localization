@@ -2,8 +2,11 @@
 
 namespace Fisharebest\Localization\Language;
 
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\PluralRule\PluralRuleTachelhit;
+use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Script\ScriptTfng;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryMa;
 
 /**
@@ -15,22 +18,22 @@ use Fisharebest\Localization\Territory\TerritoryMa;
  */
 class LanguageShi extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'shi';
     }
 
-    public function defaultScript()
+    public function defaultScript(): ScriptInterface
     {
         return new ScriptTfng();
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryMa();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRuleTachelhit();
     }

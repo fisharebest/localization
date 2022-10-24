@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule0;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Territory\TerritoryId;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageId - Representation of the Indonesian language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryId;
  */
 class LanguageId extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'id';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryId();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule0();
     }

@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptAghb extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Aghb';
     }
 
-    public function number()
+    public function number(): string
     {
         return '239';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Caucasian_Albanian';
     }

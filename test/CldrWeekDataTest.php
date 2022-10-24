@@ -20,7 +20,7 @@ class CldrWeekDataTest extends TestCase
      *
      * @medium
      */
-    public function testWeekData()
+    public function testWeekData(): void
     {
         $days = array(
             'sun' => 0,

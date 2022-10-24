@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptNagm extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Nagm';
     }
 
-    public function number()
+    public function number(): string
     {
         return '295';
     }

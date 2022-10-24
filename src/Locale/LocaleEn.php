@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageEn;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleEn - English
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageEn;
  */
 class LocaleEn extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'English';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ENGLISH';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageEn();
     }

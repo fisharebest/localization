@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryMz;
 
 /**
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryMz;
  */
 class LocalePtMz extends LocalePt
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryMz();
     }

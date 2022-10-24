@@ -2,8 +2,10 @@
 
 namespace Fisharebest\Localization\Language;
 
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\PluralRule\PluralRuleWelsh;
 use Fisharebest\Localization\Territory\TerritoryGb;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageCy - Representation of the Welsh language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryGb;
  */
 class LanguageCy extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'cy';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryGb();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRuleWelsh();
     }

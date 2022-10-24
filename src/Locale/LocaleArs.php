@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageArs;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleArs - Najdi Arabic
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageArs;
  */
 class LocaleArs extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'اللهجة النجدية';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageArs();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP    => self::ARAB_GROUP,
@@ -32,7 +33,7 @@ class LocaleArs extends AbstractLocale implements LocaleInterface
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::ARAB_PERCENT . self::ALM;
     }

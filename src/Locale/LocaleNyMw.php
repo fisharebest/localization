@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryMw;
 
 /**
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryMw;
  */
 class LocaleNyMw extends LocaleNy
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryMw();
     }

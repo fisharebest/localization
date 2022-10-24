@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule2;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Territory\TerritoryDz;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageKab - Representation of the Kabyle language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryDz;
  */
 class LanguageKab extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'kab';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryDz();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule2();
     }

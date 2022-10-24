@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryCm;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleFfLatnCm - Fulah
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryCm;
  */
 class LocaleFfLatnCm extends LocaleFfLatn
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryCm();
     }

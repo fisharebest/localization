@@ -24,7 +24,7 @@ class LocaleEo001Test extends TestCase
     /**
      * Test the properties
      */
-    public function testProperties()
+    public function testProperties(): void
     {
         $locale = new LocaleEo001();
 

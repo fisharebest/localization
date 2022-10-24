@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryCh;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleDeCh - Swiss High German
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Territory\TerritoryCh;
  */
 class LocaleDeCh extends LocaleDe
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Schweizer Hochdeutsch';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'SCHWEIZER HOCHDEUTSCH';
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::APOSTROPHE,
@@ -31,12 +32,12 @@ class LocaleDeCh extends LocaleDe
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::PERCENT;
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryCh();
     }

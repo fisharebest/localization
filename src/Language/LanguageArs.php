@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Language;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritorySa;
 
 /**
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritorySa;
  */
 class LanguageArs extends LanguageAr
 {
-    public function code()
+    public function code(): string
     {
         return 'ars';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritorySa();
     }

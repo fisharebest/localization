@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageEe;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleEe - Ewe
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageEe;
  */
 class LocaleEe extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Eʋegbe';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'EWEGBE';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageEe();
     }

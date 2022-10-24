@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryLu;
 
 /**
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryLu;
  */
 class LocaleFrLu extends LocaleFr
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryLu();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::DECIMAL => self::COMMA,

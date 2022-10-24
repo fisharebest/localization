@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\Script\ScriptDeva;
+use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Territory\TerritoryIn;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageMai - Representation of the Maithili language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryIn;
  */
 class LanguageMai extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'mai';
     }
 
-    public function defaultScript()
+    public function defaultScript(): ScriptInterface
     {
         return new ScriptDeva();
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryIn();
     }

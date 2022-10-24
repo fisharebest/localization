@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageGu;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleGu - Gujarati
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageGu;
  */
 class LocaleGu extends AbstractLocale implements LocaleInterface
 {
-    protected function digitsGroup()
+    protected function digitsGroup(): int
     {
         return 2;
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'ગુજરાતી';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageGu();
     }

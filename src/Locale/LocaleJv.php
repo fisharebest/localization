@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageJv;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageJv;
  */
 class LocaleJv extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Jawa';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageJv();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::DECIMAL => self::COMMA,

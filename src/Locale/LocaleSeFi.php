@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryFi;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleSeFi
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryFi;
  */
 class LocaleSeFi extends LocaleSe
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryFi();
     }

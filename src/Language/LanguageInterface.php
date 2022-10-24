@@ -20,7 +20,7 @@ interface LanguageInterface
      *
      * @return string
      */
-    public function code();
+    public function code(): string;
 
     /**
      * The default territory where this language is spoken, which would
@@ -29,7 +29,7 @@ interface LanguageInterface
      *
      * @return TerritoryInterface
      */
-    public function defaultTerritory();
+    public function defaultTerritory(): TerritoryInterface;
 
     /**
      * The default script used to write this language, which would
@@ -38,12 +38,12 @@ interface LanguageInterface
      *
      * @return ScriptInterface
      */
-    public function defaultScript();
+    public function defaultScript(): ScriptInterface;
 
     /**
      * Which plural rule is used in this language?
      *
      * @return PluralRuleInterface
      */
-    public function pluralRule();
+    public function pluralRule(): PluralRuleInterface;
 }

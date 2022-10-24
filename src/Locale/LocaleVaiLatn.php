@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Script\ScriptLatn;
 
 /**
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Script\ScriptLatn;
  */
 class LocaleVaiLatn extends LocaleVai
 {
-    public function script()
+    public function script(): ScriptInterface
     {
         return new ScriptLatn();
     }

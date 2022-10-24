@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageCa;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleCa - Catalan
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageCa;
  */
 class LocaleCa extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'català';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'CATALA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageCa();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,
@@ -36,7 +37,7 @@ class LocaleCa extends AbstractLocale implements LocaleInterface
         );
     }
 
-    public function percentFormat()
+    public function percentFormat(): string
     {
         return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }

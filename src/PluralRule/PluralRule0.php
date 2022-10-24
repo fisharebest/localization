@@ -18,12 +18,12 @@ namespace Fisharebest\Localization\PluralRule;
  */
 class PluralRule0 implements PluralRuleInterface
 {
-    public function plurals()
+    public function plurals(): int
     {
         return 1;
     }
 
-    public function plural($number)
+    public function plural(int $number): int
     {
         return 0;
     }

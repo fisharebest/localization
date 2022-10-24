@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Script\ScriptArab;
+use Fisharebest\Localization\Script\ScriptInterface;
 
 /**
  * Class LocaleUzArab
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Script\ScriptArab;
  */
 class LocaleUzArab extends LocaleUz
 {
-    public function script()
+    public function script(): ScriptInterface
     {
         return new ScriptArab();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP    => self::ARAB_GROUP,
@@ -27,7 +28,7 @@ class LocaleUzArab extends LocaleUz
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::ARAB_PERCENT;
     }

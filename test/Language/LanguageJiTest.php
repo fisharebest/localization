@@ -21,7 +21,7 @@ class LanguageJiTest extends TestCase
     /**
      * Test the properties
      */
-    public function testProperties()
+    public function testProperties(): void
     {
         $language = new LanguageJi(); // ji is deprecated - use yi
 

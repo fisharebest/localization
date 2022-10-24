@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryPy;
 
 /**
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryPy;
  */
 class LocaleEsPy extends LocaleEs
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryPy();
     }

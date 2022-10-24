@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptMoon extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Moon';
     }
 
-    public function number()
+    public function number(): string
     {
         return '218';
     }

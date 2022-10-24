@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageAk;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleAk - Akan
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageAk;
  */
 class LocaleAk extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Akan';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'AKAN';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageAk();
     }

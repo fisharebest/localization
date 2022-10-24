@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptToto extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Toto';
     }
 
-    public function number()
+    public function number(): string
     {
         return '294';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Toto';
     }

@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Language;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryNg;
 
 /**
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryNg;
  */
 class LanguageAnn extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'ann';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryNg();
     }

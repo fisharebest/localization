@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryNg;
 
 /**
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryNg;
  */
 class LocaleFfAdlmNg extends LocaleFfAdlm
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryNg();
     }

@@ -18,9 +18,9 @@ abstract class AbstractScript
      * Some locales (e.g. Persian) use their own digits, rather than
      * the default digits of their script.
      *
-     * @return array<string>
+     * @return array<int,string>
      */
-    public function numerals()
+    public function numerals(): array
     {
         return array();
     }
@@ -30,7 +30,7 @@ abstract class AbstractScript
      *
      * @return string “ltr” or “rtl”
      */
-    public function direction()
+    public function direction(): string
     {
         return substr_compare($this->number(), '1', 0, 1) !== 0 ? 'ltr' : 'rtl';
     }
@@ -40,7 +40,7 @@ abstract class AbstractScript
      *
      * @return string
      */
-    abstract public function number();
+    abstract public function number(): string;
 
     /**
      * The Unicode name (aka “property value alias”) for this script, or
@@ -48,7 +48,7 @@ abstract class AbstractScript
      *
      * @return string|null
      */
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return null;
     }

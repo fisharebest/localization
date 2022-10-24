@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryKe;
 
 /**
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryKe;
  */
 class LocaleOmKe extends LocaleOm
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryKe();
     }

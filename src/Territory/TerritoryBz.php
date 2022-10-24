@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Territory;
  */
 class TerritoryBz extends AbstractTerritory implements TerritoryInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'BZ';
     }
 
-    public function firstDay()
+    public function firstDay(): int
     {
         return 0;
     }
 
-    public function measurementSystem()
+    public function measurementSystem(): string
     {
         return 'US';
     }
 
-    public function paperSize()
+    public function paperSize(): string
     {
         return 'US-Letter';
     }

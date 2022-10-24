@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule3;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 
 /**
  * Class LanguagePrg - Representation of the Old Prussian language.
@@ -13,12 +14,12 @@ use Fisharebest\Localization\PluralRule\PluralRule3;
  */
 class LanguagePrg extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'prg';
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule3();
     }

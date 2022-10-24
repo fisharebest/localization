@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryAu;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleEnAu - Australian English
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Territory\TerritoryAu;
  */
 class LocaleEnAu extends LocaleEn
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Australian English';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ENGLISH, AUSTRALIAN';
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryAu();
     }

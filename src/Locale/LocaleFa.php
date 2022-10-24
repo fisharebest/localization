@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageFa;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleFa - Persian
@@ -13,27 +14,27 @@ use Fisharebest\Localization\Language\LanguageFa;
  */
 class LocaleFa extends AbstractLocale implements LocaleInterface
 {
-    public function collation()
+    public function collation(): string
     {
         return 'persian_ci';
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'فارسی';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageFa();
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹');
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP    => self::ARAB_GROUP,
@@ -42,7 +43,7 @@ class LocaleFa extends AbstractLocale implements LocaleInterface
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::ARAB_PERCENT;
     }

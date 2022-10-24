@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptOlck extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Olck';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('᱐', '᱑', '᱒', '᱓', '᱔', '᱕', '᱖', '᱗', '᱘', '᱙');
     }
 
-    public function number()
+    public function number(): string
     {
         return '261';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Ol_Chiki';
     }

@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageUz;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageUz;
  */
 class LocaleUz extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'o‘zbek';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'OZBEK';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageUz();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,

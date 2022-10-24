@@ -11,7 +11,7 @@ namespace Fisharebest\Localization\Language;
  */
 class LanguageTok extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'tok';
     }

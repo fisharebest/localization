@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryAw;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleNlAw
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryAw;
  */
 class LocaleNlAw extends LocaleNl
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryAw();
     }

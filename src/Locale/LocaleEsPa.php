@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryPa;
 
 /**
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryPa;
  */
 class LocaleEsPa extends LocaleEs
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryPa();
     }

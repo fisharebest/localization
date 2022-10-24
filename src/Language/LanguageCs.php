@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule8;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Territory\TerritoryCz;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageCs - Representation of the Czech language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryCz;
  */
 class LanguageCs extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'cs';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryCz();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule8();
     }

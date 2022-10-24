@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageMfe;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageMfe;
  */
 class LocaleMfe extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'kreol morisien';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'KREOL MORISIEN';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageMfe();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP => self::NBSP,

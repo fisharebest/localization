@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageKs;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageKs;
  */
 class LocaleKs extends AbstractLocale implements LocaleInterface
 {
-    protected function digitsGroup()
+    protected function digitsGroup(): int
     {
         return 2;
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'کٲشُر';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageKs();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP    => self::ARAB_GROUP,
@@ -37,7 +38,7 @@ class LocaleKs extends AbstractLocale implements LocaleInterface
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::ARAB_PERCENT;
     }

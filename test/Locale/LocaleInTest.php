@@ -24,7 +24,7 @@ class LocaleInTest extends TestCase
     /**
      * Test the properties
      */
-    public function testProperties()
+    public function testProperties(): void
     {
         $locale = new LocaleIn(); // in is deprecated - use id
 

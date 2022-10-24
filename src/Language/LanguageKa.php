@@ -3,8 +3,11 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule1;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Script\ScriptGeor;
+use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Territory\TerritoryGe;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageKa - Representation of the Georgian language.
@@ -15,22 +18,22 @@ use Fisharebest\Localization\Territory\TerritoryGe;
  */
 class LanguageKa extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'ka';
     }
 
-    public function defaultScript()
+    public function defaultScript(): ScriptInterface
     {
         return new ScriptGeor();
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryGe();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule1();
     }

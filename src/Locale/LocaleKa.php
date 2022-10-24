@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageKa;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageKa;
  */
 class LocaleKa extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'ქართული';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageKa();
     }
 
-    protected function minimumGroupingDigits()
+    protected function minimumGroupingDigits(): int
     {
         return 2;
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,

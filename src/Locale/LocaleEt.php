@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageEt;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleEt - Estonian
@@ -13,32 +14,32 @@ use Fisharebest\Localization\Language\LanguageEt;
  */
 class LocaleEt extends AbstractLocale implements LocaleInterface
 {
-    public function collation()
+    public function collation(): string
     {
         return 'estonian_ci';
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'eesti';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'EESTI';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageEt();
     }
 
-    protected function minimumGroupingDigits()
+    protected function minimumGroupingDigits(): int
     {
         return 3;
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP    => self::NBSP,

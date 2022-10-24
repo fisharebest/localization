@@ -3,8 +3,11 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule2;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Script\ScriptArmn;
+use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Territory\TerritoryAm;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageHy - Representation of the Armenian language.
@@ -15,22 +18,22 @@ use Fisharebest\Localization\Territory\TerritoryAm;
  */
 class LanguageHy extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'hy';
     }
 
-    public function defaultScript()
+    public function defaultScript(): ScriptInterface
     {
         return new ScriptArmn();
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryAm();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule2();
     }

@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageSi;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageSi;
  */
 class LocaleSi extends AbstractLocale implements LocaleInterface
 {
-    public function collation()
+    public function collation(): string
     {
         return 'sinhala_ci';
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'සිංහල';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageSi();
     }

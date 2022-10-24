@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\Territory\TerritoryBi;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageRn - Representation of the Rundi language.
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryBi;
  */
 class LanguageRn extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'rn';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryBi();
     }

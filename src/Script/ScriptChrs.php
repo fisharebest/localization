@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptChrs extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Chrs';
     }
 
-    public function number()
+    public function number(): string
     {
         return '109';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Chorasmian';
     }

@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptCakm extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Cakm';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('𑄶', '𑄷', '𑄸', '𑄹', '𑄺', '𑄻', '𑄼', '𑄽', '𑄾', '𑄿');
     }
 
-    public function number()
+    public function number(): string
     {
         return '349';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Chakma';
     }

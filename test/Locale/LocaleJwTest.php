@@ -24,7 +24,7 @@ class LocaleJwTest extends TestCase
     /**
      * Test the properties
      */
-    public function testProperties()
+    public function testProperties(): void
     {
         $locale = new LocaleJw(); // jw is deprecated - use jv
 

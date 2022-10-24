@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageUg;
 
 /**
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Language\LanguageUg;
  */
 class LocaleUg extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'ئۇيغۇرچە';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageUg();
     }

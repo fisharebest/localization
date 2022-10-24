@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageJmc;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageJmc;
  */
 class LocaleJmc extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Kimachame';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'KIMACHAME';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageJmc();
     }

@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptTelu extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Telu';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('౦', '౧', '౨', '౩', '౪', '౫', '౬', '౭', '౮', '౯');
     }
 
-    public function number()
+    public function number(): string
     {
         return '340';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Telugu';
     }

@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageIt;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageIt;
  */
 class LocaleIt extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'italiano';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ITALIANO';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageIt();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

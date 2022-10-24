@@ -24,7 +24,7 @@ class LocaleGswChTest extends TestCase
     /**
      * Test the properties
      */
-    public function testProperties()
+    public function testProperties(): void
     {
         $locale = new LocaleGswCh();
 

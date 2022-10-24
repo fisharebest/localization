@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageHsb;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleHsb - Upper Sorbian
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageHsb;
  */
 class LocaleHsb extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'hornjoserbšćina';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'HORNJOSERBSCINA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageHsb();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,
@@ -36,7 +37,7 @@ class LocaleHsb extends AbstractLocale implements LocaleInterface
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }

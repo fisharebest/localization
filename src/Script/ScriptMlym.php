@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptMlym extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Mlym';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('൦', '൧', '൨', '൩', '൪', '൫', '൬', '൭', '൮', '൯');
     }
 
-    public function number()
+    public function number(): string
     {
         return '347';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Malayalam';
     }

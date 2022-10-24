@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptKitl extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Kitl';
     }
 
-    public function number()
+    public function number(): string
     {
         return '505';
     }

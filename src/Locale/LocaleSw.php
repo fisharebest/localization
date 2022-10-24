@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageSw;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageSw;
  */
 class LocaleSw extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Kiswahili';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'KISWAHILI';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageSw();
     }

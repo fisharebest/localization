@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageTh;
 
 /**
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Language\LanguageTh;
  */
 class LocaleTh extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'ไทย';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageTh();
     }

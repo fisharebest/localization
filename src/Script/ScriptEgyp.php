@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptEgyp extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Egyp';
     }
 
-    public function number()
+    public function number(): string
     {
         return '050';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Egyptian_Hieroglyphs';
     }

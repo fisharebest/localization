@@ -14,10 +14,10 @@ use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 class Translator
 {
     /** @var array<string,string> An association of English -> translated messages */
-    private $translations;
+    private array $translations;
 
     /** @var PluralRuleInterface */
-    private $plural_rule;
+    private PluralRuleInterface $plural_rule;
 
     /**
      * Create a translator
@@ -25,7 +25,7 @@ class Translator
      * @param array<string,string> $translations
      * @param PluralRuleInterface  $plural_rule
      */
-    public function __construct(array $translations, $plural_rule)
+    public function __construct(array $translations, PluralRuleInterface $plural_rule)
     {
         $this->translations = $translations;
         $this->plural_rule  = $plural_rule;
@@ -39,7 +39,7 @@ class Translator
      *
      * @return string Translated text
      */
-    public function translate($message)
+    public function translate(string $message): string
     {
         if (isset($this->translations[$message])) {
             return $this->translations[$message];
@@ -57,7 +57,7 @@ class Translator
      *
      * @return string Translated text
      */
-    public function translateContext($context, $message)
+    public function translateContext(string $context, string $message): string
     {
         $key = $context . Translation::CONTEXT_SEPARATOR . $message;
         if (isset($this->translations[$key])) {
@@ -77,7 +77,7 @@ class Translator
      *
      * @return string Translated text
      */
-    public function translatePlural($message1, $message2, $number)
+    public function translatePlural(string $message1, string $message2, int $number): string
     {
         $key = $message1 . Translation::PLURAL_SEPARATOR . $message2;
         if (isset($this->translations[$key])) {

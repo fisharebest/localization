@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageHnj;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleHnj - Hmong
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Language\LanguageHnj;
  */
 class LocaleHnj extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return '𖬇𖬰𖬞 𖬌𖬣𖬵';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageHnj();
     }

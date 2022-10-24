@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageWae;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageWae;
  */
 class LocaleWae extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Walser';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'WALSER';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageWae();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::APOSTROPHE,

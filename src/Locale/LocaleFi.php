@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageFi;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleFi - Finnish
@@ -13,27 +14,27 @@ use Fisharebest\Localization\Language\LanguageFi;
  */
 class LocaleFi extends AbstractLocale implements LocaleInterface
 {
-    public function collation()
+    public function collation(): string
     {
         return 'swedish_ci';
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'suomi';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'SUOMI';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageFi();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP    => self::NBSP,
@@ -42,7 +43,7 @@ class LocaleFi extends AbstractLocale implements LocaleInterface
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }

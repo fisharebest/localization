@@ -2,8 +2,10 @@
 
 namespace Fisharebest\Localization\Language;
 
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\PluralRule\PluralRuleManx;
 use Fisharebest\Localization\Territory\TerritoryIm;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageGv - Representation of the Manx language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryIm;
  */
 class LanguageGv extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'gv';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryIm();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRuleManx();
     }

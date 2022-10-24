@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageBg;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleBg - Bulgarian
@@ -13,27 +14,27 @@ use Fisharebest\Localization\Language\LanguageBg;
  */
 class LocaleBg extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'български';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'БЪЛГАРСКИ';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageBg();
     }
 
-    protected function minimumGroupingDigits()
+    protected function minimumGroupingDigits(): int
     {
         return 2;
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,

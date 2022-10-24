@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageMua;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageMua;
  */
 class LocaleMua extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'MUNDAŊ';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'MUNDAN';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageMua();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

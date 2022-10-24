@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageMas;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageMas;
  */
 class LocaleMas extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Maa';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'MAA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageMas();
     }

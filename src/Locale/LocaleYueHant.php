@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Script\ScriptHant;
+use Fisharebest\Localization\Script\ScriptInterface;
 
 /**
  * Class LocaleYueHant - Yue
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Script\ScriptHant;
  */
 class LocaleYueHant extends LocaleYue
 {
-    public function endonym()
+    public function endonym(): string
     {
         return '粤语';
     }
 
-    public function script()
+    public function script(): ScriptInterface
     {
         return new ScriptHant();
     }

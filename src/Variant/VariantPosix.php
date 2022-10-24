@@ -11,7 +11,7 @@ namespace Fisharebest\Localization\Variant;
  */
 class VariantPosix implements VariantInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'posix';
     }

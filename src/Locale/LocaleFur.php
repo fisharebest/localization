@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageFur;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleFur - Friulian
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageFur;
  */
 class LocaleFur extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'furlan';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'FURLAN';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageFur();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

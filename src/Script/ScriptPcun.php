@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptPcun extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Pcun';
     }
 
-    public function number()
+    public function number(): string
     {
         return '015';
     }

@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule0;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Territory\TerritoryCf;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageSg - Representation of the Sango language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryCf;
  */
 class LanguageSg extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'sg';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryCf();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule0();
     }

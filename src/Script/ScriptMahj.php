@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptMahj extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Mahj';
     }
 
-    public function number()
+    public function number(): string
     {
         return '314';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Mahajani';
     }

@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule11;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Territory\TerritoryIe;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageGa - Representation of the Irish language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryIe;
  */
 class LanguageGa extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'ga';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryIe();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule11();
     }

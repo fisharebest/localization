@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryUs;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Territory\TerritoryUs;
  */
 class LocaleEnUs extends LocaleEn
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'American English';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ENGLISH, AMERICAN';
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryUs();
     }

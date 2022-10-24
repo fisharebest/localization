@@ -2,7 +2,9 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageOs;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryRu;
 
 /**
@@ -14,27 +16,27 @@ use Fisharebest\Localization\Territory\TerritoryRu;
  */
 class LocaleOs extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'ирон';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ИРОН';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageOs();
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryRu();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,

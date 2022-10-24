@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Territory;
  */
 class TerritoryPw extends AbstractTerritory implements TerritoryInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'PW';
     }
 
-    public function measurementSystem()
+    public function measurementSystem(): string
     {
         return 'US';
     }

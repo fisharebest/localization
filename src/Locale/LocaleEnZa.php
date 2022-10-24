@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryZa;
 
 /**
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryZa;
  */
 class LocaleEnZa extends LocaleEn
 {
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,
@@ -21,7 +22,7 @@ class LocaleEnZa extends LocaleEn
         );
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryZa();
     }

@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule10;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Territory\TerritoryDe;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageHsb - Representation of the Upper Sorbian language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryDe;
  */
 class LanguageHsb extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'hsb';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryDe();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule10();
     }

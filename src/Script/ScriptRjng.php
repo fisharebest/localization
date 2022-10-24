@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptRjng extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Rjng';
     }
 
-    public function number()
+    public function number(): string
     {
         return '363';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Rejang';
     }

@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageIa;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleIa - Interlingua
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageIa;
  */
 class LocaleIa extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'interlingua';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'INTERLINGUA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageIa();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

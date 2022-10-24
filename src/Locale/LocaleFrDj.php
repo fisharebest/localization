@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryDj;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleFrDj
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryDj;
  */
 class LocaleFrDj extends LocaleFr
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryDj();
     }

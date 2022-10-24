@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryId;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleMsId
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryId;
  */
 class LocaleMsId extends LocaleMs
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryId();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

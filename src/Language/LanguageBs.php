@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule7;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Territory\TerritoryBa;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageBs - Representation of the Bosnian language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryBa;
  */
 class LanguageBs extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'bs';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryBa();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule7();
     }

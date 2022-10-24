@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageHa;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleHa - Hausa
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageHa;
  */
 class LocaleHa extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Hausa';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'HAUSA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageHa();
     }

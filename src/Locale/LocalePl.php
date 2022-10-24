@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguagePl;
 
 /**
@@ -13,32 +14,32 @@ use Fisharebest\Localization\Language\LanguagePl;
  */
 class LocalePl extends AbstractLocale implements LocaleInterface
 {
-    public function collation()
+    public function collation(): string
     {
         return 'polish_ci';
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'polski';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'POLSKI';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguagePl();
     }
 
-    protected function minimumGroupingDigits()
+    protected function minimumGroupingDigits(): int
     {
         return 2;
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,

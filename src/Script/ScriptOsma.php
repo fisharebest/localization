@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptOsma extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Osma';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('𐒠', '𐒡', '𐒢', '𐒣', '𐒤', '𐒥', '𐒦', '𐒧', '𐒨', '𐒩');
     }
 
-    public function number()
+    public function number(): string
     {
         return '260';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Osmanya';
     }

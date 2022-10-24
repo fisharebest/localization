@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptLana extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Lana';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('᪀', '᪁', '᪂', '᪃', '᪄', '᪅', '᪆', '᪇', '᪈', '᪉');
     }
 
-    public function number()
+    public function number(): string
     {
         return '351';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Tai_Tham';
     }

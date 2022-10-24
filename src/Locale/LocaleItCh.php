@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryCh;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleItCh
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryCh;
  */
 class LocaleItCh extends LocaleIt
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryCh();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP => self::APOSTROPHE,

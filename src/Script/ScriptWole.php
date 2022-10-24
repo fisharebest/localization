@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptWole extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Wole';
     }
 
-    public function number()
+    public function number(): string
     {
         return '480';
     }

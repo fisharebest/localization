@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryAx;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleSvAx
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryAx;
  */
 class LocaleSvAx extends LocaleSv
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryAx();
     }

@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptHluw extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Hluw';
     }
 
-    public function number()
+    public function number(): string
     {
         return '080';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Anatolian_Hieroglyphs';
     }

@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageSg;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageSg;
  */
 class LocaleSg extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Sängö';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'SANGO';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageSg();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

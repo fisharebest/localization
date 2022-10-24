@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptTale extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Tale';
     }
 
-    public function number()
+    public function number(): string
     {
         return '353';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Tai_Le';
     }

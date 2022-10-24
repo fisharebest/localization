@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageEl;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleEl - Greek
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageEl;
  */
 class LocaleEl extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Ελληνικά';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ΕΛΛΗΝΙΚΆ';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageEl();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

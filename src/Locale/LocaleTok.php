@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageTok;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageTok;
  */
 class LocaleTok extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Toki Pona';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'TOKI PONA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageTok();
     }

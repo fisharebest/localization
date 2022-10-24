@@ -21,7 +21,7 @@ class Iso15924Test extends TestCase
      *
      * @medium
      */
-    public function testIso15924()
+    public function testIso15924(): void
     {
         $iso15924 = file(__DIR__ . '/data/iso15924-2021-12-03.txt', FILE_IGNORE_NEW_LINES);
         $iso15924 = preg_grep('/^[A-Z][a-z]{3};/', $iso15924);

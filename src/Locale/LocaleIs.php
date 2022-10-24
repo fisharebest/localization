@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageIs;
 
 /**
@@ -13,27 +14,27 @@ use Fisharebest\Localization\Language\LanguageIs;
  */
 class LocaleIs extends AbstractLocale implements LocaleInterface
 {
-    public function collation()
+    public function collation(): string
     {
         return 'icelandic_ci';
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'íslenska';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ISLENSKA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageIs();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

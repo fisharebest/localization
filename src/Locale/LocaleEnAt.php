@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryAt;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleEnAt - English
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryAt;
  */
 class LocaleEnAt extends LocaleEn
 {
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,
@@ -21,12 +22,12 @@ class LocaleEnAt extends LocaleEn
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryAt();
     }

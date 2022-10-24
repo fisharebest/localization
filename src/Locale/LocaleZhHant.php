@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Script\ScriptHant;
+use Fisharebest\Localization\Script\ScriptInterface;
 
 /**
  * Class LocaleZhHant - Traditional Chinese
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Script\ScriptHant;
  */
 class LocaleZhHant extends LocaleZh
 {
-    public function endonym()
+    public function endonym(): string
     {
         return '繁體中文';
     }
 
-    protected function minimumGroupingDigits()
+    protected function minimumGroupingDigits(): int
     {
         return 3;
     }
 
-    public function script()
+    public function script(): ScriptInterface
     {
         return new ScriptHant();
     }

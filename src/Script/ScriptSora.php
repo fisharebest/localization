@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptSora extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Sora';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('𑃰', '𑃱', '𑃲', '𑃳', '𑃴', '𑃵', '𑃶', '𑃷', '𑃸', '𑃹');
     }
 
-    public function number()
+    public function number(): string
     {
         return '398';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Sora_Sompeng';
     }

@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryBy;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleRuBy
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryBy;
  */
 class LocaleRuBy extends LocaleRu
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryBy();
     }

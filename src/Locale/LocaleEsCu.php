@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryCu;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleEsCu
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryCu;
  */
 class LocaleEsCu extends LocaleEs
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryCu();
     }

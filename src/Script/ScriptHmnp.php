@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptHmnp extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Hmnp';
     }
 
-    public function number()
+    public function number(): string
     {
         return '451';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Nyiakeng_Puachue_Hmong';
     }

@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageNaq;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageNaq;
  */
 class LocaleNaq extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Khoekhoegowab';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'KHOEKHOEGOWAB';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageNaq();
     }

@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryBo;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleQuBo
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryBo;
  */
 class LocaleQuBo extends LocaleQu
 {
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,
@@ -21,7 +22,7 @@ class LocaleQuBo extends LocaleQu
         );
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryBo();
     }

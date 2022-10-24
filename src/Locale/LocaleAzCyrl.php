@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Script\ScriptCyrl;
+use Fisharebest\Localization\Script\ScriptInterface;
 
 /**
  * Class LocaleAzCyrl
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Script\ScriptCyrl;
  */
 class LocaleAzCyrl extends LocaleAz
 {
-    public function script()
+    public function script(): ScriptInterface
     {
         return new ScriptCyrl();
     }

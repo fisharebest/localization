@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryQa;
 
 /**
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryQa;
  */
 class LocaleArQa extends LocaleAr
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryQa();
     }

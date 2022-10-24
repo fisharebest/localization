@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryMx;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Territory\TerritoryMx;
  */
 class LocaleEsMx extends LocaleEs
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'español de México';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ESPANOL DE MEXICO';
     }
 
-    public function percentFormat()
+    public function percentFormat(): string
     {
         return self::PLACEHOLDER . self::PERCENT;
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryMx();
     }

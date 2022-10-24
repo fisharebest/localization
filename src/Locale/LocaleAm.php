@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageAm;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleAm - Amharic
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Language\LanguageAm;
  */
 class LocaleAm extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'አማርኛ';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageAm();
     }

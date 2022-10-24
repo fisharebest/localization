@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptMong extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Mong';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('᠐', '᠑', '᠒', '᠓', '᠔', '᠕', '᠖', '᠗', '᠘', '᠙');
     }
 
-    public function number()
+    public function number(): string
     {
         return '145';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Mongolian';
     }

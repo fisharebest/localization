@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptTaml extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Taml';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('௦', '௧', '௨', '௩', '௪', '௫', '௬', '௭', '௮', '௯');
     }
 
-    public function number()
+    public function number(): string
     {
         return '346';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Tamil';
     }

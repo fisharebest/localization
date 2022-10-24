@@ -12,12 +12,12 @@ namespace Fisharebest\Localization\PluralRule;
  */
 class PluralRuleWelsh implements PluralRuleInterface
 {
-    public function plurals()
+    public function plurals(): int
     {
         return 4;
     }
 
-    public function plural($number)
+    public function plural(int $number): int
     {
         $number = abs($number);
 

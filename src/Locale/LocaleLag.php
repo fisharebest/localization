@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageLag;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageLag;
  */
 class LocaleLag extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Kɨlaangi';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'KILAANGI';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageLag();
     }

@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptHano extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Hano';
     }
 
-    public function number()
+    public function number(): string
     {
         return '371';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Hanunoo';
     }

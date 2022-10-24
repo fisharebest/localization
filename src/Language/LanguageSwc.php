@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\Territory\TerritoryCd;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageSwc - Representation of the Congo Swahili language.
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryCd;
  */
 class LanguageSwc extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'swc';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryCd();
     }

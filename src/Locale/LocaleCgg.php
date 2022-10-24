@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageCgg;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleCgg - Chiga
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageCgg;
  */
 class LocaleCgg extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Rukiga';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'RUKIGA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageCgg();
     }

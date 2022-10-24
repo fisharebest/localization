@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryAt;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleDeAt - Austrian German
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Territory\TerritoryAt;
  */
 class LocaleDeAt extends LocaleDe
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Österreichisches Deutsch';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'OSTERREICHISCHES DEUTSCH';
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,
@@ -31,7 +32,7 @@ class LocaleDeAt extends LocaleDe
         );
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryAt();
     }

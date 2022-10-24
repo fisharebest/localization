@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageMi;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageMi;
  */
 class LocaleMi extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Māori';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'MĀORI';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageMi();
     }

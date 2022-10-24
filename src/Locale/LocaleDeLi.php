@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryLi;
 
 /**
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryLi;
  */
 class LocaleDeLi extends LocaleDe
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryLi();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::APOSTROPHE,
@@ -26,7 +27,7 @@ class LocaleDeLi extends LocaleDe
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::PERCENT;
     }

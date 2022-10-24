@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Script\ScriptLatn;
 
 /**
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Script\ScriptLatn;
  */
 class LocaleHiLatn extends LocaleHi
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Hindi';
     }
 
-    public function script()
+    public function script(): ScriptInterface
     {
         return new ScriptLatn();
     }

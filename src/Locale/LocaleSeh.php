@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageSeh;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageSeh;
  */
 class LocaleSeh extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'sena';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'SENA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageSeh();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

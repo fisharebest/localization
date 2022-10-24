@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageDav;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleDav - Taita
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageDav;
  */
 class LocaleDav extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Kitaita';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'KITAITA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageDav();
     }

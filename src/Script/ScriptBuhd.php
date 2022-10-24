@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptBuhd extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Buhd';
     }
 
-    public function number()
+    public function number(): string
     {
         return '372';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Buhid';
     }

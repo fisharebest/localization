@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Script\ScriptLatn;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Script\ScriptLatn;
  */
 class LocaleIuLatn extends LocaleIu
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Inuktitut';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'INUKTITUT';
     }
 
-    public function script()
+    public function script(): ScriptInterface
     {
         return new ScriptLatn();
     }

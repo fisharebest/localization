@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageGuw;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleGuw
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageGuw;
  */
 class LocaleGuw extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Gun';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'GUN';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageGuw();
     }

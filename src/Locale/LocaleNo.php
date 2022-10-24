@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageNo;
 
 /**
@@ -13,27 +14,27 @@ use Fisharebest\Localization\Language\LanguageNo;
  */
 class LocaleNo extends AbstractLocale implements LocaleInterface
 {
-    public function collation()
+    public function collation(): string
     {
         return 'danish_ci';
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'norsk';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'NORSK';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageNo();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::DECIMAL  => self::COMMA,
@@ -42,7 +43,7 @@ class LocaleNo extends AbstractLocale implements LocaleInterface
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }

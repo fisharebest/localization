@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageAsa;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleAsa - Asu
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageAsa;
  */
 class LocaleAsa extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Kipare';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'KIPARE';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageAsa();
     }

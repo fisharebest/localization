@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptDogr extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Dogr';
     }
 
-    public function number()
+    public function number(): string
     {
         return '328';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Dogra';
     }

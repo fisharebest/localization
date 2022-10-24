@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptNkdb extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Nkdb';
     }
 
-    public function number()
+    public function number(): string
     {
         return '085';
     }

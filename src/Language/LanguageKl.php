@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule1;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Territory\TerritoryGl;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageKl - Representation of the Kalaallisut language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryGl;
  */
 class LanguageKl extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'kl';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryGl();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule1();
     }

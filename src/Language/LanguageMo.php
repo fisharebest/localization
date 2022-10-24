@@ -2,9 +2,6 @@
 
 namespace Fisharebest\Localization\Language;
 
-use Fisharebest\Localization\PluralRule\PluralRule5;
-use Fisharebest\Localization\Territory\TerritoryMd;
-
 /**
  * Class LanguageMo - Representation of the Moldovan language (deprecated).
  *

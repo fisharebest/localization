@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageEu;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleEu - Basque
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageEu;
  */
 class LocaleEu extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'euskara';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'EUSKARA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageEu();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP    => self::DOT,
@@ -37,7 +38,7 @@ class LocaleEu extends AbstractLocale implements LocaleInterface
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PERCENT . self::NBSP . '%s';
     }

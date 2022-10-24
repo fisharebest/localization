@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Territory;
  */
 class TerritoryPk extends AbstractTerritory implements TerritoryInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'PK';
     }
 
-    public function firstDay()
+    public function firstDay(): int
     {
         return 0;
     }

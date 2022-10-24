@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageNds;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageNds;
  */
 class LocaleNds extends LocaleDe
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Neddersass’sch';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'NEDDERSASS’SCH';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageNds();
     }

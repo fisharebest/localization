@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptLinb extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Linb';
     }
 
-    public function number()
+    public function number(): string
     {
         return '401';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Linear_B';
     }

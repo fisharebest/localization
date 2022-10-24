@@ -3,8 +3,11 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule0;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
+use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Script\ScriptJava;
 use Fisharebest\Localization\Territory\TerritoryId;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageJv - Representation of the Javanese language.
@@ -15,22 +18,22 @@ use Fisharebest\Localization\Territory\TerritoryId;
  */
 class LanguageJv extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'jv';
     }
 
-    public function defaultScript()
+    public function defaultScript(): ScriptInterface
     {
         return new ScriptJava();
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryId();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule0();
     }

@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule1;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Territory\TerritoryGb;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageAng - Representation of the Anglo-Saxon / Old-English language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryGb;
  */
 class LanguageAng extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'ang';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryGb();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule1();
     }

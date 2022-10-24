@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\Territory\TerritoryCd;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageLu - Representation of the Luba-Katanga language.
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryCd;
  */
 class LanguageLu extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'lu';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryCd();
     }

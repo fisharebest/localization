@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageGa;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleGa - Irish
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageGa;
  */
 class LocaleGa extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Gaeilge';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'GAEILGE';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageGa();
     }

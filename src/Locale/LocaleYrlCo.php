@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryCo;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleYrlCo - Nheengatu
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryCo;
  */
 class LocaleYrlCo extends LocaleYrl
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryCo();
     }

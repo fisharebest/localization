@@ -21,7 +21,7 @@ class LanguageLtTest extends TestCase
     /**
      * Test the properties
      */
-    public function testProperties()
+    public function testProperties(): void
     {
         $language = new LanguageLt();
 

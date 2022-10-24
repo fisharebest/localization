@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Script\ScriptLatn;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Script\ScriptLatn;
  */
 class LocaleJvLatn extends LocaleJv
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Basa Jawa';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'BASA JAWA';
     }
 
-    public function script()
+    public function script(): ScriptInterface
     {
         return new ScriptLatn();
     }

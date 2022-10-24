@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\Territory\TerritoryBr;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageKgp - Representation of the Kaingang language.
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryBr;
  */
 class LanguageKgp extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'kgp';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryBr();
     }

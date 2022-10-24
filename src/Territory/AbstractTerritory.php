@@ -14,7 +14,7 @@ abstract class AbstractTerritory
     /**
      * @return int
      */
-    public function firstDay()
+    public function firstDay(): int
     {
         return 1;
     }
@@ -22,7 +22,7 @@ abstract class AbstractTerritory
     /**
      * @return string
      */
-    public function measurementSystem()
+    public function measurementSystem(): string
     {
         return 'metric';
     }
@@ -30,7 +30,7 @@ abstract class AbstractTerritory
     /**
      * @return string
      */
-    public function paperSize()
+    public function paperSize(): string
     {
         return 'A4';
     }
@@ -38,7 +38,7 @@ abstract class AbstractTerritory
     /**
      * @return int
      */
-    public function weekendStart()
+    public function weekendStart(): int
     {
         return 6;
     }
@@ -46,7 +46,7 @@ abstract class AbstractTerritory
     /**
      * @return int
      */
-    public function weekendEnd()
+    public function weekendEnd(): int
     {
         return 0;
     }

@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptMymr extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Mymr';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉');
     }
 
-    public function number()
+    public function number(): string
     {
         return '350';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Myanmar';
     }

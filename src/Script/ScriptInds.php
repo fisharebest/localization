@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptInds extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Inds';
     }
 
-    public function number()
+    public function number(): string
     {
         return '610';
     }

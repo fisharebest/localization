@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptArmi extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Armi';
     }
 
-    public function number()
+    public function number(): string
     {
         return '124';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Imperial_Aramaic';
     }

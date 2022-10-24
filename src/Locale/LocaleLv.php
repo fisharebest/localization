@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageLv;
 
 /**
@@ -13,32 +14,32 @@ use Fisharebest\Localization\Language\LanguageLv;
  */
 class LocaleLv extends AbstractLocale implements LocaleInterface
 {
-    public function collation()
+    public function collation(): string
     {
         return 'latvian_ci';
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'latviešu';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'LATVIESU';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageLv();
     }
 
-    protected function minimumGroupingDigits()
+    protected function minimumGroupingDigits(): int
     {
         return 3;
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,

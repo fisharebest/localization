@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageXog;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageXog;
  */
 class LocaleXog extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Olusoga';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'OLUSOGA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageXog();
     }

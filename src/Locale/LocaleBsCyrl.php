@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Script\ScriptCyrl;
+use Fisharebest\Localization\Script\ScriptInterface;
 
 /**
  * Class LocaleBsCyrl
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Script\ScriptCyrl;
  */
 class LocaleBsCyrl extends LocaleBs
 {
-    public function script()
+    public function script(): ScriptInterface
     {
         return new ScriptCyrl();
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::PERCENT;
     }

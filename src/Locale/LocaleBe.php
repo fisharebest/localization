@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageBe;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleBe - Belarusian
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageBe;
  */
 class LocaleBe extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'беларуская';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'БЕЛАРУСКАЯ';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageBe();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,
@@ -36,7 +37,7 @@ class LocaleBe extends AbstractLocale implements LocaleInterface
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }

@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageTwq;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageTwq;
  */
 class LocaleTwq extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Tasawaq senni';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'TASAWAQ SENNI';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageTwq();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP => self::NBSP,

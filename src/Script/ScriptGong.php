@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptGong extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Gong';
     }
 
-    public function number()
+    public function number(): string
     {
         return '312';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Gunjala_Gondi';
     }

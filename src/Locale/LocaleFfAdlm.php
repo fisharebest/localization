@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Script\ScriptAdlm;
+use Fisharebest\Localization\Script\ScriptInterface;
 
 /**
  * Class LocaleFfAdlm - Fulah
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Script\ScriptAdlm;
  */
 class LocaleFfAdlm extends LocaleFf
 {
-    public function endonym()
+    public function endonym(): string
     {
         return '𞤊𞤵𞤤𞤬𞤵𞤤𞤣𞤫';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return '𞤊𞤵𞤤𞤬𞤵𞤤𞤣𞤫';
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::DECIMAL => self::DOT,
@@ -31,7 +32,7 @@ class LocaleFfAdlm extends LocaleFf
         );
     }
 
-    public function script()
+    public function script(): ScriptInterface
     {
         return new ScriptAdlm();
     }

@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryBe;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleNlBe - Flemish
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Territory\TerritoryBe;
  */
 class LocaleNlBe extends LocaleNl
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Vlaams';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'VLAAMS';
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryBe();
     }

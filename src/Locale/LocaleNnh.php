@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageNnh;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageNnh;
  */
 class LocaleNnh extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Shwóŋò ngiembɔɔn';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'SHWONO NGIEMBOON';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageNnh();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

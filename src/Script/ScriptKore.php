@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptKore extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Kore';
     }
 
-    public function number()
+    public function number(): string
     {
         return '287';
     }

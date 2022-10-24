@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptBeng extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Beng';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯');
     }
 
-    public function number()
+    public function number(): string
     {
         return '325';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Bengali';
     }

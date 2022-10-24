@@ -2,7 +2,9 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageOsa;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryUs;
 
 /**
@@ -14,22 +16,22 @@ use Fisharebest\Localization\Territory\TerritoryUs;
  */
 class LocaleOsa extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Osage';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'OSAGE';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageOsa();
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryUS();
     }

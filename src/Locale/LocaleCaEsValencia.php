@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Variant\VariantInterface;
 use Fisharebest\Localization\Variant\VariantValencia;
 
 /**
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Variant\VariantValencia;
  */
 class LocaleCaEsValencia extends LocaleCaEs
 {
-    public function variant()
+    public function variant(): ?VariantInterface
     {
         return new VariantValencia();
     }

@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptBlis extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Blis';
     }
 
-    public function number()
+    public function number(): string
     {
         return '550';
     }

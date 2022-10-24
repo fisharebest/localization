@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptSylo extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Sylo';
     }
 
-    public function number()
+    public function number(): string
     {
         return '316';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Syloti_Nagri';
     }

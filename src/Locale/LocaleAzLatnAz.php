@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryAz;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleAzLatnAz
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryAz;
  */
 class LocaleAzLatnAz extends LocaleAzLatn
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryAz();
     }

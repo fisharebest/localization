@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageSc;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageSc;
  */
 class LocaleSc extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'sardu';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'SARDU';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageSc();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::DECIMAL => self::COMMA,

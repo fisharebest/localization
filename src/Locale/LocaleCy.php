@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageCy;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleCy - Welsh
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageCy;
  */
 class LocaleCy extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Cymraeg';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'CYMRAEG';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageCy();
     }

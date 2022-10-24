@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\Territory\TerritoryEt;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageAa - Representation of the Afar language.
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryEt;
  */
 class LanguageAa extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'aa';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryEt();
     }

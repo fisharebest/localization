@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryIn;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleEnIn
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryIn;
  */
 class LocaleEnIn extends LocaleEn
 {
-    protected function digitsGroup()
+    protected function digitsGroup(): int
     {
         return 2;
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryIn();
     }

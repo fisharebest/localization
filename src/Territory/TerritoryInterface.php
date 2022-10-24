@@ -16,7 +16,7 @@ interface TerritoryInterface
      *
      * @return string
      */
-    public function code();
+    public function code(): string;
 
     /**
      * What is the first day of the week?
@@ -26,21 +26,21 @@ interface TerritoryInterface
      *
      * @return int
      */
-    public function firstDay();
+    public function firstDay(): int;
 
     /**
      * Does this territory prefer 'metric', 'UK' or 'US' measurements.
      *
      * @return string
      */
-    public function measurementSystem();
+    public function measurementSystem(): string;
 
     /**
      * Does this territory prefer 'A4' or 'US-Letter' paper.
      *
      * @return string
      */
-    public function paperSize();
+    public function paperSize(): string;
 
     /**
      * What is the first day of the weekend?
@@ -50,7 +50,7 @@ interface TerritoryInterface
      *
      * @return int
      */
-    public function weekendStart();
+    public function weekendStart(): int;
 
     /**
      * What is the last day of the weekend?
@@ -60,5 +60,5 @@ interface TerritoryInterface
      *
      * @return int
      */
-    public function weekendEnd();
+    public function weekendEnd(): int;
 }

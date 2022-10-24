@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Script\ScriptBeng;
+use Fisharebest\Localization\Script\ScriptInterface;
 
 /**
  * Class LocaleMniBeng - Bengali
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Script\ScriptBeng;
  */
 class LocaleMniBeng extends LocaleMni
 {
-    public function script()
+    public function script(): ScriptInterface
     {
         return new ScriptBeng();
     }

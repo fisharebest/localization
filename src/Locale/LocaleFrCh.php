@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryCh;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleFrCh - Swiss French
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Territory\TerritoryCh;
  */
 class LocaleFrCh extends LocaleFr
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'français suisse';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'FRANCAIS SUISSE';
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::PERCENT;
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryCh();
     }

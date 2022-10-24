@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptGran extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Gran';
     }
 
-    public function number()
+    public function number(): string
     {
         return '343';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Grantha';
     }

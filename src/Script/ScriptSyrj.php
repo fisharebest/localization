@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptSyrj extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Syrj';
     }
 
-    public function number()
+    public function number(): string
     {
         return '137';
     }

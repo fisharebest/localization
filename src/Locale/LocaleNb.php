@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageNb;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageNb;
  */
 class LocaleNb extends AbstractLocale implements LocaleInterface
 {
-    public function collation()
+    public function collation(): string
     {
         return 'danish_ci';
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'norsk bokmål';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'NORSK BOKMAL';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageNb();
     }

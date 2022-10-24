@@ -21,7 +21,7 @@ class LanguageKdeTest extends TestCase
     /**
      * Test the properties
      */
-    public function testProperties()
+    public function testProperties(): void
     {
         $language = new LanguageKde();
 

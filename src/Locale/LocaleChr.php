@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageChr;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleChr - Cherokee
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Language\LanguageChr;
  */
 class LocaleChr extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'ᏣᎳᎩ';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageChr();
     }

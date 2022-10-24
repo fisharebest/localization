@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryAe;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleArAe
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritoryAe;
  */
 class LocaleArAe extends LocaleAr
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryAe();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP    => self::COMMA,
@@ -27,7 +28,7 @@ class LocaleArAe extends LocaleAr
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::LTR_MARK . self::PERCENT . self::LTR_MARK;
     }

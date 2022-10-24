@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptPalm extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Palm';
     }
 
-    public function number()
+    public function number(): string
     {
         return '126';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Palmyrene';
     }

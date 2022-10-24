@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageEs;
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Territory\TerritoryEs;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleEs - Spanish
@@ -14,37 +16,37 @@ use Fisharebest\Localization\Territory\TerritoryEs;
  */
 class LocaleEs extends AbstractLocale implements LocaleInterface
 {
-    public function collation()
+    public function collation(): string
     {
         return 'spanish_ci';
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'español';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ESPANOL';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageEs();
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryEs();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

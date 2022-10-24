@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageLo;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageLo;
  */
 class LocaleLo extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'ລາວ';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageLo();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

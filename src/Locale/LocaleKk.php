@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageKk;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageKk;
  */
 class LocaleKk extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'қазақ тілі';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ҚАЗАҚ ТІЛІ';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageKk();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,

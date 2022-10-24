@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptLepc extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Lepc';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('᱀', '᱁', '᱂', '᱃', '᱄', '᱅', '᱆', '᱇', '᱈', '᱉');
     }
 
-    public function number()
+    public function number(): string
     {
         return '335';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Lepcha';
     }

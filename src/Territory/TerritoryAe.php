@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Territory;
  */
 class TerritoryAe extends AbstractTerritory implements TerritoryInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'AE';
     }
 
-    public function firstDay()
+    public function firstDay(): int
     {
         return 6;
     }
 
-    public function weekendStart()
+    public function weekendStart(): int
     {
         return 5;
     }
 
-    public function weekendEnd()
+    public function weekendEnd(): int
     {
         return 6;
     }

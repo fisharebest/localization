@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryCr;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleEsCr
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryCr;
  */
 class LocaleEsCr extends LocaleEs
 {
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,
@@ -21,7 +22,7 @@ class LocaleEsCr extends LocaleEs
         );
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryCr();
     }

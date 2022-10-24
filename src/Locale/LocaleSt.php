@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageSt;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageSt;
  */
 class LocaleSt extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Sesotho';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'SESOTHO';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageSt();
     }

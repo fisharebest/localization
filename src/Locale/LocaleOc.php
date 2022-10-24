@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageOc;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageOc;
  */
 class LocaleOc extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'occitan';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'OCCITAN';
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::DECIMAL => self::COMMA,
@@ -31,12 +32,12 @@ class LocaleOc extends AbstractLocale implements LocaleInterface
          );
     }
 
-    public function percentFormat()
+    public function percentFormat(): string
     {
         return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageOc();
     }

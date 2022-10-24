@@ -11,7 +11,7 @@ namespace Fisharebest\Localization\Locale;
  */
 class LocalePtPt extends LocalePt
 {
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,

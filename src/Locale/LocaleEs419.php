@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\Territory419;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleEs419 - Latin American Spanish
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Territory\Territory419;
  */
 class LocaleEs419 extends LocaleEs
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'español latinoamericano';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ESPANOL LATINOAMERICANO';
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::COMMA,
@@ -31,7 +32,7 @@ class LocaleEs419 extends LocaleEs
         );
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new Territory419();
     }

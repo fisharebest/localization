@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageBal;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleBal - Baluchi
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Language\LanguageBal;
  */
 class LocaleBal extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Tok Pisin';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageBal();
     }

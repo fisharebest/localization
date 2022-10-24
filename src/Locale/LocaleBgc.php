@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageBgc;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleBgc - Haryanvi
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageBgc;
  */
 class LocaleBgc extends AbstractLocale implements LocaleInterface
 {
-    protected function digitsGroup()
+    protected function digitsGroup(): int
     {
         return 2;
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'हरियाणवी';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageBgc();
     }

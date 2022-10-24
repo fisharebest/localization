@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageSwc;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageSwc;
  */
 class LocaleSwc extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Kiswahili ya Kongo';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'KISWAHILI YA KONGO';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageSwc();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

@@ -14,12 +14,12 @@ namespace Fisharebest\Localization\PluralRule;
  */
 class PluralRule12 implements PluralRuleInterface
 {
-    public function plurals()
+    public function plurals(): int
     {
         return 6;
     }
 
-    public function plural($number)
+    public function plural(int $number): int
     {
         $number = abs($number);
 

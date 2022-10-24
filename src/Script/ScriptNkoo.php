@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptNkoo extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Nkoo';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('߀', '߁', '߂', '߃', '߄', '߅', '߆', '߇', '߈', '߉');
     }
 
-    public function number()
+    public function number(): string
     {
         return '165';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Nko';
     }

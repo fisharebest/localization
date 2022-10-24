@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageKkj;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageKkj;
  */
 class LocaleKkj extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'kakɔ';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'KAKO';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageKkj();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

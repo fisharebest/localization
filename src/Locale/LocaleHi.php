@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageHi;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleHi - Hindi
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageHi;
  */
 class LocaleHi extends AbstractLocale implements LocaleInterface
 {
-    protected function digitsGroup()
+    protected function digitsGroup(): int
     {
         return 2;
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'हिन्दी';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageHi();
     }

@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptYiii extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Yiii';
     }
 
-    public function number()
+    public function number(): string
     {
         return '460';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Yi';
     }

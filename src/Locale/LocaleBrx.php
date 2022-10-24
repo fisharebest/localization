@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageBrx;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleBrx - Bodo
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageBrx;
  */
 class LocaleBrx extends AbstractLocale implements LocaleInterface
 {
-    protected function digitsGroup()
+    protected function digitsGroup(): int
     {
         return 2;
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'बर’';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageBrx();
     }

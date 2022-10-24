@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptMani extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Mani';
     }
 
-    public function number()
+    public function number(): string
     {
         return '139';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Manichaean';
     }

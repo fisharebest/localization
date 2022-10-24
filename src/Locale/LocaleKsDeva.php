@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Script\ScriptDeva;
+use Fisharebest\Localization\Script\ScriptInterface;
 
 /**
  * Class LocaleKsDeva - Kashmiri
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Script\ScriptDeva;
  */
 class LocaleKsDeva extends LocaleKs
 {
-    public function direction()
+    public function direction(): string
     {
         return 'rtl';
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'कॉशुर';
     }
 
-    public function script()
+    public function script(): ScriptInterface
     {
         return new ScriptDeva();
     }

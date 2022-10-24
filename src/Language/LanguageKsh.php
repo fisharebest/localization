@@ -2,8 +2,10 @@
 
 namespace Fisharebest\Localization\Language;
 
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\PluralRule\PluralRuleZeroOneOther;
 use Fisharebest\Localization\Territory\TerritoryDe;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageKsh - Representation of the Kölsch language.
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryDe;
  */
 class LanguageKsh extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'ksh';
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryDe();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRuleZeroOneOther();
     }

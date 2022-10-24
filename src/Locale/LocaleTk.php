@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageTk;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageTk;
  */
 class LocaleTk extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'türkmen dili';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'TURKMEN DILI';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageTk();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,
@@ -36,7 +37,7 @@ class LocaleTk extends AbstractLocale implements LocaleInterface
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }

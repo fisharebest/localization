@@ -11,17 +11,17 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptPerm extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Perm';
     }
 
-    public function number()
+    public function number(): string
     {
         return '227';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Old_Permic';
     }

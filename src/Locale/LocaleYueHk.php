@@ -2,8 +2,10 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageYue;
 use Fisharebest\Localization\Territory\TerritoryHk;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleYueHk - Chinese
@@ -14,17 +16,17 @@ use Fisharebest\Localization\Territory\TerritoryHk;
  */
 class LocaleYueHk extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return '粵語';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageYue();
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryHk();
     }

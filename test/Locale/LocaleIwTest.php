@@ -24,7 +24,7 @@ class LocaleIwTest extends TestCase
     /**
      * Test the properties
      */
-    public function testProperties()
+    public function testProperties(): void
     {
         $locale = new LocaleIw(); // iw is deprecated - use he
 

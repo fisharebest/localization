@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageFrr;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleFrr - North Frisian
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageFrr;
  */
 class LocaleFrr extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Nordfriisk';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'NORDFRIISK';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageFrr();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::DECIMAL => self::COMMA,

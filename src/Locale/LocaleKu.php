@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageKu;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageKu;
  */
 class LocaleKu extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'kurdî';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'KURDI';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageKu();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,
@@ -36,7 +37,7 @@ class LocaleKu extends AbstractLocale implements LocaleInterface
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PERCENT . '%s';
     }

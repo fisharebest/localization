@@ -21,7 +21,7 @@ abstract class AbstractLanguage
     /**
      * @return TerritoryInterface
      */
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new Territory001();
     }
@@ -29,7 +29,7 @@ abstract class AbstractLanguage
     /**
      * @return ScriptInterface
      */
-    public function defaultScript()
+    public function defaultScript(): ScriptInterface
     {
         return new ScriptLatn();
     }
@@ -37,7 +37,7 @@ abstract class AbstractLanguage
     /**
      * @return PluralRuleInterface
      */
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRuleUnknown();
     }

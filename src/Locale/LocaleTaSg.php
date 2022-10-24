@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritorySg;
 
 /**
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Territory\TerritorySg;
  */
 class LocaleTaSg extends LocaleTa
 {
-    protected function digitsGroup()
+    protected function digitsGroup(): int
     {
         return 3;
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritorySg();
     }

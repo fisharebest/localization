@@ -48,7 +48,7 @@ abstract class AbstractLocale
      *
      * @return string
      */
-    public function code()
+    public function code(): string
     {
         $code   = $this->language()->code() . '_' . $this->territory()->code();
         $script = $this->script()->unicodeName();
@@ -75,7 +75,7 @@ abstract class AbstractLocale
      * @link http://dev.mysql.com/doc/refman/5.7/en/charset-unicode-sets.html
      * @return string
      */
-    public function collation()
+    public function collation(): string
     {
         return 'unicode_ci';
     }
@@ -87,7 +87,7 @@ abstract class AbstractLocale
      *
      * @return string
      */
-    public function digits($string)
+    public function digits(string $string): string
     {
         return strtr($string, $this->numberSymbols() + $this->numerals());
     }
@@ -97,7 +97,7 @@ abstract class AbstractLocale
      *
      * @return int
      */
-    protected function digitsFirstGroup()
+    protected function digitsFirstGroup(): int
     {
         return 3;
     }
@@ -107,7 +107,7 @@ abstract class AbstractLocale
      *
      * @return int
      */
-    protected function digitsGroup()
+    protected function digitsGroup(): int
     {
         return 3;
     }
@@ -119,7 +119,7 @@ abstract class AbstractLocale
      *
      * @return string “ltr” or “rtl”
      */
-    public function direction()
+    public function direction(): string
     {
         return $this->script()->direction();
     }
@@ -130,7 +130,7 @@ abstract class AbstractLocale
      *
      * @return string
      */
-    abstract public function endonym();
+    abstract public function endonym(): string;
 
     /**
      * A sortable version of the locale name.  For example, “British English”
@@ -140,7 +140,7 @@ abstract class AbstractLocale
      *
      * @return string
      */
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return $this->endonym();
     }
@@ -150,7 +150,7 @@ abstract class AbstractLocale
      *
      * @return string e.g. lang="ar" dir="rtl"
      */
-    public function htmlAttributes()
+    public function htmlAttributes(): string
     {
         $direction = $this->direction();
 
@@ -166,7 +166,7 @@ abstract class AbstractLocale
      *
      * @return LanguageInterface
      */
-    abstract public function language();
+    abstract public function language(): LanguageInterface;
 
     /**
      * The IETF language tag for the locale.  Examples include
@@ -174,7 +174,7 @@ abstract class AbstractLocale
      *
      * @return string
      */
-    public function languageTag()
+    public function languageTag(): string
     {
         $language_tag = $this->language()->code();
         if ($this->script()->code() !== $this->language()->defaultScript()->code()) {
@@ -195,7 +195,7 @@ abstract class AbstractLocale
      *
      * @return int
      */
-    protected function minimumGroupingDigits()
+    protected function minimumGroupingDigits(): int
     {
         return 1;
     }
@@ -203,11 +203,11 @@ abstract class AbstractLocale
     /**
      * Convert (Hindu-Arabic) digits into a localized form
      *
-     * @param int|float $number The number to be localized
+     * @param float|int $number The number to be localized
      *
      * @return string
      */
-    public function number($number)
+    public function number(float|int $number): string
     {
         if ($number < 0) {
             $number   = -$number;
@@ -240,7 +240,7 @@ abstract class AbstractLocale
      *
      * @return array<string>
      */
-    protected function numberSymbols()
+    protected function numberSymbols(): array
     {
         return array();
     }
@@ -248,9 +248,9 @@ abstract class AbstractLocale
     /**
      * The numerals (0123456789) used by this locale.
      *
-     * @return array<string>
+     * @return array<int,string>
      */
-    protected function numerals()
+    protected function numerals(): array
     {
         return $this->script()->numerals();
     }
@@ -258,11 +258,11 @@ abstract class AbstractLocale
     /**
      * Convert (Hindu-Arabic) digits into a localized form
      *
-     * @param float $number The number to be localized
+     * @param float|int $number The number to be localized
      *
      * @return string
      */
-    public function percent($number)
+    public function percent(float|int $number): string
     {
         return sprintf($this->percentFormat(), $this->number($number * 100.0));
     }
@@ -272,7 +272,7 @@ abstract class AbstractLocale
      *
      * @return string
      */
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::PERCENT;
     }
@@ -282,7 +282,7 @@ abstract class AbstractLocale
      *
      * @return PluralRuleInterface
      */
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return $this->language()->pluralRule();
     }
@@ -292,7 +292,7 @@ abstract class AbstractLocale
      *
      * @return ScriptInterface
      */
-    public function script()
+    public function script(): ScriptInterface
     {
         return $this->language()->defaultScript();
     }
@@ -302,7 +302,7 @@ abstract class AbstractLocale
      *
      * @return TerritoryInterface
      */
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return $this->language()->defaultTerritory();
     }
@@ -312,7 +312,7 @@ abstract class AbstractLocale
      *
      * @return VariantInterface|null
      */
-    public function variant()
+    public function variant(): ?VariantInterface
     {
         return null;
     }

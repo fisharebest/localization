@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageNqo;
 
 /**
@@ -13,12 +14,12 @@ use Fisharebest\Localization\Language\LanguageNqo;
  */
 class LocaleNqo extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'ߒߞߏ';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageNqo();
     }

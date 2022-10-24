@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageTl;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageTl;
  */
 class LocaleTl extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Tagalog';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'TAGALOG';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageTl();
     }

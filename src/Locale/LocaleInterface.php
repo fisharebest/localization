@@ -23,7 +23,7 @@ interface LocaleInterface
      *
      * @return string
      */
-    public function code();
+    public function code(): string;
 
     /**
      * Which collation sequence should be used for this locale?
@@ -32,7 +32,7 @@ interface LocaleInterface
      * @link http://dev.mysql.com/doc/refman/5.7/en/charset-unicode-sets.html
      * @return string
      */
-    public function collation();
+    public function collation(): string;
 
     /**
      * Convert (Hindu-Arabic) digits into a localized form
@@ -41,7 +41,7 @@ interface LocaleInterface
      *
      * @return string
      */
-    public function digits($string);
+    public function digits(string $string): string;
 
     /**
      * Is text written left-to-right “ltr” or right-to-left “rtl”.
@@ -50,7 +50,7 @@ interface LocaleInterface
      *
      * @return string “ltr” or “rtl”
      */
-    public function direction();
+    public function direction(): string;
 
     /**
      * The name of this locale, in its own language/script, and with the
@@ -58,7 +58,7 @@ interface LocaleInterface
      *
      * @return string
      */
-    public function endonym();
+    public function endonym(): string;
 
     /**
      * A sortable version of the locale name.  For example, “British English”
@@ -67,21 +67,21 @@ interface LocaleInterface
      *
      * @return string
      */
-    public function endonymSortable();
+    public function endonymSortable(): string;
 
     /**
      * Markup for an HTML element
      *
      * @return string e.g. lang="ar" dir="rtl"
      */
-    public function htmlAttributes();
+    public function htmlAttributes(): string;
 
     /**
      * The language used by this locale.
      *
      * @return LanguageInterface
      */
-    public function language();
+    public function language(): LanguageInterface;
 
     /**
      * The IETF language tag for the locale.  Examples include
@@ -89,51 +89,51 @@ interface LocaleInterface
      *
      * @return string
      */
-    public function languageTag();
+    public function languageTag(): string;
 
     /**
      * Convert (Hindu-Arabic) digits into a localized form
      *
-     * @param string|float|integer $number The number to be localized
+     * @param float|int $number The number to be localized
      *
      * @return string
      */
-    public function number($number);
+    public function number(float|int $number): string;
 
     /**
      * Convert (Hindu-Arabic) digits into a localized form
      *
-     * @param string|float|integer $number The number to be localized
+     * @param float|int $number The number to be localized
      *
      * @return string
      */
-    public function percent($number);
+    public function percent(float|int $number): string;
 
     /**
      * Which plural rule is used in this locale
      *
      * @return PluralRuleInterface
      */
-    public function pluralRule();
+    public function pluralRule(): PluralRuleInterface;
 
     /**
      * The script used by this locale.
      *
      * @return ScriptInterface
      */
-    public function script();
+    public function script(): ScriptInterface;
 
     /**
      * The territory used by this locale.
      *
      * @return TerritoryInterface
      */
-    public function territory();
+    public function territory(): TerritoryInterface;
 
     /**
      * The variant, if any of this locale.
      *
      * @return VariantInterface|null
      */
-    public function variant();
+    public function variant(): ?VariantInterface;
 }

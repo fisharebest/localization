@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptRoro extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Roro';
     }
 
-    public function number()
+    public function number(): string
     {
         return '620';
     }

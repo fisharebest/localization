@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageGl;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleGl - Galician
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageGl;
  */
 class LocaleGl extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'galego';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'GALEGO';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageGl();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,
@@ -36,7 +37,7 @@ class LocaleGl extends AbstractLocale implements LocaleInterface
         );
     }
 
-    public function percentFormat()
+    public function percentFormat(): string
     {
         return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }

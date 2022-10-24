@@ -21,7 +21,7 @@ class CldrPluralRulesTest extends TestCase
      *
      * @large
      */
-    public function testPluralRules()
+    public function testPluralRules(): void
     {
         $cldr = simplexml_load_string(file_get_contents(__DIR__ . '/data/cldr-42/supplemental/plurals.xml'));
 

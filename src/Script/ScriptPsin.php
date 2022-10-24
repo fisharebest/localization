@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptPsin extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Psin';
     }
 
-    public function number()
+    public function number(): string
     {
         return '103';
     }

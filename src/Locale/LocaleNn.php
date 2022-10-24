@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageNn;
 
 /**
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageNn;
  */
 class LocaleNn extends AbstractLocale implements LocaleInterface
 {
-    public function collation()
+    public function collation(): string
     {
         return 'danish_ci';
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'norsk nynorsk';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'NORSK NYNORSK';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageNn();
     }

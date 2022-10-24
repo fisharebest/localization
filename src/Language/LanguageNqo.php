@@ -3,8 +3,11 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule0;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
+use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Script\ScriptNkoo;
 use Fisharebest\Localization\Territory\TerritoryGn;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LanguageNqo - Representation of the N’Ko language.
@@ -15,22 +18,22 @@ use Fisharebest\Localization\Territory\TerritoryGn;
  */
 class LanguageNqo extends AbstractLanguage implements LanguageInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'nqo';
     }
 
-    public function defaultScript()
+    public function defaultScript(): ScriptInterface
     {
         return new ScriptNkoo();
     }
 
-    public function defaultTerritory()
+    public function defaultTerritory(): TerritoryInterface
     {
         return new TerritoryGn();
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule0();
     }

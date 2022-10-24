@@ -16,21 +16,21 @@ interface ScriptInterface
      *
      * @return string
      */
-    public function code();
+    public function code(): string;
 
     /**
      * Is the script usually written left-to-right “ltr” or right-to-left “rtl”.
      *
      * @return string “ltr” or “rtl”
      */
-    public function direction();
+    public function direction(): string;
 
     /**
      * The ISO15924 number for this script.
      *
      * @return string
      */
-    public function number();
+    public function number(): string;
 
     /**
      * What are the default digits used by this script?
@@ -39,9 +39,9 @@ interface ScriptInterface
      * Some locales (e.g. Persian) use their own digits, rather than
      * the default digits of their script.
      *
-     * @return string[]
+     * @return array<int,string>
      */
-    public function numerals();
+    public function numerals(): array;
 
     /**
      * The Unicode name (aka “property value alias”) for this script, or
@@ -49,5 +49,5 @@ interface ScriptInterface
      *
      * @return string|null
      */
-    public function unicodeName();
+    public function unicodeName(): ?string;
 }

@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptArab extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Arab';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩');
     }
 
-    public function number()
+    public function number(): string
     {
         return '160';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Arabic';
     }

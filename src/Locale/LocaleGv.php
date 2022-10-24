@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageGv;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleGv - Manx
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageGv;
  */
 class LocaleGv extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Gaelg';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'GAELG';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageGv();
     }

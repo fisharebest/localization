@@ -23,7 +23,7 @@ class LocaleTest extends TestCase
      *
      * @covers \Fisharebest\Localization\Locale::compare
      */
-    public function testCompare()
+    public function testCompare(): void
     {
         // American English, Australian English, British English
         self::assertLessThan(0, Locale::compare(new LocaleEnAU(), new LocaleEnGb()));
@@ -45,7 +45,7 @@ class LocaleTest extends TestCase
      * @covers \Fisharebest\Localization\Locale::compare
      * @medium
      */
-    public function testCompareAll()
+    public function testCompareAll(): void
     {
         $array = array_map(function ($x) {
             $class = '\\Fisharebest\\Localization\\Locale\\' . basename($x, '.php');
@@ -63,7 +63,7 @@ class LocaleTest extends TestCase
      *
      * @covers \Fisharebest\Localization\Locale::create
      */
-    public function testCreateValidLocale()
+    public function testCreateValidLocale(): void
     {
         $locale1 = Locale::create('en-GB');
         $locale2 = Locale::create('en_GB');
@@ -79,7 +79,7 @@ class LocaleTest extends TestCase
      *
      * @covers \Fisharebest\Localization\Locale::create
      */
-    public function testCreateInvalidLocale()
+    public function testCreateInvalidLocale(): void
     {
         try {
             Locale::create('xxx');
@@ -95,7 +95,7 @@ class LocaleTest extends TestCase
      *
      * @covers \Fisharebest\Localization\Locale::httpAcceptLanguage
      */
-    public function testHttpAcceptLanguage()
+    public function testHttpAcceptLanguage(): void
     {
         $available = array(
             Locale::create('de'),
@@ -115,7 +115,7 @@ class LocaleTest extends TestCase
      *
      * @covers \Fisharebest\Localization\Locale::httpAcceptLanguage
      */
-    public function testHttpAcceptLanguageNoneMatching()
+    public function testHttpAcceptLanguageNoneMatching(): void
     {
         $available = array(
             Locale::create('de'),
@@ -135,7 +135,7 @@ class LocaleTest extends TestCase
      *
      * @covers \Fisharebest\Localization\Locale::httpAcceptDowngrade
      */
-    public function testHttpAcceptLanguageDowngrade()
+    public function testHttpAcceptLanguageDowngrade(): void
     {
         $available = array(
             Locale::create('de'),
@@ -155,7 +155,7 @@ class LocaleTest extends TestCase
      *
      * @covers \Fisharebest\Localization\Locale::httpAcceptDowngrade
      */
-    public function testHttpAcceptLanguageDoubleDowngrade()
+    public function testHttpAcceptLanguageDoubleDowngrade(): void
     {
         $available = array(
             Locale::create('zh'),
@@ -172,7 +172,7 @@ class LocaleTest extends TestCase
      *
      * @covers \Fisharebest\Localization\Locale::httpAcceptChinese
      */
-    public function testHttpAcceptChinese()
+    public function testHttpAcceptChinese(): void
     {
         $available = array(
             Locale::create('zh-Hans'),
@@ -233,7 +233,7 @@ class LocaleTest extends TestCase
      *
      * @covers \Fisharebest\Localization\Locale::httpAcceptLanguage
      */
-    public function testHttpAcceptLanguageNoneSelected()
+    public function testHttpAcceptLanguageNoneSelected(): void
     {
         $available = array();
         $server    = array('HTTP_ACCEPT_LANGUAGE' => 'he;q=0.8,pl,ru,ar');
@@ -248,7 +248,7 @@ class LocaleTest extends TestCase
      *
      * @covers \Fisharebest\Localization\Locale::httpAcceptLanguage
      */
-    public function testHttpAcceptLanguageInvalid()
+    public function testHttpAcceptLanguageInvalid(): void
     {
         $available = array();
         $server    = array('HTTP_ACCEPT_LANGUAGE' => 'foobar');

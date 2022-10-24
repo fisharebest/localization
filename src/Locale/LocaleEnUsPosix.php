@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Variant\VariantInterface;
 use Fisharebest\Localization\Variant\VariantPosix;
 
 /**
@@ -13,14 +14,14 @@ use Fisharebest\Localization\Variant\VariantPosix;
  */
 class LocaleEnUsPosix extends LocaleEnUs
 {
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP => '',
         );
     }
 
-    public function variant()
+    public function variant(): ?VariantInterface
     {
         return new VariantPosix();
     }

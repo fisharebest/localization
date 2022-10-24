@@ -3,7 +3,9 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\PluralRule\PluralRule2;
+use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 use Fisharebest\Localization\Territory\TerritoryBr;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocalePtBr - Brazilian Portuguese
@@ -14,22 +16,22 @@ use Fisharebest\Localization\Territory\TerritoryBr;
  */
 class LocalePtBr extends LocalePt
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'português do Brasil';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'PORTUGUES DO BRASIL';
     }
 
-    public function pluralRule()
+    public function pluralRule(): PluralRuleInterface
     {
         return new PluralRule2();
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryBr();
     }

@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageAn;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleAn - Anglo-Saxon / Old-English
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageAn;
  */
 class LocaleAn extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'aragonés';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ARAGONÉS';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageAn();
     }

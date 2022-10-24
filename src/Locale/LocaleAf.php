@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageAf;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleAf - Afrikaans
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageAf;
  */
 class LocaleAf extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Afrikaans';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'AFRIKAANS';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageAf();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::NBSP,

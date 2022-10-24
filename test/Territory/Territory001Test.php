@@ -20,7 +20,7 @@ class Territory001Test extends TestCase
     /**
      * Test the properties
      */
-    public function testProperties()
+    public function testProperties(): void
     {
         $territory = new Territory001();
 

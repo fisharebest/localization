@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageFy;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleFy - Western Frisian
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageFy;
  */
 class LocaleFy extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Frysk';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'FRYSK';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageFy();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

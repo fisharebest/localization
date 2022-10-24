@@ -16,5 +16,5 @@ interface VariantInterface
      *
      * @return string
      */
-    public function code();
+    public function code(): string;
 }

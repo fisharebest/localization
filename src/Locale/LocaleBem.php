@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageBem;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleBem - Bemba
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageBem;
  */
 class LocaleBem extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Ichibemba';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ICHIBEMBA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageBem();
     }

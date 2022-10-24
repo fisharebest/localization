@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageSv;
 
 /**
@@ -13,27 +14,27 @@ use Fisharebest\Localization\Language\LanguageSv;
  */
 class LocaleSv extends AbstractLocale implements LocaleInterface
 {
-    public function collation()
+    public function collation(): string
     {
         return 'swedish_ci';
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'svenska';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'SVENSKA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageSv();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP    => self::NBSP,
@@ -42,7 +43,7 @@ class LocaleSv extends AbstractLocale implements LocaleInterface
         );
     }
 
-    protected function percentFormat()
+    protected function percentFormat(): string
     {
         return self::PLACEHOLDER . self::NBSP . self::PERCENT;
     }

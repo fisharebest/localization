@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageYrl;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageYrl;
  */
 class LocaleYrl extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'nheẽgatu';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageYrl();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::DECIMAL => self::COMMA,

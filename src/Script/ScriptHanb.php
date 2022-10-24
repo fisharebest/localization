@@ -11,12 +11,12 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptHanb extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Hanb';
     }
 
-    public function number()
+    public function number(): string
     {
         return '503';
     }

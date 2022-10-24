@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageRaj;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageRaj;
  */
 class LocaleRaj extends AbstractLocale implements LocaleInterface
 {
-    protected function digitsGroup()
+    protected function digitsGroup(): int
     {
         return 2;
     }
 
-    public function endonym()
+    public function endonym(): string
     {
         return 'राजस्थानी';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageRaj();
     }

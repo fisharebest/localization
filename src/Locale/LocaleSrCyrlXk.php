@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Territory\TerritoryXk;
 
 /**
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryXk;
  */
 class LocaleSrCyrlXk extends LocaleSrCyrl
 {
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryXk();
     }

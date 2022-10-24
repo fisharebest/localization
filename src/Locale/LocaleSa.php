@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageSa;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageSa;
  */
 class LocaleSa extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'संस्कृत भाषा';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageSa();
     }
 
-    protected function digitsGroup()
+    protected function digitsGroup(): int
     {
         return 2;
     }

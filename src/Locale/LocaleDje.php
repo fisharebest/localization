@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageDje;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleDje - Zarma
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageDje;
  */
 class LocaleDje extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Zarmaciine';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ZARMACIINE';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageDje();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP => self::NBSP,

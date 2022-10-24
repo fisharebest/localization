@@ -20,7 +20,7 @@ class ScriptXpeoTest extends TestCase
     /**
      * Test the properties
      */
-    public function testProperties()
+    public function testProperties(): void
     {
         $script = new ScriptXpeo();
 

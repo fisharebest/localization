@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageAz;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleAz - Azerbaijani
@@ -13,22 +14,22 @@ use Fisharebest\Localization\Language\LanguageAz;
  */
 class LocaleAz extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'azərbaycan';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'AZERBAYCAN';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageAz();
     }
 
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,

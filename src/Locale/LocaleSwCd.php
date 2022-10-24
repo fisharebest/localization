@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryCd;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleSwCd
@@ -13,7 +14,7 @@ use Fisharebest\Localization\Territory\TerritoryCd;
  */
 class LocaleSwCd extends LocaleSw
 {
-    public function numberSymbols()
+    public function numberSymbols(): array
     {
         return array(
             self::GROUP   => self::DOT,
@@ -21,7 +22,7 @@ class LocaleSwCd extends LocaleSw
         );
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryCd();
     }

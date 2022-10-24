@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Territory\TerritoryCa;
+use Fisharebest\Localization\Territory\TerritoryInterface;
 
 /**
  * Class LocaleEnCa - Canadian English
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Territory\TerritoryCa;
  */
 class LocaleEnCa extends LocaleEn
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Canadian English';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'ENGLISH, CANADIAN';
     }
 
-    public function territory()
+    public function territory(): TerritoryInterface
     {
         return new TerritoryCa();
     }

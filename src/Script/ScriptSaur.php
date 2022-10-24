@@ -11,22 +11,22 @@ namespace Fisharebest\Localization\Script;
  */
 class ScriptSaur extends AbstractScript implements ScriptInterface
 {
-    public function code()
+    public function code(): string
     {
         return 'Saur';
     }
 
-    public function numerals()
+    public function numerals(): array
     {
         return array('꣐', '꣑', '꣒', '꣓', '꣔', '꣕', '꣖', '꣗', '꣘', '꣙');
     }
 
-    public function number()
+    public function number(): string
     {
         return '344';
     }
 
-    public function unicodeName()
+    public function unicodeName(): ?string
     {
         return 'Saurashtra';
     }

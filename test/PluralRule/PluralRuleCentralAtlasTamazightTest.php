@@ -19,7 +19,7 @@ class PluralRuleCentralAtlasTamazightTest extends TestCase
     /**
      * @return void
      */
-    public function testNumberOfPluralForms()
+    public function testNumberOfPluralForms(): void
     {
         $plural_rule = new PluralRuleCentralAtlasTamazight();
 
@@ -29,7 +29,7 @@ class PluralRuleCentralAtlasTamazightTest extends TestCase
     /**
      * @return void
      */
-    public function testPluralRules()
+    public function testPluralRules(): void
     {
         $plural_rule = new PluralRuleCentralAtlasTamazight();
 

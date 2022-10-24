@@ -2,6 +2,7 @@
 
 namespace Fisharebest\Localization\Locale;
 
+use Fisharebest\Localization\Language\LanguageInterface;
 use Fisharebest\Localization\Language\LanguageRwk;
 
 /**
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageRwk;
  */
 class LocaleRwk extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Kiruwa';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'KIRUWA';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageRwk();
     }

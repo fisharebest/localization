@@ -3,6 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 use Fisharebest\Localization\Language\LanguageAnn;
+use Fisharebest\Localization\Language\LanguageInterface;
 
 /**
  * Class LocaleAnn - Obolo
@@ -13,17 +14,17 @@ use Fisharebest\Localization\Language\LanguageAnn;
  */
 class LocaleAnn extends AbstractLocale implements LocaleInterface
 {
-    public function endonym()
+    public function endonym(): string
     {
         return 'Obolo';
     }
 
-    public function endonymSortable()
+    public function endonymSortable(): string
     {
         return 'OBOLO';
     }
 
-    public function language()
+    public function language(): LanguageInterface
     {
         return new LanguageAnn();
     }
