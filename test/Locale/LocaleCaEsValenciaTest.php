@@ -16,6 +16,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleCaEsValencia
  */
 class LocaleCaEsValenciaTest extends TestCase
 {
@@ -34,6 +37,9 @@ class LocaleCaEsValenciaTest extends TestCase
         self::assertSame('ca_ES@valencia', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('català', $locale->endonym());
+        self::assertSame('CATALA', $locale->endonymSortable());
         self::assertSame('lang="ca-valencia"', $locale->htmlAttributes());
         self::assertSame('ca-valencia', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

@@ -4,6 +4,7 @@ namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageSbp;
 use Fisharebest\Localization\Locale\LocaleSbp;
+use Fisharebest\Localization\PluralRule\PluralRuleUnknown;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryTz;
 use PHPUnit\Framework\TestCase;
@@ -14,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleSbp
  */
 class LocaleSbpTest extends TestCase
 {
@@ -25,13 +29,16 @@ class LocaleSbpTest extends TestCase
         $locale = new LocaleSbp();
 
         self::assertEquals(new LanguageSbp(), $locale->language());
+        self::assertEquals(new PluralRuleUnknown(), $locale->pluralRule());
         self::assertEquals(new ScriptLatn(), $locale->script());
         self::assertEquals(new TerritoryTz(), $locale->territory());
         self::assertNull($locale->variant());
         self::assertSame('sbp_TZ', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Ishisangu', $locale->endonym());
+        self::assertSame('ISHISANGU', $locale->endonymSortable());
         self::assertSame('lang="sbp"', $locale->htmlAttributes());
         self::assertSame('sbp', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

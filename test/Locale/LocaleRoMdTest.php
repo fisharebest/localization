@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleRoMd
  */
 class LocaleRoMdTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleRoMdTest extends TestCase
         self::assertSame('ro_MD', $locale->code());
         self::assertSame('romanian_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('moldovenească', $locale->endonym());
+        self::assertSame('MOLDOVENEASCA', $locale->endonymSortable());
         self::assertSame('lang="ro-MD"', $locale->htmlAttributes());
         self::assertSame('ro-MD', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

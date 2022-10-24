@@ -4,6 +4,7 @@ namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageDyo;
 use Fisharebest\Localization\Locale\LocaleDyo;
+use Fisharebest\Localization\PluralRule\PluralRuleUnknown;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritorySn;
 use PHPUnit\Framework\TestCase;
@@ -14,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleDyo
  */
 class LocaleDyoTest extends TestCase
 {
@@ -25,13 +29,16 @@ class LocaleDyoTest extends TestCase
         $locale = new LocaleDyo();
 
         self::assertEquals(new LanguageDyo(), $locale->language());
+        self::assertEquals(new PluralRuleUnknown(), $locale->pluralRule());
         self::assertEquals(new ScriptLatn(), $locale->script());
         self::assertEquals(new TerritorySn(), $locale->territory());
         self::assertNull($locale->variant());
         self::assertSame('dyo_SN', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('joola', $locale->endonym());
+        self::assertSame('JOOLA', $locale->endonymSortable());
         self::assertSame('lang="dyo"', $locale->htmlAttributes());
         self::assertSame('dyo', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleSq
  */
 class LocaleSqTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleSqTest extends TestCase
         self::assertSame('sq_AL', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('shqip', $locale->endonym());
+        self::assertSame('SHQIP', $locale->endonymSortable());
         self::assertSame('lang="sq"', $locale->htmlAttributes());
         self::assertSame('sq', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

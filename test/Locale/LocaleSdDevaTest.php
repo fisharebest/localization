@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleSdDeva
  */
 class LocaleSdDevaTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleSdDevaTest extends TestCase
         self::assertSame('sd_PK@devanagari', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('०१२३४५६७८९', $locale->digits('0123456789'));
+        self::assertSame('rtl', $locale->direction());
         self::assertSame('سنڌي', $locale->endonym());
+        self::assertSame('سنڌي', $locale->endonymSortable());
         self::assertSame('lang="sd-Deva" dir="rtl"', $locale->htmlAttributes());
         self::assertSame('sd-Deva', $locale->languageTag());
         self::assertSame('-१२३', $locale->number(-123));

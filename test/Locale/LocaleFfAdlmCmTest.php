@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\TerritoryCm;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleFfAdlmBf class
+ * Tests for the LocaleFfAdlmCm class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleFfAdlmCm
  */
 class LocaleFfAdlmCmTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleFfAdlmCmTest extends TestCase
         self::assertSame('ff_CM@adlam', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('rtl', $locale->direction());
         self::assertSame('𞤊𞤵𞤤𞤬𞤵𞤤𞤣𞤫', $locale->endonym());
+        self::assertSame('𞤊𞤵𞤤𞤬𞤵𞤤𞤣𞤫', $locale->endonymSortable());
         self::assertSame('lang="ff-Adlm-CM" dir="rtl"', $locale->htmlAttributes());
         self::assertSame('ff-Adlm-CM', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

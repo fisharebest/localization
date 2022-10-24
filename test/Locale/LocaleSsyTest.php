@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleSsy
  */
 class LocaleSsyTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleSsyTest extends TestCase
         self::assertSame('ssy_ER', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Saho', $locale->endonym());
+        self::assertSame('SAHO', $locale->endonymSortable());
         self::assertSame('lang="ssy"', $locale->htmlAttributes());
         self::assertSame('ssy', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

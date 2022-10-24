@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleNso
  */
 class LocaleNsoTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleNsoTest extends TestCase
         self::assertSame('nso_ZA', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Sesotho sa Leboa', $locale->endonym());
+        self::assertSame('SESOTHO SA LEBOA', $locale->endonymSortable());
         self::assertSame('lang="nso"', $locale->htmlAttributes());
         self::assertSame('nso', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

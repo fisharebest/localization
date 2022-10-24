@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\TerritoryAe;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleEnAg class
+ * Tests for the LocaleEnAe class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleEnAe
  */
 class LocaleEnAeTest extends TestCase
 {
@@ -33,6 +36,9 @@ class LocaleEnAeTest extends TestCase
         self::assertSame('en_AE', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('English', $locale->endonym());
+        self::assertSame('ENGLISH', $locale->endonymSortable());
         self::assertSame('lang="en-AE"', $locale->htmlAttributes());
         self::assertSame('en-AE', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

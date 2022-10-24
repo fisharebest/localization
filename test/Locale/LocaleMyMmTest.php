@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleMyMm
  */
 class LocaleMyMmTest extends TestCase
 {
@@ -33,6 +36,9 @@ class LocaleMyMmTest extends TestCase
         self::assertSame('my_MM', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('၀၁၂၃၄၅၆၇၈၉', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('မြန်မာ', $locale->endonym());
+        self::assertSame('မြန်မာ', $locale->endonymSortable());
         self::assertSame('lang="my"', $locale->htmlAttributes());
         self::assertSame('my', $locale->languageTag());
         self::assertSame('-၁၂၃', $locale->number(-123));

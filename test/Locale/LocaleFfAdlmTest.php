@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleFfAdlm
  */
 class LocaleFfAdlmTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleFfAdlmTest extends TestCase
         self::assertSame('ff_SN@adlam', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('rtl', $locale->direction());
         self::assertSame('𞤊𞤵𞤤𞤬𞤵𞤤𞤣𞤫', $locale->endonym());
+        self::assertSame('𞤊𞤵𞤤𞤬𞤵𞤤𞤣𞤫', $locale->endonymSortable());
         self::assertSame('lang="ff-Adlm" dir="rtl"', $locale->htmlAttributes());
         self::assertSame('ff-Adlm', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

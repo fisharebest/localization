@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\TerritoryPk;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleSdArab class
+ * Tests for the LocaleSdArabPk class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleSdArabPk
  */
 class LocaleSdArabPkTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleSdArabPkTest extends TestCase
         self::assertSame('sd_PK', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+        self::assertSame('rtl', $locale->direction());
         self::assertSame('سنڌي', $locale->endonym());
+        self::assertSame('سنڌي', $locale->endonymSortable());
         self::assertSame('lang="sd" dir="rtl"', $locale->htmlAttributes());
         self::assertSame('sd', $locale->languageTag());
         self::assertSame('؜-١٢٣', $locale->number(-123));

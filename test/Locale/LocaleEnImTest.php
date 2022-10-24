@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleEnIm
  */
 class LocaleEnImTest extends TestCase
 {
@@ -33,6 +36,9 @@ class LocaleEnImTest extends TestCase
         self::assertSame('en_IM', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('English', $locale->endonym());
+        self::assertSame('ENGLISH', $locale->endonymSortable());
         self::assertSame('lang="en-IM"', $locale->htmlAttributes());
         self::assertSame('en-IM', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

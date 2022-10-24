@@ -11,11 +11,14 @@ use Fisharebest\Localization\Variant\VariantTarask;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleBe class
+ * Tests for the LocaleBeTarask class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleBeTarask
  */
 class LocaleBeTaraskTest extends TestCase
 {
@@ -34,7 +37,9 @@ class LocaleBeTaraskTest extends TestCase
         self::assertSame('be_BY@tarask', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('беларуская', $locale->endonym());
+        self::assertSame('БЕЛАРУСКАЯ', $locale->endonymSortable());
         self::assertSame('lang="be-tarask"', $locale->htmlAttributes());
         self::assertSame('be-tarask', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

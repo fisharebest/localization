@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleFrCh
  */
 class LocaleFrChTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleFrChTest extends TestCase
         self::assertSame('fr_CH', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('français suisse', $locale->endonym());
+        self::assertSame('FRANCAIS SUISSE', $locale->endonymSortable());
         self::assertSame('lang="fr-CH"', $locale->htmlAttributes());
         self::assertSame('fr-CH', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

@@ -6,11 +6,14 @@ use Fisharebest\Localization\Script\ScriptGuru;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the ScriptGujr class
+ * Tests for the ScriptGuru class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Script\AbstractScript
+ * @covers \Fisharebest\Localization\Script\ScriptGuru
  */
 class ScriptGuruTest extends TestCase
 {

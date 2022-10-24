@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\TerritoryId;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleKo class
+ * Tests for the LocaleJvLatn class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleJvLatn
  */
 class LocaleJvLatnTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleJvLatnTest extends TestCase
         self::assertSame('jv_ID@latin', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Basa Jawa', $locale->endonym());
+        self::assertSame('BASA JAWA', $locale->endonymSortable());
         self::assertSame('lang="jv-Latn"', $locale->htmlAttributes());
         self::assertSame('jv-Latn', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

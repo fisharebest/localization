@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleSl
  */
 class LocaleSlTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleSlTest extends TestCase
         self::assertSame('sl_SI', $locale->code());
         self::assertSame('slovenian_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('slovenščina', $locale->endonym());
+        self::assertSame('SLOVENSCINA', $locale->endonymSortable());
         self::assertSame('lang="sl"', $locale->htmlAttributes());
         self::assertSame('sl', $locale->languageTag());
         self::assertSame('−123', $locale->number(-123));

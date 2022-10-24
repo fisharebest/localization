@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleEt
  */
 class LocaleEtTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleEtTest extends TestCase
         self::assertSame('et_EE', $locale->code());
         self::assertSame('estonian_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('eesti', $locale->endonym());
+        self::assertSame('EESTI', $locale->endonymSortable());
         self::assertSame('lang="et"', $locale->htmlAttributes());
         self::assertSame('et', $locale->languageTag());
         self::assertSame('−123', $locale->number(-123));

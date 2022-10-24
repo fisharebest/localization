@@ -4,6 +4,7 @@ namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageEbu;
 use Fisharebest\Localization\Locale\LocaleEbuKe;
+use Fisharebest\Localization\PluralRule\PluralRuleUnknown;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryKe;
 use PHPUnit\Framework\TestCase;
@@ -14,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleEbuKe
  */
 class LocaleEbuKeTest extends TestCase
 {
@@ -25,12 +29,16 @@ class LocaleEbuKeTest extends TestCase
         $locale = new LocaleEbuKe();
 
         self::assertEquals(new LanguageEbu(), $locale->language());
+        self::assertEquals(new PluralRuleUnknown(), $locale->pluralRule());
         self::assertEquals(new ScriptLatn(), $locale->script());
         self::assertEquals(new TerritoryKe(), $locale->territory());
         self::assertNull($locale->variant());
         self::assertSame('ebu_KE', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('Kĩembu', $locale->endonym());
+        self::assertSame('KIEMBU', $locale->endonymSortable());
         self::assertSame('lang="ebu"', $locale->htmlAttributes());
         self::assertSame('ebu', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

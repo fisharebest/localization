@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\TerritoryIr;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleCkbIq class
+ * Tests for the LocaleCkbIr class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleCkbIr
  */
 class LocaleCkbIrTest extends TestCase
 {
@@ -33,10 +36,13 @@ class LocaleCkbIrTest extends TestCase
         self::assertSame('ckb_IR', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+        self::assertSame('rtl', $locale->direction());
         self::assertSame('کوردیی ناوەندی', $locale->endonym());
+        self::assertSame('کوردیی ناوەندی', $locale->endonymSortable());
         self::assertSame('lang="ckb-IR" dir="rtl"', $locale->htmlAttributes());
-        self::assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
+        self::assertSame('ckb-IR', $locale->languageTag());
         self::assertSame('‏-١٢٣', $locale->number(-123));
+        self::assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
         self::assertSame('١٬٢٣٤٫٥٦٪', $locale->percent(12.3456));
     }
 }

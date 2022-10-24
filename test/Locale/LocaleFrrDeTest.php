@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\TerritoryDe;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleFrr class
+ * Tests for the LocaleFrrDe class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleFrrDe
  */
 class LocaleFrrDeTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleFrrDeTest extends TestCase
         self::assertSame('frr_DE', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Nordfriisk', $locale->endonym());
+        self::assertSame('NORDFRIISK', $locale->endonymSortable());
         self::assertSame('lang="frr"', $locale->htmlAttributes());
         self::assertSame('frr', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

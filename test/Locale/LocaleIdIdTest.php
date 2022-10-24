@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleIdId
  */
 class LocaleIdIdTest extends TestCase
 {
@@ -33,6 +36,9 @@ class LocaleIdIdTest extends TestCase
         self::assertSame('id_ID', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('Indonesia', $locale->endonym());
+        self::assertSame('INDONESIA', $locale->endonymSortable());
         self::assertSame('lang="id"', $locale->htmlAttributes());
         self::assertSame('id', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

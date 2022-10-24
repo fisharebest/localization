@@ -11,6 +11,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Script\AbstractScript
+ * @covers \Fisharebest\Localization\Script\ScriptPerm
  */
 class ScriptPermTest extends TestCase
 {
@@ -25,5 +28,6 @@ class ScriptPermTest extends TestCase
         self::assertSame('ltr', $script->direction());
         self::assertSame('227', $script->number());
         self::assertSame(array(), $script->numerals());
+        self::assertSame('Old_Permic', $script->unicodeName());
     }
 }

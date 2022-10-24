@@ -19,6 +19,8 @@ class LocaleTest extends TestCase
 {
     /**
      * Test the comparator
+     *
+     * @covers \Fisharebest\Localization\Locale::compare
      */
     public function testCompare()
     {
@@ -39,6 +41,7 @@ class LocaleTest extends TestCase
     /**
      * Test the comparator
      *
+     * @covers \Fisharebest\Localization\Locale::compare
      * @medium
      */
     public function testCompareAll()
@@ -56,6 +59,8 @@ class LocaleTest extends TestCase
 
     /**
      * Test creating valid locales
+     *
+     * @covers \Fisharebest\Localization\Locale::create
      */
     public function testCreateValidLocale()
     {
@@ -71,7 +76,7 @@ class LocaleTest extends TestCase
     /**
      * Test creating locales
      *
-     * @return void
+     * @covers \Fisharebest\Localization\Locale::create
      */
     public function testCreateInvalidLocale()
     {
@@ -86,6 +91,8 @@ class LocaleTest extends TestCase
 
     /**
      * Test language negotiation
+     *
+     * @covers \Fisharebest\Localization\Locale::httpAcceptLanguage
      */
     public function testHttpAcceptLanguage()
     {
@@ -104,6 +111,8 @@ class LocaleTest extends TestCase
 
     /**
      * Test language negotiation
+     *
+     * @covers \Fisharebest\Localization\Locale::httpAcceptLanguage
      */
     public function testHttpAcceptLanguageNoneMatching()
     {
@@ -122,6 +131,8 @@ class LocaleTest extends TestCase
 
     /**
      * Test language negotiation
+     *
+     * @covers \Fisharebest\Localization\Locale::httpAcceptDowngrade
      */
     public function testHttpAcceptLanguageDowngrade()
     {
@@ -140,6 +151,8 @@ class LocaleTest extends TestCase
 
     /**
      * Test language negotiation
+     *
+     * @covers \Fisharebest\Localization\Locale::httpAcceptDowngrade
      */
     public function testHttpAcceptLanguageDoubleDowngrade()
     {
@@ -155,6 +168,8 @@ class LocaleTest extends TestCase
 
     /**
      * Test language negotiation
+     *
+     * @covers \Fisharebest\Localization\Locale::httpAcceptChinese
      */
     public function testHttpAcceptChinese()
     {
@@ -214,11 +229,28 @@ class LocaleTest extends TestCase
 
     /**
      * Test language negotiation
+     *
+     * @covers \Fisharebest\Localization\Locale::httpAcceptLanguage
      */
     public function testHttpAcceptLanguageNoneSelected()
     {
         $available = array();
         $server    = array('HTTP_ACCEPT_LANGUAGE' => 'he;q=0.8,pl,ru,ar');
+        $default   = Locale::create('en-US');
+        $locale    = Locale::httpAcceptLanguage($server, $available, $default);
+
+        self::assertEquals($default, $locale);
+    }
+
+    /**
+     * Test language negotiation
+     *
+     * @covers \Fisharebest\Localization\Locale::httpAcceptLanguage
+     */
+    public function testHttpAcceptLanguageInvalid()
+    {
+        $available = array();
+        $server    = array('HTTP_ACCEPT_LANGUAGE' => 'foobar');
         $default   = Locale::create('en-US');
         $locale    = Locale::httpAcceptLanguage($server, $available, $default);
 

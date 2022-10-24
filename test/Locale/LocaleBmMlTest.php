@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\TerritoryMl;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleBmLatnMl class
+ * Tests for the LocaleBmMl class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleBmMl
  */
 class LocaleBmMlTest extends TestCase
 {
@@ -33,6 +36,9 @@ class LocaleBmMlTest extends TestCase
         self::assertSame('bm_ML', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('bamanakan', $locale->endonym());
+        self::assertSame('BAMANAKAN', $locale->endonymSortable());
         self::assertSame('lang="bm"', $locale->htmlAttributes());
         self::assertSame('bm', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

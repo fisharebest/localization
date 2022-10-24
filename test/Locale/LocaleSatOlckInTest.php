@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\TerritoryIn;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleSat class
+ * Tests for the LocaleSatOlckIn class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleSatOlckIn
  */
 class LocaleSatOlckInTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleSatOlckInTest extends TestCase
         self::assertSame('sat_IN', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('᱐᱑᱒᱓᱔᱕᱖᱗᱘᱙', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('ᱥᱟᱱᱛᱟᱲᱤ', $locale->endonym());
+        self::assertSame('ᱥᱟᱱᱛᱟᱲᱤ', $locale->endonymSortable());
         self::assertSame('lang="sat"', $locale->htmlAttributes());
         self::assertSame('sat', $locale->languageTag());
         self::assertSame('-᱑᱒᱓', $locale->number(-123));

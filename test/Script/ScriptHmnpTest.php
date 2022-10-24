@@ -6,11 +6,14 @@ use Fisharebest\Localization\Script\ScriptHmnp;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the ScriptHmnpTest class
+ * Tests for the ScriptHmnp class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Script\AbstractScript
+ * @covers \Fisharebest\Localization\Script\ScriptHmnp
  */
 class ScriptHmnpTest extends TestCase
 {

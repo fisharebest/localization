@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleOr
  */
 class LocaleOrTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleOrTest extends TestCase
         self::assertSame('or_IN', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('୦୧୨୩୪୫୬୭୮୯', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('ଓଡ଼ିଆ', $locale->endonym());
+        self::assertSame('ଓଡ଼ିଆ', $locale->endonymSortable());
         self::assertSame('lang="or"', $locale->htmlAttributes());
         self::assertSame('or', $locale->languageTag());
         self::assertSame('-୧୨୩', $locale->number(-123));

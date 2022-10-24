@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\TerritoryNg;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocalePcm class
+ * Tests for the LocalePcmNg class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocalePcmNg
  */
 class LocalePcmNgTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocalePcmNgTest extends TestCase
         self::assertSame('pcm_NG', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Naijíriá Píjin', $locale->endonym());
+        self::assertSame('NAIJÍRIÁ PÍJIN', $locale->endonymSortable());
         self::assertSame('lang="pcm"', $locale->htmlAttributes());
         self::assertSame('pcm', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

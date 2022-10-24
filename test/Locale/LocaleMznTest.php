@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleMzn
  */
 class LocaleMznTest extends TestCase
 {
@@ -33,11 +36,13 @@ class LocaleMznTest extends TestCase
         self::assertSame('mzn_IR', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('۰۱۲۳۴۵۶۷۸۹', $locale->digits('0123456789'));
+        self::assertSame('rtl', $locale->direction());
         self::assertSame('مازرونی', $locale->endonym());
+        self::assertSame('مازرونی', $locale->endonymSortable());
         self::assertSame('lang="mzn" dir="rtl"', $locale->htmlAttributes());
         self::assertSame('mzn', $locale->languageTag());
-        self::assertSame('۱۲٬۳۴۵٬۶۷۸٫۰۹', $locale->number(12345678.09));
         self::assertSame('‎-‎۱۲۳', $locale->number(-123));
+        self::assertSame('۱۲٬۳۴۵٬۶۷۸٫۰۹', $locale->number(12345678.09));
         self::assertSame('۱٬۲۳۴٫۵۶٪', $locale->percent(12.3456));
     }
 }

@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\Territory001;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocalePap class
+ * Tests for the LocaleJbo class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleJbo
  */
 class LocaleJboTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleJboTest extends TestCase
         self::assertSame('jbo_001', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Lojban', $locale->endonym());
+        self::assertSame('LOJBAN', $locale->endonymSortable());
         self::assertSame('lang="jbo"', $locale->htmlAttributes());
         self::assertSame('jbo', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

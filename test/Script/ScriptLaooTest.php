@@ -11,6 +11,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Script\AbstractScript
+ * @covers \Fisharebest\Localization\Script\ScriptLaoo
  */
 class ScriptLaooTest extends TestCase
 {
@@ -23,6 +26,7 @@ class ScriptLaooTest extends TestCase
 
         self::assertSame('Laoo', $script->code());
         self::assertSame('ltr', $script->direction());
+        self::assertSame('356', $script->number());
         self::assertSame(array('໐', '໑', '໒', '໓', '໔', '໕', '໖', '໗', '໘', '໙'), $script->numerals());
         self::assertSame('Lao', $script->unicodeName());
     }

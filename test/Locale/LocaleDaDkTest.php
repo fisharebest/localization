@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleDaDk
  */
 class LocaleDaDkTest extends TestCase
 {
@@ -33,6 +36,9 @@ class LocaleDaDkTest extends TestCase
         self::assertSame('da_DK', $locale->code());
         self::assertSame('danish_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('dansk', $locale->endonym());
+        self::assertSame('DANSK', $locale->endonymSortable());
         self::assertSame('lang="da"', $locale->htmlAttributes());
         self::assertSame('da', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\Territory001;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleTok class
+ * Tests for the LocaleTok001 class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleTok001
  */
 class LocaleTok001Test extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleTok001Test extends TestCase
         self::assertSame('tok_001', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Toki Pona', $locale->endonym());
+        self::assertSame('TOKI PONA', $locale->endonymSortable());
         self::assertSame('lang="tok"', $locale->htmlAttributes());
         self::assertSame('tok', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

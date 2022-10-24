@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleOsRu
  */
 class LocaleOsRuTest extends TestCase
 {
@@ -33,6 +36,9 @@ class LocaleOsRuTest extends TestCase
         self::assertSame('os_RU', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('ирон', $locale->endonym());
+        self::assertSame('ИРОН', $locale->endonymSortable());
         self::assertSame('lang="os"', $locale->htmlAttributes());
         self::assertSame('os', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

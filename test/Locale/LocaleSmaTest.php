@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\TerritoryFi;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleSms class
+ * Tests for the LocaleSma class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleSma
  */
 class LocaleSmaTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleSmaTest extends TestCase
         self::assertSame('sma_FI', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Åarjelsaemien gïele', $locale->endonym());
+        self::assertSame('AARJELSAMIEN GIELE', $locale->endonymSortable());
         self::assertSame('lang="sma"', $locale->htmlAttributes());
         self::assertSame('sma', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

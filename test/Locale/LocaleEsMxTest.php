@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleEsMx
  */
 class LocaleEsMxTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleEsMxTest extends TestCase
         self::assertSame('es_MX', $locale->code());
         self::assertSame('spanish_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('español de México', $locale->endonym());
+        self::assertSame('ESPANOL DE MEXICO', $locale->endonymSortable());
         self::assertSame('lang="es-MX"', $locale->htmlAttributes());
         self::assertSame('es-MX', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

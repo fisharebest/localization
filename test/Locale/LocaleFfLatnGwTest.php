@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleFfLatnGw
  */
 class LocaleFfLatnGwTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleFfLatnGwTest extends TestCase
         self::assertSame('ff_GW', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Pulaar', $locale->endonym());
+        self::assertSame('PULAAR', $locale->endonymSortable());
         self::assertSame('lang="ff-GW"', $locale->htmlAttributes());
         self::assertSame('ff-GW', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

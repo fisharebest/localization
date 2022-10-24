@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleMni
  */
 class LocaleMniTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleMniTest extends TestCase
         self::assertSame('mni_IN', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('꯰꯱꯲꯳꯴꯵꯶꯷꯸꯹', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('মৈতৈলোন্', $locale->endonym());
+        self::assertSame('মৈতৈলোন্', $locale->endonymSortable());
         self::assertSame('lang="mni"', $locale->htmlAttributes());
         self::assertSame('mni', $locale->languageTag());
         self::assertSame('-꯱꯲꯳', $locale->number(-123));

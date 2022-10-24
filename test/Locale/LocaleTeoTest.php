@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleTeo
  */
 class LocaleTeoTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleTeoTest extends TestCase
         self::assertSame('teo_UG', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Kiteso', $locale->endonym());
+        self::assertSame('KITESO', $locale->endonymSortable());
         self::assertSame('lang="teo"', $locale->htmlAttributes());
         self::assertSame('teo', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

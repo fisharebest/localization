@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleKsDevaIn
  */
 class LocaleKsDevaInTest extends TestCase
 {
@@ -33,11 +36,13 @@ class LocaleKsDevaInTest extends TestCase
         self::assertSame('ks_IN@devanagari', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('०१२३४५६७८९', $locale->digits('0123456789'));
+        self::assertSame('rtl', $locale->direction());
         self::assertSame('कॉशुर', $locale->endonym());
+        self::assertSame('कॉशुर', $locale->endonymSortable());
         self::assertSame('lang="ks-Deva" dir="rtl"', $locale->htmlAttributes());
         self::assertSame('ks-Deva', $locale->languageTag());
-        self::assertSame('१٬२३٬४५٬६७८٫०९', $locale->number(12345678.09));
         self::assertSame('‎-‎१२३', $locale->number(-123));
+        self::assertSame('१٬२३٬४५٬६७८٫०९', $locale->number(12345678.09));
         self::assertSame('१٬२३४٫५६٪', $locale->percent(12.3456));
     }
 }

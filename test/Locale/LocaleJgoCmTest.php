@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleJgoCm
  */
 class LocaleJgoCmTest extends TestCase
 {
@@ -33,6 +36,9 @@ class LocaleJgoCmTest extends TestCase
         self::assertSame('jgo_CM', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('Ndaꞌa', $locale->endonym());
+        self::assertSame('NDAA', $locale->endonymSortable());
         self::assertSame('lang="jgo"', $locale->htmlAttributes());
         self::assertSame('jgo', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

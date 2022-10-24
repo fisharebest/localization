@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleNdsNl
  */
 class LocaleNdsNlTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleNdsNlTest extends TestCase
         self::assertSame('nds_NL', $locale->code());
         self::assertSame('german2_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Neddersass’sch', $locale->endonym());
+        self::assertSame('NEDDERSASS’SCH', $locale->endonymSortable());
         self::assertSame('lang="nds-NL"', $locale->htmlAttributes());
         self::assertSame('nds-NL', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

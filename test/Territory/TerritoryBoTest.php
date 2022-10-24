@@ -11,6 +11,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Territory\AbstractTerritory
+ * @covers \Fisharebest\Localization\Territory\TerritoryBo
  */
 class TerritoryBoTest extends TestCase
 {

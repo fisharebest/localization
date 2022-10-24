@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleBh
  */
 class LocaleBhTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleBhTest extends TestCase
         self::assertSame('bh_IN', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('०१२३४५६७८९', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Bihari', $locale->endonym());
+        self::assertSame('BIHARI', $locale->endonymSortable());
         self::assertSame('lang="bh"', $locale->htmlAttributes());
         self::assertSame('bh', $locale->languageTag());
         self::assertSame('-१२३', $locale->number(-123));

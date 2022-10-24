@@ -5,14 +5,16 @@ namespace Fisharebest\LocalizationTest\Language;
 use Fisharebest\Localization\Language\LanguageZu;
 use Fisharebest\Localization\PluralRule\PluralRule2;
 use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryZa;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LanguageZu class
- *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Language\AbstractLanguage
+ * @covers \Fisharebest\Localization\Language\LanguageZu
  */
 class LanguageZuTest extends TestCase
 {
@@ -24,6 +26,7 @@ class LanguageZuTest extends TestCase
         $language = new LanguageZu();
 
         self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new TerritoryZa(), $language->defaultTerritory());
         self::assertEquals(new PluralRule2(), $language->pluralRule());
         self::assertSame('zu', $language->code());
     }

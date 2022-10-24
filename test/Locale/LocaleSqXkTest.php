@@ -4,6 +4,7 @@ namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageSq;
 use Fisharebest\Localization\Locale\LocaleSqXk;
+use Fisharebest\Localization\PluralRule\PluralRule1;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryXk;
 use PHPUnit\Framework\TestCase;
@@ -14,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleSqXk
  */
 class LocaleSqXkTest extends TestCase
 {
@@ -25,12 +29,16 @@ class LocaleSqXkTest extends TestCase
         $locale = new LocaleSqXk();
 
         self::assertEquals(new LanguageSq(), $locale->language());
+        self::assertEquals(new PluralRule1(), $locale->pluralRule());
         self::assertEquals(new ScriptLatn(), $locale->script());
         self::assertEquals(new TerritoryXk(), $locale->territory());
         self::assertNull($locale->variant());
         self::assertSame('sq_XK', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('shqip', $locale->endonym());
+        self::assertSame('SHQIP', $locale->endonymSortable());
         self::assertSame('lang="sq-XK"', $locale->htmlAttributes());
         self::assertSame('sq-XK', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\TerritorySe;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleSms class
+ * Tests for the LocaleSmj class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleSmj
  */
 class LocaleSmjTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleSmjTest extends TestCase
         self::assertSame('smj_SE', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('julevsámegiella', $locale->endonym());
+        self::assertSame('JULEVSAMEGIELLA', $locale->endonymSortable());
         self::assertSame('lang="smj"', $locale->htmlAttributes());
         self::assertSame('smj', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

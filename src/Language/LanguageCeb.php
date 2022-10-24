@@ -3,7 +3,6 @@
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRuleFilipino;
-use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryPh;
 
 /**
@@ -18,11 +17,6 @@ class LanguageCeb extends AbstractLanguage implements LanguageInterface
     public function code()
     {
         return 'ceb';
-    }
-
-    public function defaultScript()
-    {
-        return new ScriptLatn();
     }
 
     public function defaultTerritory()

@@ -11,6 +11,8 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\PluralRule\PluralRule12
  */
 class PluralRule12Test extends TestCase
 {
@@ -61,5 +63,6 @@ class PluralRule12Test extends TestCase
         self::assertSame(4, $plural_rule->plural(27));
         self::assertSame(4, $plural_rule->plural(28));
         self::assertSame(4, $plural_rule->plural(29));
+        self::assertSame(5, $plural_rule->plural(101));
     }
 }

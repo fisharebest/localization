@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\TerritoryIq;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleTig class
+ * Tests for the LocaleSyr class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleSyr
  */
 class LocaleSyrTest extends TestCase
 {
@@ -30,10 +33,14 @@ class LocaleSyrTest extends TestCase
         self::assertEquals(new ScriptSyrc(), $locale->script());
         self::assertEquals(new TerritoryIq(), $locale->territory());
         self::assertNull($locale->variant());
+        self::assertSame('syr_IQ', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('rtl', $locale->direction());
         self::assertSame('Syriac', $locale->endonym());
+        self::assertSame('Syriac', $locale->endonymSortable());
         self::assertSame('lang="syr" dir="rtl"', $locale->htmlAttributes());
+        self::assertSame('syr', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));
         self::assertSame('12,345,678.09', $locale->number(12345678.09));
         self::assertSame('1,234.56%', $locale->percent(12.3456));

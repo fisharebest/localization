@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleLvLv
  */
 class LocaleLvLvTest extends TestCase
 {
@@ -33,6 +36,9 @@ class LocaleLvLvTest extends TestCase
         self::assertSame('lv_LV', $locale->code());
         self::assertSame('latvian_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('latviešu', $locale->endonym());
+        self::assertSame('LATVIESU', $locale->endonymSortable());
         self::assertSame('lang="lv"', $locale->htmlAttributes());
         self::assertSame('lv', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

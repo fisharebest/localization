@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\TerritoryRu;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleRu class
+ * Tests for the LocaleMdf class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleMdf
  */
 class LocaleMdfTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleMdfTest extends TestCase
         self::assertSame('mdf_RU', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('мокшень кяль', $locale->endonym());
+        self::assertSame('МОКШЕНЬ КЯЛЬ', $locale->endonymSortable());
         self::assertSame('lang="mdf"', $locale->htmlAttributes());
         self::assertSame('mdf', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

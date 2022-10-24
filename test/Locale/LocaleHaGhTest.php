@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleHaGh
  */
 class LocaleHaGhTest extends TestCase
 {
@@ -33,6 +36,9 @@ class LocaleHaGhTest extends TestCase
         self::assertSame('ha_GH', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('Hausa', $locale->endonym());
+        self::assertSame('HAUSA', $locale->endonymSortable());
         self::assertSame('lang="ha-GH"', $locale->htmlAttributes());
         self::assertSame('ha-GH', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

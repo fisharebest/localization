@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleOmKe
  */
 class LocaleOmKeTest extends TestCase
 {
@@ -33,6 +36,9 @@ class LocaleOmKeTest extends TestCase
         self::assertSame('om_KE', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('Oromoo', $locale->endonym());
+        self::assertSame('OROMOO', $locale->endonymSortable());
         self::assertSame('lang="om-KE"', $locale->htmlAttributes());
         self::assertSame('om-KE', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

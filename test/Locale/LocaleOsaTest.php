@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageOsa;
 use Fisharebest\Localization\Locale\LocaleOsa;
 use Fisharebest\Localization\PluralRule\PluralRule0;
 use Fisharebest\Localization\Script\ScriptLatn;
-use Fisharebest\Localization\Territory\TerritoryUS;
+use Fisharebest\Localization\Territory\TerritoryUs;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleOsa
  */
 class LocaleOsaTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleOsaTest extends TestCase
         self::assertSame('osa_US', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Osage', $locale->endonym());
+        self::assertSame('OSAGE', $locale->endonymSortable());
         self::assertSame('lang="osa"', $locale->htmlAttributes());
         self::assertSame('osa', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

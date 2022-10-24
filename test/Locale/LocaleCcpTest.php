@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleCcp
  */
 class LocaleCcpTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleCcpTest extends TestCase
         self::assertSame('ccp_BD', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('𑄶𑄷𑄸𑄹𑄺𑄻𑄼𑄽𑄾𑄿', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('𑄌𑄋𑄴𑄟𑄳𑄦', $locale->endonym());
+        self::assertSame('𑄌𑄋𑄴𑄟𑄳𑄦', $locale->endonymSortable());
         self::assertSame('lang="ccp"', $locale->htmlAttributes());
         self::assertSame('ccp', $locale->languageTag());
         self::assertSame('-𑄷𑄸𑄹', $locale->number(-123));

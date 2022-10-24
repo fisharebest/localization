@@ -10,11 +10,14 @@ use Fisharebest\Localization\Territory\TerritorySb;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleEn class
+ * Tests for the LocalePisSb class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocalePisSb
  */
 class LocalePisSbTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocalePisSbTest extends TestCase
         self::assertSame('pis_SB', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Pijin', $locale->endonym());
+        self::assertSame('Pijin', $locale->endonymSortable());
         self::assertSame('lang="pis"', $locale->htmlAttributes());
         self::assertSame('pis', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

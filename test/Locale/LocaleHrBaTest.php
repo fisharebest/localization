@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleHrBa
  */
 class LocaleHrBaTest extends TestCase
 {
@@ -33,6 +36,9 @@ class LocaleHrBaTest extends TestCase
         self::assertSame('hr_BA', $locale->code());
         self::assertSame('croatian_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('hrvatski', $locale->endonym());
+        self::assertSame('HRVATSKI', $locale->endonymSortable());
         self::assertSame('lang="hr-BA"', $locale->htmlAttributes());
         self::assertSame('hr-BA', $locale->languageTag());
         self::assertSame('−123', $locale->number(-123));

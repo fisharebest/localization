@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleTeIn
  */
 class LocaleTeInTest extends TestCase
 {
@@ -33,6 +36,9 @@ class LocaleTeInTest extends TestCase
         self::assertSame('te_IN', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('౦౧౨౩౪౫౬౭౮౯', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('తెలుగు', $locale->endonym());
+        self::assertSame('తెలుగు', $locale->endonymSortable());
         self::assertSame('lang="te"', $locale->htmlAttributes());
         self::assertSame('te', $locale->languageTag());
         self::assertSame('-౧౨౩', $locale->number(-123));

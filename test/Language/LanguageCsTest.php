@@ -5,14 +5,16 @@ namespace Fisharebest\LocalizationTest\Language;
 use Fisharebest\Localization\Language\LanguageCs;
 use Fisharebest\Localization\PluralRule\PluralRule8;
 use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryCz;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LanguageCs class
- *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Language\AbstractLanguage
+ * @covers \Fisharebest\Localization\Language\LanguageCs
  */
 class LanguageCsTest extends TestCase
 {
@@ -24,6 +26,7 @@ class LanguageCsTest extends TestCase
         $language = new LanguageCs();
 
         self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new TerritoryCz(), $language->defaultTerritory());
         self::assertEquals(new PluralRule8(), $language->pluralRule());
         self::assertSame('cs', $language->code());
     }

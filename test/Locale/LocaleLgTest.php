@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleLg
  */
 class LocaleLgTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleLgTest extends TestCase
         self::assertSame('lg_UG', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Luganda', $locale->endonym());
+        self::assertSame('LUGANDA', $locale->endonymSortable());
         self::assertSame('lang="lg"', $locale->htmlAttributes());
         self::assertSame('lg', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleFfLatnBf
  */
 class LocaleFfLatnBfTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocaleFfLatnBfTest extends TestCase
         self::assertSame('ff_BF', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Pulaar', $locale->endonym());
+        self::assertSame('PULAAR', $locale->endonymSortable());
         self::assertSame('lang="ff-BF"', $locale->htmlAttributes());
         self::assertSame('ff-BF', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

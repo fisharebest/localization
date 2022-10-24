@@ -3,15 +3,18 @@
 namespace Fisharebest\LocalizationTest\Language;
 
 use Fisharebest\Localization\Language\LanguageEbu;
+use Fisharebest\Localization\PluralRule\PluralRuleUnknown;
 use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryKe;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LanguageEbu class
- *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Language\AbstractLanguage
+ * @covers \Fisharebest\Localization\Language\LanguageEbu
  */
 class LanguageEbuTest extends TestCase
 {
@@ -23,6 +26,8 @@ class LanguageEbuTest extends TestCase
         $language = new LanguageEbu();
 
         self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new TerritoryKe(), $language->defaultTerritory());
+        self::assertEquals(new PluralRuleUnknown(), $language->pluralRule());
         self::assertSame('ebu', $language->code());
     }
 }

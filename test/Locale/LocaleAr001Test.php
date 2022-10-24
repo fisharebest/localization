@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleAr001
  */
 class LocaleAr001Test extends TestCase
 {
@@ -31,11 +34,15 @@ class LocaleAr001Test extends TestCase
         self::assertEquals(new Territory001(), $locale->territory());
         self::assertNull($locale->variant());
         self::assertSame('ar_001', $locale->code());
+        self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
+        self::assertSame('rtl', $locale->direction());
+        self::assertSame('العربية', $locale->endonym());
+        self::assertSame('العربية', $locale->endonymSortable());
         self::assertSame('lang="ar" dir="rtl"', $locale->htmlAttributes());
         self::assertSame('ar', $locale->languageTag());
-        self::assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
         self::assertSame('؜-١٢٣', $locale->number(-123));
+        self::assertSame('١٢٬٣٤٥٬٦٧٨٫٠٩', $locale->number(12345678.09));
         self::assertSame('١٬٢٣٤٫٥٦٪؜', $locale->percent(12.3456));
     }
 }

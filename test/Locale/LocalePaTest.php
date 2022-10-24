@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocalePa
  */
 class LocalePaTest extends TestCase
 {
@@ -33,7 +36,9 @@ class LocalePaTest extends TestCase
         self::assertSame('pa_IN', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('੦੧੨੩੪੫੬੭੮੯', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('ਪੰਜਾਬੀ', $locale->endonym());
+        self::assertSame('ਪੰਜਾਬੀ', $locale->endonymSortable());
         self::assertSame('lang="pa"', $locale->htmlAttributes());
         self::assertSame('pa', $locale->languageTag());
         self::assertSame('-੧੨੩', $locale->number(-123));

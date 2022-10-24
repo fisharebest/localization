@@ -4,6 +4,7 @@ namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageLu;
 use Fisharebest\Localization\Locale\LocaleLu;
+use Fisharebest\Localization\PluralRule\PluralRuleUnknown;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryCd;
 use PHPUnit\Framework\TestCase;
@@ -14,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleLu
  */
 class LocaleLuTest extends TestCase
 {
@@ -25,13 +29,16 @@ class LocaleLuTest extends TestCase
         $locale = new LocaleLu();
 
         self::assertEquals(new LanguageLu(), $locale->language());
+        self::assertEquals(new PluralRuleUnknown(), $locale->pluralRule());
         self::assertEquals(new ScriptLatn(), $locale->script());
         self::assertEquals(new TerritoryCd(), $locale->territory());
         self::assertNull($locale->variant());
         self::assertSame('lu_CD', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('0123456789', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
         self::assertSame('Tshiluba', $locale->endonym());
+        self::assertSame('TSHILUBA', $locale->endonymSortable());
         self::assertSame('lang="lu"', $locale->htmlAttributes());
         self::assertSame('lu', $locale->languageTag());
         self::assertSame('-123', $locale->number(-123));

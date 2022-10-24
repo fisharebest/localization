@@ -3,15 +3,18 @@
 namespace Fisharebest\LocalizationTest\Language;
 
 use Fisharebest\Localization\Language\LanguageSwc;
+use Fisharebest\Localization\PluralRule\PluralRuleUnknown;
 use Fisharebest\Localization\Script\ScriptLatn;
+use Fisharebest\Localization\Territory\TerritoryCd;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LanguageSwc class
- *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Language\AbstractLanguage
+ * @covers \Fisharebest\Localization\Language\LanguageSwc
  */
 class LanguageSwcTest extends TestCase
 {
@@ -23,6 +26,8 @@ class LanguageSwcTest extends TestCase
         $language = new LanguageSwc();
 
         self::assertEquals(new ScriptLatn(), $language->defaultScript());
+        self::assertEquals(new TerritoryCd(), $language->defaultTerritory());
+        self::assertEquals(new PluralRuleUnknown(), $language->pluralRule());
         self::assertSame('swc', $language->code());
     }
 }

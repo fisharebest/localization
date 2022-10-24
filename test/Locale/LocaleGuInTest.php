@@ -15,6 +15,9 @@ use PHPUnit\Framework\TestCase;
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
+ *
+ * @covers \Fisharebest\Localization\Locale\AbstractLocale
+ * @covers \Fisharebest\Localization\Locale\LocaleGuIn
  */
 class LocaleGuInTest extends TestCase
 {
@@ -33,6 +36,9 @@ class LocaleGuInTest extends TestCase
         self::assertSame('gu_IN', $locale->code());
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('૦૧૨૩૪૫૬૭૮૯', $locale->digits('0123456789'));
+        self::assertSame('ltr', $locale->direction());
+        self::assertSame('ગુજરાતી', $locale->endonym());
+        self::assertSame('ગુજરાતી', $locale->endonymSortable());
         self::assertSame('lang="gu"', $locale->htmlAttributes());
         self::assertSame('gu', $locale->languageTag());
         self::assertSame('-૧૨૩', $locale->number(-123));
