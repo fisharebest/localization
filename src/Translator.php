@@ -13,7 +13,7 @@ use Fisharebest\Localization\PluralRule\PluralRuleInterface;
  */
 class Translator
 {
-    /** @var array An association of English -> translated messages */
+    /** @var array<string,string> An association of English -> translated messages */
     private $translations;
 
     /** @var PluralRuleInterface */
@@ -22,8 +22,8 @@ class Translator
     /**
      * Create a translator
      *
-     * @param array               $translations
-     * @param PluralRuleInterface $plural_rule
+     * @param array<string,string> $translations
+     * @param PluralRuleInterface  $plural_rule
      */
     public function __construct(array $translations, $plural_rule)
     {

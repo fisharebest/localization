@@ -21,7 +21,7 @@ class Translation
     const PLURAL_SEPARATOR       = "\x00";
     const CONTEXT_SEPARATOR      = "\x04";
 
-    /** @var array An association of English -> translated messages */
+    /** @var array<array-key,string> An association of English -> translated messages */
     private $translations;
 
     /**
@@ -36,7 +36,7 @@ class Translation
         switch (strtolower(pathinfo($filename, PATHINFO_EXTENSION))) {
             case 'csv':
                 $fp = fopen($filename, 'rb');
-                if ($fp) {
+                if ($fp !== false) {
                     while (($data = fgetcsv($fp, 0, ';')) !== false) {
                         $this->translations[$data[0]] = $data[1];
                     }
@@ -46,7 +46,7 @@ class Translation
 
             case 'mo':
                 $fp = fopen($filename, 'rb');
-                if ($fp) {
+                if ($fp !== false) {
                     $this->readMoFile($fp);
                     fclose($fp);
                 }
@@ -68,7 +68,7 @@ class Translation
     /**
      * The translation strings
      *
-     * @return array
+     * @return array<array-key,string>
      */
     public function asArray()
     {

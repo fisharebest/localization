@@ -56,7 +56,11 @@ class Locale
         }, preg_split('/[^a-zA-Z0-9]+/', $code)));
 
         if (class_exists($class)) {
-            return new $class();
+            $locale = new $class();
+
+            if ($locale instanceof LocaleInterface) {
+                return $locale;
+            }
         }
 
         throw new DomainException($code);
@@ -113,9 +117,9 @@ class Locale
     /**
      * If a client requests "de-DE" (but not "de"), then add "de" as a lower-priority fallback.
      *
-     * @param array<string,float> $preferences
+     * @param array<array-key,float> $preferences
      *
-     * @return array<string,float>
+     * @return array<array-key,float>
      */
     private static function httpAcceptDowngrade($preferences)
     {
@@ -142,9 +146,9 @@ class Locale
      * Some browsers allow the user to select "Chinese (simplified)", but then use zh-CN instead of zh-Hans.
      * This goes against the advice of w3.org.
      *
-     * @param array<string,float> $preferences
+     * @param array<array-key,float> $preferences
      *
-     * @return array<string,float>
+     * @return array<array-key,float>
      */
     private static function httpAcceptChinese($preferences)
     {

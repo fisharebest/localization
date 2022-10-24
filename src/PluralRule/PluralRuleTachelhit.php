@@ -21,11 +21,11 @@ class PluralRuleTachelhit implements PluralRuleInterface
     {
         $number = abs($number);
 
-        if ($number === 0 || $number === 1) {
+        if ($number <= 1) {
             return 0;
         }
 
-        if ($number >= 2 && $number <= 10) {
+        if ($number <= 10) {
             return 1;
         }
 
