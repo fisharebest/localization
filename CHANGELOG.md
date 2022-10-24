@@ -1,6 +1,7 @@
 CHANGE LOG
 ==========
 
+## 1.17.0 (2022-10-24)
  - Fix: wrong locale code for scripts with no unicode name
  - Update to CLDR-41
  - Update to CLDR-39
