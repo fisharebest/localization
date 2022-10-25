@@ -14,12 +14,13 @@ use InvalidArgumentException;
 class Translation
 {
     // Constants for processing .MO files
-    const MO_MAGIC_LITTLE_ENDIAN = '950412de';
-    const MO_MAGIC_BIG_ENDIAN    = 'de120495';
-    const PACK_LITTLE_ENDIAN     = 'V';
-    const PACK_BIG_ENDIAN        = 'N';
-    const PLURAL_SEPARATOR       = "\x00";
-    const CONTEXT_SEPARATOR      = "\x04";
+    private const MO_MAGIC_LITTLE_ENDIAN = '950412de';
+    private const MO_MAGIC_BIG_ENDIAN    = 'de120495';
+    private const PACK_LITTLE_ENDIAN     = 'V';
+    private const PACK_BIG_ENDIAN        = 'N';
+
+    public const PLURAL_SEPARATOR  = "\x00";
+    public const CONTEXT_SEPARATOR = "\x04";
 
     /** @var array<array-key,string> An association of English -> translated messages */
     private array $translations;

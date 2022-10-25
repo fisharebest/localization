@@ -18,29 +18,29 @@ use Fisharebest\Localization\Variant\VariantInterface;
 abstract class AbstractLocale
 {
     // "Source" strings, when translating numbers
-    const DECIMAL  = '.'; // The default decimal mark
-    const GROUP    = ','; // The digit group separator
-    const NEGATIVE = '-'; // Negative numbers
+    protected const DECIMAL  = '.'; // The default decimal mark
+    protected const GROUP    = ','; // The digit group separator
+    protected const NEGATIVE = '-'; // Negative numbers
 
     // "Target" strings, when translating numbers
-    const ADLM_GROUP   = '⹁';
-    const ALM          = "\xD8\x9C"; // Arabic Letter Mark
-    const APOSTROPHE   = '’';
-    const ARAB_DECIMAL = "\xD9\xAB";
-    const ARAB_GROUP   = "\xD9\xAC";
-    const ARAB_PERCENT = "\xD9\xAA";
-    const COMMA        = ',';
-    const DOT          = '.';
-    const HYPHEN       = '-';
-    const LTR_MARK     = "\xE2\x80\x8E"; // Left-to-right marker
-    const MINUS_SIGN   = "\xE2\x88\x92";
-    const NARROW_NBSP  = "\xE2\x80\xAF"; // Narrow non-breaking space
-    const NBSP         = "\xC2\xA0"; // Non-breaking space
-    const RTL_MARK     = "\xE2\x80\x8F"; // Right-to-left marker
+    protected const ADLM_GROUP   = '⹁';
+    protected const ALM          = "\xD8\x9C"; // Arabic Letter Mark
+    protected const APOSTROPHE   = '’';
+    protected const ARAB_DECIMAL = "\xD9\xAB";
+    protected const ARAB_GROUP   = "\xD9\xAC";
+    protected const ARAB_PERCENT = "\xD9\xAA";
+    protected const COMMA        = ',';
+    protected const DOT          = '.';
+    protected const HYPHEN       = '-';
+    protected const LTR_MARK     = "\xE2\x80\x8E"; // Left-to-right marker
+    protected const MINUS_SIGN   = "\xE2\x88\x92";
+    protected const NARROW_NBSP  = "\xE2\x80\xAF"; // Narrow non-breaking space
+    protected const NBSP         = "\xC2\xA0"; // Non-breaking space
+    protected const RTL_MARK     = "\xE2\x80\x8F"; // Right-to-left marker
 
     // For formatting percentages
-    const PERCENT     = '%%';
-    const PLACEHOLDER = '%s';
+    protected const PERCENT     = '%%';
+    protected const PLACEHOLDER = '%s';
 
     /**
      * Generate a linux locale code for this locale.  Examples include
