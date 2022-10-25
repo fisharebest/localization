@@ -18,7 +18,7 @@ abstract class AbstractScript
      * Some locales (e.g. Persian) use their own digits, rather than
      * the default digits of their script.
      *
-     * @return string[]
+     * @return array<string>
      */
     public function numerals()
     {

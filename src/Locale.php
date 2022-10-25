@@ -69,9 +69,9 @@ class Locale
     /**
      * Create a locale from a language tag (or locale code).
      *
-     * @param string[]          $server    The $_SERVER array
-     * @param LocaleInterface[] $available All locales supported by the application
-     * @param LocaleInterface   $default   Locale to show in no matching locales
+     * @param array<string>          $server    The $_SERVER array
+     * @param array<LocaleInterface> $available All locales supported by the application
+     * @param LocaleInterface        $default   Locale to show in no matching locales
      *
      * @return LocaleInterface
      */

@@ -83,7 +83,7 @@ class Translation
      * @param int      $count
      * @param string   $pack "N" for big-endian, "V" for little-endian
      *
-     * @return int[]
+     * @return array<int>
      */
     private function readMoWords($fp, $offset, $count, $pack)
     {
@@ -138,7 +138,7 @@ class Translation
      *
      * @link https://www.gnu.org/software/gettext/manual/html_node/MO-Files.html
      *
-     * @param string[] $lines
+     * @param array<string> $lines
      *
      * @return void
      */

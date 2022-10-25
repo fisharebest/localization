@@ -238,7 +238,7 @@ abstract class AbstractLocale
     /**
      * The symbols used to format numbers.
      *
-     * @return string[]
+     * @return array<string>
      */
     protected function numberSymbols()
     {
@@ -248,7 +248,7 @@ abstract class AbstractLocale
     /**
      * The numerals (0123456789) used by this locale.
      *
-     * @return string[]
+     * @return array<string>
      */
     protected function numerals()
     {
