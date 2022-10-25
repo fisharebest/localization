@@ -38,7 +38,11 @@ class Iso15924Test extends TestCase
 
             self::assertSame($fields[0], $script->code(), $data);
             self::assertSame($fields[1], $script->number(), $data);
-            self::assertSame($fields[4] ?: null, $script->unicodeName());
+            if ($fields[4] === '') {
+                self::assertNull($script->unicodeName());
+            } else {
+                self::assertSame($fields[4], $script->unicodeName());
+            }
         }
     }
 }

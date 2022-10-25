@@ -69,9 +69,9 @@ class LocaleTest extends TestCase
         $locale2 = Locale::create('en_GB');
         $locale3 = Locale::create('En-gB');
 
-        self::assertinstanceof(get_class(new LocaleEnGb()), $locale1);
-        self::assertinstanceof(get_class(new LocaleEnGb()), $locale2);
-        self::assertinstanceof(get_class(new LocaleEnGb()), $locale3);
+        self::assertInstanceOf(get_class(new LocaleEnGb()), $locale1);
+        self::assertInstanceOf(get_class(new LocaleEnGb()), $locale2);
+        self::assertInstanceOf(get_class(new LocaleEnGb()), $locale3);
     }
 
     /**

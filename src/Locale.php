@@ -125,7 +125,7 @@ class Locale
     {
         foreach ($preferences as $code => $priority) {
             // Three parts: "zh-hans-cn" => "zh-hans" and "zh"
-            if (preg_match('/^(([a-z]+)-[a-z]+)-[a-z]+$/', $code, $match)) {
+            if (preg_match('/^(([a-z]+)-[a-z]+)-[a-z]+$/', $code, $match) === 1) {
                 if (!array_key_exists($match[2], $preferences)) {
                     $preferences[$match[2]] = $priority * 0.95;
                 }
@@ -134,7 +134,7 @@ class Locale
                 }
             }
             // Two parts: "de-de" => "de"
-            if (preg_match('/^([a-z]+)-[a-z]+$/', $code, $match) && !array_key_exists($match[1], $preferences)) {
+            if (preg_match('/^([a-z]+)-[a-z]+$/', $code, $match) === 1 && !array_key_exists($match[1], $preferences)) {
                 $preferences[$match[1]] = $priority * 0.95;
             }
         }

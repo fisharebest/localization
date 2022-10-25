@@ -183,7 +183,7 @@ abstract class AbstractLocale
         if ($this->territory()->code() !== $this->language()->defaultTerritory()->code()) {
             $language_tag .= '-' . $this->territory()->code();
         }
-        if ($this->variant()) {
+        if ($this->variant() !== null) {
             $language_tag .= '-' . $this->variant()->code();
         }
 

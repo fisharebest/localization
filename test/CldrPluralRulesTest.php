@@ -74,7 +74,7 @@ class CldrPluralRulesTest extends TestCase
 
                 $plural_rule = 0;
                 foreach ($plurals as $plural_examples) {
-                    if (preg_match('/@integer ([^@]+)/', $plural_examples, $match)) {
+                    if (preg_match('/@integer ([^@]+)/', $plural_examples, $match) === 1) {
                         $rules = preg_split('/[^0-9~]+/', $match[1], -1, PREG_SPLIT_NO_EMPTY);
                         foreach ($rules as $rule) {
                             if (strpos($rule, '~') !== false) {

@@ -3,21 +3,21 @@
 namespace Fisharebest\LocalizationTest\Locale;
 
 use Fisharebest\Localization\Language\LanguageGa;
-use Fisharebest\Localization\Locale\LocaleGaGB;
+use Fisharebest\Localization\Locale\LocaleGaGb;
 use Fisharebest\Localization\PluralRule\PluralRule11;
 use Fisharebest\Localization\Script\ScriptLatn;
 use Fisharebest\Localization\Territory\TerritoryGb;
 use PHPUnit\Framework\TestCase;
 
 /**
- * Tests for the LocaleGaGB class
+ * Tests for the LocaleGaGb class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
  *
  * @covers \Fisharebest\Localization\Locale\AbstractLocale
- * @covers \Fisharebest\Localization\Locale\LocaleGaGB
+ * @covers \Fisharebest\Localization\Locale\LocaleGaGb
  */
 class LocaleGaGbTest extends TestCase
 {
@@ -26,7 +26,7 @@ class LocaleGaGbTest extends TestCase
      */
     public function testProperties()
     {
-        $locale = new LocaleGaGB();
+        $locale = new LocaleGaGb();
 
         self::assertEquals(new LanguageGa(), $locale->language());
         self::assertEquals(new PluralRule11(), $locale->pluralRule());

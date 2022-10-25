@@ -187,7 +187,7 @@ class Translation
                         $msgstr = $text;
                         break;
                     default:
-                        if (preg_match('/^msgstr\[(\d+)\]/', $keyword, $match)) {
+                        if (preg_match('/^msgstr\[(\d+)\]/', $keyword, $match) === 1) {
                             $plurals[$match[1]] = $text;
                         }
                 }

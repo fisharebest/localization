@@ -32,7 +32,7 @@ abstract class AbstractScript
      */
     public function direction()
     {
-        return substr_compare($this->number(), '1', 0, 1) ? 'ltr' : 'rtl';
+        return substr_compare($this->number(), '1', 0, 1) !== 0 ? 'ltr' : 'rtl';
     }
 
     /**
