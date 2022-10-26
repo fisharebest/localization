@@ -1,6 +1,8 @@
 CHANGE LOG
 ==========
 
+ - Support deprecated language codes: in (id), iw (he), ji (yi), jw (jv), mo (ro)
+
 ## 1.17.0 (2022-10-24)
  - Fix: wrong locale code for scripts with no unicode name
  - Update to CLDR-41

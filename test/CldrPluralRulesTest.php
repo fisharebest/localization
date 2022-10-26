@@ -38,12 +38,9 @@ class CldrPluralRulesTest extends TestCase
                     case 'cy':    // CLDR has 5 rules, whereas gettext has (1), (2), (other), (8,11)
                     case 'fil':   // CLDR has a different rule from gettext
                     case 'fr':    // CLDR has 3 rules, we have 2?
-                    case 'he':    // CLDR has (1) (2) (many) (other), whereas gettext has (1) (other)
-                    case 'in':    // This code (Indonesian) is deprecated. Use id.
+                    case 'he':    // CLDR has (1) (2) (other), whereas gettext has (1) (other)
                     case 'it':    // CLDR has 3 rules, we have 2
-                    case 'iw':    // This code (Hebrew) is deprecated. Use he.
-                    case 'ji':    // This code (Javanese) is deprecated, Use yi.
-                    case 'jw':    // This code (Javanese) is deprecated.  Use jv.
+                    case 'iw':    // CLDR has (1) (2) (other), whereas gettext has (1) (other)
                     case 'kw':    // CLDR has 3 rules, whereas gettext has (1), (2), (3), (other)
                     case 'lv':    // CLDR has (0) (1) (other), whereas gettext has (1) (other) (0)
                     case 'mk':    // There are lots of conflicting definitions.

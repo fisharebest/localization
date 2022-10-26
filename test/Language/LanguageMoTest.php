@@ -5,7 +5,7 @@ namespace Fisharebest\LocalizationTest\Language;
 use Fisharebest\Localization\Language\LanguageMo;
 use Fisharebest\Localization\PluralRule\PluralRule5;
 use Fisharebest\Localization\Script\ScriptLatn;
-use Fisharebest\Localization\Territory\TerritoryMd;
+use Fisharebest\Localization\Territory\TerritoryRo;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -23,11 +23,11 @@ class LanguageMoTest extends TestCase
      */
     public function testProperties()
     {
-        $language = new LanguageMo();
+        $language = new LanguageMo(); // mo is deprecated - use ro
 
         self::assertEquals(new ScriptLatn(), $language->defaultScript());
-        self::assertEquals(new TerritoryMd(), $language->defaultTerritory());
+        self::assertEquals(new TerritoryRo(), $language->defaultTerritory());
         self::assertEquals(new PluralRule5(), $language->pluralRule());
-        self::assertSame('mo', $language->code());
+        self::assertSame('ro', $language->code());
     }
 }

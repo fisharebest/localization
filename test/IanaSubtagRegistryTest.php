@@ -32,13 +32,19 @@ class IanaSubtagRegistryTest extends TestCase
 
         foreach ($iana as $data) {
             preg_match('/Subtag: (.+)/', $data, $match);
+            $subtag = $match[1];
             $class = '\\Fisharebest\\Localization\\Language\\Language' . ucfirst(strtolower($match[1]));
             // The registry contains 8000 languages, and we aren't interested in most of them.
             if (class_exists($class)) {
                 /** @var LanguageInterface $language */
                 $language = new $class();
 
-                self::assertSame($match[1], $language->code());
+                // Deprecated tags should use their new, preferred value.
+                if (preg_match('/Preferred-Value: ([a-z]+)/', $data, $match2)) {
+                    $subtag = $match2[1];
+                }
+
+                self::assertSame($subtag, $language->code());
             }
         }
     }

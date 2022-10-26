@@ -3,12 +3,12 @@
 namespace Fisharebest\Localization\Locale;
 
 /**
- * Class LocaleMo - Moldovan (deprecated).
+ * Class LocaleJw - Javanese (deprecated)
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
  * @license   GPL-3.0-or-later
  */
-class LocaleMo extends LocaleRo
+class LocaleJw extends LocaleJv
 {
 }
