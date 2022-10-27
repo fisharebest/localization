@@ -5,7 +5,7 @@ namespace Fisharebest\Localization\Locale;
 use Fisharebest\Localization\Language\LanguageNqo;
 
 /**
- * Class LocaleNko - N'Ko
+ * Class LocaleNqo - N'Ko
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

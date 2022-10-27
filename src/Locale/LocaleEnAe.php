@@ -5,7 +5,7 @@ namespace Fisharebest\Localization\Locale;
 use Fisharebest\Localization\Territory\TerritoryAe;
 
 /**
- * Class LocaleEnAi
+ * Class LocaleEnAe
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

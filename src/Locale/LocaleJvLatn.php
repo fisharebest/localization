@@ -5,7 +5,7 @@ namespace Fisharebest\Localization\Locale;
 use Fisharebest\Localization\Script\ScriptLatn;
 
 /**
- * Class LocaleJv - Javanese
+ * Class LocaleJvLatn - Javanese
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

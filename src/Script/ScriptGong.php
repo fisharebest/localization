@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Script;
 
 /**
- * Class ScriptCpmn - Representation of the Gunjala Gondi script.
+ * Class ScriptGong - Representation of the Gunjala Gondi script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

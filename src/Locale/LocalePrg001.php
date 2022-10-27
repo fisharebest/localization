@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 /**
- * Class LocalePrg - Old Prussian
+ * Class LocalePrg001 - Old Prussian
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

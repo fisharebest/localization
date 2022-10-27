@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 /**
- * Class LocaleEn - English
+ * Class LocaleFrrDe - North Frisian
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

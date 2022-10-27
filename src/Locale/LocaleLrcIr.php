@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Locale;
 
 /**
- * Class LocaleLrc - Luri
+ * Class LocaleLrcIr - Luri
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

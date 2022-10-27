@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Script;
 
 /**
- * Class ScriptCpmn - Representation of the Nyiakeng Puachue Hmong script.
+ * Class ScriptHmnp - Representation of the Nyiakeng Puachue Hmong script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

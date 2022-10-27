@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Script;
 
 /**
- * Class ScriptCpmn - Representation of the Medefaidrin script.
+ * Class ScriptMedf - Representation of the Medefaidrin script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

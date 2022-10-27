@@ -5,7 +5,7 @@ namespace Fisharebest\Localization\Locale;
 use Fisharebest\Localization\Language\LanguageArs;
 
 /**
- * Class LocaleAr - Najdi Arabic
+ * Class LocaleArs - Najdi Arabic
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach
@@ -15,7 +15,7 @@ class LocaleArs extends AbstractLocale implements LocaleInterface
 {
     public function endonym()
     {
-        return 'اللهجة النجدية‎';
+        return 'اللهجة النجدية';
     }
 
     public function language()

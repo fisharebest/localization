@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Script;
 
 /**
- * Class ScriptWara - Representation of the Zanabazar Square script.
+ * Class ScriptZanb - Representation of the Zanabazar Square script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

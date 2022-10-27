@@ -6,7 +6,7 @@ use Fisharebest\Localization\Language\LanguageOsa;
 use Fisharebest\Localization\Territory\TerritoryUs;
 
 /**
- * Class LocaleOs - Osage
+ * Class LocaleOsa - Osage
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

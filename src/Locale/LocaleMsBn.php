@@ -5,7 +5,7 @@ namespace Fisharebest\Localization\Locale;
 use Fisharebest\Localization\Territory\TerritoryBn;
 
 /**
- * Class LocaleMsMy
+ * Class LocaleMsBn
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

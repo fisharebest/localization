@@ -3,7 +3,7 @@
 namespace Fisharebest\Localization\Script;
 
 /**
- * Class ScriptSyrc - Representation of the Old Sogdian script.
+ * Class ScriptSogo - Representation of the Old Sogdian script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

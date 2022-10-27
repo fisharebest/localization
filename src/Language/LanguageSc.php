@@ -6,7 +6,7 @@ use Fisharebest\Localization\PluralRule\PluralRule1;
 use Fisharebest\Localization\Territory\TerritoryIt;
 
 /**
- * Class LanguageEn - Representation of the English language.
+ * Class LanguageSc - Representation of the Sardinian language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
  * @copyright (c) 2022 Greg Roach

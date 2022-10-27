@@ -37,8 +37,8 @@ class LocaleArsTest extends TestCase
         self::assertSame('unicode_ci', $locale->collation());
         self::assertSame('٠١٢٣٤٥٦٧٨٩', $locale->digits('0123456789'));
         self::assertSame('rtl', $locale->direction());
-        self::assertSame('اللهجة النجدية‎', $locale->endonym());
-        self::assertSame('اللهجة النجدية‎', $locale->endonymSortable());
+        self::assertSame('اللهجة النجدية', $locale->endonym());
+        self::assertSame('اللهجة النجدية', $locale->endonymSortable());
         self::assertSame('lang="ars" dir="rtl"', $locale->htmlAttributes());
         self::assertSame('ars', $locale->languageTag());
         self::assertSame('؜-١٢٣', $locale->number(-123));
