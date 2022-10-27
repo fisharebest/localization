@@ -1,7 +1,7 @@
 ![phpunit](https://github.com/fisharebest/localization/actions/workflows/phpunit.yaml/badge.svg)
 ![phpstan](https://github.com/fisharebest/localization/actions/workflows/phpstan.yaml/badge.svg)
 ![phpcs](https://github.com/fisharebest/localization/actions/workflows/phpcs.yaml/badge.svg)
-[![Coverage Status](https://coveralls.io/repos/fisharebest/localization/badge.svg?branch=main&service=github)](https://coveralls.io/github/fisharebest/localization?branch=main)
+[![codecov](https://codecov.io/gh/fisharebest/localization/branch/1.x/graph/badge.svg?token=UDp7YBTkRR)](https://codecov.io/gh/fisharebest/localization)
 [![StyleCI](https://github.styleci.io/repos/25974036/shield)](https://github.styleci.io/repos/25974036)
 [![Code Climate](https://codeclimate.com/github/fisharebest/localization/badges/gpa.svg)](https://codeclimate.com/github/fisharebest/localization)
 
