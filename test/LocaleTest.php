@@ -55,7 +55,7 @@ class LocaleTest extends TestCase
 
         usort($array, '\\Fisharebest\\Localization\\Locale::compare');
         self::assertNotEmpty($array);
-        self::assertIsArray($array);
+        self::assertTrue(is_array($array));
     }
 
     /**

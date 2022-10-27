@@ -98,7 +98,7 @@ class CldrTest extends TestCase
 
                 if ($locale->language()->code() !== 'oc') {
                     // oc.xml does not use its own punctuation in its examples.
-                    self::assertMatchesRegularExpression($regex, $number, $debug);
+                    self::assertSame(1, preg_match($regex, $number), $debug);
                 }
 
                 // Check the percentage matches the pattern.
@@ -122,7 +122,7 @@ class CldrTest extends TestCase
 
                 if ($locale->language()->code() !== 'oc') {
                     // oc.xml does not use its own punctuation in its examples.
-                    self::assertMatchesRegularExpression($regex, $number, $debug);
+                    self::assertSame(1, preg_match($regex, $number), $debug);
                 }
 
                 // Check the minus sign is correct

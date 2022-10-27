@@ -67,7 +67,7 @@ class CldrPluralRulesTest extends TestCase
                 }
                 $locale = Locale::create($locale_code);
 
-                self::assertCount($locale->pluralRule()->plurals(), $plurals, $locale_code);
+                self::assertSame($locale->pluralRule()->plurals(), count($plurals), $locale_code);
 
                 $plural_rule = 0;
                 foreach ($plurals as $plural_examples) {
@@ -75,7 +75,7 @@ class CldrPluralRulesTest extends TestCase
                         $rules = preg_split('/[^0-9~]+/', $match[1], -1, PREG_SPLIT_NO_EMPTY);
                         foreach ($rules as $rule) {
                             if (strpos($rule, '~') !== false) {
-                                [$low, $high] = explode('~', $rule);
+                                list($low, $high) = explode('~', $rule);
                             } else {
                                 $low  = $rule;
                                 $high = $rule;
