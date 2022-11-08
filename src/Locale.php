@@ -77,8 +77,9 @@ class Locale
      */
     public static function httpAcceptLanguage(array $server, array $available, LocaleInterface $default): LocaleInterface
     {
-        if (!empty($server['HTTP_ACCEPT_LANGUAGE'])) {
-            $http_accept_language = strtolower(str_replace(' ', '', $server['HTTP_ACCEPT_LANGUAGE']));
+        $http_accept_language = strtolower(strtr($server['HTTP_ACCEPT_LANGUAGE'] ?? '', [' ' => '']));
+
+        if ($http_accept_language !== '') {
             preg_match_all('/([a-z][a-z0-9_-]+)(?:;q=([0-9.]+))?/', $http_accept_language, $match);
             $preferences = array_map(function ($x) {
                 return $x === '' ? 1.0 : (float) $x;

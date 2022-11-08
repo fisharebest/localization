@@ -41,11 +41,7 @@ class Translator
      */
     public function translate(string $message): string
     {
-        if (isset($this->translations[$message])) {
-            return $this->translations[$message];
-        }
-
-        return $message;
+        return $this->translations[$message] ?? $message;
     }
 
     /**
@@ -60,11 +56,8 @@ class Translator
     public function translateContext(string $context, string $message): string
     {
         $key = $context . Translation::CONTEXT_SEPARATOR . $message;
-        if (isset($this->translations[$key])) {
-            return $this->translations[$key];
-        }
 
-        return $message;
+        return $this->translations[$key] ?? $message;
     }
 
     /**
