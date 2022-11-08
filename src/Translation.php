@@ -152,9 +152,7 @@ class Translation
     private function readPoFile(array $lines): void
     {
         // Strip comments
-        $lines = array_filter($lines, function ($line) {
-            return !str_starts_with($line, '#');
-        });
+        $lines = array_filter($lines, static fn (string $x): bool => !str_starts_with($x, '#'));
 
         // Trim carriage-returns, newlines, spaces
         $lines = array_map('trim', $lines);

@@ -7,6 +7,7 @@ use Fisharebest\Localization\Locale;
 use Fisharebest\Localization\Locale\LocaleEnAu;
 use Fisharebest\Localization\Locale\LocaleEnGb;
 use Fisharebest\Localization\Locale\LocaleEnUs;
+use Fisharebest\Localization\Locale\LocaleInterface;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -47,11 +48,9 @@ class LocaleTest extends TestCase
      */
     public function testCompareAll(): void
     {
-        $array = array_map(function ($x) {
-            $class = '\\Fisharebest\\Localization\\Locale\\' . basename($x, '.php');
-
-            return new $class();
-        }, preg_grep('/Abstract|Interface/', glob(__DIR__ . '/../src/Locale/Locale??*.php'), PREG_GREP_INVERT));
+        $namespace = '\\Fisharebest\\Localization\\Locale\\';
+        $fn        = static fn (string $x): LocaleInterface => new ($namespace . basename($x, '.php'))();
+        $array     = array_map($fn, preg_grep('/Abstract|Interface/', glob(__DIR__ . '/../src/Locale/Locale??*.php'), PREG_GREP_INVERT));
 
         usort($array, '\\Fisharebest\\Localization\\Locale::compare');
         self::assertNotEmpty($array);

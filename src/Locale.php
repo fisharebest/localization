@@ -51,9 +51,9 @@ class Locale
      */
     public static function create(string $code): LocaleInterface
     {
-        $class = '\\Fisharebest\\Localization\\Locale\\Locale' . implode(array_map(function ($x) {
-            return ucfirst(strtolower($x));
-        }, preg_split('/[^a-zA-Z0-9]+/', $code)));
+        $fn    = static fn (string $x): string => ucfirst(strtolower($x));
+        $parts = preg_split('/[^a-zA-Z0-9]+/', $code);
+        $class = '\\Fisharebest\\Localization\\Locale\\Locale' . implode(array_map($fn, $parts));
 
         if (class_exists($class)) {
             $locale = new $class();
@@ -81,9 +81,9 @@ class Locale
 
         if ($http_accept_language !== '') {
             preg_match_all('/([a-z][a-z0-9_-]+)(?:;q=([0-9.]+))?/', $http_accept_language, $match);
-            $preferences = array_map(function ($x) {
-                return $x === '' ? 1.0 : (float) $x;
-            }, array_combine($match[1], $match[2]));
+
+            $fn = static fn (string $x): float => $x === '' ? 1.0 : (float) $x;
+            $preferences = array_map($fn, array_combine($match[1], $match[2]));
 
             // "Common sense" logic for badly configured clients.
             $preferences = self::httpAcceptChinese($preferences);
