@@ -85,7 +85,7 @@ class LocaleTest extends TestCase
             Locale::create('xxx');
 
             self::fail();
-        } catch (DomainException $ex) {
+        } catch (DomainException) {
             self::assertTrue(true);
         }
     }

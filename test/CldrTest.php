@@ -56,7 +56,7 @@ class CldrTest extends TestCase
                     if ($alias === "../symbols[@numberSystem='latn']") {
                         $def_num_system = 'latn';
                     }
-                } catch (Exception $ex) {
+                } catch (Exception) {
                 }
                 $decimal      = $this->cldrValue($cldr, "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/decimal");
                 $group        = $this->cldrValue($cldr, "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/group");
@@ -69,7 +69,7 @@ class CldrTest extends TestCase
                     if ($alias === "../decimalFormats[@numberSystem='latn']") {
                         $def_num_system = 'latn';
                     }
-                } catch (Exception $ex) {
+                } catch (Exception) {
                 }
                 $standard = $this->cldrValue($cldr, "/ldml/numbers/decimalFormats[@numberSystem='" . $def_num_system . "']/decimalFormatLength[not(@type)]/decimalFormat/pattern");
                 $percent  = $this->cldrValue($cldr, "/ldml/numbers/percentFormats[@numberSystem='" . $def_num_system . "']/percentFormatLength[not(@type)]/percentFormat/pattern");

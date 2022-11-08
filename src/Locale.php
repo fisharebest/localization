@@ -106,7 +106,7 @@ class Locale
                     if (in_array($locale, $available, false)) {
                         return $locale;
                     }
-                } catch (DomainException $ex) {
+                } catch (DomainException) {
                     // An unknown locale?  Ignore it.
                 }
             }
