@@ -89,16 +89,8 @@ class Locale
             $preferences = self::httpAcceptChinese($preferences);
             $preferences = self::httpAcceptDowngrade($preferences);
 
-            // Need a stable sort, as the original order is significant
-            $preferences = array_map(function ($x) {
-                static $n = 0;
-
-                return array($x, --$n);
-            }, $preferences);
+            // PHP sorts are stable since 8.0 - the original order is significant
             arsort($preferences);
-            $preferences = array_map(function ($x) {
-                return $x[0];
-            }, $preferences);
 
             foreach (array_keys($preferences) as $code) {
                 try {
