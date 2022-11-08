@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Fisharebest\Localization\Language;
 
 use Fisharebest\Localization\PluralRule\PluralRule12;

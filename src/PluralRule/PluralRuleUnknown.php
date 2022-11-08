@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Fisharebest\Localization\PluralRule;
 
 use DomainException;
