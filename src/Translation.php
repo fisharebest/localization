@@ -119,17 +119,11 @@ class Translation
         // How is the numeric data packed in the .MO file?
         $magic = $this->readMoWords($fp, 0, 1, self::PACK_LITTLE_ENDIAN);
 
-        switch (dechex($magic[1])) {
-            case self::MO_MAGIC_LITTLE_ENDIAN:
-                $pack = self::PACK_LITTLE_ENDIAN;
-                break;
-            case self::MO_MAGIC_BIG_ENDIAN:
-                $pack = self::PACK_BIG_ENDIAN;
-                break;
-            default:
-                // Not a valid .MO file.
-                throw new InvalidArgumentException('Invalid .MO file');
-        }
+        $pack = match (dechex($magic[1])) {
+            self::MO_MAGIC_LITTLE_ENDIAN => self::PACK_LITTLE_ENDIAN,
+            self::MO_MAGIC_BIG_ENDIAN => self::PACK_BIG_ENDIAN,
+            default => throw new InvalidArgumentException('Invalid .MO file'),
+        };
 
         // Read the lookup tables
         [, $number_of_strings, $offset_original, $offset_translated] = $this->readMoWords($fp, 8, 3, $pack);
