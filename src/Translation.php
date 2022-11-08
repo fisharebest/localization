@@ -153,7 +153,7 @@ class Translation
     {
         // Strip comments
         $lines = array_filter($lines, function ($line) {
-            return strpos($line, '#') !== 0;
+            return !str_starts_with($line, '#');
         });
 
         // Trim carriage-returns, newlines, spaces

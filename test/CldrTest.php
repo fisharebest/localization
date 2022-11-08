@@ -30,7 +30,7 @@ class CldrTest extends TestCase
     public function testCharacterOrder(): void
     {
         foreach (glob(__DIR__ . '/data/cldr-42/main/*.xml') as $cldr) {
-            if (strpos($cldr, '/root.xml') === false) {
+            if (!str_ends_with($cldr, '/root.xml')) {
                 $locale = Locale::create(basename($cldr, '.xml'));
                 $dir    = $this->cldrValue($cldr, '/ldml/layout/orientation/characterOrder');
 
@@ -47,7 +47,7 @@ class CldrTest extends TestCase
     public function testNumbers(): void
     {
         foreach (glob(__DIR__ . '/data/cldr-42/main/*.xml') as $cldr) {
-            if (strpos($cldr, '/root.xml') === false) {
+            if (!str_ends_with($cldr, '/root.xml')) {
                 $locale = Locale::create(basename($cldr, '.xml'));
 
                 $def_num_system = $this->cldrValue($cldr, "/ldml/numbers/defaultNumberingSystem");
@@ -173,7 +173,7 @@ class CldrTest extends TestCase
         $tmp = $file;
 
         while ($xml->xpath($xpath) == false) {
-            if (strpos($file, 'root.xml') !== false) {
+            if (str_ends_with($file, '/root.xml')) {
                 throw new Exception('Cannot find ' . $xpath . ' in ' . $tmp);
             }
             $file = $this->parentCldr($file);
