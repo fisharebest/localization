@@ -75,7 +75,7 @@ class CldrPluralRulesTest extends TestCase
                         $rules = preg_split('/[^0-9~]+/', $match[1], -1, PREG_SPLIT_NO_EMPTY);
                         foreach ($rules as $rule) {
                             if (strpos($rule, '~') !== false) {
-                                list($low, $high) = explode('~', $rule);
+                                [$low, $high] = explode('~', $rule);
                             } else {
                                 $low  = $rule;
                                 $high = $rule;
