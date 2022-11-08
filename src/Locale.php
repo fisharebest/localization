@@ -19,7 +19,7 @@ class Locale
      *
      * @var array<string,string>
      */
-    private static array $http_accept_chinese = array(
+    private const HTTP_ACCEPT_CHINESE = array(
         'zh-cn' => 'zh-hans-cn',
         'zh-sg' => 'zh-hans-sg',
         'zh-hk' => 'zh-hant-hk',
@@ -152,7 +152,7 @@ class Locale
      */
     private static function httpAcceptChinese(array $preferences): array
     {
-        foreach (self::$http_accept_chinese as $old => $new) {
+        foreach (self::HTTP_ACCEPT_CHINESE as $old => $new) {
             if (array_key_exists($old, $preferences) && !array_key_exists($new, $preferences)) {
                 $preferences[$new] = $preferences[$old] * 0.95;
             }

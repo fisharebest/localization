@@ -17,6 +17,11 @@ use PHPUnit\Framework\TestCase;
  */
 class CldrTest extends TestCase
 {
+    private const DIRECTIONS = array(
+        'left-to-right' => 'ltr',
+        'right-to-left' => 'rtl',
+    );
+
     /**
      * Test layout
      *
@@ -24,17 +29,12 @@ class CldrTest extends TestCase
      */
     public function testCharacterOrder(): void
     {
-        $direction = array(
-            'left-to-right' => 'ltr',
-            'right-to-left' => 'rtl',
-        );
-
         foreach (glob(__DIR__ . '/data/cldr-42/main/*.xml') as $cldr) {
             if (strpos($cldr, '/root.xml') === false) {
                 $locale = Locale::create(basename($cldr, '.xml'));
                 $dir    = $this->cldrValue($cldr, '/ldml/layout/orientation/characterOrder');
 
-                self::assertSame($direction[$dir], $locale->direction(), $cldr);
+                self::assertSame(self::DIRECTIONS[$dir], $locale->direction(), $cldr);
             }
         }
     }

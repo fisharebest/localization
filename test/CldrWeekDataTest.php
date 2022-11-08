@@ -15,6 +15,16 @@ use PHPUnit\Framework\TestCase;
  */
 class CldrWeekDataTest extends TestCase
 {
+    private const DAYS = array(
+        'sun' => 0,
+        'mon' => 1,
+        'tue' => 2,
+        'wed' => 3,
+        'thu' => 4,
+        'fri' => 5,
+        'sat' => 6,
+    );
+
     /**
      * Test weekData
      *
@@ -22,21 +32,11 @@ class CldrWeekDataTest extends TestCase
      */
     public function testWeekData(): void
     {
-        $days = array(
-            'sun' => 0,
-            'mon' => 1,
-            'tue' => 2,
-            'wed' => 3,
-            'thu' => 4,
-            'fri' => 5,
-            'sat' => 6,
-        );
-
         $cldr = simplexml_load_string(file_get_contents(__DIR__ . '/data/cldr-42/supplemental/supplementalData.xml'));
 
         foreach ($cldr->weekData->firstDay as $xml) {
             if ($xml->attributes()->alt != 'variant') {
-                $day         = $days[(string) $xml->attributes()->day];
+                $day         = self::DAYS[(string) $xml->attributes()->day];
                 $territories = preg_split('/\s/', (string) $xml->attributes()->territories, -1, PREG_SPLIT_NO_EMPTY);
                 foreach ($territories as $code) {
                     $class     = '\\Fisharebest\\Localization\\Territory\\Territory' . ucfirst(strtolower($code));
@@ -47,7 +47,7 @@ class CldrWeekDataTest extends TestCase
         }
 
         foreach ($cldr->weekData->weekendStart as $xml) {
-            $day         = $days[(string) $xml->attributes()->day];
+            $day         = self::DAYS[(string) $xml->attributes()->day];
             $territories = preg_split('/\s/', (string) $xml->attributes()->territories, -1, PREG_SPLIT_NO_EMPTY);
             foreach ($territories as $code) {
                 $class     = '\\Fisharebest\\Localization\\Territory\\Territory' . ucfirst(strtolower($code));
@@ -57,7 +57,7 @@ class CldrWeekDataTest extends TestCase
         }
 
         foreach ($cldr->weekData->weekendEnd as $xml) {
-            $day         = $days[(string) $xml->attributes()->day];
+            $day         = self::DAYS[(string) $xml->attributes()->day];
             $territories = preg_split('/\s/', (string) $xml->attributes()->territories, -1, PREG_SPLIT_NO_EMPTY);
             foreach ($territories as $code) {
                 $class     = '\\Fisharebest\\Localization\\Territory\\Territory' . ucfirst(strtolower($code));

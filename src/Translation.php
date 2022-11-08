@@ -22,6 +22,18 @@ class Translation
     public const PLURAL_SEPARATOR  = "\x00";
     public const CONTEXT_SEPARATOR = "\x04";
 
+    private const SPECIAL_CHARACTERS = array(
+        '\\\\' => '\\',
+        '\\a'  => "\x07",
+        '\\b'  => "\x08",
+        '\\f'  => "\x0c",
+        '\\n'  => "\n",
+        '\\r'  => "\r",
+        '\\t'  => "\t",
+        '\\v'  => "\x0b",
+        '\\"'  => '"',
+    );
+
     /** @var array<array-key,string> An association of English -> translated messages */
     private array $translations;
 
@@ -217,16 +229,6 @@ class Translation
      */
     private function unescapePoText(string $text): string
     {
-        return strtr($text, array(
-            '\\\\' => '\\',
-            '\\a'  => "\x07",
-            '\\b'  => "\x08",
-            '\\f'  => "\x0c",
-            '\\n'  => "\n",
-            '\\r'  => "\r",
-            '\\t'  => "\t",
-            '\\v'  => "\x0b",
-            '\\"'  => '"',
-        ));
+        return strtr($text, self::SPECIAL_CHARACTERS);
     }
 }
