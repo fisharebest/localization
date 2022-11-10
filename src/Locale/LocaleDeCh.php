@@ -28,10 +28,10 @@ class LocaleDeCh extends LocaleDe
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP   => self::APOSTROPHE,
             self::DECIMAL => self::DOT,
-        );
+        ];
     }
 
     protected function percentFormat(): string

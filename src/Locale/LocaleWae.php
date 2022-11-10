@@ -33,9 +33,9 @@ class LocaleWae extends AbstractLocale implements LocaleInterface
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP   => self::APOSTROPHE,
             self::DECIMAL => self::COMMA,
-        );
+        ];
     }
 }

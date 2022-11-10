@@ -27,7 +27,7 @@ class ScriptManiTest extends TestCase
         self::assertSame('Mani', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('139', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Manichaean', $script->unicodeName());
     }
 }

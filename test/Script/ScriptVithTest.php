@@ -27,7 +27,7 @@ class ScriptVithTest extends TestCase
         self::assertSame('Vith', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('228', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Vithkuqi', $script->unicodeName());
     }
 }

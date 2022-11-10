@@ -27,7 +27,7 @@ class ScriptNshuTest extends TestCase
         self::assertSame('Nshu', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('499', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Nushu', $script->unicodeName());
     }
 }

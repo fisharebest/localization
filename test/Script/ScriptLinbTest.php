@@ -27,7 +27,7 @@ class ScriptLinbTest extends TestCase
         self::assertSame('Linb', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('401', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Linear_B', $script->unicodeName());
     }
 }

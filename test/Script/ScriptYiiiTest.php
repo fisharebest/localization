@@ -27,7 +27,7 @@ class ScriptYiiiTest extends TestCase
         self::assertSame('Yiii', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('460', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Yi', $script->unicodeName());
     }
 }

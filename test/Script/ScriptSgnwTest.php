@@ -27,7 +27,7 @@ class ScriptSgnwTest extends TestCase
         self::assertSame('Sgnw', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('095', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('SignWriting', $script->unicodeName());
     }
 }

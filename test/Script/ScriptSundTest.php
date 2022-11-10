@@ -27,7 +27,7 @@ class ScriptSundTest extends TestCase
         self::assertSame('Sund', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('362', $script->number());
-        self::assertSame(array('᮰', '᮱', '᮲', '᮳', '᮴', '᮵', '᮶', '᮷', '᮸', '᮹'), $script->numerals());
+        self::assertSame(['᮰', '᮱', '᮲', '᮳', '᮴', '᮵', '᮶', '᮷', '᮸', '᮹'], $script->numerals());
         self::assertSame('Sundanese', $script->unicodeName());
     }
 }

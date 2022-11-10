@@ -27,7 +27,7 @@ class ScriptTengTest extends TestCase
         self::assertSame('Teng', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('290', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

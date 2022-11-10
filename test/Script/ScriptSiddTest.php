@@ -27,7 +27,7 @@ class ScriptSiddTest extends TestCase
         self::assertSame('Sidd', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('302', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Siddham', $script->unicodeName());
     }
 }

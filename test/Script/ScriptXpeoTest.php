@@ -27,7 +27,7 @@ class ScriptXpeoTest extends TestCase
         self::assertSame('Xpeo', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('030', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Old_Persian', $script->unicodeName());
     }
 }

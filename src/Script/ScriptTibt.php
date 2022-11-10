@@ -20,7 +20,7 @@ class ScriptTibt extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('༠', '༡', '༢', '༣', '༤', '༥', '༦', '༧', '༨', '༩');
+        return ['༠', '༡', '༢', '༣', '༤', '༥', '༦', '༧', '༨', '༩'];
     }
 
     public function number(): string

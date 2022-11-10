@@ -27,7 +27,7 @@ class ScriptCansTest extends TestCase
         self::assertSame('Cans', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('440', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Canadian_Aboriginal', $script->unicodeName());
     }
 }

@@ -27,7 +27,7 @@ class ScriptKthiTest extends TestCase
         self::assertSame('Kthi', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('317', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Kaithi', $script->unicodeName());
     }
 }

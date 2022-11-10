@@ -20,7 +20,7 @@ class ScriptKnda extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('೦', '೧', '೨', '೩', '೪', '೫', '೬', '೭', '೮', '೯');
+        return ['೦', '೧', '೨', '೩', '೪', '೫', '೬', '೭', '೮', '೯'];
     }
 
     public function number(): string

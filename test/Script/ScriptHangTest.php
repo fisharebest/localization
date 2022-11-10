@@ -27,7 +27,7 @@ class ScriptHangTest extends TestCase
         self::assertSame('Hang', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('286', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Hangul', $script->unicodeName());
     }
 }

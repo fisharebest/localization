@@ -27,7 +27,7 @@ class ScriptBaliTest extends TestCase
         self::assertSame('Bali', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('360', $script->number());
-        self::assertSame(array('᭐', '᭑', '᭒', '᭓', '᭔', '᭕', '᭖', '᭗', '᭘', '᭙'), $script->numerals());
+        self::assertSame(['᭐', '᭑', '᭒', '᭓', '᭔', '᭕', '᭖', '᭗', '᭘', '᭙'], $script->numerals());
         self::assertSame('Balinese', $script->unicodeName());
     }
 }

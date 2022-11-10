@@ -27,7 +27,7 @@ class ScriptVaiiTest extends TestCase
         self::assertSame('Vaii', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('470', $script->number());
-        self::assertSame(array('꘠', '꘡', '꘢', '꘣', '꘤', '꘥', '꘦', '꘧', '꘨', '꘩'), $script->numerals());
+        self::assertSame(['꘠', '꘡', '꘢', '꘣', '꘤', '꘥', '꘦', '꘧', '꘨', '꘩'], $script->numerals());
         self::assertSame('Vai', $script->unicodeName());
     }
 }

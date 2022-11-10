@@ -20,7 +20,7 @@ class ScriptGuru extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('੦', '੧', '੨', '੩', '੪', '੫', '੬', '੭', '੮', '੯');
+        return ['੦', '੧', '੨', '੩', '੪', '੫', '੬', '੭', '੮', '੯'];
     }
 
     public function number(): string

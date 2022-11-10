@@ -27,7 +27,7 @@ class ScriptTglgTest extends TestCase
         self::assertSame('Tglg', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('370', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Tagalog', $script->unicodeName());
     }
 }

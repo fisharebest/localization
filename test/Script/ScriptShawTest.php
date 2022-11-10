@@ -27,7 +27,7 @@ class ScriptShawTest extends TestCase
         self::assertSame('Shaw', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('281', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Shavian', $script->unicodeName());
     }
 }

@@ -27,7 +27,7 @@ class ScriptSoraTest extends TestCase
         self::assertSame('Sora', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('398', $script->number());
-        self::assertSame(array('𑃰', '𑃱', '𑃲', '𑃳', '𑃴', '𑃵', '𑃶', '𑃷', '𑃸', '𑃹'), $script->numerals());
+        self::assertSame(['𑃰', '𑃱', '𑃲', '𑃳', '𑃴', '𑃵', '𑃶', '𑃷', '𑃸', '𑃹'], $script->numerals());
         self::assertSame('Sora_Sompeng', $script->unicodeName());
     }
 }

@@ -27,7 +27,7 @@ class ScriptBraiTest extends TestCase
         self::assertSame('Brai', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('570', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Braille', $script->unicodeName());
     }
 }

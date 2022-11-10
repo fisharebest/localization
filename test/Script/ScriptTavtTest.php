@@ -27,7 +27,7 @@ class ScriptTavtTest extends TestCase
         self::assertSame('Tavt', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('359', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Tai_Viet', $script->unicodeName());
     }
 }

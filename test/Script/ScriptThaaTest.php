@@ -27,7 +27,7 @@ class ScriptThaaTest extends TestCase
         self::assertSame('Thaa', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('170', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Thaana', $script->unicodeName());
     }
 }

@@ -20,7 +20,7 @@ class ScriptMtei extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('꯰', '꯱', '꯲', '꯳', '꯴', '꯵', '꯶', '꯷', '꯸', '꯹');
+        return ['꯰', '꯱', '꯲', '꯳', '꯴', '꯵', '꯶', '꯷', '꯸', '꯹'];
     }
 
     public function number(): string

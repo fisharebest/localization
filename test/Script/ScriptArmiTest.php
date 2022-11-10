@@ -27,7 +27,7 @@ class ScriptArmiTest extends TestCase
         self::assertSame('Armi', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('124', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Imperial_Aramaic', $script->unicodeName());
     }
 }

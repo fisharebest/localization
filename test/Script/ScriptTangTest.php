@@ -27,7 +27,7 @@ class ScriptTangTest extends TestCase
         self::assertSame('Tang', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('520', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Tangut', $script->unicodeName());
     }
 }

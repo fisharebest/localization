@@ -27,7 +27,7 @@ class ScriptRanjTest extends TestCase
         self::assertSame('Ranj', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('303', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

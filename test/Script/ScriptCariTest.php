@@ -27,7 +27,7 @@ class ScriptCariTest extends TestCase
         self::assertSame('Cari', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('201', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Carian', $script->unicodeName());
     }
 }

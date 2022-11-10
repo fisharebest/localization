@@ -20,7 +20,7 @@ class ScriptKali extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('꤀', '꤁', '꤂', '꤃', '꤄', '꤅', '꤆', '꤇', '꤈', '꤉');
+        return ['꤀', '꤁', '꤂', '꤃', '꤄', '꤅', '꤆', '꤇', '꤈', '꤉'];
     }
 
     public function number(): string

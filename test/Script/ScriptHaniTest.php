@@ -27,7 +27,7 @@ class ScriptHaniTest extends TestCase
         self::assertSame('Hani', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('500', $script->number());
-        self::assertSame(array('〇', '一', '二', '三', '四', '五', '六', '七', '八', '九'), $script->numerals());
+        self::assertSame(['〇', '一', '二', '三', '四', '五', '六', '七', '八', '九'], $script->numerals());
         self::assertSame('Han', $script->unicodeName());
     }
 }

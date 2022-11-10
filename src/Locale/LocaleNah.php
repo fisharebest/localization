@@ -33,10 +33,10 @@ class LocaleNah extends AbstractLocale implements LocaleInterface
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP   => self::COMMA,
             self::DECIMAL => self::DOT,
-        );
+        ];
     }
 
     protected function percentFormat(): string

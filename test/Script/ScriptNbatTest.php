@@ -27,7 +27,7 @@ class ScriptNbatTest extends TestCase
         self::assertSame('Nbat', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('159', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Nabataean', $script->unicodeName());
     }
 }

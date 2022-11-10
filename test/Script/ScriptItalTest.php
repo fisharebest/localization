@@ -27,7 +27,7 @@ class ScriptItalTest extends TestCase
         self::assertSame('Ital', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('210', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Old_Italic', $script->unicodeName());
     }
 }

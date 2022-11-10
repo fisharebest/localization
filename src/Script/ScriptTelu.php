@@ -20,7 +20,7 @@ class ScriptTelu extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('౦', '౧', '౨', '౩', '౪', '౫', '౬', '౭', '౮', '౯');
+        return ['౦', '౧', '౨', '౩', '౪', '౫', '౬', '౭', '౮', '౯'];
     }
 
     public function number(): string

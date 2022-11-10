@@ -18,10 +18,10 @@ class LocaleFrMa extends LocaleFr
 {
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP   => self::DOT,
             self::DECIMAL => self::COMMA,
-        );
+        ];
     }
 
     public function territory(): TerritoryInterface

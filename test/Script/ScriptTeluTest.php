@@ -27,7 +27,7 @@ class ScriptTeluTest extends TestCase
         self::assertSame('Telu', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('340', $script->number());
-        self::assertSame(array('౦', '౧', '౨', '౩', '౪', '౫', '౬', '౭', '౮', '౯'), $script->numerals());
+        self::assertSame(['౦', '౧', '౨', '౩', '౪', '౫', '౬', '౭', '౮', '౯'], $script->numerals());
         self::assertSame('Telugu', $script->unicodeName());
     }
 }

@@ -27,7 +27,7 @@ class ScriptHantTest extends TestCase
         self::assertSame('Hant', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('502', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

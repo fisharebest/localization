@@ -38,11 +38,11 @@ class LocaleNo extends AbstractLocale implements LocaleInterface
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::DECIMAL  => self::COMMA,
             self::GROUP    => self::NBSP,
             self::NEGATIVE => self::MINUS_SIGN,
-        );
+        ];
     }
 
     protected function percentFormat(): string

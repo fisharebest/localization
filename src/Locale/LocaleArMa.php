@@ -19,11 +19,11 @@ class LocaleArMa extends LocaleAr
 {
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP    => self::DOT,
             self::DECIMAL  => self::COMMA,
             self::NEGATIVE => self::LTR_MARK . '-',
-        );
+        ];
     }
 
     protected function numerals(): array

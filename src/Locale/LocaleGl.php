@@ -33,10 +33,10 @@ class LocaleGl extends AbstractLocale implements LocaleInterface
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP   => self::DOT,
             self::DECIMAL => self::COMMA,
-        );
+        ];
     }
 
     public function percentFormat(): string

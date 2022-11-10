@@ -20,7 +20,7 @@ class ScriptKhmr extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('០', '១', '២', '៣', '៤', '៥', '៦', '៧', '៨', '៩');
+        return ['០', '១', '២', '៣', '៤', '៥', '៦', '៧', '៨', '៩'];
     }
 
     public function number(): string

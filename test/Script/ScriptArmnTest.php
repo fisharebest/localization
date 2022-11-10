@@ -27,7 +27,7 @@ class ScriptArmnTest extends TestCase
         self::assertSame('Armn', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('230', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Armenian', $script->unicodeName());
     }
 }

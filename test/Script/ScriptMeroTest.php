@@ -27,7 +27,7 @@ class ScriptMeroTest extends TestCase
         self::assertSame('Mero', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('100', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Meroitic_Hieroglyphs', $script->unicodeName());
     }
 }

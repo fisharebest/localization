@@ -27,7 +27,7 @@ class ScriptAranTest extends TestCase
         self::assertSame('Aran', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('161', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

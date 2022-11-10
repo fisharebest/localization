@@ -28,11 +28,11 @@ class LocalePs extends AbstractLocale implements LocaleInterface
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP    => self::ARAB_GROUP,
             self::DECIMAL  => self::ARAB_DECIMAL,
             self::NEGATIVE => self::LTR_MARK . self::HYPHEN . self::LTR_MARK,
-        );
+        ];
     }
 
     protected function percentFormat(): string

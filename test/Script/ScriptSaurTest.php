@@ -27,7 +27,7 @@ class ScriptSaurTest extends TestCase
         self::assertSame('Saur', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('344', $script->number());
-        self::assertSame(array('꣐', '꣑', '꣒', '꣓', '꣔', '꣕', '꣖', '꣗', '꣘', '꣙'), $script->numerals());
+        self::assertSame(['꣐', '꣑', '꣒', '꣓', '꣔', '꣕', '꣖', '꣗', '꣘', '꣙'], $script->numerals());
         self::assertSame('Saurashtra', $script->unicodeName());
     }
 }

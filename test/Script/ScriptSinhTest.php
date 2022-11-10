@@ -27,7 +27,7 @@ class ScriptSinhTest extends TestCase
         self::assertSame('Sinh', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('348', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Sinhala', $script->unicodeName());
     }
 }

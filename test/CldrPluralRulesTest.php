@@ -85,11 +85,7 @@ class CldrPluralRulesTest extends TestCase
                             $high = (int) $high;
 
                             for ($number = $low; $number <= $high; ++$number) {
-                                $debug = implode('|', array(
-                                    $locale_code,
-                                    $plural_rule,
-                                    $rule,
-                                ));
+                                $debug = implode('|', [$locale_code, $plural_rule, $rule]);
 
                                 self::assertSame($plural_rule, $locale->pluralRule()->plural($number), $debug);
                             }

@@ -20,7 +20,7 @@ class ScriptOlck extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('᱐', '᱑', '᱒', '᱓', '᱔', '᱕', '᱖', '᱗', '᱘', '᱙');
+        return ['᱐', '᱑', '᱒', '᱓', '᱔', '᱕', '᱖', '᱗', '᱘', '᱙'];
     }
 
     public function number(): string

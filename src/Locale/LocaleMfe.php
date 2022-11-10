@@ -33,8 +33,8 @@ class LocaleMfe extends AbstractLocale implements LocaleInterface
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP => self::NBSP,
-        );
+        ];
     }
 }

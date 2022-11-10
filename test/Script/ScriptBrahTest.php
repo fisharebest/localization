@@ -27,7 +27,7 @@ class ScriptBrahTest extends TestCase
         self::assertSame('Brah', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('300', $script->number());
-        self::assertSame(array('𑁦', '𑁧', '𑁨', '𑁩', '𑁪', '𑁫', '𑁬', '𑁭', '𑁮', '𑁯'), $script->numerals());
+        self::assertSame(['𑁦', '𑁧', '𑁨', '𑁩', '𑁪', '𑁫', '𑁬', '𑁭', '𑁮', '𑁯'], $script->numerals());
         self::assertSame('Brahmi', $script->unicodeName());
     }
 }

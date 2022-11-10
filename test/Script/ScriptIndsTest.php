@@ -27,7 +27,7 @@ class ScriptIndsTest extends TestCase
         self::assertSame('Inds', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('610', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

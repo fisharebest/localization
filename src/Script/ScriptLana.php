@@ -20,7 +20,7 @@ class ScriptLana extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('᪀', '᪁', '᪂', '᪃', '᪄', '᪅', '᪆', '᪇', '᪈', '᪉');
+        return ['᪀', '᪁', '᪂', '᪃', '᪄', '᪅', '᪆', '᪇', '᪈', '᪉'];
     }
 
     public function number(): string

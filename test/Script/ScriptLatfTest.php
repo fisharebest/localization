@@ -27,7 +27,7 @@ class ScriptLatfTest extends TestCase
         self::assertSame('Latf', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('217', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

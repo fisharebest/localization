@@ -24,7 +24,7 @@ class Translation
     public const PLURAL_SEPARATOR  = "\x00";
     public const CONTEXT_SEPARATOR = "\x04";
 
-    private const SPECIAL_CHARACTERS = array(
+    private const SPECIAL_CHARACTERS = [
         '\\\\' => '\\',
         '\\a'  => "\x07",
         '\\b'  => "\x08",
@@ -34,7 +34,7 @@ class Translation
         '\\t'  => "\t",
         '\\v'  => "\x0b",
         '\\"'  => '"',
-    );
+    ];
 
     /** @var array<array-key,string> An association of English -> translated messages */
     private array $translations;
@@ -46,7 +46,7 @@ class Translation
      */
     public function __construct(string $filename)
     {
-        $this->translations = array();
+        $this->translations = [];
 
         switch (strtolower(pathinfo($filename, PATHINFO_EXTENSION))) {
             case 'csv':
@@ -173,7 +173,7 @@ class Translation
             $msgid        = '';
             $msgid_plural = '';
             $msgstr       = '';
-            $plurals      = array();
+            $plurals      = [];
 
             foreach ($parts as $part) {
                 $fragments = explode(' ', $part, 2);

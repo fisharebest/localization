@@ -20,7 +20,7 @@ class ScriptCham extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('꩐', '꩑', '꩒', '꩓', '꩔', '꩕', '꩖', '꩗', '꩘', '꩙');
+        return ['꩐', '꩑', '꩒', '꩓', '꩔', '꩕', '꩖', '꩗', '꩘', '꩙'];
     }
 
     public function number(): string

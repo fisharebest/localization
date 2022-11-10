@@ -23,8 +23,8 @@ class LocaleItCh extends LocaleIt
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP => self::APOSTROPHE,
-        );
+        ];
     }
 }

@@ -27,7 +27,7 @@ class ScriptOryaTest extends TestCase
         self::assertSame('Orya', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('327', $script->number());
-        self::assertSame(array('୦', '୧', '୨', '୩', '୪', '୫', '୬', '୭', '୮', '୯'), $script->numerals());
+        self::assertSame(['୦', '୧', '୨', '୩', '୪', '୫', '୬', '୭', '୮', '୯'], $script->numerals());
         self::assertSame('Oriya', $script->unicodeName());
     }
 }

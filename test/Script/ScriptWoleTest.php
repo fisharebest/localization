@@ -27,7 +27,7 @@ class ScriptWoleTest extends TestCase
         self::assertSame('Wole', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('480', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

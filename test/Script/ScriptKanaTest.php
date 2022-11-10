@@ -27,7 +27,7 @@ class ScriptKanaTest extends TestCase
         self::assertSame('Kana', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('411', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Katakana', $script->unicodeName());
     }
 }

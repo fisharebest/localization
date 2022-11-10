@@ -27,7 +27,7 @@ class ScriptGrekTest extends TestCase
         self::assertSame('Grek', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('200', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Greek', $script->unicodeName());
     }
 }

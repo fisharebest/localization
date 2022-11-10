@@ -18,9 +18,9 @@ class LocaleEnUsPosix extends LocaleEnUs
 {
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP => '',
-        );
+        ];
     }
 
     public function variant(): ?VariantInterface

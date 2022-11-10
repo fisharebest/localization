@@ -27,7 +27,7 @@ class ScriptPaucTest extends TestCase
         self::assertSame('Pauc', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('263', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Pau_Cin_Hau', $script->unicodeName());
     }
 }

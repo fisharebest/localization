@@ -27,7 +27,7 @@ class ScriptCprtTest extends TestCase
         self::assertSame('Cprt', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('403', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Cypriot', $script->unicodeName());
     }
 }

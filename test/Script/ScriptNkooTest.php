@@ -27,7 +27,7 @@ class ScriptNkooTest extends TestCase
         self::assertSame('Nkoo', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('165', $script->number());
-        self::assertSame(array('߀', '߁', '߂', '߃', '߄', '߅', '߆', '߇', '߈', '߉'), $script->numerals());
+        self::assertSame(['߀', '߁', '߂', '߃', '߄', '߅', '߆', '߇', '߈', '߉'], $script->numerals());
         self::assertSame('Nko', $script->unicodeName());
     }
 }

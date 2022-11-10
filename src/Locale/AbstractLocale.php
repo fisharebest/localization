@@ -244,7 +244,7 @@ abstract class AbstractLocale
      */
     protected function numberSymbols(): array
     {
-        return array();
+        return [];
     }
 
     /**

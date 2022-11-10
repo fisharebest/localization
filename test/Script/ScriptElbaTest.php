@@ -27,7 +27,7 @@ class ScriptElbaTest extends TestCase
         self::assertSame('Elba', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('226', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Elbasan', $script->unicodeName());
     }
 }

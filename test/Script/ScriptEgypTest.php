@@ -27,7 +27,7 @@ class ScriptEgypTest extends TestCase
         self::assertSame('Egyp', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('050', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Egyptian_Hieroglyphs', $script->unicodeName());
     }
 }

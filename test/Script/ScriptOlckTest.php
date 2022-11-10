@@ -27,7 +27,7 @@ class ScriptOlckTest extends TestCase
         self::assertSame('Olck', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('261', $script->number());
-        self::assertSame(array('᱐', '᱑', '᱒', '᱓', '᱔', '᱕', '᱖', '᱗', '᱘', '᱙'), $script->numerals());
+        self::assertSame(['᱐', '᱑', '᱒', '᱓', '᱔', '᱕', '᱖', '᱗', '᱘', '᱙'], $script->numerals());
         self::assertSame('Ol_Chiki', $script->unicodeName());
     }
 }

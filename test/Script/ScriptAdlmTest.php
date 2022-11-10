@@ -27,7 +27,7 @@ class ScriptAdlmTest extends TestCase
         self::assertSame('Adlm', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('166', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Adlam', $script->unicodeName());
     }
 }

@@ -27,7 +27,7 @@ class ScriptSogdTest extends TestCase
         self::assertSame('Sogd', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('141', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Sogdian', $script->unicodeName());
     }
 }

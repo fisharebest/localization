@@ -18,9 +18,9 @@ class LocalePaArab extends LocalePa
 {
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::DECIMAL => self::ARAB_DECIMAL,
-        );
+        ];
     }
 
     protected function percentFormat(): string

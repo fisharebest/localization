@@ -20,7 +20,7 @@ class ScriptThai extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('๐', '๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙');
+        return ['๐', '๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙'];
     }
 
     public function number(): string

@@ -27,7 +27,7 @@ class ScriptPiqdTest extends TestCase
         self::assertSame('Piqd', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('293', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

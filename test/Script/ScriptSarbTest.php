@@ -27,7 +27,7 @@ class ScriptSarbTest extends TestCase
         self::assertSame('Sarb', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('105', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Old_South_Arabian', $script->unicodeName());
     }
 }

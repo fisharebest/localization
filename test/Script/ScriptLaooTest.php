@@ -27,7 +27,7 @@ class ScriptLaooTest extends TestCase
         self::assertSame('Laoo', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('356', $script->number());
-        self::assertSame(array('໐', '໑', '໒', '໓', '໔', '໕', '໖', '໗', '໘', '໙'), $script->numerals());
+        self::assertSame(['໐', '໑', '໒', '໓', '໔', '໕', '໖', '໗', '໘', '໙'], $script->numerals());
         self::assertSame('Lao', $script->unicodeName());
     }
 }

@@ -27,7 +27,7 @@ class ScriptTamlTest extends TestCase
         self::assertSame('Taml', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('346', $script->number());
-        self::assertSame(array('௦', '௧', '௨', '௩', '௪', '௫', '௬', '௭', '௮', '௯'), $script->numerals());
+        self::assertSame(['௦', '௧', '௨', '௩', '௪', '௫', '௬', '௭', '௮', '௯'], $script->numerals());
         self::assertSame('Tamil', $script->unicodeName());
     }
 }

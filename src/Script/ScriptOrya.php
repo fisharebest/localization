@@ -20,7 +20,7 @@ class ScriptOrya extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('୦', '୧', '୨', '୩', '୪', '୫', '୬', '୭', '୮', '୯');
+        return ['୦', '୧', '୨', '୩', '୪', '୫', '୬', '୭', '୮', '୯'];
     }
 
     public function number(): string

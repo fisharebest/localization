@@ -17,10 +17,10 @@ use PHPUnit\Framework\TestCase;
  */
 class CldrTest extends TestCase
 {
-    private const DIRECTIONS = array(
+    private const DIRECTIONS = [
         'left-to-right' => 'ltr',
         'right-to-left' => 'rtl',
-    );
+    ];
 
     /**
      * Test layout
@@ -82,19 +82,19 @@ class CldrTest extends TestCase
                 // Check the (end of the) number matches the pattern.  Extra leading digits are OK.
                 $number = $locale->number(12345678.089);
 
-                $regex = '/' . strtr($standard, array(
+                $regex = '/' . strtr($standard, [
                         ',' => preg_quote($group, '/'),
                         '.' => preg_quote($decimal, '/'),
                         '0' => '.',
                         '#' => '.',
-                    )) . '$/u';
+                    ]) . '$/u';
 
-                $debug = implode('|', array(
+                $debug = implode('|', [
                     basename($cldr),
                     'regex=' . $regex . '=' . bin2hex($regex),
                     'number=' . $number . '=' . bin2hex($number),
                     'standard=' . $standard . '=' . bin2hex($standard),
-                ));
+                ]);
 
                 if ($locale->language()->code() !== 'oc') {
                     // oc.xml does not use its own punctuation in its examples.
@@ -104,21 +104,21 @@ class CldrTest extends TestCase
                 // Check the percentage matches the pattern.
                 $number = $locale->percent(12345.67);
 
-                $regex = '/' . strtr($percent, array(
+                $regex = '/' . strtr($percent, [
                         ',' => preg_quote($group, '/'),
                         '.' => preg_quote($decimal, '/'),
                         '0' => '.',
                         '#' => '.',
                         '%' => preg_quote($percent_sign, '/'),
-                    )) . '/u';
+                    ]) . '/u';
 
-                $debug = implode('|', array(
+                $debug = implode('|', [
                     basename($cldr),
                     'percentSign=' . $percent_sign . '=' . bin2hex($percent_sign),
                     'regex=' . $regex . '=' . bin2hex($regex),
                     'number=' . $number . '=' . bin2hex($number),
                     'percent=' . $percent,
-                ));
+                ]);
 
                 if ($locale->language()->code() !== 'oc') {
                     // oc.xml does not use its own punctuation in its examples.
@@ -128,11 +128,11 @@ class CldrTest extends TestCase
                 // Check the minus sign is correct
                 $number = $locale->number(-1);
 
-                $debug = implode('|', array(
+                $debug = implode('|', [
                     basename($cldr),
                     'minusSign=' . $minus_sign . '=' . bin2hex($minus_sign),
                     'number=' . $number . '=' . bin2hex($number),
-                ));
+                ]);
 
                 self::assertStringStartsWith($minus_sign, $number, $debug);
             }

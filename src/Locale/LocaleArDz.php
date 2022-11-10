@@ -19,11 +19,11 @@ class LocaleArDz extends LocaleAr
 {
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP    => self::DOT,
             self::DECIMAL  => self::COMMA,
             self::NEGATIVE => self::LTR_MARK . self::HYPHEN,
-        );
+        ];
     }
 
     protected function numerals(): array

@@ -20,7 +20,7 @@ class ScriptDeva extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('०', '१', '२', '३', '४', '५', '६', '७', '८', '९');
+        return ['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'];
     }
 
     public function number(): string

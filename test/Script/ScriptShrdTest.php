@@ -27,7 +27,7 @@ class ScriptShrdTest extends TestCase
         self::assertSame('Shrd', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('319', $script->number());
-        self::assertSame(array('𑇐', '𑇑', '𑇒', '𑇓', '𑇔', '𑇕', '𑇖', '𑇗', '𑇘', '𑇙'), $script->numerals());
+        self::assertSame(['𑇐', '𑇑', '𑇒', '𑇓', '𑇔', '𑇕', '𑇖', '𑇗', '𑇘', '𑇙'], $script->numerals());
         self::assertSame('Sharada', $script->unicodeName());
     }
 }

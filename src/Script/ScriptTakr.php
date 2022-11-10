@@ -20,7 +20,7 @@ class ScriptTakr extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('𑛀', '𑛁', '𑛂', '𑛃', '𑛄', '𑛅', '𑛆', '𑛇', '𑛈', '𑛉');
+        return ['𑛀', '𑛁', '𑛂', '𑛃', '𑛄', '𑛅', '𑛆', '𑛇', '𑛈', '𑛉'];
     }
 
     public function number(): string

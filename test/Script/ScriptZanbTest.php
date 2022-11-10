@@ -27,7 +27,7 @@ class ScriptZanbTest extends TestCase
         self::assertSame('Zanb', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('339', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Zanabazar_Square', $script->unicodeName());
     }
 }

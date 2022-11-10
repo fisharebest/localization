@@ -27,7 +27,7 @@ class ScriptMandTest extends TestCase
         self::assertSame('Mand', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('140', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Mandaic', $script->unicodeName());
     }
 }

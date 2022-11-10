@@ -24,7 +24,7 @@ abstract class AbstractScript
      */
     public function numerals(): array
     {
-        return array();
+        return [];
     }
 
     /**

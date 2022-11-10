@@ -27,7 +27,7 @@ class ScriptLydiTest extends TestCase
         self::assertSame('Lydi', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('116', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Lydian', $script->unicodeName());
     }
 }

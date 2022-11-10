@@ -27,7 +27,7 @@ class ScriptSunuTest extends TestCase
         self::assertSame('Sunu', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('274', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

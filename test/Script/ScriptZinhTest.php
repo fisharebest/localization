@@ -27,7 +27,7 @@ class ScriptZinhTest extends TestCase
         self::assertSame('Zinh', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('994', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Inherited', $script->unicodeName());
     }
 }

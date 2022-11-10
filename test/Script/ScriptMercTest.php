@@ -27,7 +27,7 @@ class ScriptMercTest extends TestCase
         self::assertSame('Merc', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('101', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Meroitic_Cursive', $script->unicodeName());
     }
 }

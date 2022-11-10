@@ -27,7 +27,7 @@ class ScriptThaiTest extends TestCase
         self::assertSame('Thai', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('352', $script->number());
-        self::assertSame(array('๐', '๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙'), $script->numerals());
+        self::assertSame(['๐', '๑', '๒', '๓', '๔', '๕', '๖', '๗', '๘', '๙'], $script->numerals());
         self::assertSame('Thai', $script->unicodeName());
     }
 }

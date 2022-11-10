@@ -27,7 +27,7 @@ class ScriptModiTest extends TestCase
         self::assertSame('Modi', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('324', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Modi', $script->unicodeName());
     }
 }

@@ -27,7 +27,7 @@ class ScriptLomaTest extends TestCase
         self::assertSame('Loma', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('437', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

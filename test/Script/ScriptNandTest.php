@@ -27,7 +27,7 @@ class ScriptNandTest extends TestCase
         self::assertSame('Nand', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('311', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Nandinagari', $script->unicodeName());
     }
 }

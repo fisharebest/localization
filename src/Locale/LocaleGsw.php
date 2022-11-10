@@ -33,10 +33,10 @@ class LocaleGsw extends AbstractLocale implements LocaleInterface
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP    => self::APOSTROPHE,
             self::NEGATIVE => self::MINUS_SIGN,
-        );
+        ];
     }
 
     protected function percentFormat(): string

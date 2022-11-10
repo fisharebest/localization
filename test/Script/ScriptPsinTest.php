@@ -27,7 +27,7 @@ class ScriptPsinTest extends TestCase
         self::assertSame('Psin', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('103', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

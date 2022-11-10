@@ -20,7 +20,7 @@ class ScriptGujr extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('૦', '૧', '૨', '૩', '૪', '૫', '૬', '૭', '૮', '૯');
+        return ['૦', '૧', '૨', '૩', '૪', '૫', '૬', '૭', '૮', '૯'];
     }
 
     public function number(): string

@@ -27,7 +27,7 @@ class ScriptVispTest extends TestCase
         self::assertSame('Visp', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('280', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

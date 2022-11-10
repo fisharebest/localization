@@ -27,7 +27,7 @@ class ScriptHiraTest extends TestCase
         self::assertSame('Hira', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('410', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Hiragana', $script->unicodeName());
     }
 }

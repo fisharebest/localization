@@ -20,7 +20,7 @@ class ScriptTalu extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('᧐', '᧑', '᧒', '᧓', '᧔', '᧕', '᧖', '᧗', '᧘', '᧙');
+        return ['᧐', '᧑', '᧒', '᧓', '᧔', '᧕', '᧖', '᧗', '᧘', '᧙'];
     }
 
     public function number(): string

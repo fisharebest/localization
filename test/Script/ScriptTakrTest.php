@@ -27,7 +27,7 @@ class ScriptTakrTest extends TestCase
         self::assertSame('Takr', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('321', $script->number());
-        self::assertSame(array('𑛀', '𑛁', '𑛂', '𑛃', '𑛄', '𑛅', '𑛆', '𑛇', '𑛈', '𑛉'), $script->numerals());
+        self::assertSame(['𑛀', '𑛁', '𑛂', '𑛃', '𑛄', '𑛅', '𑛆', '𑛇', '𑛈', '𑛉'], $script->numerals());
         self::assertSame('Takri', $script->unicodeName());
     }
 }

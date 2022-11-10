@@ -27,7 +27,7 @@ class ScriptTibtTest extends TestCase
         self::assertSame('Tibt', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('330', $script->number());
-        self::assertSame(array('༠', '༡', '༢', '༣', '༤', '༥', '༦', '༧', '༨', '༩'), $script->numerals());
+        self::assertSame(['༠', '༡', '༢', '༣', '༤', '༥', '༦', '༧', '༨', '༩'], $script->numerals());
         self::assertSame('Tibetan', $script->unicodeName());
     }
 }

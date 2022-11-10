@@ -20,7 +20,7 @@ class ScriptLimb extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('᥆', '᥇', '᥈', '᥉', '᥊', '᥋', '᥌', '᥍', '᥎', '᥏');
+        return ['᥆', '᥇', '᥈', '᥉', '᥊', '᥋', '᥌', '᥍', '᥎', '᥏'];
     }
 
     public function number(): string

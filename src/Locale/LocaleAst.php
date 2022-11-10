@@ -33,9 +33,9 @@ class LocaleAst extends AbstractLocale implements LocaleInterface
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP   => self::DOT,
             self::DECIMAL => self::COMMA,
-        );
+        ];
     }
 }

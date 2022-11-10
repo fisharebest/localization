@@ -31,10 +31,7 @@ class CldrLanguagesTest extends TestCase
 
                 $endonyms = $cldr->xpath("/ldml/localeDisplayNames/languages/language[@type='" . $language_tag . "'][not(@alt)]");
                 foreach ($endonyms as $endonym) {
-                    $debug = implode('|', array(
-                        basename($xml),
-                        $endonym,
-                    ));
+                    $debug = implode('|', [basename($xml), $endonym]);
 
                     self::assertSame((string) $endonym, $locale->endonym(), $debug);
                 }

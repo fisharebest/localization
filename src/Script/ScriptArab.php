@@ -20,7 +20,7 @@ class ScriptArab extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩');
+        return ['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'];
     }
 
     public function number(): string

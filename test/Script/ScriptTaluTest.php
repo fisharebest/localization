@@ -27,7 +27,7 @@ class ScriptTaluTest extends TestCase
         self::assertSame('Talu', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('354', $script->number());
-        self::assertSame(array('᧐', '᧑', '᧒', '᧓', '᧔', '᧕', '᧖', '᧗', '᧘', '᧙'), $script->numerals());
+        self::assertSame(['᧐', '᧑', '᧒', '᧓', '᧔', '᧕', '᧖', '᧗', '᧘', '᧙'], $script->numerals());
         self::assertSame('New_Tai_Lue', $script->unicodeName());
     }
 }

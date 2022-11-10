@@ -27,7 +27,7 @@ class ScriptLanaTest extends TestCase
         self::assertSame('Lana', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('351', $script->number());
-        self::assertSame(array('᪀', '᪁', '᪂', '᪃', '᪄', '᪅', '᪆', '᪇', '᪈', '᪉'), $script->numerals());
+        self::assertSame(['᪀', '᪁', '᪂', '᪃', '᪄', '᪅', '᪆', '᪇', '᪈', '᪉'], $script->numerals());
         self::assertSame('Tai_Tham', $script->unicodeName());
     }
 }

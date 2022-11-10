@@ -27,7 +27,7 @@ class ScriptPhliTest extends TestCase
         self::assertSame('Phli', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('131', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Inscriptional_Pahlavi', $script->unicodeName());
     }
 }

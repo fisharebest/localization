@@ -28,10 +28,10 @@ class LocaleDeAt extends LocaleDe
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP   => self::NBSP,
             self::DECIMAL => self::COMMA,
-        );
+        ];
     }
 
     public function territory(): TerritoryInterface

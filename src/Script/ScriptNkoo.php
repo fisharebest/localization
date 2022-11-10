@@ -20,7 +20,7 @@ class ScriptNkoo extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('߀', '߁', '߂', '߃', '߄', '߅', '߆', '߇', '߈', '߉');
+        return ['߀', '߁', '߂', '߃', '߄', '߅', '߆', '߇', '߈', '߉'];
     }
 
     public function number(): string

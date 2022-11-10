@@ -20,7 +20,7 @@ class ScriptLepc extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('᱀', '᱁', '᱂', '᱃', '᱄', '᱅', '᱆', '᱇', '᱈', '᱉');
+        return ['᱀', '᱁', '᱂', '᱃', '᱄', '᱅', '᱆', '᱇', '᱈', '᱉'];
     }
 
     public function number(): string

@@ -27,7 +27,7 @@ class ScriptBassTest extends TestCase
         self::assertSame('Bass', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('259', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Bassa_Vah', $script->unicodeName());
     }
 }

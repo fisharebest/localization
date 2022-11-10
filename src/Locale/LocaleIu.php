@@ -33,10 +33,10 @@ class LocaleIu extends AbstractLocale implements LocaleInterface
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP   => self::NBSP,
             self::DECIMAL => self::COMMA,
-        );
+        ];
     }
 
     protected function percentFormat(): string

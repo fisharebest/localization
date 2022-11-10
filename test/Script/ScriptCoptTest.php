@@ -27,7 +27,7 @@ class ScriptCoptTest extends TestCase
         self::assertSame('Copt', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('204', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Coptic', $script->unicodeName());
     }
 }

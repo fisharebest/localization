@@ -28,10 +28,10 @@ class LocaleFfAdlm extends LocaleFf
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::DECIMAL => self::DOT,
             self::GROUP   => self::ADLM_GROUP,
-        );
+        ];
     }
 
     public function script(): ScriptInterface

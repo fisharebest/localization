@@ -27,7 +27,7 @@ class ScriptPhlpTest extends TestCase
         self::assertSame('Phlp', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('132', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Psalter_Pahlavi', $script->unicodeName());
     }
 }

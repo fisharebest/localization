@@ -21,13 +21,13 @@ class Locale
      *
      * @var array<string,string>
      */
-    private const HTTP_ACCEPT_CHINESE = array(
+    private const HTTP_ACCEPT_CHINESE = [
         'zh-cn' => 'zh-hans-cn',
         'zh-sg' => 'zh-hans-sg',
         'zh-hk' => 'zh-hant-hk',
         'zh-mo' => 'zh-hant-mo',
         'zh-tw' => 'zh-hant-tw',
-    );
+    ];
 
     /**
      * Callback for PHP sort functions - allows lists of locales to be sorted.

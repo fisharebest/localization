@@ -20,7 +20,7 @@ class ScriptBeng extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯');
+        return ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'];
     }
 
     public function number(): string

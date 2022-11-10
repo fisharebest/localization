@@ -27,7 +27,7 @@ class ScriptTaleTest extends TestCase
         self::assertSame('Tale', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('353', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Tai_Le', $script->unicodeName());
     }
 }

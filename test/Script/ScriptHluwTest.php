@@ -27,7 +27,7 @@ class ScriptHluwTest extends TestCase
         self::assertSame('Hluw', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('080', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Anatolian_Hieroglyphs', $script->unicodeName());
     }
 }

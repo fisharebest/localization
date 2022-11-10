@@ -27,7 +27,7 @@ class ScriptSyreTest extends TestCase
         self::assertSame('Syre', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('138', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

@@ -20,7 +20,7 @@ class ScriptMong extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('᠐', '᠑', '᠒', '᠓', '᠔', '᠕', '᠖', '᠗', '᠘', '᠙');
+        return ['᠐', '᠑', '᠒', '᠓', '᠔', '᠕', '᠖', '᠗', '᠘', '᠙'];
     }
 
     public function number(): string

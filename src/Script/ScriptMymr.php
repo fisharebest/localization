@@ -20,7 +20,7 @@ class ScriptMymr extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉');
+        return ['၀', '၁', '၂', '၃', '၄', '၅', '၆', '၇', '၈', '၉'];
     }
 
     public function number(): string

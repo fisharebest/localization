@@ -27,7 +27,7 @@ class ScriptPhnxTest extends TestCase
         self::assertSame('Phnx', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('115', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Phoenician', $script->unicodeName());
     }
 }

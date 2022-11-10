@@ -27,7 +27,7 @@ class ScriptKharTest extends TestCase
         self::assertSame('Khar', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('305', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Kharoshthi', $script->unicodeName());
     }
 }

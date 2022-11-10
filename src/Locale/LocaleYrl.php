@@ -28,9 +28,9 @@ class LocaleYrl extends AbstractLocale implements LocaleInterface
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::DECIMAL => self::COMMA,
             self::GROUP   => self::DOT,
-        );
+        ];
     }
 }

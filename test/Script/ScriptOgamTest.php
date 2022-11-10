@@ -27,7 +27,7 @@ class ScriptOgamTest extends TestCase
         self::assertSame('Ogam', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('212', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Ogham', $script->unicodeName());
     }
 }

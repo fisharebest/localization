@@ -20,7 +20,7 @@ class ScriptCakm extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('𑄶', '𑄷', '𑄸', '𑄹', '𑄺', '𑄻', '𑄼', '𑄽', '𑄾', '𑄿');
+        return ['𑄶', '𑄷', '𑄸', '𑄹', '𑄺', '𑄻', '𑄼', '𑄽', '𑄾', '𑄿'];
     }
 
     public function number(): string

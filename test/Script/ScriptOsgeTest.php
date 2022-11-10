@@ -27,7 +27,7 @@ class ScriptOsgeTest extends TestCase
         self::assertSame('Osge', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('219', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Osage', $script->unicodeName());
     }
 }

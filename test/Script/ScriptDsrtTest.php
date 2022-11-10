@@ -27,7 +27,7 @@ class ScriptDsrtTest extends TestCase
         self::assertSame('Dsrt', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('250', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Deseret', $script->unicodeName());
     }
 }

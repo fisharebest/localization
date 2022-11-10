@@ -27,7 +27,7 @@ class ScriptPermTest extends TestCase
         self::assertSame('Perm', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('227', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Old_Permic', $script->unicodeName());
     }
 }

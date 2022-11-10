@@ -27,7 +27,7 @@ class ScriptDiakTest extends TestCase
         self::assertSame('Diak', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('342', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Dives_Akuru', $script->unicodeName());
     }
 }

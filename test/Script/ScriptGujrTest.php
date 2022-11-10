@@ -27,7 +27,7 @@ class ScriptGujrTest extends TestCase
         self::assertSame('Gujr', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('320', $script->number());
-        self::assertSame(array('૦', '૧', '૨', '૩', '૪', '૫', '૬', '૭', '૮', '૯'), $script->numerals());
+        self::assertSame(['૦', '૧', '૨', '૩', '૪', '૫', '૬', '૭', '૮', '૯'], $script->numerals());
         self::assertSame('Gujarati', $script->unicodeName());
     }
 }

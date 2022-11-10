@@ -27,7 +27,7 @@ class ScriptGonmTest extends TestCase
         self::assertSame('Gonm', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('313', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Masaram_Gondi', $script->unicodeName());
     }
 }

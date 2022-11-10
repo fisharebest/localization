@@ -27,7 +27,7 @@ class ScriptKndaTest extends TestCase
         self::assertSame('Knda', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('345', $script->number());
-        self::assertSame(array('೦', '೧', '೨', '೩', '೪', '೫', '೬', '೭', '೮', '೯'), $script->numerals());
+        self::assertSame(['೦', '೧', '೨', '೩', '೪', '೫', '೬', '೭', '೮', '೯'], $script->numerals());
         self::assertSame('Kannada', $script->unicodeName());
     }
 }

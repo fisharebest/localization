@@ -27,7 +27,7 @@ class ScriptNkgbTest extends TestCase
         self::assertSame('Nkgb', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('420', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

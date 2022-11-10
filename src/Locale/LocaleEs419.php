@@ -28,10 +28,10 @@ class LocaleEs419 extends LocaleEs
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP   => self::COMMA,
             self::DECIMAL => self::DOT,
-        );
+        ];
     }
 
     public function territory(): TerritoryInterface

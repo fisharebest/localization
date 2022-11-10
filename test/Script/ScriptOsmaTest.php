@@ -27,7 +27,7 @@ class ScriptOsmaTest extends TestCase
         self::assertSame('Osma', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('260', $script->number());
-        self::assertSame(array('𐒠', '𐒡', '𐒢', '𐒣', '𐒤', '𐒥', '𐒦', '𐒧', '𐒨', '𐒩'), $script->numerals());
+        self::assertSame(['𐒠', '𐒡', '𐒢', '𐒣', '𐒤', '𐒥', '𐒦', '𐒧', '𐒨', '𐒩'], $script->numerals());
         self::assertSame('Osmanya', $script->unicodeName());
     }
 }

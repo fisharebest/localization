@@ -27,7 +27,7 @@ class ScriptRunrTest extends TestCase
         self::assertSame('Runr', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('211', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Runic', $script->unicodeName());
     }
 }

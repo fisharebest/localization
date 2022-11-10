@@ -27,7 +27,7 @@ class ScriptTirhTest extends TestCase
         self::assertSame('Tirh', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('326', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Tirhuta', $script->unicodeName());
     }
 }

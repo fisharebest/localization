@@ -27,7 +27,7 @@ class ScriptMedfTest extends TestCase
         self::assertSame('Medf', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('265', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Medefaidrin', $script->unicodeName());
     }
 }

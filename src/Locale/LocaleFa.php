@@ -33,16 +33,16 @@ class LocaleFa extends AbstractLocale implements LocaleInterface
 
     public function numerals(): array
     {
-        return array('۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹');
+        return ['۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹'];
     }
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP    => self::ARAB_GROUP,
             self::DECIMAL  => self::ARAB_DECIMAL,
             self::NEGATIVE => self::LTR_MARK . self::MINUS_SIGN,
-        );
+        ];
     }
 
     protected function percentFormat(): string

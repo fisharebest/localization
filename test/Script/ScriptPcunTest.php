@@ -27,7 +27,7 @@ class ScriptPcunTest extends TestCase
         self::assertSame('Pcun', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('015', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

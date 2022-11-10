@@ -27,7 +27,7 @@ class ScriptOugrTest extends TestCase
         self::assertSame('Ougr', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('143', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Old_Uyghur', $script->unicodeName());
     }
 }

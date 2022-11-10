@@ -27,7 +27,7 @@ class ScriptMoonTest extends TestCase
         self::assertSame('Moon', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('218', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

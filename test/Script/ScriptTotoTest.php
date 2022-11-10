@@ -27,7 +27,7 @@ class ScriptTotoTest extends TestCase
         self::assertSame('Toto', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('294', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Toto', $script->unicodeName());
     }
 }

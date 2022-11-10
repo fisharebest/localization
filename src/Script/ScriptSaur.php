@@ -20,7 +20,7 @@ class ScriptSaur extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('꣐', '꣑', '꣒', '꣓', '꣔', '꣕', '꣖', '꣗', '꣘', '꣙');
+        return ['꣐', '꣑', '꣒', '꣓', '꣔', '꣕', '꣖', '꣗', '꣘', '꣙'];
     }
 
     public function number(): string

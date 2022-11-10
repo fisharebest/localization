@@ -20,7 +20,7 @@ class ScriptShrd extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('𑇐', '𑇑', '𑇒', '𑇓', '𑇔', '𑇕', '𑇖', '𑇗', '𑇘', '𑇙');
+        return ['𑇐', '𑇑', '𑇒', '𑇓', '𑇔', '𑇕', '𑇖', '𑇗', '𑇘', '𑇙'];
     }
 
     public function number(): string

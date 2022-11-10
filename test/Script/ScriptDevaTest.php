@@ -27,7 +27,7 @@ class ScriptDevaTest extends TestCase
         self::assertSame('Deva', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('315', $script->number());
-        self::assertSame(array('०', '१', '२', '३', '४', '५', '६', '७', '८', '९'), $script->numerals());
+        self::assertSame(['०', '१', '२', '३', '४', '५', '६', '७', '८', '९'], $script->numerals());
         self::assertSame('Devanagari', $script->unicodeName());
     }
 }

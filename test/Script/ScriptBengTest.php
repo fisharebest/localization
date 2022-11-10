@@ -27,7 +27,7 @@ class ScriptBengTest extends TestCase
         self::assertSame('Beng', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('325', $script->number());
-        self::assertSame(array('০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'), $script->numerals());
+        self::assertSame(['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯'], $script->numerals());
         self::assertSame('Bengali', $script->unicodeName());
     }
 }

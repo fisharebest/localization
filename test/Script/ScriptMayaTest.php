@@ -27,7 +27,7 @@ class ScriptMayaTest extends TestCase
         self::assertSame('Maya', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('090', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

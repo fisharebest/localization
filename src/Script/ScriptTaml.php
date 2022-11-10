@@ -20,7 +20,7 @@ class ScriptTaml extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('௦', '௧', '௨', '௩', '௪', '௫', '௬', '௭', '௮', '௯');
+        return ['௦', '௧', '௨', '௩', '௪', '௫', '௬', '௭', '௮', '௯'];
     }
 
     public function number(): string

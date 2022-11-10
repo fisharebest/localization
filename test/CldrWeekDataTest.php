@@ -15,7 +15,7 @@ use PHPUnit\Framework\TestCase;
  */
 class CldrWeekDataTest extends TestCase
 {
-    private const DAYS = array(
+    private const DAYS = [
         'sun' => 0,
         'mon' => 1,
         'tue' => 2,
@@ -23,7 +23,7 @@ class CldrWeekDataTest extends TestCase
         'thu' => 4,
         'fri' => 5,
         'sat' => 6,
-    );
+    ];
 
     /**
      * Test weekData

@@ -27,7 +27,7 @@ class ScriptRjngTest extends TestCase
         self::assertSame('Rjng', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('363', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Rejang', $script->unicodeName());
     }
 }

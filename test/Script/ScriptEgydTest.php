@@ -27,7 +27,7 @@ class ScriptEgydTest extends TestCase
         self::assertSame('Egyd', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('070', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

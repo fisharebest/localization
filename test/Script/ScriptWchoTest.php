@@ -27,7 +27,7 @@ class ScriptWchoTest extends TestCase
         self::assertSame('Wcho', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('283', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Wancho', $script->unicodeName());
     }
 }

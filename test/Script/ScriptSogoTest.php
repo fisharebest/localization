@@ -27,7 +27,7 @@ class ScriptSogoTest extends TestCase
         self::assertSame('Sogo', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('142', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Old_Sogdian', $script->unicodeName());
     }
 }

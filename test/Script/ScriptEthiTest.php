@@ -27,7 +27,7 @@ class ScriptEthiTest extends TestCase
         self::assertSame('Ethi', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('430', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Ethiopic', $script->unicodeName());
     }
 }

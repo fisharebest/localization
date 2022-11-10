@@ -27,7 +27,7 @@ class ScriptAhomTest extends TestCase
         self::assertSame('Ahom', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('338', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Ahom', $script->unicodeName());
     }
 }

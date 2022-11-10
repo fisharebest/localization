@@ -20,7 +20,7 @@ class ScriptMlym extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('൦', '൧', '൨', '൩', '൪', '൫', '൬', '൭', '൮', '൯');
+        return ['൦', '൧', '൨', '൩', '൪', '൫', '൬', '൭', '൮', '൯'];
     }
 
     public function number(): string

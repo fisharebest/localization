@@ -27,7 +27,7 @@ class ScriptLinaTest extends TestCase
         self::assertSame('Lina', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('400', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Linear_A', $script->unicodeName());
     }
 }

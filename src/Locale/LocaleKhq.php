@@ -33,8 +33,8 @@ class LocaleKhq extends AbstractLocale implements LocaleInterface
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP => self::NBSP,
-        );
+        ];
     }
 }

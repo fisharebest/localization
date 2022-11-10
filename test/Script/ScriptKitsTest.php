@@ -27,7 +27,7 @@ class ScriptKitsTest extends TestCase
         self::assertSame('Kits', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('288', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Khitan_Small_Script', $script->unicodeName());
     }
 }

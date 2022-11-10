@@ -27,7 +27,7 @@ class ScriptBhksTest extends TestCase
         self::assertSame('Bhks', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('334', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Bhaiksuki', $script->unicodeName());
     }
 }

@@ -27,7 +27,7 @@ class ScriptGongTest extends TestCase
         self::assertSame('Gong', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('312', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Gunjala_Gondi', $script->unicodeName());
     }
 }

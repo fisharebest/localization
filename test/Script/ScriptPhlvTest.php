@@ -27,7 +27,7 @@ class ScriptPhlvTest extends TestCase
         self::assertSame('Phlv', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('133', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

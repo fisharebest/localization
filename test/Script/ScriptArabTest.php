@@ -27,7 +27,7 @@ class ScriptArabTest extends TestCase
         self::assertSame('Arab', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('160', $script->number());
-        self::assertSame(array('٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'), $script->numerals());
+        self::assertSame(['٠', '١', '٢', '٣', '٤', '٥', '٦', '٧', '٨', '٩'], $script->numerals());
         self::assertSame('Arabic', $script->unicodeName());
     }
 }

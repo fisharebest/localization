@@ -27,7 +27,7 @@ class ScriptBamuTest extends TestCase
         self::assertSame('Bamu', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('435', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Bamum', $script->unicodeName());
     }
 }

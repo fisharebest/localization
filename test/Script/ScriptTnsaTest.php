@@ -27,7 +27,7 @@ class ScriptTnsaTest extends TestCase
         self::assertSame('Tnsa', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('275', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Tangsa', $script->unicodeName());
     }
 }

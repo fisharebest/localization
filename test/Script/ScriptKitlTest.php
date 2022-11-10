@@ -27,7 +27,7 @@ class ScriptKitlTest extends TestCase
         self::assertSame('Kitl', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('505', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

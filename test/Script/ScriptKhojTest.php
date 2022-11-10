@@ -27,7 +27,7 @@ class ScriptKhojTest extends TestCase
         self::assertSame('Khoj', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('322', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Khojki', $script->unicodeName());
     }
 }

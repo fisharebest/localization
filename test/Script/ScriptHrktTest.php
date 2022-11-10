@@ -27,7 +27,7 @@ class ScriptHrktTest extends TestCase
         self::assertSame('Hrkt', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('412', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Katakana_Or_Hiragana', $script->unicodeName());
     }
 }

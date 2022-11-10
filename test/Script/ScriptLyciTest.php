@@ -27,7 +27,7 @@ class ScriptLyciTest extends TestCase
         self::assertSame('Lyci', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('202', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Lycian', $script->unicodeName());
     }
 }

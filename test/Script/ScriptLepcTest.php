@@ -27,7 +27,7 @@ class ScriptLepcTest extends TestCase
         self::assertSame('Lepc', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('335', $script->number());
-        self::assertSame(array('᱀', '᱁', '᱂', '᱃', '᱄', '᱅', '᱆', '᱇', '᱈', '᱉'), $script->numerals());
+        self::assertSame(['᱀', '᱁', '᱂', '᱃', '᱄', '᱅', '᱆', '᱇', '᱈', '᱉'], $script->numerals());
         self::assertSame('Lepcha', $script->unicodeName());
     }
 }

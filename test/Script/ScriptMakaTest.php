@@ -27,7 +27,7 @@ class ScriptMakaTest extends TestCase
         self::assertSame('Maka', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('366', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Makasar', $script->unicodeName());
     }
 }

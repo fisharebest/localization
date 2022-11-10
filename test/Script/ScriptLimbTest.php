@@ -27,7 +27,7 @@ class ScriptLimbTest extends TestCase
         self::assertSame('Limb', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('336', $script->number());
-        self::assertSame(array('᥆', '᥇', '᥈', '᥉', '᥊', '᥋', '᥌', '᥍', '᥎', '᥏'), $script->numerals());
+        self::assertSame(['᥆', '᥇', '᥈', '᥉', '᥊', '᥋', '᥌', '᥍', '᥎', '᥏'], $script->numerals());
         self::assertSame('Limbu', $script->unicodeName());
     }
 }

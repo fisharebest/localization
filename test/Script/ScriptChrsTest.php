@@ -27,7 +27,7 @@ class ScriptChrsTest extends TestCase
         self::assertSame('Chrs', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('109', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Chorasmian', $script->unicodeName());
     }
 }

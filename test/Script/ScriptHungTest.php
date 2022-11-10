@@ -27,7 +27,7 @@ class ScriptHungTest extends TestCase
         self::assertSame('Hung', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('176', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Old_Hungarian', $script->unicodeName());
     }
 }

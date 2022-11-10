@@ -27,7 +27,7 @@ class ScriptAvstTest extends TestCase
         self::assertSame('Avst', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('134', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Avestan', $script->unicodeName());
     }
 }

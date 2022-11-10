@@ -27,7 +27,7 @@ class ScriptShuiTest extends TestCase
         self::assertSame('Shui', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('530', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

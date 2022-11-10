@@ -19,9 +19,9 @@ class LocaleArEh extends LocaleAr
 {
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::NEGATIVE => self::LTR_MARK . '-',
-        );
+        ];
     }
 
     protected function numerals(): array

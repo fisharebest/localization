@@ -27,7 +27,7 @@ class ScriptLatnTest extends TestCase
         self::assertSame('Latn', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('215', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Latin', $script->unicodeName());
     }
 }

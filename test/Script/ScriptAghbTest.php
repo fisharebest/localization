@@ -27,7 +27,7 @@ class ScriptAghbTest extends TestCase
         self::assertSame('Aghb', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('239', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Caucasian_Albanian', $script->unicodeName());
     }
 }

@@ -27,7 +27,7 @@ class ScriptBuhdTest extends TestCase
         self::assertSame('Buhd', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('372', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Buhid', $script->unicodeName());
     }
 }

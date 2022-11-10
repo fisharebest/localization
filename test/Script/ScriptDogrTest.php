@@ -27,7 +27,7 @@ class ScriptDogrTest extends TestCase
         self::assertSame('Dogr', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('328', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Dogra', $script->unicodeName());
     }
 }

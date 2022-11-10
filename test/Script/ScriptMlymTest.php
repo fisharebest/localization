@@ -27,7 +27,7 @@ class ScriptMlymTest extends TestCase
         self::assertSame('Mlym', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('347', $script->number());
-        self::assertSame(array('൦', '൧', '൨', '൩', '൪', '൫', '൬', '൭', '൮', '൯'), $script->numerals());
+        self::assertSame(['൦', '൧', '൨', '൩', '൪', '൫', '൬', '൭', '൮', '൯'], $script->numerals());
         self::assertSame('Malayalam', $script->unicodeName());
     }
 }

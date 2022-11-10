@@ -27,7 +27,7 @@ class ScriptHebrTest extends TestCase
         self::assertSame('Hebr', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('125', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Hebrew', $script->unicodeName());
     }
 }

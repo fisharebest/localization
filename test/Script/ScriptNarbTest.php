@@ -27,7 +27,7 @@ class ScriptNarbTest extends TestCase
         self::assertSame('Narb', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('106', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Old_North_Arabian', $script->unicodeName());
     }
 }

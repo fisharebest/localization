@@ -20,7 +20,7 @@ class ScriptVaii extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('꘠', '꘡', '꘢', '꘣', '꘤', '꘥', '꘦', '꘧', '꘨', '꘩');
+        return ['꘠', '꘡', '꘢', '꘣', '꘤', '꘥', '꘦', '꘧', '꘨', '꘩'];
     }
 
     public function number(): string

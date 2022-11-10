@@ -28,11 +28,11 @@ class LocaleCkb extends AbstractLocale implements LocaleInterface
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::GROUP    => self::ARAB_GROUP,
             self::DECIMAL  => self::ARAB_DECIMAL,
             self::NEGATIVE => self::RTL_MARK . self::HYPHEN,
-        );
+        ];
     }
 
     protected function percentFormat(): string

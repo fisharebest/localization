@@ -27,7 +27,7 @@ class ScriptZxxxTest extends TestCase
         self::assertSame('Zxxx', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('997', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

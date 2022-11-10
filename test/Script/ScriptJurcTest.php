@@ -27,7 +27,7 @@ class ScriptJurcTest extends TestCase
         self::assertSame('Jurc', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('510', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

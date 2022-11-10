@@ -20,7 +20,7 @@ class ScriptJava extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('꧐', '꧑', '꧒', '꧓', '꧔', '꧕', '꧖', '꧗', '꧘', '꧙');
+        return ['꧐', '꧑', '꧒', '꧓', '꧔', '꧕', '꧖', '꧗', '꧘', '꧙'];
     }
 
     public function number(): string

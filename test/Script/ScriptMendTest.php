@@ -27,7 +27,7 @@ class ScriptMendTest extends TestCase
         self::assertSame('Mend', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('438', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Mende_Kikakui', $script->unicodeName());
     }
 }

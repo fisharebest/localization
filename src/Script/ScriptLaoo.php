@@ -20,7 +20,7 @@ class ScriptLaoo extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('໐', '໑', '໒', '໓', '໔', '໕', '໖', '໗', '໘', '໙');
+        return ['໐', '໑', '໒', '໓', '໔', '໕', '໖', '໗', '໘', '໙'];
     }
 
     public function number(): string

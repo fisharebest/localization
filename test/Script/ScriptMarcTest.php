@@ -27,7 +27,7 @@ class ScriptMarcTest extends TestCase
         self::assertSame('Marc', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('332', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Marchen', $script->unicodeName());
     }
 }

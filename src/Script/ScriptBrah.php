@@ -20,7 +20,7 @@ class ScriptBrah extends AbstractScript implements ScriptInterface
 
     public function numerals(): array
     {
-        return array('𑁦', '𑁧', '𑁨', '𑁩', '𑁪', '𑁫', '𑁬', '𑁭', '𑁮', '𑁯');
+        return ['𑁦', '𑁧', '𑁨', '𑁩', '𑁪', '𑁫', '𑁬', '𑁭', '𑁮', '𑁯'];
     }
 
     public function number(): string

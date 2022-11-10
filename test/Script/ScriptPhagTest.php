@@ -27,7 +27,7 @@ class ScriptPhagTest extends TestCase
         self::assertSame('Phag', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('331', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Phags_Pa', $script->unicodeName());
     }
 }

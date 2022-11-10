@@ -27,7 +27,7 @@ class ScriptChamTest extends TestCase
         self::assertSame('Cham', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('358', $script->number());
-        self::assertSame(array('꩐', '꩑', '꩒', '꩓', '꩔', '꩕', '꩖', '꩗', '꩘', '꩙'), $script->numerals());
+        self::assertSame(['꩐', '꩑', '꩒', '꩓', '꩔', '꩕', '꩖', '꩗', '꩘', '꩙'], $script->numerals());
         self::assertSame('Cham', $script->unicodeName());
     }
 }

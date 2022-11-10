@@ -27,7 +27,7 @@ class ScriptCakmTest extends TestCase
         self::assertSame('Cakm', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('349', $script->number());
-        self::assertSame(array('𑄶', '𑄷', '𑄸', '𑄹', '𑄺', '𑄻', '𑄼', '𑄽', '𑄾', '𑄿'), $script->numerals());
+        self::assertSame(['𑄶', '𑄷', '𑄸', '𑄹', '𑄺', '𑄻', '𑄼', '𑄽', '𑄾', '𑄿'], $script->numerals());
         self::assertSame('Chakma', $script->unicodeName());
     }
 }

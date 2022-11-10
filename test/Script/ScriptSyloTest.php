@@ -27,7 +27,7 @@ class ScriptSyloTest extends TestCase
         self::assertSame('Sylo', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('316', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Syloti_Nagri', $script->unicodeName());
     }
 }

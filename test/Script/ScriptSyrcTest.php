@@ -27,7 +27,7 @@ class ScriptSyrcTest extends TestCase
         self::assertSame('Syrc', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('135', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Syriac', $script->unicodeName());
     }
 }

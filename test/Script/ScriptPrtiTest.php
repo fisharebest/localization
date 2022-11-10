@@ -27,7 +27,7 @@ class ScriptPrtiTest extends TestCase
         self::assertSame('Prti', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('130', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Inscriptional_Parthian', $script->unicodeName());
     }
 }

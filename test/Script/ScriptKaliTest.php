@@ -27,7 +27,7 @@ class ScriptKaliTest extends TestCase
         self::assertSame('Kali', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('357', $script->number());
-        self::assertSame(array('꤀', '꤁', '꤂', '꤃', '꤄', '꤅', '꤆', '꤇', '꤈', '꤉'), $script->numerals());
+        self::assertSame(['꤀', '꤁', '꤂', '꤃', '꤄', '꤅', '꤆', '꤇', '꤈', '꤉'], $script->numerals());
         self::assertSame('Kayah_Li', $script->unicodeName());
     }
 }

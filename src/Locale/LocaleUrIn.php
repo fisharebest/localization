@@ -23,10 +23,10 @@ class LocaleUrIn extends LocaleUr
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::DECIMAL  => self::ARAB_DECIMAL,
             self::GROUP    => self::ARAB_GROUP,
             self::NEGATIVE => self::LTR_MARK . self::HYPHEN . self::LTR_MARK,
-        );
+        ];
     }
 }

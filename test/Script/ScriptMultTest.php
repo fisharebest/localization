@@ -27,7 +27,7 @@ class ScriptMultTest extends TestCase
         self::assertSame('Mult', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('323', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Multani', $script->unicodeName());
     }
 }

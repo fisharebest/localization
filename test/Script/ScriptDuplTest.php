@@ -27,7 +27,7 @@ class ScriptDuplTest extends TestCase
         self::assertSame('Dupl', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('755', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertSame('Duployan', $script->unicodeName());
     }
 }

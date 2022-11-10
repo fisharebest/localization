@@ -27,7 +27,7 @@ class ScriptJavaTest extends TestCase
         self::assertSame('Java', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('361', $script->number());
-        self::assertSame(array('꧐', '꧑', '꧒', '꧓', '꧔', '꧕', '꧖', '꧗', '꧘', '꧙'), $script->numerals());
+        self::assertSame(['꧐', '꧑', '꧒', '꧓', '꧔', '꧕', '꧖', '꧗', '꧘', '꧙'], $script->numerals());
         self::assertSame('Javanese', $script->unicodeName());
     }
 }

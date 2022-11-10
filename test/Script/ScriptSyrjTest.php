@@ -27,7 +27,7 @@ class ScriptSyrjTest extends TestCase
         self::assertSame('Syrj', $script->code());
         self::assertSame('rtl', $script->direction());
         self::assertSame('137', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }

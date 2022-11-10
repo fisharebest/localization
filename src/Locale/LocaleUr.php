@@ -33,8 +33,8 @@ class LocaleUr extends AbstractLocale implements LocaleInterface
 
     public function numberSymbols(): array
     {
-        return array(
+        return [
             self::NEGATIVE => self::LTR_MARK . self::HYPHEN,
-        );
+        ];
     }
 }

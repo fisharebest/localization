@@ -27,7 +27,7 @@ class ScriptLatgTest extends TestCase
         self::assertSame('Latg', $script->code());
         self::assertSame('ltr', $script->direction());
         self::assertSame('216', $script->number());
-        self::assertSame(array(), $script->numerals());
+        self::assertSame([], $script->numerals());
         self::assertNull($script->unicodeName());
     }
 }
