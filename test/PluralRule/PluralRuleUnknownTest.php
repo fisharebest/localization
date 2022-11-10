@@ -22,13 +22,11 @@ class PluralRuleUnknownTest extends TestCase
      */
     public function testNumberOfPluralForms(): void
     {
-        $plural_rule = new PluralRuleUnknown();
+        $this->expectException(DomainException::class);
+        $this->expectExceptionMessage('No plural rule defined for this language.');
 
-        try {
-            $plural_rule->plurals();
-        } catch (DomainException $ex) {
-            self::assertSame('No plural rule defined for this language', $ex->getMessage());
-        }
+        $plural_rule = new PluralRuleUnknown();
+        $plural_rule->plurals();
     }
 
     /**
@@ -36,12 +34,10 @@ class PluralRuleUnknownTest extends TestCase
      */
     public function testPluralRules(): void
     {
-        $plural_rule = new PluralRuleUnknown();
+        $this->expectException(DomainException::class);
+        $this->expectExceptionMessage('No plural rule defined for this language.');
 
-        try {
-            $plural_rule->plural(1);
-        } catch (DomainException $ex) {
-            self::assertSame('No plural rule defined for this language', $ex->getMessage());
-        }
+        $plural_rule = new PluralRuleUnknown();
+        $plural_rule->plural(1);
     }
 }

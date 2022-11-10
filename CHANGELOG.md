@@ -1,6 +1,7 @@
 CHANGE LOG
 ==========
 
+ - Negative numbers are not allowed in plural rules
  - Bump minimum PHP version to 8.0
  - Support deprecated language codes: in (id), iw (he), ji (yi), jw (jv), mo (ro)
 

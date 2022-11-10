@@ -4,6 +4,7 @@ namespace Fisharebest\LocalizationTest\PluralRule;
 
 use Fisharebest\Localization\PluralRule\PluralRule2;
 use PHPUnit\Framework\TestCase;
+use RangeException;
 
 /**
  * Tests for the PluralRule2 class
@@ -39,5 +40,17 @@ class PluralRule2Test extends TestCase
         foreach ([2, 3, 4, 5, 6, 7, 8, 9] as $n) {
             self::assertSame(1, $plural_rule->plural($n));
         }
+    }
+
+    /**
+     * @return void
+     */
+    public function testNegative(): void
+    {
+        $this->expectException(RangeException::class);
+        $this->expectExceptionMessage('Negative plurals are undefined.');
+
+        $plural_rule = new PluralRule2();
+        $plural_rule->plural(-1);
     }
 }

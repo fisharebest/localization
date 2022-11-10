@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Fisharebest\Localization\PluralRule;
 
+use RangeException;
+
 /**
  * Class PluralRuleFilipino - Select a plural form for a specified number.
  * nplurals=2; plural=n % 10 != 4 && n%10 != 6 && n%10 != 9;
@@ -21,7 +23,9 @@ class PluralRuleFilipino implements PluralRuleInterface
 
     public function plural(int $number): int
     {
-        $number = abs($number);
+        if ($number < 0) {
+            throw new RangeException('Negative plurals are undefined.');
+        }
 
         if ($number % 10 === 4 || $number % 10 === 6 || $number % 10 === 9) {
             return 1;

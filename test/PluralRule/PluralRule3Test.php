@@ -4,6 +4,7 @@ namespace Fisharebest\LocalizationTest\PluralRule;
 
 use Fisharebest\Localization\PluralRule\PluralRule3;
 use PHPUnit\Framework\TestCase;
+use RangeException;
 
 /**
  * Tests for the PluralRule3 class
@@ -42,5 +43,17 @@ class PluralRule3Test extends TestCase
         self::assertSame(1, $plural_rule->plural(3));
         self::assertSame(1, $plural_rule->plural(4));
         self::assertSame(2, $plural_rule->plural(0));
+    }
+
+    /**
+     * @return void
+     */
+    public function testNegative(): void
+    {
+        $this->expectException(RangeException::class);
+        $this->expectExceptionMessage('Negative plurals are undefined.');
+
+        $plural_rule = new PluralRule3();
+        $plural_rule->plural(-1);
     }
 }

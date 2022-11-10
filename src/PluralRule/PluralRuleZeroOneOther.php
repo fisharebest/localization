@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Fisharebest\Localization\PluralRule;
 
+use RangeException;
+
 /**
  * Class PluralRuleZeroOneOther - Select a plural form for a specified number.
  * nplurals=4; plural=(n==0) ? 0 : (n==1) ? 1 : 2;
@@ -21,7 +23,9 @@ class PluralRuleZeroOneOther implements PluralRuleInterface
 
     public function plural(int $number): int
     {
-        $number = abs($number);
+        if ($number < 0) {
+            throw new RangeException('Negative plurals are undefined.');
+        }
 
         if ($number === 0) {
             return 0;

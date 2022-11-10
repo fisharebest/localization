@@ -4,6 +4,7 @@ namespace Fisharebest\LocalizationTest\PluralRule;
 
 use Fisharebest\Localization\PluralRule\PluralRuleFilipino;
 use PHPUnit\Framework\TestCase;
+use RangeException;
 
 /**
  * Tests for the PluralRuleFilipino class
@@ -53,5 +54,17 @@ class PluralRuleFilipinoTest extends TestCase
         self::assertSame(0, $plural_rule->plural(17));
         self::assertSame(0, $plural_rule->plural(18));
         self::assertSame(1, $plural_rule->plural(19));
+    }
+
+    /**
+     * @return void
+     */
+    public function testNegative(): void
+    {
+        $this->expectException(RangeException::class);
+        $this->expectExceptionMessage('Negative plurals are undefined.');
+
+        $plural_rule = new PluralRuleFilipino();
+        $plural_rule->plural(-1);
     }
 }

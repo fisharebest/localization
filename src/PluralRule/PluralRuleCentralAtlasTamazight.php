@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Fisharebest\Localization\PluralRule;
 
+use RangeException;
+
 /**
  * Class PluralRuleCentralAtlasTamazight - Select a plural form for a specified number.
  * nplurals=4; plural=(n>=2 && n<=10 || n>99) ? 1 : 0
@@ -21,7 +23,9 @@ class PluralRuleCentralAtlasTamazight implements PluralRuleInterface
 
     public function plural(int $number): int
     {
-        $number = abs($number);
+        if ($number < 0) {
+            throw new RangeException('Negative plurals are undefined.');
+        }
 
         if ($number >= 2 && $number <= 10 || $number > 99) {
             return 1;
