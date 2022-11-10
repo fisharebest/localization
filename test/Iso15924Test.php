@@ -5,6 +5,14 @@ namespace Fisharebest\LocalizationTest;
 use Fisharebest\Localization\Script\ScriptInterface;
 use PHPUnit\Framework\TestCase;
 
+use function class_exists;
+use function explode;
+use function file;
+use function preg_grep;
+
+use const FILE_IGNORE_NEW_LINES;
+use const PREG_GREP_INVERT;
+
 /**
  * Tests for ISO-15924
  *

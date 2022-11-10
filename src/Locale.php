@@ -7,6 +7,21 @@ namespace Fisharebest\Localization;
 use DomainException;
 use Fisharebest\Localization\Locale\LocaleInterface;
 
+use function array_combine;
+use function array_key_exists;
+use function array_keys;
+use function array_map;
+use function arsort;
+use function class_exists;
+use function implode;
+use function in_array;
+use function preg_match;
+use function preg_match_all;
+use function preg_split;
+use function strcmp;
+use function strtolower;
+use function ucfirst;
+
 /**
  * Class Locale - Static functions to generate and compare locales.
  *

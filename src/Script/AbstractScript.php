@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Fisharebest\Localization\Script;
 
+use function substr_compare;
+
 /**
  * Class AbstractScript - Representation of a writing system.
  *

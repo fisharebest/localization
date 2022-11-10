@@ -5,6 +5,16 @@ namespace Fisharebest\LocalizationTest;
 use Fisharebest\Localization\Locale;
 use PHPUnit\Framework\TestCase;
 
+use function count;
+use function explode;
+use function file_get_contents;
+use function implode;
+use function preg_match;
+use function preg_split;
+use function simplexml_load_string;
+
+use const PREG_SPLIT_NO_EMPTY;
+
 /**
  * Tests for the CLDR
  *

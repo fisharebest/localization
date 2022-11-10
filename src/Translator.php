@@ -6,6 +6,9 @@ namespace Fisharebest\Localization;
 
 use Fisharebest\Localization\PluralRule\PluralRuleInterface;
 
+use function count;
+use function explode;
+
 /**
  * Class Translator - use a translation to translate messages.
  *

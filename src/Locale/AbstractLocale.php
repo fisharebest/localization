@@ -10,6 +10,13 @@ use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Territory\TerritoryInterface;
 use Fisharebest\Localization\Variant\VariantInterface;
 
+use function count;
+use function explode;
+use function sprintf;
+use function strlen;
+use function strtolower;
+use function substr;
+
 /**
  * Class AbstractLocale - The “root” locale, from which all others are derived.
  *

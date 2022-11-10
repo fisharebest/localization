@@ -6,6 +6,30 @@ namespace Fisharebest\Localization;
 
 use InvalidArgumentException;
 
+use function array_filter;
+use function array_map;
+use function dechex;
+use function explode;
+use function fclose;
+use function fgetcsv;
+use function file;
+use function fopen;
+use function fread;
+use function fseek;
+use function implode;
+use function is_array;
+use function ksort;
+use function pathinfo;
+use function preg_match;
+use function preg_split;
+use function str_replace;
+use function strtolower;
+use function substr;
+use function trim;
+use function unpack;
+
+use const PATHINFO_EXTENSION;
+
 /**
  * Class Translation - a set of translated messages, such as a .MO file.
  *

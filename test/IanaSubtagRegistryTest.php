@@ -7,6 +7,16 @@ use Fisharebest\Localization\Script\ScriptInterface;
 use Fisharebest\Localization\Territory\TerritoryInterface;
 use PHPUnit\Framework\TestCase;
 
+use function class_exists;
+use function explode;
+use function file_get_contents;
+use function preg_grep;
+use function preg_match;
+use function strtolower;
+use function ucfirst;
+
+use const PREG_GREP_INVERT;
+
 /**
  * Tests for the IANA subtag registry
  *

@@ -10,6 +10,16 @@ use Fisharebest\Localization\Locale\LocaleEnUs;
 use Fisharebest\Localization\Locale\LocaleInterface;
 use PHPUnit\Framework\TestCase;
 
+use function array_map;
+use function basename;
+use function get_class;
+use function glob;
+use function is_array;
+use function preg_grep;
+use function usort;
+
+use const PREG_GREP_INVERT;
+
 /**
  * Tests for the AbstractLocale class
  *

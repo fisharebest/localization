@@ -6,6 +6,19 @@ use Exception;
 use Fisharebest\Localization\Locale;
 use PHPUnit\Framework\TestCase;
 
+use function array_slice;
+use function basename;
+use function bin2hex;
+use function count;
+use function dirname;
+use function explode;
+use function file_get_contents;
+use function glob;
+use function implode;
+use function preg_match;
+use function preg_quote;
+use function simplexml_load_string;
+
 /**
  * Tests for the CLDR
  *
