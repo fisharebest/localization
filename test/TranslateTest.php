@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
  * Tests for the Translator/Translation classes
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  *
  * @covers \Fisharebest\Localization\Translation
@@ -198,13 +198,9 @@ class TranslateTest extends TestCase
      */
     public function testMoInvalid(): void
     {
-        try {
-            new Translation(__DIR__ . '/data/fish.invalid.mo');
+        $this->expectException(InvalidArgumentException::class);
 
-            self::fail();
-        } catch (InvalidArgumentException) {
-            self::assertTrue(true);
-        }
+        new Translation(__DIR__ . '/data/fish.invalid.mo');
     }
 
     /**

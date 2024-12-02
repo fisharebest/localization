@@ -13,7 +13,7 @@ use Fisharebest\Localization\Territory\TerritoryInterface;
  * Class LanguageBgc - Representation of the Haryanvi language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class LanguageBgc extends AbstractLanguage implements LanguageInterface

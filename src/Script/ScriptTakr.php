@@ -8,7 +8,7 @@ namespace Fisharebest\Localization\Script;
  * Class ScriptTakr - Representation of the Takri, Ṭākrī, Ṭāṅkrī script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class ScriptTakr extends AbstractScript implements ScriptInterface

@@ -7,18 +7,19 @@ jobs:
     runs-on: ubuntu-latest
     name: Code style
 
+    strategy:
+      matrix:
+        operating-system: ['ubuntu-latest']
+        php-version: ['8.2', '8.3', '8.4']
+      fail-fast: false
+
     steps:
       - uses: shivammathur/setup-php@master
         with:
-          php-version: latest
+          php-version: ${{ matrix.php-version }}
 
-      - uses: actions/checkout@v2
-
-      - run: composer validate
+      - uses: actions/checkout@v4
 
       - run: composer install
 
-      - run: composer require squizlabs/php_codesniffer
-
-      - name: PHP
-        run: vendor/bin/phpcs --colors --standard=PSR12 --exclude=Generic.Files.LineLength,PSR12.Properties.ConstantVisibility src test
+      - run: composer phpcs

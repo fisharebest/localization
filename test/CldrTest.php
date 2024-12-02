@@ -23,7 +23,7 @@ use function simplexml_load_string;
  * Tests for the CLDR
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  *
  * @coversNothing
@@ -42,7 +42,7 @@ class CldrTest extends TestCase
      */
     public function testCharacterOrder(): void
     {
-        foreach (glob(__DIR__ . '/data/cldr-42/main/*.xml') as $cldr) {
+        foreach (glob(__DIR__ . '/data/cldr-46/main/*.xml') as $cldr) {
             if (!str_ends_with($cldr, '/root.xml')) {
                 $locale = Locale::create(basename($cldr, '.xml'));
                 $dir    = $this->cldrValue($cldr, '/ldml/layout/orientation/characterOrder');
@@ -59,33 +59,58 @@ class CldrTest extends TestCase
      */
     public function testNumbers(): void
     {
-        foreach (glob(__DIR__ . '/data/cldr-42/main/*.xml') as $cldr) {
+        foreach (glob(__DIR__ . '/data/cldr-46/main/*.xml') as $cldr) {
             if (!str_ends_with($cldr, '/root.xml')) {
                 $locale = Locale::create(basename($cldr, '.xml'));
 
                 $def_num_system = $this->cldrValue($cldr, "/ldml/numbers/defaultNumberingSystem");
                 try {
-                    $alias = $this->cldrValue($cldr, "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/alias/@path");
+                    $xpath = "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/alias/@path";
+                    $alias = $this->cldrValue($cldr, $xpath);
+
                     if ($alias === "../symbols[@numberSystem='latn']") {
                         $def_num_system = 'latn';
                     }
                 } catch (Exception) {
                 }
-                $decimal      = $this->cldrValue($cldr, "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/decimal");
-                $group        = $this->cldrValue($cldr, "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/group");
-                $percent_sign = $this->cldrValue($cldr, "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/percentSign");
-                $minus_sign   = $this->cldrValue($cldr, "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/minusSign");
+
+                $xpath   = "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/decimal";
+                $decimal = $this->cldrValue($cldr, $xpath);
+
+                $xpath = "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/group";
+                $group = $this->cldrValue($cldr, $xpath);
+
+                $xpath        = "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/percentSign";
+                $percent_sign = $this->cldrValue($cldr, $xpath);
+
+                $xpath      = "/ldml/numbers/symbols[@numberSystem='" . $def_num_system . "']/minusSign";
+                $minus_sign = $this->cldrValue($cldr, $xpath);
 
                 $def_num_system = $this->cldrValue($cldr, "/ldml/numbers/defaultNumberingSystem");
+
                 try {
-                    $alias = $this->cldrValue($cldr, "/ldml/numbers/decimalFormats[@numberSystem='" . $def_num_system . "']/alias/@path");
+                    $xpath = "/ldml/numbers/decimalFormats[@numberSystem='" . $def_num_system . "']/alias/@path";
+                    $alias = $this->cldrValue($cldr, $xpath);
+
                     if ($alias === "../decimalFormats[@numberSystem='latn']") {
                         $def_num_system = 'latn';
                     }
                 } catch (Exception) {
                 }
-                $standard = $this->cldrValue($cldr, "/ldml/numbers/decimalFormats[@numberSystem='" . $def_num_system . "']/decimalFormatLength[not(@type)]/decimalFormat/pattern");
-                $percent  = $this->cldrValue($cldr, "/ldml/numbers/percentFormats[@numberSystem='" . $def_num_system . "']/percentFormatLength[not(@type)]/percentFormat/pattern");
+
+                $xpath =
+                    "/ldml/numbers/decimalFormats[@numberSystem='" .
+                    $def_num_system .
+                    "']/decimalFormatLength[not(@type)]/decimalFormat/pattern";
+
+                $standard = $this->cldrValue($cldr, $xpath);
+
+                $xpath =
+                    "/ldml/numbers/percentFormats[@numberSystem='" .
+                    $def_num_system .
+                    "']/percentFormatLength[not(@type)]/percentFormat/pattern";
+
+                $percent = $this->cldrValue($cldr, $xpath);
 
                 // The CLDR example doesn't demonstrate the lack of group separators.
                 if ($standard === '0.######' && $locale->languageTag() === 'en-US-posix') {
@@ -185,7 +210,7 @@ class CldrTest extends TestCase
         $xml = simplexml_load_string(file_get_contents($file));
         $tmp = $file;
 
-        while ($xml->xpath($xpath) == false) {
+        while ($xml->xpath($xpath) === []) {
             if (str_ends_with($file, '/root.xml')) {
                 throw new Exception('Cannot find ' . $xpath . ' in ' . $tmp);
             }

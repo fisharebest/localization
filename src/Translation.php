@@ -34,7 +34,7 @@ use const PATHINFO_EXTENSION;
  * Class Translation - a set of translated messages, such as a .MO file.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class Translation
@@ -60,14 +60,9 @@ class Translation
         '\\"'  => '"',
     ];
 
-    /** @var array<array-key,string> An association of English -> translated messages */
+    /** @var array<string,string> An association of English -> translated messages */
     private array $translations;
 
-    /**
-     * The code for this variant.
-     *
-     * @param string $filename
-     */
     public function __construct(string $filename)
     {
         $this->translations = [];
@@ -240,11 +235,6 @@ class Translation
         }
     }
 
-    /**
-     * @param string $text
-     *
-     * @return string
-     */
     private function unescapePoText(string $text): string
     {
         return strtr($text, self::SPECIAL_CHARACTERS);

@@ -24,7 +24,7 @@ use const PREG_GREP_INVERT;
  * Tests for the AbstractLocale class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class LocaleTest extends TestCase
@@ -60,11 +60,12 @@ class LocaleTest extends TestCase
     {
         $namespace = '\\Fisharebest\\Localization\\Locale\\';
         $fn        = static fn (string $x): LocaleInterface => new ($namespace . basename($x, '.php'))();
-        $array     = array_map($fn, preg_grep('/Abstract|Interface/', glob(__DIR__ . '/../src/Locale/Locale??*.php'), PREG_GREP_INVERT));
+        $files     = glob(__DIR__ . '/../src/Locale/Locale??*.php');
+        $files     = preg_grep('/Abstract|Interface/', $files, PREG_GREP_INVERT);
+        $array     = array_map($fn, $files);
 
         usort($array, '\\Fisharebest\\Localization\\Locale::compare');
         self::assertNotEmpty($array);
-        self::assertTrue(is_array($array));
     }
 
     /**
@@ -90,13 +91,9 @@ class LocaleTest extends TestCase
      */
     public function testCreateInvalidLocale(): void
     {
-        try {
-            Locale::create('xxx');
+        $this->expectException(DomainException::class);
 
-            self::fail();
-        } catch (DomainException) {
-            self::assertTrue(true);
-        }
+        Locale::create('xxx');
     }
 
     /**

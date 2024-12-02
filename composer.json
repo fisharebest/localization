@@ -16,12 +16,17 @@
 			"issues": "https://github.com/fisharebest/localization/issues"
 	},
 	"require": {
-		"php": "8.0 - 8.2"
+		"php": "8.2 - 8.4"
 	},
 	"require-dev": {
 		"ext-simplexml": "*",
-		"phpunit/phpunit": "*",
-		"php-coveralls/php-coveralls": "*"
+		"phpunit/phpunit": "11.4.4",
+		"phpstan/phpstan": "2.0.3",
+		"phpstan/extension-installer": "1.4.3",
+		"phpstan/phpstan-deprecation-rules": "2.0.1",
+		"phpstan/phpstan-strict-rules": "2.0.0",
+		"phpstan/phpstan-phpunit": "2.0.1",
+		"squizlabs/php_codesniffer": "3.11.1"
 	},
 	"autoload": {
 		"psr-4": {
@@ -37,5 +42,22 @@
 		"allow-plugins": {
 			"phpstan/extension-installer": true
 		}
-	}
+	},
+    "scripts": {
+        "ci" : [
+            "@composer validate",
+            "@composer phpcs",
+            "@composer phpunit",
+            "@composer phpstan"
+        ],
+        "phpcs": [
+            "vendor/bin/phpcs --colors --standard=PSR12 src test"
+        ],
+        "phpstan": [
+            "vendor/bin/phpstan analyze --verbose --level=6 src test"
+        ],
+        "phpunit": [
+            "vendor/bin/phpunit"
+        ]
+    }
 }

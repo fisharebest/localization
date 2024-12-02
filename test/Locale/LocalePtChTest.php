@@ -13,7 +13,7 @@ use PHPUnit\Framework\TestCase;
  * Tests for the LocalePtCh class
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  *
  * @covers \Fisharebest\Localization\Locale\AbstractLocale
@@ -21,9 +21,6 @@ use PHPUnit\Framework\TestCase;
  */
 class LocalePtChTest extends TestCase
 {
-    /**
-     * Test the properties
-     */
     public function testProperties(): void
     {
         $locale = new LocalePtCh();

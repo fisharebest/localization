@@ -11,7 +11,7 @@ use Fisharebest\Localization\Language\LanguageKs;
  * Class LocaleKs - Kashmiri
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class LocaleKs extends AbstractLocale implements LocaleInterface

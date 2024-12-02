@@ -17,7 +17,7 @@ use const PREG_GREP_INVERT;
  * Tests for ISO-15924
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  *
  * @coversNothing

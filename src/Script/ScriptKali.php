@@ -8,7 +8,7 @@ namespace Fisharebest\Localization\Script;
  * Class ScriptKali - Representation of the Kayah Li script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class ScriptKali extends AbstractScript implements ScriptInterface

@@ -11,7 +11,7 @@ use Fisharebest\Localization\Language\LanguageUk;
  * Class LocaleUk - Ukrainian
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class LocaleUk extends AbstractLocale implements LocaleInterface

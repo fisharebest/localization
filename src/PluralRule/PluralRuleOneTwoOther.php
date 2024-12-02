@@ -11,7 +11,7 @@ use RangeException;
  * nplurals=4; plural=(n==1) ? 0 : (n==2) ? 1 : 2;
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class PluralRuleOneTwoOther implements PluralRuleInterface

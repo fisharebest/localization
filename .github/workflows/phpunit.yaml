@@ -1,33 +1,32 @@
-name: Unit tests
+name: Tests
 
 on: [push, pull_request]
 
 jobs:
   run:
     runs-on: ubuntu-latest
-    continue-on-error: true
-    name: Testing PHP ${{ matrix.php-version }}
+    name: Tests
 
     strategy:
       matrix:
-        operating-system: [ubuntu-latest]
-        php-version: ['8.0', '8.1', '8.2']
+        operating-system: ['ubuntu-latest']
+        php-version: ['8.2', '8.3', '8.4']
+      fail-fast: false
 
     steps:
       - uses: shivammathur/setup-php@master
         with:
           php-version: ${{ matrix.php-version }}
-          coverage: xdebug
+          extensions: simplexml
+          coverage: pcov
 
-      - uses: actions/checkout@v2
-
-      - run: composer validate
+      - uses: actions/checkout@v4
 
       - run: composer install
 
-      - run: vendor/bin/phpunit --coverage-clover=tests/coverage.xml
+      - run: vendor/bin/phpunit --coverage-clover=coverage.xml
 
       - uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          file: tests/coverage.xml
+          file: coverage.xml

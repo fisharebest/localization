@@ -16,7 +16,7 @@ use const PREG_SPLIT_NO_EMPTY;
  * Tests for the CLDR
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  *
  * @coversNothing
@@ -30,10 +30,10 @@ class CldrMeasurementDataTest extends TestCase
      */
     public function testMeasurementData(): void
     {
-        $cldr = simplexml_load_string(file_get_contents(__DIR__ . '/data/cldr-42/supplemental/supplementalData.xml'));
+        $cldr = simplexml_load_string(file_get_contents(__DIR__ . '/data/cldr-46/supplemental/supplementalData.xml'));
 
         foreach ($cldr->measurementData->measurementSystem as $xml) {
-            if ($xml->attributes()->category != 'temperature') {
+            if ((string) $xml->attributes()->category !== 'temperature') {
                 $type        = (string) $xml->attributes()->type;
                 $territories = preg_split('/\s/', (string) $xml->attributes()->territories, -1, PREG_SPLIT_NO_EMPTY);
                 foreach ($territories as $code) {

@@ -15,7 +15,7 @@ use Fisharebest\Localization\Territory\TerritoryInterface;
  * Class LanguageMr - Representation of the Marathi language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class LanguageMr extends AbstractLanguage implements LanguageInterface

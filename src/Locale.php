@@ -18,7 +18,6 @@ use function in_array;
 use function preg_match;
 use function preg_match_all;
 use function preg_split;
-use function strcmp;
 use function strtolower;
 use function ucfirst;
 
@@ -26,7 +25,7 @@ use function ucfirst;
  * Class Locale - Static functions to generate and compare locales.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class Locale
@@ -47,15 +46,10 @@ class Locale
     /**
      * Callback for PHP sort functions - allows lists of locales to be sorted.
      * Diacritics are removed and text is capitalized to allow fast/simple sorting.
-     *
-     * @param LocaleInterface $x
-     * @param LocaleInterface $y
-     *
-     * @return int
      */
     public static function compare(LocaleInterface $x, LocaleInterface $y): int
     {
-        return strcmp($x->endonymSortable(), $y->endonymSortable());
+        return $x->endonymSortable() <=> $y->endonymSortable();
     }
 
     /**
@@ -70,7 +64,7 @@ class Locale
     {
         $fn    = static fn (string $x): string => ucfirst(strtolower($x));
         $parts = preg_split('/[^a-zA-Z0-9]+/', $code);
-        $class = '\\Fisharebest\\Localization\\Locale\\Locale' . implode(array_map($fn, $parts));
+        $class = '\\Fisharebest\\Localization\\Locale\\Locale' . implode('', array_map($fn, $parts));
 
         if (class_exists($class)) {
             $locale = new $class();
@@ -92,8 +86,11 @@ class Locale
      *
      * @return LocaleInterface
      */
-    public static function httpAcceptLanguage(array $server, array $available, LocaleInterface $default): LocaleInterface
-    {
+    public static function httpAcceptLanguage(
+        array $server,
+        array $available,
+        LocaleInterface $default
+    ): LocaleInterface {
         $http_accept_language = strtolower(strtr($server['HTTP_ACCEPT_LANGUAGE'] ?? '', [' ' => '']));
 
         if ($http_accept_language !== '') {
@@ -112,6 +109,8 @@ class Locale
             foreach (array_keys($preferences) as $code) {
                 try {
                     $locale = self::create($code);
+
+                    /** @phpstan-ignore function.strict */
                     if (in_array($locale, $available, false)) {
                         return $locale;
                     }

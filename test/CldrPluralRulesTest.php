@@ -19,7 +19,7 @@ use const PREG_SPLIT_NO_EMPTY;
  * Tests for the CLDR
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  *
  * @coversNothing
@@ -33,7 +33,7 @@ class CldrPluralRulesTest extends TestCase
      */
     public function testPluralRules(): void
     {
-        $cldr = simplexml_load_string(file_get_contents(__DIR__ . '/data/cldr-42/supplemental/plurals.xml'));
+        $cldr = simplexml_load_string(file_get_contents(__DIR__ . '/data/cldr-46/supplemental/plurals.xml'));
 
         foreach ($cldr->xpath("/supplementalData/plurals[@type='cardinal']/pluralRules") as $plural_rule) {
             $tmp          = $plural_rule->attributes(); // For PHP5.3
@@ -77,7 +77,7 @@ class CldrPluralRulesTest extends TestCase
                 }
                 $locale = Locale::create($locale_code);
 
-                self::assertSame($locale->pluralRule()->plurals(), count($plurals), $locale_code);
+                self::assertCount($locale->pluralRule()->plurals(), $plurals, $locale_code);
 
                 $plural_rule = 0;
                 foreach ($plurals as $plural_examples) {

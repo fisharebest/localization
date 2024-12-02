@@ -15,7 +15,7 @@ use Fisharebest\Localization\Territory\TerritoryPk;
  * Class LanguagePs - Representation of the Pushto language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class LanguagePs extends AbstractLanguage implements LanguageInterface

@@ -21,7 +21,7 @@ use function substr;
  * Class AbstractLocale - The “root” locale, from which all others are derived.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 abstract class AbstractLocale
@@ -91,10 +91,6 @@ abstract class AbstractLocale
 
     /**
      * Convert (Hindu-Arabic) digits into a localized form
-     *
-     * @param string $string e.g. "123.45"
-     *
-     * @return string
      */
     public function digits(string $string): string
     {
@@ -211,10 +207,6 @@ abstract class AbstractLocale
 
     /**
      * Convert (Hindu-Arabic) digits into a localized form
-     *
-     * @param float|int $number The number to be localized
-     *
-     * @return string
      */
     public function number(float|int $number): string
     {
@@ -266,10 +258,6 @@ abstract class AbstractLocale
 
     /**
      * Convert (Hindu-Arabic) digits into a localized form
-     *
-     * @param float|int $number The number to be localized
-     *
-     * @return string
      */
     public function percent(float|int $number): string
     {

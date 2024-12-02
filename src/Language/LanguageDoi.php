@@ -15,7 +15,7 @@ use Fisharebest\Localization\Territory\TerritoryInterface;
  * Class LanguageDoi - Representation of the Dogri language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class LanguageDoi extends AbstractLanguage implements LanguageInterface

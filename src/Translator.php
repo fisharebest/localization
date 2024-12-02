@@ -13,15 +13,13 @@ use function explode;
  * Class Translator - use a translation to translate messages.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class Translator
 {
-    /** @var array<string,string> An association of English -> translated messages */
     private array $translations;
 
-    /** @var PluralRuleInterface */
     private PluralRuleInterface $plural_rule;
 
     /**
@@ -39,10 +37,6 @@ class Translator
     /**
      * Translate a message into another language.
      * Works the same as gettext().
-     *
-     * @param string $message English text to translate
-     *
-     * @return string Translated text
      */
     public function translate(string $message): string
     {
@@ -52,11 +46,6 @@ class Translator
     /**
      * Translate a context-sensitive message into another language.
      * Works the same as pgettext().
-     *
-     * @param string $context Context of the message, e.g. "verb" or "noun"
-     * @param string $message English text to translate
-     *
-     * @return string Translated text
      */
     public function translateContext(string $context, string $message): string
     {
@@ -68,16 +57,10 @@ class Translator
     /**
      * Translate a plural message into another language.
      * Works the same as ngettext().
-     *
-     * @param string $message1 English text for singular
-     * @param string $message2 English text for plural
-     * @param int    $number   Number of entities
-     *
-     * @return string Translated text
      */
-    public function translatePlural(string $message1, string $message2, int $number): string
+    public function translatePlural(string $singular, string $plural, int $number): string
     {
-        $key = $message1 . Translation::PLURAL_SEPARATOR . $message2;
+        $key = $singular . Translation::PLURAL_SEPARATOR . $plural;
         if (isset($this->translations[$key])) {
             $plurals = explode(Translation::PLURAL_SEPARATOR, $this->translations[$key]);
             if (count($plurals) === $this->plural_rule->plurals()) {
@@ -85,6 +68,6 @@ class Translator
             }
         }
 
-        return $number === 1 ? $message1 : $message2;
+        return $number === 1 ? $singular : $plural;
     }
 }

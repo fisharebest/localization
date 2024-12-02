@@ -13,7 +13,7 @@ use Fisharebest\Localization\Territory\TerritoryTr;
  * Class LanguageKu - Representation of the Kurdish language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class LanguageKu extends AbstractLanguage implements LanguageInterface

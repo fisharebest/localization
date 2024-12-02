@@ -8,7 +8,7 @@ namespace Fisharebest\Localization\Script;
  * Class ScriptCpmn - Representation of the Cypro-Minoan script.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class ScriptCpmn extends AbstractScript implements ScriptInterface

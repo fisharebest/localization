@@ -15,7 +15,7 @@ use Fisharebest\Localization\Territory\TerritoryInterface;
  * Class LanguageOr - Representation of the Oriya language.
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  */
 class LanguageOr extends AbstractLanguage implements LanguageInterface

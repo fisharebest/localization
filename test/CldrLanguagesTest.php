@@ -15,7 +15,7 @@ use function simplexml_load_string;
  * Tests for the CLDR
  *
  * @author    Greg Roach <greg@subaqua.co.uk>
- * @copyright (c) 2022 Greg Roach
+ * @copyright (c) 2024 Greg Roach
  * @license   GPL-3.0-or-later
  *
  * @coversNothing
@@ -29,13 +29,15 @@ class CldrLanguagesTest extends TestCase
      */
     public function testLanguages(): void
     {
-        foreach (glob(__DIR__ . '/data/cldr-42/main/*.xml') as $xml) {
+        foreach (glob(__DIR__ . '/data/cldr-46/main/*.xml') as $xml) {
             if (!str_ends_with($xml, '/root.xml')) {
                 $cldr         = simplexml_load_string(file_get_contents($xml));
                 $locale       = Locale::create(basename($xml, '.xml'));
                 $language_tag = $locale->languageTag();
 
-                $endonyms = $cldr->xpath("/ldml/localeDisplayNames/languages/language[@type='" . $language_tag . "'][not(@alt)]");
+                $expression = "/ldml/localeDisplayNames/languages/language[@type='" . $language_tag . "'][not(@alt)]";
+                $endonyms   = $cldr->xpath($expression);
+
                 foreach ($endonyms as $endonym) {
                     $debug = implode('|', [basename($xml), $endonym]);
 
